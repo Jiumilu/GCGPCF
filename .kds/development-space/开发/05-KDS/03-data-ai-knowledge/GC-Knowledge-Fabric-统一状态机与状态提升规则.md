@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-5F592CAC71
 title: GC-Knowledge Fabric 统一状态机与状态提升规则
 project: KDS
-related_projects: [WAES, KDS]
+related_projects: [WAME, KDS]
 domain: data-ai-knowledge
 status: controlled
 version: v1.0
@@ -25,7 +25,7 @@ superseded_by: []
 
 统一状态机用于约束 KnowledgeObject、FactCandidate、SOPCandidate、WritebackCandidate、GapRecord、ContributionRecord、RevenueRecord、QuotaRecord、DecisionRecord 和 LOOPRecord 的状态语义。
 
-状态提升必须基于来源、证据、WAES 门禁、KWE 流程、人工确认、委员会决议和 Harness evidence。任何自动化、AI 输出、模板或 dry-run 都不能单独提升为正式完成状态。
+状态提升必须基于来源、证据、WAME 门禁、KWE 流程、人工确认、委员会决议和 Harness evidence。任何自动化、AI 输出、模板或 dry-run 都不能单独提升为正式完成状态。
 
 ## 2. 生命周期状态
 
@@ -34,13 +34,13 @@ superseded_by: []
 | `draft` | 草稿 | 人、AI、系统 | owner / KWE | 否 | 否 | 否 |
 | `candidate` | 候选 | 人、AI、系统、合作方 | KWE | 否，少数可 L1/L2 | 否 | 否 |
 | `reviewing` | 审核中 | KWE | 人工 / 委员会 | L1/L2 | 否 | 否 |
-| `repair_required` | 需补证 | WAES / KWE | KWE | 否或 L1 | 否 | 否 |
-| `evidence_ready` | 证据就绪 | KWE | WAES | L2/L3 | 否 | 否 |
-| `confirmed` | 已确认 | 人工 / 委员会 | KDS / WAES | L3/L4 | 可进入写回候选 | 可进入候选 |
+| `repair_required` | 需补证 | WAME / KWE | KWE | 否或 L1 | 否 | 否 |
+| `evidence_ready` | 证据就绪 | KWE | WAME | L2/L3 | 否 | 否 |
+| `confirmed` | 已确认 | 人工 / 委员会 | KDS / WAME | L3/L4 | 可进入写回候选 | 可进入候选 |
 | `accepted` | 已验收 | 授权人 / 委员会 | KDS | L4/L5 | 可写回，仍需业务系统门禁 | 可进入正式口径 |
 | `published` | 已发布 | 授权发布人 | KDS | L4/L5 | 视对象类型而定 | 视对象类型而定 |
-| `frozen` | 冻结 | WAES / 委员会 | 委员会 / 授权治理人 | 否 | 否 | 否 |
-| `rejected` | 拒绝 | 人工 / 委员会 / WAES | KDS | 否 | 否 | 否 |
+| `frozen` | 冻结 | WAME / 委员会 | 委员会 / 授权治理人 | 否 | 否 | 否 |
+| `rejected` | 拒绝 | 人工 / 委员会 / WAME | KDS | 否 | 否 | 否 |
 | `superseded` | 被替代 | KDS | KDS | 否或 L1 | 否 | 否 |
 | `archived` | 归档 | KDS | KDS | 否或 L1/L2 | 否 | 否 |
 
@@ -73,10 +73,10 @@ superseded_by: []
 |---|---|
 | `draft -> candidate` | 编号、owner、domain、objectType、poolRefs 或 pendingPoolRefs |
 | `candidate -> reviewing` | sourceRefs 或明确缺口、KWE WorkItem |
-| `reviewing -> repair_required` | WAES 发现来源、证据、权限、敏感资料或责任边界缺口 |
+| `reviewing -> repair_required` | WAME 发现来源、证据、权限、敏感资料或责任边界缺口 |
 | `repair_required -> evidence_ready` | 缺口补齐、EvidenceRecord 绑定、requiredActions 关闭 |
 | `evidence_ready -> confirmed` | 人工确认或委员会确认 |
-| `confirmed -> accepted` | WAES 通过、Harness evidence 固化、授权人验收 |
+| `confirmed -> accepted` | WAME 通过、Harness evidence 固化、授权人验收 |
 | `accepted -> published` | 发布授权、External Share Gate、Sensitive Data Gate |
 | `任何状态 -> frozen` | 重大争议、违规风险、收益争议、RAG 风险、外部共享风险 |
 | `任何状态 -> rejected` | 确认失败、证据造假、来源不合格、委员会拒绝 |

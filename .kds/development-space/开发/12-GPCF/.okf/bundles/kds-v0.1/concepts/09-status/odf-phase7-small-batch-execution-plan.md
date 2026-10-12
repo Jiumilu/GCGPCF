@@ -7,7 +7,7 @@ tags: [controlled, kds, odf, okf-derived, status]
 timestamp: 2026-06-22T00:00:00Z
 kds_path: 开发/91-治理与验收/09-status/odf-phase7-small-batch-execution-plan.md
 source_path: 09-status/odf-phase7-small-batch-execution-plan.md
-source_hash: 39ae0c77610a371d41bb142ed7554b6aad732276f6432244c6342bc0b3e25861
+source_hash: bb760b1403fb09054486941713029a3c5871f16aa389af232cf4123530c9e210
 source_of_record: kds
 derivation_policy: metadata_only_no_body_copy
 ---

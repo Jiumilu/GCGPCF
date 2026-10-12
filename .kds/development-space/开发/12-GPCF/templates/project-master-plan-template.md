@@ -2,7 +2,7 @@
 doc_id: PROJECT-DOC-MASTER-PLAN-TEMPLATE
 title: {{PROJECT_DISPLAY_NAME}} 总体方案
 project: GPCF
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, GPCF, Studio]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, GPCF, Studio]
 domain: templates
 status: controlled
 version: v1.0
@@ -26,7 +26,7 @@ superseded_by: []
 
 - 本项目是什么；
 - 本项目服务哪些对象；
-- 本项目在 WAS / Ontology / XWAIL / WAE / WAES / AaaS / SCaaS 链路中的位置；
+- 本项目在 WAS / Ontology / XWAIL / WAE / WAME / AaaS / SCaaS 链路中的位置；
 - 本项目与业务事实源、治理入口、服务化运营之间的关系。
 
 ## 2. 与项目群主方案的继承关系
@@ -53,7 +53,7 @@ GPCF:01-architecture/WAS世界资产体系总体方案.md
 | 上游控制 | GPCF |
 | 语义来源 | WAS / Ontology |
 | 契约来源 | XWAIL |
-| 治理入口 | WAES |
+| 治理入口 | WAME |
 
 ## 4. 本项目权威职责
 
@@ -61,7 +61,7 @@ GPCF:01-architecture/WAS世界资产体系总体方案.md
 
 ## 5. 本项目不承担的职责
 
-列出本项目不得越界承担的职责，避免与 WAS、XWAIL、WAES、AaaS、GFIS、GPC、PVAOS、KDS、Brain、Studio 等项目冲突。
+列出本项目不得越界承担的职责，避免与 WAS、XWAIL、WAME、AaaS、GFIS、GPC、PVAOS、KDS、Brain、Studio 等项目冲突。
 
 ## 6. 核心交付物
 
@@ -78,7 +78,7 @@ GPCF:01-architecture/WAS世界资产体系总体方案.md
 | WAS | 资产体系和治理边界 | WAS 主方案 |
 | Ontology | 术语、概念关系和语义映射 | Ontology 映射 |
 | XWAIL | 模型契约、Profile、状态机、证据约束 | XWAIL 契约 |
-| WAES | 注册、授权、发布、治理入口 | WAES 门禁 |
+| WAME | 注册、授权、发布、治理入口 | WAME 门禁 |
 | AaaS | 服务包、计量、SLA、商业运营 | ServicePackage |
 
 ## 8. 技术架构现状和目标架构

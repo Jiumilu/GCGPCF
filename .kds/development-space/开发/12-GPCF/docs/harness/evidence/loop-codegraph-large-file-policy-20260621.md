@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-657DDCA61A
 title: Loop CodeGraph Large File Policy Evidence
 project: GPCF
-related_projects: [GFIS, GPC, WAES, GPCF]
+related_projects: [GFIS, GPC, WAME, GPCF]
 domain: docs
 status: controlled
 version: v1.0

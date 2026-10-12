@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-86BB2ABBFD
 title: ODF Phase 2 样本准入台账
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, Brain, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, Brain, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -41,8 +41,8 @@ superseded_by: []
 
 | sample_id | category | source_path | owner | status |
 | --- | --- | --- | --- | --- |
-| `ODF-PHASE2-20260617-001` | governance | `02-governance/GlobalCloud项目群文档综合治理规范.md` | WAES | `phase2_sample` |
-| `ODF-PHASE2-20260617-002` | governance | `02-governance/GlobalCloud项目群文档防污染规则.md` | WAES | `phase2_sample` |
+| `ODF-PHASE2-20260617-001` | governance | `02-governance/GlobalCloud项目群文档综合治理规范.md` | WAME | `phase2_sample` |
+| `ODF-PHASE2-20260617-002` | governance | `02-governance/GlobalCloud项目群文档防污染规则.md` | WAME | `phase2_sample` |
 | `ODF-PHASE2-20260617-003` | kds-knowledge | `03-data-ai-knowledge/GlobalCloud Loop开发KDS关联数据检索机制.md` | KDS | `phase2_sample` |
 | `ODF-PHASE2-20260617-004` | kds-knowledge | `03-data-ai-knowledge/GlobalCloudBrain-KDS知识编制与知识UI边界清单.md` | KDS | `phase2_sample` |
 | `ODF-PHASE2-20260617-005` | okf-navigation | `.okf/index.md` | GPCF | `phase2_sample` |

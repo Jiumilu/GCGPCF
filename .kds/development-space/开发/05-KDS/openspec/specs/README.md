@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-89FBFF25D3
 title: OpenSpec 主规格
 project: KDS
-related_projects: [GPC, WAES, KDS, GPCF]
+related_projects: [GPC, WAME, KDS, GPCF]
 domain: openspec
 status: controlled
 version: v1.0
@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/05-KDS/openspec/specs/README.md
 source_path: openspec/specs/README.md
 sync_direction: bidirectional
-last_reviewed: 2026-10-11
+last_reviewed: 2026-10-12
 supersedes: []
 superseded_by: []
 ---

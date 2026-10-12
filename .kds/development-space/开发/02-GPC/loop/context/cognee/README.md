@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-25ADFEBCF8
 title: cognee
 project: GPC
-related_projects: [GPC, WAES, KDS, GPCF]
+related_projects: [GPC, WAME, KDS, GPCF]
 domain: general
 status: controlled
 version: v1.0
@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/02-GPC/loop/context/cognee/README.md
 source_path: loop/context/cognee/README.md
 sync_direction: bidirectional
-last_reviewed: 2026-10-11
+last_reviewed: 2026-10-12
 supersedes: []
 superseded_by: []
 ---
@@ -40,4 +40,4 @@ KDS 空间：`开发`
 | GPCF-DOC-6BA1B0CCA6 | harness | loop/context/cognee/harness/README.md | GPC | controlled |
 | GPCF-DOC-7A2A6D4F05 | p1-recall-comparison-template | loop/context/cognee/harness/p1-recall-comparison-template.md | GPCF | controlled |
 | GPCF-DOC-7A2A6D4F06 | COGNEE P2 写入预览模板（最小字段） | loop/context/cognee/harness/p2-write-preview-template.md | GPC | controlled |
-| GPCF-DOC-8C7F2F5001 | p4-real-writeback-precheck-template | loop/context/cognee/harness/p4-real-writeback-precheck-template.md | GPCF | controlled |
+| GPCF-DOC-8C7F2F5001 | COGNEE P4 真实写入前置预检模板（最小字段） | loop/context/cognee/harness/p4-real-writeback-precheck-template.md | GPC | controlled |

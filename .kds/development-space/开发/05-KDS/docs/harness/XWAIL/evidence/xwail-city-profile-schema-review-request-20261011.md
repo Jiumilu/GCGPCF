@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-XWAIL-CITY-PROFILE-SCHEMA-REVIEW-REQUEST-20261011
 title: XWAIL City/Spatial Profile Schema 候选评审请求 2026-10-11
 project: KDS
-related_projects: [WAES, KDS]
+related_projects: [WAME, KDS]
 domain: docs
 status: controlled
 version: v1.0
@@ -22,7 +22,7 @@ superseded_by: []
 
 本文登记 `XWAIL-CITY-PROFILE-SCHEMA-REVIEW-REQUEST-20261011`：工业绿链图谱（F-016）承接上游受理（`XWAIL-CITY-SPATIAL-PROFILE-REQUEST-20261011`，accepted 2026-10-11），就其获准动作的产出——《XWAIL City/Spatial Profile 范围定义与 Schema 候选（草案）v0.1》与 V-CP 校验器 PoC——**提请 XWAIL 项目治理流程评审与裁定（schema 定版）**。
 
-本文只提交请求：不写 XWAIL 仓、不声明通过、不声明 WAES 授权或发布、不声明生产就绪、不声明客户验收。决定权在 XWAIL 项目治理流程。
+本文只提交请求：不写 XWAIL 仓、不声明通过、不声明 WAME 授权或发布、不声明生产就绪、不声明客户验收。决定权在 XWAIL 项目治理流程。
 
 ## 2. 请求内容
 
@@ -44,7 +44,7 @@ superseded_by: []
 ## 4. 请求边界
 
 允许（裁定为"通过"后）：`xwail-city-profile` schema **定版**（形式以本流程裁定为准）、validator 扩展定稿。
-禁止：越过治理流程直接改 XWAIL 仓、WAES 发布声明、生产就绪声明、客户验收声明。
+禁止：越过治理流程直接改 XWAIL 仓、WAME 发布声明、生产就绪声明、客户验收声明。
 
 ## 5. 门禁
 
@@ -53,7 +53,7 @@ superseded_by: []
 | request_package_generated | true |
 | submitted | true |
 | governance_reviewed | true |
-| waes_authorized | false |
+| wame_authorized | false |
 | published | false |
 | accepted | true |
 | integrated | false |
@@ -63,7 +63,7 @@ superseded_by: []
 
 - 上游请求已受理（accepted；`decision_record` 留档）。
 - 送审两件在位并已实测：草案（定版送审）＋ PoC（V-CP 5/5；core 对照矩阵）。
-- 未修改 XWAIL 仓；候选边界保持（`waesStatus=Draft`）。
+- 未修改 XWAIL 仓；候选边界保持（`wameStatus=Draft`）。
 
 ## 7. 下一步
 
@@ -72,4 +72,4 @@ XWAIL 治理流程评审本请求；裁定后按结论执行 schema 定版或退
 ## 8. 受理记录（2026-10-11）
 
 - **受理并通过（accepted）**：授权来源＝老卢「按流程走」（2026-10-11）；送审材料复核齐备（草案定版＋PoC 5/5＋core 对照矩阵）。
-- 后续动作：`xwail-city-profile` schema **定版工作件**（v1.0-candidate 形式）起草——仍不越 XWAIL 仓写权、不声明 WAES 发布。
+- 后续动作：`xwail-city-profile` schema **定版工作件**（v1.0-candidate 形式）起草——仍不越 XWAIL 仓写权、不声明 WAME 发布。

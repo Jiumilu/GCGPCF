@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-GCKFP0SKELETONBASELINED12220260622
 title: GCKF P0 骨架基线证据 D122
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -38,11 +38,11 @@ D121 已把 `localization_debt` 和 `loop_document_gate` 收口到通过状态�
 | 任务包 | 当前代表性 artifact | 状态 |
 |---|---|---|
 | T0 规则固化 | `object-numbering-rule`、`kds-eleven-pool-binding-rule`、`rag-citation-strength-policy`、`sensitive-metadata-storage-policy` | covered |
-| T1 OKF 契约 | `okf/ontology.yaml`、`knowledge-object.schema.json`、`pool-binding-policy.yaml`、`waes-gate-policy.yaml`、`rag-admission-policy.yaml` | covered |
+| T1 OKF 契约 | `okf/ontology.yaml`、`knowledge-object.schema.json`、`pool-binding-policy.yaml`、`wame-gate-policy.yaml`、`rag-admission-policy.yaml` | covered |
 | T2 KDS v2 骨架 | `packages/api/src/kds/v2/{contracts,routes,schema}.ts/sql`、`packages/shared/src/knowledge/{object,source,evidence}.ts` | covered |
-| T3 WAES 最小门禁 | `waes-gate-io-policy`、`waes-minimum-dry-run-cases`、`validate_waes_minimum_gates.py` | covered |
+| T3 WAME 最小门禁 | `wame-gate-io-policy`、`wame-minimum-dry-run-cases`、`validate_wame_minimum_gates.py` | covered |
 | T4 KWE 最小流程 | `kwe-minimum-workflow-dry-run`、`kwe-confirmation-workpack-policy`、`kwe-action-validation-workpack-policy`、`validate_kwe_minimum_workflow.py` | covered |
-| T5 葛化准备 | `pilot-rollout-checklist`、`gfis-document-acceptance-checklist-policy`、`gfis-assistant-waes-guidance-packet-policy` | covered_for_p0_baseline |
+| T5 葛化准备 | `pilot-rollout-checklist`、`gfis-document-acceptance-checklist-policy`、`gfis-assistant-wame-guidance-packet-policy` | covered_for_p0_baseline |
 | T6 LOOP 指挥舱 | `loop-record-closure-policy`、`loop-round-v2-five-direction.yaml`、`loop-engineering-five-direction-implementation`、`docs/harness/loop-state.md` | covered |
 
 ## 校验快照

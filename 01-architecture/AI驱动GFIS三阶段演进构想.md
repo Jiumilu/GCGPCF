@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-7FAF5AD2FB
 title: AI 驱动 GFIS 三阶段演进构想
 project: GPCF
-related_projects: [GPCF, GFIS, WAME, KDS, Brain, PKC, XiaoC, XGD]
+related_projects: [GPCF, GFIS, WAME, KDS, Brain, PKC, XiaoC, XGD, Studio]
 domain: architecture
 status: controlled
 version: v1.0

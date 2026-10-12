@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-LOCALIZATIONDEBTOKFV01EVIDENCEREPAIRD9920260622
 title: OKF v0.1 evidence D99 中文化修复证据
 project: GPCF
-related_projects: [GPCF, WAES]
+related_projects: [GPCF, WAME]
 domain: docs
 status: controlled
 version: v1.0

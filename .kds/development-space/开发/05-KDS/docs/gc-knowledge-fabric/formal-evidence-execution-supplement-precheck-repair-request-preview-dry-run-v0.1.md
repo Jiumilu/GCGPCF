@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-FF1D985147
 title: GC-Knowledge Fabric P0 正式证据执行补充材料预检查修复请求预览 dry-run v0.1
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -22,7 +22,7 @@ superseded_by: []
 
 本文档定义 P0-D57 的 supplement precheck repair request 预览 dry-run。
 
-D57 承接 D56 supplement completeness precheck preview，只预览补件完整性预检查发现缺口后的候选修复请求结构、缺口引用、修复原因、责任角色、补件要求、再检查路径、冻结保持、WAES 负向门禁和 Harness no-write 边界。
+D57 承接 D56 supplement completeness precheck preview，只预览补件完整性预检查发现缺口后的候选修复请求结构、缺口引用、修复原因、责任角色、补件要求、再检查路径、冻结保持、WAME 负向门禁和 Harness no-write 边界。
 
 ## 2. 输入
 
@@ -47,7 +47,7 @@ D57 承接 D56 supplement completeness precheck preview，只预览补件完整�
 - 不写 KDS、GFIS、GPC 或业务系统。
 - 不写 Harness evidence 或 formal evidence。
 - 不写收益分配或贡献积分。
-- 不覆盖 WAES 门禁。
+- 不覆盖 WAME 门禁。
 - 不提升 lifecycle。
 - 不标记 accepted / integrated / production_ready。
 

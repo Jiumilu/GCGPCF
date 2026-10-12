@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-42588776FF
 title: Loop 治理当前窗口处置证据
 project: GPCF
-related_projects: [GFIS, GPC, WAES, GPCF]
+related_projects: [GFIS, GPC, WAME, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -65,5 +65,5 @@ loop_round_efficiency_audit=pass total_rounds=377 audit_checked=30 hard_checked=
 - 本证据不重写历史轮次记录。
 - 本证据不证明 GFIS runtime SOP E2E 已通过。
 - 本证据不全局关闭 `LEDB-001`、`LEDB-002` 或 `LEDB-003`。
-- 本证据不创建 source-of-record、runtime primary key、review queue、runtime intake、WAES review、verified artifact、accepted 或 integrated 状态。
+- 本证据不创建 source-of-record、runtime primary key、review queue、runtime intake、WAME review、verified artifact、accepted 或 integrated 状态。
 - 本证据不授权生产写入、外部 API 写入、schema sync、bench migrate、部署、commit 或 push。

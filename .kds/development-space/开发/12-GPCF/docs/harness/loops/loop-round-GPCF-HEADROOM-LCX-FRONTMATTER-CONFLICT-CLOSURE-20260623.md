@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-HEADROOM-LCX-FRONTMATTER-CONFLICT-CLOSURE-20260623
 title: Loop Round GPCF Headroom LCX Frontmatter 冲突修复与闭环回写 20260623
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -38,7 +38,7 @@ superseded_by: []
 | 字段 | 值 |
 |---|---|
 | stop_type | `authorization_boundary` |
-| stop_evidence | 本轮边界不允许真实 KDS/WAES/GFIS/GPCF/业务系统写入与状态升级；当前仓内仍有 GFIS 与客户满意/质量阻断（全仓门禁 `blocked`） |
+| stop_evidence | 本轮边界不允许真实 KDS/WAME/GFIS/GPCF/业务系统写入与状态升级；当前仓内仍有 GFIS 与客户满意/质量阻断（全仓门禁 `blocked`） |
 | completed_for_round | `true` |
 | accepted_allowed | `false` |
 | integrated_allowed | `false` |
@@ -52,7 +52,7 @@ superseded_by: []
 | frontmatter-writeability | `python3 tools/kds-sync/check_frontmatter_gate.py --emit-protected-paths` 返回 8 个受允许写路径（仅状态/统计/控制台账/健康报告文件） |
 | pipeline | `bash tools/kds-sync/run_frontmatter_pipeline.sh --check-only --profile headroom_full --emit-closure` 显示 `document_control=pass`、`loop_document_gate=pass`、`frontmatter_gate=pass`、`project_group=pass`、`loop_mainline=pass`、`[CLOSURE] status=pass` |
 | stability | `localization_debt_base_knowledge_evidence_repair_d97=pass`，`changed_files=8`，`changed_line_items=58`，`current_localization_gate=pass` |
-| execution integrity | `base_knowledge_blank_review_templates=pass`，`headroom_lcx_l35_controlled_sanitized_pilot_window=pass_check_only`，15/15 条目与 13/13 校验条通过；`realKdsApiWrite=false`、`waesWrite=false`、`businessLedgerWrite=false`、`settlementWrite=false`、`ragAdmission=false` |
+| execution integrity | `base_knowledge_blank_review_templates=pass`，`headroom_lcx_l35_controlled_sanitized_pilot_window=pass_check_only`，15/15 条目与 13/13 校验条通过；`realKdsApiWrite=false`、`wameWrite=false`、`businessLedgerWrite=false`、`settlementWrite=false`、`ragAdmission=false` |
 
 ### 4. recover
 
@@ -61,7 +61,7 @@ superseded_by: []
 | failed_or_stopped_at | `authorization boundary` |
 | last_safe_state | `frontmatter_gate=pass`、`headroom_lcx_l35_controlled_sanitized_pilot_window=pass_check_only`、`production_admission_gate=false` |
 | retryable_actions | 用户授权后，可继续补齐真实 source-of-record 与验证链路；或继续补充 frontmatter 冲突回归样例并扩展到更多模板文件 |
-| non_retryable_actions | 在无新授权下不得触达真实生产、GFIS/WAES/GPCF 业务写入、accepted/integrated/prod-ready 升级 |
+| non_retryable_actions | 在无新授权下不得触达真实生产、GFIS/WAME/GPCF 业务写入、accepted/integrated/prod-ready 升级 |
 | required_inputs | 新授权边界说明、是否进入 next window 的用户确认 |
 
 ### 5. debug
@@ -75,7 +75,7 @@ superseded_by: []
 | runtime_primary_key_ready | `0` |
 | review_queue | `0` |
 | runtime_intake | `0` |
-| waes_review | `0` |
+| wame_review | `0` |
 | verified | `0` |
 | production_writes | `0` |
 | production_tokens_mode | `metadata_only=true` |

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-1A1626A223
 title: Loop Round GPCF-L4-GFIS-REPAIR-093
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -92,10 +92,10 @@ git diff --check -- .
 - 未执行生产写入。
 - 未执行真实外部 API 写入。
 - 未执行 bench migrate 或 schema sync。
-- 未执行真实 KDS/WAES 写入。
+- 未执行真实 KDS/WAME 写入。
 - 未执行 Git push、部署、权限变更或合并。
 - 未把 Demo、KDS 候选、报价 PDF、行动台账、沟通纪要或用户口述升级为 accepted/integrated。
-- 未把 submission manifest 计为客户确认函、样箱测试记录、江西委托生产记录、现代精工转量产放行或 WAES evidence ref。
+- 未把 submission manifest 计为客户确认函、样箱测试记录、江西委托生产记录、现代精工转量产放行或 WAME evidence ref。
 
 ## 下一轮
 

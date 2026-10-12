@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-7BB91E7428
 title: 当前会话主要任务总结与声明控制边界
 project: GPCF
-related_projects: [GPCF, WAES, KDS]
+related_projects: [GPCF, WAME, KDS]
 domain: status
 status: controlled
 version: v1.0

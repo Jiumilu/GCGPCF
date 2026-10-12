@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-080EEABDFC
 title: GC-Knowledge Fabric P0 正式证据执行重入预检预览 dry-run v0.1
 project: KDS
-related_projects: [WAES, KDS]
+related_projects: [WAME, KDS]
 domain: docs
 status: controlled
 version: v1.0
@@ -44,7 +44,7 @@ superseded_by: []
 - 人工修复审查、委员会修复审查、停机权释放包。
 - 冻结解除候选、执行锁续期候选、审批刷新候选。
 - 验证计划刷新、回滚演练刷新、事件审计轨迹链接。
-- Harness 证据候选链接、WAES 重入门禁、KWE 重入工单。
+- Harness 证据候选链接、WAME 重入门禁、KWE 重入工单。
 - original approvers notification candidate。
 - 解冻不执行、重试不执行、保持无写入边界。
 - 后续仍需 future Harness execution。
@@ -70,7 +70,7 @@ superseded_by: []
 - missing rollback drill refresh candidate ref
 - missing incident audit trail ref
 - missing harness evidence candidate ref
-- missing WAES reentry gate candidate ref
+- missing WAME reentry gate candidate ref
 - missing KWE reentry work item candidate ref
 - reentry preview attempts unfreeze
 - reentry preview attempts retry
@@ -106,7 +106,7 @@ python3 scripts/api/validate_gckf_p0_formal_evidence_execution_reentry_preflight
 预期信号：
 
 ```text
-gckf_p0_formal_evidence_execution_reentry_preflight_preview_dry_run=pass status=candidate_preview preview_type=formal_evidence_execution_reentry_preflight_preview preview_status=candidate_preview execution_status=not_executed reentry_execution_status=not_executed unfreeze_execution_status=not_executed retry_execution_status=not_executed execution_mode=dry_run_no_write source_incident_escalation_status=candidate_preview source_incident_execution_status=not_executed source_freeze_execution_status=not_executed covered_incident_escalation_status=candidate_preview reentry_admission_states=6 reentry_preflight_checks=24 required_reentry_refs=17 blocking_conditions=22 forbidden_actions=18 required_sources=4 not_final_acceptance=covered dry_run_only=covered source_lineage=covered repair_evidence_packet=covered freeze_release_candidate=covered approval_refresh_candidate=covered execution_lock_renewal=covered waes_kwe_reentry_gate=covered negative_no_write_boundary=covered starts_server=0 connects_database=0 calls_external_api=0 writes_kds=0 writes_business_system=0 writes_accepted_lifecycle=0 writes_harness_evidence=0 writes_formal_evidence=0 writes_verification_result=0 writes_rollback_result=0 writes_reentry_result=0 writes_repair_result=0 writes_freeze_release_result=0 executes_unfreeze=0 executes_retry=0 no_write=covered
+gckf_p0_formal_evidence_execution_reentry_preflight_preview_dry_run=pass status=candidate_preview preview_type=formal_evidence_execution_reentry_preflight_preview preview_status=candidate_preview execution_status=not_executed reentry_execution_status=not_executed unfreeze_execution_status=not_executed retry_execution_status=not_executed execution_mode=dry_run_no_write source_incident_escalation_status=candidate_preview source_incident_execution_status=not_executed source_freeze_execution_status=not_executed covered_incident_escalation_status=candidate_preview reentry_admission_states=6 reentry_preflight_checks=24 required_reentry_refs=17 blocking_conditions=22 forbidden_actions=18 required_sources=4 not_final_acceptance=covered dry_run_only=covered source_lineage=covered repair_evidence_packet=covered freeze_release_candidate=covered approval_refresh_candidate=covered execution_lock_renewal=covered wame_kwe_reentry_gate=covered negative_no_write_boundary=covered starts_server=0 connects_database=0 calls_external_api=0 writes_kds=0 writes_business_system=0 writes_accepted_lifecycle=0 writes_harness_evidence=0 writes_formal_evidence=0 writes_verification_result=0 writes_rollback_result=0 writes_reentry_result=0 writes_repair_result=0 writes_freeze_release_result=0 executes_unfreeze=0 executes_retry=0 no_write=covered
 ```
 
 ## 下一步

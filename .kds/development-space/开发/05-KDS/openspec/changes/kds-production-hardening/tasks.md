@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-B1187FF6E1
 title: 任务清单 — KDS v3.1 生产加固
 project: KDS
-related_projects: [PVAOS, WAES, KDS]
+related_projects: [PVAOS, WAME, KDS]
 domain: openspec
 status: draft
 version: v1.0

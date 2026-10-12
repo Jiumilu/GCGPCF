@@ -7,7 +7,7 @@ tags: [controlled, kds, odf, okf-derived, status]
 timestamp: 2026-06-22T00:00:00Z
 kds_path: 开发/91-治理与验收/09-status/odf-phase3-schema-gate-plan.md
 source_path: 09-status/odf-phase3-schema-gate-plan.md
-source_hash: 6719697150f0458adea1a22c21cdc20e73a57f9fa398f02bc7cac5c8ae5d841e
+source_hash: 65ec7eac7ca519eff085aed39f6505f9607c7c1228f3b20bbff52664ba3ef108
 source_of_record: kds
 derivation_policy: metadata_only_no_body_copy
 ---

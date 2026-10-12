@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-HEADROOM-LCX-REAL-MEASUREMENT-EXTERNAL-RECEIPT-COMPLETION-PACKAGE-001
 title: Loop Round GPCF Headroom LCX Real Measurement External Receipt Completion Package 001
 project: GPCF
-related_projects: [GPC, WAES, GPCF]
+related_projects: [GPC, WAME, GPCF]
 domain: docs
 status: controlled
 version: v1.0

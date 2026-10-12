@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-HEADROOM-LCX-REMAINING-BLOCKER-INVENTORY-20260623
 title: Headroom LCX Remaining Blocker Inventory Evidence
 project: GPCF
-related_projects: [GPCF, WAES]
+related_projects: [GPCF, WAME]
 domain: docs
 status: controlled
 version: v1.0
@@ -33,7 +33,7 @@ signed approval bundle 与 authorization boundary review 已记录为支撑证�
 | requirement_id | current_status | needed_for | blocking_evidence |
 |---|---|---|---|
 | real_measurement_authorization_window | granted_precheck_only | true_real_business_equivalence_measurement | real_measurement_window_granted_but_open_remains_false |
-| real_measurement_waes_harness_decision | blocked | open_production_branch_for_measurement | waes_harness_admission_decision_is_precheck_only |
+| real_measurement_wame_harness_decision | blocked | open_production_branch_for_measurement | wame_harness_admission_decision_is_precheck_only |
 | real_measurement_token_ledger | missing | real_token_cost_and_saving_replay | only_sanitized_precheck_ledger_exists |
 | production_proxy_or_sdk_enablement | blocked | actual_runtime_measurement_path | production_proxy_and_sdk_flags_remain_false |
 | real_business_equivalence_measurement | not_proven | production_level_answer_equivalence_graph | equivalence_layer_is_synthetic_only |

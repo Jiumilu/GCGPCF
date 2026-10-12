@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-651E9768F7
 title: GC-Knowledge Fabric 湖北磷材知识库目录
 project: KDS
-related_projects: [GFIS, PVAOS, WAES, KDS]
+related_projects: [GFIS, PVAOS, WAME, KDS]
 domain: data-ai-knowledge
 status: controlled
 version: v1.0
@@ -47,7 +47,7 @@ superseded_by: []
 
 ## 4. 新工厂复制模板
 
-新工厂复制模板只作为候选结构，不自动形成业务事实。每个新工厂必须重新登记来源、证据、责任边界、WAES 门禁和确认记录。
+新工厂复制模板只作为候选结构，不自动形成业务事实。每个新工厂必须重新登记来源、证据、责任边界、WAME 门禁和确认记录。
 
 ## 5. P2 输出边界
 

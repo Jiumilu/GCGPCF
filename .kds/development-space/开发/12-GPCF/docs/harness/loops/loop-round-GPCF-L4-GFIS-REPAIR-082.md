@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-A5B22DA133
 title: GPCF-L4-GFIS-REPAIR-082 GFIS 辽宁远航候选锚点缺口矩阵
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0

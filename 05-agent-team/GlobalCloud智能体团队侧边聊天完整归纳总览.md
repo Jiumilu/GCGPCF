@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-61BD531C70
 title: GlobalCloud 智能体团队侧边聊天完整归纳总览
 project: XiaoC
-related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, XiaoC, XGD, GPCF]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, XiaoC, XGD, GPCF, Studio]
 domain: agent-team
 status: controlled
 version: v1.0

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-GCKFP0REPAIROWNERRESPONSEREQUIREMENTPRECHECKD18220260626
 title: GCKF P0 修复负责人响应要求预检当前态 D182
 project: GPCF
-related_projects: [GPCF, GFIS, GPC, WAES, KDS]
+related_projects: [GPCF, GFIS, GPC, WAME, KDS]
 domain: docs
 status: controlled
 version: v1.0
@@ -44,7 +44,7 @@ D182 接续 D181 的 acknowledgement receipt aggregation preview current-state �
 - 响应截止窗口声明。
 - acknowledgement receipt batch 引用。
 - hold context 引用保留。
-- WAES negative gate 保留。
+- WAME negative gate 保留。
 - no-write 边界确认。
 - 未收到响应前禁止 formal execution、committee case 和 P1 admission。
 

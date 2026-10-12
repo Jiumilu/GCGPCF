@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-PROJECTGROUPLIVESTATUSCURRENT20260701
 title: GlobalCloud 项目群当前 Live 状态快照
 project: KDS
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio]
 domain: docs
 status: controlled
 version: v1.0
@@ -20,21 +20,21 @@ superseded_by: []
 
 ## Summary
 
-- generated_at: `2026-10-11T10:54:40.299320+08:00`
+- generated_at: `2026-10-12T16:14:43.493993+08:00`
 - freshness_ok: `true`
-- project_count: `17`
-- pass_repo_count: `14`
+- project_count: `18`
+- pass_repo_count: `12`
 - bootstrap_window: `false`
 
 ## Current sets
 
-- observed_dirty: `GlobalCloud Studio, GlobalCoud GPCF, GlobalCloud KDS`
-- observed_ahead: `none`
-- stable_dirty: `GlobalCloud KDS, GlobalCloud Studio, GlobalCoud GPCF`
-- stable_ahead: `none`
+- observed_dirty: `GlobalCloud WAES, GlobalCoud GPCF, GlobalCloud XWAIL, GlobalCloud KDS, GlobalCloud XGD`
+- observed_ahead: `GlobalCloud Studio, GlobalCloud KDS`
+- stable_dirty: `GlobalCloud WAES, GlobalCloud XGD, GlobalCoud GPCF`
+- stable_ahead: `GlobalCloud KDS, GlobalCloud Studio`
 - volatile_dirty: `GlobalCoud GPCF`
-- sensitive_repos: `GlobalCloud Studio, GlobalCoud GPCF`
-- review_boundary: `GlobalCloud KDS, GlobalCloud Studio, GlobalCoud GPCF`
+- sensitive_repos: `none`
+- review_boundary: `GlobalCloud WAES, GlobalCloud XGD, GlobalCoud GPCF`
 
 ## Repo details
 
@@ -44,16 +44,17 @@ superseded_by: []
 | `GlobalCloud Brain` | 0 | 0 | 0 | `none` |
 | `WAS世界资产体系` | 0 | 0 | 0 | `none` |
 | `GlobalCloud XiaoC` | 0 | 0 | 0 | `none` |
-| `GlobalCloud WAES` | 0 | 0 | 0 | `none` |
+| `GlobalCloud WAES` | 13 | 0 | 0 | `none` |
 | `GlobalCloud GPC` | 0 | 0 | 0 | `none` |
-| `GlobalCloud Studio` | 152 | 0 | 0 | `tests/client/account-settings-default-credential.test.ts, tests/client/router-default-credential-guard.test.ts` |
-| `GlobalCoud GPCF` | 430 | 0 | 0 | `".kds/development-space/\345\274\200\345\217\221/92-\350\257\201\346\215\256\344\270\216\344\274\232\350\257\235\345\275\222\346\241\243/.harness/runs/kds-real-token-sync-20260613-062146/README.md", ".kds/development-space/\345\274\200\345\217\221/92-\350\257\201\346\215\256\344\270\216\344\274\232\350\257\235\345\275\222\346\241\243/.harness/runs/kds-real-token-sync-20260613-062146/evidence/README.md", ".kds/development-space/\345\274\200\345\217\221/92-\350\257\201\346\215\256\344\270\216\344\274\232\350\257\235\345\275\222\346\241\243/.harness/runs/kds-real-token-sync-20260613-062146/patches/README.md", ".kds/development-space/\345\274\200\345\217\221/92-\350\257\201\346\215\256\344\270\216\344\274\232\350\257\235\345\275\222\346\241\243/.harness/runs/kds-real-token-sync-20260613-062146/workspaces/README.md", .harness/runs/kds-real-token-sync-20260613-062146/README.md, .harness/runs/kds-real-token-sync-20260613-062146/evidence/README.md, .harness/runs/kds-real-token-sync-20260613-062146/patches/README.md, .harness/runs/kds-real-token-sync-20260613-062146/workspaces/README.md` |
-| `GlobalCloud XWAIL` | 0 | 0 | 0 | `none` |
+| `GlobalCloud Studio` | 0 | 21 | 0 | `none` |
+| `GlobalCloud WAE` | 0 | 0 | 0 | `none` |
+| `GlobalCoud GPCF` | 16 | 0 | 0 | `none` |
+| `GlobalCloud XWAIL` | 1 | 0 | 0 | `none` |
 | `GlobalCloud GFIS` | 0 | 0 | 0 | `none` |
 | `GlobalCloud MMC` | 0 | 0 | 0 | `none` |
-| `GlobalCloud KDS` | 3 | 0 | 0 | `none` |
+| `GlobalCloud KDS` | 3 | 1 | 0 | `none` |
 | `GlobalCloud XiaoG` | 0 | 0 | 0 | `none` |
 | `GlobalCloud PVAOS` | 0 | 0 | 0 | `none` |
 | `GlobalCloud SOP` | 0 | 0 | 0 | `none` |
 | `GlobalCloud PKC` | 0 | 0 | 0 | `none` |
-| `GlobalCloud XGD` | 0 | 0 | 0 | `none` |
+| `GlobalCloud XGD` | 1 | 0 | 0 | `none` |

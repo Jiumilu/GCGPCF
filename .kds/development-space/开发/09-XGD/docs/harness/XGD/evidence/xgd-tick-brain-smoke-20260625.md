@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-XGD-TICK-BRAIN-SMOKE-20260625
 title: XGD TICK Brain Smoke 证据 2026-06-25
 project: XGD
-related_projects: [WAES, KDS, Brain, XiaoC, XGD, XiaoG]
+related_projects: [WAME, KDS, Brain, XiaoC, XGD, XiaoG]
 domain: docs
 status: controlled
 version: v1.0
@@ -64,7 +64,7 @@ customer_accepted = false
 | 真实进度 | `task_pack_ready / local_dev_smoke_boundary` |
 | 真实研发 | `local_dev_verified`，仅限 harness/unit/Brain UI smoke |
 | 真实运行 | `local_smoke_verified`，未启动长期 Agent 或生产运行 |
-| 真实集成 | `not_verified_this_round`，未调用真实 KDS/Brain/XiaoC/WAES 外部链路 |
+| 真实集成 | `not_verified_this_round`，未调用真实 KDS/Brain/XiaoC/WAME 外部链路 |
 | 真实交付 | `not_collected` |
 | 客户验收 | `not_collected` |
 
@@ -74,13 +74,13 @@ customer_accepted = false
 |---|---|
 | 任一命令后续失败 | 降回 `baseline_controlled` 或 `repair_required`，新增 repair evidence |
 | 长程 Agent 外部动作被要求 | 必须先取得人工确认 |
-| 真实 KDS/Brain/XiaoC/WAES 集成未验证 | 保持 `local_dev_smoke_boundary` |
+| 真实 KDS/Brain/XiaoC/WAME 集成未验证 | 保持 `local_dev_smoke_boundary` |
 | Brain UI smoke 数据被误认为业务事实 | 纠正为 smoke fixture，只能作为 UI smoke 证据 |
 
 ## 6. 禁止声明
 
 - 不声明长程 Agent 生产可用；
-- 不声明真实 KDS/Brain/XiaoC/WAES 集成完成；
+- 不声明真实 KDS/Brain/XiaoC/WAME 集成完成；
 - 不声明真实外部动作完成；
 - 不声明生产部署、客户交付或客户验收；
 - 不声明 `accepted`、`integrated`、`production_ready` 或 `customer_accepted`。

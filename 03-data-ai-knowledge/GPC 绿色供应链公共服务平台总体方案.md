@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-E4579BFF7E
 title: GPC 绿色供应链公共服务平台总体方案
 project: KDS
-related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, XiaoC, XGD, GPCF]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, XiaoC, XGD, GPCF, Studio]
 domain: data-ai-knowledge
 status: controlled
 version: v1.0

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-E360D5C8BC
 title: ODF Phase 3 受控模板化与准入门禁计划
 project: GPCF
-related_projects: [GPCF, WAES, KDS]
+related_projects: [GPCF, WAME, KDS]
 domain: status
 status: controlled
 version: v1.0

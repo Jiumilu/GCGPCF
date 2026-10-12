@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-1CB56A961F
 title: GPCF-L4-GFIS-REPAIR-078 GFIS 辽宁远航 KDS 受控检索复核
 project: GPCF
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -61,14 +61,14 @@ runtime_sop_e2e_master=failed_or_repair_required
 | 辽宁远航 23 个样箱测试签收或反馈 | 已作为业务事实线索和 KDS 检索方向 | 仍缺测试记录编号、测试签收附件、客户反馈原件、客户签收单号 |
 | 江西委托工厂样箱生产记录 | 已作为业务事实线索和 KDS 检索方向 | 仍缺委托生产单号、完工记录编号、生产批次号、代工签收附件 |
 | 2026-05 辽宁远航项目报价单 | KDS 报价 PDF 候选强，top priority | 仍缺客户确认函，报价 PDF 不能替代客户确认 |
-| 2026-06 现代精工产线量产计划或转量产批准 | 已作为业务事实线索和 KDS 检索方向 | 仍缺转量产批准单号、放行批准附件、量产计划编号、WAES evidence ref |
+| 2026-06 现代精工产线量产计划或转量产批准 | 已作为业务事实线索和 KDS 检索方向 | 仍缺转量产批准单号、放行批准附件、量产计划编号、WAME evidence ref |
 
 ## 真实性边界
 
 - 本轮确认 KDS 可用于检索和定位 5 类真实凭证缺口。
 - 本轮不确认 5 类真实凭证已取得。
 - 本轮不确认 GFIS runtime SOP E2E 通过。
-- 本轮不确认样箱测试、江西委托生产、客户确认、现代精工转量产或 WAES evidence ref 已验真。
+- 本轮不确认样箱测试、江西委托生产、客户确认、现代精工转量产或 WAME evidence ref 已验真。
 - 本轮不升级 accepted/integrated。
 
 ## 禁止动作
@@ -92,4 +92,4 @@ runtime_sop_e2e_master=failed_or_repair_required
 
 ## 下一步
 
-优先接收辽宁远航客户确认函或等效正式确认原件脱敏索引，形成第一条 quotation real submission 候选；同时继续收集 2026-01 样箱测试签收/反馈、江西委托生产单或完工记录、2026-06 现代精工转量产批准或 WAES evidence ref。GPCF 在这些原件进入复核前继续保持 GFIS/GPCF `repair_required`。
+优先接收辽宁远航客户确认函或等效正式确认原件脱敏索引，形成第一条 quotation real submission 候选；同时继续收集 2026-01 样箱测试签收/反馈、江西委托生产单或完工记录、2026-06 现代精工转量产批准或 WAME evidence ref。GPCF 在这些原件进入复核前继续保持 GFIS/GPCF `repair_required`。

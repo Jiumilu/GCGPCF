@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-LOOP-COGNEE-EXTERNAL-EXECUTION-INTEGRATION-004
 title: Loop Round - GPCF Cognee 外部执行正式回执与回填清单 004
 project: GPCF
-related_projects: [GPC, WAES, GPCF]
+related_projects: [GPC, WAME, GPCF]
 domain: docs
 status: controlled
 version: v1.0

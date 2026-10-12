@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-WAS-ONTOLOGY-XWAIL-MAPPING-20260623
 title: WAS-Ontology-XWAIL 语义契约与映射机制
 project: GPCF
-related_projects: [GPCF, GFIS, GPC, PVAOS, WAES, KDS, Brain, Studio]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, GPCF, Studio]
 domain: architecture
 status: controlled
 version: v1.0
@@ -22,24 +22,30 @@ superseded_by: []
 
 WAS、XWAIL、Ontology 都服务于把现实世界对象结构化为可理解、可治理、可计算的资产模型，但三者层级不同：
 
+**固定关系（GPCF V1.2 口径，与《XWAIL 规范 V1.2 草案》一致）**：
+
 ```text
 WAS 定义体系。
 Ontology 定义语义。
-XWAIL 定义契约。
+XWAIL 定义契约（含解析器 / 校验器 / 编辑器工具链——工程化实现=GCXWAIL）。
+WAME 负责注册、授权和发布（规范工具链的运行与治理载体）。
+AaaS 负责服务包、订阅、计量、SLA 和商业运营。
 ```
 
 Ontology 正式定位为 WAS 的语义知识层，不是独立于 WAS 的另一套顶层体系，不替代 XWAIL，也不替代 GFIS、GPC、PVAOS 等真实业务事实源。
 
 ## 2. 三者关系
 
-| 项 | WAS | Ontology | XWAIL |
-|---|---|---|---|
-| 核心定位 | 顶层体系与资产世界观 | 语义本体、概念关系、知识图谱基础 | 规范性建模语言与机器契约 |
-| 回答问题 | 什么是资产，资产如何分类、流动、演化、治理 | 概念之间是什么关系，机器如何理解资产语义 | 如何把资产写成可验证、可交换、可运行的模型 |
-| 抽象层级 | 最高层 | 语义知识层 | 工程表达层 |
-| 主要对象 | 三层资产、八维、八流、生命周期、治理原则 | 类、属性、关系、约束、推理规则、词表、本体图谱 | AssetGroup、AssetUnit、Dimensions、Relations、FlowRelations、StateMachine、Policy |
-| 使用者 | 架构、产品、治理、商业设计 | Brain、KDS、知识图谱、语义检索、推理系统 | 平台、验证器、WAES/WAE、Studio、AAAS |
-| 主要价值 | 保证方向一致 | 保证语义一致 | 保证模型一致 |
+| 项 | WAS | Ontology | XWAIL | WAME |
+|---|---|---|---|---|
+| 核心定位 | 顶层体系与资产世界观 | 语义本体、概念关系、知识图谱基础 | 规范性建模语言与机器契约 | 规范运行的治理与运营层（注册／授权／发布／审计；规范工具链的运行载体） |
+| 回答问题 | 什么是资产，资产如何分类、流动、演化、治理 | 概念之间是什么关系，机器如何理解资产语义 | 如何把资产写成可验证、可交换、可运行的模型 | 谁批准、能否注册／授权／发布、发布后如何审计 |
+| 抽象层级 | 最高层 | 语义知识层 | 工程表达层 | 治理运行层 |
+| 主要对象 | 三层资产、八维、八流、生命周期、治理原则 | 类、属性、关系、约束、推理规则、词表、本体图谱 | AssetGroup、AssetUnit、Dimensions、Relations、FlowRelations、StateMachine、Policy | 门决策、注册记录、授权、发布状态、审计链 |
+| 使用者 | 架构、产品、治理、商业设计 | Brain、KDS、知识图谱、语义检索、推理系统 | 平台、验证器、WAME/WAE、Studio、AAAS | 治理方、发布负责人、审计、平台运行 |
+| 主要价值 | 保证方向一致 | 保证语义一致 | 保证模型一致 | 保证治理一致 |
+
+**工具链与治理层的关系（口径）**：解析器／校验器／编辑器属 XWAIL 侧工具链（工程化=GCXWAIL）；其在平台内的运行场景、以及数据源（联网／数据库／符合 XWAIL 规范的文件）的调取与编辑，随 WAME 平台实现承载——**工具处理文件，WAME 管状态**（注册／授权／发布）。
 
 协同链路：
 
@@ -53,7 +59,7 @@ Ontology
 XWAIL
 把资产、关系、流程、状态、策略、证据写成机器契约
   ↓
-WAE / WAES
+WAE / WAME
 注册、运行、治理、发布和服务化运营
 ```
 
@@ -71,7 +77,7 @@ WAE / WAES
 | `CarbonAsset` | 碳排放、减排、配额、信用、证书等资产 | `AssetUnit` | `SupplyChain Profile / CarbonAsset` | 必须达到 Trusted 场景要求 |
 | `CarbonLedger` | 统一碳账本 | `AssetGroup` / `ServicePackage` | `SupplyChain Profile / CarbonLedger` | 事实源分布、账本统一 |
 | `GreenEvidence` | 绿色事实、认证材料、审计、检测、溯源证明 | `EvidenceRequirement` / `EvidenceRecord` | `SupplyChain Profile / GreenEvidence` | 绑定 `ontologyRef` 和来源记录 |
-| `ServicePackage` | 可服务化运营的能力包 | `ServicePackage` | `serviceScope`、`metering`、`sla` | WAES 治理，AAAS 商业优化 |
+| `ServicePackage` | 可服务化运营的能力包 | `ServicePackage` | `serviceScope`、`metering`、`sla` | WAME 治理，AAAS 商业优化 |
 
 ## 4. XWAIL 回指 Ontology
 
@@ -124,11 +130,11 @@ Candidate / Verified / Trusted / Rejected
 - 来源可信；
 - 规则通过；
 - 置信度达标；
-- WAES 授权；
+- WAME 授权；
 - 可审计；
 - 可回滚。
 
-可信推理写入 WAE 必须经过 WAES 策略授权，并绑定原始证据或来源记录。Brain 只能读取正式 Ontology、XWAIL、WAE 数据，不能绕过 WAES 修改正式模型。
+可信推理写入 WAE 必须经过 WAME 策略授权，并绑定原始证据或来源记录。Brain 只能读取正式 Ontology、XWAIL、WAE 数据，不能绕过 WAME 修改正式模型。
 
 写入失败必须生成：
 
@@ -145,13 +151,13 @@ Candidate / Verified / Trusted / Rejected
 ontologyRef / termVersion / reasoningSource / explanationRef
 ```
 
-这些字段用于解释证据与 Ontology 术语、推理规则和解释依据之间的关系。它们不等同于业务事实源；真实事实仍必须来自 GFIS、GPC、PVAOS 等系统或经 WAES 授权的可信推理链。
+这些字段用于解释证据与 Ontology 术语、推理规则和解释依据之间的关系。它们不等同于业务事实源；真实事实仍必须来自 GFIS、GPC、PVAOS 等系统或经 WAME 授权的可信推理链。
 
 ## 9. Brain 写入边界
 
-Brain 可以读取 Ontology、XWAIL、WAE 数据，提供知识问答、规则解释、异常分析、决策建议和高级工作台能力。Brain 不能绕过 WAES 直接修改正式 Ontology、XWAIL 或 WAE 主账。
+Brain 可以读取 Ontology、XWAIL、WAE 数据，提供知识问答、规则解释、异常分析、决策建议和高级工作台能力。Brain 不能绕过 WAME 直接修改正式 Ontology、XWAIL 或 WAE 主账。
 
-Brain 可提交变更建议或推理结果，但写入必须经过 WAES 授权策略、证据绑定、验证器检查和审计记录。
+Brain 可提交变更建议或推理结果，但写入必须经过 WAME 授权策略、证据绑定、验证器检查和审计记录。
 
 ## 10. Hard-stop
 
@@ -161,9 +167,9 @@ Brain 可提交变更建议或推理结果，但写入必须经过 WAES 授权�
 |---|---|
 | 推理结果仍为 `Candidate` 或 `Rejected` | 阻断 |
 | 缺原始证据或来源记录 | 阻断 |
-| 未通过 WAES 策略授权 | 阻断 |
+| 未通过 WAME 策略授权 | 阻断 |
 | `ontologyRef` 无效或术语版本不兼容 | 阻断 |
 | 置信度、规则或解释依据不满足 Trusted 要求 | 阻断 |
-| Brain 试图绕过 WAES 直接写入 | 阻断 |
+| Brain 试图绕过 WAME 直接写入 | 阻断 |
 
 本文件只定义语义契约和映射机制，不声明 Ontology、XWAIL 或 WAE 的生产写入能力已经完成。

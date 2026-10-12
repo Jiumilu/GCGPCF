@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-7959F4FC88
 title: Loop Round GPCF-GCKF-P0-D47-001
 project: GPCF
-related_projects: [GPC, WAES, GPCF]
+related_projects: [GPC, WAME, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -52,11 +52,11 @@ superseded_by: []
 
 - 委员会 review input 预览 SOP 候选：D46 committee trigger package preview → D47 committee review input preview → 后续 committee case review packet / intake acceptance precheck preview。
 
-## 本轮 WAES 门禁结果
+## 本轮 WAME 门禁结果
 
 - 当前仅为 dry-run preview。
 - 不允许自动提交委员会输入、自动立案、自动裁决、自动确认、自动释放冻结、自动写收益/贡献或自动写 evidence。
-- 不允许由 AI 或脚本绕过 WAES、KWE、Harness 或委员会路径。
+- 不允许由 AI 或脚本绕过 WAME、KWE、Harness 或委员会路径。
 
 ## 本轮人工确认事项
 

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-LOOP-COGNEE-P1-P2-P3-CLOSURE-001
 title: Loop Round - GPCF Cognee 受控试点 P1/P2/P3 收口 001
 project: GPCF
-related_projects: [GPC, WAES, GPCF]
+related_projects: [GPC, WAME, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -21,8 +21,8 @@ superseded_by: []
 ## 输入
 
 - `loop/context/cognee/policy.yaml`
-- `loop/context/cognee/waes/cognee-marker-gate.yaml`
-- `loop/context/cognee/waes/cognee-write-gate.yaml`
+- `loop/context/cognee/wame/cognee-marker-gate.yaml`
+- `loop/context/cognee/wame/cognee-write-gate.yaml`
 - `loop/context/cognee/harness/p1-recall-comparison-template.md`
 - `loop/context/cognee/harness/p2-write-preview-template.md`
 - `fixtures/cognee/cognee-p1-recall-comparison-template.json`
@@ -56,8 +56,8 @@ python3 loop/context/cognee/scripts/validate-cognee-p3-write-preview-rollback.py
 ## 反馈
 
 - P1：`cognee_p1_recall_output=pass` with hold（`pilot_gate_pass=false`），`mean_retrieval_precision=0.73619`，`record_count=5`。
-- P2：`cognee_p2_write_preview_output=pass`（`record_count=5`, `requested_write_count=5`, `preview_block_rate=1.0`, `owner_authorization_presence_rate=1.0`, `waes_pass_rate=1.0`）。
-- P3：`cognee_p3_write_preview_rollback_output=pass`（`record_count=4`, `requested_write_count=4`, `rollback_block_rate=1.0`, `owner_authorization_absence_rate=0.5`, `waes_block_rate=0.5`, `expected_blocked_reason_rate=1.0`）。
+- P2：`cognee_p2_write_preview_output=pass`（`record_count=5`, `requested_write_count=5`, `preview_block_rate=1.0`, `owner_authorization_presence_rate=1.0`, `wame_pass_rate=1.0`）。
+- P3：`cognee_p3_write_preview_rollback_output=pass`（`record_count=4`, `requested_write_count=4`, `rollback_block_rate=1.0`, `owner_authorization_absence_rate=0.5`, `wame_block_rate=0.5`, `expected_blocked_reason_rate=1.0`）。
 
 - 项目群纳入状态：
   - `pilot_gate_pass`: P1 false, P2 true, P3 true

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-HEADROOM-LCX-AUTHORIZATION-BOUNDARY-REVIEW-20260623
 title: Headroom LCX Authorization Boundary Review Evidence 20260623
 project: KDS
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio]
 domain: docs
 status: controlled
 version: v1.0
@@ -35,7 +35,7 @@ superseded_by: []
 | authorized_at | complete | no further block |
 | sanitized_production_token_ledger | complete | no further block |
 | rollback_plan_id | complete | no further block |
-| waes_harness_admission_decision | complete | no further block |
+| wame_harness_admission_decision | complete | no further block |
 
 ## 门禁
 
@@ -56,7 +56,7 @@ superseded_by: []
 
 ## 15 项目范围
 
-GPCF, KDS, Brain, WAES, GFIS, GPC, PVAOS, Edge, PKC, XiaoC, XGD, XiaoG, MMC, Studio, WAS
+GPCF, KDS, Brain, WAME, GFIS, GPC, PVAOS, Edge, PKC, XiaoC, XGD, XiaoG, MMC, Studio, WAS
 
 ## 非声明
 

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-2EF89E2432
 title: Loop Round GPCF-HEADROOM-LCX-AUTHORIZED-MEASUREMENT-AUTHORIZATION-TEMPLATE-001
 project: GPCF
-related_projects: [GPC, WAES, KDS, GPCF]
+related_projects: [GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -55,4 +55,4 @@ python3 tools/kds-sync/loop_document_gate.py --check-only
 
 ## 下一轮
 
-若用户提供完整字段和 WAES/Harness 准入裁决，则重新运行 authorized measurement precheck；否则只能继续完善负向 fixtures 和审计口径。
+若用户提供完整字段和 WAME/Harness 准入裁决，则重新运行 authorized measurement precheck；否则只能继续完善负向 fixtures 和审计口径。

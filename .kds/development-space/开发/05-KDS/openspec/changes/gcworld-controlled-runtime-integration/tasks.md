@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-GCWORLD-042
 title: tasks
 project: KDS
-related_projects: [GFIS, WAES, KDS, MMC, GPCF]
+related_projects: [GFIS, WAME, KDS, MMC, GPCF]
 domain: openspec
 status: draft
 version: v1.0
@@ -20,7 +20,7 @@ superseded_by: []
 
 - [ ] 1.1 批准所属Release、后继Feature、目标仓库、运行责任人、安全责任人、线程和有界文件范围。
 - [ ] 1.2 批准首个R0/R1纵向切片、测试环境、服务边界、数据范围、凭据、网络和保留期限。
-- [ ] 1.3 明确XWAIL、WAES、KWE、MMC、KDS、GFIS及业务系统的接口责任和禁止替代事项。
+- [ ] 1.3 明确XWAIL、WAME、KWE、MMC、KDS、GFIS及业务系统的接口责任和禁止替代事项。
 - [ ] 1.4 建立阶段开关、紧急冻结、撤销、停机和回滚的人工责任与确认矩阵。
 
 ## 2. 镜像与建议闭环

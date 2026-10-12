@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-B69A039079
 title: GC-Knowledge Fabric 统一编号规则
 project: KDS
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, MMC, GPCF]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, MMC, GPCF]
 domain: data-ai-knowledge
 status: controlled
 version: v1.0
@@ -20,7 +20,7 @@ superseded_by: []
 
 日期：2026-06-20  
 状态：`draft`  
-适用范围：KDS、OKF、WAES、KWE、Brain、PKC、MMC、Harness、LOOP、GFIS/GPC 写回候选与治理账本。  
+适用范围：KDS、OKF、WAME、KWE、Brain、PKC、MMC、Harness、LOOP、GFIS/GPC 写回候选与治理账本。  
 
 ## 1. 目标
 
@@ -52,7 +52,7 @@ superseded_by: []
 KOBJ-GH-ORD-202606-0001
 FC-GH-ORD-202606-0001
 WBC-GFIS-ORD-202606-0001
-GATE-WAES-RAG-202606-0001
+GATE-WAME-RAG-202606-0001
 LOOP-GPCF-KDS-202606-0001
 ```
 
@@ -74,7 +74,7 @@ LOOP-GPCF-KDS-202606-0001
 | `DSP` | DisputeRecord | `open` |
 | `DEC` | DecisionRecord | `draft` |
 | `EVT` | EventRecord | `recorded` |
-| `GATE` | WAESGateResult | `pending` |
+| `GATE` | WAMEGateResult | `pending` |
 | `KWE` | KnowledgeWorkItem | `open` |
 | `CONF` | ConfirmationRecord | `pending` |
 | `HEV` | HarnessEvidenceRecord | `recorded` |
@@ -90,7 +90,7 @@ LOOP-GPCF-KDS-202606-0001
 | `GFIS` | GFIS |
 | `GPC` | GPC |
 | `KDS` | KDS |
-| `WAES` | WAES |
+| `WAME` | WAME |
 | `BRAIN` | Brain |
 | `PKC` | PKC |
 | `MMC` | MMC |
@@ -149,7 +149,7 @@ LOOP-GPCF-KDS-202606-0001
 P0 编号规则通过条件：
 
 1. 每类核心对象有前缀。
-2. 葛化、湖北磷材、GFIS、KDS、WAES、GPCF 有 scope 代码。
+2. 葛化、湖北磷材、GFIS、KDS、WAME、GPCF 有 scope 代码。
 3. KDS 十一池有 subject 代码。
 4. 编号不表达确认状态。
 5. 状态变化不重写编号。

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-F861799E08
 title: 基础知识委员会评审模式
 project: KDS
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS]
 domain: docs
 status: controlled
 version: v1.0
@@ -61,7 +61,7 @@ This schema defines the fields required for future committee review of hard-stop
 | createsConfirmationFact | false |
 | createsCommitteeDecision | false |
 | realKdsApiWrite | false |
-| waesWrite | false |
+| wameWrite | false |
 | businessLedgerWrite | false |
 | settlementWrite | false |
 | ragAdmission | false |
@@ -71,5 +71,5 @@ This schema defines the fields required for future committee review of hard-stop
 
 - This file defines schema only and does not create human confirmation facts.
 - This file defines schema only and does not create committee decisions.
-- No real KDS API, WAES, GFIS, GPC, PVAOS, finance, settlement, RAG admission, or production write is performed.
+- No real KDS API, WAME, GFIS, GPC, PVAOS, finance, settlement, RAG admission, or production write is performed.
 - Any future use of this schema still requires explicit human or committee action and a separate controlled evidence record.

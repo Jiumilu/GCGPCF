@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-B7F46ACCE4
 title: LOOP Round GPCF Headroom Independent Loop Round Replay 001
 project: GPCF
-related_projects: [GPC, WAES, GPCF]
+related_projects: [GPC, WAME, GPCF]
 domain: docs
 status: controlled
 version: v1.0

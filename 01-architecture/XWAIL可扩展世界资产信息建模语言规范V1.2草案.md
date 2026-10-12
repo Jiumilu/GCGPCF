@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-XWAIL-V12-DRAFT-20260623
 title: XWAIL可扩展世界资产信息建模语言规范V1.2草案
 project: GPCF
-related_projects: [GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: architecture
 status: controlled
 version: v1.0

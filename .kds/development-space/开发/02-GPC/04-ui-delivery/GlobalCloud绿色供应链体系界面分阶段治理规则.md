@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-D068AE0B5B
 title: GlobalCloud 绿色供应链体系界面分阶段治理规则
 project: GPC
-related_projects: [GFIS, GPC, PVAOS, WAES]
+related_projects: [GFIS, GPC, PVAOS, WAME]
 domain: ui-delivery
 status: controlled
 version: v1.0

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-492B2C4B42
 title: OKF Summary Owner Review Wait 2026-06-22
 project: KDS
-related_projects: [WAES, KDS]
+related_projects: [WAME, KDS]
 domain: docs
 status: controlled
 version: v1.0

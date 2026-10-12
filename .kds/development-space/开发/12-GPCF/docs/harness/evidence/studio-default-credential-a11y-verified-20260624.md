@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-A13F6D7B4E
 title: Studio 默认凭据整改链路可访问性复验证据
 project: GPCF
-related_projects: [GPC, WAES, GPCF, Studio]
+related_projects: [GPC, WAME, GPCF, Studio]
 domain: docs
 status: controlled
 version: v1.0

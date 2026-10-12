@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-GCWORLD-017
 title: spec
 project: KDS
-related_projects: [PVAOS, WAES, KDS]
+related_projects: [PVAOS, WAME, KDS]
 domain: openspec
 status: draft
 version: v1.0
@@ -19,7 +19,7 @@ superseded_by: []
 ## ADDED Requirements
 
 ### Requirement: 世界运行服务职责分离
-系统 SHALL 将世界注册、身份解析、世界投影、上下文构造、事件引擎、行动运行时、智能体运行时、模拟引擎、治理适配以及查询与视图作为边界明确的运行服务。各服务 MUST 使用稳定对象标识、版本化契约和证据引用协作，不得复制 KDS、WAS、WAES 或业务系统的权威职责。
+系统 SHALL 将世界注册、身份解析、世界投影、上下文构造、事件引擎、行动运行时、智能体运行时、模拟引擎、治理适配以及查询与视图作为边界明确的运行服务。各服务 MUST 使用稳定对象标识、版本化契约和证据引用协作，不得复制 KDS、WAS、WAME 或业务系统的权威职责。
 
 #### Scenario: 构造项目决策上下文
 - **WHEN** 智能体请求某项目的决策上下文

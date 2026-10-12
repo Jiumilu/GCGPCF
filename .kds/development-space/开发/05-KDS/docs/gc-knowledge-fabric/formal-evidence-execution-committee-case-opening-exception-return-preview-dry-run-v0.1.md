@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-5873A3463B
 title: GC-Knowledge Fabric P0 正式证据执行委员会立案异常退回预览 dry-run v0.1
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -22,7 +22,7 @@ superseded_by: []
 
 本文档定义 P0-D54 的 committee case opening exception return 预览 dry-run。
 
-D54 承接 D53 committee receipt acknowledgement routing preview，只预览委员会材料不满足开案条件时的候选退回原因、责任角色、补件路径、再进入路径、冻结保持、WAES 负向门禁和 Harness no-write 边界。
+D54 承接 D53 committee receipt acknowledgement routing preview，只预览委员会材料不满足开案条件时的候选退回原因、责任角色、补件路径、再进入路径、冻结保持、WAME 负向门禁和 Harness no-write 边界。
 
 ## 2. 输入
 
@@ -38,7 +38,7 @@ D54 承接 D53 committee receipt acknowledgement routing preview，只预览委�
 | 范围 | 预览要求 |
 |---|---|
 | Return roles | 继承 D53 routing roles |
-| Return sections | 覆盖来源 routing lineage、exception return scope、return envelope fields、return readiness prerequisites、return reason candidates、responsible role candidates、supplement request candidates、reentry path candidates、authority and recusal boundary、freeze retention statement、WAES negative gate snapshot、Harness no-write 和 no-write attestation |
+| Return sections | 覆盖来源 routing lineage、exception return scope、return envelope fields、return readiness prerequisites、return reason candidates、responsible role candidates、supplement request candidates、reentry path candidates、authority and recusal boundary、freeze retention statement、WAME negative gate snapshot、Harness no-write 和 no-write attestation |
 | Return envelope | 只作为候选退回结构，不记录正式退回 |
 | Decision constraints | 明确 return preview 不是 formal return，不产生 intake acceptance、提交、案卷创建、正式回执、正式路由、立案、裁决、确认、冻结释放、收益/贡献确认或 evidence 写入 |
 
@@ -60,7 +60,7 @@ D54 承接 D53 committee receipt acknowledgement routing preview，只预览委�
 - 不写 KDS、GFIS、GPC 或业务系统。
 - 不写 Harness evidence 或 formal evidence。
 - 不写收益分配或贡献积分。
-- 不覆盖 WAES 门禁。
+- 不覆盖 WAME 门禁。
 - 不提升 lifecycle。
 - 不标记 accepted / integrated / production_ready。
 

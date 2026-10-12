@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-615B48C8D7
 title: Loop CodeGraph GFIS Residual Notice Evidence
 project: GPCF
-related_projects: [GFIS, GPC, WAES, GPCF]
+related_projects: [GFIS, GPC, WAME, GPCF]
 domain: docs
 status: controlled
 version: v1.0

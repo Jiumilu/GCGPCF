@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-8909D5E04A
 title: GPCF-L4-GFIS-REPAIR-241
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -53,7 +53,7 @@ superseded_by: []
 - GPCF 总控已同步 GFIS 231：release override negative fixture guard 明确拒收 6 类弱 override 声明。
 - GFIS 运行层主 validator 已纳入 `runtime_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_release_override_negative_fixture_guard`。
 - GPCF 状态仍为 `partial_repair`，GFIS runtime SOP E2E 仍为 `repair_required`。
-- 本轮不生成客户订单、平台订单、合规人工核验完成文件、有效 release-ready package、运行层主键、review queue、runtime intake、WAES review 或 verified artifact。
+- 本轮不生成客户订单、平台订单、合规人工核验完成文件、有效 release-ready package、运行层主键、review queue、runtime intake、WAME review 或 verified artifact。
 
 ## 关键计数
 
@@ -85,7 +85,7 @@ valid_source_records=0
 runtime_primary_key_ready=0
 review_queue=0
 runtime_intake=0
-waes_review=0
+wame_review=0
 verified=0
 runtime_sop_e2e=repair_required
 ```

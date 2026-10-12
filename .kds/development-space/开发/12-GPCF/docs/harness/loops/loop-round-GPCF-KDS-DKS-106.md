@@ -1,8 +1,8 @@
 ---
 doc_id: GPCF-DOC-9CE9D51B3C
-title: LOOP Round GPCF-KDS-DKS-106 - WAES Action Gate Precheck No-write
+title: LOOP Round GPCF-KDS-DKS-106 - WAME Action Gate Precheck No-write
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, Brain, PKC, MMC, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, Brain, PKC, MMC, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -16,13 +16,13 @@ supersedes: []
 superseded_by: []
 ---
 
-# LOOP Round GPCF-KDS-DKS-106 - WAES Action Gate Precheck No-write
+# LOOP Round GPCF-KDS-DKS-106 - WAME Action Gate Precheck No-write
 
 ## 1. 本轮目标
 
-在 DKS-105 KWE Action Validation Workpack 之后，建立 WAES Action Gate Precheck no-write 契约，使 validation workpack 可以被转换为 WAES 前置门禁候选，用于识别 source、evidence、DSR、sensitive data、writeback、committee、freeze 等候选门禁。
+在 DKS-105 KWE Action Validation Workpack 之后，建立 WAME Action Gate Precheck no-write 契约，使 validation workpack 可以被转换为 WAME 前置门禁候选，用于识别 source、evidence、DSR、sensitive data、writeback、committee、freeze 等候选门禁。
 
-本轮只定义 WAES precheck 候选，不写正式 WAES Gate Result，不创建真实 KWE WorkItem，不改变 KDS lifecycle，不写 KDS fact 或 accepted fact，不写 GFIS/GPC/ERP/MES，不生成 target receipt，不确认收益、积分、额度或悬赏，不调用外部 API。
+本轮只定义 WAME precheck 候选，不写正式 WAME Gate Result，不创建真实 KWE WorkItem，不改变 KDS lifecycle，不写 KDS fact 或 accepted fact，不写 GFIS/GPC/ERP/MES，不生成 target receipt，不确认收益、积分、额度或悬赏，不调用外部 API。
 
 ## 2. 本轮输入
 
@@ -31,19 +31,19 @@ superseded_by: []
 - `packages/shared/src/knowledge/kwe-action-validation-workpack.ts`
 - `fixtures/kwe/action-validation-workpack-dry-run.json`
 - `scripts/kwe/validate_kwe_action_validation_workpack.py`
-- `okf/waes-gate-io-policy.yaml`
-- `packages/shared/src/knowledge/waes-gate-io.ts`
-- `packages/shared/src/knowledge/waes-gate.ts`
+- `okf/wame-gate-io-policy.yaml`
+- `packages/shared/src/knowledge/wame-gate-io.ts`
+- `packages/shared/src/knowledge/wame-gate.ts`
 
 ## 3. 本轮动作
 
 | 动作 | 输出 |
 |---|---|
-| 建立 WAES Action Gate Precheck no-write 规则 | `docs/gc-knowledge-fabric/waes-action-gate-precheck-policy.md` |
-| 建立 OKF 契约 | `okf/waes-action-gate-precheck-policy.yaml` |
-| 建立共享类型 | `packages/shared/src/knowledge/waes-action-gate-precheck.ts` |
-| 建立 dry-run fixture | `fixtures/waes/action-gate-precheck-dry-run.json` |
-| 建立 validator | `scripts/waes/validate_waes_action_gate_precheck.py` |
+| 建立 WAME Action Gate Precheck no-write 规则 | `docs/gc-knowledge-fabric/wame-action-gate-precheck-policy.md` |
+| 建立 OKF 契约 | `okf/wame-action-gate-precheck-policy.yaml` |
+| 建立共享类型 | `packages/shared/src/knowledge/wame-action-gate-precheck.ts` |
+| 建立 dry-run fixture | `fixtures/wame/action-gate-precheck-dry-run.json` |
+| 建立 validator | `scripts/wame/validate_wame_action_gate_precheck.py` |
 | 接入目录、类型导出与 coverage 矩阵 | `docs/gc-knowledge-fabric/README.md`, `packages/shared/src/knowledge/index.ts`, `fixtures/coverage/okf-types-api-validator-coverage.json`, `scripts/coverage/validate_okf_types_api_validator_coverage.py` |
 
 ## 4. 本轮检查
@@ -51,7 +51,7 @@ superseded_by: []
 ### 4.1 DKS-106 专项检查
 
 ```text
-waes_action_gate_precheck=pass prechecks=5 precheck_passed=1 repair_required=1 committee_required=1 freeze_required=1 blocked=1 creates_waes_gate_results=0 creates_kwe_work_items=0 promotes_lifecycle=0 harness_evidence_required=5 writes_waes_gate_result=0 writes_kwe_work_item=0 writes_kds_lifecycle=0 writes_kds_fact=0 writes_kds_accepted_fact=0 writes_business_system=0 writes_target_receipt=0 writes_committee_decision_completion=0 writes_revenue_or_score_confirmation=0 writes_quota_transfer=0 writes_bounty_settlement=0 writes_external_api=0
+wame_action_gate_precheck=pass prechecks=5 precheck_passed=1 repair_required=1 committee_required=1 freeze_required=1 blocked=1 creates_wame_gate_results=0 creates_kwe_work_items=0 promotes_lifecycle=0 harness_evidence_required=5 writes_wame_gate_result=0 writes_kwe_work_item=0 writes_kds_lifecycle=0 writes_kds_fact=0 writes_kds_accepted_fact=0 writes_business_system=0 writes_target_receipt=0 writes_committee_decision_completion=0 writes_revenue_or_score_confirmation=0 writes_quota_transfer=0 writes_bounty_settlement=0 writes_external_api=0
 ```
 
 ### 4.2 覆盖矩阵
@@ -70,7 +70,7 @@ tsc -p packages/api/tsconfig.json --noEmit: pass
 
 ### 4.4 回归链
 
-本轮回归链覆盖 DKS-096 至 DKS-106，以及既有 KDS、WAES、KWE、GFIS、Brain/PKC、Governance、RAG、MMC、状态机、对象关系 no-write smoke。
+本轮回归链覆盖 DKS-096 至 DKS-106，以及既有 KDS、WAME、KWE、GFIS、Brain/PKC、Governance、RAG、MMC、状态机、对象关系 no-write smoke。
 
 ```text
 regression=pass
@@ -83,12 +83,12 @@ api_tsc=pass
 
 ## 5. No-write 证据
 
-本轮新增 WAES precheck 明确记录以下计数均为 0：
+本轮新增 WAME precheck 明确记录以下计数均为 0：
 
-- creates_waes_gate_results
+- creates_wame_gate_results
 - creates_kwe_work_items
 - promotes_lifecycle
-- writes_waes_gate_result
+- writes_wame_gate_result
 - writes_kwe_work_item
 - writes_kds_lifecycle
 - writes_kds_fact
@@ -101,13 +101,13 @@ api_tsc=pass
 - writes_bounty_settlement
 - writes_external_api
 
-本轮只证明 validation workpack 可以被转换为本地 WAES precheck 候选，不代表 WAES Gate 通过、正式 Gate Result 写入、真实任务创建、委员会裁决、冻结执行、状态提升或业务系统写回。
+本轮只证明 validation workpack 可以被转换为本地 WAME precheck 候选，不代表 WAME Gate 通过、正式 Gate Result 写入、真实任务创建、委员会裁决、冻结执行、状态提升或业务系统写回。
 
 ## 6. 风险与阻塞
 
 | 风险 | 状态 | 处理 |
 |---|---|---|
-| precheck 被误用为正式 WAES Gate Result | controlled | `createsWaesGateResult=false`，写入计数为 0 |
+| precheck 被误用为正式 WAME Gate Result | controlled | `createsWameGateResult=false`，写入计数为 0 |
 | precheck_passed 被误解为门禁通过 | controlled | precheck_passed 只代表可进入 gate 候选审查 |
 | committee / freeze 候选被误写成完成 | controlled | 不生成 committee decision completion，不写 freeze result |
 | blocked route 被放行 | controlled | blocked precheck 必须保留 reasonCodes |
@@ -115,11 +115,11 @@ api_tsc=pass
 
 ## 7. 下一轮建议
 
-DKS-107 建议进入 WAES Precheck Bundle Read Model No-write：
+DKS-107 建议进入 WAME Precheck Bundle Read Model No-write：
 
-- 输入 DKS-106 WAES precheck；
+- 输入 DKS-106 WAME precheck；
 - 输出 Brain / KWE / GFIS Assistant 可读的门禁预检聚合视图；
-- 保持 read-model-only，不写 WAES Gate Result，不创建 KWE WorkItem，不改变 KDS 状态，不写 GFIS。
+- 保持 read-model-only，不写 WAME Gate Result，不创建 KWE WorkItem，不改变 KDS 状态，不写 GFIS。
 
 ## 8. LOOP 结论
 

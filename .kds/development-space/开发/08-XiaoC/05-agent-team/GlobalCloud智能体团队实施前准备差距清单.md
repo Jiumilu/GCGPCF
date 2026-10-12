@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-62063BBDE9
 title: GlobalCloud 智能体团队实施前准备差距清单
 project: XiaoC
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, XiaoC, XGD, GPCF, Studio]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, XiaoC, XGD, GPCF, Studio]
 domain: agent-team
 status: controlled
 version: v1.0
@@ -59,12 +59,12 @@ superseded_by: []
 已完成：
 
 1. 首轮专项回报已接入
-2. WAES 仓库路径已确认
-3. WAES 当前分支、remote、dirty state 已补到首轮证据
+2. WAME 仓库路径已确认
+3. WAME 当前分支、remote、dirty state 已补到首轮证据
 
 未完成：
 
-1. WAES 只读预检结果未形成正式专项结论
+1. WAME 只读预检结果未形成正式专项结论
 2. 治理运行态证据未形成
 3. 实施前阻塞和证据要求未并入总表
 

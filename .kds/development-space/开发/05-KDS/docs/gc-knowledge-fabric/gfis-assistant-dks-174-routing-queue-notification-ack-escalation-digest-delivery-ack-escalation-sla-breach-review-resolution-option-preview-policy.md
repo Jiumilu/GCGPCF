@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-8C42DFB51D
 title: GFIS Assistant DKS-174 SLA Breach Review Resolution Option Preview No-write 规则
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, Brain, PKC]
+related_projects: [GFIS, GPC, WAME, KDS, Brain, PKC]
 domain: docs
 status: controlled
 version: v1.0
@@ -25,7 +25,7 @@ DKS-174 定义从 DKS-173 SLA breach review preview 派生的 resolution option 
 ## 强边界
 
 - 不创建 resolution、dispute update、committee decision、freeze action、approval request 或 approval decision。
-- 不写 GFIS、GPC、ERP、MES、KDS fact、KDS lifecycle、WAES gate result、KWE work item 或 Harness evidence。
+- 不写 GFIS、GPC、ERP、MES、KDS fact、KDS lifecycle、WAME gate result、KWE work item 或 Harness evidence。
 - 不把候选 resolution option 解释为正式处理结论、委员会裁决、业务责任归因或可写回事实。
 
 ## DKS-174 验收口径

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-3D3442E146
 title: GPCF-L4-GFIS-REAL-SYNC-006
 project: GPCF
-related_projects: [GFIS, GPC, WAES, GPCF]
+related_projects: [GFIS, GPC, WAME, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -20,15 +20,15 @@ superseded_by: []
 
 ## 目标
 
-将 GFIS 真项目仓 `GFIS-RUNTIME-SOP-E2E-REAL-006` 的 WAES review admission gate 回写到 GPCF 总控。
+将 GFIS 真项目仓 `GFIS-RUNTIME-SOP-E2E-REAL-006` 的 WAME review admission gate 回写到 GPCF 总控。
 
-本轮只做一个真实实质轮次：同步 GFIS 运行层缺 runtime intake item 时不得创建 WAES review result 的事实，不恢复 100/100，不升级 accepted/integrated。
+本轮只做一个真实实质轮次：同步 GFIS 运行层缺 runtime intake item 时不得创建 WAME review result 的事实，不恢复 100/100，不升级 accepted/integrated。
 
 ## 输入
 
-- GFIS `docs/harness/sop-e2e/waes-review/README.md`
-- GFIS `docs/harness/sop-e2e/waes-review/customer-requirement-platform-order-waes-review-gate.json`
-- GFIS `scripts/validate_gfis_waes_review_gate.py`
+- GFIS `docs/harness/sop-e2e/wame-review/README.md`
+- GFIS `docs/harness/sop-e2e/wame-review/customer-requirement-platform-order-wame-review-gate.json`
+- GFIS `scripts/validate_gfis_wame_review_gate.py`
 - GFIS `scripts/validate_gfis_runtime_sop_e2e_real.py`
 - GPCF `02-governance/loop/LOOP_CONTROL_BOARD.md`
 - GPCF `docs/harness/loop-state.md`
@@ -38,8 +38,8 @@ superseded_by: []
 
 ## 动作
 
-- 将 GPCF self-correction validator 接入 GFIS WAES review admission gate。
-- 将 GPCF L4 minimum closed-loop validator 接入 GFIS WAES review admission gate。
+- 将 GPCF self-correction validator 接入 GFIS WAME review admission gate。
+- 将 GPCF L4 minimum closed-loop validator 接入 GFIS WAME review admission gate。
 - 回写控制板、状态矩阵、loop-state、minimum evidence index 和 evidence index。
 - 保持 `project_group_score=78`、`real_business_lane=repair_required`、`business_verification_pending=true`。
 
@@ -56,18 +56,18 @@ superseded_by: []
 
 ## 结论
 
-REAL-SYNC-006 只证明 GPCF 总控已识别 GFIS REAL-006 WAES review admission gate：
+REAL-SYNC-006 只证明 GPCF 总控已识别 GFIS REAL-006 WAME review admission gate：
 
-- `gfis_waes_review_gate=pass`
+- `gfis_wame_review_gate=pass`
 - `runtime_intake_created=0`
 - `runtime_intake=0`
-- `waes_review_created=0`
-- `waes_review=0`
+- `wame_review_created=0`
+- `wame_review=0`
 - `verified=0`
 - `real_business_lane=repair_required`
 - `business_verification_pending=true`
 
-完整真实 SOP E2E 仍未通过。真实 source-of-record、人工业务核验、运行层主键、review queue item、runtime intake、WAES review 和 verified artifact 均未形成。
+完整真实 SOP E2E 仍未通过。真实 source-of-record、人工业务核验、运行层主键、review queue item、runtime intake、WAME review 和 verified artifact 均未形成。
 
 ## 真实性计数
 

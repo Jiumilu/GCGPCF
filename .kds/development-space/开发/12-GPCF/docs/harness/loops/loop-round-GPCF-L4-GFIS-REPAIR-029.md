@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-0C02118386
 title: GPCF L4 GFIS Repair 029 运行时原料修复候选
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -82,7 +82,7 @@ status=pass_demo_only
 
 - 不进行生产写入。
 - 不进行真实外部 API 写入。
-- 不创建库存、采购收货、来料 QA 提交、WorkOrder 完成、WAES/KDS 最终写入、POD、财务确认、accepted 或 integrated 状态。
+- 不创建库存、采购收货、来料 QA 提交、WorkOrder 完成、WAME/KDS 最终写入、POD、财务确认、accepted 或 integrated 状态。
 - Demo 仍仅作为显示回归验证。
 
 ## 结果

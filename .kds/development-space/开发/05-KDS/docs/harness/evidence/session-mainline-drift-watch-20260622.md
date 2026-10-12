@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-3A9B82D614
 title: Session Mainline Drift Watch 20260622
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0

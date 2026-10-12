@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-8DDE495C90
 title: Loop Round GPCF-PV-LR-001
 project: PVAOS
-related_projects: [GPC, PVAOS, WAES, KDS, GPCF]
+related_projects: [GPC, PVAOS, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -34,6 +34,6 @@ superseded_by: []
 | 动作 | 在 GPCF 总控仓内初始化 PVAOS loop-state、evidence-index、loop record 和校验器 |
 | 输出 | `docs/harness/PVAOS/` 与 `tools/kds-sync/validate_pvaos_initialization.py` |
 | 检查 | validator、文档污染、KDS conflict、diff check |
-| 反馈 | 下一实质轮次应初始化 WAES |
+| 反馈 | 下一实质轮次应初始化 WAME |
 
 Current state remains `partial` until PVAOS 真实项目仓、门户底座、平台运营对象、租户/伙伴/组织能力和人工验收完成。未经人工验收不得升级 `accepted` 或 `integrated`。

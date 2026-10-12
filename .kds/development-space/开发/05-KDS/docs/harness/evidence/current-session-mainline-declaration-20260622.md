@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-7B2E61A9D4
 title: Current Session Mainline Declaration 20260622
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0

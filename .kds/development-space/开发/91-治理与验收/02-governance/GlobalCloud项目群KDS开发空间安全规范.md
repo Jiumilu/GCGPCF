@@ -1,12 +1,12 @@
 ---
 doc_id: GPCF-DOC-AC66DE8415
 title: GlobalCloud 项目群 KDS 开发空间安全规范
-project: WAES
-related_projects: [GPC, WAES, KDS, GPCF]
+project: WAME
+related_projects: [GPC, WAME, KDS, GPCF]
 domain: governance
 status: controlled
 version: v1.0
-owner: WAES
+owner: WAME
 kds_space: 开发
 kds_path: 开发/91-治理与验收/02-governance/GlobalCloud项目群KDS开发空间安全规范.md
 source_path: 02-governance/GlobalCloud项目群KDS开发空间安全规范.md

@@ -2,7 +2,7 @@
 doc_id: GPCF-LOOP-PROJECT-GROUP-P0B-PROJECT-VALIDATION-001
 title: Loop Round GPCF-PROJECT-GROUP-P0B-PROJECT-VALIDATION-001
 project: GPCF
-related_projects: [GPC, WAES, KDS, Brain, PKC, MMC, GPCF, Studio]
+related_projects: [GPC, WAME, KDS, Brain, PKC, MMC, GPCF, Studio]
 domain: docs
 status: controlled
 version: v1.0

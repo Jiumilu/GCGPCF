@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-GPC-REAL-RUNTIME-BASELINE-20260624
 title: GPC 真实运行基线证据 2026-06-24
 project: GPC
-related_projects: [GPC, WAES, GPCF]
+related_projects: [GPC, WAME, GPCF]
 domain: docs
 status: controlled
 version: v1.0

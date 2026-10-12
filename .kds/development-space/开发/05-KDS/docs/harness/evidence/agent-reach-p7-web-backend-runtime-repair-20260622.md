@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-AGENT-REACH-P7-WEB-BACKEND-RUNTIME-REPAIR-20260622
 title: Agent-Reach P7 Web Backend Runtime Repair 2026-06-22
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0

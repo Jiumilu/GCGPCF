@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-2571DF8CD7
 title: Loop Round GPCF-L4-GFIS-REPAIR-173
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -64,7 +64,7 @@ superseded_by: []
 
 ## 关键输出
 
-`liaoning_yuanhang_runtime_document_evidence_slot_owner_response_submission_package_dispatch_authorization_envelope_negative_fixture_guard=pass negative_fixtures=6 rejected=6 accepted=0 objects=12 proof_slots=62 expected_submission_packages=62 expected_acknowledgements=62 expected_dispatch_authorization_envelopes=62 submitted_envelopes=0 structure_valid_envelopes=0 manual_authorized_envelopes=0 recipient_confirmed_envelopes=0 dispatch_channel_confirmed_envelopes=0 dispatch_allowed=0 acknowledgements_found=0 owner_responses=0 submission_packages_found=0 valid_submission_packages=0 release_allowed=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0 state=dispatch_authorization_envelope_negative_fixtures_rejected runtime_sop_e2e=repair_required`
+`liaoning_yuanhang_runtime_document_evidence_slot_owner_response_submission_package_dispatch_authorization_envelope_negative_fixture_guard=pass negative_fixtures=6 rejected=6 accepted=0 objects=12 proof_slots=62 expected_submission_packages=62 expected_acknowledgements=62 expected_dispatch_authorization_envelopes=62 submitted_envelopes=0 structure_valid_envelopes=0 manual_authorized_envelopes=0 recipient_confirmed_envelopes=0 dispatch_channel_confirmed_envelopes=0 dispatch_allowed=0 acknowledgements_found=0 owner_responses=0 submission_packages_found=0 valid_submission_packages=0 release_allowed=0 review_queue=0 runtime_intake=0 wame_review=0 verified=0 state=dispatch_authorization_envelope_negative_fixtures_rejected runtime_sop_e2e=repair_required`
 
 ## 总控回写
 
@@ -77,7 +77,7 @@ superseded_by: []
 
 - 本轮只证明 6 类弱授权信封会被拒收。
 - 本轮不证明真实派发授权信封已经提交。
-- 本轮不证明 owner response、submission package、handoff acknowledgement、live proof、签章完成件、客户确认函、采购订单/合同、KDS write receipt、WAES confirmation、GFIS 发货/POD 或运行层单据事实已取得。
+- 本轮不证明 owner response、submission package、handoff acknowledgement、live proof、签章完成件、客户确认函、采购订单/合同、KDS write receipt、WAME confirmation、GFIS 发货/POD 或运行层单据事实已取得。
 - GFIS 当前用于现代精工 OEM 代加工生产，葛化自建工厂投产后继续作为同一运行层系统使用。
 - GFIS Demo 只作为展示、培训和前端回归，不作为 SOP 主体。
 

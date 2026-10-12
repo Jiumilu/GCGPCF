@@ -1,12 +1,12 @@
 ---
 doc_id: GPCF-DOC-04BF76145B
 title: LOOP Execution Rules
-project: WAES
-related_projects: [GPC, WAES, KDS, GPCF, Studio]
+project: WAME
+related_projects: [GPC, WAME, KDS, GPCF, Studio]
 domain: governance
 status: controlled
 version: v1.0
-owner: WAES
+owner: WAME
 kds_space: 开发
 kds_path: 开发/91-治理与验收/02-governance/loop/LOOP_EXECUTION_RULES.md
 source_path: 02-governance/loop/LOOP_EXECUTION_RULES.md
@@ -92,7 +92,7 @@ real_business_lane=repair_required
 runtime_primary_key_ready=0
 review_queue=0
 runtime_intake=0
-waes_review=0
+wame_review=0
 verified=0
 ```
 
@@ -149,3 +149,5 @@ Plan -> Implement -> Evaluate -> Repair -> Commit
 ```
 
 单个 Feature 不得扩张 progress、review、task、status、log、notes 或 decision 文档；Evidence 只保留结果。
+
+policy_version: v1.1

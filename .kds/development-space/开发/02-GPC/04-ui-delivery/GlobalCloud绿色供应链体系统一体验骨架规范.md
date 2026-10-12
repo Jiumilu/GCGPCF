@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-2D7F908C5F
 title: GlobalCloud 绿色供应链体系统一体验骨架规范
 project: GPC
-related_projects: [GFIS, GPC, PVAOS, WAES]
+related_projects: [GFIS, GPC, PVAOS, WAME]
 domain: ui-delivery
 status: controlled
 version: v1.0
@@ -85,7 +85,7 @@ superseded_by: []
 ### 2.4 操作工作台
 
 适用：
-- WAES 控制塔
+- WAME 控制塔
 - 调度工作台
 - 质量处理工作台
 

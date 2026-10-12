@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-8DC131D430
 title: Ontology/WAS 3 小时实施 P2 门禁执行与回放证据
 project: GPCF
-related_projects: [GFIS, GPC, WAES, GPCF]
+related_projects: [GFIS, GPC, WAME, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -22,7 +22,7 @@ superseded_by: []
 
 `GPCF-ONTOLOGY-WAS-3H-P2-GATE-REPLAY-001` 已完成 P2 门禁执行与回放。9 组 gate 全部通过，WAS OKF 12 项 validator 全部通过。
 
-本 evidence 只记录本地受控 validator replay，不写入 GFIS 接收目录，不创建真实 source-of-record、runtime primary key、review queue、runtime intake、WAES review 或 verified artifact，不升级 accepted、integrated 或 production_ready。
+本 evidence 只记录本地受控 validator replay，不写入 GFIS 接收目录，不创建真实 source-of-record、runtime primary key、review queue、runtime intake、WAME review 或 verified artifact，不升级 accepted、integrated 或 production_ready。
 
 ## P2 字段
 
@@ -51,7 +51,7 @@ superseded_by: []
 | runtime_primary_key_ready | `0` |
 | review_queue | `0` |
 | runtime_intake | `0` |
-| waes_review | `0` |
+| wame_review | `0` |
 | verified | `0` |
 | accepted | `false` |
 | integrated | `false` |

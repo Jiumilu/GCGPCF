@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-02E635F425
 title: Loop Round GPCF-CF-LR-031
 project: GPCF
-related_projects: [GPC, WAES, KDS, GPCF]
+related_projects: [GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0

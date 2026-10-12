@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-A91E4D6B72
 title: LOOP Round GPCF-KDS-DKS-PROMPT-REFRESH-20260628
 project: GPCF
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, XiaoC, GPCF]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, XiaoC, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -53,7 +53,7 @@ superseded_by: []
 | 字段 | 内容 |
 |---|---|
 | stop_type | `authorization_boundary` |
-| stop_evidence | 本轮只补齐主控提示词，不具备真实资料、真实 WAES 放行、真实 GFIS 写回、真实收益结算或委员会裁决 |
+| stop_evidence | 本轮只补齐主控提示词，不具备真实资料、真实 WAME 放行、真实 GFIS 写回、真实收益结算或委员会裁决 |
 | completed_for_round | true |
 | accepted_allowed | false |
 | integrated_allowed | false |
@@ -88,18 +88,18 @@ superseded_by: []
 | runtime_primary_key_ready | 0 |
 | review_queue | 0 |
 | runtime_intake | 0 |
-| waes_review | 0 |
+| wame_review | 0 |
 | verified | 0 |
 | production_writes | 0 |
 | real_external_api_writes | 0 |
 | kds_fact_writes | 0 |
-| waes_gate_result_writes | 0 |
+| wame_gate_result_writes | 0 |
 | 状态上限 | `controlled_prompt / partial_repair` |
 
 ## 本轮不做范围
 
 - 不写真实 KDS API。
-- 不写 WAES、GFIS、GPC、PVAOS、Finance 或生产系统主账。
+- 不写 WAME、GFIS、GPC、PVAOS、Finance 或生产系统主账。
 - 不发送飞书、小即、邮件或其它外部通知。
 - 不接收或确认真实客户订单、POD、质量、开票、到账、金融凭证或合同事实。
 - 不发布悬赏，不结算积分、收益或额度。
@@ -130,7 +130,7 @@ superseded_by: []
 - `runtime_primary_key_ready=0`。
 - `review_queue=0`。
 - `runtime_intake=0`。
-- `waes_review=0`。
+- `wame_review=0`。
 - `verified=0`。
 - `accepted_allowed=false`。
 - `integrated_allowed=false`。

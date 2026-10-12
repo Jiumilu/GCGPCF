@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-XWAIL-MIN-VALIDATOR-RUNTIME-20260625
 title: XWAIL 最小 Validator/XAP 运行证据 2026-06-25
 project: GPCF
-related_projects: [GPCF, WAES]
+related_projects: [GPCF, WAME]
 domain: docs
 status: controlled
 version: v1.0
@@ -22,7 +22,7 @@ superseded_by: []
 
 本文登记 `XWAIL-MIN-VALIDATOR-001` 的本地真实执行结果。
 
-本文只证明 XWAIL 仓已建立最小本地 Validator、XAP build check 和 XAP verify 命令入口。本文不声明完整 XWAIL 工具链完成，不声明 WAES 授权或发布，不声明 AaaS 绑定，不声明业务交付或客户验收。
+本文只证明 XWAIL 仓已建立最小本地 Validator、XAP build check 和 XAP verify 命令入口。本文不声明完整 XWAIL 工具链完成，不声明 WAME 授权或发布，不声明 AaaS 绑定，不声明业务交付或客户验收。
 
 ## 2. 执行环境
 
@@ -69,8 +69,8 @@ can't open file .../scripts/verify_xap.py: [Errno 2] No such file or directory
 - WAS 八流枚举边界。
 - `ontologyRef` 必填。
 - `wasBaseline`、`ontologyVersion`、`xwailVersion` 必填。
-- `waesStatus` 受控，且 `Authorized`/`Published` 必须有 WAES evidence。
-- XAP manifest 必须声明 WAS/Ontology/XWAIL/Profile/AaaS/WAES 兼容字段和 rollback 边界。
+- `wameStatus` 受控，且 `Authorized`/`Published` 必须有 WAME evidence。
+- XAP manifest 必须声明 WAS/Ontology/XWAIL/Profile/AaaS/WAME 兼容字段和 rollback 边界。
 
 ## 5. 复跑命令与结果
 
@@ -83,7 +83,7 @@ can't open file .../scripts/verify_xap.py: [Errno 2] No such file or directory
 命令输出均包含边界：
 
 ```text
-validator success is not WAES publication, AaaS binding, business delivery, or customer acceptance
+validator success is not WAME publication, AaaS binding, business delivery, or customer acceptance
 ```
 
 ## 6. 状态建议
@@ -96,7 +96,7 @@ xap_verify_all = pass
 xwail_checked_models = 2
 xap_checked_manifests = 1
 xwail_status_candidate = ready_for_review
-waes_status = Draft
+wame_status = Draft
 accepted = false
 integrated = false
 production_ready = false
@@ -109,12 +109,12 @@ customer_accepted = false
 |---|---|
 | local dev only | 本轮只证明本地 Draft 样例、Draft XAP 和最小命令入口通过 |
 | incomplete toolchain | 不代表完整 XSD、JSON Schema、Policy as Code、CI、签名、迁移和编辑器工具链完成 |
-| no WAES publication | `waesStatus=Draft`，未注册、未授权、未发布 |
+| no WAME publication | `wameStatus=Draft`，未注册、未授权、未发布 |
 | no AaaS binding | `aaasServicePackageVersion=not-bound` |
 | no customer acceptance | 没有客户验收人、验收场景或签收证据 |
 
 ## 8. 下一步
 
-1. 将 XWAIL 最小 Validator 作为 `WAES -> XWAIL -> AaaS` 链路的本地契约输入。
+1. 将 XWAIL 最小 Validator 作为 `WAME -> XWAIL -> AaaS` 链路的本地契约输入。
 2. 下一轮可推进 AaaS 最小 ServicePackage/Metering/SLA/EvidenceRequirement 命令。
-3. WAES 仍需用户授权后才能修复 lint/runtime 并接入 XWAIL 结果。
+3. WAME 仍需用户授权后才能修复 lint/runtime 并接入 XWAIL 结果。

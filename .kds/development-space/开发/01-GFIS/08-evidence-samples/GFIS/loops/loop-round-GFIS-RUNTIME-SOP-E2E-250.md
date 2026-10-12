@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-3D8BFCD5DA
 title: GFIS-RUNTIME-SOP-E2E-250
 project: GFIS
-related_projects: [GFIS, WAES]
+related_projects: [GFIS, WAME]
 domain: evidence
 status: controlled
 version: v1.0
@@ -22,7 +22,7 @@ superseded_by: []
 
 - 上轮：`GFIS-RUNTIME-SOP-E2E-249`
 - 事实：submission package release post-scan hold gate 已建立，当前 `open_holds=1`。
-- 当前缺口：没有真实 `customer-requirement-platform-order.submission-package-release.json`，也没有 remediation completion、owner response release、运行层主键或 WAES evidence candidate。
+- 当前缺口：没有真实 `customer-requirement-platform-order.submission-package-release.json`，也没有 remediation completion、owner response release、运行层主键或 WAME evidence candidate。
 
 ## 动作
 
@@ -48,7 +48,7 @@ superseded_by: []
 - `runtime_primary_key_ready=0`
 - `review_queue=0`
 - `runtime_intake=0`
-- `waes_review=0`
+- `wame_review=0`
 - `verified=0`
 - `runtime_sop_e2e=repair_required`
 

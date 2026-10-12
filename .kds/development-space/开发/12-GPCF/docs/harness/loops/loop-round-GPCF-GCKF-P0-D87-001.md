@@ -2,7 +2,7 @@
 doc_id: GPCF-LOOP-GCKF-P0-D87-001
 title: Loop Round GPCF-GCKF-P0-D87-001
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -55,6 +55,6 @@ execution_mode=local_evidence_no_write
 
 ## 反馈
 
-当前文档门禁修复队列只有 `localization_debt` 一项，优先级为 P1，owner 为 GPCF document governance。本轮不改变 GFIS `real_business_lane=repair_required`，不创建真实 source-of-record、runtime primary key、review queue、runtime intake、WAES review 或 verified artifact，不执行真实 KDS API 写入或业务系统写回，不升级 accepted、integrated 或 production_ready。
+当前文档门禁修复队列只有 `localization_debt` 一项，优先级为 P1，owner 为 GPCF document governance。本轮不改变 GFIS `real_business_lane=repair_required`，不创建真实 source-of-record、runtime primary key、review queue、runtime intake、WAME review 或 verified artifact，不执行真实 KDS API 写入或业务系统写回，不升级 accepted、integrated 或 production_ready。
 
 下一轮建议 D88：把 `localization_debt` 修复队列与中文本地化门禁的具体命中项做只读关联，形成可分批处理的 localization debt workpack。

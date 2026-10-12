@@ -1,17 +1,19 @@
 ---
 doc_id: GPCF-DOC-460215ED8F
 title: evidence-index
-project: WAES
-related_projects: [WAES]
+project: WAME
+related_projects: [WAME]
 domain: docs
 status: controlled
 version: v1.0
-owner: WAES
+owner: WAME
 kds_space: 开发
-kds_path: 开发/04-WAES/docs/harness/WAES/evidence/evidence-index.md
-source_path: docs/harness/WAES/evidence/evidence-index.md
+kds_path: 开发/04-WAME/docs/harness/WAME/evidence/evidence-index.md
+source_path: docs/harness/WAME/evidence/evidence-index.md
 sync_direction: bidirectional
 last_reviewed: 2026-06-24
 supersedes: []
 superseded_by: []
 ---
+
+accepted / integrated 状态边界：本仓不声明 accepted 或 integrated（accepted=false、integrated=false）

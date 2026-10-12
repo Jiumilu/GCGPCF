@@ -2,7 +2,7 @@
 doc_id: GPCF-OS-ICP-REGISTRATION-DESIGN-20260712
 title: design
 project: KDS
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, GPCF, ICP]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, GPCF, ICP]
 domain: openspec
 status: draft
 version: v1.0
@@ -25,7 +25,7 @@ superseded_by: []
 **Goals:**
 
 - 以第18个独立项目登记 GC-ICP。
-- 明确产业控制平面与 GPCF、WAS、WAES、KDS、GPC、GFIS、PVAOS 的边界。
+- 明确产业控制平面与 GPCF、WAS、WAME、KDS、GPC、GFIS、PVAOS 的边界。
 - 把总体状态固定为 `candidate/partial/human_required`。
 - 建立控制台账与项目状态入口。
 
@@ -46,4 +46,4 @@ superseded_by: []
 
 - [第18项目导致既有17项目计数失真] → 明确新旧基线时间，新增计数不得回写旧证据。
 - [本地开发被解释为已集成] → 台账明确 `integration_not_started` 和人工确认边界。
-- [与 WAES/GPC/KDS 职责重叠] → 在总体方案中登记禁止边界。
+- [与 WAME/GPC/KDS 职责重叠] → 在总体方案中登记禁止边界。

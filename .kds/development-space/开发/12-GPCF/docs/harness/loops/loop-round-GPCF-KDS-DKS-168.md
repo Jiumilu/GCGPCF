@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-4C25A4A8DB
 title: LOOP Round GPCF KDS DKS-168
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -26,7 +26,7 @@ superseded_by: []
 
 - DKS-167 escalation preview fixture、OKF、类型与 validator。
 - 既有 acknowledgement escalation digest no-write 模式。
-- GC-Knowledge Fabric AI 候选边界、WAES 门禁、KWE 人工确认与 Harness evidence 规则。
+- GC-Knowledge Fabric AI 候选边界、WAME 门禁、KWE 人工确认与 Harness evidence 规则。
 
 ## 本轮新增对象
 
@@ -46,7 +46,7 @@ superseded_by: []
 
 ## 人工确认事项
 
-如需将 digest preview 转为真实摘要、真实摘要投递、真实升级、真实 KWE 工单、真实通知或审批任务，必须另行进入人工确认、WAES 门禁与 Harness evidence。
+如需将 digest preview 转为真实摘要、真实摘要投递、真实升级、真实 KWE 工单、真实通知或审批任务，必须另行进入人工确认、WAME 门禁与 Harness evidence。
 
 ## 委员会事项
 

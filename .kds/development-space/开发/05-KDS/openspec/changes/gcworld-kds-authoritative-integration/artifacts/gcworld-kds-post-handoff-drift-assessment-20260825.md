@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-GCWORLD-053
 title: GCWORLD与KDS责任方回执后漂移评估
 project: KDS
-related_projects: [WAES, KDS, XGD, Studio]
+related_projects: [WAME, KDS, XGD, Studio]
 domain: openspec
 status: draft
 version: v1.0

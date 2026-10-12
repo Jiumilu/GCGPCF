@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-CEC15EDDA8
 title: "Loop Round: GPCF-L4-GFIS-DEV-READY-SYNC-001"
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -40,7 +40,7 @@ superseded_by: []
 ## Evidence
 
 ```text
-gfis_development_ready_goal=pass development_ready=pass synthetic_dev_lane=dev_closed synthetic_e2e_pass=1 synthetic_stage_count=12 synthetic_verified_artifacts=12 runtime_subject=GFIS运行层 demo_e2e=pass_demo_only real_business_lane=repair_required business_verification_pending=true real_source_records=0 real_runtime_primary_keys=0 real_review_queue_items=0 real_runtime_intake_items=0 real_waes_reviews=0 real_verified_artifacts=0 accepted_integrated=0 production_ready=0 production_writes=0 real_external_api_writes=0
+gfis_development_ready_goal=pass development_ready=pass synthetic_dev_lane=dev_closed synthetic_e2e_pass=1 synthetic_stage_count=12 synthetic_verified_artifacts=12 runtime_subject=GFIS运行层 demo_e2e=pass_demo_only real_business_lane=repair_required business_verification_pending=true real_source_records=0 real_runtime_primary_keys=0 real_review_queue_items=0 real_runtime_intake_items=0 real_wame_reviews=0 real_verified_artifacts=0 accepted_integrated=0 production_ready=0 production_writes=0 real_external_api_writes=0
 ```
 
 ## Result
@@ -60,5 +60,5 @@ gfis_development_ready_goal=pass development_ready=pass synthetic_dev_lane=dev_c
 
 - 不恢复 100/100。
 - 不升级 accepted/integrated/production_ready。
-- 不创建真实 source record、runtime primary key、review queue、runtime intake、WAES review 或 verified artifact。
-- 不生产写入、不真实外部 API 写入、不真实 KDS/WAES 写入、不数据库迁移、不权限变更。
+- 不创建真实 source record、runtime primary key、review queue、runtime intake、WAME review 或 verified artifact。
+- 不生产写入、不真实外部 API 写入、不真实 KDS/WAME 写入、不数据库迁移、不权限变更。

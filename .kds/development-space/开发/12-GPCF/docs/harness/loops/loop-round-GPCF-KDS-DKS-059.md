@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-79BD76F988
 title: LOOP Round GPCF-KDS-DKS-059 - 绿色供应链分布式知识系统 P0 全量功能实施治理契约补齐
 project: GPCF
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, XiaoC, GPCF]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, XiaoC, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -43,7 +43,7 @@ superseded_by: []
 
 ## 2. 多 Agent 判断
 
-本轮目标跨 KDS、GFIS、WAES、湖北磷材、积分收益和 RAG 多个知识域，适合并行只读探索；但写入范围集中在同一 GPCF 文档工作区、同一文档控制台账、同一 KDS 本地镜像和同一状态口径，因此不适合多个 Agent 并行写文件。
+本轮目标跨 KDS、GFIS、WAME、湖北磷材、积分收益和 RAG 多个知识域，适合并行只读探索；但写入范围集中在同一 GPCF 文档工作区、同一文档控制台账、同一 KDS 本地镜像和同一状态口径，因此不适合多个 Agent 并行写文件。
 
 本轮采用：
 
@@ -121,7 +121,7 @@ superseded_by: []
 
 本轮不做：
 
-- GFIS / WAES / KDS API / GPC / PVAOS / Finance / 生产系统真实写入；
+- GFIS / WAME / KDS API / GPC / PVAOS / Finance / 生产系统真实写入；
 - 真实外部通知、飞书、小即、邮件或业务系统派发；
 - 真实客户订单、客户确认、质量放行、POD、到账、开票或金融凭证确认；
 - 真实积分、收益、额度、悬赏、争议或扣罚结算；

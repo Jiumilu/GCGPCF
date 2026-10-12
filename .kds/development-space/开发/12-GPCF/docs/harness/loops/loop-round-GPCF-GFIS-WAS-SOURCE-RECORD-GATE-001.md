@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-102699F74F
 title: Loop Round GPCF-GFIS-WAS-SOURCE-RECORD-GATE-001
 project: GPCF
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio]
 domain: docs
 status: controlled
 version: v1.0
@@ -36,24 +36,24 @@ superseded_by: []
 - WAS `S01-customer-requirement-or-platform-order` 保持 `data_asset`、`commerce_flow`、`pending_business_verification`、`T4`。
 - 未来真实 source-of-record 必须具备 12 个 WAS 入场字段。
 - GFIS 当前真实业务计数仍为 0，`real_business_lane=repair_required` 不变。
-- 不创建真实 source-of-record、runtime primary key、review queue、runtime intake、WAES review 或 verified artifact。
+- 不创建真实 source-of-record、runtime primary key、review queue、runtime intake、WAME review 或 verified artifact。
 - 不升级 accepted、integrated 或 production_ready。
 
 ## loop_was_context
 
 ```yaml
-project_scope: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio, WAS]
+project_scope: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio, WAS]
 related_asset_dimensions: [data_asset]
 related_flows: [commerce_flow]
 related_objects: [CustomerRequirementOrPlatformOrder]
 related_events: [gfis_was_source_record_admission_gate]
 source_refs: [was://scenario/gfis-runtime-sop-e2e/S01-customer-requirement-or-platform-order]
 evidence_refs: [docs/harness/evidence/gfis-was-source-record-admission-gate-20260621.md]
-waes_gate_refs: [waes://gate/customer-order-source-record-review]
+wame_gate_refs: [wame://gate/customer-order-source-record-review]
 kds_backlinks: [pending_real_source_record]
 promotion_blockers: [valid_source_record_missing, customer_confirmation_missing]
 next_action: require_real_source_record_before_admission
-no_write_declaration: no_gfis_runtime_write_no_kds_official_fact_no_waes_review_no_accepted_integrated_or_production_ready
+no_write_declaration: no_gfis_runtime_write_no_kds_official_fact_no_wame_review_no_accepted_integrated_or_production_ready
 ```
 
 ## 反馈

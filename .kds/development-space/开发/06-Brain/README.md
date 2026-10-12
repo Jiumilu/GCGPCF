@@ -1,6 +1,6 @@
 # Brain 开发文档空间
 
-生成日期：2026-10-11
+生成日期：2026-10-12
 
 用途：KDS `开发` 空间中 `Brain` 项目的受控文档入口。
 
@@ -14,6 +14,6 @@
 | GPCF-DOC-BRAIN-REVIEW-HANDOFF-20260625 | Brain 人工审查移交包 2026-06-25 | docs/harness/Brain/evidence/brain-review-handoff-20260625.md | controlled |
 | GPCF-DOC-BRAIN-TEAM-AUTH-CONTRACT-DRIFT-20260624 | Brain team 空间授权契约 C 口径确认证据 2026-06-24 | docs/harness/Brain/evidence/brain-team-authorization-contract-drift-20260624.md | controlled |
 | GPCF-DOC-33E55CB86C | Brain 证据索引 | docs/harness/Brain/evidence/evidence-index.md | controlled |
-| GPCF-DOC-B0F22D2E45 | loop-state | docs/harness/Brain/loop-state.md | controlled |
+| GPCF-DOC-B0F22D2E45 | GlobalCloud Brain Loop State | docs/harness/Brain/loop-state.md | controlled |
 | GPCF-DOC-0209DFB721 | loops | docs/harness/Brain/loops/README.md | controlled |
 | GPCF-DOC-F61B890C31 | Loop Round GPCF-BR-LR-001 | docs/harness/Brain/loops/loop-round-GPCF-BR-LR-001.md | controlled |

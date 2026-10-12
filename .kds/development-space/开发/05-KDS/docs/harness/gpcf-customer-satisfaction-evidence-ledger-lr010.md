@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-C4C88D4F75
 title: 客户满意度证据台账
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0

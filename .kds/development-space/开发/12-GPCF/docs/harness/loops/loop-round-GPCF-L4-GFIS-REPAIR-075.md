@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-0FE0AB07DD
 title: GPCF-L4-GFIS-REPAIR-075 GFIS 辽宁远航 discovery 原始凭证请求包
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-CBEA9709B3
 title: Loop Round GPCF-GCKF-P0-D72-001
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -39,11 +39,11 @@ superseded_by: []
 | D72 committee acceptance acknowledgement notification receipt aggregation preview validator | `scripts/api/validate_gckf_p0_formal_evidence_execution_committee_acceptance_acknowledgement_notification_receipt_aggregation_preview_dry_run.py` |
 | D72 committee acceptance acknowledgement notification receipt aggregation preview doc | `docs/gc-knowledge-fabric/formal-evidence-execution-committee-acceptance-acknowledgement-notification-receipt-aggregation-preview-dry-run-v0.1.md` |
 
-## 4. WAES / Harness 边界
+## 4. WAME / Harness 边界
 
 | 项目 | 结果 |
 |---|---|
-| WAES gate override | not_allowed |
+| WAME gate override | not_allowed |
 | Harness evidence write | not_executed |
 | Formal evidence write | not_executed |
 | Notification receipt aggregation preview execution | not_executed |
@@ -88,6 +88,6 @@ no_write=covered
 
 ## 6. 结论
 
-D72 只完成 committee acceptance acknowledgement notification receipt aggregation preview dry-run。它证明委员会受理确认候选通知回执可以继续被描述为带有回执集合摘要、收件人确认汇总、渠道回执汇总、缺失回执快照、ACL、投递保持条件、投递阻断码、WAES 与 no-write 边界的 aggregation preview，但不产生任何正式回执聚合、正式回执确认、正式通知、acknowledgement routing、委员会受理、正式受理确认、立案、裁决、人工确认、冻结释放、业务写回、收益/贡献写入或 evidence 写入。
+D72 只完成 committee acceptance acknowledgement notification receipt aggregation preview dry-run。它证明委员会受理确认候选通知回执可以继续被描述为带有回执集合摘要、收件人确认汇总、渠道回执汇总、缺失回执快照、ACL、投递保持条件、投递阻断码、WAME 与 no-write 边界的 aggregation preview，但不产生任何正式回执聚合、正式回执确认、正式通知、acknowledgement routing、委员会受理、正式受理确认、立案、裁决、人工确认、冻结释放、业务写回、收益/贡献写入或 evidence 写入。
 
 下一轮 D73 可继续建立 notification receipt aggregation completeness precheck 或 aggregation return path 的 no-write 预演。

@@ -1,26 +1,26 @@
 ---
 doc_id: GPCF-DOC-63E07DE019
-title: GC-Knowledge Fabric WAES门禁规则
+title: GC-Knowledge Fabric WAME门禁规则
 project: KDS
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS]
 domain: data-ai-knowledge
 status: controlled
 version: v1.0
 owner: KDS
 kds_space: 开发
-kds_path: 开发/05-KDS/03-data-ai-knowledge/GC-Knowledge-Fabric-WAES门禁规则.md
-source_path: 03-data-ai-knowledge/GC-Knowledge-Fabric-WAES门禁规则.md
+kds_path: 开发/05-KDS/03-data-ai-knowledge/GC-Knowledge-Fabric-WAME门禁规则.md
+source_path: 03-data-ai-knowledge/GC-Knowledge-Fabric-WAME门禁规则.md
 sync_direction: bidirectional
 last_reviewed: 2026-06-24
 supersedes: []
 superseded_by: []
 ---
 
-# GC-Knowledge Fabric WAES门禁规则
+# GC-Knowledge Fabric WAME门禁规则
 
 ## 1. 定位
 
-WAES 是 GC-Knowledge Fabric 的规则与门禁治理层，负责判断候选内容是否可以进入 RAG、写回、收益、积分、共享、冻结或委员会流程。WAES 不替代 KDS 存储、GFIS 执行或委员会裁决。
+WAME 是 GC-Knowledge Fabric 的规则与门禁治理层，负责判断候选内容是否可以进入 RAG、写回、收益、积分、共享、冻结或委员会流程。WAME 不替代 KDS 存储、GFIS 执行或委员会裁决。
 
 ## 2. Gate 类型
 

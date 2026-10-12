@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-SESSION-HANDOFF-REQUEST-GATE-20260622
 title: Session Mainline Handoff Request Gate 20260622
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0

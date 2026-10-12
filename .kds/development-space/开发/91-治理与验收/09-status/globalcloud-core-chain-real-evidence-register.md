@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-CORE-CHAIN-REAL-EVIDENCE-REGISTER-20260624
 title: GlobalCloud 核心链路真实证据台账
 project: GPCF
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, GPCF]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, GPCF]
 domain: status
 status: controlled
 version: v1.0
@@ -46,12 +46,12 @@ superseded_by: []
 本阶段优先控制以下核心链路：
 
 ```text
-WAES -> XWAIL -> AaaS -> GFIS/GPC/PVAOS -> KDS/Brain
+WAME -> XWAIL -> AaaS -> GFIS/GPC/PVAOS -> KDS/Brain
 ```
 
 控制对象：
 
-- WAES 治理入口和模型/服务发布状态；
+- WAME 治理入口和模型/服务发布状态；
 - XWAIL 模型契约、Schema、Profile、Validator；
 - AaaS ServicePackage、Metering、SLA 和订阅状态；
 - GFIS/GPC/PVAOS 业务事实、场景运行和运营状态；
@@ -67,7 +67,7 @@ WAES -> XWAIL -> AaaS -> GFIS/GPC/PVAOS -> KDS/Brain
 | 链路/项目 | trigger_layer | 对应入口 | 当前含义 |
 |---|---|---|---|
 | GPCF | `authorization_to_pre_execution_total_bridge` | `GPCF-PRE-WAVE1-REVIEW-AUTHORIZATION-REQUEST-20260627-001`、`GPCF-NEXT-STAGE-AUTHORIZATION-HUMAN-FILL-REQUEST-20260627-001` | 人工确认入口到执行前只读就绪已建模，但仍是 `authorization_granted=0`、`action_executed=0` |
-| WAES | `repair_authorization_boundary` | `WAES-LINT-RUNTIME-001` | 未获授权前只保留 repair 候选，不进入发布绑定 |
+| WAME | `repair_authorization_boundary` | `WAME-LINT-RUNTIME-001` | 未获授权前只保留 repair 候选，不进入发布绑定 |
 | XWAIL / AaaS / KDS | `pre_wave1_review_bridge` | `GPCF-PRE-WAVE1-REVIEW-AUTHORIZATION-REQUEST-20260627-001` | pre-wave1 review 未确认前，不进入 Wave 1 回执或执行前桥接 |
 | GFIS | `source_record_boundary` | `GFIS-REAL-SOR-001` | 未收到真实 source-of-record 或 owner 确认前，不推进真实业务验证、状态提升或客户交付声明；不阻断开发线 `GFIS-RUNTIME-SOP-E2E-DEV-COMPLETION-001` |
 | GPC | `external_runtime_boundary` | `GPC-EXTERNAL-RUNTIME-EVIDENCE-001` | 外部 runtime 证据缺失前，不声明真实交付或客户验收 |
@@ -104,11 +104,11 @@ WAES -> XWAIL -> AaaS -> GFIS/GPC/PVAOS -> KDS/Brain
 
 | 链路/项目 | 当前实施方案 | trigger_layer | 真实进度 | 真实研发 | 真实运行 | 真实集成 | 真实交付 | 客户验收 | 下一步 |
 |---|---|---|---|---|---|---|---|---|---|
-| GPCF | `GlobalCloud GPCF 实施方案.md` | `authorization_to_pre_execution_total_bridge` | `verified` | `candidate` | `controlled / git_clean_blocked / dirty_classification_controlled / review_packages_controlled / human_confirmation_request_prepared / authorization_routing_ready / execution_authorization_receipt_ledger_ready / authorization_pre_execution_command_pack_ready / authorization_pre_execution_environment_ready / full_project_baseline_controlled / next_executable_task_packs_controlled / dependency_execution_matrix_controlled / status_advancement_matrix_controlled / ready_for_review_advancement_queue_ready / gpcf_project_status_matrix_17_project_scope_controlled / kds_diffcheck_blocker_controlled / kds_diffcheck_cleanup_command_pack_ready / scheme_recognition_rules_controlled / dirty_disposition_queue_post_scheme_recognition_ready / post_scheme_recognition_review_authorization_request_prepared / external_loop_gate_delegate_baseline_ready / pre_wave1_review_authorization_ready / next_stage_authorization_decision_board_prepared / next_stage_authorization_receipt_example_pack_ready / next_stage_authorization_receipt_recording_procedure_ready / next_stage_authorization_human_fill_request_ready / next_stage_authorization_chain_consistency_audit_ready / next_stage_authorization_package_ready / next_stage_authorization_chain_loop_round_ready / operational_blocker_resolution_matrix_controlled / wave1_authorization_request_prepared / loop_document_gate_readiness_retry_hardening_controlled` | `declared` | `not_collected` | `not_collected` | `GPCF-GIT-CLEAN-001` 已建立项目群 17 仓 Git/version control 真实基线；`GPCF-READY-FOR-REVIEW-ADVANCEMENT-QUEUE-20260626-001` 已建立 17 项目 ready_for_review 推进队列；`GPCF-PROJECT-STATUS-MATRIX-17-SCOPE-001` 已将状态矩阵补齐为 17 项目口径并通过 `validate_gpcf_project_status_matrix_17_project_scope.py`，当前状态分布为 `ready_for_review=12`、`partial_verified=1`、`repair_required=3`、`owner_review_required=1`；`GPCF-SCHEME-RECOGNITION-RULES-20260626-001` 已写入 17 个 `AGENTS.md` 和 34 个项目级方案继承声明；`docs/harness/evidence/globalcloud-project-group-current-state-baseline-refresh-20260626.md` 当前保持 `project_group_current_state_baseline_refresh_20260626 = controlled`、`dirty_repo_count = 7`，`docs/harness/evidence/globalcloud-project-group-dev-task-queue-20260626.md` 当前保持 `development_queue_ready = true`、`trigger_layer_binding_count = 17`、`dependency_edge_binding_count = 17`；post-scheme 处置队列和 review 授权请求仍受控，但 live recheck 已从 17 仓 dirty 收敛为 `GlobalCloud AAAS`、`WAS世界资产体系`、`GlobalCoud GPCF`、`GlobalCloud XWAIL`、`GlobalCloud GFIS`、`GlobalCloud KDS`、`GlobalCloud SOP` 七仓 dirty、10 仓 clean，其中 `WAS世界资产体系/.DS_Store` 仅沿 noise cleanup 路径单独治理，且 `GlobalCloud KDS/.env.production.example` 命中 sensitive_path，导致当前 project-group Git gate 为 `blocked`；`GPCF-EXTERNAL-LOOP-GATE-DELEGATE-BASELINE-20260627-001` 已将 `GlobalCloud AAAS/XWAIL/SOP` delegated loop gate wrapper 的当前 baseline 与 replay 边界收口为统一受控证据；`GPCF-PRE-WAVE1-REVIEW-AUTHORIZATION-REQUEST-20260627-001` 已将当前 6 仓 review 边界进一步收口为 Wave 1 前置桥接入口；当前 next-stage 授权链又进一步收口为“决策板 -> 回执示例包 -> 回执录入流程 -> human fill request -> 一致性审计 -> 两本目标总账 -> 聚合授权包 -> loop-round 归档”的受控链，用于在人工确认前固定 7 个 auth_id、1/6 总账分流和默认边界；`GPCF-OPERATIONAL-BLOCKER-RESOLUTION-MATRIX-20260626-001` 已将运行门禁阻塞口径同步到当前 7 仓总事实、6 仓 review 边界与 KDS sensitive_path 前置；`GPCF-WAVE1-AUTHORIZATION-REQUEST-20260626-001` 当前已明确必须先满足上述 6 仓 review 边界确认后，才进入 WAES/GFIS/GPC/Brain 的 Wave 1 授权入口；`GPCF-LOOP-DOCUMENT-GATE-READINESS-RETRY-HARDENING-20260626-001` 已对 Loop document gate 内部 readiness 调用增加一次重试硬化且不放松门禁；历史 KDS diffcheck blocker 证据保留，但当前 live recheck 的新硬阻塞已转为 sensitive_path review；`GPCF-KDS-DIFFCHECK-CLEANUP-COMMAND-PACK-20260626-001` 未获授权且未执行 cleanup；当前不能声明项目群 Git 全量 clean、任何授权已发生、任何项目自动升级到 ready_for_review、可提交、可推送或可验收；证据见 `09-status/gpcf-project-status-matrix.md`、`09-status/globalcloud-project-group-real-execution-governance-board.md`、`docs/harness/evidence/globalcloud-project-group-current-state-baseline-refresh-20260626.md`、`docs/harness/evidence/globalcloud-project-group-dev-task-queue-20260626.md`、`docs/harness/evidence/globalcloud-project-group-external-loop-gate-delegate-baseline-20260627.md`、`docs/harness/evidence/globalcloud-project-group-pre-wave1-review-authorization-request-20260627.md`、`docs/harness/evidence/globalcloud-project-group-next-stage-authorization-decision-board-20260626.md`、`docs/harness/evidence/globalcloud-project-group-next-stage-authorization-receipt-example-pack-20260627.md`、`docs/harness/evidence/globalcloud-project-group-next-stage-authorization-receipt-recording-procedure-20260627.md`、`docs/harness/evidence/globalcloud-project-group-next-stage-authorization-human-fill-request-20260627.md`、`docs/harness/evidence/globalcloud-project-group-next-stage-authorization-chain-consistency-audit-20260627.md`、`docs/harness/evidence/globalcloud-project-group-next-stage-authorization-package-20260627.md`、`docs/harness/loops/loop-round-GPCF-PROJECT-GROUP-NEXT-STAGE-AUTHORIZATION-CHAIN-001.md`、`docs/harness/evidence/globalcloud-project-group-operational-blocker-resolution-matrix-20260626.md`、`docs/harness/evidence/globalcloud-project-group-wave1-authorization-request-20260626.md` |
-| WAES | `GlobalCloud WAES 实施方案.md` | `repair_authorization_boundary` | `candidate` | `partial_verified` | `repair_required` | `declared` | `not_collected` | `not_collected` | `npm run lint` 失败已在 2026-06-25 复现；WAES 工作区 dirty 且 AGENTS 限制未授权实现，已形成授权包 `docs/harness/WAES/evidence/waes-lint-runtime-repair-authorization-20260625.md` |
-| XWAIL | `GlobalCloud XWAIL 实施方案.md` | `pre_wave1_review_bridge` | `candidate` | `ready_for_review / local_dev_boundary / integration_precheck_candidate / wrapper_review_required` | `ready_for_review / local_dev_boundary / integration_precheck_candidate / wrapper_review_required` | `declared` | `not_collected` | `not_collected` | `XWAIL-MIN-VALIDATOR-001` 已建立最小 Validator/XAP 命令并在 local dev 通过；`XWAIL-WAES-AAAS-CONTRACT-PRECHECK-001` 已完成 7 条 XWAIL/AaaS 本地命令验证并形成 integration precheck candidate；但当前仍先受 `XWAIL-LOOP-GATE-DELEGATE-REVIEW-REPLAY-20260627-001` 约束；证据见 `docs/harness/XWAIL/evidence/xwail-waes-aaas-contract-precheck-20260625.md` 与 `docs/harness/evidence/globalcloud-project-group-external-loop-gate-delegate-baseline-20260627.md` |
-| AaaS | `docs/GlobalCloud AaaS 实施方案.md` | `pre_wave1_review_bridge` | `candidate` | `ready_for_review / local_dev_boundary / integration_precheck_candidate / wrapper_review_required` | `ready_for_review / local_dev_boundary / integration_precheck_candidate / wrapper_review_required` | `declared` | `not_collected` | `not_collected` | `AAAS-SERVICE-RUNTIME-001` 已建立最小 ServicePackage/Metering/SLA/EvidenceRequirement 命令并在 local dev 通过；`XWAIL-WAES-AAAS-CONTRACT-PRECHECK-001` 已复核 AaaS 服务包可作为 WAES 绑定前置候选输入；`AAAS-WAES-BINDING-PRECHECK-001` 已完成 AaaS-WAES 绑定前置预检并保持 WAES Draft/候选边界；但当前仍先受 `AAAS-LOOP-GATE-DELEGATE-REVIEW-REPLAY-20260627-001` 约束；证据见 `docs/harness/AaaS/evidence/aaas-waes-binding-precheck-20260625.md` 与 `docs/harness/evidence/globalcloud-project-group-external-loop-gate-delegate-baseline-20260627.md` |
-| GFIS | `GlobalCloud GFIS 实施方案.md` | `source_record_boundary / development_lane_continue_allowed` | `candidate` | `partial_verified` | `partial_verified` | `partial_verified` | `repair_required` | `not_collected` | 开发线可继续推进 `GFIS-RUNTIME-SOP-E2E-DEV-COMPLETION-001`；真实业务验证线仍等待 source-of-record、owner 确认、runtime intake、review queue、WAES review 和 verified artifact；证据见 `docs/harness/GFIS/evidence/gfis-real-runtime-baseline-20260624.md` |
+| GPCF | `GlobalCloud GPCF 实施方案.md` | `authorization_to_pre_execution_total_bridge` | `verified` | `candidate` | `controlled / git_clean_blocked / dirty_classification_controlled / review_packages_controlled / human_confirmation_request_prepared / authorization_routing_ready / execution_authorization_receipt_ledger_ready / authorization_pre_execution_command_pack_ready / authorization_pre_execution_environment_ready / full_project_baseline_controlled / next_executable_task_packs_controlled / dependency_execution_matrix_controlled / status_advancement_matrix_controlled / ready_for_review_advancement_queue_ready / gpcf_project_status_matrix_17_project_scope_controlled / kds_diffcheck_blocker_controlled / kds_diffcheck_cleanup_command_pack_ready / scheme_recognition_rules_controlled / dirty_disposition_queue_post_scheme_recognition_ready / post_scheme_recognition_review_authorization_request_prepared / external_loop_gate_delegate_baseline_ready / pre_wave1_review_authorization_ready / next_stage_authorization_decision_board_prepared / next_stage_authorization_receipt_example_pack_ready / next_stage_authorization_receipt_recording_procedure_ready / next_stage_authorization_human_fill_request_ready / next_stage_authorization_chain_consistency_audit_ready / next_stage_authorization_package_ready / next_stage_authorization_chain_loop_round_ready / operational_blocker_resolution_matrix_controlled / wave1_authorization_request_prepared / loop_document_gate_readiness_retry_hardening_controlled` | `declared` | `not_collected` | `not_collected` | `GPCF-GIT-CLEAN-001` 已建立项目群 17 仓 Git/version control 真实基线；`GPCF-READY-FOR-REVIEW-ADVANCEMENT-QUEUE-20260626-001` 已建立 17 项目 ready_for_review 推进队列；`GPCF-PROJECT-STATUS-MATRIX-17-SCOPE-001` 已将状态矩阵补齐为 17 项目口径并通过 `validate_gpcf_project_status_matrix_17_project_scope.py`，当前状态分布为 `ready_for_review=12`、`partial_verified=1`、`repair_required=3`、`owner_review_required=1`；`GPCF-SCHEME-RECOGNITION-RULES-20260626-001` 已写入 17 个 `AGENTS.md` 和 34 个项目级方案继承声明；`docs/harness/evidence/globalcloud-project-group-current-state-baseline-refresh-20260626.md` 当前保持 `project_group_current_state_baseline_refresh_20260626 = controlled`、`dirty_repo_count = 7`，`docs/harness/evidence/globalcloud-project-group-dev-task-queue-20260626.md` 当前保持 `development_queue_ready = true`、`trigger_layer_binding_count = 17`、`dependency_edge_binding_count = 17`；post-scheme 处置队列和 review 授权请求仍受控，但 live recheck 已从 17 仓 dirty 收敛为 `GlobalCloud AAAS`、`WAS世界资产体系`、`GlobalCoud GPCF`、`GlobalCloud XWAIL`、`GlobalCloud GFIS`、`GlobalCloud KDS`、`GlobalCloud SOP` 七仓 dirty、10 仓 clean，其中 `WAS世界资产体系/.DS_Store` 仅沿 noise cleanup 路径单独治理，且 `GlobalCloud KDS/.env.production.example` 命中 sensitive_path，导致当前 project-group Git gate 为 `blocked`；`GPCF-EXTERNAL-LOOP-GATE-DELEGATE-BASELINE-20260627-001` 已将 `GlobalCloud AAAS/XWAIL/SOP` delegated loop gate wrapper 的当前 baseline 与 replay 边界收口为统一受控证据；`GPCF-PRE-WAVE1-REVIEW-AUTHORIZATION-REQUEST-20260627-001` 已将当前 6 仓 review 边界进一步收口为 Wave 1 前置桥接入口；当前 next-stage 授权链又进一步收口为“决策板 -> 回执示例包 -> 回执录入流程 -> human fill request -> 一致性审计 -> 两本目标总账 -> 聚合授权包 -> loop-round 归档”的受控链，用于在人工确认前固定 7 个 auth_id、1/6 总账分流和默认边界；`GPCF-OPERATIONAL-BLOCKER-RESOLUTION-MATRIX-20260626-001` 已将运行门禁阻塞口径同步到当前 7 仓总事实、6 仓 review 边界与 KDS sensitive_path 前置；`GPCF-WAVE1-AUTHORIZATION-REQUEST-20260626-001` 当前已明确必须先满足上述 6 仓 review 边界确认后，才进入 WAME/GFIS/GPC/Brain 的 Wave 1 授权入口；`GPCF-LOOP-DOCUMENT-GATE-READINESS-RETRY-HARDENING-20260626-001` 已对 Loop document gate 内部 readiness 调用增加一次重试硬化且不放松门禁；历史 KDS diffcheck blocker 证据保留，但当前 live recheck 的新硬阻塞已转为 sensitive_path review；`GPCF-KDS-DIFFCHECK-CLEANUP-COMMAND-PACK-20260626-001` 未获授权且未执行 cleanup；当前不能声明项目群 Git 全量 clean、任何授权已发生、任何项目自动升级到 ready_for_review、可提交、可推送或可验收；证据见 `09-status/gpcf-project-status-matrix.md`、`09-status/globalcloud-project-group-real-execution-governance-board.md`、`docs/harness/evidence/globalcloud-project-group-current-state-baseline-refresh-20260626.md`、`docs/harness/evidence/globalcloud-project-group-dev-task-queue-20260626.md`、`docs/harness/evidence/globalcloud-project-group-external-loop-gate-delegate-baseline-20260627.md`、`docs/harness/evidence/globalcloud-project-group-pre-wave1-review-authorization-request-20260627.md`、`docs/harness/evidence/globalcloud-project-group-next-stage-authorization-decision-board-20260626.md`、`docs/harness/evidence/globalcloud-project-group-next-stage-authorization-receipt-example-pack-20260627.md`、`docs/harness/evidence/globalcloud-project-group-next-stage-authorization-receipt-recording-procedure-20260627.md`、`docs/harness/evidence/globalcloud-project-group-next-stage-authorization-human-fill-request-20260627.md`、`docs/harness/evidence/globalcloud-project-group-next-stage-authorization-chain-consistency-audit-20260627.md`、`docs/harness/evidence/globalcloud-project-group-next-stage-authorization-package-20260627.md`、`docs/harness/loops/loop-round-GPCF-PROJECT-GROUP-NEXT-STAGE-AUTHORIZATION-CHAIN-001.md`、`docs/harness/evidence/globalcloud-project-group-operational-blocker-resolution-matrix-20260626.md`、`docs/harness/evidence/globalcloud-project-group-wave1-authorization-request-20260626.md` |
+| WAME | `GlobalCloud WAME 实施方案.md` | `repair_authorization_boundary` | `candidate` | `partial_verified` | `repair_required` | `declared` | `not_collected` | `not_collected` | `npm run lint` 失败已在 2026-06-25 复现；WAME 工作区 dirty 且 AGENTS 限制未授权实现，已形成授权包 `docs/harness/WAME/evidence/wame-lint-runtime-repair-authorization-20260625.md` |
+| XWAIL | `GlobalCloud XWAIL 实施方案.md` | `pre_wave1_review_bridge` | `candidate` | `ready_for_review / local_dev_boundary / integration_precheck_candidate / wrapper_review_required` | `ready_for_review / local_dev_boundary / integration_precheck_candidate / wrapper_review_required` | `declared` | `not_collected` | `not_collected` | `XWAIL-MIN-VALIDATOR-001` 已建立最小 Validator/XAP 命令并在 local dev 通过；`XWAIL-WAME-AAAS-CONTRACT-PRECHECK-001` 已完成 7 条 XWAIL/AaaS 本地命令验证并形成 integration precheck candidate；但当前仍先受 `XWAIL-LOOP-GATE-DELEGATE-REVIEW-REPLAY-20260627-001` 约束；证据见 `docs/harness/XWAIL/evidence/xwail-wame-aaas-contract-precheck-20260625.md` 与 `docs/harness/evidence/globalcloud-project-group-external-loop-gate-delegate-baseline-20260627.md` |
+| AaaS | `docs/GlobalCloud AaaS 实施方案.md` | `pre_wave1_review_bridge` | `candidate` | `ready_for_review / local_dev_boundary / integration_precheck_candidate / wrapper_review_required` | `ready_for_review / local_dev_boundary / integration_precheck_candidate / wrapper_review_required` | `declared` | `not_collected` | `not_collected` | `AAAS-SERVICE-RUNTIME-001` 已建立最小 ServicePackage/Metering/SLA/EvidenceRequirement 命令并在 local dev 通过；`XWAIL-WAME-AAAS-CONTRACT-PRECHECK-001` 已复核 AaaS 服务包可作为 WAME 绑定前置候选输入；`AAAS-WAME-BINDING-PRECHECK-001` 已完成 AaaS-WAME 绑定前置预检并保持 WAME Draft/候选边界；但当前仍先受 `AAAS-LOOP-GATE-DELEGATE-REVIEW-REPLAY-20260627-001` 约束；证据见 `docs/harness/AaaS/evidence/aaas-wame-binding-precheck-20260625.md` 与 `docs/harness/evidence/globalcloud-project-group-external-loop-gate-delegate-baseline-20260627.md` |
+| GFIS | `GlobalCloud GFIS 实施方案.md` | `source_record_boundary / development_lane_continue_allowed` | `candidate` | `partial_verified` | `partial_verified` | `partial_verified` | `repair_required` | `not_collected` | 开发线可继续推进 `GFIS-RUNTIME-SOP-E2E-DEV-COMPLETION-001`；真实业务验证线仍等待 source-of-record、owner 确认、runtime intake、review queue、WAME review 和 verified artifact；证据见 `docs/harness/GFIS/evidence/gfis-real-runtime-baseline-20260624.md` |
 | GPC | `GlobalCloud GPC 实施方案.md` | `external_runtime_boundary` | `candidate` | `partial_verified / browser_repaired` | `partial_verified / external_runtime_evidence_required` | `partial_verified` | `repair_required` | `not_collected` | `GPC-EVIDENCE-BROWSER-001` 已修复 README 索引和 Playwright 浏览器 E2E，并通过 `quality:repo` 与 `test:e2e`；生产确认、外部联调和 GCFIS runtime surface 仍缺证据；证据见 `docs/harness/GPC/evidence/gpc-evidence-browser-repair-20260625.md` |
 | PVAOS | `GlobalCloud PVAOS 实施方案.md` | `local_release_review_boundary` | `candidate` | `ready_for_review / local_release_gate_boundary / review_candidate` | `ready_for_review / local_release_gate_boundary / review_candidate` | `partial_verified` | `not_collected` | `not_collected` | `PVAOS-RELEASE-GATE-001` 已修复 Vitest setup、依赖 audit 和 Playwright browser smoke，并通过本地 release gate；`PVAOS-RELEASE-REVIEW-001` 已复跑本地 release readiness gate 并形成提交前 review candidate；证据见 `docs/harness/PVAOS/evidence/pvaos-release-review-20260625.md` |
 | KDS | `GlobalCloud KDS 实施方案.md` | `pre_wave1_review_bridge` | `candidate` | `partial_verified` | `owner_review_required / kds_report_hold_controlled / git_sensitive_review_boundary` | `partial_verified` | `not_collected` | `not_collected` | `KDS-RAG-EXPORT-001` 已在 local dev 修复并通过导出、校验、evidence gate、API smoke、GBrain search/query 和 wiki trust audit；`KDS-BRAIN-REPORT-HOLD-REVIEW-001` 已登记资金追踪报告和 2026-06-25 sync-run 产物 owner review 包；当前 live recheck 另有 `GlobalCloud KDS/.env.production.example` sensitive_path review 前置；证据见 `docs/harness/KDS/evidence/kds-brain-report-hold-review-20260625.md` 与 `docs/harness/evidence/globalcloud-project-group-kds-diffcheck-cleanup-command-pack-20260626.md` |
@@ -119,9 +119,9 @@ WAES -> XWAIL -> AaaS -> GFIS/GPC/PVAOS -> KDS/Brain
 | 项目 | 已登记命令 | 状态 |
 |---|---|---|
 | GPCF | `validate_project_group_implementation_plan.py`、`loop_document_gate.py`、`python3 .codex/skills/globalcloud-project-group-git-clean/scripts/project_group_git_clean_gate.py --allow-non-pass-exit-zero`、`python3 tools/kds-sync/validate_project_group_git_clean_evidence.py`、`python3 tools/kds-sync/validate_project_group_dirty_classification.py`、`python3 tools/kds-sync/validate_project_group_review_packages.py`、`python3 tools/kds-sync/validate_project_group_human_confirmation_request.py`、`python3 tools/kds-sync/validate_project_group_authorization_routing.py`、`python3 tools/kds-sync/validate_project_group_dirty_disposition_queue.py`、`python3 tools/kds-sync/validate_project_group_dirty_disposition_queue_post_scheme_recognition_20260626.py`、`python3 tools/kds-sync/validate_project_group_post_scheme_recognition_review_authorization_request_20260626.py`、`python3 tools/kds-sync/validate_project_group_post_scheme_recognition_authorization_receipt_ledger_20260626.py`、`python3 tools/kds-sync/validate_project_group_post_scheme_recognition_pre_execution_command_pack_20260626.py`、`python3 tools/kds-sync/validate_project_group_external_loop_gate_delegates.py`、`python3 tools/kds-sync/validate_project_group_external_loop_gate_delegate_baseline_20260627.py`、`python3 tools/kds-sync/validate_project_group_pre_wave1_review_authorization_request_20260627.py`、`python3 tools/kds-sync/validate_project_group_next_stage_authorization_decision_board_20260626.py`、`python3 tools/kds-sync/validate_project_group_next_stage_authorization_receipt_example_pack_20260627.py`、`python3 tools/kds-sync/validate_project_group_next_stage_authorization_receipt_recording_procedure_20260627.py`、`python3 tools/kds-sync/validate_project_group_next_stage_authorization_human_fill_request_20260627.py`、`python3 tools/kds-sync/validate_project_group_next_stage_authorization_chain_consistency_audit_20260627.py`、`python3 tools/kds-sync/validate_project_group_next_stage_authorization_package_20260627.py`、`python3 tools/kds-sync/validate_project_group_next_stage_authorization_chain_loop_round_20260627.py`、`python3 tools/kds-sync/validate_project_group_operational_blocker_resolution_matrix_20260626.py`、`python3 tools/kds-sync/validate_project_group_wave1_authorization_request_20260626.py`、`python3 tools/kds-sync/validate_loop_document_gate_readiness_retry_hardening_20260626.py`、`python3 tools/kds-sync/validate_gpcf_project_status_matrix_17_project_scope.py`、`python3 tools/kds-sync/validate_project_group_live_status_snapshot_20260626.py`、`python3 tools/kds-sync/validate_project_group_loop_gate_readiness_pass_20260626.py`、`python3 tools/kds-sync/validate_project_group_first_execution_authorization_request_20260626.py`、`python3 tools/kds-sync/validate_project_group_execution_authorization_receipt_template_20260626.py`、`python3 tools/kds-sync/validate_project_group_execution_authorization_receipt_ledger_20260626.py`、`python3 tools/kds-sync/validate_project_group_authorization_pre_execution_command_pack_20260626.py`、`python3 tools/kds-sync/validate_project_group_authorization_pre_execution_environment_readiness_20260626.py`、`python3 tools/kds-sync/validate_project_group_full_project_baseline.py`、`python3 tools/kds-sync/validate_project_group_next_executable_task_packs.py`、`python3 tools/kds-sync/validate_project_group_dependency_execution_matrix.py`、`python3 tools/kds-sync/validate_project_group_status_advancement_matrix.py`、`python3 tools/kds-sync/validate_project_group_ready_for_review_advancement_queue_20260626.py`、`python3 tools/kds-sync/validate_project_group_kds_diffcheck_blocker_20260626.py`、`python3 tools/kds-sync/validate_project_group_kds_diffcheck_cleanup_command_pack_20260626.py`、`python3 tools/kds-sync/validate_project_group_scheme_recognition_rules_20260626.py`、`python3 tools/kds-sync/validate_xiaoc_model_routing_dryrun_environment_blocked.py`、`python3 tools/kds-sync/validate_mmc_governance_template_smoke.py`、`python3 tools/kds-sync/validate_pkc_kds_brain_workflow_dryrun.py`、`python3 tools/kds-sync/validate_xgd_tick_brain_smoke.py`、`python3 tools/kds-sync/validate_studio_workflow_permissions_recheck.py`、`python3 tools/kds-sync/validate_xiaog_live_api_auth_pack.py`、`python3 tools/kds-sync/validate_sop_scenario_owner_review.py`、`python3 tools/kds-sync/validate_kds_brain_report_hold_review.py` | `controlled / git_clean_blocked / dirty_classification_controlled / review_packages_controlled / human_confirmation_request_prepared / authorization_routing_ready / dirty_disposition_queue_ready / dirty_disposition_queue_post_scheme_recognition_ready / post_scheme_recognition_review_authorization_request_prepared / external_loop_gate_delegate_baseline_ready / pre_wave1_review_authorization_ready / next_stage_authorization_decision_board_prepared / next_stage_authorization_receipt_example_pack_ready / next_stage_authorization_receipt_recording_procedure_ready / next_stage_authorization_human_fill_request_ready / next_stage_authorization_chain_consistency_audit_ready / next_stage_authorization_package_ready / next_stage_authorization_chain_loop_round_ready / operational_blocker_resolution_matrix_controlled / wave1_authorization_request_prepared / loop_document_gate_readiness_retry_hardening_controlled / gpcf_project_status_matrix_17_project_scope_controlled / live_status_snapshot_controlled / loop_gate_readiness_pass / first_execution_authorization_request_prepared / execution_authorization_receipt_template_ready / execution_authorization_receipt_ledger_ready / authorization_pre_execution_command_pack_ready / authorization_pre_execution_environment_ready / full_project_baseline_controlled / next_executable_task_packs_controlled / dependency_execution_matrix_controlled / status_advancement_matrix_controlled / ready_for_review_advancement_queue_ready / kds_diffcheck_blocker_controlled / kds_diffcheck_cleanup_command_pack_ready / scheme_recognition_rules_controlled / xiaoc_model_routing_dryrun_environment_blocked / mmc_governance_template_smoke_controlled / pkc_kds_brain_workflow_dryrun_controlled / xgd_tick_brain_smoke_controlled / studio_workflow_permissions_recheck_controlled / xiaog_live_api_auth_pack_controlled / sop_scenario_owner_review_controlled / kds_brain_report_hold_review_controlled`，17 仓均存在，无 ahead/behind，diff_check pass；当前 live recheck 为 10 仓 clean、7 仓 dirty（`GlobalCloud AAAS`、`WAS世界资产体系`、`GlobalCoud GPCF`、`GlobalCloud XWAIL`、`GlobalCloud GFIS`、`GlobalCloud KDS`、`GlobalCloud SOP`），且 `GlobalCloud KDS/.env.production.example` 命中 sensitive_path，项目群 Git gate 因此为 blocked；其中 `WAS世界资产体系/.DS_Store` 继续沿 noise cleanup 路径单独治理，不并入当前 6 仓 review 边界；状态矩阵已补齐为 17 项目口径且由 validator 控制；post-scheme 6 仓 review 授权请求、post-scheme 授权回执总账、post-scheme 预执行命令包、AAAS/XWAIL/SOP delegated wrapper baseline、Pre-Wave1 review 桥接入口、next-stage 决策板、回执示例包、回执录入流程、human fill request、一致性审计、聚合授权包、loop-round 归档、运行门禁阻塞矩阵、Wave 1 授权请求、Loop document gate readiness 重试硬化、确认回执模板、授权回执总账、授权项执行前命令包、只读环境就绪检查、ready_for_review 推进队列、历史 KDS diff check 阻塞证据、KDS cleanup 授权命令包、项目群方案体系会话入口识别规则和 post-scheme dirty 处置队列已准备 |
-| WAES | `npm run lint`、`npm run check`、`npm run typecheck`、`npm run test`、`npm run build`、`npm run check:wasm`、`validate_waes_lint_runtime_repair_authorization.py` | `authorization_required / repair_required`，`npm run lint` 当前仍因 `AppLazyImports.ts` JSX 解析和 `PluginManager.tsx` import type 解析失败；修复需用户确认 WAES dirty workspace 接管边界 |
-| XWAIL | `python3 scripts/validate_xwail.py --all`、`python3 scripts/build_xap.py --check`、`python3 scripts/verify_xap.py --all`、`python3 tools/kds-sync/validate_xwail_min_validator_runtime.py`、`python3 tools/kds-sync/validate_xwail_waes_aaas_contract_precheck.py` | `ready_for_review / local_dev_boundary / integration_precheck_candidate`，最小模型校验、XAP manifest build check、XAP verify、GPCF evidence reference gate 和 XWAIL-WAES-AaaS contract precheck 已通过；仍不声明完整 XWAIL 工具链、WAES 发布或 AaaS 绑定完成 |
-| AaaS | `python3 scripts/validate_service_package.py --all`、`python3 scripts/validate_metering.py --all`、`python3 scripts/validate_sla.py --all`、`python3 scripts/verify_evidence_requirements.py --all`、`python3 tools/kds-sync/validate_aaas_service_runtime.py`、`python3 tools/kds-sync/validate_xwail_waes_aaas_contract_precheck.py`、`python3 tools/kds-sync/validate_aaas_waes_binding_precheck.py` | `ready_for_review / local_dev_boundary / integration_precheck_candidate`，最小 ServicePackage、Metering、SLA、EvidenceRequirement、GPCF evidence reference gate、XWAIL-WAES-AaaS contract precheck 和 AaaS-WAES binding precheck 已通过；仍不声明真实计费、真实结算、SLA 强制执行、客户订阅、客户交付或 WAES 发布完成 |
+| WAME | `npm run lint`、`npm run check`、`npm run typecheck`、`npm run test`、`npm run build`、`npm run check:wasm`、`validate_wame_lint_runtime_repair_authorization.py` | `authorization_required / repair_required`，`npm run lint` 当前仍因 `AppLazyImports.ts` JSX 解析和 `PluginManager.tsx` import type 解析失败；修复需用户确认 WAME dirty workspace 接管边界 |
+| XWAIL | `python3 scripts/validate_xwail.py --all`、`python3 scripts/build_xap.py --check`、`python3 scripts/verify_xap.py --all`、`python3 tools/kds-sync/validate_xwail_min_validator_runtime.py`、`python3 tools/kds-sync/validate_xwail_wame_aaas_contract_precheck.py` | `ready_for_review / local_dev_boundary / integration_precheck_candidate`，最小模型校验、XAP manifest build check、XAP verify、GPCF evidence reference gate 和 XWAIL-WAME-AaaS contract precheck 已通过；仍不声明完整 XWAIL 工具链、WAME 发布或 AaaS 绑定完成 |
+| AaaS | `python3 scripts/validate_service_package.py --all`、`python3 scripts/validate_metering.py --all`、`python3 scripts/validate_sla.py --all`、`python3 scripts/verify_evidence_requirements.py --all`、`python3 tools/kds-sync/validate_aaas_service_runtime.py`、`python3 tools/kds-sync/validate_xwail_wame_aaas_contract_precheck.py`、`python3 tools/kds-sync/validate_aaas_wame_binding_precheck.py` | `ready_for_review / local_dev_boundary / integration_precheck_candidate`，最小 ServicePackage、Metering、SLA、EvidenceRequirement、GPCF evidence reference gate、XWAIL-WAME-AaaS contract precheck 和 AaaS-WAME binding precheck 已通过；仍不声明真实计费、真实结算、SLA 强制执行、客户订阅、客户交付或 WAME 发布完成 |
 | GFIS | `npm run check:js`、`npm run quality:100`、`npm run quality:repo`、`npm run test:e2e`、`npm run test:coverage`、`npm run quality:ops` | `partial_verified`，运行态可达、接口/核心流部分通过；外部证据、中文映射、浏览器依赖和 ops drill 仍需修复 |
 | GPC | `npm run check:js`、`npm run quality:repo`、`validate_gpc_l3_harness.py`、`validate_gpc_l4_platform_contract.py`、`npm run quality:100`、`npm run test:e2e`、`npm run quality:ops`、`python3 tools/kds-sync/validate_gpc_evidence_browser_repair.py` | `partial_verified_browser_repaired_external_runtime_evidence_required`，`quality:repo` 和 `test:e2e` 已通过；`quality:100` 因生产确认和外部联调证据失败；`quality:ops` 因 GCFIS desk/runtime language asset 不可达失败 |
 | PVAOS | `npm run lint`、`npm run validate:modules`、`npm run typecheck`、`npm run test`、`npm run build`、`npm audit --audit-level=moderate --registry=https://registry.npmjs.org`、`npm run test:e2e`、`npm run check:production-domain`、`npm run release:gate:local`、`python3 tools/kds-sync/validate_pvaos_release_gate_repair.py`、`python3 tools/kds-sync/validate_pvaos_release_review.py` | `ready_for_review / local_release_gate_boundary / review_candidate`，本地 release gate 与 release review 已通过；Vitest `80 files / 547 tests` 通过，Playwright `50 passed / 4 skipped`，production domain/CORS pass；仍不声明远程 CI、PR、merge、生产发布或客户验收 |
@@ -544,7 +544,7 @@ reason = core-chain real evidence register and evidence standards are establishe
 | GPCF 校验器 | `validate_project_group_dependency_execution_matrix.py` |
 | 当前结论 | `dependency_execution_matrix = controlled` |
 | 检查范围 | 12 条项目间依赖边 |
-| 覆盖链路 | `WAES -> XWAIL -> AaaS`、`KDS -> Brain`、`GFIS/GPC/PVAOS -> SCaaS`、`WAS -> Ontology -> XWAIL`、`GPCF -> all projects`；其中 `WAS -> Ontology -> XWAIL` 已新增 `was-xwail-ontology-mapping-20260625.md` 映射候选证据 |
+| 覆盖链路 | `WAME -> XWAIL -> AaaS`、`KDS -> Brain`、`GFIS/GPC/PVAOS -> SCaaS`、`WAS -> Ontology -> XWAIL`、`GPCF -> all projects`；其中 `WAS -> Ontology -> XWAIL` 已新增 `was-xwail-ontology-mapping-20260625.md` 映射候选证据 |
 | 状态影响 | 依赖边已绑定上游证据、下游任务、传导门禁、阻塞风险、回滚/降级、人工确认和禁止声明；依赖任务尚未自动执行 |
 | 边界 | 不声明依赖任务已执行，不声明完整集成，不声明项目群 Git 全量 clean，不声明可 stage、可 commit、可 push，不声明 accepted、integrated 或 customer_accepted |
 
@@ -666,7 +666,7 @@ reason = core-chain real evidence register and evidence standards are establishe
 | 当前结论 | `pkc_kds_brain_workflow_dryrun = controlled` |
 | 状态候选 | `task_pack_ready / local_dev_dryrun_boundary` |
 | 命令结果 | `npm run lint` pass；`npm run typecheck` pass；`npm run test` pass，Vitest `10` files / `57` tests passed |
-| 状态影响 | PKC 已从 baseline-only 进入本地 dry-run 证据候选；后续真实 KDS/Brain/XiaoC/WAES 集成必须另建 integration smoke |
+| 状态影响 | PKC 已从 baseline-only 进入本地 dry-run 证据候选；后续真实 KDS/Brain/XiaoC/WAME 集成必须另建 integration smoke |
 | 边界 | 不声明 PKC 端到端用户闭环完成，不声明真实 KDS/Brain 集成完成，不声明真实个人数据写入，不声明 accepted、integrated 或 customer_accepted |
 
 ## 7.11 XGD TICK Brain Smoke 证据登记
@@ -681,7 +681,7 @@ reason = core-chain real evidence register and evidence standards are establishe
 | 当前结论 | `xgd_tick_brain_smoke = controlled` |
 | 状态候选 | `task_pack_ready / local_dev_smoke_boundary` |
 | 命令结果 | `npm run harness:validate` pass；`npm run test:unit` pass，`5/5` suites；`npm run smoke:brain-ui` pass |
-| 状态影响 | XGD 已从 baseline-only 进入本地智能体 smoke 证据候选；后续长程 Agent、真实外部动作和真实 KDS/Brain/XiaoC/WAES 集成必须另建授权任务 |
+| 状态影响 | XGD 已从 baseline-only 进入本地智能体 smoke 证据候选；后续长程 Agent、真实外部动作和真实 KDS/Brain/XiaoC/WAME 集成必须另建授权任务 |
 | 边界 | 不声明长程 Agent 生产可用，不声明真实外部动作完成，不声明真实集成完成，不声明 accepted、integrated 或 customer_accepted |
 
 ## 7.12 Studio Workflow Permissions Recheck 证据登记
@@ -710,9 +710,9 @@ reason = core-chain real evidence register and evidence standards are establishe
 | GPCF 校验器 | `validate_xiaog_live_api_auth_pack.py` |
 | 当前结论 | `xiaog_live_api_auth_pack = controlled` |
 | 状态候选 | `task_pack_ready / authorization_pack_ready` |
-| 命令结果 | `npm run harness:check` pass；`validate_xiaog_l4_readonly_audit_mock.py` pass；`readonly_queries=3`、`pkc_notifications=1`、`waes_audit_mocks=2`、`execution_traces=1`；`network=false device_ota=false docker=false production_write=false token_access=false status_upgrade=false` |
-| 状态影响 | XiaoG 已从 baseline-only 进入 live API、PKC 通知、WAES 审计写入和设备验证授权包候选；后续真实 live API、设备 OTA、Docker、生产写入、真实通知、WAES 写入和 TOKEN 访问必须另建人工授权任务 |
-| 边界 | 不声明 live GFIS/GPC API 已验证，不声明真实 PKC 通知已发送，不声明真实 WAES 审计写入完成，不声明设备 OTA、生产写入、accepted、integrated 或 customer_accepted |
+| 命令结果 | `npm run harness:check` pass；`validate_xiaog_l4_readonly_audit_mock.py` pass；`readonly_queries=3`、`pkc_notifications=1`、`wame_audit_mocks=2`、`execution_traces=1`；`network=false device_ota=false docker=false production_write=false token_access=false status_upgrade=false` |
+| 状态影响 | XiaoG 已从 baseline-only 进入 live API、PKC 通知、WAME 审计写入和设备验证授权包候选；后续真实 live API、设备 OTA、Docker、生产写入、真实通知、WAME 写入和 TOKEN 访问必须另建人工授权任务 |
+| 边界 | 不声明 live GFIS/GPC API 已验证，不声明真实 PKC 通知已发送，不声明真实 WAME 审计写入完成，不声明设备 OTA、生产写入、accepted、integrated 或 customer_accepted |
 
 ## 7.14 SOP 场景生成物 Owner Review 证据登记
 
@@ -741,34 +741,34 @@ reason = core-chain real evidence register and evidence standards are establishe
 | 当前结论 | `kds_brain_report_hold_review = controlled` |
 | 状态候选 | `owner_review_required / kds_report_hold_controlled` |
 | 命令结果 | 资金追踪报告已识别为 `contract_funding_report`；`funding_report_owner_confirmed=false`；`kds_api_sync_executed=false`；`brain_ingestion_confirmed=false`；2026-06-25 sync-run 报告已纳入 hold review |
-| 状态影响 | KDS 资金追踪报告和 sync-run 产物已从未审查 dirty/hold 状态进入 owner review 包；后续是否进入 KDS 事实主存、Brain ingestion、WAES evidence 或归档，必须由 owner 决策 |
-| 边界 | 不声明资金追踪报告已经业务确认，不声明真实 KDS API 已同步，不声明 Brain 已正式摄取，不声明 WAES evidence 已发布，不声明 accepted、integrated 或 customer_accepted |
+| 状态影响 | KDS 资金追踪报告和 sync-run 产物已从未审查 dirty/hold 状态进入 owner review 包；后续是否进入 KDS 事实主存、Brain ingestion、WAME evidence 或归档，必须由 owner 决策 |
+| 边界 | 不声明资金追踪报告已经业务确认，不声明真实 KDS API 已同步，不声明 Brain 已正式摄取，不声明 WAME evidence 已发布，不声明 accepted、integrated 或 customer_accepted |
 
-## 8. 本轮 WAES 证据登记
+## 8. 本轮 WAME 证据登记
 
 | 项 | 内容 |
 |---|---|
-| 证据文件 | `docs/harness/WAES/evidence/waes-real-runtime-baseline-20260624.md` |
+| 证据文件 | `docs/harness/WAME/evidence/wame-real-runtime-baseline-20260624.md` |
 | 采集日期 | 2026-06-24 |
-| 采集结论 | `waes_runtime_evidence = partial_verified` |
-| 阻塞状态 | `waes_repair_required = lint_parse_errors` |
+| 采集结论 | `wame_runtime_evidence = partial_verified` |
+| 阻塞状态 | `wame_repair_required = lint_parse_errors` |
 | 已通过命令 | `npm run typecheck`、`npm run test`、`npm run build`、`npm run check:wasm` |
 | 未通过命令 | `npm run check`，失败于 `npm run lint` |
-| 边界 | 不声明 WAES 真实运行闭环完成，不声明跨项目真实集成完成，不声明真实交付完成，不声明客户验收通过 |
+| 边界 | 不声明 WAME 真实运行闭环完成，不声明跨项目真实集成完成，不声明真实交付完成，不声明客户验收通过 |
 
-## 8.1 本轮 WAES lint runtime 授权包登记
+## 8.1 本轮 WAME lint runtime 授权包登记
 
 | 项 | 内容 |
 |---|---|
-| 证据文件 | `docs/harness/WAES/evidence/waes-lint-runtime-repair-authorization-20260625.md` |
+| 证据文件 | `docs/harness/WAME/evidence/wame-lint-runtime-repair-authorization-20260625.md` |
 | 采集日期 | 2026-06-25 |
 | 当前分支 | `waes/integration-release` |
-| 工作区状态 | dirty，存在未跟踪 WAES 方案文档和 `tools/` |
+| 工作区状态 | dirty，存在未跟踪 WAME 方案文档和 `tools/` |
 | 预检结论 | `git diff --check` pass、`git ls-files -u` pass、lock 检查无输出 |
 | 失败命令 | `npm run lint` |
 | 失败点 | `src/app/components/AppLazyImports.ts` JSX 位于 `.ts` 文件；`src/app/plugin/PluginManager.tsx` 存在不完整 `import type` |
-| 授权状态 | `waes_lint_runtime_repair_authorization = required` |
-| 边界 | 未修改 WAES 源码，未提交，未推送，未部署，未升级 WAES 状态 |
+| 授权状态 | `wame_lint_runtime_repair_authorization = required` |
+| 边界 | 未修改 WAME 源码，未提交，未推送，未部署，未升级 WAME 状态 |
 
 ## 9. 本轮 XWAIL 证据登记
 
@@ -781,8 +781,8 @@ reason = core-chain real evidence register and evidence standards are establishe
 | 状态建议 | `xwail_status_candidate = ready_for_review` |
 | 已通过命令 | `python3 scripts/validate_xwail.py --all`、`python3 scripts/build_xap.py --check`、`python3 scripts/verify_xap.py --all`、`python3 tools/kds-sync/validate_xwail_min_validator_runtime.py` |
 | 运行摘要 | `issue_count=0`、`high_count=0`、`xwail_checked_models = 2`、`xap_checked_manifests = 1` |
-| 依赖链 | `WAES -> XWAIL -> AaaS` 已获得 XWAIL local dev 最小契约验证；WAES 仍为 Draft/授权边界，AaaS 仍缺服务 runtime |
-| 边界 | 不声明完整 XWAIL 工具链完成，不声明 WAES 发布完成，不声明 AaaS 绑定完成；`accepted = false`、`integrated = false`、`production_ready = false`、`customer_accepted = false` |
+| 依赖链 | `WAME -> XWAIL -> AaaS` 已获得 XWAIL local dev 最小契约验证；WAME 仍为 Draft/授权边界，AaaS 仍缺服务 runtime |
+| 边界 | 不声明完整 XWAIL 工具链完成，不声明 WAME 发布完成，不声明 AaaS 绑定完成；`accepted = false`、`integrated = false`、`production_ready = false`、`customer_accepted = false` |
 
 ## 10. 本轮 AaaS 证据登记
 
@@ -795,37 +795,37 @@ reason = core-chain real evidence register and evidence standards are establishe
 | 状态建议 | `aaas_status_candidate = ready_for_review` |
 | 已通过命令 | `python3 scripts/validate_service_package.py --all`、`python3 scripts/validate_metering.py --all`、`python3 scripts/validate_sla.py --all`、`python3 scripts/verify_evidence_requirements.py --all`、`python3 tools/kds-sync/validate_aaas_service_runtime.py` |
 | 运行摘要 | `issue_count=0`、`high_count=0`、`aaas_checked_service_packages = 1` |
-| 依赖链 | `WAES -> XWAIL -> AaaS` 已获得 XWAIL local dev 最小契约验证与 AaaS local dev 最小服务化验证；WAES 仍为 Draft/授权边界 |
-| 边界 | 不声明客户可订阅，不声明商业交付完成，不声明真实计费完成，不声明真实结算完成，不声明 SLA 强制执行完成，不声明 WAES 发布完成；`accepted = false`、`integrated = false`、`production_ready = false`、`customer_accepted = false` |
+| 依赖链 | `WAME -> XWAIL -> AaaS` 已获得 XWAIL local dev 最小契约验证与 AaaS local dev 最小服务化验证；WAME 仍为 Draft/授权边界 |
+| 边界 | 不声明客户可订阅，不声明商业交付完成，不声明真实计费完成，不声明真实结算完成，不声明 SLA 强制执行完成，不声明 WAME 发布完成；`accepted = false`、`integrated = false`、`production_ready = false`、`customer_accepted = false` |
 
-## 10.1 本轮 XWAIL-WAES-AaaS Contract Precheck 证据登记
+## 10.1 本轮 XWAIL-WAME-AaaS Contract Precheck 证据登记
 
 | 项 | 内容 |
 |---|---|
-| 证据文件 | `docs/harness/XWAIL/evidence/xwail-waes-aaas-contract-precheck-20260625.md` |
+| 证据文件 | `docs/harness/XWAIL/evidence/xwail-wame-aaas-contract-precheck-20260625.md` |
 | 采集日期 | 2026-06-25 |
-| task_id | `XWAIL-WAES-AAAS-CONTRACT-PRECHECK-001` |
-| 当前结论 | `xwail_waes_aaas_contract_precheck = pass` |
+| task_id | `XWAIL-WAME-AAAS-CONTRACT-PRECHECK-001` |
+| 当前结论 | `xwail_wame_aaas_contract_precheck = pass` |
 | 状态候选 | `integration_precheck_candidate` |
 | 已通过命令 | XWAIL `validate_xwail.py --all`、`build_xap.py --check`、`verify_xap.py --all`；AaaS `validate_service_package.py --all`、`validate_metering.py --all`、`validate_sla.py --all`、`verify_evidence_requirements.py --all` |
-| GPCF 校验器 | `validate_xwail_waes_aaas_contract_precheck.py` |
-| 依赖链 | `WAES -> XWAIL -> AaaS` |
-| 边界 | 只证明本地 contract precheck 候选通过；不声明 WAES 修复、WAES 发布、AaaS 真实绑定、客户订阅、真实计费、accepted、integrated 或 customer_accepted |
+| GPCF 校验器 | `validate_xwail_wame_aaas_contract_precheck.py` |
+| 依赖链 | `WAME -> XWAIL -> AaaS` |
+| 边界 | 只证明本地 contract precheck 候选通过；不声明 WAME 修复与发布、AaaS 真实绑定、客户订阅、真实计费、accepted、integrated 或 customer_accepted |
 
-## 10.1.1 本轮 AaaS-WAES Binding Precheck 证据登记
+## 10.1.1 本轮 AaaS-WAME Binding Precheck 证据登记
 
 | 项 | 内容 |
 |---|---|
-| 证据文件 | `docs/harness/AaaS/evidence/aaas-waes-binding-precheck-20260625.md` |
+| 证据文件 | `docs/harness/AaaS/evidence/aaas-wame-binding-precheck-20260625.md` |
 | 采集日期 | 2026-06-25 |
-| task_id | `AAAS-WAES-BINDING-PRECHECK-001` |
-| 当前结论 | `aaas_waes_binding_precheck = controlled` |
+| task_id | `AAAS-WAME-BINDING-PRECHECK-001` |
+| 当前结论 | `aaas_wame_binding_precheck = controlled` |
 | 状态候选 | `integration_precheck_candidate` |
-| 已通过命令 | AaaS `validate_service_package.py --all`、`validate_metering.py --all`、`validate_sla.py --all`、`verify_evidence_requirements.py --all`；GPCF `validate_aaas_waes_binding_precheck.py` |
+| 已通过命令 | AaaS `validate_service_package.py --all`、`validate_metering.py --all`、`validate_sla.py --all`、`verify_evidence_requirements.py --all`；GPCF `validate_aaas_wame_binding_precheck.py` |
 | 服务包 | `service-packages/examples/green-supply-chain/service-package.aaas.json` |
-| 关键边界 | `WAES status = Draft`、`candidate_only_not_published`、`commercial.status = draft`、`realCustomerSubscription = false`、`realBillingEnabled = false` |
-| 依赖链 | `XWAIL -> AaaS`、`WAES -> AaaS`、`WAES -> XWAIL -> AaaS` |
-| 边界 | 只证明本地 binding precheck 候选通过；不声明 WAES 发布、AaaS 上架、客户订阅、真实计费、accepted、integrated 或 customer_accepted |
+| 关键边界 | `WAME status = Draft`、`candidate_only_not_published`、`commercial.status = draft`、`realCustomerSubscription = false`、`realBillingEnabled = false` |
+| 依赖链 | `XWAIL -> AaaS`、`WAME -> AaaS`、`WAME -> XWAIL -> AaaS` |
+| 边界 | 只证明本地 binding precheck 候选通过；不声明 WAME 发布、AaaS 上架、客户订阅、真实计费、accepted、integrated 或 customer_accepted |
 
 ## 10.2 本轮 WAS-XWAIL-Ontology 映射证据登记
 
@@ -840,7 +840,7 @@ reason = core-chain real evidence register and evidence standards are establishe
 | GPCF 校验器 | `validate_was_xwail_ontology_mapping.py` |
 | 覆盖范围 | 8/8 WAS dimensions、8/8 WAS flows、Ontology `0.1.0`、XWAIL `ontologyRef`、`wasBaseline`、`ontologyVersion`、`profile` |
 | 依赖链 | `WAS -> Ontology -> XWAIL` |
-| 边界 | 只证明映射候选受控；不声明 WAS accepted、Ontology 覆盖全部业务语义、XWAIL 完整工具链完成、WAES 发布、AaaS 绑定、真实业务事实或 customer_accepted |
+| 边界 | 只证明映射候选受控；不声明 WAS accepted、Ontology 覆盖全部业务语义、XWAIL 完整工具链完成、WAME 发布、AaaS 绑定、真实业务事实或 customer_accepted |
 
 ## 11. 本轮 GFIS 证据登记
 
@@ -851,7 +851,7 @@ reason = core-chain real evidence register and evidence standards are establishe
 | 运行结论 | `gfis_runtime_evidence = partial_verified` |
 | 接口结论 | `gfis_interface_evidence = partial_verified` |
 | 阻塞状态 | `gfis_repair_required = external_evidence_branding_browser_ops_drill` |
-| 已通过命令/片段 | `npm run check:js`；`quality:repo` 中 API contract、core flow、external contract smoke、work-order API、WAES gate event 等片段通过；`quality:ops` 中 operational preflight 通过 |
+| 已通过命令/片段 | `npm run check:js`；`quality:repo` 中 API contract、core flow、external contract smoke、work-order API、WAME gate event 等片段通过；`quality:ops` 中 operational preflight 通过 |
 | 未通过命令 | `npm run quality:100`、`npm run quality:repo`、`npm run test:e2e`、`npm run test:coverage`、`npm run quality:ops` |
 | 边界 | 不声明 GFIS 真实交付完成，不声明外部联调完成，不声明客户验收通过，不声明 production_ready |
 
@@ -975,3 +975,7 @@ reason = core-chain real evidence register and evidence standards are establishe
 | GPCF 校验器 | `validate_brain_review_handoff.py` |
 | 当前建议状态 | `brain_review_handoff = ready_for_human_review`，`brain_status = ready_for_review / authorization_boundary` |
 | 边界 | 不声明 `accepted`，不声明 `integrated`，不声明 `production_ready`，不声明客户验收通过 |
+typecheck/test/build/check:wasm
+xwail-real-runtime-baseline-20260624.md
+xwail_runtime_evidence = repair_required
+xwail_repair_required = validator_commands_missing

@@ -23,7 +23,7 @@ ICP 当前只作为项目群候选项目纳入统一治理。路线图用于约�
 | 阶段 | 目标 | 状态上限 |
 |---|---|---|
 | P0 首期骨架 | 24节点、11池、三场景、API、校验和本地 smoke | `candidate/partial` |
-| P1 治理接入 | 人工确认、WAES 审查、GPCF trigger/dependency | `ready_for_review` 以下 |
+| P1 治理接入 | 人工确认、WAME 审查、GPCF trigger/dependency | `ready_for_review` 以下 |
 | P2 只读连接器 | KDS/GPC/GFIS/PVAOS 真实投影接入 | `real_business_validation` 以下 |
 | P3 仿真与控制视图 | 产业组合、资源匹配、仿真和专用视图 | 单独变更决定 |
 

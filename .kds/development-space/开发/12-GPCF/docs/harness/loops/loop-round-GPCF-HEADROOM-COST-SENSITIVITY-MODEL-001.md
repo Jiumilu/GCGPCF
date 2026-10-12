@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-68EE4EAB95
 title: LOOP Round GPCF Headroom Cost Sensitivity Model 001
 project: GPCF
-related_projects: [GPC, WAES, GPCF]
+related_projects: [GPC, WAME, GPCF]
 domain: docs
 status: controlled
 version: v1.0

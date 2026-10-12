@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-A0415503AB
 title: GC-Knowledge Fabric P0 正式证据执行事件升级预览 dry-run v0.1
 project: KDS
-related_projects: [WAES, KDS]
+related_projects: [WAME, KDS]
 domain: docs
 status: controlled
 version: v1.0

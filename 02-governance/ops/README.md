@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/91-治理与验收/02-governance/ops/README.md
 source_path: 02-governance/ops/README.md
 sync_direction: bidirectional
-last_reviewed: 2026-10-11
+last_reviewed: 2026-10-12
 supersedes: []
 superseded_by: []
 ---
@@ -24,7 +24,7 @@ superseded_by: []
 
 KDS 空间：`开发`
 
-关联项目：WAME, GPCF
+关联项目：WAME
 
 受控规则：
 
@@ -37,4 +37,4 @@ KDS 空间：`开发`
 | doc_id | title | source_path | project | status |
 | --- | --- | --- | --- | --- |
 | GPCF-DOC-81FE104C6D | ops | 02-governance/ops/README.md | WAME | controlled |
-| GPCF-DOC-8DCFDAD068 | ecs-access-control-and-network-boundary | 02-governance/ops/ecs-access-control-and-network-boundary.md | GPCF | controlled |
+| GPCF-DOC-8DCFDAD068 | 阿里云 ECS 当前访问机制与配置变更控制 | 02-governance/ops/ecs-access-control-and-network-boundary.md | WAME | controlled |

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-DA0B8578AF
 title: CodeGraph 项目群全量覆盖证据
 project: KDS
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio]
 domain: docs
 status: controlled
 version: v1.0
@@ -18,7 +18,7 @@ superseded_by: []
 
 # CodeGraph 项目群全量覆盖证据
 
-本轮执行 `GPCF-CODEGRAPH-PROJECT-GROUP-FULL-FABRIC-001`，将 CodeGraph 定位为 GlobalCloud 项目群 `Code Intelligence Fabric`，覆盖 14 个项目，并固化 Loop/Harness/WAES/KDS/OKF 接入边界。
+本轮执行 `GPCF-CODEGRAPH-PROJECT-GROUP-FULL-FABRIC-001`，将 CodeGraph 定位为 GlobalCloud 项目群 `Code Intelligence Fabric`，覆盖 14 个项目，并固化 Loop/Harness/WAME/KDS/OKF 接入边界。
 
 ## 项目群汇总
 
@@ -42,7 +42,7 @@ superseded_by: []
 | GlobalCloud GFIS | policy_exception | 1022 | 13152 | 38131 | 0 | 0 |
 | GlobalCloud GPC | up_to_date | 70 | 705 | 1995 | 0 | 0 |
 | GlobalCloud PVAOS | pending_sync | 604 | 8899 | 28838 | 1 | 0 |
-| GlobalCloud WAES | up_to_date | 281 | 3511 | 11298 | 0 | 0 |
+| GlobalCloud WAME | up_to_date | 281 | 3511 | 11298 | 0 | 0 |
 | GlobalCloud KDS | up_to_date | 518 | 3499 | 7115 | 0 | 0 |
 | GlobalCloud Brain | pending_sync | 153 | 2594 | 6071 | 0 | 0 |
 | GlobalCloud PKC | pending_sync | 110 | 1034 | 2685 | 1 | 0 |
@@ -58,12 +58,12 @@ superseded_by: []
 
 - `governance/codegraph/repo-codegraph-registry.yaml`
 - `governance/codegraph/agent-codegraph-permissions.yaml`
-- `governance/codegraph/waes-codegraph-gates.yaml`
+- `governance/codegraph/wame-codegraph-gates.yaml`
 - `governance/codegraph/kds-codegraph-mapping.yaml`
 - `docs/codegraph/codegraph-positioning.md`
 - `docs/codegraph/codegraph-authorization-model.md`
 - `docs/codegraph/codegraph-loop-integration.md`
-- `docs/codegraph/codegraph-waes-gate.md`
+- `docs/codegraph/codegraph-wame-gate.md`
 - `docs/codegraph/codegraph-kds-okf-mapping.md`
 - `harness/templates/codegraph-impact-report.yaml`
 - `harness/templates/codegraph-evidence-bundle.yaml`
@@ -74,7 +74,7 @@ superseded_by: []
 ## 边界声明
 
 - CodeGraph 输出只进入 candidate，不直接成为 KDS accepted fact。
-- WAES 使用 CodeGraph impact report 作为门禁输入，不把 CodeGraph 当成裁决者。
+- WAME 使用 CodeGraph impact report 作为门禁输入，不把 CodeGraph 当成裁决者。
 - 本轮不进入项目内部业务开发。
 - 本轮不提交、不推送、不部署。
 - 本轮不声明 accepted、integrated 或 production_ready。

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-PROJECT-GROUP-POST-SCHEME-RECOGNITION-AUTHORIZATION-RECEIPT-LEDGER-20260626
 title: GlobalCloud 项目群 Post-Scheme Review 授权回执总账 2026-06-26
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-D899DB2508
 title: GlobalCloud 智能体团队实施前证据与阻塞总表
 project: XiaoC
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, XiaoC, XGD, GPCF, Studio]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, XiaoC, XGD, GPCF, Studio]
 domain: agent-team
 status: controlled
 version: v1.0
@@ -35,7 +35,7 @@ superseded_by: []
 
 | 专项 | 已有设计证据 | 尚缺运行前证据 | 当前阻塞 | 关闭条件 |
 |---|---|---|---|---|
-| 宪衡 | WAES 边界、门禁图、授权治理、专项回报、正式只读预检结论 | WAES 仓库级治理对象深层落点、Evidence/Status/Grant 运行前样本 | 缺真实治理运行样本 | 形成 WAES 首轮实施前验证包 |
+| 宪衡 | WAME 边界、门禁图、授权治理、专项回报、正式只读预检结论 | WAME 仓库级治理对象深层落点、Evidence/Status/Grant 运行前样本 | 缺真实治理运行样本 | 形成 WAME 首轮实施前验证包 |
 | 链同 | PVAOS/GPC 责任边界、模板、项目群控制表、专项回报、正式只读预检结论 | PVAOS/GPC 订单/ASN/预约/运输/POD 运行前样本、GPC 目标平台骨架证据 | 缺 GPC 目标平台骨架与协同回执 | 形成链同首轮实施前验证包 |
 | 厂行 | GFIS/Edge 边界、模板、项目群控制表、专项回报、正式只读预检结论 | GFIS 主链回执、LES/EAM 样本、Edge 事实转换样本 | 缺 Edge 独立证据与运行回执 | 形成厂行首轮实施前验证包 |
 | 数枢 | 数据治理模型、数据库边界、资源仓库映射、专项回报 | 数据库权限、读模型只读、DLQ/Replay、Evidence/Trace 可验证样本 | 缺真实跨仓库技术证据 | 完成跨仓库只读预检并形成 5 项证据 |
@@ -52,13 +52,13 @@ superseded_by: []
 
 已有设计证据：
 
-1. WAES 控制塔与治理门禁图
-2. WAES 专项首轮回报
-3. 一期验收矩阵中 WAES 相关 A7/A9/A10/A11/A12/A13/A14/A17/A19
+1. WAME 控制塔与治理门禁图
+2. WAME 专项首轮回报
+3. 一期验收矩阵中 WAME 相关 A7/A9/A10/A11/A12/A13/A14/A17/A19
 
 尚缺运行前证据：
 
-1. WAES 仓库级核心治理对象落点
+1. WAME 仓库级核心治理对象落点
 2. `StatusAudit`/`EvidenceRecord`/`AgentToolGrant` 运行前样本位置
 3. 真实连接器治理相关实现落点
 

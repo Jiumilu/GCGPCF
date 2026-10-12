@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-0EBE21FEA6
 title: GPCF L4 GFIS Repair 026 Runtime Finance Boundary Gate
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -36,7 +36,7 @@ superseded_by: []
 
 - GFIS runtime validator 输出 `runtime_finance_boundary_gate=blocked`。
 - GFIS runner 输出 `runtime_calls=26 created=11 cleanup_deleted=11 runtime_gaps=20`。
-- `FinanceBoundaryGate` 阻塞项为 `pod_finance_reference`、`waes_finance_evidence`、`kds_finance_backlink`。
+- `FinanceBoundaryGate` 阻塞项为 `pod_finance_reference`、`wame_finance_evidence`、`kds_finance_backlink`。
 - GPCF/GFIS 继续保持 `repair_required`，项目群评分继续冻结 `79/100`。
 
 ## 验证
@@ -55,7 +55,7 @@ superseded_by: []
 ## 边界
 
 - 未使用 GFIS Demo 作为业务主体。
-- 未创建 Payment Entry、未创建 Sales Invoice、未调整 Credit Limit、未调用真实外部金融 API、未写 WAES 最终裁决、未提交 KDS 真实回指、未确认资金事实。
+- 未创建 Payment Entry、未创建 Sales Invoice、未调整 Credit Limit、未调用真实外部金融 API、未写 WAME 最终裁决、未提交 KDS 真实回指、未确认资金事实。
 - 未执行 Git push、生产写入、真实外部 API 写入、数据库迁移、schema sync、`bench migrate`、权限变更、生产配置修改、部署或 accepted/integrated 状态升级。
 
 ## 真实计数

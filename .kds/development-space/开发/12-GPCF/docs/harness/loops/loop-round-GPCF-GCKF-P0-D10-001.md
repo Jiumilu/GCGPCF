@@ -27,7 +27,7 @@ superseded_by: []
 - `packages/api/src/index.ts`
 - `packages/api/src/kds/v2/contracts.ts`
 - `packages/api/src/kds/v2/routes.ts`
-- `packages/api/src/waes/contracts.ts`
+- `packages/api/src/wame/contracts.ts`
 - `packages/api/src/kwe/contracts.ts`
 - `packages/api/src/gfis/contracts.ts`
 - `packages/api/src/governance/contracts.ts`
@@ -38,8 +38,8 @@ superseded_by: []
 - `packages/api/src/no-write-repository.ts`
 - `packages/api/src/kds/v2/repository.ts`
 - `packages/api/src/kds/v2/service.ts`
-- `packages/api/src/waes/repository.ts`
-- `packages/api/src/waes/service.ts`
+- `packages/api/src/wame/repository.ts`
+- `packages/api/src/wame/service.ts`
 - `packages/api/src/kwe/repository.ts`
 - `packages/api/src/kwe/service.ts`
 - `packages/api/src/gfis/repository.ts`

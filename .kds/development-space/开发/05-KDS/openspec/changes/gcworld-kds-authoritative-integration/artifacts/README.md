@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-CE9BCDDD6A
 title: artifacts
 project: KDS
-related_projects: [GPC, PVAOS, WAES, KDS, GPCF]
+related_projects: [GPC, PVAOS, WAME, KDS, GPCF]
 domain: openspec
 status: draft
 version: v1.0
@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/05-KDS/openspec/changes/gcworld-kds-authoritative-integration/artifacts/README.md
 source_path: openspec/changes/gcworld-kds-authoritative-integration/artifacts/README.md
 sync_direction: bidirectional
-last_reviewed: 2026-10-11
+last_reviewed: 2026-10-12
 supersedes: []
 superseded_by: []
 ---

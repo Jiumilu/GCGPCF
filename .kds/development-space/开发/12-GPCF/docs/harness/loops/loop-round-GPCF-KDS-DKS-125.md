@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-763A9B8F04
 title: LOOP Round GPCF KDS DKS-125
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -42,7 +42,7 @@ superseded_by: []
 - 不创建真实 ViewPreference
 - 不创建真实 FilterState、QueueItem、SnoozeRecord、ScheduledReminder 或 Notification
 - 不创建 Harness evidence
-- 不创建 WAES Gate Result 或 KWE WorkItem
+- 不创建 WAME Gate Result 或 KWE WorkItem
 - 不修改 KDS lifecycle、fact 或 accepted fact
 - 不写 GFIS/GPC/ERP/MES
 - 不调用外部 API

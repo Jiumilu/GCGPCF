@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-42C17163FA
 title: GlobalCloud 绿色供应链体系界面实施责任分配表
 project: GPC
-related_projects: [GFIS, GPC, PVAOS, WAES]
+related_projects: [GFIS, GPC, PVAOS, WAME]
 domain: ui-delivery
 status: controlled
 version: v1.0
@@ -38,11 +38,11 @@ superseded_by: []
 
 ## 2. 责任域定义
 
-### 2.1 WAES / 治理域
+### 2.1 WAME / 治理域
 
 主责：
 
-- WAES 状态/证据页
+- WAME 状态/证据页
 - 治理确认页
 - 审计时间线治理侧表达
 
@@ -125,7 +125,7 @@ superseded_by: []
 ## 5. 责任边界红线
 
 1. PVAOS 不负责平台订单正式主线界面
-2. WAES 不负责具体业务确认页
+2. WAME 不负责具体业务确认页
 3. GFIS 不负责平台签收界面主线
 4. AI/知识交互域不负责业务事实写入页
 5. 异常页不允许被各系统拆散为各自一套主线

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-FA6CBD2283
 title: Headroom LCX P5 Production Admission Package Evidence
 project: KDS
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio]
 domain: docs
 status: controlled
 version: v1.0
@@ -24,7 +24,7 @@ superseded_by: []
 
 ## 结论
 
-P5 生产准入申请包已生成，但没有进入生产。当前仍缺授权窗口、审批人、审批时间、脱敏生产 token 台账、回滚计划和 WAES/Harness 准入裁决，因此 `production_admission_gate=false`。
+P5 生产准入申请包已生成，但没有进入生产。当前仍缺授权窗口、审批人、审批时间、脱敏生产 token 台账、回滚计划和 WAME/Harness 准入裁决，因此 `production_admission_gate=false`。
 
 ## P0-P4 Evidence Chain
 
@@ -46,7 +46,7 @@ P5 生产准入申请包已生成，但没有进入生产。当前仍缺授权�
 | HEADROOM-PROD-TOKEN-AUTH-ACTION-001 | define authorized measurement window | human_approver | pending_human_authorization | false |
 | HEADROOM-PROD-TOKEN-AUTH-ACTION-002 | name approving owner and approval timestamp | human_approver | pending_human_authorization | false |
 | HEADROOM-PROD-TOKEN-AUTH-ACTION-003 | attach sanitized production token usage ledger | KDS | pending_sanitized_ledger | false |
-| HEADROOM-PROD-TOKEN-AUTH-ACTION-004 | attach rollback plan id | WAES | pending_rollback_plan | false |
+| HEADROOM-PROD-TOKEN-AUTH-ACTION-004 | attach rollback plan id | WAME | pending_rollback_plan | false |
 | HEADROOM-PROD-TOKEN-AUTH-ACTION-005 | rerun production token ledger negative fixtures and evaluator | GPCF | pending_authorized_ledger | false |
 | HEADROOM-PROD-TOKEN-AUTH-ACTION-006 | confirm no telemetry, raw prompt, external write, or KDS write | GPCF | pending_authorized_window | false |
 
@@ -61,7 +61,7 @@ P5 生产准入申请包已生成，但没有进入生产。当前仍缺授权�
 | authorization_window_present | false |
 | sanitized_production_token_ledger_present | false |
 | rollback_plan_present | false |
-| waes_harness_admission_decision_present | false |
+| wame_harness_admission_decision_present | false |
 | production_proxy_started | false |
 | production_sdk_enabled | false |
 | production_external_api_write | false |
@@ -75,8 +75,8 @@ P5 生产准入申请包已生成，但没有进入生产。当前仍缺授权�
 
 ## 15 项目范围
 
-GPCF, KDS, Brain, WAES, GFIS, GPC, PVAOS, Edge, PKC, XiaoC, XGD, XiaoG, MMC, Studio, WAS
+GPCF, KDS, Brain, WAME, GFIS, GPC, PVAOS, Edge, PKC, XiaoC, XGD, XiaoG, MMC, Studio, WAS
 
 ## 下一步
 
-`GPCF-HEADROOM-LCX-AUTHORIZATION-BOUNDARY-REVIEW-001`：等待人工授权窗口与 WAES/Harness 裁决；未授权前不得进入生产。
+`GPCF-HEADROOM-LCX-AUTHORIZATION-BOUNDARY-REVIEW-001`：等待人工授权窗口与 WAME/Harness 裁决；未授权前不得进入生产。

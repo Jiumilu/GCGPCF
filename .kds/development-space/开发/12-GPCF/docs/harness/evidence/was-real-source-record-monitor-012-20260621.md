@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-4E75E94A0F
 title: WAS Real Source Record Monitor 012 Evidence
 project: GPCF
-related_projects: [GPC, WAES, GPCF]
+related_projects: [GPC, WAME, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -50,7 +50,7 @@ superseded_by: []
 | runtime_primary_key_ready | `0` |
 | review_queue | `0` |
 | runtime_intake | `0` |
-| waes_review | `0` |
+| wame_review | `0` |
 | verified | `0` |
 | accepted | `false` |
 | integrated | `false` |
@@ -84,4 +84,4 @@ python3 tools/kds-sync/validate_was_real_source_record_monitor_012.py
 
 ## 边界
 
-本 evidence 不接受旧项目群范围、缺 WAS 范围或未准入未来项目作为正式项目群语义范围，不创建 runtime intake、review queue、WAES review、verified artifact、accepted、integrated 或 production_ready。
+本 evidence 不接受旧项目群范围、缺 WAS 范围或未准入未来项目作为正式项目群语义范围，不创建 runtime intake、review queue、WAME review、verified artifact、accepted、integrated 或 production_ready。

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-PROJECT-GROUP-FIRST-EXECUTION-AUTHORIZATION-REQUEST-20260626
 title: GlobalCloud 项目群第一批真实执行授权请求 2026-06-26
 project: KDS
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, GPCF, Studio]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, GPCF, Studio]
 domain: docs
 status: controlled
 version: v1.0

@@ -2,7 +2,7 @@
 doc_id: GPCF-F-015-EVIDENCE-SUMMARY-GCWORLD-ORGANIZATION-READONLY
 title: F-015 GCWORLD组织资产只读纵切证据摘要
 project: GPCF
-related_projects: [AAAS, Brain, WAS, XiaoC, WAES, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP]
+related_projects: [AAAS, Brain, WAS, XiaoC, WAME, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP]
 domain: governance
 status: controlled
 version: v1.0

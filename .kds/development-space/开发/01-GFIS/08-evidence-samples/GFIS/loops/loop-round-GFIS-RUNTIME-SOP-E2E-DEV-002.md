@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-A72D8F02F7
 title: GFIS-RUNTIME-SOP-E2E-DEV-002
 project: GFIS
-related_projects: [GFIS, WAES]
+related_projects: [GFIS, WAME]
 domain: evidence
 status: controlled
 version: v1.0
@@ -23,7 +23,7 @@ superseded_by: []
 建立开发态 dry-run runner，跑通 12 阶段 synthetic 链路：
 
 ```text
-synthetic source record -> synthetic runtime primary key -> synthetic review queue -> synthetic runtime intake -> synthetic WAES evidence candidate -> synthetic verified artifact
+synthetic source record -> synthetic runtime primary key -> synthetic review queue -> synthetic runtime intake -> synthetic WAME evidence candidate -> synthetic verified artifact
 ```
 
 ## 产出

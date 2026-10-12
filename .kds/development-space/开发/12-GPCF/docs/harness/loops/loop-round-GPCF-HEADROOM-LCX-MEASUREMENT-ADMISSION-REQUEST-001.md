@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-4F8936D7E5
 title: Loop Round GPCF Headroom LCX Measurement Admission Request 001
 project: GPCF
-related_projects: [GPC, WAES, GPCF]
+related_projects: [GPC, WAME, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -22,12 +22,12 @@ superseded_by: []
 
 - 用户要求进入下一步。
 - 上一轮已补齐 6 个授权字段，`authorization_complete=true`。
-- 当前 `waes_harness_admission_decision=admitted_for_sanitized_measurement_precheck`。
+- 当前 `wame_harness_admission_decision=admitted_for_sanitized_measurement_precheck`。
 
 ## 动作
 
 - 运行 `python3 tools/kds-sync/run_headroom_lcx_measurement_admission_request.py`。
-- 刷新 WAES/Harness 脱敏测量准入申请包。
+- 刷新 WAME/Harness 脱敏测量准入申请包。
 - 明确准入只覆盖脱敏测量 dry-run 预备阶段，不触发生产测量。
 
 ## 输出

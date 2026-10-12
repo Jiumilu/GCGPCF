@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-6D919DF28E
 title: 下一授权动作决策矩阵
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0

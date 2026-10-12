@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/92-证据与会话归档/.harness/runs/gbrain-v3.1-hardening-20260611-002252/README.md
 source_path: .harness/runs/gbrain-v3.1-hardening-20260611-002252/README.md
 sync_direction: bidirectional
-last_reviewed: 2026-10-11
+last_reviewed: 2026-10-12
 supersedes: []
 superseded_by: []
 ---
@@ -38,10 +38,10 @@ KDS 空间：`开发`
 | --- | --- | --- | --- | --- |
 | GPCF-DOC-EA97040BE1 | gbrain-v3.1-hardening-20260611-002252 | .harness/runs/gbrain-v3.1-hardening-20260611-002252/README.md | WAME | archive |
 | GPCF-DOC-9C70414B66 | Acceptance Matrix: GCBrain v3.1 | .harness/runs/gbrain-v3.1-hardening-20260611-002252/acceptance-matrix.md | WAME | archive |
-| GPCF-DOC-5C8B07F574 | design | .harness/runs/gbrain-v3.1-hardening-20260611-002252/design.md | WAME | archive |
+| GPCF-DOC-5C8B07F574 | Design Review: GCBrain v3.1 Production Hardening | .harness/runs/gbrain-v3.1-hardening-20260611-002252/design.md | WAME | archive |
 | GPCF-DOC-8A206BCB11 | evidence | .harness/runs/gbrain-v3.1-hardening-20260611-002252/evidence/README.md | WAME | archive |
 | GPCF-DOC-17799BC191 | patches | .harness/runs/gbrain-v3.1-hardening-20260611-002252/patches/README.md | WAME | archive |
-| GPCF-DOC-F7F2EF5A5D | proposal | .harness/runs/gbrain-v3.1-hardening-20260611-002252/proposal.md | WAME | archive |
+| GPCF-DOC-F7F2EF5A5D | OpsX Proposal: GCBrain v3.1 Production Hardening | .harness/runs/gbrain-v3.1-hardening-20260611-002252/proposal.md | WAME | archive |
 | GPCF-DOC-72B2E0EF61 | Harness Governance Status Audit — GCBrain v3.1 Production Hardening | .harness/runs/gbrain-v3.1-hardening-20260611-002252/status-audit.md | WAME | archive |
 | GPCF-DOC-65DA9DDC44 | Task Breakdown: GCBrain v3.1 Production Hardening | .harness/runs/gbrain-v3.1-hardening-20260611-002252/tasks.md | WAME | archive |
 | GPCF-DOC-5A3C833C90 | workspaces | .harness/runs/gbrain-v3.1-hardening-20260611-002252/workspaces/README.md | WAME | archive |

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-81E3CE651A
 title: GFIS Assistant Repair Notification Snooze Queue Share Approval Preview No-write 规则
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, Brain, PKC]
+related_projects: [GFIS, GPC, WAME, KDS, Brain, PKC]
 domain: docs
 status: controlled
 version: v1.0
@@ -22,7 +22,7 @@ superseded_by: []
 
 本规则定义 DKS-127 的 GFIS Assistant Repair Notification Snooze Queue Share Approval Preview。
 
-它基于 DKS-126 的 view share preview 生成本地审批候选预览，用于说明 Brain / PKC / GFIS Assistant 可以如何展示“团队审批、项目审批、治理审阅、外部共享阻断、委员会审批、冻结审批”的候选路径。Share approval preview 只是本地候选说明，不是真实 ApprovalRequest、ApprovalDecision、ShareLink、ACL 授权、ExternalSharePermission、PublicationApproval、Harness evidence、WAES Gate Result、KWE WorkItem 或业务写回。
+它基于 DKS-126 的 view share preview 生成本地审批候选预览，用于说明 Brain / PKC / GFIS Assistant 可以如何展示“团队审批、项目审批、治理审阅、外部共享阻断、委员会审批、冻结审批”的候选路径。Share approval preview 只是本地候选说明，不是真实 ApprovalRequest、ApprovalDecision、ShareLink、ACL 授权、ExternalSharePermission、PublicationApproval、Harness evidence、WAME Gate Result、KWE WorkItem 或业务写回。
 
 ## 硬边界
 
@@ -35,7 +35,7 @@ superseded_by: []
 | ExternalSharePermission | 不创建真实外部共享权限 |
 | PublicationApproval | 不创建真实发布审批 |
 | Harness Evidence | 不创建、不持久化 Harness evidence |
-| WAES / KWE / KDS | 不创建门禁结果、工单或状态变化 |
+| WAME / KWE / KDS | 不创建门禁结果、工单或状态变化 |
 | GFIS/GPC/ERP/MES | 不写业务系统 |
 | 外部 API | 不调用真实外部 API |
 
@@ -87,4 +87,4 @@ tsc -p packages/shared/tsconfig.json --noEmit
 tsc -p packages/api/tsconfig.json --noEmit
 ```
 
-验收通过不代表真实 ApprovalRequest、ApprovalDecision、ShareLink、ACL 授权、外部共享权限、发布审批、Harness evidence、WAES/KWE/KDS 或业务系统写入已发生。
+验收通过不代表真实 ApprovalRequest、ApprovalDecision、ShareLink、ACL 授权、外部共享权限、发布审批、Harness evidence、WAME/KWE/KDS 或业务系统写入已发生。

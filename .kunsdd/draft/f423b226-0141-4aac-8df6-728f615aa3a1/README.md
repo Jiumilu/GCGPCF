@@ -1,17 +1,17 @@
 ---
 doc_id: GPCF-DOC-3B548BE016
 title: f423b226-0141-4aac-8df6-728f615aa3a1
-project: GPC
-related_projects: [GPC, WAME, KDS, GPCF]
+project: GFIS
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: general
 status: controlled
 version: v1.0
-owner: GPC
+owner: GFIS
 kds_space: 开发
-kds_path: 开发/02-GPC/.kunsdd/draft/f423b226-0141-4aac-8df6-728f615aa3a1/README.md
+kds_path: 开发/01-GFIS/.kunsdd/draft/f423b226-0141-4aac-8df6-728f615aa3a1/README.md
 source_path: .kunsdd/draft/f423b226-0141-4aac-8df6-728f615aa3a1/README.md
 sync_direction: bidirectional
-last_reviewed: 2026-10-11
+last_reviewed: 2026-10-12
 supersedes: []
 superseded_by: []
 ---
@@ -24,7 +24,7 @@ superseded_by: []
 
 KDS 空间：`开发`
 
-关联项目：GPC, GPCF
+关联项目：GFIS
 
 受控规则：
 
@@ -36,5 +36,5 @@ KDS 空间：`开发`
 
 | doc_id | title | source_path | project | status |
 | --- | --- | --- | --- | --- |
-| GPCF-DOC-3B548BE016 | f423b226-0141-4aac-8df6-728f615aa3a1 | .kunsdd/draft/f423b226-0141-4aac-8df6-728f615aa3a1/README.md | GPC | controlled |
-| GPCF-DOC-F6D4D8B07A | requirement | .kunsdd/draft/f423b226-0141-4aac-8df6-728f615aa3a1/requirement.md | GPCF | controlled |
+| GPCF-DOC-3B548BE016 | f423b226-0141-4aac-8df6-728f615aa3a1 | .kunsdd/draft/f423b226-0141-4aac-8df6-728f615aa3a1/README.md | GFIS | controlled |
+| GPCF-DOC-F6D4D8B07A | 跨项目 Agent 长期记忆系统 | .kunsdd/draft/f423b226-0141-4aac-8df6-728f615aa3a1/requirement.md | GFIS | controlled |

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-F53170657E
 title: LOOP Round GPCF-KDS-DKS-027 - 葛化 GFIS AI 助手内测问答与资料回收包联动规则
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -20,7 +20,7 @@ superseded_by: []
 
 ## 1. 轮次目标
 
-在 DKS-025 知识缺口/悬赏机制与 DKS-026 资料回收包/候选 SOP 的基础上，建立葛化第一阶段三类 GFIS AI 助手的内测联动规则，使问答、使用引导、文档验收能够回流到资料回收包、候选 SOP、KDS 11 底座池与 WAES/人工/委员会门禁。
+在 DKS-025 知识缺口/悬赏机制与 DKS-026 资料回收包/候选 SOP 的基础上，建立葛化第一阶段三类 GFIS AI 助手的内测联动规则，使问答、使用引导、文档验收能够回流到资料回收包、候选 SOP、KDS 11 底座池与 WAME/人工/委员会门禁。
 
 ## 2. 输入
 
@@ -40,7 +40,7 @@ superseded_by: []
 - 本轮只建立候选联动规则，不确认真实上线、真实资料、真实写回、正式积分或正式收益。
 - GFIS 知识问答助手、GFIS 使用助手、GFIS 文档验收助手均只能输出候选事实、候选 SOP、候选资料验收、候选贡献事件。
 - KDS 11 底座池是事实基础，积分池、收益池、额度池、悬赏池、争议池、潜在产值池、SOP 账本、贡献账本均为增强账本。
-- WAES 在规则内记录，在规则外或重大事项中触发复核；最终确认由人工或委员会完成。
+- WAME 在规则内记录，在规则外或重大事项中触发复核；最终确认由人工或委员会完成。
 - 有实际收入的事项才可进入正式产值贡献；到账为正式收入口径，开票为统计和财务过程口径。
 
 ## 5. 本轮动作
@@ -51,7 +51,7 @@ superseded_by: []
 | 建立内测问答到资料回收包联动结构 | done |
 | 建立写回候选与缺口回流结构 | done |
 | 明确 KDS 11 底座池挂接规则 | done |
-| 明确 WAES/人工/委员会门禁边界 | done |
+| 明确 WAME/人工/委员会门禁边界 | done |
 | 执行文档控制与 KDS 本地镜像检查 | done |
 | 执行防污染、TOKEN、LOOP 文档门禁检查 | done |
 

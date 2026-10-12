@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-901AAC00A7
 title: ODF Phase 7 小批量样本台账
 project: KDS
-related_projects: [WAES, KDS, GPCF]
+related_projects: [WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0

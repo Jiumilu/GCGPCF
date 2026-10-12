@@ -11,14 +11,14 @@ kds_space: 开发
 kds_path: 开发/91-治理与验收/09-status/document-deprecation-register.md
 source_path: 09-status/document-deprecation-register.md
 sync_direction: bidirectional
-last_reviewed: 2026-10-11
+last_reviewed: 2026-10-12
 supersedes: []
 superseded_by: []
 ---
 
 # 文档过期与归档台账
 
-日期：2026-10-11
+日期：2026-10-12
 
 用途：登记历史、过期、被替代和运行类文档，避免误用为当前项目完成状态或当前业务口径。
 
@@ -69,8 +69,8 @@ superseded_by: []
 | GPCF-DOC-AB1A5D2515 | 20261010-075917-spaceai-studio-multiplatform-refactor | .harness/runs/20261010-075917-spaceai-studio-multiplatform-refactor/README.md | archive | 开发/92-证据与会话归档/.harness/runs/20261010-075917-spaceai-studio-multiplatform-refactor/README.md |
 | GPCF-DOC-32ED2727B9 | Harness 运行记录 | .harness/runs/README.md | archive | 开发/92-证据与会话归档/.harness/runs/README.md |
 | GPCF-DOC-C311AFC61A | gbrain-admin-console-v1-20260610-201442 | .harness/runs/gbrain-admin-console-v1-20260610-201442/README.md | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-admin-console-v1-20260610-201442/README.md |
-| GPCF-DOC-9AF8C291EB | acceptance-matrix | .harness/runs/gbrain-admin-console-v1-20260610-201442/acceptance-matrix.md | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-admin-console-v1-20260610-201442/acceptance-matrix.md |
-| GPCF-DOC-4609775857 | status-audit | .harness/runs/gbrain-admin-console-v1-20260610-201442/status-audit.md | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-admin-console-v1-20260610-201442/status-audit.md |
+| GPCF-DOC-9AF8C291EB | Acceptance Matrix: gbrain-admin-console-v1 | .harness/runs/gbrain-admin-console-v1-20260610-201442/acceptance-matrix.md | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-admin-console-v1-20260610-201442/acceptance-matrix.md |
+| GPCF-DOC-4609775857 | Harness Governance Status Audit: gbrain-admin-console-v1 | .harness/runs/gbrain-admin-console-v1-20260610-201442/status-audit.md | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-admin-console-v1-20260610-201442/status-audit.md |
 | GPCF-DOC-6A1A3247B5 | gbrain-admin-console-v2-20260610-205407 | .harness/runs/gbrain-admin-console-v2-20260610-205407/README.md | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-admin-console-v2-20260610-205407/README.md |
 | GPCF-DOC-44D60534C4 | status-audit | .harness/runs/gbrain-admin-console-v2-20260610-205407/status-audit.md | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-admin-console-v2-20260610-205407/status-audit.md |
 | GPCF-DOC-2C07E0A2D0 | gbrain-multitenant-deploy-v1-20260610-202348 | .harness/runs/gbrain-multitenant-deploy-v1-20260610-202348/README.md | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-multitenant-deploy-v1-20260610-202348/README.md |
@@ -81,17 +81,17 @@ superseded_by: []
 | GPCF-DOC-EA8925961C | Proposal: gbrain-portal-v1 | .harness/runs/gbrain-portal-v1-20260610-200455/proposal.md | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-portal-v1-20260610-200455/proposal.md |
 | GPCF-DOC-AD7D575AD9 | Harness Governance Status Audit: gbrain-portal-v1 | .harness/runs/gbrain-portal-v1-20260610-200455/status-audit.md | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-portal-v1-20260610-200455/status-audit.md |
 | GPCF-DOC-4B629FE0E5 | gbrain-portal-v2-frontend-20260610-204915 | .harness/runs/gbrain-portal-v2-frontend-20260610-204915/README.md | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-portal-v2-frontend-20260610-204915/README.md |
-| GPCF-DOC-8898209B8E | status-audit | .harness/runs/gbrain-portal-v2-frontend-20260610-204915/status-audit.md | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-portal-v2-frontend-20260610-204915/status-audit.md |
+| GPCF-DOC-8898209B8E | Harness Governance: gbrain-portal-v2-frontend | .harness/runs/gbrain-portal-v2-frontend-20260610-204915/status-audit.md | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-portal-v2-frontend-20260610-204915/status-audit.md |
 | GPCF-DOC-530B2BF79A | gbrain-v2-sprint1-20260610-212531 | .harness/runs/gbrain-v2-sprint1-20260610-212531/README.md | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-v2-sprint1-20260610-212531/README.md |
 | GPCF-DOC-0AC4F38B1A | gbrain-v2.1-sprint1-20260610-214441 | .harness/runs/gbrain-v2.1-sprint1-20260610-214441/README.md | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-v2.1-sprint1-20260610-214441/README.md |
-| GPCF-DOC-54C43FAC33 | status-audit | .harness/runs/gbrain-v2.1-sprint1-20260610-214441/status-audit.md | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-v2.1-sprint1-20260610-214441/status-audit.md |
+| GPCF-DOC-54C43FAC33 | Harness Governance: gbrain-v2.1-sprint1 | .harness/runs/gbrain-v2.1-sprint1-20260610-214441/status-audit.md | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-v2.1-sprint1-20260610-214441/status-audit.md |
 | GPCF-DOC-BFEB10D711 | gbrain-v2.1-sprint2-20260610-214842 | .harness/runs/gbrain-v2.1-sprint2-20260610-214842/README.md | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-v2.1-sprint2-20260610-214842/README.md |
 | GPCF-DOC-D03E6BE997 | status-audit | .harness/runs/gbrain-v2.1-sprint2-20260610-214842/status-audit.md | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-v2.1-sprint2-20260610-214842/status-audit.md |
 | GPCF-DOC-520E6A10FE | gbrain-v2.1-sprint3-20260610-215034 | .harness/runs/gbrain-v2.1-sprint3-20260610-215034/README.md | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-v2.1-sprint3-20260610-215034/README.md |
 | GPCF-DOC-2AEC389E51 | status-audit | .harness/runs/gbrain-v2.1-sprint3-20260610-215034/status-audit.md | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-v2.1-sprint3-20260610-215034/status-audit.md |
 | GPCF-DOC-B0E20E2E16 | gbrain-v2.1-sprint4-20260610-215232 | .harness/runs/gbrain-v2.1-sprint4-20260610-215232/README.md | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-v2.1-sprint4-20260610-215232/README.md |
 | GPCF-DOC-F78110A3B6 | gbrain-v2.2-20260610-215935 | .harness/runs/gbrain-v2.2-20260610-215935/README.md | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-v2.2-20260610-215935/README.md |
-| GPCF-DOC-DF73213193 | status-audit | .harness/runs/gbrain-v2.2-20260610-215935/status-audit.md | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-v2.2-20260610-215935/status-audit.md |
+| GPCF-DOC-DF73213193 | Harness Governance: gbrain-v2.2 — Agent-Assisted Governance ✅ | .harness/runs/gbrain-v2.2-20260610-215935/status-audit.md | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-v2.2-20260610-215935/status-audit.md |
 | GPCF-DOC-4879E0F6B6 | gbrain-v2.3-20260610-220227 | .harness/runs/gbrain-v2.3-20260610-220227/README.md | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-v2.3-20260610-220227/README.md |
 | GPCF-DOC-5786630B8F | gbrain-v3.0-20260610-220702 | .harness/runs/gbrain-v3.0-20260610-220702/README.md | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-v3.0-20260610-220702/README.md |
 | GPCF-DOC-F6876D638F | gbrain-v3.1-hardening-20260610-222505 | .harness/runs/gbrain-v3.1-hardening-20260610-222505/README.md | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-v3.1-hardening-20260610-222505/README.md |
@@ -99,15 +99,15 @@ superseded_by: []
 | GPCF-DOC-ED2B81A98D | workspaces | .harness/runs/gbrain-v3.1-hardening-20260610-222505/workspaces/README.md | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-v3.1-hardening-20260610-222505/workspaces/README.md |
 | GPCF-DOC-EA97040BE1 | gbrain-v3.1-hardening-20260611-002252 | .harness/runs/gbrain-v3.1-hardening-20260611-002252/README.md | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-v3.1-hardening-20260611-002252/README.md |
 | GPCF-DOC-9C70414B66 | Acceptance Matrix: GCBrain v3.1 | .harness/runs/gbrain-v3.1-hardening-20260611-002252/acceptance-matrix.md | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-v3.1-hardening-20260611-002252/acceptance-matrix.md |
-| GPCF-DOC-5C8B07F574 | design | .harness/runs/gbrain-v3.1-hardening-20260611-002252/design.md | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-v3.1-hardening-20260611-002252/design.md |
+| GPCF-DOC-5C8B07F574 | Design Review: GCBrain v3.1 Production Hardening | .harness/runs/gbrain-v3.1-hardening-20260611-002252/design.md | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-v3.1-hardening-20260611-002252/design.md |
 | GPCF-DOC-8A206BCB11 | evidence | .harness/runs/gbrain-v3.1-hardening-20260611-002252/evidence/README.md | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-v3.1-hardening-20260611-002252/evidence/README.md |
 | GPCF-DOC-17799BC191 | patches | .harness/runs/gbrain-v3.1-hardening-20260611-002252/patches/README.md | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-v3.1-hardening-20260611-002252/patches/README.md |
-| GPCF-DOC-F7F2EF5A5D | proposal | .harness/runs/gbrain-v3.1-hardening-20260611-002252/proposal.md | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-v3.1-hardening-20260611-002252/proposal.md |
+| GPCF-DOC-F7F2EF5A5D | OpsX Proposal: GCBrain v3.1 Production Hardening | .harness/runs/gbrain-v3.1-hardening-20260611-002252/proposal.md | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-v3.1-hardening-20260611-002252/proposal.md |
 | GPCF-DOC-72B2E0EF61 | Harness Governance Status Audit — GCBrain v3.1 Production Hardening | .harness/runs/gbrain-v3.1-hardening-20260611-002252/status-audit.md | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-v3.1-hardening-20260611-002252/status-audit.md |
 | GPCF-DOC-65DA9DDC44 | Task Breakdown: GCBrain v3.1 Production Hardening | .harness/runs/gbrain-v3.1-hardening-20260611-002252/tasks.md | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-v3.1-hardening-20260611-002252/tasks.md |
 | GPCF-DOC-5A3C833C90 | workspaces | .harness/runs/gbrain-v3.1-hardening-20260611-002252/workspaces/README.md | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-v3.1-hardening-20260611-002252/workspaces/README.md |
 | GPCF-DOC-60D38E1B72 | gbrain-v3.2-design-20260611-003001 | .harness/runs/gbrain-v3.2-design-20260611-003001/README.md | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-v3.2-design-20260611-003001/README.md |
-| GPCF-DOC-253B627E40 | proposal | .harness/runs/gbrain-v3.2-design-20260611-003001/proposal.md | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-v3.2-design-20260611-003001/proposal.md |
+| GPCF-DOC-253B627E40 | GCBrain v3.2 — 智能知识平台 设计方案 | .harness/runs/gbrain-v3.2-design-20260611-003001/proposal.md | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-v3.2-design-20260611-003001/proposal.md |
 | GPCF-DOC-AAE51A57F5 | gbrain-v3.2-e2e-test-20260611-010548 | .harness/runs/gbrain-v3.2-e2e-test-20260611-010548/README.md | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-v3.2-e2e-test-20260611-010548/README.md |
 | GPCF-DOC-CAC95B5694 | acceptance-matrix | .harness/runs/gbrain-v3.2-e2e-test-20260611-010548/acceptance-matrix.md | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-v3.2-e2e-test-20260611-010548/acceptance-matrix.md |
 | GPCF-DOC-CDEF748B2E | evidence | .harness/runs/gbrain-v3.2-e2e-test-20260611-010548/evidence/README.md | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-v3.2-e2e-test-20260611-010548/evidence/README.md |
@@ -140,12 +140,12 @@ superseded_by: []
 | GPCF-DOC-66C878138B | kds-real-token-sync-20260613-062146 | .harness/runs/kds-real-token-sync-20260613-062146/README.md | archive | 开发/92-证据与会话归档/.harness/runs/kds-real-token-sync-20260613-062146/README.md |
 | GPCF-DOC-C93F8F0441 | Acceptance Matrix: KDS Real Token Sync | .harness/runs/kds-real-token-sync-20260613-062146/acceptance-matrix.md | archive | 开发/92-证据与会话归档/.harness/runs/kds-real-token-sync-20260613-062146/acceptance-matrix.md |
 | GPCF-DOC-71D00E7EBE | evidence | .harness/runs/kds-real-token-sync-20260613-062146/evidence/README.md | archive | 开发/92-证据与会话归档/.harness/runs/kds-real-token-sync-20260613-062146/evidence/README.md |
-| GPCF-DOC-B89D14C3C8 | git-change-groups | .harness/runs/kds-real-token-sync-20260613-062146/git-change-groups.md | archive | 开发/92-证据与会话归档/.harness/runs/kds-real-token-sync-20260613-062146/git-change-groups.md |
+| GPCF-DOC-B89D14C3C8 | KDS Real Token Sync Git Change Groups | .harness/runs/kds-real-token-sync-20260613-062146/git-change-groups.md | archive | 开发/92-证据与会话归档/.harness/runs/kds-real-token-sync-20260613-062146/git-change-groups.md |
 | GPCF-DOC-D5957ABBD9 | patches | .harness/runs/kds-real-token-sync-20260613-062146/patches/README.md | archive | 开发/92-证据与会话归档/.harness/runs/kds-real-token-sync-20260613-062146/patches/README.md |
-| GPCF-DOC-0498FF3BEF | status-audit | .harness/runs/kds-real-token-sync-20260613-062146/status-audit.md | archive | 开发/92-证据与会话归档/.harness/runs/kds-real-token-sync-20260613-062146/status-audit.md |
+| GPCF-DOC-0498FF3BEF | Harness Status Audit: KDS Real Token Sync | .harness/runs/kds-real-token-sync-20260613-062146/status-audit.md | archive | 开发/92-证据与会话归档/.harness/runs/kds-real-token-sync-20260613-062146/status-audit.md |
 | GPCF-DOC-44F8F11A42 | workspaces | .harness/runs/kds-real-token-sync-20260613-062146/workspaces/README.md | archive | 开发/92-证据与会话归档/.harness/runs/kds-real-token-sync-20260613-062146/workspaces/README.md |
 | GPCF-DOC-71BD3638A9 | session-archives | 08-evidence-samples/session-archives/README.md | archive | 开发/92-证据与会话归档/08-evidence-samples/session-archives/README.md |
-| GPCF-DOC-6ACBFCD6E4 | session-019eafc0-ee61-7900-b137-5cf2252bd82f | 08-evidence-samples/session-archives/session-019eafc0-ee61-7900-b137-5cf2252bd82f.md | archive | 开发/92-证据与会话归档/08-evidence-samples/session-archives/session-019eafc0-ee61-7900-b137-5cf2252bd82f.md |
+| GPCF-DOC-6ACBFCD6E4 | 会话归档：019eafc0-ee61-7900-b137-5cf2252bd82f | 08-evidence-samples/session-archives/session-019eafc0-ee61-7900-b137-5cf2252bd82f.md | archive | 开发/92-证据与会话归档/08-evidence-samples/session-archives/session-019eafc0-ee61-7900-b137-5cf2252bd82f.md |
 | GPCF-DOC-A55E6422C8 | 过期与历史归档 | 10-archive/README.md | archive | 开发/92-证据与会话归档/10-archive/README.md |
 | GPCF-DOC-5112E5A758 | 过期文档归档 | 10-archive/deprecated/README.md | archive | 开发/92-证据与会话归档/10-archive/deprecated/README.md |
 | GPCF-DOC-2F9D256EEE | 历史会话归档 | 10-archive/historical-sessions/README.md | archive | 开发/92-证据与会话归档/10-archive/historical-sessions/README.md |

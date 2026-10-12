@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-F03925A181
 title: Loop Round - CodeGraph GFIS 工具状态审计授权阻断
 project: GPCF
-related_projects: [GFIS, GPC, WAES, GPCF]
+related_projects: [GFIS, GPC, WAME, GPCF]
 domain: docs
 status: controlled
 version: v1.0

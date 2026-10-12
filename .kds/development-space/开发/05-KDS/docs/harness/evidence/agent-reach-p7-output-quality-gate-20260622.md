@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-AGENT-REACH-P7-OUTPUT-QUALITY-GATE-20260622
 title: Agent-Reach P7 输出质量门禁证据 2026-06-22
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0

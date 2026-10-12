@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-GCKFP0FORMALEVIDENCEEXECUTIONROLLBACKDRILLPREVIEWCURRENTSTATED13820260622
 title: GCKF P0 正式 evidence 执行回滚演练预览当前态证据 D138
 project: GPCF
-related_projects: [GPCF, WAES]
+related_projects: [GPCF, WAME]
 domain: docs
 status: controlled
 version: v1.0

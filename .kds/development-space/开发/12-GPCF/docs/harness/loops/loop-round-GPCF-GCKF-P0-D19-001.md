@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-156556AE22
 title: GC-Knowledge Fabric P0-D19 Acceptance Packet Ledger Dry-run LOOP evidence
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0

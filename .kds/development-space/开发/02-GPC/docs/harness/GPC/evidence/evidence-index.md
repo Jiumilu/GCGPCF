@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-6AA1BB56F0
 title: Evidence Index — GPC
 project: GPC
-related_projects: [GPC, WAES, GPCF]
+related_projects: [GPC, WAME, GPCF]
 domain: docs
 status: controlled
 version: v1.0

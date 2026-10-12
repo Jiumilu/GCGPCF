@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-FIVE-DIRECTION-RUN-001
 title: GPCF-LOOP-FIVE-DIRECTION-RUN-001
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -32,7 +32,7 @@ superseded_by: []
 启动 Loop L3 托管冲刺模式。按五方向模板执行 GPCF-LOOP-FIVE-DIRECTION-RUN-001，范围 no-write，不升级 accepted/integrated/production_ready，完成后给出运行证据。
 ```
 
-本轮只证明五方向模板已进入真实治理运行，不触达生产、不写真实 KDS/WAES、不创建 GFIS 运行层事实、不提交、不推送、不升级 `accepted`、`integrated` 或 `production_ready`。
+本轮只证明五方向模板已进入真实治理运行，不触达生产、不写真实 KDS/WAME、不创建 GFIS 运行层事实、不提交、不推送、不升级 `accepted`、`integrated` 或 `production_ready`。
 
 ## 五方向运行记录
 
@@ -43,7 +43,7 @@ superseded_by: []
 | input_refs | `AGENTS.md`、`LOOP_CONTROL_BOARD.md`、`LOOP_AUTONOMY_POLICY.md`、`gpcf-project-status-matrix.md`、`templates/loop-round-v2-five-direction.yaml` |
 | goal | 用五方向模板执行第一轮 no-write 治理运行，并产出可验证 evidence |
 | scope_in | 读取控制面、生成本轮 Round、生成本轮 evidence、运行 no-write validator |
-| scope_out | 生产写入、真实外部 API、真实 KDS fact 写入、WAES Gate Result 写入、Git commit/push、状态升级 |
+| scope_out | 生产写入、真实外部 API、真实 KDS fact 写入、WAME Gate Result 写入、Git commit/push、状态升级 |
 | decision | 当前工作区存在大量既有 dirty/未跟踪文件；本轮只新增 RUN-001 必需文件，不清理、不回滚、不合并既有变更 |
 | actions | 创建 Round 记录、创建 JSON/Markdown evidence、创建专项 validator、执行 scoped 文档控制与验证 |
 | output_refs | `docs/harness/evidence/loop-five-direction-run-001-20260622.{json,md}`、`tools/kds-sync/validate_loop_five_direction_run_001.py` |
@@ -79,7 +79,7 @@ superseded_by: []
 | last_safe_state | `five_direction_control_plane=pass; run_001=pass; real_business_lane=repair_required` |
 | retryable_actions | 继续 no-write 轮次、刷新 dashboard、准备 GFIS 真实 source-of-record 采集包 |
 | non_retryable_actions | 未授权生产写入、未授权真实外部 API、未授权 accepted/integrated 升级、伪造真实凭证 |
-| required_inputs | 下一轮任务方向、真实业务原件或等效正式确认、WAES/GFIS 授权边界 |
+| required_inputs | 下一轮任务方向、真实业务原件或等效正式确认、WAME/GFIS 授权边界 |
 | resume_round | `GPCF-LOOP-FIVE-DIRECTION-RUN-002` |
 
 ### 5. debug
@@ -93,12 +93,12 @@ superseded_by: []
 | runtime_primary_key_ready | `0` |
 | review_queue | `0` |
 | runtime_intake | `0` |
-| waes_review | `0` |
+| wame_review | `0` |
 | verified | `0` |
 | production_writes | `0` |
 | real_external_api_writes | `0` |
 | kds_fact_writes | `0` |
-| waes_gate_result_writes | `0` |
+| wame_gate_result_writes | `0` |
 | next_authorization | 需要用户选择 RUN-002 或提供真实 source-of-record / 等效正式确认方向 |
 
 ## L3 连续运行状态

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-AFA789266F
 title: GFIS Assistant Repair Notification Snooze Queue Approval Acknowledgement Digest Delivery Preview No-write 规则
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, Brain, PKC]
+related_projects: [GFIS, GPC, WAME, KDS, Brain, PKC]
 domain: docs
 status: controlled
 version: v1.0
@@ -73,7 +73,7 @@ superseded_by: []
 - createsApprovalRequest = false。
 - createsApprovalDecision = false。
 - createsHarnessEvidence = false。
-- createsWaesGateResult = false。
+- createsWameGateResult = false。
 - createsKweWorkItem = false。
 - persistsEvidence = false。
 - approvesBusinessWrite = false。
@@ -89,7 +89,7 @@ superseded_by: []
 - writesDigest / writesAcknowledgement / writesReadReceipt。
 - writesReminder / writesEscalationTask。
 - writesApprovalRequest / writesApprovalDecision。
-- writesWaesGateResult / writesKweWorkItem / writesHarnessEvidence。
+- writesWameGateResult / writesKweWorkItem / writesHarnessEvidence。
 - writesKdsLifecycle / writesKdsFact / writesKdsAcceptedFact。
 - writesExternalApi。
 

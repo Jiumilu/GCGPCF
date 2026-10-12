@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-146381CCBF
 title: GFIS-RUNTIME-SOP-E2E-231
 project: GFIS
-related_projects: [GFIS, GPC, WAES, KDS]
+related_projects: [GFIS, GPC, WAME, KDS]
 domain: evidence
 status: controlled
 version: v1.0
@@ -38,7 +38,7 @@ superseded_by: []
 
 ## 本轮目标
 
-建立 release-ready package release override negative fixture guard。该门禁只证明 GFIS Demo、KDS candidate-only、口头授权、Loop 文档、缺 hash 和缺 KDS backlink 的 override 声明不得绕过 hard-stop，也不得释放 open hold 或进入 review/runtime/WAES/verified 链路。
+建立 release-ready package release override negative fixture guard。该门禁只证明 GFIS Demo、KDS candidate-only、口头授权、Loop 文档、缺 hash 和缺 KDS backlink 的 override 声明不得绕过 hard-stop，也不得释放 open hold 或进入 review/runtime/WAME/verified 链路。
 
 ## 执行动作
 
@@ -99,7 +99,7 @@ runtime_primary_key_ready=0
 runtime_primary_key_missing=1
 review_queue=0
 runtime_intake=0
-waes_review=0
+wame_review=0
 verified=0
 runtime_sop_e2e=repair_required
 ```
@@ -114,7 +114,7 @@ runtime_sop_e2e=repair_required
 
 ## 非声明
 
-本轮不创建、不确认、不替代客户订单、平台订单回执、pending submission、合规人工核验完成文件、有效 release-ready package、有效 source-of-record、运行层主键、dispatch confirmation、review queue、runtime intake、WAES review、verified artifact 或 accepted/integrated 状态。
+本轮不创建、不确认、不替代客户订单、平台订单回执、pending submission、合规人工核验完成文件、有效 release-ready package、有效 source-of-record、运行层主键、dispatch confirmation、review queue、runtime intake、WAME review、verified artifact 或 accepted/integrated 状态。
 
 ## 真实性计数
 

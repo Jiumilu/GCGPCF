@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-F8290EDC89
 title: liaoning-yuanhang
 project: GFIS
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: evidence
 status: controlled
 version: v1.0
@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/01-GFIS/08-evidence-samples/GFIS/liaoning-yuanhang/README.md
 source_path: 08-evidence-samples/GFIS/liaoning-yuanhang/README.md
 sync_direction: bidirectional
-last_reviewed: 2026-10-11
+last_reviewed: 2026-10-12
 supersedes: []
 superseded_by: []
 ---

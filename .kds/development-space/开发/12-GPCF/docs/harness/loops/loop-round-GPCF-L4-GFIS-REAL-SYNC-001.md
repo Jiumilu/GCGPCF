@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-A0BE28AE04
 title: GPCF-L4-GFIS-REAL-SYNC-001
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -56,10 +56,10 @@ superseded_by: []
 
 ```text
 python3 scripts/validate_gfis_real_source_record_intake_gate.py
-gfis_real_source_record_intake_gate=pass real_source_records=0 real_runtime_primary_keys=0 real_review_queue_items=0 real_runtime_intake_items=0 real_waes_reviews=0 real_verified_artifacts=0 real_business_lane=repair_required business_verification_pending=true stop_type=completed
+gfis_real_source_record_intake_gate=pass real_source_records=0 real_runtime_primary_keys=0 real_review_queue_items=0 real_runtime_intake_items=0 real_wame_reviews=0 real_verified_artifacts=0 real_business_lane=repair_required business_verification_pending=true stop_type=completed
 
 python3 scripts/validate_gfis_runtime_sop_e2e_real.py
-gfis_runtime_sop_e2e_real=repair_required synthetic_rejected_by_real_lane=1 synthetic_pollution_files=0 real_source_records=0 real_runtime_primary_keys=0 real_review_queue_items=0 real_runtime_intake_items=0 real_waes_reviews=0 real_verified_artifacts=0
+gfis_runtime_sop_e2e_real=repair_required synthetic_rejected_by_real_lane=1 synthetic_pollution_files=0 real_source_records=0 real_runtime_primary_keys=0 real_review_queue_items=0 real_runtime_intake_items=0 real_wame_reviews=0 real_verified_artifacts=0
 
 python3 scripts/validate_gfis_runtime_sop_e2e.py
 FAIL: KDS coverage must not have missing controlled sources
@@ -90,7 +90,7 @@ pass
 - `real_runtime_primary_keys=0`
 - `real_review_queue_items=0`
 - `real_runtime_intake_items=0`
-- `real_waes_reviews=0`
+- `real_wame_reviews=0`
 - `real_verified_artifacts=0`
 
 因此 GPCF 总控继续保持：
@@ -104,7 +104,7 @@ pass
 
 - 不生产写入。
 - 不真实外部 API 写入。
-- 不真实 KDS/WAES 写入。
+- 不真实 KDS/WAME 写入。
 - 不数据库迁移。
 - 不权限变更。
 - 不删除文件。

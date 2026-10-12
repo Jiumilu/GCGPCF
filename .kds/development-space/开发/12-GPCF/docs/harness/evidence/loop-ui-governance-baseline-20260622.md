@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-5F4B0C8D71
 title: Loop UI 治理基线证据
 project: GPCF
-related_projects: [WAES, GPCF]
+related_projects: [WAME, GPCF]
 domain: docs
 status: controlled
 version: v1.0

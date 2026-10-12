@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-33EED81A10
 title: GPCF CodeGraph Drift Alert Thresholds 008
 project: GPCF
-related_projects: [GFIS, GPC, WAES, Brain, GPCF, Studio]
+related_projects: [GFIS, GPC, WAME, Brain, GPCF, Studio]
 domain: docs
 status: controlled
 version: v1.0

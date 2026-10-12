@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-C13F879695
 title: 基础知识回写候选账本
 project: KDS
-related_projects: [WAES, KDS]
+related_projects: [WAME, KDS]
 domain: docs
 status: controlled
 version: v1.0
@@ -45,4 +45,4 @@ superseded_by: []
 
 - Candidate rows do not close gaps.
 - Candidate rows do not create score settlement, revenue allocation, bounty publication, RAG admission, command-center strong reference, or business ledger writes.
-- Candidate rows must be confirmed by the proper human, KDS, WAES, or committee process before any downstream action.
+- Candidate rows must be confirmed by the proper human, KDS, WAME, or committee process before any downstream action.

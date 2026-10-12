@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-9306DE5D41
 title: GFIS-RUNTIME-SOP-E2E-263
 project: GFIS
-related_projects: [GFIS, WAES, KDS]
+related_projects: [GFIS, WAME, KDS]
 domain: evidence
 status: controlled
 version: v1.0
@@ -42,7 +42,7 @@ superseded_by: []
 `python3 scripts/validate_gfis_sop_e2e_263.py`：
 
 ```text
-gfis_customer_requirement_platform_order_runtime_primary_key_negative_pollution_guard=pass source_runtime_primary_key_gate_items=1 source_runtime_primary_key_gate_blocked=1 source_valid_source_records=0 weak_primary_key_open_attempts=6 rejected_primary_key_open_attempts=6 accepted_primary_key_open_attempts=0 demo_substitution_attempts=1 kds_candidate_only_attempts=1 quotation_only_attempts=1 loop_document_claim_attempts=1 oral_statement_attempts=1 mock_fixture_attempts=1 runtime_primary_key_created=0 runtime_primary_key_ready=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0 blocked=1 state=customer_requirement_platform_order_runtime_primary_key_negative_pollution_guard_rejected_all_weak_attempts runtime_sop_e2e=repair_required
+gfis_customer_requirement_platform_order_runtime_primary_key_negative_pollution_guard=pass source_runtime_primary_key_gate_items=1 source_runtime_primary_key_gate_blocked=1 source_valid_source_records=0 weak_primary_key_open_attempts=6 rejected_primary_key_open_attempts=6 accepted_primary_key_open_attempts=0 demo_substitution_attempts=1 kds_candidate_only_attempts=1 quotation_only_attempts=1 loop_document_claim_attempts=1 oral_statement_attempts=1 mock_fixture_attempts=1 runtime_primary_key_created=0 runtime_primary_key_ready=0 review_queue=0 runtime_intake=0 wame_review=0 verified=0 blocked=1 state=customer_requirement_platform_order_runtime_primary_key_negative_pollution_guard_rejected_all_weak_attempts runtime_sop_e2e=repair_required
 ```
 
 ## 真实性计数
@@ -71,11 +71,11 @@ gfis_customer_requirement_platform_order_runtime_primary_key_negative_pollution_
 - runtime_primary_key_ready=0
 - review_queue=0
 - runtime_intake=0
-- waes_review=0
+- wame_review=0
 - verified=0
 - runtime_sop_e2e=repair_required
 
-不得创建 GFIS 运行层主键，不得进入 review queue、runtime intake、WAES review、verified artifact，不得升级 accepted/integrated。
+不得创建 GFIS 运行层主键，不得进入 review queue、runtime intake、WAME review、verified artifact，不得升级 accepted/integrated。
 
 ## 下一轮建议
 

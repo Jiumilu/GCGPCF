@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-LOCALIZATIONDEBTAGENTSAFETYMATRIXREPAIRD11320260622
 title: Agent Safety Matrix D113 中文化修复证据
 project: GPCF
-related_projects: [GPCF, WAES]
+related_projects: [GPCF, WAME]
 domain: docs
 status: controlled
 version: v1.0

@@ -22,7 +22,7 @@ superseded_by: []
 
 本轮状态为 `project_group_codegraph_graphized_with_studio_watch_and_no_controlled_residual`。
 
-项目群当前 14 个本机 Git 仓均已纳入 CodeGraph 本地图谱，且 `.codegraph/` 均保持 Git 保护。GlobalCloud Studio 与 WAS世界资产体系均已纳入项目群图谱范围。
+项目群当前 15 个本机 Git 仓均已纳入 CodeGraph 本地图谱，且 `.codegraph/` 均保持 Git 保护。GlobalCloud Studio 与 WAS世界资产体系均已纳入项目群图谱范围。
 
 当前 14 个项目中，13 仓 `codegraph status` 为 up-to-date，Brain 已回到 green，Studio 为 watch，GFIS residual 已清零。
 

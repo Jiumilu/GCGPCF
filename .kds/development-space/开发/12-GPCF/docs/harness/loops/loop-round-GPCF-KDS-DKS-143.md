@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-614BC474DB
 title: LOOP Round GPCF KDS DKS-143
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, Brain, PKC, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, Brain, PKC, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -20,14 +20,14 @@ superseded_by: []
 
 ## 本轮目标
 
-建立 approval packet routing queue notification acknowledgement escalation preview 的 no-write 规则、类型、夹具和校验器，承接 DKS-142 acknowledgement preview，但只展示候选确认超时升级级别、候选升级接收人、升级原因、阻断升级数量和下一步建议，不创建真实 escalation、timeout event、KWE work item、notification、acknowledgement、receipt、read receipt、delivery update、approval assignment、approval packet、approval request、approval decision、committee decision、freeze action、Harness evidence、WAES 结果、KDS 状态提升或业务写回。
+建立 approval packet routing queue notification acknowledgement escalation preview 的 no-write 规则、类型、夹具和校验器，承接 DKS-142 acknowledgement preview，但只展示候选确认超时升级级别、候选升级接收人、升级原因、阻断升级数量和下一步建议，不创建真实 escalation、timeout event、KWE work item、notification、acknowledgement、receipt、read receipt、delivery update、approval assignment、approval packet、approval request、approval decision、committee decision、freeze action、Harness evidence、WAME 结果、KDS 状态提升或业务写回。
 
 ## 输入
 
 - DKS-142 acknowledgement preview 边界。
 - DKS-141 notification preview 边界。
 - `okf/committee-policy.yaml`。
-- `okf/waes-gate-policy.yaml`。
+- `okf/wame-gate-policy.yaml`。
 - GFIS / Brain / PKC no-write contract 覆盖清单。
 
 ## 动作
@@ -54,4 +54,4 @@ superseded_by: []
 
 ## 反馈
 
-DKS-143 仍是本地预览与候选展示能力，不代表 escalation、timeout event、KWE work item、notification、acknowledgement、receipt、read receipt、delivery status、approval assignment、approval packet、approval request、approval decision、committee decision、freeze action、WAES 结果、Harness evidence 或委员会决议已经创建。下一轮可继续推进 DKS-144：approval packet routing queue notification acknowledgement escalation digest preview no-write，用于展示候选升级摘要，但仍不得写入真实审批、裁决、冻结、通知、确认、升级或 evidence。
+DKS-143 仍是本地预览与候选展示能力，不代表 escalation、timeout event、KWE work item、notification、acknowledgement、receipt、read receipt、delivery status、approval assignment、approval packet、approval request、approval decision、committee decision、freeze action、WAME 结果、Harness evidence 或委员会决议已经创建。下一轮可继续推进 DKS-144：approval packet routing queue notification acknowledgement escalation digest preview no-write，用于展示候选升级摘要，但仍不得写入真实审批、裁决、冻结、通知、确认、升级或 evidence。

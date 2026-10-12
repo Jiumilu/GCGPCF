@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-3F65E8E8EC
 title: Loop Round GPCF-PV-LR-002：PVAOS 门户运营对象验证清单
 project: PVAOS
-related_projects: [GPC, PVAOS, WAES, GPCF]
+related_projects: [GPC, PVAOS, WAME, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -44,3 +44,4 @@ superseded_by: []
 | GPC 依赖 | pending | GPC 平台边界确认 |
 
 当前状态保持 `partial`；本轮不部署 PVAOS，不写真实项目仓，也不标记 accepted/integrated。
+Current state remains `partial`

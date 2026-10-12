@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-8C7F2F4F01
 title: Cognee P3 写入预览回滚演练 Evidence
 project: GPCF
-related_projects: [GPCF, WAES]
+related_projects: [GPCF, WAME]
 domain: docs
 status: controlled
 version: v1.0
@@ -39,15 +39,15 @@ python3 loop/context/cognee/scripts/validate-cognee-p3-write-preview-rollback.py
 - requested_write_count: `4`
 - rollback_block_rate: `1.0`
 - owner_authorization_absence_rate: `0.5`
-- waes_block_rate: `0.5`
+- wame_block_rate: `0.5`
 - preview_tier_rate: `1.0`
 - expected_blocked_reason_rate: `1.0`
 - marker_coverage: `1.0`
 - mean_saving_rate: `0.056332`
 - pilot_gate_pass: `true`
-- pilot_rule: `rollback_block_rate_min=1.0, owner_authorization_absence_min=0.4, waes_block_rate_min=0.4, preview_tier_rate_min=1.0`
+- pilot_rule: `rollback_block_rate_min=1.0, owner_authorization_absence_min=0.4, wame_block_rate_min=0.4, preview_tier_rate_min=1.0`
 
-> 该轮判定说明：回滚演练通过，authorization 缺失与 WAES 拒绝场景均被稳定拦截，且全部被归类为预期阻断原因。
+> 该轮判定说明：回滚演练通过，authorization 缺失与 WAME 拒绝场景均被稳定拦截，且全部被归类为预期阻断原因。
 
 ## 2. 结果字段（摘要）
 
@@ -62,7 +62,7 @@ python3 loop/context/cognee/scripts/validate-cognee-p3-write-preview-rollback.py
   - `requested_write_count`
   - `rollback_block_rate`
   - `owner_authorization_absence_rate`
-  - `waes_block_rate`
+  - `wame_block_rate`
   - `preview_tier_rate`
   - `expected_blocked_reason_rate`
   - `marker_coverage`

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-69CFFD4C82
 title: GlobalCloud 统一模型配置体系方案
 project: KDS
-related_projects: [KDS, GFIS, GPC, PVAOS, WAME, Brain, XiaoC, XGD]
+related_projects: [KDS, GFIS, GPC, PVAOS, WAME, Brain, XiaoC, XGD, Studio]
 domain: data-ai-knowledge
 status: controlled
 version: v1.0

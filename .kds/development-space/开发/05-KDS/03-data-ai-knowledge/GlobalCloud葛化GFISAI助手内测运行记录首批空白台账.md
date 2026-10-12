@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-BA893D6FF7
 title: GlobalCloud 葛化 GFIS AI 助手内测运行记录首批空白台账
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS]
+related_projects: [GFIS, GPC, WAME, KDS]
 domain: data-ai-knowledge
 status: controlled
 version: v1.0
@@ -32,7 +32,7 @@ superseded_by: []
 - 内测已经开始或通过；
 - 助手已经产生真实输出；
 - 已收到、验收或归档真实首批资料；
-- 已完成 GFIS、KDS、WAES 或生产系统真实写入；
+- 已完成 GFIS、KDS、WAME 或生产系统真实写入；
 - 已确认任何积分、收益、产值、到账、订单、POD、金融凭证或 SOP 生效。
 
 ## 2. 状态规则
@@ -43,12 +43,12 @@ superseded_by: []
 | `pending_run` | 等待助手输出 | 不得补写虚构输出 |
 | `pending_review` | 等待人工评测或委员会确认 | 不得自动通过 |
 | `candidate_only` | 只形成候选事实、候选 SOP 或候选贡献 | 不进入主事实账 |
-| `no_write` | 不写入 GFIS、KDS、WAES 或生产系统 | 可留作治理记录 |
+| `no_write` | 不写入 GFIS、KDS、WAME 或生产系统 | 可留作治理记录 |
 | `planned_empty_ledger` | 仅完成空白台账搭建 | 不形成业务事实 |
 
 ## 3. PilotSession 台账
 
-| pilotSessionId | assistantScope | pilotPhase | startDate | pilotOwner | participantRefs | allowedDataScope | restrictedDataScope | passThreshold | waesGateStatus | kdsWritebackStatus | finalStatus |
+| pilotSessionId | assistantScope | pilotPhase | startDate | pilotOwner | participantRefs | allowedDataScope | restrictedDataScope | passThreshold | wameGateStatus | kdsWritebackStatus | finalStatus |
 |---|---|---|---|---|---|---|---|---:|---|---|---|
 | `PILOT-GH-GFIS-202606-0001` | KQA / GUA / DVA / SOP | internal_project | 待确认 | GPC / KDS 治理负责人 | 楚商云、葛化项目组指定角色 | 脱敏摘要、模板样本、候选资料包、受控评测集 | 敏感原文、未授权合作单位资料、生产密钥、正式财务凭证原文 | 85 | pending | candidate / no_write | planned_empty_ledger |
 
@@ -76,7 +76,7 @@ superseded_by: []
 
 ## 6. AssistantOutputRecord 空白台账
 
-| outputId | sampleRef | assistantType | outputStatus | outputSnapshot | sourceRefsReturned | factLayerReturned | waesActionReturned | nextActionReturned | forbiddenOutputDetected | redlineRefsTriggered | humanReviewer |
+| outputId | sampleRef | assistantType | outputStatus | outputSnapshot | sourceRefsReturned | factLayerReturned | wameActionReturned | nextActionReturned | forbiddenOutputDetected | redlineRefsTriggered | humanReviewer |
 |---|---|---|---|---|---|---|---|---|---|---|---|
 | `AOR-GH-KQA-001` | `QS-GH-KQA-001` | KQA | pending_run | 待运行 | 待记录 | 待记录 | 待记录 | 待记录 | 待记录 | 待记录 | 待确认 |
 | `AOR-GH-KQA-002` | `QS-GH-KQA-002` | KQA | pending_run | 待运行 | 待记录 | 待记录 | 待记录 | 待记录 | 待记录 | 待记录 | 待确认 |
@@ -131,10 +131,10 @@ superseded_by: []
 |---|---|---|---|---|---|---|---|---|
 | `WBC-GH-KQA-001` | `QS-GH-KQA-001`, `EVR-GH-KQA-001` | KDS | KnowledgeObjectCandidate | candidate_only | true | true | true | planned |
 | `WBC-GH-GUA-001` | `QS-GH-GUA-001`, `EVR-GH-GUA-001` | GFIS | AISuggestionCandidate | no_write | true | true | true | planned |
-| `WBC-GH-DVA-001` | `DS-GH-DVA-001`, `EVR-GH-DVA-001` | WAES | GovernanceRecordCandidate | candidate_only | true | true | true | planned |
-| `WBC-GH-DVA-003` | `DS-GH-DVA-003`, `EVR-GH-DVA-003` | WAES | GovernanceBlockCandidate | candidate_only | true | true | true | planned |
+| `WBC-GH-DVA-001` | `DS-GH-DVA-001`, `EVR-GH-DVA-001` | WAME | GovernanceRecordCandidate | candidate_only | true | true | true | planned |
+| `WBC-GH-DVA-003` | `DS-GH-DVA-003`, `EVR-GH-DVA-003` | WAME | GovernanceBlockCandidate | candidate_only | true | true | true | planned |
 | `WBC-GH-SOP-001` | `QS-GH-SOP-001`, `EVR-GH-SOP-001` | KDS / Brain | SOPDisplayCandidate | pending_confirmation | true | true | true | planned |
-| `WBC-GH-SOP-002` | `QS-GH-SOP-002`, `EVR-GH-SOP-002` | KDS / WAES | EvidenceRecoverySopCandidate | pending_confirmation | true | true | true | planned |
+| `WBC-GH-SOP-002` | `QS-GH-SOP-002`, `EVR-GH-SOP-002` | KDS / WAME | EvidenceRecoverySopCandidate | pending_confirmation | true | true | true | planned |
 
 ## 11. ContributionEventCandidate 台账
 

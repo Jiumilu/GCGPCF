@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-0F8D7C00F5
 title: GC-Knowledge Fabric Handler Stub Runtime Smoke v0.1
 project: KDS
-related_projects: [GFIS, GPC, WAME, KDS, GPCF]
+related_projects: [GFIS, GPC, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0

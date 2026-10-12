@@ -7,7 +7,7 @@ tags: [controlled, kds, odf, okf-derived, status]
 timestamp: 2026-06-22T00:00:00Z
 kds_path: 开发/91-治理与验收/09-status/odf-phase6-manual-confirmation-workbench-plan.md
 source_path: 09-status/odf-phase6-manual-confirmation-workbench-plan.md
-source_hash: bb08677008dbc3bd3e00517531b5518b4ef94f485df39b8e6720c898f49aa8fb
+source_hash: 40eaccdb228a7b7264f3afe3abef6aef16f536f3cc600c2540f6e2ab940f603e
 source_of_record: kds
 derivation_policy: metadata_only_no_body_copy
 ---

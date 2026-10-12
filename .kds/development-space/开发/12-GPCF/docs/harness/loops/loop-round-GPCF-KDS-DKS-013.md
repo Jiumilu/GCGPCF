@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-247164F00E
 title: Loop Round GPCF-KDS-DKS-013
 project: GPCF
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, XiaoC, XGD, GPCF, Studio]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, XiaoC, XGD, GPCF, Studio]
 domain: docs
 status: controlled
 version: v1.0
@@ -32,7 +32,7 @@ superseded_by: []
 ## 2. 动作
 
 1. 新增 `GlobalCloud绿色供应链合作单位接入与组织空间初始化清单.md`。
-2. 将飞书、小即、KDS、WAES、GFIS、Hermes、委员会空间拆成组织空间初始化项。
+2. 将飞书、小即、KDS、WAME、GFIS、Hermes、委员会空间拆成组织空间初始化项。
 3. 为合作单位建立组织档案、角色、资料包、AI 额度账户、积分账户、悬赏账户和权限矩阵编号建议。
 4. 区分葛化首批七类资料包和湖北磷材首批五类资料包。
 5. 明确本轮只生成受控初始化清单，不做真实账号、生产权限或资料开放。

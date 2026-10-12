@@ -1,30 +1,30 @@
 ---
 doc_id: GPCF-DOC-EE2D84B879
-title: Headroom LCX WAES Harness Admission Decision Checklist 20260622
+title: Headroom LCX WAME Harness Admission Decision Checklist 20260622
 project: GPCF
-related_projects: [GPCF, WAES]
+related_projects: [GPCF, WAME]
 domain: docs
 status: controlled
 version: v1.0
 owner: GPCF
 kds_space: 开发
-kds_path: 开发/12-GPCF/docs/harness/evidence/headroom-lcx-waes-harness-admission-decision-checklist-20260622.md
-source_path: docs/harness/evidence/headroom-lcx-waes-harness-admission-decision-checklist-20260622.md
+kds_path: 开发/12-GPCF/docs/harness/evidence/headroom-lcx-wame-harness-admission-decision-checklist-20260622.md
+source_path: docs/harness/evidence/headroom-lcx-wame-harness-admission-decision-checklist-20260622.md
 sync_direction: bidirectional
 last_reviewed: 2026-06-22
 supersedes: []
 superseded_by: []
 ---
 
-# Headroom LCX WAES Harness Admission Decision Checklist 20260622
+# Headroom LCX WAME Harness Admission Decision Checklist 20260622
 
 ## Evidence ID
 
-`HEADROOM-LCX-WAES-HARNESS-ADMISSION-DECISION-CHECKLIST-20260622`
+`HEADROOM-LCX-WAME-HARNESS-ADMISSION-DECISION-CHECKLIST-20260622`
 
 ## 结论
 
-本文件只生成 WAES/Harness 裁决清单与正负样例。当前 `waes_harness_admission_decision` 仍为 `blocked`，不得进入脱敏生产 token 测量。
+本文件只生成 WAME/Harness 裁决清单与正负样例。当前 `wame_harness_admission_decision` 仍为 `blocked`，不得进入脱敏生产 token 测量。
 
 ## 必要检查项
 
@@ -34,7 +34,7 @@ superseded_by: []
 - `sanitized_ledger_contains_no_raw_content`
 - `rollback_plan_exists`
 - `telemetry_off_required`
-- `waes_harness_decision_required`
+- `wame_harness_decision_required`
 - `human_approval_required`
 - `no_real_kds_write`
 - `no_external_api_write`
@@ -65,8 +65,8 @@ superseded_by: []
 | fixture_gate | true |
 | positive_case_count | 1 |
 | negative_case_count | 7 |
-| current_waes_harness_admission_decision | blocked |
-| waes_harness_admitted | false |
+| current_wame_harness_admission_decision | blocked |
+| wame_harness_admitted | false |
 | production_token_measurement_allowed | false |
 | measured_production_tokens | false |
 | production_admission_gate | false |
@@ -76,4 +76,4 @@ superseded_by: []
 
 ## 下一步
 
-只有人工明确批准正例语义，才允许把 approval instance 中的 `waes_harness_admission_decision` 改为 `admitted_for_sanitized_measurement_precheck` 并重新运行 authorized measurement precheck。
+只有人工明确批准正例语义，才允许把 approval instance 中的 `wame_harness_admission_decision` 改为 `admitted_for_sanitized_measurement_precheck` 并重新运行 authorized measurement precheck。

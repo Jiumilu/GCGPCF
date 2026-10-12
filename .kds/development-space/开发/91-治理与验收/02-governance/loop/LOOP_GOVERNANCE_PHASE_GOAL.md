@@ -1,12 +1,12 @@
 ---
 doc_id: GPCF-DOC-48F5DD5538
 title: Loop Governance Phase Goal
-project: WAES
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+project: WAME
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: governance
 status: controlled
 version: v1.0
-owner: WAES
+owner: WAME
 kds_space: 开发
 kds_path: 开发/91-治理与验收/02-governance/loop/LOOP_GOVERNANCE_PHASE_GOAL.md
 source_path: 02-governance/loop/LOOP_GOVERNANCE_PHASE_GOAL.md
@@ -56,8 +56,8 @@ superseded_by: []
 禁止：
 
 - 替代 GFIS 或其他项目仓实施主进程完成业务修复。
-- 伪造客户订单、平台订单回执、source-of-record、WAES confirmation、KDS write receipt、POD、UAT 或客户满意证据。
-- 执行生产写入、真实外部 API 写入、schema sync、bench migrate、部署、权限变更、真实 KDS/WAES 写入。
+- 伪造客户订单、平台订单回执、source-of-record、WAME confirmation、KDS write receipt、POD、UAT 或客户满意证据。
+- 执行生产写入、真实外部 API 写入、schema sync、bench migrate、部署、权限变更、真实 KDS/WAME 写入。
 - 自动标记 accepted、integrated、closed、production-ready 或业务完成。
 - 在 Git dirty 且存在未复核用户工作时提交、推送、删除、reset 或 checkout。
 
@@ -70,7 +70,7 @@ superseded_by: []
 3. `validate_loop_governance_phase_goal.py` 能验证目标、边界、evidence 和状态天花板。
 4. `validate_loop_round_efficiency_audit.py` 能输出历史效率债务与最新硬窗口状态。
 5. `validate_loop_self_correction_gate.py` 能输出 `loop_efficiency_risk`，且 GFIS runtime SOP 未通过时仍保持 blocked / repair_required。
-6. 所有结论只指向治理质量提升，不声明 GFIS、GPCF、WAES、KDS 或项目群业务验收完成。
+6. 所有结论只指向治理质量提升，不声明 GFIS、GPCF、WAME、KDS 或项目群业务验收完成。
 
 ## 当前阶段事实
 

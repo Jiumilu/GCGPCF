@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-EF1AC72724
 title: RAG Response Citation Packet 规则
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, Brain, PKC]
+related_projects: [GFIS, GPC, WAME, KDS, Brain, PKC]
 domain: docs
 status: controlled
 version: v1.0
@@ -22,9 +22,9 @@ superseded_by: []
 
 RAG Response Citation Packet 是 Brain、PKC、GFIS Assistant、指挥舱和 Agent 在输出回答时必须携带的引用证据包。
 
-它用于说明回答依据、引用强度、来源边界、ACL/WAES 过滤、敏感处理和不可自动写回边界。
+它用于说明回答依据、引用强度、来源边界、ACL/WAME 过滤、敏感处理和不可自动写回边界。
 
-本规则只定义本地契约与 dry-run 校验，不执行真实 RAG 检索，不调用真实模型，不写 KDS、WAES、KWE、GFIS/GPC 或外部 API。
+本规则只定义本地契约与 dry-run 校验，不执行真实 RAG 检索，不调用真实模型，不写 KDS、WAME、KWE、GFIS/GPC 或外部 API。
 
 ## 2. 最小字段
 
@@ -40,7 +40,7 @@ RAG Response Citation Packet 是 Brain、PKC、GFIS Assistant、指挥舱和 Age
 - highestCitationStrength
 - boundaryNotices
 - missingEvidenceRefs
-- waesGateRefs
+- wameGateRefs
 - aclDecisionRefs
 - generatedAt
 - noWrite

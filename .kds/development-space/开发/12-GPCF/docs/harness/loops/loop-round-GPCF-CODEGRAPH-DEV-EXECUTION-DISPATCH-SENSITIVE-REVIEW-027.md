@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-CODEGRAPH-DEV-EXECUTION-DISPATCH-SENSITIVE-REVIEW-027
 title: Loop Round - GPCF-CODEGRAPH-DEV-EXECUTION-DISPATCH-SENSITIVE-REVIEW-027
 project: GPCF
-related_projects: [GPC, WAES, GPCF]
+related_projects: [GPC, WAME, GPCF]
 domain: docs
 status: controlled
 version: v1.0

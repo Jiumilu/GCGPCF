@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-FIVE-DIRECTION-FULL-SUMMARY-001
 title: LOOP 运行控制闭环全量总结 20260622
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, GPCF, Studio]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF, Studio]
 domain: docs
 status: controlled
 version: v1.0
@@ -156,13 +156,13 @@ debug
 | production_writes | `0` |
 | real_external_api_writes | `0` |
 | kds_fact_writes | `0` |
-| waes_gate_result_writes | `0` |
+| wame_gate_result_writes | `0` |
 
 ## 后续运行要求
 
 后续任何 GPCF LOOP 工作若不是纯只读问答，应直接使用五方向结构。
 
-若继续推进 GFIS、WAES、KDS、Headroom、WAS、Studio 或其它项目群任务，应优先检查：
+若继续推进 GFIS、WAME、KDS、Headroom、WAS、Studio 或其它项目群任务，应优先检查：
 
 1. 是否有独立输入。
 2. 是否有明确 stop_type。

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-GCWORLD-036
 title: tasks
 project: KDS
-related_projects: [PVAOS, WAES, KDS, MMC, GPCF, Studio]
+related_projects: [PVAOS, WAME, KDS, MMC, GPCF, Studio]
 domain: openspec
 status: draft
 version: v1.0

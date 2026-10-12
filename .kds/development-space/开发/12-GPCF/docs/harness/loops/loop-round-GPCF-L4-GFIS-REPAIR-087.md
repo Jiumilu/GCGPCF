@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-DCB1BB2D6B
 title: Loop Round GPCF-L4-GFIS-REPAIR-087
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -96,7 +96,7 @@ git diff --check -- .
 
 - `candidate_count=0`
 - `reviewable_candidate_count=0`
-- `ready_for_manual_or_waes_review=false`
+- `ready_for_manual_or_wame_review=false`
 - `ready_for_runtime_intake=false`
 - `verified_artifact_count=0`
 
@@ -104,7 +104,7 @@ git diff --check -- .
 
 - 把用户陈述、KDS context、报价 PDF、弱确认、Loop 文档、补证包或 precheck 本身升级为 verified live artifact。
 - 写 KDS。
-- 触发 WAES 终审。
+- 触发 WAME 终审。
 - 进入 GFIS runtime intake。
 - 标记 accepted/integrated。
 

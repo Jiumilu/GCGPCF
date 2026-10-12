@@ -1,12 +1,12 @@
 ---
 doc_id: GPCF-DOC-72B2E0EF61
 title: Harness Governance Status Audit — GCBrain v3.1 Production Hardening
-project: WAES
-related_projects: [GPC, WAES, Brain, GPCF]
+project: WAME
+related_projects: [GPC, WAME, Brain, GPCF]
 domain: harness-evidence
 status: archive
 version: v1.0
-owner: WAES
+owner: WAME
 kds_space: 开发
 kds_path: 开发/92-证据与会话归档/.harness/runs/gbrain-v3.1-hardening-20260611-002252/status-audit.md
 source_path: .harness/runs/gbrain-v3.1-hardening-20260611-002252/status-audit.md

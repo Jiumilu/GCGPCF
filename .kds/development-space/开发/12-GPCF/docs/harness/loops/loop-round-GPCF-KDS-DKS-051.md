@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-F7C94818F9
 title: LOOP Round GPCF-KDS-DKS-051 - 葛化辽宁远航与金融凭证缺口专项
 project: GPCF
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -48,7 +48,7 @@ superseded_by: []
 1. 辽宁远航报价链路客户确认、原始凭证和责任方提交包。
 2. 金融凭证脱敏索引、保管责任和可见范围。
 
-本轮目标不是补齐真实外部证据，也不是将候选写入 GFIS / WAES / KDS API。
+本轮目标不是补齐真实外部证据，也不是将候选写入 GFIS / WAME / KDS API。
 
 ## 3. 本轮动作
 
@@ -57,7 +57,7 @@ superseded_by: []
 3. 复核 GFIS evidence 中辽宁远航报价、客户确认、运行层凭证槽位和责任方响应文件现状。
 4. 建立辽宁远航责任方提交包 `KSP-GH-LY-D051-001`。
 5. 建立金融凭证脱敏索引模板 `FEI-GH-D051-001`。
-6. 明确 DSR-L3、RAG 准入、WAES、人工确认、委员会、悬赏候选和底座 11 池挂接边界。
+6. 明确 DSR-L3、RAG 准入、WAME、人工确认、委员会、悬赏候选和底座 11 池挂接边界。
 7. 保持所有输出为 candidate、open_candidate、blocked、pending_human_review 或 no_write。
 
 ## 4. 本轮输出
@@ -97,7 +97,7 @@ superseded_by: []
 | 阻断点 | 当前证据 | 影响 |
 |---|---|---|
 | 客户确认 | GFIS evidence 显示 `customer_confirmations=0`、`purchase_orders=0` | 辽宁远航不得升级为正式订单或运行层主键 |
-| 运行层 readiness | GFIS evidence 显示 `runtime_ready=0`、`verified=0` | 不得进入 runtime intake、WAES review 或 verified artifact |
+| 运行层 readiness | GFIS evidence 显示 `runtime_ready=0`、`verified=0` | 不得进入 runtime intake、WAME review 或 verified artifact |
 | 凭证槽位 | 12 个运行对象、62 个凭证槽位仍 `complete_slots=0`、`missing_slots=62` | 责任方提交包必须先补 |
 | owner response | `owner_response_files_found=0`、`valid_owner_responses=0` | 不能释放责任方响应 |
 | 金融凭证 | DKS-050 明确缺脱敏索引、保管责任和可见范围 | 默认 DSR-L3，保持 governance_blocked |
@@ -120,7 +120,7 @@ superseded_by: []
 - 真实外部证据收取；
 - 真实客户确认、采购订单、合同、POD、质量或到账确认；
 - 金融凭证原文接收、公开问答或收益确认；
-- GFIS、WAES、KDS API、GPC、PVAOS、Finance 或生产系统写入；
+- GFIS、WAME、KDS API、GPC、PVAOS、Finance 或生产系统写入；
 - 悬赏发布、资源冻结、积分确认或收益分配；
 - 人工评测签认或委员会裁决；
 - `accepted`、`complete` 或 `integrated` 状态升级。
@@ -130,4 +130,4 @@ superseded_by: []
 建议 `GPCF-KDS-DKS-052` 进入“葛化辽宁远航补证请求包与金融凭证脱敏索引空白填报包”，输出可交给责任方填写的两个模板：
 
 1. `KSP-GH-LY-D052-001`：辽宁远航客户确认、采购订单/合同、POD、质量、责任方提交包。
-2. `FEI-GH-D052-001`：金融凭证 DSR-L3 脱敏索引、保管责任、可见范围和 WAES 门禁填报表。
+2. `FEI-GH-D052-001`：金融凭证 DSR-L3 脱敏索引、保管责任、可见范围和 WAME 门禁填报表。

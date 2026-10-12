@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-HEADROOM-LCX-PRODUCTION-RUNTIME-GRAPH-20260623
 title: Headroom LCX Production Runtime Graph Evidence
 project: GPCF
-related_projects: [GPCF, WAES]
+related_projects: [GPCF, WAME]
 domain: docs
 status: controlled
 version: v1.0

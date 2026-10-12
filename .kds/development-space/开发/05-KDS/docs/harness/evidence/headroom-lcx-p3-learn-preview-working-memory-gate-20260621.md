@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-D754FEE0EB
 title: Headroom LCX P3 learn preview 工作记忆门禁证据
 project: KDS
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio]
 domain: docs
 status: controlled
 version: v1.0
@@ -55,7 +55,7 @@ P3 learn preview 与工作记忆治理门禁已完成本机 dry-run smoke。`hea
 
 ## 15 项目范围
 
-GPCF, KDS, Brain, WAES, GFIS, GPC, PVAOS, Edge, PKC, XiaoC, XGD, XiaoG, MMC, Studio, WAS
+GPCF, KDS, Brain, WAME, GFIS, GPC, PVAOS, Edge, PKC, XiaoC, XGD, XiaoG, MMC, Studio, WAS
 
 ## 边界
 

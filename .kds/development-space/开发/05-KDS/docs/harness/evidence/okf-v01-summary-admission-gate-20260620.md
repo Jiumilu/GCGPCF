@@ -1,8 +1,8 @@
 ---
 doc_id: GPCF-DOC-9E8541129C
-title: OKF v0.1 摘要准入门禁证据
+title: OKF v0.1 Summary Admission Gate Evidence
 project: KDS
-related_projects: [WAES, KDS]
+related_projects: [KDS]
 domain: docs
 status: controlled
 version: v1.0
@@ -11,22 +11,22 @@ kds_space: 开发
 kds_path: 开发/05-KDS/docs/harness/evidence/okf-v01-summary-admission-gate-20260620.md
 source_path: docs/harness/evidence/okf-v01-summary-admission-gate-20260620.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-24
+last_reviewed: 2026-06-20
 supersedes: []
 superseded_by: []
 ---
 
-# OKF v0.1 摘要准入门禁证据
+# OKF v0.1 Summary Admission Gate Evidence
 
-generated_at: 2026-06-22T01:57:59.854415+00:00
+generated_at: 2026-10-12T07:07:19.524795+00:00
 
-## 摘要
+## Summary
 
 | metric | value |
 | --- | --- |
 | status | pass |
 | admission_state | metadata_only_locked |
-| concepts | 81 |
+| concepts | 80 |
 | approved_summaries | 0 |
 | sensitive_hits | 0 |
 | ledger | `docs/harness/evidence/okf-v01-summary-admission-ledger-20260620.md` |
@@ -37,23 +37,23 @@ generated_at: 2026-06-22T01:57:59.854415+00:00
 | approved_requests | 0 |
 | json | `docs/harness/evidence/okf-v01-summary-admission-gate-20260620.json` |
 
-## 摘要准入前置要求
+## Required Before Summary Admission
 
-- owner approval。
-- source sensitivity review。
-- 明确的 summary scope。
-- pending window 内仍有效的 active approval request。
-- 不导出 token、account、credential、financial voucher 或 contract full text。
-- 更新后的 OKF source hash 与 collection gate。
+- owner approval
+- source sensitivity review
+- explicit summary scope
+- active approval request within pending window
+- no token/account/credential/financial-voucher/contract-fulltext export
+- updated OKF source hash and collection gate
 
-## 违规项
+## Violations
 
 | path | reason |
 | --- | --- |
 | none | none |
 
-## 边界
+## Boundary
 
-- 除非存在明确的准入 evidence，否则本 gate 将 OKF 保持在 metadata-only。
-- KDS/Git 受控文档仍是 source of record。
-- 本 evidence 不批准摘要，也不升级业务、验收或集成状态。
+- This gate keeps OKF at metadata-only unless explicit admission evidence exists.
+- KDS/Git controlled documents remain the source of record.
+- This evidence does not approve summaries and does not upgrade business, acceptance or integration status.

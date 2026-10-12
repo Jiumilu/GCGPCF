@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-LOCALIZATIONDEBTLOOPRESIDUALREPAIRD10920260622
 title: Loop 残余文档 D109 中文化修复证据
 project: GPCF
-related_projects: [GFIS, GPC, WAES, GPCF]
+related_projects: [GFIS, GPC, WAME, GPCF]
 domain: docs
 status: controlled
 version: v1.0

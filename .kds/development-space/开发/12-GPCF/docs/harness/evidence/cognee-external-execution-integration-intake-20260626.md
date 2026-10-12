@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-B2A3D3F3B1
 title: Cognee 外部执行层接入 Intake 2026-06-26
 project: GPCF
-related_projects: [GPC, WAES, GPCF]
+related_projects: [GPC, WAME, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -40,7 +40,7 @@ superseded_by: []
 | `execution_window_start_at` | `2026-06-26T10:30:00+08:00` |
 | `execution_window_expires_at` | `2026-06-26T12:00:00+08:00` |
 | `receipt_id` | `COGNEE-EXT-RECEIPT-20260626-001` |
-| `authorized_by` | `lujunxiang / WAES Duty Reviewer` |
+| `authorized_by` | `lujunxiang / WAME Duty Reviewer` |
 | `authorized_at` | `2026-06-26T10:15:00+08:00` |
 | `record_count` | `5` |
 | `expected_execution_count` | `5` |

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-895151260A
 title: Loop Round GPCF-CODEGRAPH-GOAL-OPT-001
 project: GPCF
-related_projects: [GFIS, GPC, WAES, GPCF]
+related_projects: [GFIS, GPC, WAME, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -86,5 +86,5 @@ superseded_by: []
 ## 非声明
 
 - 本轮不证明 GFIS runtime SOP E2E 已通过。
-- 本轮不创建 source-of-record、运行层主键、review queue、runtime intake、WAES review、verified artifact、UAT 签收、客户满意、`accepted` 或 `integrated`。
+- 本轮不创建 source-of-record、运行层主键、review queue、runtime intake、WAME review、verified artifact、UAT 签收、客户满意、`accepted` 或 `integrated`。
 - 本轮不授权生产写入、真实外部 API 写入、数据库迁移、权限变更、部署、推送或合并。

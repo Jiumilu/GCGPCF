@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-37A07E38F8
 title: LOOP Round GPCF-KDS-DKS-102 - KWE Approval Route Packet No-write
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, Brain, PKC, MMC, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, Brain, PKC, MMC, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -22,7 +22,7 @@ superseded_by: []
 
 在 DKS-101 GFIS Writeback Approval Preflight Checklist 之后建立 KWE 审批路径只读路由包，把 preflight item 分发到 human queue、committee queue、metadata-only queue、repair queue、blocked queue。
 
-本轮不创建真实 KWE WorkItem，不改变 KDS lifecycle，不写 KDS fact 或 accepted fact，不写 WAES Gate Result，不写 GFIS/GPC/ERP/MES，不生成目标系统 receipt，不完成委员会决议，不确认收益、积分、额度或悬赏，不调用外部 API。
+本轮不创建真实 KWE WorkItem，不改变 KDS lifecycle，不写 KDS fact 或 accepted fact，不写 WAME Gate Result，不写 GFIS/GPC/ERP/MES，不生成目标系统 receipt，不完成委员会决议，不确认收益、积分、额度或悬赏，不调用外部 API。
 
 ## 2. 本轮输入
 
@@ -51,7 +51,7 @@ superseded_by: []
 ### 4.1 DKS-102 专项检查
 
 ```text
-kwe_approval_route_packet=pass items=5 human_queue=1 committee_queue=2 metadata_only_queue=1 repair_queue=0 blocked_queue=1 route_ready=4 blocked=1 creates_kwe_work_items=0 items_with_evidence=4 items_with_waes_gate_refs=5 items_with_lifecycle_audit_refs=5 writes_kwe_work_item=0 writes_kds_lifecycle=0 writes_kds_fact=0 writes_kds_accepted_fact=0 writes_waes_gate_result=0 writes_business_system=0 writes_target_receipt=0 writes_committee_decision_completion=0 writes_revenue_or_score_confirmation=0 writes_quota_transfer=0 writes_bounty_settlement=0 writes_external_api=0
+kwe_approval_route_packet=pass items=5 human_queue=1 committee_queue=2 metadata_only_queue=1 repair_queue=0 blocked_queue=1 route_ready=4 blocked=1 creates_kwe_work_items=0 items_with_evidence=4 items_with_wame_gate_refs=5 items_with_lifecycle_audit_refs=5 writes_kwe_work_item=0 writes_kds_lifecycle=0 writes_kds_fact=0 writes_kds_accepted_fact=0 writes_wame_gate_result=0 writes_business_system=0 writes_target_receipt=0 writes_committee_decision_completion=0 writes_revenue_or_score_confirmation=0 writes_quota_transfer=0 writes_bounty_settlement=0 writes_external_api=0
 ```
 
 ### 4.2 覆盖矩阵
@@ -70,7 +70,7 @@ tsc -p packages/api/tsconfig.json --noEmit: pass
 
 ### 4.4 回归链
 
-本轮回归链覆盖 DKS-096 至 DKS-102，以及既有 KDS、WAES、KWE、GFIS、Brain/PKC、Governance、RAG、MMC、状态机、对象关系 no-write smoke。
+本轮回归链覆盖 DKS-096 至 DKS-102，以及既有 KDS、WAME、KWE、GFIS、Brain/PKC、Governance、RAG、MMC、状态机、对象关系 no-write smoke。
 
 ```text
 regression=pass
@@ -89,7 +89,7 @@ api_tsc=pass
 - writes_kds_lifecycle
 - writes_kds_fact
 - writes_kds_accepted_fact
-- writes_waes_gate_result
+- writes_wame_gate_result
 - writes_business_system
 - writes_target_receipt
 - writes_committee_decision_completion

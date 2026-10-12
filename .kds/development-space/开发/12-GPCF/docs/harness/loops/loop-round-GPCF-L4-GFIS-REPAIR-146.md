@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-6D3A7A52DA
 title: GPCF-L4-GFIS-REPAIR-146 GFIS 合同链真实回执 live-intake 负例拒收门禁
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -22,7 +22,7 @@ superseded_by: []
 
 - GFIS `GFIS-RUNTIME-SOP-E2E-138` 已建立 live-intake validator，确认 26 个真实回执槽位中 `submitted_files=0`、`valid_receipts=0`、`missing_files=26`。
 - 用户确认：葛化工厂仍在建设阶段，当前使用现代精工工厂进行 OEM 代加工；GFIS 是现代精工代加工生产阶段及葛化自建工厂投产后的同一运行时系统。
-- 本轮目标不是证明真实业务完成，而是证明错误 JSON、弱材料、KDS 候选、WAES 文字或未签章审阅稿不能被 live-intake 误收。
+- 本轮目标不是证明真实业务完成，而是证明错误 JSON、弱材料、KDS 候选、WAME 文字或未签章审阅稿不能被 live-intake 误收。
 
 ## 动作
 
@@ -51,8 +51,8 @@ runtime_liaoning_yuanhang_contract_chain_real_receipt_live_intake_negative_fixtu
 
 - 本轮是 1 个真实实质轮次。
 - GFIS 运行层仍是唯一 SOP 主体；GFIS Demo 只能作为展示/培训/前端回归。
-- 本轮只证明 live-intake 对 5 类负例保持拒收，不证明签章完成件、客户确认函、采购订单/合同、KDS write receipt 或 WAES confirmation 已取得。
-- 未执行 Git push、生产写入、真实外部 API 写入、真实 KDS 写入、真实 WAES 写入、bench migrate、schema sync、权限变更、部署或 ECS/阿里云/Caddy/隧道/Docker 配置变更。
+- 本轮只证明 live-intake 对 5 类负例保持拒收，不证明签章完成件、客户确认函、采购订单/合同、KDS write receipt 或 WAME confirmation 已取得。
+- 未执行 Git push、生产写入、真实外部 API 写入、真实 KDS 写入、真实 WAME 写入、bench migrate、schema sync、权限变更、部署或 ECS/阿里云/Caddy/隧道/Docker 配置变更。
 
 ## 真实性计数
 
@@ -65,4 +65,4 @@ runtime_liaoning_yuanhang_contract_chain_real_receipt_live_intake_negative_fixtu
 
 ## 下一轮
 
-下一轮应在 GFIS 建立真实回执 post-intake 人工/WAES review queue 前置门禁，验证无真实有效回执时 `review_queue=0`、`runtime_intake=0`、`WAES_review=0`、`verified=0`，不得释放 accepted 或 integrated。
+下一轮应在 GFIS 建立真实回执 post-intake 人工/WAME review queue 前置门禁，验证无真实有效回执时 `review_queue=0`、`runtime_intake=0`、`WAME_review=0`、`verified=0`，不得释放 accepted 或 integrated。

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-2E7C6F89D0
 title: Cognee 生产状态提升证据模板 2026-06-26
 project: GPCF
-related_projects: [GPCF, WAES]
+related_projects: [GPCF, WAME]
 domain: docs
 status: controlled
 version: v1.0
@@ -39,7 +39,7 @@ superseded_by: []
 |---|---|
 | `promotion_evidence_id` | `COGNEE-PRODUCTION-STATE-PROMOTION-YYYYMMDD-NNN` |
 | `promotion_scope` | `cognee_full_run_candidate_state_promotion` |
-| `waes_decision.decision` | `pending` |
+| `wame_decision.decision` | `pending` |
 | `harness_decision.decision` | `pending` |
 | `rollback_entry` | `return_to_cognee_full_run_admission_not_admitted` |
 | `promotion_status` | `template_only` |
@@ -52,7 +52,7 @@ superseded_by: []
 | full-run ledger | 必须是真实账本，不接受 `template_only` |
 | object coverage | 必须是真实全量对象覆盖，不接受 `template_only` |
 | scenario matrix | 必须是真实全量场景矩阵，不接受 `template_only` |
-| WAES decision | 必须有明确 `pass` 或 `approved` evidence |
+| WAME decision | 必须有明确 `pass` 或 `approved` evidence |
 | Harness decision | 必须有明确 `pass`、`approved` 或 `accepted` evidence |
 | rollback plan | 必须有回退入口、责任人和触发条件 |
 

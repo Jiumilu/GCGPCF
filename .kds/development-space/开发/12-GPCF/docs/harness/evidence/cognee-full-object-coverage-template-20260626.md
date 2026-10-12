@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-5BB0B82415
 title: Cognee 全量对象覆盖模板 2026-06-26
 project: GPCF
-related_projects: [GPCF, WAES]
+related_projects: [GPCF, WAME]
 domain: docs
 status: controlled
 version: v1.0

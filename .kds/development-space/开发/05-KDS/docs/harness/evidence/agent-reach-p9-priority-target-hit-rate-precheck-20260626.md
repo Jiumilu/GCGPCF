@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-AGENT-REACH-P9-PRIORITY-TARGET-HIT-RATE-PRECHECK-20260626
 title: Agent-Reach P9 重点对象命中率预检证据 2026-06-26
 project: KDS
-related_projects: [GFIS, WAES, KDS]
+related_projects: [GFIS, WAME, KDS]
 domain: docs
 status: controlled
 version: v1.0

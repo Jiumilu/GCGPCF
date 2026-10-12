@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-AGENT-REACH-P9-SOURCE-DIRECT-OFFLINE-HIT-RATE-SIMULATION-20260626
 title: Agent-Reach P9S Source Direct Offline Hit-Rate Simulation 2026-06-26
 project: KDS
-related_projects: [GFIS, WAS, WAME, KDS, GPCF]
+related_projects: [GFIS, KDS]
 domain: docs
 status: controlled
 version: v1.0

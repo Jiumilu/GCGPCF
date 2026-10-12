@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-D02AC375B5
 title: Anti-Pollution Rules
 project: GPCF
-related_projects: [GPCF, GFIS, GPC, WAES, KDS, Brain, XiaoC, XGD, XiaoG]
+related_projects: [GPCF, GFIS, GPC, WAME, KDS, Brain, XiaoC, XGD, XiaoG]
 domain: operational-skill
 status: operational_controlled
 version: v1.0
@@ -45,5 +45,5 @@ superseded_by: []
 - 把控制塔可见写成业务闭环完成。
 - 把 KDS 本地镜像写成真实 KDS API 已同步。
 - 把 Brain 写成 KDS 主存替代。
-- 把 WAES 写成业务主账。
+- 把 WAME 写成业务主账。
 - 把 GPC 写成 GFIS 工厂事实主账。

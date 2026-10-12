@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-B4378BB296
 title: GC-Knowledge Fabric P0-D25 Repair Path Workpack Dry-run LOOP evidence
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0

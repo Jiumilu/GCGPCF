@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-7D6C9E5C21
 title: Studio Chat 工作台键盘与移动端复验证据
 project: GPCF
-related_projects: [GPC, WAES, GPCF, Studio]
+related_projects: [GPC, WAME, GPCF, Studio]
 domain: docs
 status: controlled
 version: v1.0

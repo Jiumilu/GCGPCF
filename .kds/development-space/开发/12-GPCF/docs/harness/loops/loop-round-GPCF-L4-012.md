@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-ECA1059D68
 title: GPCF-L4-012 最小闭环收口
 project: GPCF
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -27,7 +27,7 @@ superseded_by: []
 | 字段 | 值 |
 | --- | --- |
 | Round ID | GPCF-L4-012 |
-| 涉及项目 | GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF |
+| 涉及项目 | GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF |
 | 本轮业务节点 | 项目群最小闭环收口、评分矩阵与 L5 建议 |
 | 真实项目仓路径 | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCoud GPCF` |
 | KDS retrieval | 使用 L4-002 至 L4-011 项目级 KDS retrieval 和 `GlobalCloud Loop开发KDS关联数据检索机制.md` |
@@ -46,11 +46,11 @@ superseded_by: []
 | GFIS | 工厂事实主账，L4-008 提供只读工厂样本；不承接客户签样/POD |
 | GPC | 平台协同主账，L4-007 提供平台订单/签样/转量产/POD 契约；不写 GFIS 工厂事实 |
 | PVAOS | 生态入口，L4-006 提供组织/伙伴/权限输入；不承接订单或工厂事实 |
-| WAES | 治理中枢，保持 evidence gate 和 audit 裁决权；不成为业务主账 |
+| WAME | 治理中枢，保持 evidence gate 和 audit 裁决权；不成为业务主账 |
 | KDS | 知识主存，提供受控口径和回指；不替代当前业务事实 |
 | Brain / PKC | 知识呈现和个人工作台；不拥有知识主存或业务事实 |
 | MMC | 配置与策略模板中心；不拥有设备/产线/工序事实 |
-| XiaoC / XGD / XiaoG | 蚁后/大象/蚂蚁职责清楚，不绕过 WAES、不写业务事实 |
+| XiaoC / XGD / XiaoG | 蚁后/大象/蚂蚁职责清楚，不绕过 WAME、不写业务事实 |
 | GPCF | 项目群总控与 evidence 收口，不替代业务项目主账 |
 
 ## KDS Retrieval Summary
@@ -61,7 +61,7 @@ superseded_by: []
 | source_documents | `GPCF-DOC-E3822328DF`, `GPCF-DOC-7B5E3B05D7`, `GPCF-DOC-3F160ABA27`, L4-002..L4-011 project retrieval evidence |
 | retrieved_objects | PlatformOrder, SampleRequest, SampleWorkOrder, SampleApproval, ProductionRelease, FactoryOrder, WorkOrder, Shipment, ReadOnlyQueryResult, EvidenceRecord, KnowledgeBacklink |
 | retrieved_statuses | ready_for_review, mock_ready, audit_candidate_prepared, blocked_without_required_evidence |
-| unresolved_questions | L5 customer/UAT, production endpoint validation, live WAES/GFIS/GPC/PKC APIs and accepted/integrated status all require separate authorization |
+| unresolved_questions | L5 customer/UAT, production endpoint validation, live WAME/GFIS/GPC/PKC APIs and accepted/integrated status all require separate authorization |
 
 ## Verification
 
@@ -99,11 +99,11 @@ superseded_by: []
 | P0 主线业务链路贯通度 | 20/20 | 可按本地 fixture/dry-run/validator 重构完整主线 |
 | 真实仓代码/配置/测试闭环率 | 20/20 | 12 项目均有真实仓证据或 GPCF 总控证据 |
 | KDS 检索与知识回指完整度 | 10/10 | 项目级和总控级回指完整 |
-| Evidence 与审计完整度 | 15/15 | L4 evidence 完整；WAES 运行态保留为 L5 授权项 |
+| Evidence 与审计完整度 | 15/15 | L4 evidence 完整；WAME 运行态保留为 L5 授权项 |
 | 跨项目契约一致性 | 10/10 | 无主账冲突，无越权写入 |
 | 用户可复现与 L5 准备度 | 6/10 | 本地命令可复现，但 GFIS 真实业务线与运行层 SOP E2E 仍未闭合 |
 | 项目群阶段累计评分 | 78/100 | L4 repair required；L5 not activated |
 
 ## Next Input
 
-下一步安全输入：继续推进 GFIS 真实 source-of-record 或 business-input remediation。L5 准备仍被阻塞，直到 customer/UAT 样本、live read API、WAES runtime endpoint verification、monitoring、rollback 与 acceptance criteria 分别获得授权并形成证据。
+下一步安全输入：继续推进 GFIS 真实 source-of-record 或 business-input remediation。L5 准备仍被阻塞，直到 customer/UAT 样本、live read API、WAME runtime endpoint verification、monitoring、rollback 与 acceptance criteria 分别获得授权并形成证据。

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-LOOP-AGENT-REACH-RECENTER-001
 title: GPCF-AGENT-REACH-RECENTER-001
 project: GPCF
-related_projects: [GPC, WAES, KDS, GPCF]
+related_projects: [GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -42,7 +42,7 @@ superseded_by: []
 - Agent-Reach candidate review validator 通过。
 - Agent-Reach L3 candidate pipeline validator 通过。
 - Agent-Reach replay ledger validator 通过。
-- Agent-Reach WAES/KDS review queue validator 通过。
+- Agent-Reach WAME/KDS review queue validator 通过。
 - Agent-Reach human review decisions validator 通过。
 - Agent-Reach authoritative source verification validator 通过。
 - Recenter validator 通过。

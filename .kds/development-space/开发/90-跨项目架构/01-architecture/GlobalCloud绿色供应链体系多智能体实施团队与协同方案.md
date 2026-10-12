@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-F6C8634052
 title: GlobalCloud 绿色供应链体系多智能体实施团队与协同方案
 project: GPCF
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, XiaoC, XGD, XiaoG, GPCF, Studio]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, XiaoC, XGD, XiaoG, GPCF, Studio]
 domain: architecture
 status: controlled
 version: v1.0
@@ -81,7 +81,7 @@ superseded_by: []
 
 | 角色 | 中文名字 | 主责域 | 主要输出 |
 |---|---|---|---|
-| 治理架构 | 宪衡 | WAES、状态、证据、规则、验收门禁 | 治理对象、治理事件、状态机、门禁矩阵 |
+| 治理架构 | 宪衡 | WAME、状态、证据、规则、验收门禁 | 治理对象、治理事件、状态机、门禁矩阵 |
 | 协同业务 | 链同 | PVAOS、GPC、协同业务主链 | 协同对象、协同事件、平台业务流、运营 SOP |
 | 工厂执行 | 厂行 | GFIS、Edge、OT 到业务事实转换 | 工厂对象、执行事件、生产 SOP、执行边界 |
 | 数据平台 | 数枢 | 结构化数据库域、读模型、投影、补偿 | 数据库边界、数据治理、投影和 Replay 方案 |
@@ -179,14 +179,14 @@ superseded_by: []
 
 1. 擅自修改跨域主责边界
 2. 擅自将总体状态升级为 `complete`
-3. 擅自改变 WAES/GPC/GFIS/PVAOS/Edge 的核心定位
+3. 擅自改变 WAME/GPC/GFIS/PVAOS/Edge 的核心定位
 4. 将 AI 建议写成业务事实
 
 ## 7. 交付包与团队映射
 
 | 交付包 | 牵头成员 | 协同成员 | 审计成员 |
 |---|---|---|---|
-| WAES 治理与控制塔包 | 宪衡 | 数枢、灵策 | 评衡、证验 |
+| WAME 治理与控制塔包 | 宪衡 | 数枢、灵策 | 评衡、证验 |
 | PVAOS 生态入口包 | 链同 | 宪衡 | 证验 |
 | GPC 运营协同包 | 链同 | 数枢、接稳 | 评衡 |
 | GFIS 工厂执行包 | 厂行 | 数枢、接稳 | 证验 |

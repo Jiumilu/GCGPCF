@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-736CA70485
 title: Loop Round GPCF-L4-GFIS-REPAIR-210
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -43,7 +43,7 @@ hold_release_allowed=0
 release_allowed_items=0
 review_queue=0
 runtime_intake=0
-waes_review=0
+wame_review=0
 verified=0
 runtime_primary_key_missing=1
 runtime_sop_e2e=repair_required
@@ -54,9 +54,9 @@ GFIS 主 validator expected exit `2`，输出 `gfis_runtime_sop_e2e=repair_requi
 ## 非声明
 
 - 不声明 GFIS 运行层 SOP E2E 完成。
-- 不声明客户订单、平台订单、授权信封、派发确认、运行层主键、review queue、runtime intake、WAES review 或 verified artifact 已成立。
+- 不声明客户订单、平台订单、授权信封、派发确认、运行层主键、review queue、runtime intake、WAME review 或 verified artifact 已成立。
 - 不声明 accepted/integrated。
-- 不执行生产写入、真实外部 API 写入、真实 KDS/WAES 写入、数据库迁移、权限变更或部署。
+- 不执行生产写入、真实外部 API 写入、真实 KDS/WAME 写入、数据库迁移、权限变更或部署。
 
 ## 真实性计数
 

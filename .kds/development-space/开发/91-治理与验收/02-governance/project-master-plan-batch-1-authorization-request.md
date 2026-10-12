@@ -1,12 +1,12 @@
 ---
 doc_id: GPCF-DOC-PROJECT-MASTER-PLAN-BATCH-1-AUTH-REQUEST-20260624
 title: 项目总体方案第一批批量更新授权请求
-project: WAES
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, GPCF, Studio]
+project: WAME
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, GPCF, Studio]
 domain: governance
 status: controlled
 version: v1.0
-owner: WAES
+owner: WAME
 kds_space: 开发
 kds_path: 开发/91-治理与验收/02-governance/project-master-plan-batch-1-authorization-request.md
 source_path: 02-governance/project-master-plan-batch-1-authorization-request.md
@@ -28,7 +28,7 @@ superseded_by: []
 authorization_status: confirmed_by_user
 batch_scope: batch_1
 batch_projects:
-  - GlobalCloud WAES
+  - GlobalCloud WAME
   - GlobalCloud GFIS
   - GlobalCloud PVAOS
   - GlobalCloud KDS
@@ -50,7 +50,7 @@ batch_projects:
 
 | project | 当前状态 | 本批动作 | 是否结构性变化 | 是否需要用户确认 |
 |---|---|---|---|---|
-| GlobalCloud WAES | 缺少唯一总体方案 | 新建 `GlobalCloud WAES 总体方案.md` | 是 | 是 |
+| GlobalCloud WAME | 缺少唯一总体方案 | 新建 `GlobalCloud WAME 总体方案.md` | 是 | 是 |
 | GlobalCloud GFIS | 缺少唯一总体方案 | 新建 `GlobalCloud GFIS 总体方案.md` | 是 | 是 |
 | GlobalCloud PVAOS | 缺少唯一总体方案 | 新建 `GlobalCloud PVAOS 总体方案.md` | 是 | 是 |
 | GlobalCloud KDS | 缺少唯一总体方案 | 新建 `GlobalCloud KDS 总体方案.md` | 是 | 是 |
@@ -62,7 +62,7 @@ batch_projects:
 新增项目方案：
 
 ```text
-/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud WAES/GlobalCloud WAES 总体方案.md
+/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud WAES/GlobalCloud WAME 总体方案.md
 /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GFIS/GlobalCloud GFIS 总体方案.md
 /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud PVAOS/GlobalCloud PVAOS 总体方案.md
 /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud KDS/GlobalCloud KDS 总体方案.md
@@ -106,7 +106,7 @@ batch_projects:
 用户已确认：
 
 ```text
-我确认开始第一批项目总体方案批量建立，范围为 WAES、GFIS、PVAOS、KDS、Brain、Studio。
+我确认开始第一批项目总体方案批量建立，范围为 WAME、GFIS、PVAOS、KDS、Brain、Studio。
 ```
 
 确认时间：2026-06-24。

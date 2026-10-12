@@ -1,11 +1,11 @@
 ---
 doc_id: GPCF-DOC-XAP-CODEX-PROPOSAL-ADOPTION-20261011
-title: XAP 统一治理交换协议 · Codex 提案采纳意见
+title: XAP 统一治理交换协议 · Codex 提案采纳意见 v0.1
 project: GPCF
-related_projects: [GPCF, WAS, XWAIL, WAME, PVAOS, KDS, MMC]
+related_projects: [GPC, PVAOS, WAME, KDS, MMC, GPCF]
 domain: architecture
 status: controlled
-version: v0.1
+version: v1.0
 owner: GPCF
 kds_space: 开发
 kds_path: 开发/90-跨项目架构/01-architecture/XAP统一治理交换协议_Codex提案采纳意见_v0.1.md

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-52D30A36F6
 title: GlobalCloud 绿色供应链分布式知识系统对象字段与 11 池映射清单
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: data-ai-knowledge
 status: controlled
 version: v1.0
@@ -53,7 +53,7 @@ superseded_by: []
 | `DEC` | DecisionRecord | `DEC-COM-202606-0001` | `draft` |
 | `DSP` | DisputeRecord | `DSP-GH-202606-0001` | `open` |
 | `RAG` | RAGAdmissionRecord | `RAG-KNO-GH-202606-0001` | `repair_required` |
-| `WGR` | WAESGateRecord | `WGR-GH-202606-0001` | `pending` |
+| `WGR` | WAMEGateRecord | `WGR-GH-202606-0001` | `pending` |
 
 编号不得复用。候选对象被驳回、撤回或冻结后保留原编号，不删除。
 
@@ -75,7 +75,7 @@ superseded_by: []
 | `trustLevel` | `T0` / `T1` / `T2` / `T3` / `T4` / `T5` |
 | `status` | 当前状态 |
 | `confirmationStatus` | `candidate` / `human_review_pending` / `committee_review_pending` / `confirmed` / `rejected` |
-| `waesGateRefs` | WAES 规则记录、阻断、人工确认或委员会路径 |
+| `wameGateRefs` | WAME 规则记录、阻断、人工确认或委员会路径 |
 | `ragAdmission` | `safe` / `limited` / `repair_required` / `blocked` / `sensitive_metadata_only` |
 | `responsibleSubject` | 责任主体 |
 | `allowedOperations` | 当前允许动作 |
@@ -111,7 +111,7 @@ superseded_by: []
 | DecisionRecord | `decisionType`、`committeeRef`、`voteRule`、`decisionResult`、`filingRef` | 委员会决议 |
 | DisputeRecord | `disputeType`、`claimants`、`frozenRefs`、`resolutionRef` | 争议 |
 | RAGAdmissionRecord | `citationStrength`、`safeForDashboard`、`safeForAssistant`、`reasonCodes` | RAG 准入 |
-| WAESGateRecord | `gateType`、`gateInputRef`、`gateResult`、`requiredActions`、`hardStop` | WAES 门禁 |
+| WAMEGateRecord | `gateType`、`gateInputRef`、`gateResult`、`requiredActions`、`hardStop` | WAME 门禁 |
 
 ## 5. KDS 11 池定义
 
@@ -160,7 +160,7 @@ superseded_by: []
 draft
   -> candidate
   -> submitted
-  -> waes_checked
+  -> wame_checked
   -> human_review_pending
   -> committee_review_pending
   -> confirmed
@@ -204,4 +204,4 @@ P0 阶段禁止进入 `approved_production_write`。
 
 ## 9. 禁止升级口径
 
-对象字段完整不等于业务完成。若 `sourceRefs`、`evidenceRefs`、`waesGateRefs`、`confirmationStatus`、`responsibleSubject` 任一缺失，必须保持 `candidate`、`repair_required` 或 `blocked`。
+对象字段完整不等于业务完成。若 `sourceRefs`、`evidenceRefs`、`wameGateRefs`、`confirmationStatus`、`responsibleSubject` 任一缺失，必须保持 `candidate`、`repair_required` 或 `blocked`。

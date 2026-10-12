@@ -1,6 +1,6 @@
 # KDS 开发文档空间
 
-生成日期：2026-10-11
+生成日期：2026-10-12
 
 用途：KDS `开发` 空间中 `KDS` 项目的受控文档入口。
 
@@ -10,7 +10,7 @@
 | GPCF-DOC-2BE90FCE73 | GC-Knowledge Fabric LOOP跟踪模板 | 03-data-ai-knowledge/GC-Knowledge-Fabric-LOOP跟踪模板.md | controlled |
 | GPCF-DOC-139A718B66 | GC-Knowledge Fabric P0 11受控文档包实施清单 | 03-data-ai-knowledge/GC-Knowledge-Fabric-P0-11受控文档包实施清单.md | controlled |
 | GPCF-DOC-C831F07BC3 | GC-Knowledge Fabric RAG准入与引用强度规则 | 03-data-ai-knowledge/GC-Knowledge-Fabric-RAG准入与引用强度规则.md | controlled |
-| GPCF-DOC-63E07DE019 | GC-Knowledge Fabric WAES门禁规则 | 03-data-ai-knowledge/GC-Knowledge-Fabric-WAES门禁规则.md | controlled |
+| GPCF-DOC-63E07DE019 | GC-Knowledge Fabric WAME门禁规则 | 03-data-ai-knowledge/GC-Knowledge-Fabric-WAME门禁规则.md | controlled |
 | GPCF-DOC-A0469C3170 | GC-Knowledge Fabric 敏感资料入库规则 | 03-data-ai-knowledge/GC-Knowledge-Fabric-敏感资料入库规则.md | controlled |
 | GPCF-DOC-2F3CC2EAA1 | GC-Knowledge Fabric 核心对象关系与最小字段契约 | 03-data-ai-knowledge/GC-Knowledge-Fabric-核心对象关系与最小字段契约.md | controlled |
 | GPCF-DOC-651E9768F7 | GC-Knowledge Fabric 湖北磷材知识库目录 | 03-data-ai-knowledge/GC-Knowledge-Fabric-湖北磷材知识库目录.md | controlled |
@@ -19,21 +19,22 @@
 | GPCF-DOC-B69A039079 | GC-Knowledge Fabric 统一编号规则 | 03-data-ai-knowledge/GC-Knowledge-Fabric-统一编号规则.md | controlled |
 | GPCF-DOC-802968853F | GC-Knowledge Fabric 综合实施方案完整评审与问题清单 | 03-data-ai-knowledge/GC-Knowledge-Fabric-综合实施方案完整评审与问题清单.md | controlled |
 | GPCF-DOC-6CF5DB2D6B | GC-Knowledge Fabric 葛化GFIS知识库目录 | 03-data-ai-knowledge/GC-Knowledge-Fabric-葛化GFIS知识库目录.md | controlled |
-| GPCF-DOC-934A1F0623 | GlobalCloud GC-Knowledge Fabric综合实施方案与实施计划 | 03-data-ai-knowledge/GlobalCloud GC-Knowledge Fabric综合实施方案与实施计划.md | controlled |
-| GPCF-DOC-E3822328DF | GlobalCloud Loop开发KDS关联数据检索机制 | 03-data-ai-knowledge/GlobalCloud Loop开发KDS关联数据检索机制.md | controlled |
+| GPCF-DOC-E4579BFF7E | GPC 绿色供应链公共服务平台总体方案 | 03-data-ai-knowledge/GPC 绿色供应链公共服务平台总体方案.md | controlled |
+| GPCF-DOC-934A1F0623 | GlobalCloud GC-Knowledge Fabric 综合实施方案与实施计划 | 03-data-ai-knowledge/GlobalCloud GC-Knowledge Fabric综合实施方案与实施计划.md | controlled |
+| GPCF-DOC-E3822328DF | GlobalCloud Loop 开发 KDS 关联数据检索机制 | 03-data-ai-knowledge/GlobalCloud Loop开发KDS关联数据检索机制.md | controlled |
 | GPCF-DOC-A4F06F496D | GlobalCloud Agent-Reach搜索能力Loop接入方案 | 03-data-ai-knowledge/GlobalCloud-Agent-Reach搜索能力Loop接入方案.md | controlled |
 | GPCF-DOC-54C6C8B58B | GlobalCloud Brain-KDS 知识编制与知识 UI 边界清单 | 03-data-ai-knowledge/GlobalCloudBrain-KDS知识编制与知识UI边界清单.md | controlled |
 | GPCF-DOC-C8FDA82F75 | GlobalCloud KDS 11 池与增强治理账本项目群级映射 | 03-data-ai-knowledge/GlobalCloudKDS11池与增强治理账本项目群级映射.md | controlled |
-| GPCF-DOC-11BCEF96A6 | GlobalCloudPKC-KDS个人知识与贡献入口清单 | 03-data-ai-knowledge/GlobalCloudPKC-KDS个人知识与贡献入口清单.md | controlled |
-| GPCF-DOC-1F12054E1C | GlobalCloud企业级知识系统冲突点与收口方案 | 03-data-ai-knowledge/GlobalCloud企业级知识系统冲突点与收口方案.md | controlled |
+| GPCF-DOC-11BCEF96A6 | GlobalCloud PKC-KDS 个人知识与贡献入口清单 | 03-data-ai-knowledge/GlobalCloudPKC-KDS个人知识与贡献入口清单.md | controlled |
+| GPCF-DOC-1F12054E1C | GlobalCloud 企业级知识系统冲突点与收口方案 | 03-data-ai-knowledge/GlobalCloud企业级知识系统冲突点与收口方案.md | controlled |
 | GPCF-DOC-F5B3269058 | GlobalCloud 企业级知识系统总目标与执行分解表 | 03-data-ai-knowledge/GlobalCloud企业级知识系统总目标与执行分解表.md | controlled |
 | GPCF-DOC-A3B30485E9 | GlobalCloud 全局模型目录与能力标签标准 | 03-data-ai-knowledge/GlobalCloud全局模型目录与能力标签标准.md | controlled |
-| GPCF-DOC-038B869EBF | GlobalCloud底座可用知识闭环率计算样表与字段字典 | 03-data-ai-knowledge/GlobalCloud底座可用知识闭环率计算样表与字段字典.md | controlled |
+| GPCF-DOC-038B869EBF | GlobalCloud 底座可用知识闭环率计算样表与字段字典 | 03-data-ai-knowledge/GlobalCloud底座可用知识闭环率计算样表与字段字典.md | controlled |
 | GPCF-DOC-F72C6A953D | GlobalCloud 底座可用知识闭环率评分脚本 dry-run 规格 | 03-data-ai-knowledge/GlobalCloud底座可用知识闭环率评分脚本dry-run规格.md | controlled |
 | GPCF-DOC-0A5E8FD5E6 | GlobalCloud智能体团队-企业级知识系统实施任务书 | 03-data-ai-knowledge/GlobalCloud智能体团队-企业级知识系统实施任务书.md | controlled |
 | GPCF-DOC-59CCD41F2D | GlobalCloud 湖北磷材 Brain 知识页候选结构与发布门禁 | 03-data-ai-knowledge/GlobalCloud湖北磷材Brain知识页候选结构与发布门禁.md | controlled |
 | GPCF-DOC-3501E53D2C | GlobalCloud 湖北磷材 Brain 知识页候选评审实例包与人工填报示例 | 03-data-ai-knowledge/GlobalCloud湖北磷材Brain知识页候选评审实例包与人工填报示例.md | controlled |
-| GPCF-DOC-95631D1C11 | GlobalCloud湖北磷材Brain知识页候选运行评审空白台账与发布前问题清单 | 03-data-ai-knowledge/GlobalCloud湖北磷材Brain知识页候选运行评审空白台账与发布前问题清单.md | controlled |
+| GPCF-DOC-95631D1C11 | GlobalCloud 湖北磷材 Brain 知识页候选运行评审空白台账与发布前问题清单 | 03-data-ai-knowledge/GlobalCloud湖北磷材Brain知识页候选运行评审空白台账与发布前问题清单.md | controlled |
 | GPCF-DOC-312B5F9215 | GlobalCloud 湖北磷材 Brain 知识页评审样例到 SOP 候选写回规则 | 03-data-ai-knowledge/GlobalCloud湖北磷材Brain知识页评审样例到SOP候选写回规则.md | controlled |
 | GPCF-DOC-F8556A98E5 | GlobalCloud 湖北磷材 SOP 候选写回规则到缺口悬赏与人工确认任务包 | 03-data-ai-knowledge/GlobalCloud湖北磷材SOP候选写回规则到缺口悬赏与人工确认任务包.md | controlled |
 | GPCF-DOC-7B1983E735 | GlobalCloud 湖北磷材拓厂评估与知识源评测集 | 03-data-ai-knowledge/GlobalCloud湖北磷材拓厂评估与知识源评测集.md | controlled |
@@ -44,15 +45,23 @@
 | GPCF-DOC-C8062E9E2A | GlobalCloud 湖北磷材评测运行记录首批空白台账 | 03-data-ai-knowledge/GlobalCloud湖北磷材评测运行记录首批空白台账.md | controlled |
 | GPCF-DOC-BA9F35E2AA | GlobalCloud 湖北磷材首批知识对象运行空白台账 | 03-data-ai-knowledge/GlobalCloud湖北磷材首批知识对象运行空白台账.md | controlled |
 | GPCF-DOC-9B5D646E38 | GlobalCloud 知识收益治理委员会 DecisionRecord 与争议处理模板 | 03-data-ai-knowledge/GlobalCloud知识收益治理委员会DecisionRecord与争议处理模板.md | controlled |
-| GPCF-DOC-C60ECF8A71 | GlobalCloud知识缺口悬赏与真实资料回收跟踪台账 | 03-data-ai-knowledge/GlobalCloud知识缺口悬赏与真实资料回收跟踪台账.md | controlled |
+| GPCF-DOC-C60ECF8A71 | GlobalCloud 知识缺口悬赏与真实资料回收跟踪台账 | 03-data-ai-knowledge/GlobalCloud知识缺口悬赏与真实资料回收跟踪台账.md | controlled |
 | GPCF-DOC-742C5EA186 | GlobalCloud 积分收益额度悬赏争议联动规则 | 03-data-ai-knowledge/GlobalCloud积分收益额度悬赏争议联动规则.md | controlled |
+| GPCF-DOC-69CFFD4C82 | GlobalCloud 统一模型配置体系方案 | 03-data-ai-knowledge/GlobalCloud统一模型配置体系方案.md | controlled |
 | GPCF-DOC-05774FB8AD | GlobalCloud 绿色供应链体系 AI 服务模型 | 03-data-ai-knowledge/GlobalCloud绿色供应链体系AI服务模型.md | controlled |
 | GPCF-DOC-52B18BDBE9 | GlobalCloud 绿色供应链体系 LLM Wiki 与 Brain 测试评估矩阵 | 03-data-ai-knowledge/GlobalCloud绿色供应链体系LLM Wiki与Brain测试评估矩阵.md | controlled |
 | GPCF-DOC-664403C419 | GlobalCloud 绿色供应链体系 SOP 模板库 | 03-data-ai-knowledge/GlobalCloud绿色供应链体系SOP模板库.md | controlled |
+| GPCF-DOC-9B55FCEA8F | GlobalCloud 绿色供应链体系事件合同 | 03-data-ai-knowledge/GlobalCloud绿色供应链体系事件合同.md | controlled |
 | GPCF-DOC-BA68A130D5 | GlobalCloud 绿色供应链体系企业级知识库主存层与LLM Wiki-Brain升级图 | 03-data-ai-knowledge/GlobalCloud绿色供应链体系企业级知识库主存层与LLM Wiki-Brain升级图.md | controlled |
-| GPCF-DOC-D48C6EB801 | GlobalCloud绿色供应链体系企业级知识库方案 | 03-data-ai-knowledge/GlobalCloud绿色供应链体系企业级知识库方案.md | controlled |
-| GPCF-DOC-04D6680E14 | GlobalCloud绿色供应链体系知识与Agent授权治理总表 | 03-data-ai-knowledge/GlobalCloud绿色供应链体系知识与Agent授权治理总表.md | controlled |
-| GPCF-DOC-FCCA958E2C | GlobalCloud绿色供应链体系知识主存层与知识引擎层分层方案 | 03-data-ai-knowledge/GlobalCloud绿色供应链体系知识主存层与知识引擎层分层方案.md | controlled |
+| GPCF-DOC-D48C6EB801 | GlobalCloud 绿色供应链体系企业级知识库方案 | 03-data-ai-knowledge/GlobalCloud绿色供应链体系企业级知识库方案.md | controlled |
+| GPCF-DOC-1362AFC964 | GlobalCloud 绿色供应链体系全局初始化 SOP 方案 | 03-data-ai-knowledge/GlobalCloud绿色供应链体系全局初始化SOP方案.md | controlled |
+| GPCF-DOC-1A3581D521 | GlobalCloud 绿色供应链体系对象目录 | 03-data-ai-knowledge/GlobalCloud绿色供应链体系对象目录.md | controlled |
+| GPCF-DOC-0962BEDB78 | GlobalCloud 绿色供应链体系数据治理模型 | 03-data-ai-knowledge/GlobalCloud绿色供应链体系数据治理模型.md | controlled |
+| GPCF-DOC-04D6680E14 | GlobalCloud 绿色供应链体系知识与Agent授权治理总表 | 03-data-ai-knowledge/GlobalCloud绿色供应链体系知识与Agent授权治理总表.md | controlled |
+| GPCF-DOC-FCCA958E2C | GlobalCloud 绿色供应链体系知识主存层与知识引擎层分层方案 | 03-data-ai-knowledge/GlobalCloud绿色供应链体系知识主存层与知识引擎层分层方案.md | controlled |
+| GPCF-DOC-062D4DA687 | GlobalCloud 绿色供应链体系系统-数据库边界总表 | 03-data-ai-knowledge/GlobalCloud绿色供应链体系系统-数据库边界总表.md | controlled |
+| GPCF-DOC-E2FDF91E39 | GlobalCloud 绿色供应链体系资源仓库-业务对象映射总表 | 03-data-ai-knowledge/GlobalCloud绿色供应链体系资源仓库-业务对象映射总表.md | controlled |
+| GPCF-DOC-E4DDF33CF8 | GlobalCloud 绿色供应链体系连接器合同 | 03-data-ai-knowledge/GlobalCloud绿色供应链体系连接器合同.md | controlled |
 | GPCF-DOC-21BF6751A0 | GlobalCloud 绿色供应链分布式知识系统完整实施提示词 | 03-data-ai-knowledge/GlobalCloud绿色供应链分布式知识系统完整实施提示词.md | controlled |
 | GPCF-DOC-85BD23AD58 | GlobalCloud绿色供应链分布式知识系统实施治理方案 | 03-data-ai-knowledge/GlobalCloud绿色供应链分布式知识系统实施治理方案.md | controlled |
 | GPCF-DOC-52D30A36F6 | GlobalCloud 绿色供应链分布式知识系统对象字段与 11 池映射清单 | 03-data-ai-knowledge/GlobalCloud绿色供应链分布式知识系统对象字段与11池映射清单.md | controlled |
@@ -62,19 +71,28 @@
 | GPCF-DOC-1C57589247 | GlobalCloud 绿色供应链合作单位接入与组织空间初始化清单 | 03-data-ai-knowledge/GlobalCloud绿色供应链合作单位接入与组织空间初始化清单.md | controlled |
 | GPCF-DOC-GSCROLEVIEWKDSENTITY20260701 | GlobalCloud 绿色供应链角色视图 KDS 实体产物 | 03-data-ai-knowledge/GlobalCloud绿色供应链角色视图KDS实体产物.md | controlled |
 | GPCF-DOC-62E56B6121 | GlobalCloud 葛化 DKS-052 填报包 dry-run 验收与人工确认队列视图 | 03-data-ai-knowledge/GlobalCloud葛化DKS052填报包dry-run验收与人工确认队列视图.md | controlled |
+| GPCF-DOC-A22E7CBF43 | GlobalCloud 葛化 DKS-053 dry-run 结果可填写执行包与责任方说明 | 03-data-ai-knowledge/GlobalCloud葛化DKS053dry-run结果可填写执行包与责任方说明.md | controlled |
+| GPCF-DOC-D241F6E17C | GlobalCloud 葛化 DKS-054 执行包派发授权信封与负例拒收门禁 | 03-data-ai-knowledge/GlobalCloud葛化DKS054执行包派发授权信封与负例拒收门禁.md | controlled |
+| GPCF-DOC-AACA2824CD | GlobalCloud 葛化 DKS-055 派发授权信封接收目录空状态 hold 队列与补证提醒门禁 | 03-data-ai-knowledge/GlobalCloud葛化DKS055派发授权信封接收目录空状态hold队列与补证提醒门禁.md | controlled |
 | GPCF-DOC-49F4A296F5 | GlobalCloud 葛化 DKS-056 补证提醒发送授权包与回执字段模板 | 03-data-ai-knowledge/GlobalCloud葛化DKS056补证提醒发送授权包与回执字段模板.md | controlled |
+| GPCF-DOC-93BE3CC3E0 | GlobalCloud 葛化 DKS-057 发送授权包人工确认接收扫描空状态与授权缺口台账 | 03-data-ai-knowledge/GlobalCloud葛化DKS057发送授权包人工确认接收扫描空状态与授权缺口台账.md | controlled |
 | GPCF-DOC-D2933575F5 | GlobalCloud 葛化 DKS-060 GFIS 三助手 NoWrite 评测与人工发送授权补证执行包 | 03-data-ai-knowledge/GlobalCloud葛化DKS060GFIS三助手NoWrite评测与人工发送授权补证执行包.md | controlled |
 | GPCF-DOC-19ED27EAD7 | GlobalCloud 葛化 GFIS AI 助手三件套首批 dry-run 评测运行记录 | 03-data-ai-knowledge/GlobalCloud葛化GFISAI助手三件套首批dry-run评测运行记录.md | controlled |
 | GPCF-DOC-EFF75D9725 | GlobalCloud 葛化 GFIS AI 助手内测运行记录模板 | 03-data-ai-knowledge/GlobalCloud葛化GFISAI助手内测运行记录模板.md | controlled |
 | GPCF-DOC-BA893D6FF7 | GlobalCloud 葛化 GFIS AI 助手内测运行记录首批空白台账 | 03-data-ai-knowledge/GlobalCloud葛化GFISAI助手内测运行记录首批空白台账.md | controlled |
 | GPCF-DOC-1CF8B46A53 | GlobalCloud 葛化 GFIS AI 助手内测问答与资料回收包联动规则 | 03-data-ai-knowledge/GlobalCloud葛化GFISAI助手内测问答与资料回收包联动规则.md | controlled |
 | GPCF-DOC-BCDC67FF8C | GlobalCloud 葛化 GFIS AI 助手首批问答与文档验收评测集 | 03-data-ai-knowledge/GlobalCloud葛化GFISAI助手首批问答与文档验收评测集.md | controlled |
+| GPCF-DOC-FEE06CC888 | GlobalCloud 葛化湖北磷材真实脱敏资料接收任务包与首批人工审核演练 | 03-data-ai-knowledge/GlobalCloud葛化湖北磷材真实脱敏资料接收任务包与首批人工审核演练.md | controlled |
+| GPCF-DOC-6298DD1B0D | GlobalCloud 葛化湖北磷材首批填报实例包与提交门禁 | 03-data-ai-knowledge/GlobalCloud葛化湖北磷材首批填报实例包与提交门禁.md | controlled |
+| GPCF-DOC-54564B95F6 | GlobalCloud 葛化第一阶段 GFIS AI 助手三件套实施清单 | 03-data-ai-knowledge/GlobalCloud葛化第一阶段GFISAI助手三件套实施清单.md | controlled |
+| GPCF-DOC-486DF4F549 | GlobalCloud 葛化订单运行母版字段与单据映射专项清单 | 03-data-ai-knowledge/GlobalCloud葛化订单运行母版字段与单据映射专项清单.md | controlled |
 | GPCF-DOC-EE793CBD55 | GlobalCloud 葛化辽宁远航与金融凭证缺口专项台账 | 03-data-ai-knowledge/GlobalCloud葛化辽宁远航与金融凭证缺口专项台账.md | controlled |
+| GPCF-DOC-E361BE8080 | GlobalCloud 葛化辽宁远航补证请求包与金融凭证脱敏索引空白填报包 | 03-data-ai-knowledge/GlobalCloud葛化辽宁远航补证请求包与金融凭证脱敏索引空白填报包.md | controlled |
 | GPCF-DOC-A948E73BB3 | GlobalCloud 辽宁远航链路证据缺口请求包与知识悬赏草案 | 03-data-ai-knowledge/GlobalCloud辽宁远航链路证据缺口请求包与知识悬赏草案.md | controlled |
 | GPCF-DOC-5A7F6D81F0 | GlobalCloud 项目群与分布式 KDS 关系总图 | 03-data-ai-knowledge/GlobalCloud项目群与分布式KDS关系总图.md | controlled |
 | GPCF-DOC-B49150CE25 | GlobalCloud 首批资料回收包字段验收与候选 SOP 写回建议 | 03-data-ai-knowledge/GlobalCloud首批资料回收包字段验收与候选SOP写回建议.md | controlled |
 | GPCF-DOC-A7C38B4EA7 | 数据、AI 与知识 | 03-data-ai-knowledge/README.md | controlled |
-| GPCF-DOC-A2F5EC5E20 | GCBrain-Development-Manual | docs/GCBrain-Development-Manual.md | controlled |
+| GPCF-DOC-A2F5EC5E20 | GCBrain 专业版 v3.0 全量开发文档 | docs/GCBrain-Development-Manual.md | controlled |
 | GPCF-DOC-9F7CBCE127 | 工程说明 | docs/README.md | controlled |
 | GPCF-DOC-26EE0B96B8 | architecture | docs/architecture/README.md | controlled |
 | GPCF-DOC-137295729F | codegraph | docs/codegraph/README.md | controlled |
@@ -82,7 +100,7 @@
 | GPCF-DOC-13B5A26E7C | CodeGraph KDS OKF 映射说明 | docs/codegraph/codegraph-kds-okf-mapping.md | controlled |
 | GPCF-DOC-F7ADE9DF11 | CodeGraph Loop 集成规范 | docs/codegraph/codegraph-loop-integration.md | controlled |
 | GPCF-DOC-016C584865 | CodeGraph 定位说明 | docs/codegraph/codegraph-positioning.md | controlled |
-| GPCF-DOC-8C267BC542 | CodeGraph WAES 门禁说明 | docs/codegraph/codegraph-waes-gate.md | controlled |
+| GPCF-DOC-8C267BC542 | CodeGraph WAME 门禁说明 | docs/codegraph/codegraph-wame-gate.md | controlled |
 | GPCF-DOC-B27F8FD59C | gc-knowledge-fabric | docs/gc-knowledge-fabric/README.md | controlled |
 | GPCF-DOC-F59EC32059 | GC-Knowledge Fabric Acceptance Packet Dry-run v0.1 | docs/gc-knowledge-fabric/acceptance-packet-dry-run-v0.1.md | controlled |
 | GPCF-DOC-039865B508 | GC-Knowledge Fabric Acceptance Packet Ledger Dry-run v0.1 | docs/gc-knowledge-fabric/acceptance-packet-ledger-dry-run-v0.1.md | controlled |
@@ -136,14 +154,21 @@
 | GPCF-DOC-080EEABDFC | GC-Knowledge Fabric P0 正式证据执行重入预检预览 dry-run v0.1 | docs/gc-knowledge-fabric/formal-evidence-execution-reentry-preflight-preview-dry-run-v0.1.md | controlled |
 | GPCF-DOC-E2BF6E79BB | GC-Knowledge Fabric P0 正式证据执行修复请求回执预览 dry-run v0.1 | docs/gc-knowledge-fabric/formal-evidence-execution-repair-request-acknowledgement-preview-dry-run-v0.1.md | controlled |
 | GPCF-DOC-DEE39184F1 | GC-Knowledge Fabric P0 正式证据执行修复请求受理完整性预检查预览 dry-run v0.1 | docs/gc-knowledge-fabric/formal-evidence-execution-repair-request-intake-completeness-precheck-preview-dry-run-v0.1.md | controlled |
+| GPCF-DOC-3D7D5278CC | GC-Knowledge Fabric P0 正式证据执行修复响应期限监控预览 dry-run v0.1 | docs/gc-knowledge-fabric/formal-evidence-execution-repair-response-deadline-monitor-preview-dry-run-v0.1.md | controlled |
 | GPCF-DOC-C07C93A828 | GC-Knowledge Fabric P0 Formal Evidence Execution Request Dry-run v0.1 | docs/gc-knowledge-fabric/formal-evidence-execution-request-dry-run-v0.1.md | controlled |
 | GPCF-DOC-C9A9990A7A | GC-Knowledge Fabric P0 正式证据执行审阅人受理确认预览 dry-run v0.1 | docs/gc-knowledge-fabric/formal-evidence-execution-reviewer-acceptance-acknowledgement-preview-dry-run-v0.1.md | controlled |
+| GPCF-DOC-FAE70E409E | GC-Knowledge Fabric P0 正式证据执行审阅人受理确认路由包预览 dry-run v0.1 | docs/gc-knowledge-fabric/formal-evidence-execution-reviewer-acceptance-acknowledgement-routing-package-preview-dry-run-v0.1.md | controlled |
+| GPCF-DOC-9008849F4A | GC-Knowledge Fabric P0 正式证据执行审阅人确认路由回执预览 dry-run v0.1 | docs/gc-knowledge-fabric/formal-evidence-execution-reviewer-acknowledgement-routing-receipt-preview-dry-run-v0.1.md | controlled |
+| GPCF-DOC-D0E750DEF3 | GC-Knowledge Fabric P0 正式证据执行审阅人分派确认预览 dry-run v0.1 | docs/gc-knowledge-fabric/formal-evidence-execution-reviewer-assignment-acknowledgement-preview-dry-run-v0.1.md | controlled |
 | GPCF-DOC-C13432E792 | GC-Knowledge Fabric P0 正式证据执行回滚演练预览 dry-run v0.1 | docs/gc-knowledge-fabric/formal-evidence-execution-rollback-drill-preview-dry-run-v0.1.md | controlled |
 | GPCF-DOC-B626ACFCBF | GC-Knowledge Fabric P0 正式证据执行路由包确认预览 dry-run v0.1 | docs/gc-knowledge-fabric/formal-evidence-execution-routing-package-acknowledgement-preview-dry-run-v0.1.md | controlled |
 | GPCF-DOC-4BA0188069 | GC-Knowledge Fabric P0 正式证据执行路由包受理门禁预览 dry-run v0.1 | docs/gc-knowledge-fabric/formal-evidence-execution-routing-package-intake-guard-preview-dry-run-v0.1.md | controlled |
+| GPCF-DOC-6E943211FC | GC-Knowledge Fabric P0 正式证据执行路由回执审阅人受理预检查预览 dry-run v0.1 | docs/gc-knowledge-fabric/formal-evidence-execution-routing-receipt-reviewer-acceptance-precheck-preview-dry-run-v0.1.md | controlled |
 | GPCF-DOC-D64288A3FB | GC-Knowledge Fabric P0 正式证据执行路由审阅人分派预览 dry-run v0.1 | docs/gc-knowledge-fabric/formal-evidence-execution-routing-reviewer-assignment-preview-dry-run-v0.1.md | controlled |
+| GPCF-DOC-36813C43A0 | GC-Knowledge Fabric P0 正式证据执行签署人回执升级摘要预览 dry-run v0.1 | docs/gc-knowledge-fabric/formal-evidence-execution-signer-receipt-escalation-digest-preview-dry-run-v0.1.md | controlled |
 | GPCF-DOC-25CDA28633 | GC-Knowledge Fabric P0 正式证据执行签署人回执预览 dry-run v0.1 | docs/gc-knowledge-fabric/formal-evidence-execution-signer-receipt-preview-dry-run-v0.1.md | controlled |
 | GPCF-DOC-B654F4DE55 | GC-Knowledge Fabric P0 Formal Evidence Execution Step Dry-run v0.1 | docs/gc-knowledge-fabric/formal-evidence-execution-step-dry-run-v0.1.md | controlled |
+| GPCF-DOC-921CA383E9 | GC-Knowledge Fabric P0 正式证据执行补充材料完整性预检查预览 dry-run v0.1 | docs/gc-knowledge-fabric/formal-evidence-execution-supplement-completeness-precheck-preview-dry-run-v0.1.md | controlled |
 | GPCF-DOC-FF1D985147 | GC-Knowledge Fabric P0 正式证据执行补充材料预检查修复请求预览 dry-run v0.1 | docs/gc-knowledge-fabric/formal-evidence-execution-supplement-precheck-repair-request-preview-dry-run-v0.1.md | controlled |
 | GPCF-DOC-980669B8BC | GC-Knowledge Fabric P0 正式证据执行验证计划预览 dry-run v0.1 | docs/gc-knowledge-fabric/formal-evidence-execution-verification-plan-preview-dry-run-v0.1.md | controlled |
 | GPCF-DOC-524B1F74CE | GC-Knowledge Fabric P0 正式证据最终执行门禁 dry-run v0.1 | docs/gc-knowledge-fabric/formal-evidence-final-execution-guard-dry-run-v0.1.md | controlled |
@@ -163,6 +188,7 @@
 | GPCF-DOC-2322315471 | GFIS Assistant Approval Packet Routing Queue Notification Acknowledgement Escalation Digest Delivery Acknowledgement Escalation SLA Preview No-write 规则 | docs/gc-knowledge-fabric/gfis-assistant-approval-route-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-ack-escalation-digest-delivery-ack-escalation-sla-preview-policy.md | controlled |
 | GPCF-DOC-AAF84B8972 | GFIS Assistant Approval Packet Routing Queue Notification Acknowledgement Escalation Digest Delivery Acknowledgement Preview No-write 规则 | docs/gc-knowledge-fabric/gfis-assistant-approval-route-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-ack-escalation-sla-breach-notification-ack-escalation-digest-delivery-ack-preview-policy.md | controlled |
 | GPCF-DOC-CF54E99167 | GFIS Assistant Approval Packet Routing Queue Notification Acknowledgement Escalation Digest Delivery Preview No-write 规则 | docs/gc-knowledge-fabric/gfis-assistant-approval-route-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-ack-escalation-sla-breach-notification-ack-escalation-digest-delivery-preview-policy.md | controlled |
+| GPCF-DOC-BE3C49D63F | GFIS Assistant Routing Queue Notification Acknowledgement Escalation Digest Preview No-write 规则 | docs/gc-knowledge-fabric/gfis-assistant-approval-route-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-ack-escalation-sla-breach-notification-ack-escalation-digest-preview-policy.md | controlled |
 | GPCF-DOC-243AA7A15A | GFIS Assistant Routing Queue Notification Acknowledgement Escalation Preview No-write 规则 | docs/gc-knowledge-fabric/gfis-assistant-approval-route-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-ack-escalation-sla-breach-notification-ack-escalation-preview-policy.md | controlled |
 | GPCF-DOC-2577C0AD4E | GFIS Assistant Routing Queue Notification Acknowledgement Preview No-write 规则 | docs/gc-knowledge-fabric/gfis-assistant-approval-route-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-ack-escalation-sla-breach-notification-ack-preview-policy.md | controlled |
 | GPCF-DOC-AB269A490C | GFIS Assistant Approval Packet Routing Queue Notification Acknowledgement Escalation Digest Delivery Acknowledgement Escalation Preview No-write 规则 | docs/gc-knowledge-fabric/gfis-assistant-approval-route-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-acknowledgement-escalation-digest-delivery-acknowledgement-escalation-preview-policy.md | controlled |
@@ -193,49 +219,99 @@
 | GPCF-DOC-1C8E2E4EC5 | GFIS Assistant DKS-186 Routing Queue Notification Acknowledgement Escalation Digest Delivery Acknowledgement Escalation SLA Breach Review Resolution Option Preview No-write 规则 | docs/gc-knowledge-fabric/gfis-assistant-dks-186-routing-queue-notification-acknowledgement-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-preview-policy.md | controlled |
 | GPCF-DOC-AF4E5153BA | GFIS Assistant DKS-187 Routing Queue Notification Acknowledgement Escalation Digest Delivery Acknowledgement Escalation SLA Breach Review Resolution Option Approval Packet Preview No-write 规则 | docs/gc-knowledge-fabric/gfis-assistant-dks-187-routing-queue-notification-acknowledgement-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-preview-policy.md | controlled |
 | GPCF-DOC-6B651399E9 | GFIS Assistant DKS-188 Routing Queue Notification Acknowledgement Escalation Digest Delivery Acknowledgement Escalation SLA Breach Review Resolution Option Approval Packet Routing Queue Preview No-write 规则 | docs/gc-knowledge-fabric/gfis-assistant-dks-188-routing-queue-notification-acknowledgement-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-preview-policy.md | controlled |
+| GPCF-DOC-78E7D86C0D | GFIS Assistant DKS-189 Routing Queue Notification Preview No-write 规则 | docs/gc-knowledge-fabric/gfis-assistant-dks-189-routing-queue-notification-acknowledgement-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-preview-policy.md | controlled |
+| GPCF-DOC-35C5B62B1E | GFIS Assistant DKS-190 Routing Queue Notification Acknowledgement Preview No-write 规则 | docs/gc-knowledge-fabric/gfis-assistant-dks-190-routing-queue-notification-acknowledgement-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-acknowledgement-preview-policy.md | controlled |
+| GPCF-DOC-BB64DFB097 | GFIS Assistant DKS-191 Routing Queue Notification Acknowledgement Escalation Preview No-write 规则 | docs/gc-knowledge-fabric/gfis-assistant-dks-191-routing-queue-notification-acknowledgement-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-acknowledgement-escalation-preview-policy.md | controlled |
 | GPCF-DOC-BFBFB0AB42 | GFIS Assistant DKS-192 Routing Queue Notification Acknowledgement Escalation Digest Preview No-write 规则 | docs/gc-knowledge-fabric/gfis-assistant-dks-192-routing-queue-notification-acknowledgement-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-acknowledgement-escalation-digest-preview-policy.md | controlled |
 | GPCF-DOC-9FEB004D54 | GFIS Assistant DKS-193 Routing Queue Notification Acknowledgement Escalation Digest Delivery Preview No-write 规则 | docs/gc-knowledge-fabric/gfis-assistant-dks-193-routing-queue-notification-acknowledgement-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-acknowledgement-escalation-digest-delivery-preview-policy.md | controlled |
+| GPCF-DOC-3E733C876C | GFIS Assistant DKS-194 Routing Queue Notification Acknowledgement Escalation Digest Delivery Acknowledgement Preview No-write 规则 | docs/gc-knowledge-fabric/gfis-assistant-dks-194-routing-queue-notification-acknowledgement-escalation-digest-delivery-ack-preview-policy.md | controlled |
 | GPCF-DOC-864BD1EC05 | GFIS Assistant DKS-195 Routing Queue Notification Acknowledgement Escalation Digest Delivery Acknowledgement Escalation Preview No-write 规则 | docs/gc-knowledge-fabric/gfis-assistant-dks-195-routing-queue-notification-acknowledgement-escalation-digest-delivery-ack-escalation-preview-policy.md | controlled |
 | GPCF-DOC-D4ECD4EB84 | GFIS Assistant DKS-196 Routing Queue Notification Acknowledgement Escalation Digest Delivery Acknowledgement Escalation SLA Preview No-write 规则 | docs/gc-knowledge-fabric/gfis-assistant-dks-196-routing-queue-notification-acknowledgement-escalation-digest-delivery-ack-escalation-sla-preview-policy.md | controlled |
+| GPCF-DOC-134BFB1874 | GFIS Assistant DKS-197 Routing Queue Notification Acknowledgement Escalation Digest Delivery Acknowledgement Escalation SLA Breach Review Preview No-write 规则 | docs/gc-knowledge-fabric/gfis-assistant-dks-197-routing-queue-notification-acknowledgement-escalation-digest-delivery-ack-escalation-sla-breach-review-preview-policy.md | controlled |
 | GPCF-DOC-5B5888AE76 | GFIS Assistant DKS-198 Routing Queue Notification Acknowledgement Escalation Digest Delivery Acknowledgement Escalation SLA Breach Review Resolution Option Preview No-write 规则 | docs/gc-knowledge-fabric/gfis-assistant-dks-198-routing-queue-notification-acknowledgement-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-preview-policy.md | controlled |
+| GPCF-DOC-A728A23C7C | GFIS Assistant DKS-199 Routing Queue Notification Acknowledgement Escalation Digest Delivery Acknowledgement Escalation SLA Breach Review Resolution Option Approval Packet Preview No-write 规则 | docs/gc-knowledge-fabric/gfis-assistant-dks-199-routing-queue-notification-acknowledgement-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-preview-policy.md | controlled |
 | GPCF-DOC-34D70D18D2 | GFIS Assistant DKS-200 Routing Queue Notification Acknowledgement Escalation Digest Delivery Acknowledgement Escalation SLA Breach Review Resolution Option Approval Packet Routing Queue Preview No-write 规则 | docs/gc-knowledge-fabric/gfis-assistant-dks-200-routing-queue-notification-acknowledgement-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-preview-policy.md | controlled |
+| GPCF-DOC-E66064C9F6 | GFIS Assistant DKS-201 Routing Queue Notification Acknowledgement Escalation Digest Delivery Acknowledgement Escalation SLA Breach Review Resolution Option Approval Packet Routing Queue Notification Preview No-write 规则 | docs/gc-knowledge-fabric/gfis-assistant-dks-201-routing-queue-notification-acknowledgement-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-preview-policy.md | controlled |
 | GPCF-DOC-F33B376F48 | GFIS Assistant DKS-202 Routing Queue Notification Acknowledgement Escalation Digest Delivery Acknowledgement Escalation SLA Breach Review Resolution Option Approval Packet Routing Queue Notification Acknowledgement Preview No-write 规则 | docs/gc-knowledge-fabric/gfis-assistant-dks-202-routing-queue-notification-acknowledgement-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-acknowledgement-preview-policy.md | controlled |
 | GPCF-DOC-F2BACB2D2A | GFIS Assistant DKS-203 Routing Queue Notification Acknowledgement Escalation Digest Delivery Acknowledgement Escalation SLA Breach Review Resolution Option Approval Packet Routing Queue Notification Acknowledgement Escalation Preview No-write 规则 | docs/gc-knowledge-fabric/gfis-assistant-dks-203-routing-queue-notification-acknowledgement-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-acknowledgement-escalation-preview-policy.md | controlled |
 | GPCF-DOC-828C3472A6 | GFIS Assistant DKS-204 Routing Queue Notification Acknowledgement Escalation Digest Delivery Acknowledgement Escalation SLA Breach Review Resolution Option Approval Packet Routing Queue Notification Acknowledgement Escalation Digest Preview No-write 规则 | docs/gc-knowledge-fabric/gfis-assistant-dks-204-routing-queue-notification-acknowledgement-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-acknowledgement-escalation-digest-preview-policy.md | controlled |
+| GPCF-DOC-0052B15FC1 | GFIS Assistant DKS-205 Routing Queue Notification Acknowledgement Escalation Digest Delivery Acknowledgement Escalation SLA Breach Review Resolution Option Approval Packet Routing Queue Notification Acknowledgement Escalation Digest Delivery Preview No-write 规则 | docs/gc-knowledge-fabric/gfis-assistant-dks-205-routing-queue-notification-acknowledgement-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-acknowledgement-escalation-digest-delivery-preview-policy.md | controlled |
 | GPCF-DOC-B696D30510 | GFIS Assistant DKS-206 Routing Queue Notification Acknowledgement Escalation Digest Delivery Acknowledgement Escalation SLA Breach Review Resolution Option Approval Packet Routing Queue Notification Acknowledgement Escalation Digest Delivery Acknowledgement Preview No-write 规则 | docs/gc-knowledge-fabric/gfis-assistant-dks-206-routing-queue-notification-acknowledgement-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-acknowledgement-escalation-digest-delivery-ack-preview-policy.md | controlled |
+| GPCF-DOC-FFE8461171 | GFIS Assistant DKS-207 Routing Queue Notification Ack Escalation Digest Delivery Ack Escalation Preview No-write 规则 | docs/gc-knowledge-fabric/gfis-assistant-dks-207-routing-queue-notification-ack-escalation-digest-delivery-ack-escalation-preview-policy.md | controlled |
+| GPCF-DOC-4B4BB186A8 | GFIS Assistant DKS-208 Routing Queue Notification Ack Escalation Digest Delivery Ack Escalation SLA Preview No-write 规则 | docs/gc-knowledge-fabric/gfis-assistant-dks-208-routing-queue-notification-ack-escalation-digest-delivery-ack-escalation-sla-preview-policy.md | controlled |
+| GPCF-DOC-FA3123BEB5 | GFIS Assistant DKS-209 Routing Queue Notification Ack Escalation Digest Delivery Ack Escalation SLA Breach Review Preview No-write 规则 | docs/gc-knowledge-fabric/gfis-assistant-dks-209-routing-queue-notification-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-preview-policy.md | controlled |
 | GPCF-DOC-E33E0D756B | GFIS Assistant DKS-210 Routing Queue Notification Ack Escalation Digest Delivery Ack Escalation SLA Breach Review Resolution Option Preview No-write 规则 | docs/gc-knowledge-fabric/gfis-assistant-dks-210-routing-queue-notification-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-preview-policy.md | controlled |
+| GPCF-DOC-425E380B2F | GFIS Assistant DKS-211 Routing Queue Notification Ack Escalation Digest Delivery Ack Escalation SLA Breach Review Resolution Option Approval Packet Preview No-write 规则 | docs/gc-knowledge-fabric/gfis-assistant-dks-211-routing-queue-notification-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-preview-policy.md | controlled |
 | GPCF-DOC-323D13E0C2 | GFIS Assistant DKS-212 Routing Queue Notification Ack Escalation Digest Delivery Ack Escalation SLA Breach Review Resolution Option Approval Packet Routing Queue Preview No-write 规则 | docs/gc-knowledge-fabric/gfis-assistant-dks-212-routing-queue-notification-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-preview-policy.md | controlled |
+| GPCF-DOC-51EFADC196 | GFIS Assistant DKS-213 Routing Queue Notification Preview No-write 规则 | docs/gc-knowledge-fabric/gfis-assistant-dks-213-routing-queue-notification-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-preview-policy.md | controlled |
+| GPCF-DOC-EC2DE67AC3 | GFIS Assistant DKS-214 Routing Queue Notification Ack Preview No-write 规则 | docs/gc-knowledge-fabric/gfis-assistant-dks-214-routing-queue-notification-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-ack-preview-policy.md | controlled |
 | GPCF-DOC-EB28A7A7AE | GFIS Assistant DKS-215 Routing Queue Notification Ack Escalation Preview No-write 规则 | docs/gc-knowledge-fabric/gfis-assistant-dks-215-routing-queue-notification-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-ack-escalation-preview-policy.md | controlled |
+| GPCF-DOC-0B0EB2C32B | GFIS Assistant DKS-216 Routing Queue Notification Ack Escalation Digest Preview No-write 规则 | docs/gc-knowledge-fabric/gfis-assistant-dks-216-routing-queue-notification-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-ack-escalation-digest-preview-policy.md | controlled |
 | GPCF-DOC-4E9CF3FB00 | GFIS Assistant DKS-217 Routing Queue Notification Ack Escalation Digest Delivery Preview No-write 规则 | docs/gc-knowledge-fabric/gfis-assistant-dks-217-routing-queue-notification-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-ack-escalation-digest-delivery-preview-policy.md | controlled |
+| GPCF-DOC-51452A9FF5 | GFIS Assistant DKS-218 Routing Queue Notification Ack Escalation Digest Delivery Ack Preview No-write 规则 | docs/gc-knowledge-fabric/gfis-assistant-dks-218-routing-queue-notification-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-ack-escalation-digest-delivery-ack-preview-policy.md | controlled |
 | GPCF-DOC-3DBD0F260A | GFIS Assistant DKS-219 Routing Queue Notification Ack Escalation Digest Delivery Ack Escalation Preview No-write 规则 | docs/gc-knowledge-fabric/gfis-assistant-dks-219-routing-queue-notification-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-ack-escalation-digest-delivery-ack-escalation-preview-policy.md | controlled |
+| GPCF-DOC-DCE6880489 | GFIS Assistant DKS-220 Routing Queue Notification Ack Escalation Digest Delivery Ack Escalation SLA Breach Review Resolution Option Approval Packet Routing Queue Notification Ack Escalation Digest Delivery Ack Escalation SLA Preview No-write 规则 | docs/gc-knowledge-fabric/gfis-assistant-dks-220-routing-queue-notification-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-ack-escalation-digest-delivery-ack-escalation-sla-preview-policy.md | controlled |
+| GPCF-DOC-9442E42142 | GFIS Assistant DKS-221 Routing Queue Notification Ack Escalation Digest Delivery Ack Escalation SLA Breach Review Preview No-write 规则 | docs/gc-knowledge-fabric/gfis-assistant-dks-221-routing-queue-notification-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-preview-policy.md | controlled |
+| GPCF-DOC-5E3E70EDE2 | GFIS Assistant DKS-222 Routing Queue Notification Ack Escalation Digest Delivery Ack Escalation SLA Breach Review Resolution Option Preview No-write 规则 | docs/gc-knowledge-fabric/gfis-assistant-dks-222-routing-queue-notification-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-preview-policy.md | controlled |
 | GPCF-DOC-9EBEF58E20 | GFIS Assistant DKS-223 Routing Queue Notification Ack Escalation Digest Delivery Ack Escalation SLA Breach Review Resolution Option Approval Packet Preview No-write 规则 | docs/gc-knowledge-fabric/gfis-assistant-dks-223-routing-queue-notification-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-preview-policy.md | controlled |
 | GPCF-DOC-B1571251CC | GFIS Assistant DKS-224 Routing Queue Notification Ack Escalation Digest Delivery Ack Escalation SLA Breach Review Resolution Option Approval Packet Routing Queue Preview No-write 规则 | docs/gc-knowledge-fabric/gfis-assistant-dks-224-routing-queue-notification-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-preview-policy.md | controlled |
 | GPCF-DOC-57CCEDB203 | GFIS Assistant DKS-225 Routing Queue Notification Preview No-write 规则 | docs/gc-knowledge-fabric/gfis-assistant-dks-225-routing-queue-notification-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-preview-policy.md | controlled |
 | GPCF-DOC-983CB3C961 | GFIS Assistant DKS-226 Routing Queue Notification Ack Preview No-write 规则 | docs/gc-knowledge-fabric/gfis-assistant-dks-226-routing-queue-notification-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-ack-preview-policy.md | controlled |
 | GPCF-DOC-5A66248051 | GFIS Assistant DKS-227 Routing Queue Notification Ack Escalation Preview No-write 规则 | docs/gc-knowledge-fabric/gfis-assistant-dks-227-routing-queue-notification-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-ack-escalation-preview-policy.md | controlled |
+| GPCF-DOC-07CCB68FDD | GFIS Assistant DKS-228 Routing Queue Notification Ack Escalation Digest Preview No-write 规则 | docs/gc-knowledge-fabric/gfis-assistant-dks-228-routing-queue-notification-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-ack-escalation-digest-preview-policy.md | controlled |
 | GPCF-DOC-00B9C56129 | GFIS Assistant DKS-229 Routing Queue Notification Ack Escalation Digest Delivery Preview No-write 规则 | docs/gc-knowledge-fabric/gfis-assistant-dks-229-routing-queue-notification-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-ack-escalation-digest-delivery-preview-policy.md | controlled |
 | GPCF-DOC-964CF11536 | GFIS Assistant DKS-230 Routing Queue Notification Ack Escalation Digest Delivery Ack Preview No-write 规则 | docs/gc-knowledge-fabric/gfis-assistant-dks-230-routing-queue-notification-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-ack-escalation-digest-delivery-ack-preview-policy.md | controlled |
+| GPCF-DOC-285ADC86C4 | GFIS Assistant DKS-231 Routing Queue Notification Ack Escalation Digest Delivery Ack Escalation Preview No-write 规则 | docs/gc-knowledge-fabric/gfis-assistant-dks-231-routing-queue-notification-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-ack-escalation-digest-delivery-ack-escalation-preview-policy.md | controlled |
 | GPCF-DOC-0283CAD3ED | GFIS Assistant DKS-232 Routing Queue Notification Ack Escalation Digest Delivery Ack Escalation SLA Breach Review Resolution Option Approval Packet Routing Queue Notification Ack Escalation Digest Delivery Ack Escalation SLA Preview No-write 规则 | docs/gc-knowledge-fabric/gfis-assistant-dks-232-routing-queue-notification-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-ack-escalation-digest-delivery-ack-escalation-sla-preview-policy.md | controlled |
+| GPCF-DOC-DCCBFA9445 | GFIS Assistant DKS-233 Routing Queue Notification Ack Escalation Digest Delivery Ack Escalation SLA Breach Review Preview No-write 规则 | docs/gc-knowledge-fabric/gfis-assistant-dks-233-routing-queue-notification-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-preview-policy.md | controlled |
 | GPCF-DOC-92E45FBF7F | GFIS Assistant DKS-234 Routing Queue Notification Ack Escalation Digest Delivery Ack Escalation SLA Breach Review Resolution Option Preview No-write 规则 | docs/gc-knowledge-fabric/gfis-assistant-dks-234-routing-queue-notification-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-preview-policy.md | controlled |
+| GPCF-DOC-105CD6E439 | GFIS Assistant DKS-235 Routing Queue Notification Ack Escalation Digest Delivery Ack Escalation SLA Breach Review Resolution Option Approval Packet Preview No-write 规则 | docs/gc-knowledge-fabric/gfis-assistant-dks-235-routing-queue-notification-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-preview-policy.md | controlled |
 | GPCF-DOC-F4EA3E0553 | GFIS Assistant DKS-236 Routing Queue Notification Ack Escalation Digest Delivery Ack Escalation SLA Breach Review Resolution Option Approval Packet Routing Queue Preview No-write 规则 | docs/gc-knowledge-fabric/gfis-assistant-dks-236-routing-queue-preview-policy.md | controlled |
+| GPCF-DOC-3464C6CC83 | GFIS Assistant DKS-237 Routing Queue Notification Preview No-write 规则 | docs/gc-knowledge-fabric/gfis-assistant-dks-237-routing-queue-notification-preview-policy.md | controlled |
+| GPCF-DOC-8B3AD57AE6 | GFIS Assistant DKS-238 Routing Queue Notification Ack Preview No-write 规则 | docs/gc-knowledge-fabric/gfis-assistant-dks-238-routing-queue-notification-ack-preview-policy.md | controlled |
+| GPCF-DOC-1BCB23039A | GFIS Assistant DKS-239 Acknowledgement Escalation Preview No-write 规则 | docs/gc-knowledge-fabric/gfis-assistant-dks-239-acknowledgement-escalation-preview-policy.md | controlled |
+| GPCF-DOC-EC15D17B2A | GFIS Assistant DKS-240 Escalation Digest Preview No-write 规则 | docs/gc-knowledge-fabric/gfis-assistant-dks-240-escalation-digest-preview-policy.md | controlled |
 | GPCF-DOC-85ADC1863C | GFIS Assistant DKS-241 Digest Delivery Preview Policy | docs/gc-knowledge-fabric/gfis-assistant-dks-241-digest-delivery-preview-policy.md | controlled |
+| GPCF-DOC-CE91ABED78 | GFIS Assistant DKS-242 Digest Delivery Acknowledgement Preview Policy | docs/gc-knowledge-fabric/gfis-assistant-dks-242-digest-delivery-acknowledgement-preview-policy.md | controlled |
 | GPCF-DOC-F0380F4ED7 | GFIS Assistant DKS-243 摘要投递确认升级预览策略 | docs/gc-knowledge-fabric/gfis-assistant-dks-243-digest-delivery-acknowledgement-escalation-preview-policy.md | controlled |
 | GPCF-DOC-653FE10892 | GFIS Assistant DKS-245 SLA Breach Review Preview Policy | docs/gc-knowledge-fabric/gfis-assistant-dks-245-digest-delivery-acknowledgement-escalation-sla-breach-review-preview-policy.md | controlled |
+| GPCF-DOC-2471815773 | GFIS Assistant DKS-246 Resolution Option Preview Policy | docs/gc-knowledge-fabric/gfis-assistant-dks-246-digest-delivery-acknowledgement-escalation-sla-breach-review-resolution-option-preview-policy.md | controlled |
+| GPCF-DOC-36ED4DA28C | GFIS Assistant DKS-247 Approval Packet Preview Policy | docs/gc-knowledge-fabric/gfis-assistant-dks-247-digest-delivery-acknowledgement-escalation-sla-breach-review-resolution-option-approval-packet-preview-policy.md | controlled |
+| GPCF-DOC-C9BFBCFA1B | GFIS Assistant DKS-248 Routing Queue Preview Policy | docs/gc-knowledge-fabric/gfis-assistant-dks-248-digest-delivery-acknowledgement-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-preview-policy.md | controlled |
+| GPCF-DOC-2F2030932D | GFIS Assistant DKS-249 Notification Preview Policy | docs/gc-knowledge-fabric/gfis-assistant-dks-249-digest-delivery-acknowledgement-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-preview-policy.md | controlled |
 | GPCF-DOC-633179942F | GFIS Assistant DKS-250 通知确认预览候选规则 | docs/gc-knowledge-fabric/gfis-assistant-dks-250-digest-delivery-acknowledgement-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-ack-preview-policy.md | controlled |
 | GPCF-DOC-C235EBC7BB | GFIS Assistant DKS-251 通知确认升级预览候选规则 | docs/gc-knowledge-fabric/gfis-assistant-dks-251-digest-delivery-acknowledgement-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-ack-escalation-preview-policy.md | controlled |
 | GPCF-DOC-3FDBF59030 | GFIS Assistant DKS-252 升级摘要预览候选规则 | docs/gc-knowledge-fabric/gfis-assistant-dks-252-digest-delivery-acknowledgement-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-ack-escalation-digest-preview-policy.md | controlled |
 | GPCF-DOC-1D966F98E7 | GFIS Assistant DKS-254 摘要交付确认预览候选规则 | docs/gc-knowledge-fabric/gfis-assistant-dks-254-digest-delivery-acknowledgement-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-ack-escalation-digest-delivery-acknowledgement-preview-policy.md | controlled |
 | GPCF-DOC-5597BF3132 | GFIS Assistant DKS-255 摘要投递确认升级预览策略 | docs/gc-knowledge-fabric/gfis-assistant-dks-255-digest-delivery-acknowledgement-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-ack-escalation-digest-delivery-acknowledgement-escalation-preview-policy.md | controlled |
+| GPCF-DOC-4465957A8C | GFIS Assistant DKS-256 摘要投递确认升级 SLA 预览策略 | docs/gc-knowledge-fabric/gfis-assistant-dks-256-digest-delivery-acknowledgement-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-ack-escalation-digest-delivery-acknowledgement-escalation-sla-preview-policy.md | controlled |
+| GPCF-DOC-87CE2152B6 | GFIS Assistant DKS-257 摘要投递确认升级 SLA 违约审阅预览策略 | docs/gc-knowledge-fabric/gfis-assistant-dks-257-digest-delivery-acknowledgement-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-ack-escalation-digest-delivery-acknowledgement-escalation-sla-breach-review-preview-policy.md | controlled |
+| GPCF-DOC-954EDCFB4C | GFIS Assistant DKS-258 摘要投递确认升级 SLA 违约审阅处置选项预览策略 | docs/gc-knowledge-fabric/gfis-assistant-dks-258-ack-escalation-sla-breach-review-resolution-option-preview-policy.md | controlled |
 | GPCF-DOC-F708B5D798 | GFIS Assistant DKS-259 摘要投递确认升级 SLA 违约审阅处置选项审批包预览策略 | docs/gc-knowledge-fabric/gfis-assistant-dks-259-ack-escalation-sla-breach-review-resolution-option-approval-packet-preview-policy.md | controlled |
+| GPCF-DOC-3EBE1B7048 | GFIS Assistant DKS-260 摘要投递确认升级 SLA 违约审阅处置选项审批包路由队列预览策略 | docs/gc-knowledge-fabric/gfis-assistant-dks-260-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-preview-policy.md | controlled |
+| GPCF-DOC-3538C370A4 | GFIS Assistant DKS-261 摘要投递确认升级 SLA 违约审阅处置选项审批包路由队列通知预览策略 | docs/gc-knowledge-fabric/gfis-assistant-dks-261-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-preview-policy.md | controlled |
 | GPCF-DOC-FFF5092FFC | GFIS Assistant DKS-262 摘要投递确认升级 SLA 违约审阅处置选项审批包路由队列通知确认预览策略 | docs/gc-knowledge-fabric/gfis-assistant-dks-262-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-ack-preview-policy.md | controlled |
 | GPCF-DOC-1CB6D50E9D | GFIS Assistant DKS-263 摘要投递确认升级 SLA 违约审阅处置选项审批包路由队列通知确认升级预览策略 | docs/gc-knowledge-fabric/gfis-assistant-dks-263-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-ack-escalation-preview-policy.md | controlled |
+| GPCF-DOC-2B951998AF | GFIS Assistant DKS-264 摘要投递确认升级 SLA 违约审阅处置选项审批包路由队列通知确认升级摘要预览策略 | docs/gc-knowledge-fabric/gfis-assistant-dks-264-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-ack-escalation-digest-preview-policy.md | controlled |
 | GPCF-DOC-9065E6A165 | GFIS Assistant DKS-265 摘要投递确认升级 SLA 违约审阅处置选项审批包路由队列通知确认升级摘要投递预览策略 | docs/gc-knowledge-fabric/gfis-assistant-dks-265-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-ack-escalation-digest-delivery-preview-policy.md | controlled |
 | GPCF-DOC-D0B9B4867C | GFIS Assistant DKS-266 摘要投递确认升级 SLA 违约审阅处置选项审批包路由队列通知确认升级摘要投递确认预览策略 | docs/gc-knowledge-fabric/gfis-assistant-dks-266-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-ack-escalation-digest-delivery-acknowledgement-preview-policy.md | controlled |
+| GPCF-DOC-46133A822A | GFIS Assistant DKS-267 摘要投递确认升级 SLA 违约审阅处置选项审批包路由队列通知确认升级摘要投递确认升级预览策略 | docs/gc-knowledge-fabric/gfis-assistant-dks-267-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-ack-escalation-digest-delivery-acknowledgement-escalation-preview-policy.md | controlled |
+| GPCF-DOC-6735F06699 | GFIS Assistant DKS-268 摘要投递确认升级 SLA 预览策略 | docs/gc-knowledge-fabric/gfis-assistant-dks-268-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-ack-escalation-digest-delivery-acknowledgement-escalation-sla-preview-policy.md | controlled |
 | GPCF-DOC-4ED6BDDC91 | GFIS Assistant DKS-269 SLA Breach Review Preview Policy | docs/gc-knowledge-fabric/gfis-assistant-dks-269-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-ack-escalation-digest-delivery-acknowledgement-escalation-sla-breach-review-preview-policy.md | controlled |
 | GPCF-DOC-3B8269766A | GFIS Assistant DKS-270 SLA 违约审阅处置选项预览策略 | docs/gc-knowledge-fabric/gfis-assistant-dks-270-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-ack-escalation-digest-delivery-acknowledgement-escalation-sla-breach-review-resolution-option-preview-policy.md | controlled |
 | GPCF-DOC-854B898AA1 | GFIS Assistant DKS-271 处置选项审批包预览策略 | docs/gc-knowledge-fabric/gfis-assistant-dks-271-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-ack-escalation-digest-delivery-acknowledgement-escalation-sla-breach-review-resolution-option-approval-packet-preview-policy.md | controlled |
 | GPCF-DOC-D846CB64BC | GFIS Assistant Repair Action Guard Event Preview No-write 规则 | docs/gc-knowledge-fabric/gfis-assistant-repair-action-guard-event-preview-policy.md | controlled |
+| GPCF-DOC-527915D070 | GFIS Assistant Repair Admission Read Model No-write 规则 | docs/gc-knowledge-fabric/gfis-assistant-repair-admission-read-model-policy.md | controlled |
+| GPCF-DOC-E07ACF4305 | GFIS Assistant Repair Audit Trace Read Receipt Preview No-write 规则 | docs/gc-knowledge-fabric/gfis-assistant-repair-audit-trace-read-receipt-preview-policy.md | controlled |
+| GPCF-DOC-1AA2080A82 | GFIS Assistant Repair Draft Handoff Packet No-write 规则 | docs/gc-knowledge-fabric/gfis-assistant-repair-draft-handoff-packet-policy.md | controlled |
+| GPCF-DOC-D15920121E | GFIS Assistant Repair Event Preview Audit Trace No-write 规则 | docs/gc-knowledge-fabric/gfis-assistant-repair-event-preview-audit-trace-policy.md | controlled |
+| GPCF-DOC-8E11A6C1C9 | GFIS Assistant Repair Handoff Review Admission No-write 规则 | docs/gc-knowledge-fabric/gfis-assistant-repair-handoff-review-admission-policy.md | controlled |
 | GPCF-DOC-C98D797C17 | GFIS Assistant Repair Intake Review Packet No-write 规则 | docs/gc-knowledge-fabric/gfis-assistant-repair-intake-review-packet-policy.md | controlled |
+| GPCF-DOC-F7D68D144D | GFIS Assistant Repair Notification Dismissal Preview No-write 规则 | docs/gc-knowledge-fabric/gfis-assistant-repair-notification-dismissal-preview-policy.md | controlled |
+| GPCF-DOC-C43B7FBE3A | GFIS Assistant Repair Notification Snooze Preview No-write 规则 | docs/gc-knowledge-fabric/gfis-assistant-repair-notification-snooze-preview-policy.md | controlled |
+| GPCF-DOC-F3B417690E | GFIS Assistant Repair Notification Snooze Queue Approval Acknowledgement Digest Delivery Acknowledgement Escalation Preview No-write 规则 | docs/gc-knowledge-fabric/gfis-assistant-repair-notification-snooze-queue-approval-acknowledgement-digest-delivery-acknowledgement-escalation-preview-policy.md | controlled |
+| GPCF-DOC-A097195A21 | GFIS Assistant Repair Notification Snooze Queue Approval Acknowledgement Digest Delivery Acknowledgement Escalation SLA Breach Review Preview No-write 规则 | docs/gc-knowledge-fabric/gfis-assistant-repair-notification-snooze-queue-approval-acknowledgement-digest-delivery-acknowledgement-escalation-sla-breach-review-preview-policy.md | controlled |
+| GPCF-DOC-659547FA0F | GFIS Assistant Resolution Option Approval Packet Preview No-write 规则 | docs/gc-knowledge-fabric/gfis-assistant-repair-notification-snooze-queue-approval-acknowledgement-digest-delivery-acknowledgement-escalation-sla-breach-review-resolution-option-approval-packet-preview-policy.md | controlled |
 | GPCF-DOC-DD9EB5CB04 | GFIS Assistant Approval Packet Routing Queue Notification Acknowledgement Escalation Digest Preview No-write 规则 | docs/gc-knowledge-fabric/gfis-assistant-repair-notification-snooze-queue-approval-acknowledgement-digest-delivery-acknowledgement-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-acknowledgement-escalation-digest-preview-policy.md | controlled |
 | GPCF-DOC-9BECDD6DB2 | GFIS Assistant Approval Packet Routing Queue Notification Acknowledgement Escalation Preview No-write 规则 | docs/gc-knowledge-fabric/gfis-assistant-repair-notification-snooze-queue-approval-acknowledgement-digest-delivery-acknowledgement-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-acknowledgement-escalation-preview-policy.md | controlled |
 | GPCF-DOC-7C0FCBADD5 | GFIS Assistant Approval Packet Routing Queue Notification Acknowledgement Preview No-write 规则 | docs/gc-knowledge-fabric/gfis-assistant-repair-notification-snooze-queue-approval-acknowledgement-digest-delivery-acknowledgement-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-acknowledgement-preview-policy.md | controlled |
@@ -260,7 +336,7 @@
 | GPCF-DOC-044F1AC606 | GFIS Assistant Repair Read Receipt Notification Preview No-write 规则 | docs/gc-knowledge-fabric/gfis-assistant-repair-read-receipt-notification-preview-policy.md | controlled |
 | GPCF-DOC-A705FE83D1 | GFIS Assistant Repair Review Decision Draft No-write 规则 | docs/gc-knowledge-fabric/gfis-assistant-repair-review-decision-draft-policy.md | controlled |
 | GPCF-DOC-0214F1962A | GFIS Assistant Repair Submission Intake No-write 规则 | docs/gc-knowledge-fabric/gfis-assistant-repair-submission-intake-policy.md | controlled |
-| GPCF-DOC-79B503879D | GFIS Assistant WAES Guidance Packet No-write 规则 | docs/gc-knowledge-fabric/gfis-assistant-waes-guidance-packet-policy.md | controlled |
+| GPCF-DOC-79B503879D | GFIS Assistant WAME Guidance Packet No-write 规则 | docs/gc-knowledge-fabric/gfis-assistant-wame-guidance-packet-policy.md | controlled |
 | GPCF-DOC-AFAB25CFB3 | GC-Knowledge Fabric GFIS Document Acceptance Checklist 批量验收规则 | docs/gc-knowledge-fabric/gfis-document-acceptance-checklist-policy.md | controlled |
 | GPCF-DOC-6CE82BFD9A | GFIS Writeback Approval Preflight No-write Checklist 规则 | docs/gc-knowledge-fabric/gfis-writeback-approval-preflight-policy.md | controlled |
 | GPCF-DOC-23F8320542 | GFIS Writeback Candidate Batch Diff No-write 规则 | docs/gc-knowledge-fabric/gfis-writeback-candidate-batch-diff-policy.md | controlled |
@@ -269,10 +345,29 @@
 | GPCF-DOC-03A3C0DFE5 | GC-Knowledge Fabric Handler 到 Service Dry-run Preflight v0.1 | docs/gc-knowledge-fabric/handler-service-preflight-v0.1.md | controlled |
 | GPCF-DOC-24E496EEA0 | GC-Knowledge Fabric Handler Stub Envelope Contract v0.1 | docs/gc-knowledge-fabric/handler-stub-envelope-contract-v0.1.md | controlled |
 | GPCF-DOC-234FFF6184 | GC-Knowledge Fabric Handler Stub Negative Smoke v0.1 | docs/gc-knowledge-fabric/handler-stub-negative-smoke-v0.1.md | controlled |
+| GPCF-DOC-CB3D761E21 | GC-Knowledge Fabric Handler Stub Preview v0.1 | docs/gc-knowledge-fabric/handler-stub-preview-v0.1.md | controlled |
+| GPCF-DOC-0F8D7C00F5 | GC-Knowledge Fabric Handler Stub Runtime Smoke v0.1 | docs/gc-knowledge-fabric/handler-stub-runtime-smoke-v0.1.md | controlled |
+| GPCF-DOC-28C41FEC64 | GC-Knowledge Fabric P0 Harness Decision Template Dry-run v0.1 | docs/gc-knowledge-fabric/harness-decision-template-dry-run-v0.1.md | controlled |
 | GPCF-DOC-BA8E89A900 | GC-Knowledge Fabric P0 Harness Evidence Candidate Record Dry-run v0.1 | docs/gc-knowledge-fabric/harness-evidence-candidate-record-dry-run-v0.1.md | controlled |
 | GPCF-DOC-BF3BEDD74F | Harness Evidence 引用完整性规则 | docs/gc-knowledge-fabric/harness-evidence-integrity-policy.md | controlled |
 | GPCF-DOC-61855ADD43 | GC-Knowledge Fabric P0 Harness 治理审阅决策受理 dry-run v0.1 | docs/gc-knowledge-fabric/harness-governance-review-decision-intake-dry-run-v0.1.md | controlled |
+| GPCF-DOC-594578F209 | GC-Knowledge Fabric P0 Harness Review Input Packet Dry-run v0.1 | docs/gc-knowledge-fabric/harness-review-input-packet-dry-run-v0.1.md | controlled |
+| GPCF-DOC-8BC92E8C02 | GC-Knowledge Fabric P0 Human Review Checklist Dry-run v0.1 | docs/gc-knowledge-fabric/human-review-checklist-dry-run-v0.1.md | controlled |
+| GPCF-DOC-724F09025F | KDS ACL 与外部共享视图规则 | docs/gc-knowledge-fabric/kds-acl-external-share-policy.md | controlled |
+| GPCF-DOC-4EE3DDAB80 | GC-Knowledge Fabric KDS 十一池挂接规则 v0.1 | docs/gc-knowledge-fabric/kds-eleven-pool-binding-rule-v0.1.md | controlled |
+| GPCF-DOC-147F80FD46 | GC-Knowledge Fabric KDS Lifecycle Transition Audit Packet No-write 规则 | docs/gc-knowledge-fabric/kds-lifecycle-transition-audit-packet-policy.md | controlled |
+| GPCF-DOC-531DC02EE0 | GC-Knowledge Fabric KDS 状态候选更新 Dry-run 样例 v0.1 | docs/gc-knowledge-fabric/kds-state-candidate-update-dry-run-v0.1.md | controlled |
+| GPCF-DOC-1978124720 | KWE Action Validation Workpack No-write 规则 | docs/gc-knowledge-fabric/kwe-action-validation-workpack-policy.md | controlled |
+| GPCF-DOC-3620016ACE | KWE Approval Route Packet No-write 规则 | docs/gc-knowledge-fabric/kwe-approval-route-packet-policy.md | controlled |
 | GPCF-DOC-92B1885FB3 | GC-Knowledge Fabric KWE Confirmation Workpack 引用完整性规则 | docs/gc-knowledge-fabric/kwe-confirmation-workpack-policy.md | controlled |
+| GPCF-DOC-B7F62C3EA4 | GC-Knowledge Fabric KWE 最小流程 Dry-run 样例 v0.1 | docs/gc-knowledge-fabric/kwe-minimum-workflow-dry-run-v0.1.md | controlled |
+| GPCF-DOC-3BD549C1C1 | KWE Promotion Request No-write 规则 | docs/gc-knowledge-fabric/kwe-promotion-request-policy.md | controlled |
+| GPCF-DOC-9181F60312 | KWE Queue Action Intake Request No-write 规则 | docs/gc-knowledge-fabric/kwe-queue-action-intake-request-policy.md | controlled |
+| GPCF-DOC-GCKFLOOPDOCUMENTGATEFIXEDDOCIDDRIFTCHECKV01 | GC-Knowledge Fabric P0 Loop 文档门禁固定 doc_id 漂移检查 v0.1 | docs/gc-knowledge-fabric/loop-document-gate-fixed-doc-id-drift-check-v0.1.md | controlled |
+| GPCF-DOC-GCKFLOOPDOCUMENTGATEREASONSCHECKV01 | GC-Knowledge Fabric P0 Loop Document Gate Reasons Check v0.1 | docs/gc-knowledge-fabric/loop-document-gate-reasons-check-v0.1.md | controlled |
+| GPCF-DOC-2E5699ED35 | LOOP Record Schema 与 Next-action Closure Gate | docs/gc-knowledge-fabric/loop-record-closure-policy.md | controlled |
+| GPCF-DOC-AA6D94609E | GC-Knowledge Fabric 对象编号规则 v0.1 | docs/gc-knowledge-fabric/object-numbering-rule-v0.1.md | controlled |
+| GPCF-DOC-DC019A7580 | GC-Knowledge Fabric 核心对象关系与最小字段契约 | docs/gc-knowledge-fabric/object-relationship-policy.md | controlled |
 | GPCF-DOC-7DBBCBB955 | GC-Knowledge Fabric P0 启动包 v0.1 | docs/gc-knowledge-fabric/p0-startup-pack-v0.1.md | controlled |
 | GPCF-DOC-D23F122F5C | GC-Knowledge Fabric P0 两周执行任务排期表 v0.1 | docs/gc-knowledge-fabric/p0-two-week-execution-schedule-v0.1.md | controlled |
 | GPCF-DOC-565A8097A4 | GC-Knowledge Fabric 物理数据模型与 Migration Draft 矩阵 v0.1 | docs/gc-knowledge-fabric/physical-data-model-migration-draft-v0.1.md | controlled |
@@ -283,11 +378,16 @@
 | GPCF-DOC-558CE4DCB8 | GC-Knowledge Fabric P0 Rejection Archive Path Dry-run v0.1 | docs/gc-knowledge-fabric/rejection-archive-path-dry-run-v0.1.md | controlled |
 | GPCF-DOC-E7DFFC15E5 | GC-Knowledge Fabric P0 Repair Path Workpack Dry-run v0.1 | docs/gc-knowledge-fabric/repair-path-workpack-dry-run-v0.1.md | controlled |
 | GPCF-DOC-41D9234F52 | GC-Knowledge Fabric Repository / Service Dry-run 骨架 v0.1 | docs/gc-knowledge-fabric/repository-service-dry-run-skeleton-v0.1.md | controlled |
+| GPCF-DOC-3501DC0BDB | GC-Knowledge Fabric 需求确认纪要与 P0-P2 实施计划 v0.1 | docs/gc-knowledge-fabric/requirements-confirmation-and-p0-p2-implementation-plan-v0.1.md | controlled |
+| GPCF-DOC-EBE9E75E8B | Revenue Contribution Attribution Packet 归因包规则 | docs/gc-knowledge-fabric/revenue-contribution-attribution-packet-policy.md | controlled |
+| GPCF-DOC-B4EAB2D0DA | GC-Knowledge Fabric Route Adapter Dry-run Contract v0.1 | docs/gc-knowledge-fabric/route-adapter-dry-run-contract-v0.1.md | controlled |
 | GPCF-DOC-71DA0641E8 | GC-Knowledge Fabric 敏感资料 Metadata-only 存储契约 | docs/gc-knowledge-fabric/sensitive-metadata-storage-policy.md | controlled |
-| GPCF-DOC-56866C0959 | WAES Action Gate Precheck No-write 规则 | docs/gc-knowledge-fabric/waes-action-gate-precheck-policy.md | controlled |
-| GPCF-DOC-9B51263381 | GC-Knowledge Fabric WAES Gate 输入输出契约与 Hard-stop 规则 | docs/gc-knowledge-fabric/waes-gate-io-policy.md | controlled |
-| GPCF-DOC-19D7F0C3F0 | GC-Knowledge Fabric WAES 最小门禁 Dry-run 样例 v0.1 | docs/gc-knowledge-fabric/waes-minimum-dry-run-cases-v0.1.md | controlled |
-| GPCF-DOC-1946E4144B | WAES Precheck Bundle Read Model No-write 规则 | docs/gc-knowledge-fabric/waes-precheck-bundle-read-model-policy.md | controlled |
+| GPCF-DOC-C994E78BC6 | GC-Knowledge Fabric Shared Types 与 API Contract 对齐矩阵 v0.1 | docs/gc-knowledge-fabric/shared-types-api-contract-alignment-v0.1.md | controlled |
+| GPCF-DOC-E716105009 | GC-Knowledge Fabric 统一状态机与状态提升规则 | docs/gc-knowledge-fabric/status-machine-policy.md | controlled |
+| GPCF-DOC-56866C0959 | WAME Action Gate Precheck No-write 规则 | docs/gc-knowledge-fabric/wame-action-gate-precheck-policy.md | controlled |
+| GPCF-DOC-9B51263381 | GC-Knowledge Fabric WAME Gate 输入输出契约与 Hard-stop 规则 | docs/gc-knowledge-fabric/wame-gate-io-policy.md | controlled |
+| GPCF-DOC-19D7F0C3F0 | GC-Knowledge Fabric WAME 最小门禁 Dry-run 样例 v0.1 | docs/gc-knowledge-fabric/wame-minimum-dry-run-cases-v0.1.md | controlled |
+| GPCF-DOC-1946E4144B | WAME Precheck Bundle Read Model No-write 规则 | docs/gc-knowledge-fabric/wame-precheck-bundle-read-model-policy.md | controlled |
 | GPCF-DOC-CC2C02D1FB | governance | docs/governance/README.md | controlled |
 | GPCF-DOC-94532311B5 | GPCF 2.0 治理文件收敛清单 | docs/governance/gpcf-2-governance-file-inventory.md | controlled |
 | GPCF-DOC-12C308D619 | GPCF 2.0 实施基线 | docs/governance/gpcf-2-implementation.md | controlled |
@@ -313,8 +413,21 @@
 | GPCF-DOC-33DE44F307 | Agent-Reach Authoritative Source Verification 20260621 | docs/harness/evidence/agent-reach-authoritative-source-verification-20260621.md | controlled |
 | GPCF-DOC-AGENT-REACH-QUALITY-REGRESSION-20260622 | Agent-Reach Candidate Quality Regression Gate 2026-06-22 | docs/harness/evidence/agent-reach-candidate-quality-regression-gate-20260622.md | controlled |
 | GPCF-DOC-AGENT-REACH-QUALITY-TREND-20260622 | Agent-Reach Candidate Quality Trend Baseline 2026-06-22 | docs/harness/evidence/agent-reach-candidate-quality-trend-baseline-20260622.md | controlled |
+| GPCF-DOC-FF1E624F1E | Agent-Reach Candidate Search Replay Ledger 20260621 | docs/harness/evidence/agent-reach-candidate-search-replay-ledger-20260621.md | controlled |
+| GPCF-DOC-980866F10E | Agent-Reach Candidate Search Review Evidence 20260620 | docs/harness/evidence/agent-reach-candidate-search-review-20260620.md | controlled |
+| GPCF-DOC-80B184DFCE | Agent-Reach Exa授权包 evidence | docs/harness/evidence/agent-reach-exa-auth-pack-20260620.md | controlled |
+| GPCF-DOC-901EC6A452 | Agent-Reach Exa固定查询集benchmark evidence | docs/harness/evidence/agent-reach-exa-fixed-benchmark-20260620.md | controlled |
 | GPCF-DOC-CADCE617E6 | Agent-Reach Exa local pilot evidence | docs/harness/evidence/agent-reach-exa-local-pilot-20260620.md | controlled |
+| GPCF-DOC-ECA9896FC8 | Agent-Reach Exa local pilot执行门禁 evidence | docs/harness/evidence/agent-reach-exa-local-pilot-gate-20260620.md | controlled |
 | GPCF-DOC-AGENT-REACH-FULL-COVERAGE-MARKDOWN-DRIFT-MONITOR-20260626 | Agent-Reach Full Coverage Markdown 漂移监控 2026-06-26 | docs/harness/evidence/agent-reach-full-coverage-markdown-drift-monitor-20260626.md | controlled |
+| GPCF-DOC-AGENT-REACH-FULL-GOAL-20260622 | Agent-Reach Full Implementation Goal 2026-06-22 | docs/harness/evidence/agent-reach-full-implementation-goal-20260622.md | controlled |
+| GPCF-DOC-AGENT-REACH-GREEN-SUPPLY-CHAIN-PRIORITY-TARGETS-20260623 | Agent-Reach 绿色供应链重点搜索对象证据 2026-06-23 | docs/harness/evidence/agent-reach-green-supply-chain-priority-search-targets-20260623.md | controlled |
+| GPCF-DOC-3378C90628 | Agent-Reach Human Review Decisions 20260621 | docs/harness/evidence/agent-reach-human-review-decisions-20260621.md | controlled |
+| GPCF-DOC-22516238C0 | Agent-Reach L2 隔离PoC evidence | docs/harness/evidence/agent-reach-l2-poc-20260620.md | controlled |
+| GPCF-DOC-23C9EEDF9B | Agent-Reach L3 Candidate Pipeline Evidence 20260621 | docs/harness/evidence/agent-reach-l3-candidate-pipeline-20260621.md | controlled |
+| GPCF-DOC-AGENT-REACH-INGESTION-DRY-RUN-20260622 | Agent-Reach Limited Candidate Ingestion Dry-run Ledger 2026-06-22 | docs/harness/evidence/agent-reach-limited-candidate-ingestion-dry-run-ledger-20260622.md | controlled |
+| GPCF-DOC-AGENT-REACH-INGESTION-PLAN-20260622 | Agent-Reach Limited Candidate Ingestion Plan 2026-06-22 | docs/harness/evidence/agent-reach-limited-candidate-ingestion-plan-20260622.md | controlled |
+| GPCF-DOC-AGENT-REACH-P0-SOURCE-LOCK-20260622 | Agent-Reach P0 Source Lock 2026-06-22 | docs/harness/evidence/agent-reach-p0-source-lock-20260622.md | controlled |
 | GPCF-DOC-AGENT-REACH-P1-ISOLATED-INSTALL-20260622 | Agent-Reach P1 隔离安装证据 2026-06-22 | docs/harness/evidence/agent-reach-p1-isolated-install-20260622.md | controlled |
 | GPCF-DOC-AGENT-REACH-P2-CONTROLLED-ADAPTER-20260622 | Agent-Reach P2 受控 Adapter Skeleton 证据 2026-06-22 | docs/harness/evidence/agent-reach-p2-controlled-adapter-skeleton-20260622.md | controlled |
 | GPCF-DOC-AGENT-REACH-P3-QUALITY-REPLAY-HARNESS-20260622 | Agent-Reach P3 离线质量 Replay Harness 证据 2026-06-22 | docs/harness/evidence/agent-reach-p3-quality-replay-harness-20260622.md | controlled |
@@ -377,7 +490,7 @@
 | GPCF-DOC-AGENT-REACH-PROJECT-GROUP-FULL-LIVE-COVERAGE-PLAN-20260622 | Agent-Reach Project Group Full Live Coverage Plan 2026-06-22 | docs/harness/evidence/agent-reach-project-group-full-live-coverage-plan-20260622.md | controlled |
 | GPCF-DOC-AGENT-REACH-PROJECT-GROUP-SEARCH-READINESS-AUDIT-20260622 | Agent-Reach Project Group Search Readiness Audit 2026-06-22 | docs/harness/evidence/agent-reach-project-group-search-readiness-audit-20260622.md | controlled |
 | GPCF-DOC-AGENT-REACH-RECENTER-20260622 | Agent-Reach Recenter Evidence 2026-06-22 | docs/harness/evidence/agent-reach-recenter-20260622.md | controlled |
-| GPCF-DOC-06F87D27BD | Agent-Reach WAES KDS Candidate Review Queue 20260621 | docs/harness/evidence/agent-reach-waes-kds-candidate-review-queue-20260621.md | controlled |
+| GPCF-DOC-06F87D27BD | Agent-Reach WAME KDS Candidate Review Queue 20260621 | docs/harness/evidence/agent-reach-wame-kds-candidate-review-queue-20260621.md | controlled |
 | GPCF-DOC-B2FEDB1128 | Agent-Reach零配置渠道修复验证 evidence | docs/harness/evidence/agent-reach-zero-config-repair-20260620.md | controlled |
 | GPCF-DOC-C2604C8E02 | Architecture OKF v0.1 Derived Bundle Report | docs/harness/evidence/architecture-okf-v01-bundle-report-20260620.md | controlled |
 | GPCF-DOC-CF3A246F25 | 基础知识闭环评分试运行汇总 | docs/harness/evidence/base-knowledge-closure-score-dry-run-summary-20260618.md | controlled |
@@ -390,6 +503,7 @@
 | GPCF-DOC-C13F879695 | 基础知识回写候选账本 | docs/harness/evidence/base-knowledge-writeback-candidate-ledger-20260618.md | controlled |
 | GPCF-DOC-DOMAIN-SLICE-REGISTRY-GREENCHAIN-GRAPH-20261011 | 业务域切片登记（GreenChainGraphBusinessDomain）· 2026-10-11 | docs/harness/evidence/business-domain-slice-registry-greenchain-graph-20261011.md | controlled |
 | GPCF-DOC-4E29A86D95 | CodeGraph Brain/GFIS 授权边界复核 | docs/harness/evidence/codegraph-brain-gfis-authorization-boundary-20260623.md | controlled |
+| GPCF-DOC-C8BB19E987 | CodeGraph 开发执行授权等待态证据 | docs/harness/evidence/codegraph-dev-execution-authorization-waiting-20260622.md | controlled |
 | GPCF-DOC-CODEGRAPH-DEV-EXECUTION-BENEFIT-PROOF-20260626 | CodeGraph 开发执行层收益证明 2026-06-26 | docs/harness/evidence/codegraph-dev-execution-benefit-proof-20260626.md | controlled |
 | GPCF-DOC-CODEGRAPH-DEV-EXECUTION-BENEFIT-REGRESSION-WATCH-20260626 | CodeGraph 开发执行层收益回归监控 2026-06-26 | docs/harness/evidence/codegraph-dev-execution-benefit-regression-watch-20260626.md | controlled |
 | GPCF-DOC-CODEGRAPH-DEV-EXECUTION-BUSINESS-EXECUTION-WINDOW-GRANT-20260623 | CodeGraph 业务开发执行窗口授予证据 | docs/harness/evidence/codegraph-dev-execution-business-execution-window-grant-20260623.md | controlled |
@@ -397,6 +511,7 @@
 | GPCF-DOC-CODEGRAPH-DEV-EXECUTION-DISPATCH-AUTHORIZATION-ANSWER-RESUMED-20260626 | CodeGraph 开发执行层派发授权回答恢复记录 2026-06-26 | docs/harness/evidence/codegraph-dev-execution-dispatch-authorization-answer-resumed-20260626.md | controlled |
 | GPCF-DOC-CODEGRAPH-DEV-EXECUTION-DISPATCH-PRECHECK-DETAIL-INTAKE-20260626 | CodeGraph 开发执行层派发预检详情 Intake 2026-06-26 | docs/harness/evidence/codegraph-dev-execution-dispatch-precheck-detail-intake-20260626.md | controlled |
 | GPCF-DOC-CODEGRAPH-DEV-EXECUTION-DISPATCH-SENSITIVE-REVIEW-20260626 | CodeGraph 开发执行层派发敏感数据审查 2026-06-26 | docs/harness/evidence/codegraph-dev-execution-dispatch-sensitive-review-20260626.md | controlled |
+| GPCF-DOC-C7B06F23A9 | CodeGraph 首个真实业务候选授权包 | docs/harness/evidence/codegraph-dev-execution-first-real-candidate-authorization-20260622.md | controlled |
 | GPCF-DOC-F787D5A4F3 | CodeGraph 首个真实候选授权执行 | docs/harness/evidence/codegraph-dev-execution-first-real-candidate-authorized-20260622.md | controlled |
 | GPCF-DOC-68559C2B7E | GFIS Residual Drift Evidence | docs/harness/evidence/codegraph-dev-execution-gfis-residual-drift-20260622.md | controlled |
 | GPCF-DOC-CODEGRAPH-DEV-EXECUTION-GOAL-COMPLETION-AUDIT-20260626 | CodeGraph 开发执行层目标完成度审计 2026-06-26 | docs/harness/evidence/codegraph-dev-execution-goal-completion-audit-20260626.md | controlled |
@@ -404,23 +519,35 @@
 | GPCF-DOC-C4EB23909A | CodeGraph 业务开发执行层 Pilot Pack 证据 | docs/harness/evidence/codegraph-dev-execution-pilot-pack-20260622.md | controlled |
 | GPCF-DOC-CODEGRAPH-DEV-EXECUTION-REAL-INPUT-AUTHORIZATION-WAITING-20260626 | CodeGraph 开发执行层真实输入授权等待态 2026-06-26 | docs/harness/evidence/codegraph-dev-execution-real-input-authorization-waiting-20260626.md | controlled |
 | GPCF-DOC-CODEGRAPH-DEV-EXECUTION-REAL-INPUT-COLLECTION-PACK-20260626 | CodeGraph 开发执行层真实输入采集包 2026-06-26 | docs/harness/evidence/codegraph-dev-execution-real-input-collection-pack-20260626.md | controlled |
+| GPCF-DOC-CODEGRAPH-DEV-EXECUTION-REAL-INPUT-DISPATCH-AUTHORIZATION-20260626 | CodeGraph 开发执行层真实输入派发授权请求 2026-06-26 | docs/harness/evidence/codegraph-dev-execution-real-input-dispatch-authorization-20260626.md | controlled |
 | GPCF-DOC-CODEGRAPH-DEV-EXECUTION-REAL-INPUT-READINESS-20260626 | CodeGraph 开发执行层真实输入准入验证 2026-06-26 | docs/harness/evidence/codegraph-dev-execution-real-input-readiness-20260626.md | controlled |
 | GPCF-DOC-F77CE8F66C | CodeGraph 开发执行层稳态监控证据 | docs/harness/evidence/codegraph-dev-execution-steady-state-monitor-20260622.md | controlled |
 | GPCF-DOC-2B8C8B68C2 | CodeGraph watchlist 授权包 | docs/harness/evidence/codegraph-dev-execution-watchlist-authorization-pack-20260622.md | controlled |
+| GPCF-DOC-1EC63249AE | CodeGraph 开发执行层 watchlist 漂移分诊证据 | docs/harness/evidence/codegraph-dev-execution-watchlist-drift-triage-20260622.md | controlled |
 | GPCF-DOC-CODEGRAPH-DEVELOPMENT-STATE-NORMAL-WORK-20260626 | CodeGraph 开发态正常工作验证 2026-06-26 | docs/harness/evidence/codegraph-development-state-normal-work-20260626.md | controlled |
 | GPCF-DOC-43BA653EFB | CodeGraph Drift Alert Thresholds Evidence | docs/harness/evidence/codegraph-drift-alert-thresholds-20260621.md | controlled |
 | GPCF-DOC-82A9FD6319 | CodeGraph Impact Metrics Baseline Evidence | docs/harness/evidence/codegraph-impact-metrics-baseline-20260621.md | controlled |
+| GPCF-DOC-DCD5E4AA37 | CodeGraph Impact Regression Watch Evidence | docs/harness/evidence/codegraph-impact-regression-watch-20260621.md | controlled |
+| GPCF-DOC-6C2F2CC1ED | CodeGraph Impact Report Dry-run Evidence | docs/harness/evidence/codegraph-impact-report-dry-run-20260621.md | controlled |
+| GPCF-DOC-0B6826B488 | CodeGraph KDS mirror scope review 授权复核 | docs/harness/evidence/codegraph-kds-mirror-scope-review-authorization-20260622.md | controlled |
 | GPCF-DOC-DA0B8578AF | CodeGraph 项目群全量覆盖证据 | docs/harness/evidence/codegraph-project-group-full-coverage-20260621.md | controlled |
+| GPCF-DOC-2BB0310392 | CodeGraph Project Group Steady State Recheck Evidence | docs/harness/evidence/codegraph-project-group-steady-state-recheck-20260621.md | controlled |
 | GPCF-DOC-769242C3DB | CodeGraph Project Group Steady State Recheck Evidence 20260622 | docs/harness/evidence/codegraph-project-group-steady-state-recheck-20260622.md | controlled |
 | GPCF-DOC-0D6920E7D2 | CodeGraph 项目群稳态验证证据 | docs/harness/evidence/codegraph-project-group-steady-state-verify-20260621.md | controlled |
+| GPCF-DOC-70F4794A51 | CodeGraph 当前会话任务总结与声明控制边界 | docs/harness/evidence/codegraph-session-declaration-boundary-20260622.md | controlled |
 | GPCF-DOC-5CF2361DE8 | CodeGraph Studio sync-only precheck 证据 | docs/harness/evidence/codegraph-studio-sync-only-precheck-20260622.md | controlled |
 | GPCF-DOC-24E6A9A471 | CodeGraph Sync 授权包证据 | docs/harness/evidence/codegraph-sync-authorization-pack-20260621.md | controlled |
 | GPCF-DOC-9940064EF2 | CodeGraph Sync-only Closure Authorization Blocked Evidence | docs/harness/evidence/codegraph-sync-only-closure-authorization-blocked-20260621.md | controlled |
 | GPCF-DOC-78E2051FFD | CodeGraph Sync-only Closure Authorized Evidence | docs/harness/evidence/codegraph-sync-only-closure-authorized-20260621.md | controlled |
 | GPCF-DOC-61F5839244 | CodeGraph watchlist post-Studio 监控证据 | docs/harness/evidence/codegraph-watchlist-post-studio-monitor-20260622.md | controlled |
+| GPCF-DOC-4D7F2B9020 | CodeGraph watchlist steady monitor 20260623 | docs/harness/evidence/codegraph-watchlist-steady-monitor-20260623.md | controlled |
+| GPCF-DOC-89B4FED3DA | CodeGraph Watchlist Sync Authorization Pack Evidence | docs/harness/evidence/codegraph-watchlist-sync-authorization-pack-20260621.md | controlled |
 | GPCF-DOC-5558944E2C | CodeGraph Watchlist Sync-only Closure Authorized Evidence | docs/harness/evidence/codegraph-watchlist-sync-only-closure-authorized-20260622.md | controlled |
+| GPCF-DOC-481D44CB8A | CodeGraph Watchlist Sync Plan Evidence | docs/harness/evidence/codegraph-watchlist-sync-plan-20260621.md | controlled |
+| GPCF-DOC-FB9A023039 | CodeGraph Watchlist Threshold Review 2026-06-22 | docs/harness/evidence/codegraph-watchlist-threshold-review-20260622.md | controlled |
 | GPCF-DOC-7B2E61A9D4 | Current Session Mainline Declaration 20260622 | docs/harness/evidence/current-session-mainline-declaration-20260622.md | controlled |
 | GPCF-DOC-CWME-SPACE-DOMAIN-EXTENSION-REGISTRATION-REQUEST-20261011 | CWME 城市空间域扩展包登记请求 2026-10-11 | docs/harness/evidence/cwme-space-domain-extension-registration-request-20261011.md | controlled |
+| GPCF-DOC-DOMAIN-EXTENSION-PACK-REGISTRY-CWME-SPACE-20261012 | 域扩展包登记（CWME 城市空间域扩展包）· 2026-10-12 | docs/harness/evidence/domain-extension-pack-registry-cwme-space-20261012.md | controlled |
 | GPCF-DOC-GCKFP0CLOSUREPACKETCANDIDATED12420260622 | GCKF P0 收口包候选证据 D124 | docs/harness/evidence/gckf-p0-closure-packet-candidate-d124-20260622.md | controlled |
 | GPCF-DOC-GCKFP0CLOSUREPACKETPRECHECKD12320260622 | GCKF P0 收口包预检查证据 D123 | docs/harness/evidence/gckf-p0-closure-packet-precheck-d123-20260622.md | controlled |
 | GPCF-DOC-GCKFP0SKELETONBASELINED12220260622 | GCKF P0 骨架基线证据 D122 | docs/harness/evidence/gckf-p0-skeleton-baseline-d122-20260622.md | controlled |
@@ -429,6 +556,7 @@
 | GPCF-DOC-GFIS-DIRTY-STAGE-COMMIT-AUTH-20260628 | GFIS dirty evidence stage commit authorization request 2026-06-28 | docs/harness/evidence/gfis-dirty-evidence-stage-commit-authorization-request-20260628.md | controlled |
 | GPCF-DOC-DE35E75C5A | GFIS 负责人回执任务台账 | docs/harness/evidence/gfis-owner-receipt-task-ledger-20260617.md | controlled |
 | GPCF-DOC-3FAF2E3718 | GFIS WAS Source Record Admission Gate Evidence | docs/harness/evidence/gfis-was-source-record-admission-gate-20260621.md | controlled |
+| GPCF-DOC-89DF4CBBFA | Git 风险分类报告 | docs/harness/evidence/git-risk-classification-20260617.md | controlled |
 | GPCF-EVIDENCE-ICP-REGISTRATION-20260712 | GlobalCloud ICP 项目群候选登记证据 | docs/harness/evidence/globalcloud-icp-registration-20260712.md | controlled |
 | GPCF-DOC-LOOP-DOCUMENT-GATE-READINESS-RETRY-HARDENING-20260626 | GlobalCloud Loop Document Gate Readiness 重试硬化证据 2026-06-26 | docs/harness/evidence/globalcloud-loop-document-gate-readiness-retry-hardening-20260626.md | controlled |
 | GPCF-DOC-PROJECT-GROUP-AUTHORIZATION-PRE-EXECUTION-COMMAND-PACK-20260626 | GlobalCloud 项目群授权项执行前命令包 2026-06-26 | docs/harness/evidence/globalcloud-project-group-authorization-pre-execution-command-pack-20260626.md | controlled |
@@ -485,6 +613,8 @@
 | GPCF-DOC-HEADROOM-LCX-L35-CONTROLLED-SANITIZED-PILOT-WINDOW-20260622 | Headroom LCX L3.5 受控脱敏试点窗口 | docs/harness/evidence/headroom-lcx-l35-controlled-sanitized-pilot-window-20260622.md | controlled |
 | GPCF-DOC-HEADROOM-LCX-L35-MULTI-WINDOW-STABILITY-20260622 | Headroom LCX L3.5 多窗口脱敏稳定性证据 | docs/harness/evidence/headroom-lcx-l35-multi-window-stability-20260622.md | controlled |
 | GPCF-DOC-54C01FA442 | Headroom LCX Measurement Admission Request 20260622 | docs/harness/evidence/headroom-lcx-measurement-admission-request-20260622.md | controlled |
+| GPCF-DOC-0F02316005 | Headroom LCX P0 Runtime Replay Evidence | docs/harness/evidence/headroom-lcx-p0-runtime-replay-20260621.md | controlled |
+| GPCF-DOC-22C297756A | Headroom LCX P1 Proxy Dry-run Smoke Evidence | docs/harness/evidence/headroom-lcx-p1-proxy-dry-run-smoke-20260621.md | controlled |
 | GPCF-DOC-D754FEE0EB | Headroom LCX P3 learn preview 工作记忆门禁证据 | docs/harness/evidence/headroom-lcx-p3-learn-preview-working-memory-gate-20260621.md | controlled |
 | GPCF-DOC-3278429C0F | Headroom LCX P4 Output Shaper Profile Gate Evidence | docs/harness/evidence/headroom-lcx-p4-output-shaper-profile-gate-20260621.md | controlled |
 | GPCF-DOC-FA6CBD2283 | Headroom LCX P5 Production Admission Package Evidence | docs/harness/evidence/headroom-lcx-p5-production-admission-package-20260621.md | controlled |
@@ -505,9 +635,9 @@
 | GPCF-DOC-A1E6CF72D2 | Headroom LCX Sanitized Measurement Dry Run Evidence 20260622 | docs/harness/evidence/headroom-lcx-sanitized-measurement-dry-run-20260622.md | controlled |
 | GPCF-DOC-HEADROOM-LCX-SANITIZED-TOKEN-FIXTURE-EXTENSION-20260622 | Headroom LCX Sanitized Token Fixture Extension Evidence | docs/harness/evidence/headroom-lcx-sanitized-token-fixture-extension-20260622.md | controlled |
 | GPCF-DOC-0EF0B535FC | Headroom LCX Session Summary Declaration Boundary Evidence | docs/harness/evidence/headroom-lcx-session-summary-declaration-boundary-20260622.md | controlled |
-| GPCF-DOC-HEADROOM-LCX-WAES-HARNESS-FINAL-RECEIPT-DECISION-HUMAN-FILL-REQUEST-20260623 | Headroom LCX WAES Harness Final Receipt Decision Human Fill Request | docs/harness/evidence/headroom-lcx-waes-harness-final-receipt-decision-human-fill-request-20260623.md | controlled |
-| GPCF-DOC-HEADROOM-LCX-WAES-HARNESS-FINAL-RECEIPT-DECISION-REQUEST-20260623 | Headroom LCX WAES Harness Final Receipt Decision Request | docs/harness/evidence/headroom-lcx-waes-harness-final-receipt-decision-request-20260623.md | controlled |
-| GPCF-DOC-HEADROOM-LCX-WAES-HARNESS-FINAL-RECEIPT-DECISION-RESPONSE-TEMPLATE-20260623 | Headroom LCX WAES Harness Final Receipt Decision Response Template | docs/harness/evidence/headroom-lcx-waes-harness-final-receipt-decision-response-template-20260623.md | controlled |
+| GPCF-DOC-HEADROOM-LCX-WAME-HARNESS-FINAL-RECEIPT-DECISION-HUMAN-FILL-REQUEST-20260623 | Headroom LCX WAME Harness Final Receipt Decision Human Fill Request | docs/harness/evidence/headroom-lcx-wame-harness-final-receipt-decision-human-fill-request-20260623.md | controlled |
+| GPCF-DOC-HEADROOM-LCX-WAME-HARNESS-FINAL-RECEIPT-DECISION-REQUEST-20260623 | Headroom LCX WAME Harness Final Receipt Decision Request | docs/harness/evidence/headroom-lcx-wame-harness-final-receipt-decision-request-20260623.md | controlled |
+| GPCF-DOC-HEADROOM-LCX-WAME-HARNESS-FINAL-RECEIPT-DECISION-RESPONSE-TEMPLATE-20260623 | Headroom LCX WAME Harness Final Receipt Decision Response Template | docs/harness/evidence/headroom-lcx-wame-harness-final-receipt-decision-response-template-20260623.md | controlled |
 | GPCF-DOC-0058E113EE | Headroom Loop Cost Observation Evidence | docs/harness/evidence/headroom-loop-cost-observation-20260621.md | controlled |
 | GPCF-DOC-C82995EACD | Headroom Loop Cost Observation Series Evidence | docs/harness/evidence/headroom-loop-cost-observation-series-20260621.md | controlled |
 | GPCF-DOC-BEAC22ACA5 | Headroom Marker Preservation Policy Evidence | docs/harness/evidence/headroom-marker-preservation-policy-20260621.md | controlled |
@@ -556,6 +686,7 @@
 | GPCF-DOC-FIVE-DIRECTION-FULL-SUMMARY-001 | LOOP 运行控制闭环全量总结 20260622 | docs/harness/evidence/loop-five-direction-full-summary-20260622.md | controlled |
 | GPCF-DOC-FIVE-DIRECTION-RUN-EVID-001 | Loop 五方向 RUN-001 运行证据 | docs/harness/evidence/loop-five-direction-run-001-20260622.md | controlled |
 | GPCF-DOC-FIVE-DIRECTION-STANDING-SMOKE-EVIDENCE-001 | Loop Five Direction Standing Adoption Smoke Evidence 20260622 | docs/harness/evidence/loop-five-direction-standing-smoke-20260622.md | controlled |
+| GPCF-DOC-21CF5F6F10 | Loop Governance Dashboard Evidence | docs/harness/evidence/loop-governance-dashboard-20260617.md | controlled |
 | GPCF-DOC-28A638C09E | Loop 治理阶段目标证据 | docs/harness/evidence/loop-governance-phase-goal-20260617.md | controlled |
 | GPCF-DOC-1750E1606B | Loop 治理序列检查点证据 | docs/harness/evidence/loop-governance-sequence-checkpoint-20260619.md | controlled |
 | GPCF-DOC-F8461F5919 | Loop 治理 truth-field 审查证据 | docs/harness/evidence/loop-governance-truth-field-review-20260617.md | controlled |
@@ -586,10 +717,10 @@
 | GPCF-DOC-FB59ECF423 | OKF v0.1 集合门禁证据 | docs/harness/evidence/okf-v01-collection-gate-20260620.md | controlled |
 | GPCF-DOC-0EFDA19AF2 | OKF v0.1 消费基准证据 | docs/harness/evidence/okf-v01-consumption-benchmark-20260620.md | controlled |
 | GPCF-DOC-9B884D2365 | OKF v0.1 关系图谱证据 | docs/harness/evidence/okf-v01-relationship-graph-20260620.md | controlled |
-| GPCF-DOC-9E8541129C | OKF v0.1 摘要准入门禁证据 | docs/harness/evidence/okf-v01-summary-admission-gate-20260620.md | controlled |
+| GPCF-DOC-9E8541129C | OKF v0.1 Summary Admission Gate Evidence | docs/harness/evidence/okf-v01-summary-admission-gate-20260620.md | controlled |
 | GPCF-DOC-05D0ED7A3D | OKF v0.1 摘要准入台账 | docs/harness/evidence/okf-v01-summary-admission-ledger-20260620.md | controlled |
 | GPCF-DOC-78D34088CD | OKF v0.1 摘要批准请求 OKF-SUM-20260620-001 | docs/harness/evidence/okf-v01-summary-approval-request-OKF-SUM-20260620-001.md | controlled |
-| GPCF-DOC-41C37C2200 | OKF v0.1 摘要批准请求门禁 | docs/harness/evidence/okf-v01-summary-approval-request-gate-20260620.md | controlled |
+| GPCF-DOC-41C37C2200 | OKF v0.1 Summary Approval Request Gate | docs/harness/evidence/okf-v01-summary-approval-request-gate-20260620.md | controlled |
 | GPCF-DOC-1E7BD1A705 | Ontology WAS 3H Implementation Goals Evidence | docs/harness/evidence/ontology-was-3h-implementation-goals-20260621.md | controlled |
 | GPCF-DOC-B3ABDDC956 | Ontology/WAS 3 小时实施 P0 启动校准证据 | docs/harness/evidence/ontology-was-3h-p0-start-20260621.md | controlled |
 | GPCF-DOC-90C8663294 | Ontology/WAS 3 小时实施 P1 Source Record 准备度证据 | docs/harness/evidence/ontology-was-3h-p1-source-record-readiness-20260621.md | controlled |
@@ -599,17 +730,22 @@
 | GPCF-DOC-3A9B82D614 | Session Mainline Drift Watch 20260622 | docs/harness/evidence/session-mainline-drift-watch-20260622.md | controlled |
 | GPCF-DOC-SESSION-HANDOFF-REQUEST-GATE-20260622 | Session Mainline Handoff Request Gate 20260622 | docs/harness/evidence/session-mainline-handoff-request-gate-20260622.md | controlled |
 | GPCF-DOC-1F8C4D6B21 | Session Mainline Preflight Enforcement 20260622 | docs/harness/evidence/session-mainline-preflight-enforcement-20260622.md | controlled |
-| GPCF-EVIDENCE-STUDIO-WAES-WORKBENCH-THREE-OPTION-DESIGN-20260626 | Studio WAES Workbench Three Option Design Evidence | docs/harness/evidence/studio-waes-workbench-three-option-design-20260626.md | controlled |
+| GPCF-EVIDENCE-STUDIO-WAME-WORKBENCH-THREE-OPTION-DESIGN-20260626 | Studio WAME Workbench Three Option Design Evidence | docs/harness/evidence/studio-wame-workbench-three-option-design-20260626.md | controlled |
 | GPCF-DOC-35411435D9 | WAS Completion Audit Evidence | docs/harness/evidence/was-completion-audit-20260621.md | controlled |
+| GPCF-DOC-FE2C0C050F | WAS Loop Context Coverage Refresh Evidence | docs/harness/evidence/was-loop-context-coverage-refresh-20260621.md | controlled |
+| GPCF-DOC-1F4A26731F | WAS Project Group Admission Evidence | docs/harness/evidence/was-project-group-admission-20260621.md | controlled |
 | GPCF-DOC-D295269E5B | WAS Project Group Ontology Registry Evidence | docs/harness/evidence/was-project-group-ontology-registry-20260621.md | controlled |
-| GPCF-DOC-A1C8A72190 | was-real-source-record-candidate-precheck-20260621 | docs/harness/evidence/was-real-source-record-candidate-precheck-20260621.md | controlled |
+| GPCF-DOC-A1C8A72190 | WAS Real Source Record Candidate Precheck Evidence | docs/harness/evidence/was-real-source-record-candidate-precheck-20260621.md | controlled |
 | GPCF-DOC-D3F52A7283 | WAS 真实来源记录候选预检执行 003 证据 | docs/harness/evidence/was-real-source-record-candidate-precheck-execution-003-20260622.md | controlled |
+| GPCF-DOC-F5B74C9404 | WAS 真实来源记录候选预检执行 004 证据 | docs/harness/evidence/was-real-source-record-candidate-precheck-execution-004-20260622.md | controlled |
+| GPCF-DOC-4B8C7D0E05 | WAS 真实来源记录候选预检执行 005 证据 | docs/harness/evidence/was-real-source-record-candidate-precheck-execution-005-20260622.md | controlled |
 | GPCF-DOC-51A6C90006 | WAS 真实来源记录候选预检执行 006 证据 | docs/harness/evidence/was-real-source-record-candidate-precheck-execution-006-20260622.md | controlled |
 | GPCF-DOC-51A6C90007 | WAS 真实来源记录候选预检执行 007 证据 | docs/harness/evidence/was-real-source-record-candidate-precheck-execution-007-20260622.md | controlled |
 | GPCF-DOC-51A6C90008 | WAS 真实来源记录候选预检执行 008 证据 | docs/harness/evidence/was-real-source-record-candidate-precheck-execution-008-20260622.md | controlled |
 | GPCF-DOC-51A6C90009 | WAS 真实来源记录候选预检执行 009 证据 | docs/harness/evidence/was-real-source-record-candidate-precheck-execution-009-20260622.md | controlled |
 | GPCF-DOC-51A6C90010 | WAS 真实来源记录候选预检执行 010 证据 | docs/harness/evidence/was-real-source-record-candidate-precheck-execution-010-20260622.md | controlled |
 | GPCF-DOC-51A6C90015 | WAS 真实来源记录候选预检执行 015 证据 | docs/harness/evidence/was-real-source-record-candidate-precheck-execution-015-20260623.md | controlled |
+| GPCF-DOC-1E408CB4A5 | WAS 真实源记录候选预检执行证据 | docs/harness/evidence/was-real-source-record-candidate-precheck-execution-20260622.md | controlled |
 | GPCF-DOC-7912E02317 | WAS Real Source Record Monitor 003 Evidence | docs/harness/evidence/was-real-source-record-monitor-003-20260621.md | controlled |
 | GPCF-DOC-342D34B205 | WAS Real Source Record Monitor 004 Evidence | docs/harness/evidence/was-real-source-record-monitor-004-20260621.md | controlled |
 | GPCF-DOC-46FDE10F43 | WAS Real Source Record Monitor 005 Evidence | docs/harness/evidence/was-real-source-record-monitor-005-20260621.md | controlled |
@@ -663,15 +799,23 @@
 | GPCF-DOC-6C0AA90056 | WAS Real Source Record Monitor 056 证据 | docs/harness/evidence/was-real-source-record-monitor-056-20260622.md | controlled |
 | GPCF-DOC-6C0AA90057 | WAS Real Source Record Monitor 057 证据 | docs/harness/evidence/was-real-source-record-monitor-057-20260622.md | controlled |
 | GPCF-DOC-6C0AA90058 | WAS Real Source Record Monitor 058 证据 | docs/harness/evidence/was-real-source-record-monitor-058-20260622.md | controlled |
+| GPCF-DOC-6C0AA90059 | WAS Real Source Record Monitor 059 证据 | docs/harness/evidence/was-real-source-record-monitor-059-20260622.md | controlled |
 | GPCF-DOC-6C0AA90060 | WAS Real Source Record Monitor 060 证据 | docs/harness/evidence/was-real-source-record-monitor-060-20260622.md | controlled |
+| GPCF-DOC-6C0AA90061 | WAS Real Source Record Monitor 061 证据 | docs/harness/evidence/was-real-source-record-monitor-061-20260622.md | controlled |
+| GPCF-DOC-6C0AA90062 | WAS Real Source Record Monitor 062 证据 | docs/harness/evidence/was-real-source-record-monitor-062-20260622.md | controlled |
 | GPCF-DOC-6C0AA90063 | WAS Real Source Record Monitor 063 证据 | docs/harness/evidence/was-real-source-record-monitor-063-20260622.md | controlled |
+| GPCF-DOC-6C0AA90064 | WAS Real Source Record Monitor 064 证据 | docs/harness/evidence/was-real-source-record-monitor-064-20260622.md | controlled |
+| GPCF-DOC-6C0AA90065 | WAS Real Source Record Monitor 065 证据 | docs/harness/evidence/was-real-source-record-monitor-065-20260622.md | controlled |
 | GPCF-DOC-6C0AA90066 | WAS Real Source Record Monitor 066 证据 | docs/harness/evidence/was-real-source-record-monitor-066-20260622.md | controlled |
+| GPCF-DOC-6C0AA90067 | WAS Real Source Record Monitor 067 证据 | docs/harness/evidence/was-real-source-record-monitor-067-20260622.md | controlled |
 | GPCF-DOC-6C0AA90068 | WAS Real Source Record Monitor 068 证据 | docs/harness/evidence/was-real-source-record-monitor-068-20260622.md | controlled |
 | GPCF-DOC-6C0AA90069 | WAS Real Source Record Monitor 069 证据 | docs/harness/evidence/was-real-source-record-monitor-069-20260622.md | controlled |
 | GPCF-DOC-6C0AA90070 | WAS Real Source Record Monitor 070 证据 | docs/harness/evidence/was-real-source-record-monitor-070-20260622.md | controlled |
 | GPCF-DOC-6C0AA90071 | WAS Real Source Record Monitor 071 证据 | docs/harness/evidence/was-real-source-record-monitor-071-20260622.md | controlled |
 | GPCF-DOC-6C0AA90072 | WAS Real Source Record Monitor 072 证据 | docs/harness/evidence/was-real-source-record-monitor-072-20260622.md | controlled |
+| GPCF-DOC-6C0AA90073 | WAS Real Source Record Monitor 073 证据 | docs/harness/evidence/was-real-source-record-monitor-073-20260622.md | controlled |
 | GPCF-DOC-6C0AA90074 | WAS Real Source Record Monitor 074 证据 | docs/harness/evidence/was-real-source-record-monitor-074-20260622.md | controlled |
+| GPCF-DOC-6C0AA90075 | WAS Real Source Record Monitor 075 证据 | docs/harness/evidence/was-real-source-record-monitor-075-20260622.md | controlled |
 | GPCF-DOC-6C0AA90076 | WAS Real Source Record Monitor 076 证据 | docs/harness/evidence/was-real-source-record-monitor-076-20260622.md | controlled |
 | GPCF-DOC-6C0AA90077 | WAS Real Source Record Monitor 077 证据 | docs/harness/evidence/was-real-source-record-monitor-077-20260622.md | controlled |
 | GPCF-DOC-6C0AA90078 | WAS Real Source Record Monitor 078 证据 | docs/harness/evidence/was-real-source-record-monitor-078-20260622.md | controlled |
@@ -700,29 +844,47 @@
 | GPCF-DOC-87EE29147B | WAS Real Source Record Waiting Room Evidence | docs/harness/evidence/was-real-source-record-waiting-room-20260621.md | controlled |
 | GPCF-DOC-1F7DEFD3F1 | WAS Scenario Profile Matrix Evidence | docs/harness/evidence/was-scenario-profile-matrix-20260621.md | controlled |
 | GPCF-DOC-2B1B5A8C55 | WAS Status Matrix Control Board Refresh Evidence | docs/harness/evidence/was-status-matrix-control-board-refresh-20260621.md | controlled |
-| GPCF-DOC-A1617A5806 | WAS-Ontology WAES/KDS/RAG/Writeback Gate Pack Evidence | docs/harness/evidence/was-waes-kds-rag-writeback-gate-pack-20260621.md | controlled |
+| GPCF-DOC-A1617A5806 | WAS-Ontology WAME/KDS/RAG/Writeback Gate Pack Evidence | docs/harness/evidence/was-wame-kds-rag-writeback-gate-pack-20260621.md | controlled |
 | GPCF-DOC-WAS-XWAIL-ONTOLOGY-MAPPING-20260625 | WAS-XWAIL-Ontology 映射证据 2026-06-25 | docs/harness/evidence/was-xwail-ontology-mapping-20260625.md | controlled |
 | GPCF-DOC-ZCODE-COLLAB-20260709 | GlobalCloud 项目群 ZCode + Codex 协同工作方案 | docs/harness/globalcloud-zcode-codex-collaboration-scheme.md | controlled |
+| GPCF-DOC-E60D35F595 | 12 项目文档控制队列 | docs/harness/gpcf-12-project-document-control-queue-lr013.md | controlled |
 | GPCF-DOC-D7809CB67F | 12 项目 Loop 准备度基线重算 | docs/harness/gpcf-12-project-loop-readiness-baseline-lr017.md | controlled |
 | GPCF-DOC-ECC8C7D894 | Brain loop-state 补齐包 | docs/harness/gpcf-brain-loop-state-completion-pack-lr024.md | controlled |
 | GPCF-DOC-2A9E353FAE | 跨项目 readiness scorecard | docs/harness/gpcf-cross-project-readiness-scorecard-lr028.md | controlled |
 | GPCF-DOC-C4C88D4F75 | 客户满意度证据台账 | docs/harness/gpcf-customer-satisfaction-evidence-ledger-lr010.md | controlled |
+| GPCF-DOC-97A01B2970 | 依赖风险回滚登记 | docs/harness/gpcf-dependency-risk-rollback-register-lr011.md | controlled |
 | GPCF-DOC-ED9FF3FA80 | 文档防污染哨兵扩展规则 | docs/harness/gpcf-document-pollution-sentinel-expansion-lr008.md | controlled |
+| GPCF-DOC-BFB5658141 | GFIS evidence 镜像接收登记 | docs/harness/gpcf-gfis-evidence-mirror-register-lr004.md | controlled |
+| GPCF-DOC-C7FBCBC166 | Git 版本门禁 evidence 包 | docs/harness/gpcf-git-version-gate-evidence-lr007.md | controlled |
+| GPCF-DOC-19294CD190 | GPC Manifest 与 loop-state 补齐包 | docs/harness/gpcf-gpc-manifest-loopstate-pack-lr026.md | controlled |
+| GPCF-DOC-E0A0095FEA | GPCF KDS Access Completion Evidence | docs/harness/gpcf-kds-access-completion-lr032.md | controlled |
+| GPCF-DOC-1A44A3E539 | KDS 本地镜像 dry-run 同步包 | docs/harness/gpcf-kds-local-mirror-dryrun-package-lr006.md | controlled |
 | GPCF-DOC-A1BC2692A8 | KDS loop-state 补齐包 | docs/harness/gpcf-kds-loop-state-completion-pack-lr023.md | controlled |
 | GPCF-DOC-FDC01A68DB | GPCF L3 第四轮最终检查点 | docs/harness/gpcf-l3-fourth-session-final-checkpoint-lr031.md | controlled |
+| GPCF-DOC-AD3BBED837 | L3 交接准备包 | docs/harness/gpcf-l3-handoff-readiness-package-lr014.md | controlled |
 | GPCF-DOC-B096D9C533 | L3 session 重启与计数器台账 | docs/harness/gpcf-l3-session-reset-counter-register-lr003.md | controlled |
 | GPCF-DOC-D660B405EE | GPCF L3 第三轮最终检查点 | docs/harness/gpcf-l3-third-session-final-checkpoint-lr016.md | controlled |
 | GPCF-DOC-9705D1627A | Loop 指标校准包 | docs/harness/gpcf-loop-metrics-calibration-lr009.md | controlled |
 | GPCF-DOC-0CF4B6EB25 | Loop 自我进化 backlog | docs/harness/gpcf-loop-self-evolution-backlog-lr012.md | controlled |
+| GPCF-DOC-67AC7A5BC4 | Loop 三件套纳入 GPCF 自身 loop record | docs/harness/gpcf-loop-three-piece-control-integration-lr002.md | controlled |
 | GPCF-DOC-12055CB824 | MMC 项目启动包 | docs/harness/gpcf-mmc-project-startup-pack-lr022.md | controlled |
 | GPCF-DOC-6D919DF28E | 下一授权动作决策矩阵 | docs/harness/gpcf-next-authorized-action-decision-matrix-lr015.md | controlled |
-| GPCF-DOC-CC30FEEA9C | WAES Manifest 与 loop-state 补齐包 | docs/harness/gpcf-waes-manifest-loopstate-pack-lr025.md | controlled |
+| GPCF-DOC-2478CA2104 | 下一批项目初始化执行队列 | docs/harness/gpcf-next-project-initialization-execution-queue-lr030.md | controlled |
+| GPCF-DOC-283BE79805 | PKC 项目启动包 | docs/harness/gpcf-pkc-project-startup-pack-lr019.md | controlled |
+| GPCF-DOC-9C749DC30E | 项目级文档成熟度缺口 backlog | docs/harness/gpcf-project-document-maturity-gap-backlog-lr005.md | controlled |
+| GPCF-DOC-A9D9A54A31 | 项目启动模板固化包 | docs/harness/gpcf-project-startup-template-hardening-lr029.md | controlled |
+| GPCF-DOC-9BDA4F0BC3 | PVAOS 项目启动包 | docs/harness/gpcf-pvaos-project-startup-pack-lr018.md | controlled |
+| GPCF-DOC-CC30FEEA9C | WAME Manifest 与 loop-state 补齐包 | docs/harness/gpcf-wame-manifest-loopstate-pack-lr025.md | controlled |
+| GPCF-DOC-5839431FBC | XGD 项目启动包 | docs/harness/gpcf-xgd-project-startup-pack-lr020.md | controlled |
+| GPCF-DOC-8A81B62CEF | XiaoC loop-state 补齐包 | docs/harness/gpcf-xiaoc-loopstate-completion-pack-lr027.md | controlled |
+| GPCF-DOC-0E90353E48 | XiaoG 项目启动包 | docs/harness/gpcf-xiaog-project-startup-pack-lr021.md | controlled |
 | GPCF-DOC-DF19BA9F40 | minimum-closed-loop | docs/harness/minimum-closed-loop/README.md | controlled |
-| GPCF-DOC-9886BDB110 | L4 Control Plane | docs/harness/minimum-closed-loop/control-plane.md | controlled |
+| GPCF-L4-MCL-CONTROL-PLANE | L4 Minimum Closed Loop Control Plane | docs/harness/minimum-closed-loop/control-plane.md | controlled |
 | GPCF-DOC-4C33B5D2B6 | Minimum Closed Loop Evidence Index | docs/harness/minimum-closed-loop/evidence-index.md | controlled |
 | GPCF-DOC-6913FD52DB | L4 Minimum Closed Loop Closure Score Matrix | docs/harness/minimum-closed-loop/l4-closure-score-matrix.md | controlled |
 | GPCF-DOC-3F160ABA27 | L4 最小闭环对象契约 | docs/harness/minimum-closed-loop/object-contracts.md | controlled |
 | GPCF-DOC-9096ABA44D | 项目角色验证矩阵 | docs/harness/minimum-closed-loop/project-role-verification-matrix.md | controlled |
+| GPCF-DOC-27101F3BEB | GBrain 多租户知识库权限体系 — v3.1 Hardening | docs/harness/multi-tenant-permission-design.md | controlled |
 | GPCF-DOC-4ED15E157A | GFIS-RUNTIME-SOP-E2E-DEV-COMPLETION-001 多智能体执行包 | docs/harness/tasks/GFIS-RUNTIME-SOP-E2E-DEV-COMPLETION-001.multi-agent.md | controlled |
 | GPCF-DOC-5FE5ED4E8B | tasks | docs/harness/tasks/README.md | controlled |
 | GPCF-DOC-AE29585A23 | standards | docs/standards/README.md | controlled |
@@ -801,6 +963,8 @@
 | GPCF-DOC-GCWORLD-046 | spec | openspec/changes/gcworld-workbench-ui-foundation/specs/gcworld-workbench-ui-foundation/spec.md | draft |
 | GPCF-DOC-GCWORLD-036 | tasks | openspec/changes/gcworld-workbench-ui-foundation/tasks.md | draft |
 | GPCF-DOC-87769A72B8 | kds-production-hardening | openspec/changes/kds-production-hardening/README.md | draft |
+| GPCF-DOC-FFFA25C3EF | design | openspec/changes/kds-production-hardening/design.md | draft |
+| GPCF-DOC-9630ED7C78 | proposal | openspec/changes/kds-production-hardening/proposal.md | draft |
 | GPCF-DOC-D17599C829 | specs | openspec/changes/kds-production-hardening/specs/README.md | draft |
 | GPCF-DOC-23E999A394 | agent-safety-matrix | openspec/changes/kds-production-hardening/specs/agent-safety-matrix/README.md | draft |
 | GPCF-DOC-9E32DA48ED | session-auth | openspec/changes/kds-production-hardening/specs/session-auth/README.md | draft |

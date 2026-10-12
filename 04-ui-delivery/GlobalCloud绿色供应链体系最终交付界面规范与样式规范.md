@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-16087A96BC
 title: GlobalCloud 绿色供应链体系最终交付界面规范与样式规范
 project: GPC
-related_projects: [GFIS, GPC, PVAOS, WAME, Brain, XiaoC, XGD, XiaoG]
+related_projects: [GFIS, GPC, PVAOS, WAME, Brain, XiaoC, XGD, XiaoG, Studio]
 domain: ui-delivery
 status: controlled
 version: v1.0

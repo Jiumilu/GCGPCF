@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-LOCALIZATIONDEBTGFISEVIDENCEREPAIRD10320260622
 title: GFIS evidence D103 中文化修复证据
 project: GPCF
-related_projects: [GPCF, GFIS, WAES]
+related_projects: [GPCF, GFIS, WAME]
 domain: docs
 status: controlled
 version: v1.0

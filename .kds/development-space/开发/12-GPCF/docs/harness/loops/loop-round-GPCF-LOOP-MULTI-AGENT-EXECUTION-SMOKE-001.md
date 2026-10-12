@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-LOOP-MULTI-AGENT-EXECUTION-SMOKE-001
 title: LOOP Multi-Agent Execution Smoke Round 001
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -37,7 +37,7 @@ superseded_by: []
 | input_refs | `02-governance/loop/LOOP_MULTI_AGENT_EXECUTION_POLICY.md`, `02-governance/loop/LOOP_CAPABILITY_REGISTRY.md` |
 | goal | 验证 Codex 内置 `multi_agent_v1` 能否作为 LOOP 默认多智能体执行面的受控试运行入口 |
 | scope_in | 只读 explorer 并行派发、策略入口核验、登记一致性核验、运行门禁复核 |
-| scope_out | 业务代码修改、跨仓 patch、真实 API、真实 KDS/WAES/GFIS 写入、部署、推送、状态提升 |
+| scope_out | 业务代码修改、跨仓 patch、真实 API、真实 KDS/WAME/GFIS 写入、部署、推送、状态提升 |
 | output_refs | `docs/harness/evidence/loop-multi-agent-execution-smoke-20260624.md` |
 
 ## stop
@@ -72,7 +72,7 @@ superseded_by: []
 | last_safe_state | 两个 explorer evidence candidate 已完成；主会话运行门禁脚本可替代阻塞核验 |
 | recovery_action | 关闭超时 agent，保留成功 agent 输出，主会话用 `loop_operational_gates.py` 补运行态阻塞核验 |
 | retryable_actions | 后续可重派运行态阻塞 explorer 或补 validator |
-| non_retryable_actions | 未授权生产写入、未授权真实 API 写入、未授权 KDS/WAES/GFIS 写入、未授权状态升级 |
+| non_retryable_actions | 未授权生产写入、未授权真实 API 写入、未授权 KDS/WAME/GFIS 写入、未授权状态升级 |
 
 ## debug
 
@@ -106,4 +106,4 @@ superseded_by: []
 - 不声明 `integrated`。
 - 不声明 `production_ready`。
 - 不声明质量、可用性、客户满意阻塞已解除。
-- 不声明 KDS API、WAES、GFIS 运行层已真实写入。
+- 不声明 KDS API、WAME、GFIS 运行层已真实写入。

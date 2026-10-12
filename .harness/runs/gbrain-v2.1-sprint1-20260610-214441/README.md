@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/92-证据与会话归档/.harness/runs/gbrain-v2.1-sprint1-20260610-214441/README.md
 source_path: .harness/runs/gbrain-v2.1-sprint1-20260610-214441/README.md
 sync_direction: bidirectional
-last_reviewed: 2026-10-11
+last_reviewed: 2026-10-12
 supersedes: []
 superseded_by: []
 ---
@@ -37,4 +37,4 @@ KDS 空间：`开发`
 | doc_id | title | source_path | project | status |
 | --- | --- | --- | --- | --- |
 | GPCF-DOC-0AC4F38B1A | gbrain-v2.1-sprint1-20260610-214441 | .harness/runs/gbrain-v2.1-sprint1-20260610-214441/README.md | WAME | archive |
-| GPCF-DOC-54C43FAC33 | status-audit | .harness/runs/gbrain-v2.1-sprint1-20260610-214441/status-audit.md | WAME | archive |
+| GPCF-DOC-54C43FAC33 | Harness Governance: gbrain-v2.1-sprint1 | .harness/runs/gbrain-v2.1-sprint1-20260610-214441/status-audit.md | WAME | archive |

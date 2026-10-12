@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-BE87700244
 title: GlobalCloud XiaoG Loop State
 project: XiaoG
-related_projects: [GFIS, GPC, WAES, KDS, XiaoG, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, XiaoG, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -29,8 +29,8 @@ superseded_by: []
 | loop.last_entry | `GPCF-XG-LR-001`：初始化 XiaoG 项目 loop-state 与 evidence-index |
 | loop.last_exit | 已在 GPCF 总控仓建立 XiaoG 受控初始化包；未写真实 XiaoG 项目仓；未推送；未升级 accepted/integrated |
 | loop.gate_result | partial |
-| loop.blockers | 轻量执行入口、现场语音/设备接入、GFIS/WAES 触发链路和真实设备验证尚未完成；Git push/PR merge 未执行 |
-| loop.next_target | 建立 XiaoG 轻量执行入口、设备接入、语音触发和 GFIS/WAES 依赖验证清单 |
+| loop.blockers | 轻量执行入口、现场语音/设备接入、GFIS/WAME 触发链路和真实设备验证尚未完成；Git push/PR merge 未执行 |
+| loop.next_target | 建立 XiaoG 轻量执行入口、设备接入、语音触发和 GFIS/WAME 依赖验证清单 |
 
 ## 循环历史
 
@@ -41,5 +41,5 @@ superseded_by: []
 ## 状态约束
 
 - XiaoG 当前定位保持为轻量执行入口。
-- Current state remains `partial` until 真实项目仓、设备/语音接入验证、GFIS/WAES 触发链路和人工验收完成。
+- Current state remains `partial` until 真实项目仓、设备/语音接入验证、GFIS/WAME 触发链路和人工验收完成。
 - 未经人工验收不得升级 `accepted` 或 `integrated`。

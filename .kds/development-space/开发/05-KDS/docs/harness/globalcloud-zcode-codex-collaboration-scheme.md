@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-ZCODE-COLLAB-20260709
 title: GlobalCloud 项目群 ZCode + Codex 协同工作方案
 project: KDS
-related_projects: [GPC, WAES, KDS, Brain, GPCF]
+related_projects: [GPC, WAME, KDS, Brain, GPCF]
 domain: docs
 status: controlled
 version: v1.0

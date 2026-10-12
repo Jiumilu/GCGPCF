@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-AGENT-REACH-FULL-COVERAGE-MARKDOWN-DRIFT-MONITOR-20260626
 title: Agent-Reach Full Coverage Markdown 漂移监控 2026-06-26
 project: KDS
-related_projects: [GFIS, WAS, WAME, KDS, GPCF]
+related_projects: [GFIS, KDS]
 domain: docs
 status: controlled
 version: v1.0

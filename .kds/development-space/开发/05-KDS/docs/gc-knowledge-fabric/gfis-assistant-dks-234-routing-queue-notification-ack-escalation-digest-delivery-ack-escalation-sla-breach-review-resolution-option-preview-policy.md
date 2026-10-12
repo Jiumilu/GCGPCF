@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-92E45FBF7F
 title: GFIS Assistant DKS-234 Routing Queue Notification Ack Escalation Digest Delivery Ack Escalation SLA Breach Review Resolution Option Preview No-write 规则
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS]
+related_projects: [GFIS, GPC, WAME, KDS]
 domain: docs
 status: controlled
 version: v1.0
@@ -25,7 +25,7 @@ DKS-234 将 DKS-233 SLA breach review preview 推进为 resolution option previe
 ## 严格边界
 
 - 不创建 resolution 或 dispute update。
-- 不创建 committee decision、freeze action、approval request、approval decision、Harness evidence、WAES gate result 或 KWE work item。
+- 不创建 committee decision、freeze action、approval request、approval decision、Harness evidence、WAME gate result 或 KWE work item。
 - 不提升 KDS lifecycle，不写 KDS fact / accepted fact。
 - 不写 GFIS、GPC、ERP、MES，不调用外部 API。
 

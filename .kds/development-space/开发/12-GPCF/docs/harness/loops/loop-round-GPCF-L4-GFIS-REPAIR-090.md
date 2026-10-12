@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-B4D3E41E0F
 title: GPCF-L4-GFIS-REPAIR-090 GFIS Targeted KDS Decision Package
 project: GPCF
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -67,7 +67,7 @@ PYTHONDONTWRITEBYTECODE=1 python3 scripts/validate_gfis_runtime_sop_e2e.py
 
 - 本轮只证明补证分派判断可机器校验。
 - KDS 候选、报价 PDF、行动台账、沟通纪要和用户口述均不能替代正式原始凭证。
-- 不生产写入、不真实外部 API 写入、不 bench migrate、不 schema sync、不真实 KDS/WAES 写入、不部署、不推送、不升级 accepted/integrated。
+- 不生产写入、不真实外部 API 写入、不 bench migrate、不 schema sync、不真实 KDS/WAME 写入、不部署、不推送、不升级 accepted/integrated。
 
 ## 下一轮
 

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-1D4C8A73E2
 title: Studio 默认凭据治理动作后收口验证证据
 project: GPCF
-related_projects: [GPC, WAES, GPCF, Studio]
+related_projects: [GPC, WAME, GPCF, Studio]
 domain: docs
 status: controlled
 version: v1.0

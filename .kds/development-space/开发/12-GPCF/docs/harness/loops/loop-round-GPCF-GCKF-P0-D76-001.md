@@ -2,7 +2,7 @@
 doc_id: GPCF-LOOP-GCKF-P0-D76-001
 title: Loop Round GPCF-GCKF-P0-D76-001
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -39,11 +39,11 @@ superseded_by: []
 | D76 repair request intake acknowledgement preview validator | `scripts/api/validate_gckf_p0_formal_evidence_execution_committee_acceptance_acknowledgement_notification_receipt_aggregation_repair_request_intake_acknowledgement_preview_dry_run.py` |
 | D76 repair request intake acknowledgement preview doc | `docs/gc-knowledge-fabric/formal-evidence-execution-committee-acceptance-acknowledgement-notification-receipt-aggregation-repair-request-intake-acknowledgement-preview-dry-run-v0.1.md` |
 
-## 4. WAES / Harness 边界
+## 4. WAME / Harness 边界
 
 | 项目 | 结果 |
 |---|---|
-| WAES gate override | not_allowed |
+| WAME gate override | not_allowed |
 | Harness evidence write | not_executed |
 | Formal evidence write | not_executed |
 | Intake acknowledgement preview execution | not_executed |
@@ -81,6 +81,6 @@ no_write=covered
 
 ## 6. 结论
 
-D76 只完成 repair request intake acknowledgement preview dry-run。它证明补正接收候选包可以被描述为带有候选回执摘要、预检结果快照、缺失材料缺口、提交方通知边界、ACL 可见性边界、下一步提示、保持原因、WAES 与 no-write 边界的 acknowledgement preview，但不产生任何正式回执确认、正式补正完整性预检、正式补正接收、正式补正请求、委员会立案、委员会裁决、人工确认、冻结释放、业务写回、收益/贡献写入或 evidence 写入。
+D76 只完成 repair request intake acknowledgement preview dry-run。它证明补正接收候选包可以被描述为带有候选回执摘要、预检结果快照、缺失材料缺口、提交方通知边界、ACL 可见性边界、下一步提示、保持原因、WAME 与 no-write 边界的 acknowledgement preview，但不产生任何正式回执确认、正式补正完整性预检、正式补正接收、正式补正请求、委员会立案、委员会裁决、人工确认、冻结释放、业务写回、收益/贡献写入或 evidence 写入。
 
 下一轮 D77 可继续建立 repair request acknowledgement routing preview 或 repair request return path 的 no-write 预演。

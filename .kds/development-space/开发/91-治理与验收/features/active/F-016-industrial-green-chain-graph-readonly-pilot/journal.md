@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-8E14AF7D07
 title: F-016 journal
 project: GPCF
-related_projects: [AAAS, Brain, WAS, XiaoC, WAES, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP]
+related_projects: [AAAS, Brain, WAS, XiaoC, WAME, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP]
 domain: governance
 status: controlled
 version: v1.0
@@ -114,7 +114,7 @@ superseded_by: []
 
 ## 2026-10-11 · O-2 契约出口执行
 - 产出：`scripts/xwail_export.py` v0.1（快照→XWAIL JSON；确定性；排除报告）＋`ontology/xwail_mapping_spec.md` v0.1＋`ontology/exports/`（focus-b01／focus-e01／focus-huangmei-01-6／all=49 assets·8 relations·43 显式排除）。
-- 验收 N04—N06：XWAIL 校验库**只读导入 pass**（4 模型 0 问题；回指字段完整）；双跑**逐字节一致**（total `ad548e4881de…`）；候选边界保持（provisionalCategory＋boundary；inference 不导出；waesStatus=Draft）。
+- 验收 N04—N06：XWAIL 校验库**只读导入 pass**（4 模型 0 问题；回指字段完整）；双跑**逐字节一致**（total `ad548e4881de…`）；候选边界保持（provisionalCategory＋boundary；inference 不导出；wameStatus=Draft）。
 - 说明：其 CLI 对仓外路径不兼容（relative_to）→ 只读导入校验库执行同一逻辑；**未修改 XWAIL 仓**（改进建议留其流程）。提案 3 处修正（XML→JSON／维度 notApplicable／EvidenceRecord→sourceRefs）记录于规范 §9。图谱 20 项校验回归通过。
 
 ## 2026-10-11 · O-3 治理衔接（文档级）＋P0-0 口径核对
@@ -140,7 +140,7 @@ superseded_by: []
 
 ## 2026-10-11 · 受理后续动作（续：登记＋Profile 草案）
 - **域切片登记完成**：`GPCF-DOMAIN-SLICE-REGISTRY-GREENCHAIN-GRAPH-20261011` 登记件四件套（json／md／loop／validator）；`GreenChainGraphBusinessDomain`（工业绿链业务域只读投影候选）与 F-015（GCWORLD 组织域）并列；**既有 registry 43 条未动**（validator 在位校验）；request `registry_entry_added=true`＋`registry_entry_ref` 回指。
-- **XWAIL Profile 工作件**：KDS《XWAIL City/Spatial Profile 范围定义与 Schema 候选草案 v0.1》（范围表／schema 候选块／Validator 扩展规划 V-CP-01—05；不写 XWAIL 仓、不声明 WAES）。
+- **XWAIL Profile 工作件**：KDS《XWAIL City/Spatial Profile 范围定义与 Schema 候选草案 v0.1》（范围表／schema 候选块／Validator 扩展规划 V-CP-01—05；不写 XWAIL 仓、不声明 WAME）。
 - validator×2 PASS；提交 GPCF `7312f3ed6`／KDS `99f3e5a6`。
 
 ## 2026-10-11 · Schema 候选定版送审＋词表评审材料（收口两项）
@@ -151,3 +151,16 @@ superseded_by: []
 ## 2026-10-11 · Profile 定版候选 v1.0 工作件（受理后·按流程）
 - 产出：`图谱/ontology/xwail-city-profile-candidate/`——**schema 契约化定版候选**（JSON Schema 2020-12：cityProfileRef/回指/scopeClasses 硬约束）＋validator v1（schema＋补充检查）＋5 样例＋实跑记录。
 - 验证：**5/5**（负例拒因归类 V-CP-01..04）；core 对照矩阵保持。定版稿**待 XWAIL 流程终裁**；零写回。
+
+## 首月件收口五问（2026-10-11 · 格式对齐）
+
+1. 这轮做什么？
+   - F-016 工业绿链图谱只读试点：B1 基线 → B2 预览与放行（b2_released） → B3 机制预置 → v3.0（O-1/O-2/O-3）与两项登记受理。
+2. 改了什么？
+   - KDS `工业绿链/图谱/`（生成器/校验器→20 项/快照/视图/导出/ontology 映射）；GPCF feature 工作区与本 journal；XWAIL Profile 与业务域两登记请求＋域切片登记件。
+3. 怎么验证？
+   - 校验 C01—C20 全 PASS（hard_fail=0）；B2 抽样核对 8/8；五连演练（恢复/变更/阻断）；导出包 --verify ok；O-1 正例 20/20；O-2 双跑逐字节一致。
+4. 发现什么问题？
+   - 责任/权限/SOP 版本/验收人待业务落实（不虚构）；B3 依赖 SOP 首版触发（SOP-01 建议 10-25、SOP-02 建议 11-07）；registry 词表 `rejected` 缺口待评审。
+5. 是否可以提交？
+   - 是（b2_released 阶段；零写回、不触发布/接受声明）。

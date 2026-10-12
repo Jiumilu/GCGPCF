@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-CE28DA4C36
 title: GlobalCloud Loop Orchestrator Stage Gates
 project: GPCF
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF]
 domain: operational-skill
 status: operational_controlled
 version: v1.0
@@ -53,7 +53,7 @@ superseded_by: []
 2. GFIS：以现代精工培训资料启动 `GPCF-GF-LR-001`。
 3. MMC、KDS、Brain、PKC：进入试点 `loop_ready`。
 4. XiaoC：从 `partial` 补齐 loop-state、测试和部署证据。
-5. GPC、PVAOS、WAES、XGD、XiaoG：补齐 Manifest 和首轮输入。
+5. GPC、PVAOS、WAME、XGD、XiaoG：补齐 Manifest 和首轮输入。
 
 ## Git 门禁
 

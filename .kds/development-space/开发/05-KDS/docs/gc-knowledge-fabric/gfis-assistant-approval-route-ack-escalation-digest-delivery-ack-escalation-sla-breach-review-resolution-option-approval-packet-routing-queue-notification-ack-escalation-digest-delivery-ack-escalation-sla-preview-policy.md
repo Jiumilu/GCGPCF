@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-2322315471
 title: GFIS Assistant Approval Packet Routing Queue Notification Acknowledgement Escalation Digest Delivery Acknowledgement Escalation SLA Preview No-write 规则
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS]
+related_projects: [GFIS, GPC, WAME, KDS]
 domain: docs
 status: controlled
 version: v1.0
@@ -27,7 +27,7 @@ superseded_by: []
 DKS-172 严格禁止：
 
 - 创建真实 SLA timer、escalation、reminder、escalation task 或 delivery acknowledgement。
-- 创建 approval request、approval decision、KWE work item、Harness evidence 或 WAES gate result。
+- 创建 approval request、approval decision、KWE work item、Harness evidence 或 WAME gate result。
 - 写入 GFIS、GPC、ERP、MES、KDS lifecycle、KDS fact 或 external API。
 
 ## 受控证据

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-1F8C4D6B21
 title: Session Mainline Preflight Enforcement 20260622
 project: KDS
-related_projects: [GPC, WAES, KDS, GPCF]
+related_projects: [GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0

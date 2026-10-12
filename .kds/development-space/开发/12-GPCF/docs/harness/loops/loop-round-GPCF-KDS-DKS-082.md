@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-5135C5EDA5
 title: LOOP Round GPCF-KDS-DKS-082 - GC-Knowledge Fabric 核心对象关系策略
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, Brain, PKC, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, Brain, PKC, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -20,7 +20,7 @@ superseded_by: []
 
 ## 1. 本轮目标
 
-根据 GC-Knowledge Fabric 完整评审问题清单中“对象模型有清单，但缺少对象之间关系图”的 P0/P1 缺口，建立核心对象关系与最小字段契约，固定 Source、Evidence、KnowledgeObject、候选对象、WAES、KWE、Confirmation/Decision、Writeback、Contribution、Revenue、Harness 和 LOOP 的最小关系链。
+根据 GC-Knowledge Fabric 完整评审问题清单中“对象模型有清单，但缺少对象之间关系图”的 P0/P1 缺口，建立核心对象关系与最小字段契约，固定 Source、Evidence、KnowledgeObject、候选对象、WAME、KWE、Confirmation/Decision、Writeback、Contribution、Revenue、Harness 和 LOOP 的最小关系链。
 
 本轮只做关系契约和本地 no-write validator，不创建正式事实，不执行真实业务写回，不结算收益、积分、额度或悬赏。
 
@@ -50,10 +50,10 @@ superseded_by: []
 
 ## 5. 本轮验收口径
 
-- 最小关系链必须覆盖 SourceRecord -> EvidenceRecord -> KnowledgeObject -> Candidate/Gap -> WAESGateResult -> KWEWorkItem -> Confirmation/Decision -> Writeback/Contribution/Revenue -> HarnessEvidenceRecord -> LOOPRecord。
+- 最小关系链必须覆盖 SourceRecord -> EvidenceRecord -> KnowledgeObject -> Candidate/Gap -> WAMEGateResult -> KWEWorkItem -> Confirmation/Decision -> Writeback/Contribution/Revenue -> HarnessEvidenceRecord -> LOOPRecord。
 - 每条关系必须有 `relation_type`、端点类型和 `required_refs`。
 - 最小字段必须覆盖 id、tenant、from/to endpoint、required refs、pool refs、createdBy、createdAt 和 noWrite。
-- 必须锁定 hard boundaries：正式事实需要来源、evidence_ready 需要 evidence、候选需要 WAES gate、写回候选需要确认、AI 不能创建正式写回关系、LOOP 不能提升业务状态。
+- 必须锁定 hard boundaries：正式事实需要来源、evidence_ready 需要 evidence、候选需要 WAME gate、写回候选需要确认、AI 不能创建正式写回关系、LOOP 不能提升业务状态。
 - no-write 断言必须证明 KDS fact、业务系统、收益分配和外部 API 写入均为 0。
 
 ## 6. 本轮验证结果
@@ -64,8 +64,8 @@ superseded_by: []
 | 覆盖矩阵 | pass | `okf_types_api_validator_coverage=pass coverage_items=10 okf_files=17 type_files=19 api_files=15 validator_files=17 fixture_files=17 missing_files=0 no_write=covered business_writes=0 external_api_writes=0` |
 | TypeScript 类型检查 | pass | `tsc -p packages/shared/tsconfig.json --noEmit` 与 `tsc -p packages/api/tsconfig.json --noEmit` 均无报错 |
 | 状态机回归 | pass | `status_machine_policy_smoke=pass states=11 promotion_rules=10 ... writes_external_api=0` |
-| 既有 API route no-write smoke | pass | Brain/PKC、Governance、GFIS、KWE、WAES、KDS v2 endpoint smoke 全部 pass，真实写入计数均为 0 |
-| 既有 dry-run validators | pass | LOOP Dashboard、Brain/PKC entry contract、GFIS document acceptance E2E、GFIS assistant no-write、Governance ledger、KDS search、WAES minimum gates、KWE minimum workflow 全部 pass |
+| 既有 API route no-write smoke | pass | Brain/PKC、Governance、GFIS、KWE、WAME、KDS v2 endpoint smoke 全部 pass，真实写入计数均为 0 |
+| 既有 dry-run validators | pass | LOOP Dashboard、Brain/PKC entry contract、GFIS document acceptance E2E、GFIS assistant no-write、Governance ledger、KDS search、WAME minimum gates、KWE minimum workflow 全部 pass |
 | OKF parse | pass | `okf_parse=pass yaml_files=16 json_files=1` |
 | 文档治理门禁 | pass | `document_pollution=pass`；`kds_token=pass fingerprint=bfd9553d`；`loop_document_gate.py` 输出 `gate=pass`、`missing_metadata=0`、`missing_readme_dirs=0` |
 | LOOP 文档门禁残留项 | known gap | `status_counts.missing=1`、`project_counts.missing=1` 为既有仓库元数据缺口，本轮未扩大该缺口 |
@@ -81,6 +81,6 @@ superseded_by: []
 
 ## 8. 下一轮建议
 
-- `GPCF-KDS-DKS-083`：建立 WAES Gate 输入输出契约与 hard-stop reason code validator。
+- `GPCF-KDS-DKS-083`：建立 WAME Gate 输入输出契约与 hard-stop reason code validator。
 - `GPCF-KDS-DKS-084`：建立 RAG 引用强度 L0-L5 契约与 Brain/PKC/GFIS Assistant 引用边界 smoke。
 - `GPCF-KDS-DKS-085`：建立 GFIS Writeback Sandbox 契约与 no-write/sandbox/approved-write 边界 smoke。

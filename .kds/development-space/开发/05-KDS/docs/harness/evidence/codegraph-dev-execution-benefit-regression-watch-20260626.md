@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-CODEGRAPH-DEV-EXECUTION-BENEFIT-REGRESSION-WATCH-20260626
 title: CodeGraph 开发执行层收益回归监控 2026-06-26
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -48,7 +48,7 @@ superseded_by: []
 
 ## 保留边界
 
-本轮仍是开发态收益监控，不声明 GFIS 业务实现完成，不声明 accepted、integrated 或 production_ready，不执行 commit、push、deploy、production write、external API write、real KDS write 或 real WAES write。
+本轮仍是开发态收益监控，不声明 GFIS 业务实现完成，不声明 accepted、integrated 或 production_ready，不执行 commit、push、deploy、production write、external API write、real KDS write 或 real WAME write。
 
 GFIS runtime SOP 与真实业务 source input 仍未闭合，下一轮应进入 `GPCF-CODEGRAPH-DEV-EXECUTION-REAL-INPUT-READINESS-017`。
 

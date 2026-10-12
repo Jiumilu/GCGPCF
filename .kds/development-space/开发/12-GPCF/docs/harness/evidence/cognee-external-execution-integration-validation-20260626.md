@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-8C7F2F6007
 title: Cognee 外部执行层接入验证 Evidence 2026-06-26
 project: GPCF
-related_projects: [GPC, WAES, GPCF]
+related_projects: [GPC, WAME, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -31,7 +31,7 @@ superseded_by: []
 | P4 live 演练 | `cognee_p4_real_writeback_live_output=pass` |
 | 签核状态 | `authorization_complete=true` |
 | owner decision | `approve_live_write` |
-| waes decision | `pass` |
+| wame decision | `pass` |
 | runtime dependency ok | `true` |
 | rollback plan verified | `true` |
 | production_write | `false` |
@@ -65,7 +65,7 @@ python3 loop/context/cognee/scripts/validate-cognee-p4-real-writeback-live.py \
 | field | current_value | note |
 |---|---|---|
 | `receipt_id` | `COGNEE-EXT-RECEIPT-20260626-001` | 已冻结的示例回执编号 |
-| `authorized_by` | `lujunxiang / WAES Duty Reviewer` | 来源于 LIVE-002 签核 |
+| `authorized_by` | `lujunxiang / WAME Duty Reviewer` | 来源于 LIVE-002 签核 |
 | `authorized_at` | `2026-06-26T10:15:00+08:00` | 取签核窗口内最终授权时间 |
 | `executed_at` | `REQUIRED_AT_REAL_EXECUTION_TIME` | 真实执行时间 |
 | `record_count` | `5` | 当前最小验证批次 |

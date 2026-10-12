@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-1F12054E1C
 title: GlobalCloud 企业级知识系统冲突点与收口方案
 project: KDS
-related_projects: [GPC, PVAOS, WAME, KDS, Brain, XiaoC, XGD]
+related_projects: [GPC, PVAOS, WAME, KDS, Brain, XiaoC, XGD, Studio]
 domain: data-ai-knowledge
 status: controlled
 version: v1.0

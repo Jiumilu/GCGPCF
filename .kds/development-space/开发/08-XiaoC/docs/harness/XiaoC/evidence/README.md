@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-7C2E2BCB61
 title: evidence
 project: XiaoC
-related_projects: [GPC, WAES, KDS, XiaoC, GPCF]
+related_projects: [GPC, WAME, KDS, XiaoC, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/08-XiaoC/docs/harness/XiaoC/evidence/README.md
 source_path: docs/harness/XiaoC/evidence/README.md
 sync_direction: bidirectional
-last_reviewed: 2026-10-11
+last_reviewed: 2026-10-12
 supersedes: []
 superseded_by: []
 ---
@@ -38,4 +38,4 @@ KDS 空间：`开发`
 | --- | --- | --- | --- | --- |
 | GPCF-DOC-7C2E2BCB61 | evidence | docs/harness/XiaoC/evidence/README.md | XiaoC | controlled |
 | GPCF-DOC-63536E3201 | Evidence Index — XiaoC | docs/harness/XiaoC/evidence/evidence-index.md | XiaoC | controlled |
-| GPCF-DOC-XIAOC-MODEL-ROUTING-DRYRUN-ENV-BLOCKED-20260625 | xiaoc-model-routing-dryrun-environment-blocked-20260625 | docs/harness/XiaoC/evidence/xiaoc-model-routing-dryrun-environment-blocked-20260625.md | XiaoC | controlled |
+| GPCF-DOC-XIAOC-MODEL-ROUTING-DRYRUN-ENV-BLOCKED-20260625 | XiaoC 模型路由 Dry-run 环境阻塞证据 2026-06-25 | docs/harness/XiaoC/evidence/xiaoc-model-routing-dryrun-environment-blocked-20260625.md | XiaoC | controlled |

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-D846CB64BC
 title: GFIS Assistant Repair Action Guard Event Preview No-write 规则
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS]
+related_projects: [GFIS, GPC, WAME, KDS]
 domain: docs
 status: controlled
 version: v1.0
@@ -22,7 +22,7 @@ superseded_by: []
 
 GFIS Assistant Repair Action Guard Event Preview 是 DKS-116 `Read Model Action Guard` 之后的本地事件预览模型。
 
-它用于说明用户点击只读按钮时，界面可以展示怎样的候选事件预览、阻断原因、下一步候选说明和 no-write 警示。它不是 EventRecord，不是 ActionReceipt，不是 ReadReceipt，不创建 KWE WorkItem，不写 WAES Gate Result，不持久化 evidence，不推进 KDS lifecycle，不写 GFIS / GPC / ERP / MES。
+它用于说明用户点击只读按钮时，界面可以展示怎样的候选事件预览、阻断原因、下一步候选说明和 no-write 警示。它不是 EventRecord，不是 ActionReceipt，不是 ReadReceipt，不创建 KWE WorkItem，不写 WAME Gate Result，不持久化 evidence，不推进 KDS lifecycle，不写 GFIS / GPC / ERP / MES。
 
 ## 2. Preview 类型
 
@@ -58,7 +58,7 @@ Event Preview 不得直接执行以下动作：
 - 创建 KWE WorkItem；
 - 创建 ConfirmationRecord；
 - 创建 DecisionRecord；
-- 写入 WAES Gate Result；
+- 写入 WAME Gate Result；
 - 持久化 evidence；
 - 推进 KDS lifecycle；
 - 写入 KDS fact 或 accepted fact；

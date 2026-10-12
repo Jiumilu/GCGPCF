@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-GCWORLD-034
 title: proposal
 project: KDS
-related_projects: [GPC, PVAOS, WAES, KDS, Brain, GPCF, Studio]
+related_projects: [GPC, PVAOS, WAME, KDS, Brain, GPCF, Studio]
 domain: openspec
 status: draft
 version: v1.0
@@ -57,7 +57,7 @@ GCWORLD已经定义十二个工作中心和单一资产档案，但目前只有�
 - **Program / Release：** GKE‑001；`release_0`后续规划候选，实施前需获得新的产品实现授权。
 - **Feature：** 暂由F‑013承载规划追踪；真实界面实施前必须建立或确认后继Feature。
 - **当前目标仓库与责任方：** GPCF / GPCF，仅限本OpenSpec目录。
-- **未来依赖：** Studio、Brain、KDS、WAS、WAES、XWAIL；产品仓库和责任人待独立授权。
+- **未来依赖：** Studio、Brain、KDS、WAS、WAME、XWAIL；产品仓库和责任人待独立授权。
 - **基线：** 继承GCWORLD工作台结构契约，但无真实浏览器、搜索、API或数据链证据。
 - **CodeGraph：** 仅声明未来 `GCWORLD视图模型→Studio工作台` 消费关系，不改变当前域关系。
 - **非目标：** 不实现三维世界，不连接真实客户数据，不开放写操作，不建立新的人员或组织主账。

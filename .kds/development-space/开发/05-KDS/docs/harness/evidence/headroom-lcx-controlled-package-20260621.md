@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-F6D2D165A7
 title: Headroom LCX Controlled Package Evidence
 project: KDS
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio]
 domain: docs
 status: controlled
 version: v1.0
@@ -31,7 +31,7 @@ superseded_by: []
 ## 覆盖范围
 
 ```text
-GPCF, KDS, Brain, WAES, GFIS, GPC, PVAOS, Edge, PKC, XiaoC, XGD, XiaoG, MMC, Studio, WAS
+GPCF, KDS, Brain, WAME, GFIS, GPC, PVAOS, Edge, PKC, XiaoC, XGD, XiaoG, MMC, Studio, WAS
 ```
 
 ## 关键产物
@@ -46,8 +46,8 @@ GPCF, KDS, Brain, WAES, GFIS, GPC, PVAOS, Edge, PKC, XiaoC, XGD, XiaoG, MMC, Stu
 | Proxy env example | `loop/context/headroom/proxy.env.example` |
 | Harness evidence schema | `loop/context/headroom/harness/evidence.schema.yaml` |
 | Harness metrics schema | `loop/context/headroom/harness/metrics.schema.yaml` |
-| WAES policy | `loop/context/headroom/waes/headroom-policy.yaml` |
-| CCR retrieve gate | `loop/context/headroom/waes/ccr-retrieve-gate.yaml` |
+| WAME policy | `loop/context/headroom/wame/headroom-policy.yaml` |
+| CCR retrieve gate | `loop/context/headroom/wame/ccr-retrieve-gate.yaml` |
 | KDS component | `loop/context/headroom/kds/context-optimization-component.yaml` |
 | Validator | `tools/kds-sync/validate_headroom_lcx_controlled_package.py` |
 
@@ -63,7 +63,7 @@ GPCF, KDS, Brain, WAES, GFIS, GPC, PVAOS, Edge, PKC, XiaoC, XGD, XiaoG, MMC, Stu
 | agent_wrap_configured | true |
 | ccr_retrieve_gate_configured | true |
 | harness_evidence_schema_configured | true |
-| waes_policy_configured | true |
+| wame_policy_configured | true |
 | kds_candidate_component_configured | true |
 | telemetry_default_off | true |
 | learn_apply_auto | false |

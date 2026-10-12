@@ -1,14 +1,14 @@
 ---
 doc_id: GPCF-DOC-A1C8A72190
 title: WAS Real Source Record Candidate Precheck Evidence
-project: WAS
+project: KDS
 related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio, WAS]
 domain: ontology-governance
 status: controlled
 version: v1.0
-owner: GPCF
+owner: KDS
 kds_space: 开发
-kds_path: 开发/14-WAS/docs/harness/evidence/was-real-source-record-candidate-precheck-20260621.md
+kds_path: 开发/05-KDS/docs/harness/evidence/was-real-source-record-candidate-precheck-20260621.md
 source_path: docs/harness/evidence/was-real-source-record-candidate-precheck-20260621.md
 sync_direction: bidirectional
 last_reviewed: 2026-06-23
@@ -82,7 +82,7 @@ GFIS 原生字段 12 个，WAS/Ontology 字段 12 个。候选必须同时通过
 - `lifecycle` 必须等于 `pending_business_verification`
 - `trustLevel` 必须等于 `T4`
 - `kdsBacklink` 必须等于 `source_of_record_backlink`
-- `wameGateRefs` 必须包含 `waes://gate/customer-order-source-record-review`
+- `wameGateRefs` 必须包含 `wame://gate/customer-order-source-record-review`
 - `promotionBlockers` 必须包含 `valid_source_record_missing` 和 `customer_confirmation_missing`
 
 ## 夹具结果

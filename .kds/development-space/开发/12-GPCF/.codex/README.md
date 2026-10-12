@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-56E7A7A3B5
 title: Codex 本地配置
 project: GPCF
-related_projects: [GPC, WAES, KDS, GPCF]
+related_projects: [GPC, WAME, KDS, GPCF]
 domain: operational-skill
 status: operational_controlled
 version: v1.0

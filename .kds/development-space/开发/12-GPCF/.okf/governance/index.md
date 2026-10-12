@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-37BA319CB6
 title: OKF Governance Bundle 只读索引
 project: GPCF
-related_projects: [GPCF, GPC, WAES, KDS]
+related_projects: [GPCF, GPC, WAME, KDS]
 domain: governance
 status: controlled
 version: v1.0

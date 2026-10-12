@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-9126B167F5
 title: GFIS 运行时 SOP 端到端开发完成 001 执行台账
 project: GPCF
-related_projects: [GPCF, GFIS, WAES]
+related_projects: [GPCF, GFIS, WAME]
 domain: docs
 status: controlled
 version: v1.0
@@ -90,14 +90,14 @@ execution_ledger:
       result: capability_registry=pass usage_matrix_registered=true
       p0_triggered: false
       p1_triggered: false
-      handoff_to: WAES Candidate / Artifact Agent
+      handoff_to: WAME Candidate / Artifact Agent
       unresolved: none
       forbidden_claims_declared:
         - commit
         - push
         - deploy
 
-    - agent: WAES Candidate / Artifact Agent
+    - agent: WAME Candidate / Artifact Agent
       scope: controlled evidence and execution boundary summary alignment
       owned_files:
         - docs/harness/evidence/GFIS-RUNTIME-SOP-E2E-DEV-COMPLETION-001-evidence.md

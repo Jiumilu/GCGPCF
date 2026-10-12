@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-GCKFP0HARNESSDECISIONTEMPLATECURRENTSTATED12720260622
 title: GCKF P0 Harness 决策模板当前态证据 D127
 project: GPCF
-related_projects: [GPCF, WAES]
+related_projects: [GPCF, WAME]
 domain: docs
 status: controlled
 version: v1.0

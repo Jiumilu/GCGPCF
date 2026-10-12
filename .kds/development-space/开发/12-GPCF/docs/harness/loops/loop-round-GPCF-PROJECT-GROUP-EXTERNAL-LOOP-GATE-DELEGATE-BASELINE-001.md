@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-LOOP-ROUND-PROJECT-GROUP-EXTERNAL-LOOP-GATE-DELEGATE-BASELINE-001
 title: loop-round-GPCF-PROJECT-GROUP-EXTERNAL-LOOP-GATE-DELEGATE-BASELINE-001
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0

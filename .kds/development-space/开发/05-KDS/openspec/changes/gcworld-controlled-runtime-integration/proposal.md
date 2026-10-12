@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-GCWORLD-040
 title: proposal
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, MMC, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, MMC, GPCF]
 domain: openspec
 status: draft
 version: v1.0
@@ -44,8 +44,8 @@ GCWORLD世界运行闭环目前只有结构Schema与固定样例，尚无真实�
 - **Program / Release：** GKE‑001；`release_0`后续规划候选，运行实现必须进入独立批准的Release阶段。
 - **Feature：** 暂由F‑013承载规划追踪；真实运行时实施前必须建立或确认后继Feature。
 - **当前目标仓库与责任方：** GPCF / GPCF，仅限本OpenSpec目录。
-- **未来依赖：** XWAIL、WAES、KWE、MMC、KDS、GFIS及业务系统；接口和责任人待独立授权。
+- **未来依赖：** XWAIL、WAME、KWE、MMC、KDS、GFIS及业务系统；接口和责任人待独立授权。
 - **基线：** 继承GCWORLD世界运行时结构契约；真实执行、授权和外部写入证据均为0。
 - **CodeGraph：** 仅声明未来服务调用与事件关系，不修改现有GKE‑001域绑定。
-- **非目标：** 不直接实现有限自治，不绕过WAES或业务系统，不把GCWORLD建设为业务主账。
+- **非目标：** 不直接实现有限自治，不绕过WAME或业务系统，不把GCWORLD建设为业务主账。
 - **回滚：** 删除本次未提交的规划目录即可，不影响任何运行服务或业务状态。

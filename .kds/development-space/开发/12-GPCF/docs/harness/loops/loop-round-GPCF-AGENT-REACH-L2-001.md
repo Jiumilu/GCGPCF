@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-8C0F59F540
 title: GPCF-AGENT-REACH-L2-001
 project: GPCF
-related_projects: [GPC, WAES, KDS, GPCF]
+related_projects: [GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0

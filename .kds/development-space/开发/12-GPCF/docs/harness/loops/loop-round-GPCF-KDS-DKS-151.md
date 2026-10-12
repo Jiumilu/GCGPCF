@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-0176E4FAF6
 title: LOOP Round GPCF KDS DKS-151
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -26,7 +26,7 @@ superseded_by: []
 
 - DKS-150 处理选项预览策略、OKF、type、fixture、validator。
 - 既有 DKS-139 approval packet preview 模式。
-- GC-Knowledge Fabric AI 候选边界、WAES 门禁和 KWE 流程原则。
+- GC-Knowledge Fabric AI 候选边界、WAME 门禁和 KWE 流程原则。
 
 ## 本轮新增知识对象
 
@@ -36,7 +36,7 @@ superseded_by: []
 - `fixtures/gfis/approval-route-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-preview-dry-run.json`
 - `scripts/gfis/validate_gfis_assistant_approval_route_ack_escalation_digest_delivery_ack_escalation_sla_breach_review_resolution_option_approval_packet_preview.py`
 
-## WAES 门禁结果
+## WAME 门禁结果
 
 - No-write: pass candidate。
 - Writeback: blocked by design。

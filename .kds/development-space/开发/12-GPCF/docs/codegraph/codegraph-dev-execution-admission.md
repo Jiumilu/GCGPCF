@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-990EE0035A
 title: CodeGraph 业务开发执行层准入规则
 project: GPCF
-related_projects: [GPC, WAES, GPCF]
+related_projects: [GPC, WAME, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -18,7 +18,7 @@ superseded_by: []
 
 # CodeGraph 业务开发执行层准入规则
 
-本规则把 CodeGraph 从项目群代码图谱工具推进到业务开发执行层。它不代表业务变更完成，也不代表 WAES、Harness 或人工委员会已经验收；它只定义业务开发任务进入实现前必须具备的 CodeGraph 影响分析证据。
+本规则把 CodeGraph 从项目群代码图谱工具推进到业务开发执行层。它不代表业务变更完成，也不代表 WAME、Harness 或人工委员会已经验收；它只定义业务开发任务进入实现前必须具备的 CodeGraph 影响分析证据。
 
 ## 准入结论
 

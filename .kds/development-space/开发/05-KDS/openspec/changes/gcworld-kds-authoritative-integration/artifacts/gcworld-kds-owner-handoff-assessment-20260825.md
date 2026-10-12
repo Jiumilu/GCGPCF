@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-GCWORLD-052
 title: GCWORLD与KDS责任方处置回执评估
 project: KDS
-related_projects: [WAES, KDS, XGD, Studio]
+related_projects: [WAME, KDS, XGD, Studio]
 domain: openspec
 status: draft
 version: v1.0
@@ -30,7 +30,7 @@ KDS责任方已完成17项只读归属分析，前后基线一致且零写入。
 | 分布式知识治理运行报告 | 3 | KDS治理、`automation-5` | 仓库外不可变保存180天并保留摘要 |
 | 飞书闭环零字节失败占位 | 3 | KDS闭环监控、`workwiki-kds` | 外部保留30天，删除须专项授权 |
 | WorkWiki远程身份运行证据 | 3 | KDS同步、`macmini-workwiki` | 外部归档30天并按摘要去重 |
-| GCWORLD/WAES资料摄取候选 | 2 | GCWORLD、WAES内容权威方 | 长期保留，核验来源和权限后独立摄取 |
+| GCWORLD/WAME资料摄取候选 | 2 | GCWORLD、WAME内容权威方 | 长期保留，核验来源和权限后独立摄取 |
 | Hermes自进化报告 | 3 | Hermes任务 `111e8983641a` | 至少保留1年，独立审阅归档或提交 |
 | 工业绿链派生报告 | 2 | Hermes任务 `2f3355dec02f`、`87c8214c0e57` | 保存180天或项目周期，月度汇总归档 |
 

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-4CBD09FE9B
 title: Loop Round GPCF-XD-LR-001
 project: XGD
-related_projects: [GPC, WAES, KDS, XGD, XiaoG, GPCF]
+related_projects: [GPC, WAME, KDS, XGD, XiaoG, GPCF]
 domain: docs
 status: controlled
 version: v1.0

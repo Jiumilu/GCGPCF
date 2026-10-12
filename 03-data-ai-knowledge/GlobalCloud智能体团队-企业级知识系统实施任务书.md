@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-0A5E8FD5E6
 title: GlobalCloud智能体团队-企业级知识系统实施任务书
 project: KDS
-related_projects: [GPC, PVAOS, WAME, KDS, Brain, XiaoC, XGD]
+related_projects: [GPC, PVAOS, WAME, KDS, Brain, XiaoC, XGD, Studio]
 domain: data-ai-knowledge
 status: controlled
 version: v1.0

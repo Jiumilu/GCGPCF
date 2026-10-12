@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-B9D88CDED1
 title: GPCF-L4-GFIS-REPAIR-009 GFIS Runtime Contract Status Preflight
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -61,7 +61,7 @@ superseded_by: []
 - 本机 GFIS 运行服务未加载当前 `get_runtime_sop_contract_status` 合同。
 - WorkOrder 运行态仍为 `runtime_api_stale_code_or_reload_required`。
 - 5 项 KDS 葛化真实业务输入仍缺失。
-- POD、WAES/KDS 回执和真实 UAT evidence 尚未闭合。
+- POD、WAME/KDS 回执和真实 UAT evidence 尚未闭合。
 
 ## 真实性与授权边界
 

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-B5A4AF3B25
 title: governance
 project: GPCF
-related_projects: [GPCF, GPC, WAES, KDS]
+related_projects: [GPCF, GPC, WAME, KDS]
 domain: governance
 status: controlled
 version: v1.0
@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/12-GPCF/.okf/governance/README.md
 source_path: .okf/governance/README.md
 sync_direction: bidirectional
-last_reviewed: 2026-10-11
+last_reviewed: 2026-10-12
 supersedes: []
 superseded_by: []
 ---

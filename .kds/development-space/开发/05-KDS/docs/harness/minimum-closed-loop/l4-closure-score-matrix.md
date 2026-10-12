@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-6913FD52DB
 title: L4 Minimum Closed Loop Closure Score Matrix
 project: KDS
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -38,7 +38,7 @@ superseded_by: []
 | GFIS | Runtime factory facts and SOP E2E | development_ready pass; synthetic_dev_lane dev_closed; real_business_lane repair_required |
 | GPC | Platform order and supply-chain contract | ready_for_review |
 | PVAOS | Tenant, organization, partner and permission baseline | ready_for_review |
-| WAES | Evidence gate and governance decision | ready_for_review |
+| WAME | Evidence gate and governance decision | ready_for_review |
 | KDS | Controlled knowledge and backlink store | ready_for_review |
 | Brain | Knowledge UI and retrieval presentation | ready_for_review |
 | PKC | Personal workbench intake and task surface | ready_for_review |
@@ -50,7 +50,7 @@ superseded_by: []
 
 ## Closure Boundary
 
-- GFIS runtime repair required; GFIS dual-lane status: `development_ready=pass`、`synthetic_dev_lane=dev_closed`、`real_business_lane=repair_required`、`business_verification_pending=true`。`GFIS-RUNTIME-SOP-E2E-DEV-READY-001` 已证明开发态 12 阶段 synthetic dev dry-run 可机检闭环，Demo E2E 仅为展示层回归；真实 valid source record、runtime primary key、review queue、runtime intake、WAES review 与 verified artifact 均为 0；GFIS 总 runtime SOP validator 仍因 KDS controlled source / 真实业务输入缺口失败。
+- GFIS runtime repair required; GFIS dual-lane status: `development_ready=pass`、`synthetic_dev_lane=dev_closed`、`real_business_lane=repair_required`、`business_verification_pending=true`。`GFIS-RUNTIME-SOP-E2E-DEV-READY-001` 已证明开发态 12 阶段 synthetic dev dry-run 可机检闭环，Demo E2E 仅为展示层回归；真实 valid source record、runtime primary key、review queue、runtime intake、WAME review 与 verified artifact 均为 0；GFIS 总 runtime SOP validator 仍因 KDS controlled source / 真实业务输入缺口失败。
 - No project is marked accepted.
 - No production write occurred.
 - L5 remains a separate authorization boundary.

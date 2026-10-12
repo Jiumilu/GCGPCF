@@ -1,12 +1,12 @@
 ---
 doc_id: GPCF-DOC-A33E51C815
 title: GPCF Loop Engineering 状态机定义
-project: WAES
-related_projects: [GPC, WAES, XiaoC, GPCF]
+project: WAME
+related_projects: [GPC, WAME, XiaoC, GPCF]
 domain: governance
 status: controlled
 version: v1.0
-owner: WAES
+owner: WAME
 kds_space: 开发
 kds_path: 开发/91-治理与验收/02-governance/gpcf-status-machine.md
 source_path: 02-governance/gpcf-status-machine.md

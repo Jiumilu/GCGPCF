@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-AFAB25CFB3
 title: GC-Knowledge Fabric GFIS Document Acceptance Checklist 批量验收规则
 project: KDS
-related_projects: [GFIS, WAES, KDS]
+related_projects: [GFIS, WAME, KDS]
 domain: docs
 status: controlled
 version: v1.0
@@ -20,9 +20,9 @@ superseded_by: []
 
 ## 1. 定位
 
-GFIS Document Acceptance Checklist 是 GFIS 文档验收助手的资料包级检查契约，用于把建设资料、订单资料、质量资料、发货/POD、金融凭证和 OEM 过渡资料批量转为候选事实、缺口、WAES 门禁建议和 KWE 确认包输入。
+GFIS Document Acceptance Checklist 是 GFIS 文档验收助手的资料包级检查契约，用于把建设资料、订单资料、质量资料、发货/POD、金融凭证和 OEM 过渡资料批量转为候选事实、缺口、WAME 门禁建议和 KWE 确认包输入。
 
-它不写 GFIS 主账，不写 KDS 正式 fact，不落库 WAES gate result，不创建真实 KWE work item，不确认收益、积分、额度、悬赏或委员会裁决。
+它不写 GFIS 主账，不写 KDS 正式 fact，不落库 WAME gate result，不创建真实 KWE work item，不确认收益、积分、额度、悬赏或委员会裁决。
 
 ## 2. Checklist 必检项
 
@@ -37,7 +37,7 @@ GFIS Document Acceptance Checklist 是 GFIS 文档验收助手的资料包级检
 | `trust_level_assigned` | 有 T0-T5 来源等级 |
 | `rag_admission_assessed` | 有 RAG 准入建议 |
 | `sensitive_handling_assessed` | 敏感资料有 metadata-only 或受控原件处理 |
-| `waes_gate_suggested` | 有 WAES gate 建议 |
+| `wame_gate_suggested` | 有 WAME gate 建议 |
 | `kwe_workpack_suggested` | 需要人工/委员会时有 KWE confirmation workpack 建议 |
 | `writeback_candidate_only` | 只允许生成写回候选，不允许正式写回 |
 
@@ -61,7 +61,7 @@ GFIS Document Acceptance Checklist 是 GFIS 文档验收助手的资料包级检
 - `human_required`：需要业务负责人确认。
 - `committee_required`：涉及收益、责任归因、重大争议或跨单位贡献争议。
 - `metadata_only`：敏感资料仅允许元数据入库。
-- `blocked`：T5 AI-only、无来源/证据、违规敏感原文或 WAES hard stop。
+- `blocked`：T5 AI-only、无来源/证据、违规敏感原文或 WAME hard stop。
 
 ## 5. 硬边界
 

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-XWAIL-V12-VALIDATOR-RULES-20260623
 title: XWAIL-V1.2-Validator规则清单
 project: GPCF
-related_projects: [GPCF]
+related_projects: [GPC, PVAOS, WAME, KDS, GPCF]
 domain: architecture
 status: controlled
 version: v1.0

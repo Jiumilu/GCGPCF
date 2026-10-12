@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-05D0ED7A3D
 title: OKF v0.1 摘要准入台账
 project: KDS
-related_projects: [GPC, WAES, KDS, GPCF]
+related_projects: [GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0

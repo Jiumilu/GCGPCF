@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-435A724FA9
 title: GCKF P0 正式 evidence 委员会受理确认 notification receipt aggregation completeness precheck 当前态证据 D173
 project: GPCF
-related_projects: [GPCF, WAES]
+related_projects: [GPCF, WAME]
 domain: docs
 status: controlled
 version: v1.0

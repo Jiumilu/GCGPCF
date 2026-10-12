@@ -1,12 +1,12 @@
 ---
 doc_id: GPCF-DOC-DBC5316C7C
 title: "Acceptance Matrix: gbrain-portal-v1"
-project: WAES
-related_projects: [WAES, Brain]
+project: WAME
+related_projects: [WAME, Brain]
 domain: harness-evidence
 status: archive
 version: v1.0
-owner: WAES
+owner: WAME
 kds_space: 开发
 kds_path: 开发/92-证据与会话归档/.harness/runs/gbrain-portal-v1-20260610-200455/acceptance-matrix.md
 source_path: .harness/runs/gbrain-portal-v1-20260610-200455/acceptance-matrix.md

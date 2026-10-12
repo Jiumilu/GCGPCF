@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-82A2F06757
 title: GPCF-GF-LR-001 输入定义
 project: GFIS
-related_projects: [GFIS, GPC, WAES, KDS, Brain, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, Brain, GPCF]
 domain: evidence
 status: controlled
 version: v1.0
@@ -38,7 +38,7 @@ superseded_by: []
 - 单据与记录
 - 数据采集项
 - 质量、安全、财务红线
-- 与 GPC、WAES、KDS、Brain 的边界和接口候选
+- 与 GPC、WAME、KDS、Brain 的边界和接口候选
 
 ## 3. 入口条件
 
@@ -73,7 +73,7 @@ superseded_by: []
 ## 6. 检查项
 
 - 输出是否能追溯到 PDF 原文页/章节。
-- 是否区分 GFIS 主责和 GPC/WAES/KDS/Brain 协同职责。
+- 是否区分 GFIS 主责和 GPC/WAME/KDS/Brain 协同职责。
 - 是否避免把培训材料当成实现完成证据。
 - 是否更新 GPCF 状态矩阵和 KDS 文档台账。
 

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-LOOP-AGENT-REACH-PROJECT-GROUP-SEARCH-READINESS-AUDIT-001
 title: LOOP Round GPCF-AGENT-REACH-PROJECT-GROUP-SEARCH-READINESS-AUDIT-001
 project: GPCF
-related_projects: [GPC, WAES, GPCF]
+related_projects: [GPC, WAME, GPCF]
 domain: docs
 status: controlled
 version: v1.0

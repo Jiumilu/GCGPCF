@@ -1,8 +1,8 @@
 ---
 doc_id: GPCF-DOC-62444E2231
-title: OKF v0.1 已批准摘要写入器正向 fixture 证据
+title: OKF v0.1 Approved Summary Writer Positive Fixture
 project: GPCF
-related_projects: [GPCF, WAES]
+related_projects: [GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -11,16 +11,16 @@ kds_space: 开发
 kds_path: 开发/12-GPCF/docs/harness/evidence/okf-v01-approved-summary-writer-positive-fixture-20260620.md
 source_path: docs/harness/evidence/okf-v01-approved-summary-writer-positive-fixture-20260620.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-24
+last_reviewed: 2026-06-20
 supersedes: []
 superseded_by: []
 ---
 
-# OKF v0.1 已批准摘要写入器正向 fixture 证据
+# OKF v0.1 Approved Summary Writer Positive Fixture
 
-generated_at: 2026-06-22T01:32:31.542670+00:00
+generated_at: 2026-10-12T07:08:15.113610+00:00
 
-## 摘要
+## Summary
 
 | metric | value |
 | --- | --- |
@@ -30,9 +30,9 @@ generated_at: 2026-06-22T01:32:31.542670+00:00
 | blocked | 0 |
 | json | `docs/harness/evidence/okf-v01-approved-summary-writer-positive-fixture-20260620.json` |
 
-## 边界
+## Boundary
 
-- 本 fixture 仅使用临时文件。
-- 它证明 dry-run 写入器可以识别有效的已批准请求。
-- 它不批准任何真实摘要。
-- 它不修改 OKF concepts。
+- This fixture uses temporary files only.
+- It proves the dry-run writer can identify a valid approved request.
+- It does not approve any real summary.
+- It does not modify OKF concepts.

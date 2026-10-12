@@ -2,7 +2,7 @@
 doc_id: GPCF-LOOP-PROJECT-GROUP-P0C-MINIMAL-VALIDATION-001
 title: Loop Round GPCF-PROJECT-GROUP-P0C-MINIMAL-VALIDATION-001
 project: GPCF
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, XiaoC, XGD, XiaoG, GPCF]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, XiaoC, XGD, XiaoG, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -21,7 +21,7 @@ superseded_by: []
 ## run
 
 - 输入：用户要求“下一步”，承接 P0-B。
-- 范围：GFIS、WAS、WAES、GPC、PVAOS、XiaoC、XiaoG、XGD、XWAIL、AAAS、SOP 的最小验证命令。
+- 范围：GFIS、WAS、WAME、GPC、PVAOS、XiaoC、XiaoG、XGD、XWAIL、AAAS、SOP 的最小验证命令。
 - 执行：
   1. 读取 P0-B 轮次、文档健康报告和 P0-C 任务队列。
   2. 对 11 仓执行 `git status --short --branch` 与 `git diff --check -- .`。

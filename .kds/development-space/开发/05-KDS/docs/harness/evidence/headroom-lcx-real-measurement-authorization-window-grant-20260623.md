@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-HEADROOM-LCX-REAL-MEASUREMENT-AUTHORIZATION-WINDOW-GRANT-20260623
 title: Headroom LCX 真实测量授权窗口授予证据
 project: KDS
-related_projects: [WAES, KDS]
+related_projects: [WAME, KDS]
 domain: docs
 status: controlled
 version: v1.0
@@ -36,7 +36,7 @@ status: real_measurement_authorization_window_granted_precheck_only
 | authorized_at | `2026-06-23T14:30:00+08:00` |
 | sanitized_production_token_ledger | `docs/harness/evidence/headroom-lcx-sanitized-production-usage-ledger-20260623.json` |
 | rollback_plan_id | `HEADROOM-LCX-ROLLBACK-PLAN-20260622-001` |
-| waes_harness_admission_decision | `admitted_for_sanitized_measurement_precheck` |
+| wame_harness_admission_decision | `admitted_for_sanitized_measurement_precheck` |
 
 ## 当前状态
 

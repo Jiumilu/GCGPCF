@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-82F75216CA
 title: LOOP Round GPCF-KDS-DKS-045 - 底座知识候选人工确认与委员会复核队列视图
 project: GPCF
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -74,7 +74,7 @@ superseded_by: []
 - AI 额度发放；
 - RAG 准入；
 - 指挥舱强引用；
-- WAES 放行；
+- WAME 放行；
 - 真实 KDS API 写入；
 - GFIS、GPC、PVAOS、Finance 或其他业务系统主账写入；
 - `accepted` 或 `integrated` 状态升级。
@@ -102,7 +102,7 @@ superseded_by: []
 | builder frontmatter 保留 | pass | 文档控制后复跑 builder，人工确认队列、委员会复核队列和本轮 LOOP 记录 frontmatter 均保留 |
 | 文档控制 | pass | `tools/kds-sync/document_control.py` 已执行完成；人工确认队列 doc_id=`GPCF-DOC-87A94990FE`，委员会复核队列 doc_id=`GPCF-DOC-B30625918B`，本轮 LOOP 记录 doc_id=`GPCF-DOC-82F75216CA` |
 | 队列分流 | pass | `hardStop=false` 进入人工确认队列 4 条；`hardStop=true` 进入委员会复核队列 10 条 |
-| 本轮边界 | pass | 两个队列均显示 `realKdsApiWrite=false`、`waesWrite=false`、`businessLedgerWrite=false`、`settlementWrite=false`、`ragAdmission=false`、`committeeDecisionCompleted=false` |
+| 本轮边界 | pass | 两个队列均显示 `realKdsApiWrite=false`、`wameWrite=false`、`businessLedgerWrite=false`、`settlementWrite=false`、`ragAdmission=false`、`committeeDecisionCompleted=false` |
 | 文档污染 | pass | `document_pollution=pass` |
 | KDS TOKEN | pass | `kds_token=pass fingerprint=bfd9553d`；Token 未写入文档或 evidence |
 | LOOP 文档门禁 | pass | `repo_md=965`; `kds_md=978`; `local_mirror_ledger_lines=965`; `api_sync_ledger_lines=79`; `missing_metadata=0`; `missing_readme_dirs=0` |

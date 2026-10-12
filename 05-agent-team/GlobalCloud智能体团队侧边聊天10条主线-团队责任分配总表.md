@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-582A23D485
 title: GlobalCloud 智能体团队侧边聊天10条主线-团队责任分配总表
 project: XiaoC
-related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, XiaoC, XGD, XiaoG, GPCF]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, XiaoC, XGD, XiaoG, GPCF, Studio]
 domain: agent-team
 status: controlled
 version: v1.0

@@ -2,7 +2,7 @@
 doc_id: PROJECT-DOC-REAL-EVIDENCE-RECORD-TEMPLATE
 title: 真实证据记录模板
 project: GPCF
-related_projects: [WAES, GPCF]
+related_projects: [WAME, GPCF]
 domain: templates
 status: controlled
 version: v1.0

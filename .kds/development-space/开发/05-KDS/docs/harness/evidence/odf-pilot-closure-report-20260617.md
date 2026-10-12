@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-195F37DB52
 title: ODF 受控引入试点闭环报告
 project: KDS
-related_projects: [WAES, KDS]
+related_projects: [WAME, KDS]
 domain: docs
 status: controlled
 version: v1.0

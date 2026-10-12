@@ -7,7 +7,7 @@ tags: [controlled, kds, kds-governance, okf-derived]
 timestamp: 2026-06-22T00:00:00Z
 kds_path: 开发/05-KDS/03-data-ai-knowledge/GlobalCloud Loop开发KDS关联数据检索机制.md
 source_path: 03-data-ai-knowledge/GlobalCloud Loop开发KDS关联数据检索机制.md
-source_hash: 02bbf2f58e12939400780d76f14e380308be31abd08bdfbcff8e05472a16ac2a
+source_hash: 361e7713e34838c49ef02ec2eac2cf3a0f285a7a651decc7712fb28283211744
 source_of_record: kds
 derivation_policy: metadata_only_no_body_copy
 ---

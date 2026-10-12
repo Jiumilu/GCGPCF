@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-802968853F
 title: GC-Knowledge Fabric 综合实施方案完整评审与问题清单
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, Brain, PKC]
+related_projects: [GFIS, GPC, WAME, KDS, Brain, PKC]
 domain: data-ai-knowledge
 status: controlled
 version: v1.0
@@ -27,7 +27,7 @@ superseded_by: []
 | 维度 | 评分 | 说明 |
 |---|---:|---|
 | 总体完整度 | 8.2 / 10 | 已具备体系级知识工程底座雏形 |
-| 战略定位清晰度 | 9 / 10 | KDS、WAES、KWE、Brain、PKC、GFIS/GPC 分工清晰 |
+| 战略定位清晰度 | 9 / 10 | KDS、WAME、KWE、Brain、PKC、GFIS/GPC 分工清晰 |
 | 治理边界清晰度 | 9 / 10 | AI 候选、模板非事实、收益口径等边界明确 |
 | 业务闭环设计 | 8 / 10 | 订单、工厂、资料、收益、悬赏、LOOP 均有入口 |
 | 工程可执行性 | 6.5 / 10 | 仍需状态机、对象契约、Gate fixture 和 no-write 骨架 |
@@ -44,7 +44,7 @@ superseded_by: []
 | 优点 | 价值 |
 |---|---|
 | 边界意识强 | 防止 AI 输出、模板、RAG、写回建议、潜在收益和自动化结果被误写成正式事实 |
-| KDS / WAES / KWE / Harness / LOOP 分工合理 | 防止 Brain 变成事实主账，防止 WAES 变成业务系统，防止 AI 直接写 GFIS |
+| KDS / WAME / KWE / Harness / LOOP 分工合理 | 防止 Brain 变成事实主账，防止 WAME 变成业务系统，防止 AI 直接写 GFIS |
 | KDS 十一池贴近业务 | 可挂接订单、运力、产能、资金、政策、装备、数据、能源、原料、人才、场景 |
 | T0-T5 与 RAG 准入方向正确 | T5 默认 blocked，防止 LLM 分析污染事实底座 |
 | P0-P4 路线稳健 | 先制度和契约，再 no-write 工程骨架，再试点和复制 |
@@ -56,7 +56,7 @@ superseded_by: []
 | P0-R1 | 缺统一编号规则 | KDS 对象不可追溯 | 新增编号规则文档 | `GC-Knowledge-Fabric-统一编号规则.md` |
 | P0-R2 | 缺统一状态机 | 状态提升不可控 | 新增状态机文档 | `GC-Knowledge-Fabric-统一状态机与状态提升规则.md` |
 | P0-R3 | 缺对象关系图 | 工程建表/API 容易漂移 | 新增 ER/对象关系文档 | `GC-Knowledge-Fabric-核心对象关系与最小字段契约.md` |
-| P0-R4 | WAES Gate 输入输出不够细 | 门禁无法 dry-run | 补 Gate 契约 | P0 WAES 文档 |
+| P0-R4 | WAME Gate 输入输出不够细 | 门禁无法 dry-run | 补 Gate 契约 | P0 WAME 文档 |
 | P0-R5 | RAG safe 容易被误解 | 强引用风险 | 增加引用强度 L0-L5 | P0 RAG 文档 |
 | P0-R6 | GFIS 写回沙箱未定义 | 容易误写主账 | 定义 Writeback Sandbox | P0 写回规则 |
 | P0-R7 | 验收缺 fixture | 无法自动测试 | 建立 Gate fixture 样例 | P0 验收包 |
@@ -118,7 +118,7 @@ FactCandidate:
     - poolRefs
     - ownerId
     - confirmationStatus
-    - waesGateRefs
+    - wameGateRefs
   forbidden:
     - directBusinessWriteback
   default:
@@ -128,7 +128,7 @@ FactCandidate:
 
 ### 6.3 从路线计划增强为可验收样例
 
-WAES 最小门禁 dry-run 至少包含：
+WAME 最小门禁 dry-run 至少包含：
 
 | Gate | 最小 fixture 数 |
 |---|---:|
@@ -148,14 +148,14 @@ WAES 最小门禁 dry-run 至少包含：
 3. 建立统一编号规则。
 4. 建立统一状态机。
 5. 建立核心对象关系图。
-6. 建立 WAES Gate 输入输出契约。
+6. 建立 WAME Gate 输入输出契约。
 7. 建立 RAG 准入 + 引用强度规则。
 8. 建立 Gate dry-run fixture。
 9. 建立葛化 / 湖北磷材目录样表。
 10. 建立 P0 LOOP 记录与验收清单。
 11. 建立 OKF YAML / JSON Schema。
 12. 建立 KDS v2 no-write 数据骨架。
-13. 建立 WAES dry-run service。
+13. 建立 WAME dry-run service。
 14. 建立 KWE work-item skeleton。
 15. 执行 GFIS 三件套助手评测。
 16. 执行 LOOP 指挥舱 dry-run。
@@ -165,7 +165,7 @@ WAES 最小门禁 dry-run 至少包含：
 本评审不证明：
 
 1. GC-Knowledge Fabric 已完成工程实现。
-2. GFIS / GPC / KDS / WAES / Brain 已发生真实生产写入。
+2. GFIS / GPC / KDS / WAME / Brain 已发生真实生产写入。
 3. RAG 强引用已经准入。
 4. 收益、积分、额度、悬赏已经结算。
 5. 委员会已经完成裁决。

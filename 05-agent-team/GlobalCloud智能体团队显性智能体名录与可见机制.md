@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-6F5B2A27CF
 title: GlobalCloud 智能体团队显性智能体名录与可见机制
 project: XiaoC
-related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio]
 domain: agent-team
 status: controlled
 version: v1.0

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-173EF82828
 title: GPCF-L4-GFIS-REPAIR-021 Loop Engineering Self Discovery Hardening
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -73,7 +73,7 @@ project_group_score = 79/100 repair
 
 - GFIS DeliveryNote 发货事实。
 - GPC/POD 签收主账。
-- WAES evidence confirmation。
+- WAME evidence confirmation。
 - KDS backlink receipt。
 
 ## 禁止与边界

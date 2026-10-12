@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-58D3A11823
 title: GPCF-L4-GFIS-DEV-SYNC-001
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -39,7 +39,7 @@ business_verification_pending=true
 ```text
 gfis_runtime_sop_e2e_dev_dry_run=pass synthetic_dev_lane=dev_closed synthetic_e2e=synthetic_e2e_pass synthetic_stage_count=12 synthetic_verified_artifacts=12 real_business_lane=repair_required business_verification_pending=true
 gfis_runtime_sop_e2e_dev=pass synthetic_dev_lane=dev_closed synthetic_e2e_pass=1 synthetic_stage_count=12 synthetic_verified_artifacts=12 business_verification_pending=true runtime_sop_e2e_real=repair_required
-gfis_runtime_sop_e2e_real=repair_required synthetic_rejected_by_real_lane=1 synthetic_pollution_files=0 real_source_records=0 real_runtime_primary_keys=0 real_review_queue_items=0 real_runtime_intake_items=0 real_waes_reviews=0 real_verified_artifacts=0
+gfis_runtime_sop_e2e_real=repair_required synthetic_rejected_by_real_lane=1 synthetic_pollution_files=0 real_source_records=0 real_runtime_primary_keys=0 real_review_queue_items=0 real_runtime_intake_items=0 real_wame_reviews=0 real_verified_artifacts=0
 ```
 
 ## 回写范围
@@ -66,10 +66,10 @@ gfis_runtime_sop_e2e_real=repair_required synthetic_rejected_by_real_lane=1 synt
 
 - 真实 source-of-record 未补齐。
 - 真实 runtime primary key 未创建。
-- 真实 review queue、runtime intake、WAES review、verified artifact 均为 0。
+- 真实 review queue、runtime intake、WAME review、verified artifact 均为 0。
 - 未生产写入。
 - 未真实外部 API 写入。
-- 未真实 KDS/WAES 写入。
+- 未真实 KDS/WAME 写入。
 - 未数据库迁移。
 - 未权限变更。
 - 未恢复 100/100。
@@ -79,5 +79,5 @@ gfis_runtime_sop_e2e_real=repair_required synthetic_rejected_by_real_lane=1 synt
 等待真实 source-of-record 补齐后，再运行真实业务闭环验证：
 
 ```text
-real source record -> runtime primary key -> review queue -> runtime intake -> WAES review -> verified artifact
+real source record -> runtime primary key -> review queue -> runtime intake -> WAME review -> verified artifact
 ```

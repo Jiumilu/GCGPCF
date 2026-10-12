@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-87EE29147B
 title: WAS Real Source Record Waiting Room Evidence
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -45,7 +45,7 @@ superseded_by: []
 | runtime_primary_key_ready | `0` |
 | review_queue | `0` |
 | runtime_intake | `0` |
-| waes_review | `0` |
+| wame_review | `0` |
 | verified | `0` |
 | accepted | `false` |
 | integrated | `false` |
@@ -60,6 +60,6 @@ python3 tools/kds-sync/validate_was_real_source_record_waiting_room.py
 ## 非声明
 
 - 等待室不等于真实 source-record 已提交。
-- 等待室不创建 runtime primary key、review queue、runtime intake、WAES review 或 verified artifact。
+- 等待室不创建 runtime primary key、review queue、runtime intake、WAME review 或 verified artifact。
 - 等待室不写 GFIS/KWE runtime。
 - 等待室不标记 accepted、integrated 或 production_ready。

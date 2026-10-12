@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-191596F2F1
 title: GPCF L4 GFIS Repair 044
 project: GPCF
-related_projects: [GFIS, GPC, WAME, KDS, GPCF]
+related_projects: [GFIS, GPC, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0

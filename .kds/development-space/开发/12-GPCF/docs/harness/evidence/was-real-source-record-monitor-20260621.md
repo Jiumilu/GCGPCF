@@ -15,3 +15,10 @@ last_reviewed: 2026-06-24
 supersedes: []
 superseded_by: []
 ---
+
+required_p4_inputs | `6`
+submitted_real_inputs | `0`
+accepted_for_next_gate | `0`
+hold_required | `1`
+monitor_state | `waiting`
+production_ready | `false`

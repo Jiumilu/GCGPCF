@@ -1,28 +1,28 @@
 ---
-doc_id: GPCF-DOC-WAES-REAL-RUNTIME-BASELINE-20260624
-title: WAES 真实运行基线证据 2026-06-24
-project: WAES
-related_projects: [WAES, KDS, Brain, GPCF]
+doc_id: GPCF-DOC-WAME-REAL-RUNTIME-BASELINE-20260624
+title: WAME 真实运行基线证据 2026-06-24
+project: WAME
+related_projects: [WAME, KDS, Brain, GPCF]
 domain: docs
 status: controlled
 version: v1.0
-owner: WAES
+owner: WAME
 kds_space: 开发
-kds_path: 开发/04-WAES/docs/harness/WAES/evidence/waes-real-runtime-baseline-20260624.md
-source_path: docs/harness/WAES/evidence/waes-real-runtime-baseline-20260624.md
+kds_path: 开发/04-WAME/docs/harness/WAME/evidence/wame-real-runtime-baseline-20260624.md
+source_path: docs/harness/WAME/evidence/wame-real-runtime-baseline-20260624.md
 sync_direction: bidirectional
 last_reviewed: 2026-06-24
 supersedes: []
 superseded_by: []
 ---
 
-# WAES 真实运行基线证据 2026-06-24
+# WAME 真实运行基线证据 2026-06-24
 
 ## 1. 证据定位
 
-本文记录 WAES 在 `GlobalCloud 项目群实施方案` 下的首轮真实运行基线采集结果。
+本文记录 WAME 在 `GlobalCloud 项目群实施方案` 下的首轮真实运行基线采集结果。
 
-本文只证明本轮在本地仓库执行过指定命令，并记录结果边界；不声明 WAES 真实运行闭环已完成，不声明跨项目集成完成，不声明客户验收通过。
+本文只证明本轮在本地仓库执行过指定命令，并记录结果边界；不声明 WAME 真实运行闭环已完成，不声明跨项目集成完成，不声明客户验收通过。
 
 ## 2. 执行环境
 
@@ -71,23 +71,23 @@ src/app/plugin/PluginManager.tsx
 本轮可以登记：
 
 ```text
-waes_runtime_evidence = partial_verified
-waes_repair_required = lint_parse_errors
+wame_runtime_evidence = partial_verified
+wame_repair_required = lint_parse_errors
 ```
 
 本轮不得登记：
 
-- 不登记 WAES 真实运行闭环完成；
-- 不登记 WAES 与 XWAIL、AaaS、KDS、Brain 的真实集成完成；
+- 不登记 WAME 真实运行闭环完成；
+- 不登记 WAME 与 XWAIL、AaaS、KDS、Brain 的真实集成完成；
 - 不登记可交付版本已完成；
 - 不登记客户验收通过。
 
 ## 6. 下一步
 
-WAES 下一轮应在明确授权的实现分支或隔离 worktree 中修复 lint 解析错误，然后重新执行：
+WAME 下一轮应在明确授权的实现分支或隔离 worktree 中修复 lint 解析错误，然后重新执行：
 
 ```bash
 npm run check
 ```
 
-修复前，WAES 在核心链路证据矩阵中的真实运行状态应保持 `repair_required`，真实研发状态可标记为 `partial_verified`。
+修复前，WAME 在核心链路证据矩阵中的真实运行状态应保持 `repair_required`，真实研发状态可标记为 `partial_verified`。

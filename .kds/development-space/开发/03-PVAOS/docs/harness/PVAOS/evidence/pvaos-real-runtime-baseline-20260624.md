@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-PVAOS-REAL-RUNTIME-BASELINE-20260624
 title: PVAOS 真实运行基线证据 2026-06-24
 project: PVAOS
-related_projects: [GFIS, GPC, PVAOS, WAES, GPCF]
+related_projects: [GFIS, GPC, PVAOS, WAME, GPCF]
 domain: docs
 status: controlled
 version: v1.0

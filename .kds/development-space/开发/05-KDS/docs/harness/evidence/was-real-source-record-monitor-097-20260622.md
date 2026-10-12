@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-6C0AA9097
 title: WAS Real Source Record Monitor 097 证据
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -20,7 +20,7 @@ superseded_by: []
 
 ## 范围
 
-`GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-097` 将绿色供应链覆盖扩展到绿色声明、客户披露、标签授权、营销合规、投诉处理和声明更正边界。该边界用于约束任何绿色声明进入 WAES/KDS/GFIS/RAG/Pool 依赖前，必须具备可追溯、可复核、不可由 LLM 或治理文档替代的披露与反漂绿证据链。
+`GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-097` 将绿色供应链覆盖扩展到绿色声明、客户披露、标签授权、营销合规、投诉处理和声明更正边界。该边界用于约束任何绿色声明进入 WAME/KDS/GFIS/RAG/Pool 依赖前，必须具备可追溯、可复核、不可由 LLM 或治理文档替代的披露与反漂绿证据链。
 
 ## 监控检查
 
@@ -42,7 +42,7 @@ superseded_by: []
 | runtime_primary_key_ready | `0` |
 | review_queue | `0` |
 | runtime_intake | `0` |
-| waes_review | `0` |
+| wame_review | `0` |
 | verified | `0` |
 | accepted | `False` |
 | integrated | `False` |
@@ -73,7 +73,7 @@ python3 tools/kds-sync/validate_was_real_source_record_monitor_097.py
 
 - 本证据不创建也不推断绿色声明批准、生态标签授权、碳声明支撑、客户披露审批、营销合规复核、投诉处理或声明撤回更正。
 - 本证据不写入 GFIS/KWE 运行层。
-- 本证据不创建 KDS 正式事实、WAES review、runtime primary key、review queue、runtime intake、verified artifact，也不形成 accepted、integrated 或 production ready 状态。
+- 本证据不创建 KDS 正式事实、WAME review、runtime primary key、review queue、runtime intake、verified artifact，也不形成 accepted、integrated 或 production ready 状态。
 
 ## 下一轮
 

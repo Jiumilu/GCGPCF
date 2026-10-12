@@ -2,8 +2,8 @@
 doc_id: GPCF-DOC-LOOP-AGENT-REACH-P8-AUTHORIZED-PIPELINE-CLOSURE-001
 title: Agent-Reach P8 授权后 Pipeline 闭包 Loop 001
 project: GPCF
-related_projects: [GPCF, KDS]
-domain: governance
+related_projects: [GPC, WAME, GPCF]
+domain: docs
 status: controlled
 version: v1.0
 owner: GPCF

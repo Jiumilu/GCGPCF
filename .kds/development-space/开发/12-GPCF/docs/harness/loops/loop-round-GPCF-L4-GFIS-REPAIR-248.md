@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-AD3AE05919
 title: GPCF-L4-GFIS-REPAIR-248 收件文件扫描预检
 project: GPCF
-related_projects: [GFIS, GPC, WAES, GPCF]
+related_projects: [GFIS, GPC, WAME, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -94,7 +94,7 @@ hold_release_allowed=0
 runtime_primary_key_ready=0
 review_queue=0
 runtime_intake=0
-waes_review=0
+wame_review=0
 verified=0
 runtime_sop_e2e=repair_required
 ```
@@ -122,7 +122,7 @@ runtime_sop_e2e=repair_required
 - 未允许 submission package
 - 未批准 release override
 - 未释放 open hold
-- 未生成客户订单、平台订单、有效 source-of-record、runtime primary key、review queue、runtime intake、WAES review 或 verified artifact
+- 未生成客户订单、平台订单、有效 source-of-record、runtime primary key、review queue、runtime intake、WAME review 或 verified artifact
 - 不得升级 accepted/integrated
 
 ## 下一轮建议

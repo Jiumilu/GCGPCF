@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-A0469C3170
 title: GC-Knowledge Fabric 敏感资料入库规则
 project: KDS
-related_projects: [WAES, KDS]
+related_projects: [WAME, KDS]
 domain: data-ai-knowledge
 status: controlled
 version: v1.0
@@ -49,12 +49,12 @@ superseded_by: []
 - 哈希或受控原件位置。
 - 权限范围。
 - 可引用范围。
-- WAES Sensitive Data Gate 结果。
+- WAME Sensitive Data Gate 结果。
 - 脱敏责任人或确认人。
 
 ## 5. RAG 边界
 
-敏感资料默认 `sensitive_metadata_only`。除非形成脱敏副本并通过 WAES，否则不得进入开放 RAG 原文召回。
+敏感资料默认 `sensitive_metadata_only`。除非形成脱敏副本并通过 WAME，否则不得进入开放 RAG 原文召回。
 
 ## 6. 写回边界
 

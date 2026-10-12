@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-A001000001
 title: adapt
 project: GPCF
-related_projects: [GPC, WAES, KDS, GPCF]
+related_projects: [GPC, WAME, KDS, GPCF]
 domain: operational-skill
 status: operational_controlled
 version: v1.0

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-AA2468EDC8
 title: GlobalCloud 绿色供应链平台主架构与宪法约束融合建议
 project: GPCF
-related_projects: [GPCF, GFIS, GPC, PVAOS, WAES, KDS, Brain, XiaoC, XGD, Studio]
+related_projects: [GPCF, GFIS, GPC, PVAOS, WAME, KDS, Brain, XiaoC, XGD, Studio]
 domain: architecture
 status: controlled
 version: v1.0
@@ -36,7 +36,7 @@ superseded_by: []
 ### 2.1 三层主架构
 
 1. 治理与监控层：
-   - 主责系统：`WAES`
+   - 主责系统：`WAME`
    - 主责内容：规则、治理、证据、状态、指标、AI 授权、发布验证、连接器治理
 2. 运营与协同层：
    - 主责系统：`GPC`
@@ -55,7 +55,7 @@ superseded_by: []
 
 1. `GPC` 是绿色供应链平台的一期主线平台。
 2. `PVAOS` 是入口，不是主业务平台。
-3. `WAES` 是治理平面，不是订单和事务平台。
+3. `WAME` 是治理平面，不是订单和事务平台。
 4. `GFIS` 是工厂事实平台，不是区域协同平台。
 5. `Edge` 是接入层，不是业务平台。
 6. KDS 为企业级知识主存（canonical source），Brain 为知识 UI 层；LLM Wiki 为知识编制工具，不直接等于企业级知识真源。
@@ -70,7 +70,7 @@ superseded_by: []
 2. 主责系统唯一约束：
    - 一个业务事实只能有一个主责系统
 3. 治理审批与业务审批分离约束：
-   - WAES 不承办工单、质量、库存、发货、签收等事务审批
+   - WAME 不承办工单、质量、库存、发货、签收等事务审批
 4. 状态升级约束：
    - `accepted`、`complete` 必须有治理门和证据门
 5. 连接器治理约束：
@@ -89,7 +89,7 @@ superseded_by: []
 3. 厂外运输、在途、POD、回单。
 4. 外部异常和跨组织例外闭环。
 5. 多厂分单、库存可见性、产能协同。
-6. 与 GFIS、PVAOS、WAES 的连接器和事件协同。
+6. 与 GFIS、PVAOS、WAME 的连接器和事件协同。
 
 `GPC` 不做：
 
@@ -100,16 +100,16 @@ superseded_by: []
 5. 证据确证。
 6. 治理审批。
 
-### 4.2 WAES 的正确写法
+### 4.2 WAME 的正确写法
 
-`WAES` 应只写成以下角色：
+`WAME` 应只写成以下角色：
 
 1. 项目发起与模板启用中枢。
 2. 发布验证与阶段验收中枢。
 3. 规则、指标、状态、证据和 AI 授权中枢。
 4. 控制塔与治理视图中枢。
 
-`WAES` 不应写成：
+`WAME` 不应写成：
 
 1. 业务事务审批中心。
 2. 订单执行系统。
@@ -157,7 +157,7 @@ superseded_by: []
 应强化：
 
 1. `GPC` 作为平台主线系统。
-2. `WAES` 作为治理对象主线系统。
+2. `WAME` 作为治理对象主线系统。
 3. `BusinessApprovalReference` 与 `GovernanceApproval` 的分离。
 4. 平台对象与工厂对象的映射字段，而非同库共享。
 
@@ -177,9 +177,9 @@ superseded_by: []
 1. `PVAOS -> GPC`
 2. `GPC -> GFIS`
 3. `GFIS -> GPC`
-4. `GFIS/GPC -> WAES`
+4. `GFIS/GPC -> WAME`
 5. `Edge -> GFIS`
-6. `Brain/XiaoC（蚁后）/Hermes/XGD（大象） -> WAES`
+6. `Brain/XiaoC（蚁后）/Hermes/XGD（大象） -> WAME`
 
 ### 5.4 SOP 模板
 
@@ -203,14 +203,14 @@ superseded_by: []
 
 1. 数据层升级为业务事实层、资源仓库层、企业级知识主存层、知识引擎层和技术运行底座，其中资源仓库当前已定义十一池，后续可继续新增其它池。
 2. `LLM Wiki` 与 `Brain` 当前并行测试，但都不直接承担企业级知识真源角色。
-3. `WAES` 对知识准入、发布、引用和 AI 可见范围负责治理。
+3. `WAME` 对知识准入、发布、引用和 AI 可见范围负责治理。
 
 ## 6. 当前最需要你重点看的架构变化
 
 如果只看更新后的架构，建议重点看下面 4 点：
 
 1. `GPC` 被正式收敛为绿色供应链平台主线，而不是历史原型的延伸。
-2. `WAES` 被正式收敛为治理平面，而不是业务平台。
+2. `WAME` 被正式收敛为治理平面，而不是业务平台。
 3. `GFIS` 与 `GPC` 的“平台事实 / 工厂事实”分层被继续拉开。
 4. 宪法内容被下沉为门禁、状态、证据、授权和连接器治理约束，而不是抽象口号。
 5. 数据层进一步升级为“企业级知识主存层 + 知识引擎层”的双层知识架构。
@@ -220,6 +220,6 @@ superseded_by: []
 当前最合理的总设计不是“再造一个更大的平台”，而是：
 
 1. 让 `GPC` 成为绿链平台业务主线。
-2. 让 `WAES` 成为治理和控制塔主线。
+2. 让 `WAME` 成为治理和控制塔主线。
 3. 让 `GFIS` 成为工厂执行主线。
 4. 让宪法成为这些系统之间的上位约束，而不是其中任何一个系统的替代物。

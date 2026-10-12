@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-F0F8B9372A
 title: Cognee 全量运行准入包 2026-06-26
 project: GPCF
-related_projects: [GPCF, WAES]
+related_projects: [GPCF, WAME]
 domain: docs
 status: controlled
 version: v1.0
@@ -42,7 +42,7 @@ superseded_by: []
 | `COGNEE-FULL-RUN-GAP-001` | 真实外部执行层接入验证完成 | `missing_real_execution_receipt` | 形成真实执行回执并完成 postfill evidence |
 | `COGNEE-FULL-RUN-GAP-002` | 全量对象覆盖 | `sample_scope_only_5_records` | 形成全量对象清单、覆盖率统计和排除范围说明 |
 | `COGNEE-FULL-RUN-GAP-003` | 全量场景覆盖 | `p4_controlled_scenario_only` | 形成场景矩阵与每类场景通过记录 |
-| `COGNEE-FULL-RUN-GAP-004` | 生产状态提升证据 | `production_state_false` | 形成独立状态提升回执、回退条件和 Harness/WAES 决策 |
+| `COGNEE-FULL-RUN-GAP-004` | 生产状态提升证据 | `production_state_false` | 形成独立状态提升回执、回退条件和 Harness/WAME 决策 |
 | `COGNEE-FULL-RUN-GAP-005` | 全量运行账本 | `missing_full_run_ledger` | 形成运行账本、批次回执和异常记录 |
 
 ## 4. full-run admission gate

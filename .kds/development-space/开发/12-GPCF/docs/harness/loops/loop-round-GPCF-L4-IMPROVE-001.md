@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-F52140FBE0
 title: "GPCF-L4-IMPROVE-001: L4 评分提升轮次"
 project: GPCF
-related_projects: [GPC, WAES, KDS, XiaoG, GPCF]
+related_projects: [GPC, WAME, KDS, XiaoG, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -57,7 +57,7 @@ superseded_by: []
 - 不创建真实 source-of-record
 - 不创建运行层主键
 - 不标记 accepted/integrated
-- 不写入 KDS/WAES API
+- 不写入 KDS/WAME API
 - 真实业务链路继续 repair_required
 
 ## L4 评分维度预期影响

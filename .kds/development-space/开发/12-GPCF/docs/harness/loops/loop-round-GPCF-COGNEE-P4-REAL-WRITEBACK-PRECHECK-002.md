@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-LOOP-COGNEE-P4-REAL-WRITEBACK-PRECHECK-002
 title: Loop Round - GPCF Cognee P4 真实写入前置修复与复测 002
 project: GPCF
-related_projects: [GPC, WAES, KDS, GPCF]
+related_projects: [GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -73,7 +73,7 @@ python3 loop/context/cognee/scripts/validate-cognee-p4-real-writeback-precheck.p
 ## recover
 
 - 阻断修复失败：保留 `LOOP-GPCF-COGNEE-P4-001` 原始数据不变，补齐后追加新 evidence 与新一轮记录。
-- 授权链变更：需由 owner 与 WAES 共同确认后触发下一次 precheck。
+- 授权链变更：需由 owner 与 WAME 共同确认后触发下一次 precheck。
 - 运行时依赖变更：需确认 KDS / GPCF 接口变更回写后再执行下一轮。
 
 ## debug

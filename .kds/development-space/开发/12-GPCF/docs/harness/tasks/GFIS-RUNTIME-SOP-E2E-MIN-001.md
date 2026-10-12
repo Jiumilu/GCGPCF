@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-GFIS-RUNTIME-SOP-E2E-MIN-001
 title: GFIS-RUNTIME-SOP-E2E-MIN-001
 project: GPCF
-related_projects: [GPCF, GFIS, WAES]
+related_projects: [GPCF, GFIS, WAME]
 domain: docs
 status: controlled
 version: v1.0
@@ -31,7 +31,7 @@ source_record_candidates=1
 runtime_primary_key_candidates=1
 runtime_intake_candidates=1
 review_queue_candidates=1
-waes_review_candidates=1
+wame_review_candidates=1
 verified_artifact_candidates=1
 ```
 
@@ -169,7 +169,7 @@ delivery_requirement = required
 quality_requirement = required
 owner_confirmation.valid = true only after source owner confirms
 kds_source_backlink.uri = required
-waes_evidence_candidate.id = required
+wame_evidence_candidate.id = required
 ```
 
 候选目录预检命令只读示例：
@@ -191,7 +191,7 @@ real_business_lane=repair_required
 
 ## 4. Boundary
 
-GFIS 目标链路术语：runtime intake、review queue、WAES review、verified artifact candidate。
+GFIS 目标链路术语：runtime intake、review queue、WAME review、verified artifact candidate。
 
 禁止项：生产写入、真实外部 API 写入、schema migrate、commit、push、deploy、真实 KDS API 写入。
 
@@ -200,7 +200,7 @@ valid_source_records=0
 runtime_primary_key_ready=0
 review_queue=0
 runtime_intake=0
-waes_review=0
+wame_review=0
 verified=0
 accepted=false
 integrated=false

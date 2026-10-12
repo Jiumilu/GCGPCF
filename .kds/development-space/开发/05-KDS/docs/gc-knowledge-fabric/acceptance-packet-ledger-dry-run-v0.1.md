@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-039865B508
 title: GC-Knowledge Fabric Acceptance Packet Ledger Dry-run v0.1
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0

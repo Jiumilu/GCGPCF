@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-E7EC0E51E9
 title: GPCF-KDS-DKS-008 葛化第一阶段 GFIS AI 助手三件套实施清单 Loop 记录
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0

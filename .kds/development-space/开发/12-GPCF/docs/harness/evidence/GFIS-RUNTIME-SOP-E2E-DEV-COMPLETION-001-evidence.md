@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-4795938811
 title: GFIS-RUNTIME-SOP-E2E-DEV-COMPLETION-001 Evidence
 project: GPCF
-related_projects: [GFIS, GPC, WAES, GPCF]
+related_projects: [GFIS, GPC, WAME, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -49,7 +49,7 @@ CustomerRequirementOrPlatformOrder contract 已有 GFIS 侧 schema 与模板：
 schema=docs/harness/sop-e2e/intake-submissions/runtime-primary-key-source-records/customer-requirement-or-platform-order/customer-requirement-platform-order.valid-source-record-index.schema.json
 template=docs/harness/sop-e2e/intake-submissions/runtime-primary-key-source-records/customer-requirement-or-platform-order/customer-requirement-platform-order.valid-source-record-index.template.json
 object_family=CustomerRequirementOrPlatformOrder
-required_fields=subject,object_family,sop_stage,source_kind,source_record_uri,source_record_hash,customer_name,product,quantity,delivery_requirement,quality_requirement,owner_confirmation,kds_source_backlink,waes_evidence_candidate
+required_fields=subject,object_family,sop_stage,source_kind,source_record_uri,source_record_hash,customer_name,product,quantity,delivery_requirement,quality_requirement,owner_confirmation,kds_source_backlink,wame_evidence_candidate
 source_record_hash=sha256_hex_64
 owner_confirmation.valid=true
 ```
@@ -75,7 +75,7 @@ not_customer_accepted=true
 production_write=false
 real_external_api_write=false
 real_kds_write=false
-real_waes_write=false
+real_wame_write=false
 ```
 
 ## Development Chain Result
@@ -105,7 +105,7 @@ Contract Agent: contract_defined=true controlled_sample_exists=true contract_val
 Runtime Intake Agent: runtime_intake_development=true runtime_intake_dry_run_passed=true
 Primary Key / Source Validation Agent: primary_key_candidate_generated=true source_validation_passed=true
 Review Queue Agent: review_queue_item_generated=true
-WAES Candidate / Artifact Agent: waes_review_candidate_generated=true verified_artifact_candidate_by_fixture_generated=true local_e2e_dry_run_passed=true
+WAME Candidate / Artifact Agent: wame_review_candidate_generated=true verified_artifact_candidate_by_fixture_generated=true local_e2e_dry_run_passed=true
 Boundary Validator Agent: delivery_boundary_validator_passed=true
 LOOP Orchestrator: governance_summary_draft_ready=true development_ready_for_real_business_validation_application=candidate
 ```
@@ -120,7 +120,7 @@ synthetic_source_records=12
 synthetic_runtime_primary_keys=12
 synthetic_review_queue_items=12
 synthetic_runtime_intake_items=12
-synthetic_waes_evidence_candidates=12
+synthetic_wame_evidence_candidates=12
 synthetic_verified_artifacts=12
 ```
 
@@ -132,7 +132,7 @@ synthetic_source_records=1
 synthetic_runtime_primary_keys=1
 synthetic_review_queue_items=1
 synthetic_runtime_intake_items=1
-synthetic_waes_reviews=1
+synthetic_wame_reviews=1
 synthetic_verified_artifacts=1
 pollution_guard_passed=1
 ```
@@ -144,7 +144,7 @@ source_record_candidates=1
 runtime_primary_key_candidates=1
 runtime_intake_candidates=1
 review_queue_candidates=1
-waes_review_candidates=1
+wame_review_candidates=1
 verified_artifact_candidates=1
 candidate_lane=pass
 ```
@@ -174,12 +174,12 @@ valid_source_records=0
 runtime_primary_key_ready=0
 review_queue=0
 runtime_intake=0
-waes_review=0
+wame_review=0
 verified=0
 production_writes=0
 real_external_api_writes=0
 real_kds_writes=0
-real_waes_writes=0
+real_wame_writes=0
 ```
 
 ## Development Completion Candidate

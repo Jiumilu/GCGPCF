@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-DDBD7C90C2
 title: {项目名} 循环状态模板
 project: GPCF
-related_projects: [GPC, WAES, GPCF]
+related_projects: [GPC, WAME, GPCF]
 domain: templates
 status: controlled
 version: v1.0

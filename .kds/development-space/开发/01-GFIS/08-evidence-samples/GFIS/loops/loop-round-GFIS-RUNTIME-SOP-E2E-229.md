@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-0052427870
 title: GFIS-RUNTIME-SOP-E2E-229
 project: GFIS
-related_projects: [GFIS, GPC, WAES, KDS]
+related_projects: [GFIS, GPC, WAME, KDS]
 domain: evidence
 status: controlled
 version: v1.0
@@ -38,7 +38,7 @@ superseded_by: []
 
 ## 本轮目标
 
-建立 release-ready package hold release precheck。该预检只判断是否具备释放 open hold 的严格条件；在未发现真实、schema-valid、带 owner/hash/KDS backlink/dispatch precondition 的 release-ready package 前，继续阻断 hold release、review queue、runtime intake、WAES review 和 verified artifact。
+建立 release-ready package hold release precheck。该预检只判断是否具备释放 open hold 的严格条件；在未发现真实、schema-valid、带 owner/hash/KDS backlink/dispatch precondition 的 release-ready package 前，继续阻断 hold release、review queue、runtime intake、WAME review 和 verified artifact。
 
 ## 执行动作
 
@@ -92,7 +92,7 @@ runtime_primary_key_ready=0
 runtime_primary_key_missing=1
 review_queue=0
 runtime_intake=0
-waes_review=0
+wame_review=0
 verified=0
 runtime_sop_e2e=repair_required
 ```
@@ -107,7 +107,7 @@ runtime_sop_e2e=repair_required
 
 ## 非声明
 
-本轮不创建、不确认、不替代客户订单、平台订单回执、pending submission、合规人工核验完成文件、有效 release-ready package、有效 source-of-record、运行层主键、dispatch confirmation、review queue、runtime intake、WAES review、verified artifact 或 accepted/integrated 状态。
+本轮不创建、不确认、不替代客户订单、平台订单回执、pending submission、合规人工核验完成文件、有效 release-ready package、有效 source-of-record、运行层主键、dispatch confirmation、review queue、runtime intake、WAME review、verified artifact 或 accepted/integrated 状态。
 
 ## 真实性计数
 
@@ -122,4 +122,4 @@ stop_type=authorization_boundary
 
 ## 下一轮建议
 
-`GFIS-RUNTIME-SOP-E2E-230`：建立 release-ready package hold release attempt hard-stop audit；在未出现真实 release-ready package 前继续记录并阻断 release/review/runtime/WAES 尝试。
+`GFIS-RUNTIME-SOP-E2E-230`：建立 release-ready package hold release attempt hard-stop audit；在未出现真实 release-ready package 前继续记录并阻断 release/review/runtime/WAME 尝试。

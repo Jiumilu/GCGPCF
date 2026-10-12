@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-HEADROOM-LCX-L35-MULTI-WINDOW-STABILITY-20260622
 title: Headroom LCX L3.5 多窗口脱敏稳定性证据
 project: KDS
-related_projects: [WAES, KDS]
+related_projects: [WAME, KDS]
 domain: docs
 status: controlled
 version: v1.0

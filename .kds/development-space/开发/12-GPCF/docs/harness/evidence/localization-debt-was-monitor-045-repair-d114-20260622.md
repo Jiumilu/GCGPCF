@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-LOCALIZATIONDEBTWASMONITOR045REPAIRD11420260622
 title: WAS Monitor 045 D114 中文化修复证据
 project: GPCF
-related_projects: [GPCF, WAES]
+related_projects: [GPCF, WAME]
 domain: docs
 status: controlled
 version: v1.0

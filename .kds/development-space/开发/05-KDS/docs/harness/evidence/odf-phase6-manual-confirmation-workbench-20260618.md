@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-36A3D26724
 title: ODF Phase 6 人工确认工作台
 project: KDS
-related_projects: [WAES, KDS, GPCF]
+related_projects: [WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0

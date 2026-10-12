@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-FF36CE622C
 title: GPCF-L4-GFIS-REPAIR-062 GFIS 辽宁远航原始凭证采集清单
 project: GPCF
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -44,7 +44,7 @@ superseded_by: []
 | 辽宁远航 23 个样箱测试签收或测试反馈 | GPC | 54 | 测试记录编号、测试签收附件、客户反馈原件、客户签收单号 |
 | 江西委托工厂样箱生产记录 | GFIS | 8 | 委托生产单号、完工记录编号、生产批次号、代工签收附件 |
 | 2026-05 辽宁远航项目报价单 | GPC | 47 | 客户确认函 |
-| 2026-06 现代精工产线量产计划或转量产批准 | WAES | 57 | 转量产批准单号、放行批准附件、量产计划编号、WAES evidence ref |
+| 2026-06 现代精工产线量产计划或转量产批准 | WAME | 57 | 转量产批准单号、放行批准附件、量产计划编号、WAME evidence ref |
 
 ## Evidence
 

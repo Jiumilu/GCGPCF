@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-2DAF142553
 title: Loop CodeGraph Sync Drift Evidence
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, Brain, GPCF, Studio]
+related_projects: [GFIS, GPC, WAME, KDS, Brain, GPCF, Studio]
 domain: docs
 status: controlled
 version: v1.0

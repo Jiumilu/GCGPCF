@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-36F8C5657B
 title: 被替代文档归档
 project: GPC
-related_projects: [GPC, WAES, KDS, GPCF]
+related_projects: [GPC, WAME, KDS, GPCF]
 domain: archive
 status: archive
 version: v1.0
@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/92-证据与会话归档/10-archive/superseded/README.md
 source_path: 10-archive/superseded/README.md
 sync_direction: bidirectional
-last_reviewed: 2026-10-11
+last_reviewed: 2026-10-12
 supersedes: []
 superseded_by: []
 ---

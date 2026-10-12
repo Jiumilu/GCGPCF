@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-B66EC338E9
 title: GlobalCloud智能体团队6个专项首轮实施前验证包执行矩阵
 project: XiaoC
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, XiaoC, XGD, XiaoG, Studio]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, XiaoC, XGD, XiaoG, Studio]
 domain: agent-team
 status: controlled
 version: v1.0
@@ -33,7 +33,7 @@ superseded_by: []
 
 | 专项 | 当前阶段 | 当前目标 | 主责成员 | 工作环境 | 推荐工具 | 推荐技能 | 推荐方法 | 效率要求 | 成本上限 | 证据清单 | 状态上限 |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| 宪衡 / WAES | 首轮实施前验证准备 | 抽取治理对象、证据对象、授权对象和连接器治理样本要求 | 宪衡 | 项目仓库环境 + 设计控制环境 | Shell、Git、文档工具 | `globalcloud-harness-governance` | 治理对象落点法、证据样本设计法 | 中速、高准确性 | 中等 token；禁止大面积翻仓 | `EvidenceRecord` 样本要求、`StatusAudit` 样本要求、`AgentToolGrant` 样本要求、连接器治理样本要求 | `partial` |
+| 宪衡 / WAME | 首轮实施前验证准备 | 抽取治理对象、证据对象、授权对象和连接器治理样本要求 | 宪衡 | 项目仓库环境 + 设计控制环境 | Shell、Git、文档工具 | `globalcloud-harness-governance` | 治理对象落点法、证据样本设计法 | 中速、高准确性 | 中等 token；禁止大面积翻仓 | `EvidenceRecord` 样本要求、`StatusAudit` 样本要求、`AgentToolGrant` 样本要求、连接器治理样本要求 | `partial` |
 | 链同 / PVAOS + GPC | 首轮实施前验证准备 | 收敛协同主链运行前样本要求，区分 PVAOS 入口事实和 GPC 原型样本 | 链同 | 项目仓库环境 + 设计控制环境 | Shell、Git、文档工具 | `repo branch gate`, `globalcloud-harness-governance` | 协同主链样本法、原型-目标边界法 | 高效率、强证据化 | 低到中等 token | 组织/项目/伙伴入口样本、订单/ASN/预约/运输/POD 样本要求、GPC 缺口清单 | `partial` |
 | 厂行 / GFIS + Edge | 首轮实施前验证准备 | 收敛工厂主链回执、LES/EAM 样本、Edge 事实转换样本要求 | 厂行 | 项目仓库环境 + 设计控制环境 | Shell、Git、文档工具 | `repo branch gate`, `globalcloud-harness-governance` | 工厂主链样本法、联合预检法 | 高效率、低返工 | 低到中等 token | 工单样本、质量样本、库存样本、发货回执样本、LES/EAM 样本要求、Edge 转换与回执样本要求 | `partial` |
 | 数枢 / AI 与数据底座 | 首轮实施前验证准备 | 收敛数据库权限、读模型只读、DLQ/Replay、Trace/Evidence 样本要求 | 数枢 | 项目仓库环境 + 设计控制环境 | Shell、Git、文档工具 | `globalcloud-harness-governance` | 边界样本法、异常回放样本法 | 中速、高结构化 | 中等 token | 数据库权限样本要求、读模型只读样本要求、DLQ/Replay 样本要求、Trace/Evidence 回指样本要求 | `partial` |

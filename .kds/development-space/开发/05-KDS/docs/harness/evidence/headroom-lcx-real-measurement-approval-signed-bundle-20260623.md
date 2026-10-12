@@ -50,7 +50,7 @@ superseded_by: []
 | authorized_at | `2026-06-23T14:30:00+08:00` |
 | sanitized_production_token_ledger | `docs/harness/evidence/headroom-lcx-sanitized-production-usage-ledger-20260623.json` |
 | rollback_plan_id | `HEADROOM-LCX-ROLLBACK-PLAN-20260622-001` |
-| waes_harness_admission_decision | `admitted_for_sanitized_measurement_precheck` |
+| wame_harness_admission_decision | `admitted_for_sanitized_measurement_precheck` |
 | signer_name | `lujunxiang` |
 | signer_role | `总架构师` |
 | signed_at | `2026-06-23T14:30:00+08:00` |

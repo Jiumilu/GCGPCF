@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-PROJECT-GROUP-AUTHORIZATION-PRE-EXECUTION-ENVIRONMENT-READINESS-20260626
 title: GlobalCloud 项目群授权项执行前环境就绪 2026-06-26
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0

@@ -1,12 +1,12 @@
 ---
 doc_id: GPCF-DOC-F3EADEE56A
 title: GPCF Agent 架构六要素 — 顶层设计总纲
-project: WAES
-related_projects: [GPC, WAES, KDS, Brain, XiaoC, GPCF]
+project: WAME
+related_projects: [GPC, WAME, KDS, Brain, XiaoC, GPCF]
 domain: governance
 status: controlled
 version: v1.0
-owner: WAES
+owner: WAME
 kds_space: 开发
 kds_path: 开发/91-治理与验收/02-governance/gpcf-agent-architecture-six-elements.md
 source_path: 02-governance/gpcf-agent-architecture-six-elements.md
@@ -137,12 +137,12 @@ GPCF 落地：[多智能体实施团队与协同方案](../01-architecture/Globa
 
 工程化关键：Multi-Agent 的核心不是"多角色扮演"，而是**上下文隔离**。每个 Agent 只看到自己需要的信息，既降低单个 Agent 的上下文压力，也防止信息交叉污染。
 
-### 3.6 HarnessEngineering → WAES 治理 + Harness Governance
+### 3.6 HarnessEngineering → WAME 治理 + Harness Governance
 
 GPCF 落地：[全链路事件与证据闭环图](../01-architecture/GlobalCloud绿色供应链体系全链路事件与证据闭环图.md) + [gpcf-status-machine.md](gpcf-status-machine.md) + [gpcf-role-boundary.md](gpcf-role-boundary.md)
 
 - 重试：DLQ / Replay 机制
-- 权限：WAES 越权控制，SUGG 不得直接写业务事实
+- 权限：WAME 越权控制，SUGG 不得直接写业务事实
 - 超时：循环时间阈值（≤30分钟绿色，>60分钟红色）
 - 优雅退出：blocked / rework_required 状态，不硬失败
 
@@ -191,7 +191,7 @@ flowchart TB
 
   subgraph HARN["HarnessEngineering（骨架）"]
     RETRY["重试/DLQ"]
-    AUTH["权限/WAES"]
+    AUTH["权限/WAME"]
     TIMEOUT["超时门禁"]
     EXIT["优雅退出"]
   end

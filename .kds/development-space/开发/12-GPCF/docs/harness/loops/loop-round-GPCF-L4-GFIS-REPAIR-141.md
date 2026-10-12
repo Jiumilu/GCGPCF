@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-58BF3E3B7F
 title: Loop Round GPCF-L4-GFIS-REPAIR-141
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -64,12 +64,12 @@ GFIS git diff --check -- .: pass
 - KDS 开发空间合同链真实写入回执。
 - 每个合同/方案文件的 KDS path 与 SHA-256 回指。
 - KDS sync-ledger.jsonl 审计流水。
-- WAES evidence confirmation。
+- WAME evidence confirmation。
 - 签字盖章或电子签章完成件。
 
 ## 禁止升级声明
 
-本轮没有写入真实 KDS，没有伪造 KDS write receipt；不释放 review queue、runtime intake、WAES review、POD、KDS write receipt、accepted 或 integrated。
+本轮没有写入真实 KDS，没有伪造 KDS write receipt；不释放 review queue、runtime intake、WAME review、POD、KDS write receipt、accepted 或 integrated。
 
 ## 真实计数
 

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-BRAIN-REAL-RUNTIME-BASELINE-20260624
 title: Brain 真实运行基线证据 2026-06-24
 project: Brain
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, MMC]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, MMC]
 domain: docs
 status: controlled
 version: v1.0
@@ -20,7 +20,7 @@ superseded_by: []
 
 ## 1. 证据范围
 
-本证据记录 Brain 在核心链路 `WAES -> XWAIL -> AaaS -> GFIS/GPC/PVAOS -> KDS/Brain` 中的真实研发、构建、运行健康和 KDS 边界验证结果。
+本证据记录 Brain 在核心链路 `WAME -> XWAIL -> AaaS -> GFIS/GPC/PVAOS -> KDS/Brain` 中的真实研发、构建、运行健康和 KDS 边界验证结果。
 
 本记录不把单元测试通过声明为真实运行完成，不把历史 harness 文档声明为当前运行健康完成，不把候选推理能力声明为客户验收通过。
 

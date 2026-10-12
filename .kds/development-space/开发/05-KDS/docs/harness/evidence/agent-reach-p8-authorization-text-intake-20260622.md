@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-AGENT-REACH-P8-AUTHORIZATION-TEXT-INTAKE-20260622
 title: Agent-Reach P8 授权文本摄取证据 2026-06-22
 project: KDS
-related_projects: [GFIS, WAES, KDS]
+related_projects: [GFIS, WAME, KDS]
 domain: docs
 status: controlled
 version: v1.0
@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/05-KDS/docs/harness/evidence/agent-reach-p8-authorization-text-intake-20260622.md
 source_path: docs/harness/evidence/agent-reach-p8-authorization-text-intake-20260622.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-24
+last_reviewed: 2026-06-22
 supersedes: []
 superseded_by: []
 ---

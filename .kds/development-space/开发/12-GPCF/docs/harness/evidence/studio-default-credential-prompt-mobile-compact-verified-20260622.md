@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-6C81F0E2A4
 title: Studio 默认凭据提醒移动端紧凑化验证证据
 project: GPCF
-related_projects: [GPC, WAES, GPCF, Studio]
+related_projects: [GPC, WAME, GPCF, Studio]
 domain: docs
 status: controlled
 version: v1.0

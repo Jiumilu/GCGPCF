@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-BFCFF10E6D
 title: GC-Knowledge Fabric P0 正式证据执行委员会受理接收预检查预览 dry-run v0.1
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -38,7 +38,7 @@ D49 只预览 D48 committee case review packet preview 之后，进入委员会 
 | 范围 | 预览要求 |
 |---|---|
 | Precheck roles | 继承 D48 case packet roles |
-| Precheck sections | 覆盖来源、case packet 摘要、接收标准、路由准备、证据完整性、case scope、冻结保持、决策约束快照、WAES 负向门禁、Harness 准备度、异常退回路径和 no-write 声明 |
+| Precheck sections | 覆盖来源、case packet 摘要、接收标准、路由准备、证据完整性、case scope、冻结保持、决策约束快照、WAME 负向门禁、Harness 准备度、异常退回路径和 no-write 声明 |
 | Acceptance criteria | 只作为候选检查项，不执行 intake acceptance |
 | Decision constraints | 明确 precheck 不是 acceptance，不产生提交、立案、裁决、确认、冻结释放、收益/贡献确认或 evidence 写入 |
 
@@ -56,7 +56,7 @@ D49 只预览 D48 committee case review packet preview 之后，进入委员会 
 - 不写 KDS、GFIS、GPC 或业务系统。
 - 不写 Harness evidence 或 formal evidence。
 - 不写收益分配或贡献积分。
-- 不覆盖 WAES 门禁。
+- 不覆盖 WAME 门禁。
 - 不提升 lifecycle。
 - 不标记 accepted / integrated / production_ready。
 

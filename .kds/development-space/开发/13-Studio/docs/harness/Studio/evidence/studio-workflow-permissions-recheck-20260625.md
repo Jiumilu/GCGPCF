@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-STUDIO-WORKFLOW-PERMISSIONS-RECHECK-20260625
 title: Studio Workflow Permissions Recheck 证据 2026-06-25
 project: Studio
-related_projects: [GPC, WAES, KDS, Brain, XiaoG, GPCF, Studio]
+related_projects: [GPC, WAME, KDS, Brain, XiaoG, GPCF, Studio]
 domain: docs
 status: controlled
 version: v1.0
@@ -78,7 +78,7 @@ Studio 侧已存在以下证据和 Loop Round：
 | 真实进度 | `release_boundary_recheck_passed / local_release_review_boundary` |
 | 真实研发 | `local_dev_verified`，仅限 harness、workflow validators、test、build 和 evidence-index 修正 |
 | 真实运行 | `not_verified_this_round`，未启动生产运行 |
-| 真实集成 | `not_verified_this_round`，未写入 GitHub release、WAES、KDS、Brain 或外部系统 |
+| 真实集成 | `not_verified_this_round`，未写入 GitHub release、WAME、KDS、Brain 或外部系统 |
 | 真实交付 | `not_collected` |
 | 客户验收 | `not_collected` |
 
@@ -96,7 +96,7 @@ Studio 侧已存在以下证据和 Loop Round：
 - 不声明 Studio 已发布；
 - 不声明 GitHub release 已写入；
 - 不声明生产部署完成；
-- 不声明真实 WAES/KDS/Brain 集成完成；
+- 不声明真实 WAME/KDS/Brain 集成完成；
 - 不声明客户交付或客户验收；
 - 不声明 `accepted`、`integrated`、`production_ready` 或 `customer_accepted`。
 

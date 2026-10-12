@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-51A6C90009
 title: WAS 真实来源记录候选预检执行 009 证据
 project: KDS
-related_projects: [GPC, WAES, KDS, GPCF]
+related_projects: [GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -22,7 +22,7 @@ superseded_by: []
 
 `GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-CANDIDATE-PRECHECK-EXECUTION-009` 已按 MONITOR-093 后当前优先级复跑 `GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-CANDIDATE-PRECHECK-001`。
 
-当前 `docs/harness/intake` 仍只有模板，没有真实 P4 candidate 文件，因此继续 `hold_required=1`。本轮不创建真实 source-of-record、runtime primary key、review queue、runtime intake、WAES review、verified artifact、accepted、integrated 或 production_ready。
+当前 `docs/harness/intake` 仍只有模板，没有真实 P4 candidate 文件，因此继续 `hold_required=1`。本轮不创建真实 source-of-record、runtime primary key、review queue、runtime intake、WAME review、verified artifact、accepted、integrated 或 production_ready。
 
 ## 监控指标
 
@@ -37,7 +37,7 @@ superseded_by: []
 | runtime_primary_key_ready | `0` |
 | review_queue | `0` |
 | runtime_intake | `0` |
-| waes_review | `0` |
+| wame_review | `0` |
 | verified | `0` |
 | accepted | `false` |
 | integrated | `false` |

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-P0B-PROJECT-VALIDATION-20260626
 title: GlobalCloud 项目群 P0-B 项目级验证复跑证据
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, Brain, PKC, MMC, GPCF, Studio]
+related_projects: [GFIS, GPC, WAME, KDS, Brain, PKC, MMC, GPCF, Studio]
 domain: docs
 status: controlled
 version: v1.0
@@ -49,8 +49,8 @@ superseded_by: []
 ## 当前未关闭事项
 
 - 17 仓 Git gate 当前为 `blocked`；原因是 7 仓 dirty 且 `GlobalCloud KDS/.env.production.example` 命中 sensitive_path；不得声明全仓 clean。
-- GFIS/GPCF 真实业务 lane 仍为 `repair_required`；P0-B 不创建真实 source-of-record、runtime primary key、review queue、runtime intake、WAES review 或 verified artifact。
-- WAES/人工确认仍是验收态、状态提升、提交/推送/发布前边界。
+- GFIS/GPCF 真实业务 lane 仍为 `repair_required`；P0-B 不创建真实 source-of-record、runtime primary key、review queue、runtime intake、WAME review 或 verified artifact。
+- WAME/人工确认仍是验收态、状态提升、提交/推送/发布前边界。
 - PKC `dist` 和 KDS 知识导入仍需后续 review queue 拆分。
 
 ## 验证命令

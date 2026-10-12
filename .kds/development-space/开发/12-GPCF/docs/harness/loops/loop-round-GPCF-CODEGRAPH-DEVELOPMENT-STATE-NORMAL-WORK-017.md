@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-CODEGRAPH-DEVELOPMENT-STATE-NORMAL-WORK-017
 title: Loop Round - GPCF-CODEGRAPH-DEVELOPMENT-STATE-NORMAL-WORK-017
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -23,7 +23,7 @@ superseded_by: []
 - 输入：用户声明“现在是开发态，非运行态，先确保开发态的正常工作”。
 - 目标：固化开发态控制边界，并验证 CodeGraph 开发态证据链仍可回放。
 - 动作：记录开发态控制记忆，复用 benefit proof 与 regression watch，验证 `.codegraph/` Git 隔离。
-- 边界：不进入业务开发、不提交、不推送、不部署、不执行生产写入、外部 API 写入、真实 KDS 写入或真实 WAES 写入。
+- 边界：不进入业务开发、不提交、不推送、不部署、不执行生产写入、外部 API 写入、真实 KDS 写入或真实 WAME 写入。
 
 ## stop
 
@@ -45,7 +45,7 @@ python3 tools/kds-sync/validate_codegraph_development_state_normal_work.py
 
 - 最后安全状态：`GPCF-CODEGRAPH-DEV-EXECUTION-BENEFIT-REGRESSION-WATCH-016`
 - 可重试动作：重新运行开发态 validator，并更新开发态 evidence。
-- 不可重试动作：未授权 clean reindex、commit、push、deploy、production write、external API write、real KDS write、real WAES write。
+- 不可重试动作：未授权 clean reindex、commit、push、deploy、production write、external API write、real KDS write、real WAME write。
 
 ## debug
 

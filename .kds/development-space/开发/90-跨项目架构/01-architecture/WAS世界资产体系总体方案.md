@@ -11,12 +11,14 @@ kds_space: 开发
 kds_path: 开发/90-跨项目架构/01-architecture/WAS世界资产体系总体方案.md
 source_path: 01-architecture/WAS世界资产体系总体方案.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-24
+last_reviewed: 2026-10-12
 supersedes: []
 superseded_by: []
 ---
 
 # WAS世界资产体系总体方案
+
+> 修订说明（2026-10-12）：按项目群命名裁定，原 `WAE`（世界资产引擎）与原 `WAES`（治理发布入口）合并为 **WAME / World Asset Model Engine 世界资产模型引擎**（`WAES` 缩写停用）；**WAE / World Asset Explorer 世界资产浏览器**独立为项目群统一界面框架项目（`WAS-WAE-BROWSER`）。本文正文已按此口径同步。
 
 ## 1. 文档地位与控制范围
 
@@ -67,8 +69,8 @@ status: controlled
 was_baseline: WAS 1.2.0
 ontology_baseline: Ontology 0.2.x
 xwail_baseline: XWAIL 1.2.0
-wae_baseline: WAE 0.1.x
 wame_baseline: WAME 0.1.x
+wae_baseline: WAE 0.1.x
 aaas_baseline: AaaS 0.1.x
 scaas_baseline: SCaaS 0.1.x
 compatibility_decision: compatible
@@ -87,7 +89,7 @@ compatibility_decision: compatible
 
 ## 3. GlobalCloud WAS 总定义
 
-GlobalCloud WAS 世界资产体系，是 GlobalCloud 品牌下以世界资产为核心对象、以 Ontology 为语义知识层、以 XWAIL 为机器契约、以 WAE 为世界资产引擎、以 WAME 为治理发布入口、以 AaaS/SCaaS 为服务化运营模式的产品体系和项目群控制体系。
+GlobalCloud WAS 世界资产体系，是 GlobalCloud 品牌下以世界资产为核心对象、以 Ontology 为语义知识层、以 XWAIL 为机器契约、以 WAME 为世界资产模型引擎与治理发布入口、以 WAE 为世界资产浏览器、以 AaaS/SCaaS 为服务化运营模式的产品体系和项目群控制体系。
 
 固定链路为：
 
@@ -95,8 +97,8 @@ GlobalCloud WAS 世界资产体系，是 GlobalCloud 品牌下以世界资产为
 WAS 定义体系。
 Ontology 定义语义。
 XWAIL 定义契约。
-WAE 负责资产主账和运行底座。
-WAME 负责注册、授权、发布、治理和业务入口。
+WAME 负责资产主账、模型注册、授权、发布与运行底座。
+WAME 负责注册、授权、发布、治理入口；WAE 负责浏览器工作台与业务入口。
 AaaS / SCaaS 负责服务包、计量、SLA、订阅和商业运营。
 LOOP / Harness 负责工程闭环、证据和状态门禁。
 ```
@@ -109,8 +111,8 @@ flowchart TD
   WAS --> Ontology["Ontology / 语义知识层"]
   WAS --> XWAIL["XWAIL / 机器契约"]
   Ontology <--> XWAIL
-  XWAIL --> WAE["WAE / World Asset Engine"]
-  WAE --> WAME["WAME / World Asset Explorer"]
+  XWAIL --> WAME["WAME / World Asset Model Engine"]
+  WAME --> WAE["WAE / World Asset Explorer"]
   WAME --> AAAS["AaaS / Assets as a Service"]
   AAAS --> SCAAS["SCaaS / Supply Chain as a Service"]
   SCAAS --> GSC["GlobalCloud 绿色供应链体系"]
@@ -128,7 +130,7 @@ WAS 的统一对象模型为：
 |---|---|---|
 | 品牌与体系层 | GlobalCloud、WAS世界资产体系 | 总体语义、产品体系、项目群控制 |
 | 语义与契约层 | Ontology、GlobalCloud XWAIL | 术语、关系、Schema、Profile、Validator |
-| 资产运行与治理层 | WAE、GlobalCloud WAME | 资产主账、模型注册、授权、发布、证据、审计 |
+| 资产运行与治理层 | WAME、WAE | 资产主账、模型注册、授权、发布、证据、审计 |
 | 服务化与商业运营层 | GlobalCloud AaaS、SCaaS | ServicePackage、Metering、SLA、订阅、商业状态 |
 | 行业场景与业务运行层 | GFIS、GPC、PVAOS、Studio、Brain | 工厂事实、供应链协同、联盟运营、建模配置、知识治理 |
 | 知识与工程治理层 | KDS、GPCF、MMC、Harness、LOOP | 文档知识、门禁、证据、项目群治理、状态裁决 |
@@ -140,10 +142,10 @@ WAS 的统一对象模型为：
 |---|---|---|---|---|---|
 | WAS世界资产体系 | 品牌与体系层 | WAS 主项目，总语义和总控制 | GlobalCloud 品牌战略 | WAS 基线、术语、治理原则 | 不替代业务事实源 |
 | GlobalCloud XWAIL | 语义与契约层 | XWAIL 主项目，机器契约 | WAS、Ontology | Schema、Profile、Validator、XAP | 不重定义 WAS |
-| GlobalCloud WAME | 资产运行与治理层 | 注册、授权、发布、治理、业务入口 | WAE、XWAIL | 治理状态、证据、服务发布 | 不替代事实源 |
+| GlobalCloud WAME | 资产运行与治理层 | 注册、授权、发布、治理、业务入口 | WAME、XWAIL | 治理状态、证据、服务发布 | 不替代事实源 |
 | GlobalCloud AaaS | 服务化与商业运营层 | AaaS 主项目，服务包和商业运营 | XWAIL、WAME | 服务目录、计量、SLA、订阅状态 | 不私建资产模型 |
 | GFIS | 行业事实源 | 工厂执行事实 | WAS、XWAIL、WAME | 生产、能耗、排放、质量证据 | 不替代 WAME |
-| GPC | 供应链协同入口 | 订单、企业、供需、物流协同 | WAS、XWAIL、WAME | 订单、物流、协同事实 | 不替代 WAE |
+| GPC | 供应链协同入口 | 订单、企业、供需、物流协同 | WAS、XWAIL、WAME | 订单、物流、协同事实 | 不替代 WAME |
 | PVAOS | 运营平台 | 联盟、租户、结算和价值运营 | WAS、XWAIL、WAME | 运营、结算、订阅事实 | 不替代 AaaS |
 | KDS | 知识源 | 文档与知识主存 | 项目文档与证据 | 受控知识、引用、镜像 | 不替代事实源 |
 | Brain | 智能层 | 知识治理、问答、候选推理 | KDS、Ontology、XWAIL | 建议、解释、候选推理 | 不直接写主账 |
@@ -158,7 +160,7 @@ WAS 的统一对象模型为：
 | 链路 | 标准路径 | 控制要求 |
 |---|---|---|
 | 模型链路 | WAS -> Ontology -> XWAIL -> WAME -> 各业务项目 | 必须有模型版本、Profile、Validator 和 WAME 状态 |
-| 事实链路 | GFIS/GPC/PVAOS -> WAE -> WAME -> Evidence | 必须声明事实源、证据源、审计和回滚 |
+| 事实链路 | GFIS/GPC/PVAOS -> WAME -> WAME -> Evidence | 必须声明事实源、证据源、审计和回滚 |
 | 服务链路 | XWAIL Model -> WAME ServicePackage -> AaaS Service Catalog | AaaS 不得绑定未授权模型 |
 | 知识链路 | 项目文档/证据 -> KDS -> Brain -> WAME Candidate | Brain 输出默认是候选，不是事实 |
 | 治理链路 | 项目变更 -> GPCF LOOP -> Harness Evidence -> Gate -> 状态裁决 | 无证据不得升级状态 |
@@ -260,7 +262,7 @@ project_group_baseline: GC-WAS-PG-BASELINE-0.1.0
 was_baseline: WAS 1.2.0
 ontology_baseline: Ontology 0.2.x
 xwail_baseline: XWAIL 1.2.0
-wame_gate_required: true
+waes_gate_required: true
 loop_enabled: true
 compatibility_status: compatible | migration_required | deprecated | blocked
 ```
@@ -290,14 +292,14 @@ compatibility_status: compatible | migration_required | deprecated | blocked
 | Ontology | Ontology | WAS 的语义知识层，定义术语、概念、关系和推理规则 | 不替代 XWAIL Schema，不替代事实源 |
 | XWAIL | eXtensible World Asset Information Language | WAS 的主规范建模语言和机器契约 | 不重定义 WAS 语义 |
 | GlobalCloud XWAIL | GlobalCloud XWAIL | XWAIL 主项目 | 不承担 AaaS 商业治理 |
-| WAE | World Asset Engine | 世界资产引擎，资产主账、模型注册、事件、关系、策略、证据、计量和运行底座 | 不写成浏览器或前端入口 |
-| WAME | World Asset Explorer | 世界资产浏览器，基于 WAE 的业务实现、治理发布入口和运营工作台 | 不写成 WAE 同义词，不写成事实源 |
+| WAME | World Asset Model Engine | 世界资产模型引擎，资产主账、模型注册、事件、关系、策略、证据、计量和运行底座 | 不写成浏览器或前端入口 |
+| WAE | World Asset Explorer | 世界资产浏览器，项目群统一界面框架与运营工作台 | 不写成 WAME 同义词，不写成事实源 |
 | AaaS | Assets as a Service | 资产即服务，服务包、订阅、计量、SLA 和商业运营模式 | 不私建资产模型 |
 | GlobalCloud AaaS | GlobalCloud Assets as a Service | AaaS 主项目正式产品名 | 本地目录 `GlobalCloud AAAS` 不改变正式名 |
 | SCaaS | Supply Chain as a Service | AaaS 在供应链行业的行业化架构 | 不写成脱离 WAS 的独立顶层体系 |
 | GlobalCloud 绿色供应链体系 | GlobalCloud Green Supply Chain System | SCaaS 的对外场景名称和当前切入口 | 不替代 WAS 总体方案 |
 | GFIS | GlobalCloud Factory Information System | 工厂执行与绿色事实源 | 不替代 WAME 发布治理 |
-| GPC | GlobalCloud Public Collaboration / Green Supply Chain Public Service context | 供应链公共协同入口 | 不替代 WAE 主账 |
+| GPC | GlobalCloud Public Collaboration / Green Supply Chain Public Service context | 供应链公共协同入口 | 不替代 WAME 主账 |
 | PVAOS | Platform Value Alliance Operating System | 供应链价值联盟运营平台 | 不替代 AaaS 通用订阅治理 |
 | KDS | Knowledge/Data Source context | 文档与知识主存 | 不替代业务事实源 |
 | Brain | GlobalCloud Brain | 企业知识治理、高级工作台、问答和候选推理 | 不直接写主账 |
@@ -332,7 +334,7 @@ compatibility_status: compatible | migration_required | deprecated | blocked
 | GFIS | 工厂执行事实源 | 是，需证据 | 生产、设备、能耗、排放、质量 |
 | GPC | 供应链协同事实源 | 是，需证据 | 订单、企业、供需、物流、协同确认 |
 | PVAOS | 运营事实源 | 是，需证据 | 联盟、租户、结算、订阅、运营状态 |
-| WAE | 资产主账视图 | 是，基于已治理事实 | 不替代原始事实源 |
+| WAME | 资产主账视图 | 是，基于已治理事实 | 不替代原始事实源 |
 | WAME | 治理状态源 | 是，限治理状态 | 注册、授权、发布、审计、证据 |
 | KDS | 知识源 | 否，除非引用事实源 | 文档、来源、知识主存 |
 | Brain | 候选推理源 | 否，默认候选 | 需要 WAME 授权和证据才可升级 |
@@ -388,7 +390,7 @@ compatibility_status: compatible | migration_required | deprecated | blocked
 | 资产模型与契约层 | XWAIL 优先 | 统一 Schema、Profile、Validator |
 | 数据与事件层 | 保留现有数据库和文件态 | 统一事实源、事件流、证据仓 |
 | AI 与知识层 | 保留 Brain/KDS/专项能力 | 统一模型路由、候选推理边界 |
-| 治理、安全与证据层 | WAES/GPCF 控制 | 统一授权、审计、证据生命周期 |
+| 治理、安全与证据层 | WAME/GPCF 控制 | 统一授权、审计、证据生命周期 |
 | 部署、运维与观测层 | 保留本地/Docker/云差异 | 统一环境、CI/CD、日志、监控、回滚 |
 
 技术收敛路线：

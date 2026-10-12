@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-CODEGRAPH-DEV-EXECUTION-REAL-INPUT-COLLECTION-PACK-20260626
 title: CodeGraph 开发执行层真实输入采集包 2026-06-26
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -24,7 +24,7 @@ superseded_by: []
 
 状态：`real_input_collection_pack_prepared_not_dispatched`
 
-本轮只准备真实输入采集包，不派发、不写外部系统、不写真实 KDS/WAES、不进入运行态验收。采集包用于把 `real_input_readiness_blocked` 转成可执行补证清单。
+本轮只准备真实输入采集包，不派发、不写外部系统、不写真实 KDS/WAME、不进入运行态验收。采集包用于把 `real_input_readiness_blocked` 转成可执行补证清单。
 
 ## 首要责任方请求
 
@@ -55,10 +55,10 @@ superseded_by: []
 | valid_source_records | 0 |
 | runtime_primary_key_ready | 0 |
 | runtime_intake | 0 |
-| waes_review | 0 |
+| wame_review | 0 |
 | verified | 0 |
 
-仍需采集：客户订单或平台订单 source-of-record、样品签收或转量产批准、原料批次、工厂订单、生产工单、作业卡、质检、成品批次、发货、POD、WAES confirmation、KDS write receipt。
+仍需采集：客户订单或平台订单 source-of-record、样品签收或转量产批准、原料批次、工厂订单、生产工单、作业卡、质检、成品批次、发货、POD、WAME confirmation、KDS write receipt。
 
 ## CodeGraph 复核动作
 
@@ -74,7 +74,7 @@ python3 tools/kds-sync/validate_codegraph_dev_execution_real_input_collection_pa
 
 ## 声明边界
 
-不声明业务功能完成，不声明 accepted、integrated、production_ready 或 customer_accepted，不声明运行态正常，不声明已派发，不声明生产写入、外部 API 写入、真实 KDS 写入、真实 WAES 写入、commit、push 或 deploy。
+不声明业务功能完成，不声明 accepted、integrated、production_ready 或 customer_accepted，不声明运行态正常，不声明已派发，不声明生产写入、外部 API 写入、真实 KDS 写入、真实 WAME 写入、commit、push 或 deploy。
 
 ## 下一轮
 

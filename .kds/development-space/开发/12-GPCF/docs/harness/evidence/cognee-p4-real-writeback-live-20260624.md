@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-8C7F2F6001
 title: Cognee P4 真实写入 live 演练 Evidence（复测 20260624）
 project: GPCF
-related_projects: [GPCF, WAES]
+related_projects: [GPCF, WAME]
 domain: docs
 status: controlled
 version: v1.0

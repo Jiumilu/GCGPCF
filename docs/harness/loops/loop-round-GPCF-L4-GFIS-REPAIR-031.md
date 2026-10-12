@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-406B36B7D1
 title: GPCF L4 GFIS Repair 031 Runtime Incoming Quality Repair Candidate
 project: GPCF
-related_projects: [GFIS, GPC, WAME, KDS, GPCF]
+related_projects: [GFIS, GPC, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0

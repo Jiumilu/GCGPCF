@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-F013-KNOWLEDGE-ASSET-MODEL-JOURNAL-20260802
 title: F-013 knowledge-asset-model-system
 project: GPCF
-related_projects: [AAAS, Brain, WAS, XiaoC, WAES, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP]
+related_projects: [AAAS, Brain, WAS, XiaoC, WAME, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP]
 domain: governance
 status: controlled
 version: v1.0
@@ -532,7 +532,7 @@ delivery_efficiency_gate: pass
 ### Iteration 20
 
 1. 这轮做什么？
-   - 将现有 KDS、GPCF F-013、Studio 及后续 Brain、MMC、WAES、GFIS、GPC、PVAOS 知识工程工作统一纳入项目群一级工程 `GlobalCloud Knowledge Engineering`（`GKE-001`）。
+   - 将现有 KDS、GPCF F-013、Studio 及后续 Brain、MMC、WAME、GFIS、GPC、PVAOS 知识工程工作统一纳入项目群一级工程 `GlobalCloud Knowledge Engineering`（`GKE-001`）。
 2. 改了什么？
    - 新增 GKE-001 受控上位规范，并传导到项目群总体方案、实施方案、知识资产模型子方案、F-013 定位、证据摘要和 KDS 阶段性交接。
    - 固定知识事实主存、业务主数据、candidate、人工确认、跨仓交接、验收标签和真实写入边界；未修改外部仓源码。
@@ -5437,7 +5437,7 @@ loop_cost_level: medium
 3. 怎么验证？
    - 先以缺失产物证明3项测试失败，再实现契约使测试通过；确定性复算覆盖十类对象、授权范围交集、版本化世界快照、提交前再次验证、附义务允许、最终控制主体职责分离、八小时内双人紧急授权、级联撤销、派生数据限制继承及授权引擎故障降级只读。
 4. 发现什么问题？
-   - 当前只证明本地夹具中的结构和语义规则成立，不能证明WAES真实裁决、业务执行点强制落实或生产责任链已接入。KDS现有10项变化继续阻断写入准入，身份归一和S3例外人工复核仍未完成。
+   - 当前只证明本地夹具中的结构和语义规则成立，不能证明WAME真实裁决、业务执行点强制落实或生产责任链已接入。KDS现有10项变化继续阻断写入准入，身份归一和S3例外人工复核仍未完成。
 5. 是否可以提交？
    - 否。真实授权、KDS/MMC/业务写入、外部动作、部署、验收、集成和状态提升均未授权；F-013继续保持 `active / evaluate / not_complete`。
 
@@ -5450,7 +5450,7 @@ loop_cost_level: medium
 3. 怎么验证？
    - 先以缺失产物证明3项测试失败，再实现契约使测试通过；校验覆盖十类职责分离服务、观察至学习十阶段不可跳步、高风险待确认停止、任务与承诺凭结果及验收证据关闭、部分失败补偿、重复命令幂等、补偿失败显式保留，以及模拟基线、假设、结果和提升候选隔离。
 4. 发现什么问题？
-   - 当前只证明本地夹具中的结构和语义规则成立，不能证明GCWORLD运行服务、WAES裁决、KWE确认、MMC连接器或业务执行点已经真实接入。KDS当前14项变化继续阻断写入准入，身份归一和S3例外人工复核仍未完成。
+   - 当前只证明本地夹具中的结构和语义规则成立，不能证明GCWORLD运行服务、WAME裁决、KWE确认、MMC连接器或业务执行点已经真实接入。KDS当前14项变化继续阻断写入准入，身份归一和S3例外人工复核仍未完成。
 5. 是否可以提交？
    - 否。真实执行、事实提升、KDS/MMC/业务写入、外部动作、部署、验收、集成和状态提升均未授权；F-013继续保持 `active / evaluate / not_complete`。
 
@@ -5463,7 +5463,7 @@ loop_cost_level: medium
 3. 怎么验证？
    - 先以缺失产物证明3项测试失败，再实现契约使测试通过；确定性校验覆盖十二中心统一导航、十三类资产档案区段、八类投影面的裁剪一致性、统计不可推断、共享对象/字段/目的/期限/再共享/撤销约束，以及撤销后访问拒绝和使用证据保留。
 4. 发现什么问题？
-   - 当前只证明本地夹具中的结构和语义规则成立，不能证明真实工作台、WAES权限裁剪或跨租户共享已经接入。KDS当前14项变化继续阻断写入准入；项目群总门禁另因Studio校验器读取缺失的`unresolvedQueue`字段而返回`rework_required`，本轮不越界修改Studio。
+   - 当前只证明本地夹具中的结构和语义规则成立，不能证明真实工作台、WAME权限裁剪或跨租户共享已经接入。KDS当前14项变化继续阻断写入准入；项目群总门禁另因Studio校验器读取缺失的`unresolvedQueue`字段而返回`rework_required`，本轮不越界修改Studio。
 5. 是否可以提交？
    - 否。真实界面、生产数据连接、跨租户共享、KDS/MMC/业务写入、外部动作、部署、验收、集成和状态提升均未授权；F-013继续保持 `active / evaluate / not_complete`。
 

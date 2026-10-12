@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-C0FF55959B
 title: GPCF-L4-GFIS-REPAIR-253
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -22,7 +22,7 @@ superseded_by: []
 
 - GFIS 真项目仓已完成 `GFIS-RUNTIME-SOP-E2E-243`。
 - GFIS 运行层仍为唯一 SOP 主体，GFIS Demo 只允许作为展示层回归。
-- 本轮只同步总控状态，不升级 accepted/integrated，不执行生产写入、真实外部 API、真实 KDS/WAES 写入、数据库迁移、权限变更或推送。
+- 本轮只同步总控状态，不升级 accepted/integrated，不执行生产写入、真实外部 API、真实 KDS/WAME 写入、数据库迁移、权限变更或推送。
 
 ## 执行动作
 
@@ -56,7 +56,7 @@ superseded_by: []
 - `runtime_primary_key_ready=0`
 - `review_queue=0`
 - `runtime_intake=0`
-- `waes_review=0`
+- `wame_review=0`
 - `verified=0`
 - `runtime_sop_e2e=repair_required`
 
@@ -78,5 +78,5 @@ superseded_by: []
 - batch_generated: false
 - substance_gate: pass
 - stop_type: authorization_boundary
-- 本轮只证明 GFIS 在缺真实 dispatch confirmation 链路时，owner response reopen 必须继续阻断；不证明客户订单、平台订单、派发确认、人工核验完成、有效 release-ready package、运行层主键、review queue、runtime intake、WAES review、verified artifact 或业务完成。
+- 本轮只证明 GFIS 在缺真实 dispatch confirmation 链路时，owner response reopen 必须继续阻断；不证明客户订单、平台订单、派发确认、人工核验完成、有效 release-ready package、运行层主键、review queue、runtime intake、WAME review、verified artifact 或业务完成。
 - 下一轮建议：`GFIS-RUNTIME-SOP-E2E-244` 建立 submission package reopen scan；继续保持真实派发确认链路缺失时的受控阻断。

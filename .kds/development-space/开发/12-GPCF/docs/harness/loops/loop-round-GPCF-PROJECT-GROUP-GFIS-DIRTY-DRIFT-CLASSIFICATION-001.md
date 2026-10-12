@@ -2,7 +2,7 @@
 doc_id: GPCF-LOOP-PROJECT-GROUP-GFIS-DIRTY-DRIFT-CLASSIFICATION-001
 title: GPCF PROJECT GROUP GFIS DIRTY DRIFT CLASSIFICATION 001
 project: GPCF
-related_projects: [GFIS, GPC, WAES, GPCF]
+related_projects: [GFIS, GPC, WAME, GPCF]
 domain: docs
 status: controlled
 version: v1.0

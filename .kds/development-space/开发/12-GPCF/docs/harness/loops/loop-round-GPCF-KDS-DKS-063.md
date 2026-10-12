@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-A8F474D237
 title: LOOP Round GPCF-KDS-DKS-063 - GC-Knowledge Fabric KDS v2 API与表结构契约骨架
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -20,7 +20,7 @@ superseded_by: []
 
 ## 1. 本轮目标
 
-基于 DKS-062 的 Shared Types，建立 KDS v2、WAES、KWE、GFIS Assistant 与 Governance API 的最小 request/response contract，并补齐 KDS v2 首批表结构 SQL 草案。
+基于 DKS-062 的 Shared Types，建立 KDS v2、WAME、KWE、GFIS Assistant 与 Governance API 的最小 request/response contract，并补齐 KDS v2 首批表结构 SQL 草案。
 
 本轮只建立本地契约和表结构草案，不声明数据库迁移、API 上线、GFIS 写回、RAG 上线或收益确认已经发生。
 
@@ -28,7 +28,7 @@ superseded_by: []
 
 - `packages/shared/src/knowledge/index.ts`
 - `okf/knowledge-object.schema.json`
-- `okf/waes-gate-policy.yaml`
+- `okf/wame-gate-policy.yaml`
 - `okf/writeback-policy.yaml`
 - `03-data-ai-knowledge/GC-Knowledge-Fabric-核心对象关系与最小字段契约.md`
 - `docs/harness/loops/loop-round-GPCF-KDS-DKS-062.md`
@@ -38,7 +38,7 @@ superseded_by: []
 - `packages/api/tsconfig.json`
 - `packages/api/src/kds/v2/contracts.ts`
 - `packages/api/src/kds/v2/schema.sql`
-- `packages/api/src/waes/contracts.ts`
+- `packages/api/src/wame/contracts.ts`
 - `packages/api/src/kwe/contracts.ts`
 - `packages/api/src/gfis/contracts.ts`
 - `packages/api/src/governance/contracts.ts`
@@ -49,7 +49,7 @@ superseded_by: []
 - API contract 只定义请求与响应类型，不执行真实读写。
 - SQL schema 是草案，不执行迁移。
 - 写回响应只能表达候选、批准、已写回、拒绝或回滚状态，不代表 GFIS/GPC/ERP/MES 已有生产写入。
-- WAES Gate 结果不能替代人工或委员会裁决。
+- WAME Gate 结果不能替代人工或委员会裁决。
 
 ## 5. 本轮验证计划
 
@@ -86,6 +86,6 @@ superseded_by: []
 
 ## 8. 下一轮建议
 
-- `GPCF-KDS-DKS-064`：建立 WAES 最小门禁 dry-run validator。
+- `GPCF-KDS-DKS-064`：建立 WAME 最小门禁 dry-run validator。
 - `GPCF-KDS-DKS-065`：建立 KWE WorkItem 最小流程 dry-run。
 - `GPCF-KDS-DKS-066`：建立 GFIS Assistant no-write contract smoke。

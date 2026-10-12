@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-602F413178
 title: GlobalCloud 湖北磷材拓厂与新工厂复制试点任务书
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF]
 domain: data-ai-knowledge
 status: controlled
 version: v1.0
@@ -20,13 +20,13 @@ superseded_by: []
 
 状态：`GPCF-KDS-DKS-019` 受控任务书  
 日期：2026-06-17  
-适用范围：湖北磷材供应链公司、拓厂项目知识库、原料/行业/订单知识库、新工厂复制模板、葛化母版复用、KDS 11 个底座资源池、增强治理账本、WAES 规则门禁、Brain 知识编制、PKC 个人贡献入口、小即问答入口、XGD 候选分析、XiaoG 轻量任务、MMC 参数基线、GPCF LOOP evidence。
+适用范围：湖北磷材供应链公司、拓厂项目知识库、原料/行业/订单知识库、新工厂复制模板、葛化母版复用、KDS 11 个底座资源池、增强治理账本、WAME 规则门禁、Brain 知识编制、PKC 个人贡献入口、小即问答入口、XGD 候选分析、XiaoG 轻量任务、MMC 参数基线、GPCF LOOP evidence。
 
 ## 1. 定位
 
 本文是新队列 `GPCF-KDS-DKS-019` 的正式交付，用于把湖北磷材作为绿色供应链第二条并行线，形成拓厂项目知识库、原料/行业/订单知识库和新工厂复制模板。
 
-湖北磷材代号为 `HBLC`。第一阶段不做 GFIS 深度运行，不创建真实账号，不配置生产权限，不写生产数据，不确认真实订单、原料采购、质量、POD、金融凭证、正式收入或收益分配。AI 只生成候选事实、候选 SOP、候选积分、候选悬赏和候选写回建议，所有候选均需进入 KDS / WAES / 人工确认流程。
+湖北磷材代号为 `HBLC`。第一阶段不做 GFIS 深度运行，不创建真实账号，不配置生产权限，不写生产数据，不确认真实订单、原料采购、质量、POD、金融凭证、正式收入或收益分配。AI 只生成候选事实、候选 SOP、候选积分、候选悬赏和候选写回建议，所有候选均需进入 KDS / WAME / 人工确认流程。
 
 本文保留旧队列 `GPCF-KDS-DKS-006` 的有效内容作为历史输入，但当前受控身份按 `GPCF-KDS-DKS-019` 执行。
 
@@ -44,7 +44,7 @@ superseded_by: []
 |---|---|
 | GFIS 深度运行 | 第一阶段不做，只评估未来接入条件和复用路径 |
 | KDS 作用 | 记录知识事实、11 池挂接、候选状态和增强账本，不替代来源系统主账 |
-| WAES 作用 | 记录规则、证据、权限、边界和例外，不替代业务事实确认 |
+| WAME 作用 | 记录规则、证据、权限、边界和例外，不替代业务事实确认 |
 | Brain 作用 | 编制拓厂知识页、原料行业页、订单线索页和新工厂复制知识地图 |
 | PKC 作用 | 承接个人知识提交、补证任务、悬赏参与、积分查看和 AI 服务入口 |
 | 小即 / XGD / XiaoG | 小即提供受控问答入口，XGD 做复杂候选分析，XiaoG 做轻量任务提醒 |
@@ -76,9 +76,9 @@ superseded_by: []
 | enhancedLedgerLinks | 积分池、悬赏池、潜在产值池、收益池、贡献账本、SOP 账本、争议池等增强账本 |
 | classificationLevel | DSR-L0 / DSR-L1 / DSR-L2 / DSR-L3 |
 | trustLevel | T0 线索、T1 合作单位提交、T2 受控记录、T3 权威政策/标准 |
-| confirmationStatus | candidate / submitted / waes_checked / human_review_pending / confirmed / frozen / disputed / withdrawn / rejected |
+| confirmationStatus | candidate / submitted / wame_checked / human_review_pending / confirmed / frozen / disputed / withdrawn / rejected |
 | responsibleSubject | 责任主体，可为人员、单位、项目组或委员会 |
-| waesGateRefs | WAES 规则、权限、例外和阻断记录 |
+| wameGateRefs | WAME 规则、权限、例外和阻断记录 |
 | loopEvidenceRefs | 本轮或后续 LOOP evidence |
 | reuseFromGH | 是否复用葛化母版及对应版本 |
 | gfisDepthStatus | not_applicable / readiness_only / future_candidate |
@@ -94,7 +94,7 @@ superseded_by: []
 | 订单线索资料 | 订单池、资金池、原料池、数据池、场景池 | 运力池、产能池、人才池 | 潜在产值池、收益池、贡献账本、争议池 |
 | 新工厂复制模板 | 装备池、产能池、人才池、数据池、场景池 | 政策池、能源池、资金池 | SOP 账本、贡献账本、积分池、权限账本 |
 
-所有增强治理账本对象必须至少挂接一个底座资源池，并保留来源、责任主体、确认状态、权限密级、WAES 门禁记录和 LOOP evidence。
+所有增强治理账本对象必须至少挂接一个底座资源池，并保留来源、责任主体、确认状态、权限密级、WAME 门禁记录和 LOOP evidence。
 
 ## 7. 拓厂项目知识库结构
 
@@ -115,7 +115,7 @@ superseded_by: []
 | 行业知识库 | 行业政策、标准、市场需求、包装场景、客户行业趋势 | 不把网络搜索或 AI 分析写成权威结论 | 高可信来源、行业知识页、政策索引 |
 | 订单知识库 | 客户线索、报价、采购意向、销售订单线索、潜在产值 | 不确认正式订单、到账、收益或合同事实 | 订单线索对象、潜在产值候选 |
 
-权威政策/标准网站可进入更高可信级别，但仍需保留来源、检索时间、适用范围和 WAES 规则记录。
+权威政策/标准网站可进入更高可信级别，但仍需保留来源、检索时间、适用范围和 WAME 规则记录。
 
 ## 9. FactoryExpansionAssessment 模型
 
@@ -133,7 +133,7 @@ superseded_by: []
 | gfisReadiness | enum | 5 | 第一阶段只评估未来接入条件，不做深度运行 |
 | revenuePotential | enum | 10 | 知识收益、系统收益、业务收益潜力 |
 | evidenceCompleteness | enum | gate | 证据不足时不得进入 ready_for_human_review |
-| waesGateStatus | enum | gate | pending / rule_recorded / blocked |
+| wameGateStatus | enum | gate | pending / rule_recorded / blocked |
 
 初始总分只用于拓厂机会排序和资源投入参考，不作为自动投资、合作、接入、积分确认或收益分配依据。已有预运营期订单是高权重加分项，不是一票通过项。
 
@@ -146,7 +146,7 @@ superseded_by: []
   -> FactoryExpansionAssessment 候选
   -> 新工厂复制模板候选
   -> KDS 11 池与增强账本挂接
-  -> WAES 规则记录或阻断
+  -> WAME 规则记录或阻断
   -> Brain 知识页和复制地图
   -> PKC 任务、贡献和悬赏入口
   -> 用户 / 委员会确认下一阶段
@@ -175,11 +175,11 @@ superseded_by: []
 
 | 建议编号 | 类型 | 场景 | 建议内容 | 进入路径 |
 |---|---|---|---|---|
-| `AIS-HBLC-FEA-202606-0001` | FEA | 拓厂 | 建立拓厂项目资料收集和评估模型 | KDS 候选 + WAES |
+| `AIS-HBLC-FEA-202606-0001` | FEA | 拓厂 | 建立拓厂项目资料收集和评估模型 | KDS 候选 + WAME |
 | `AIS-HBLC-RAW-202606-0002` | KNO | 原料 | 建立原料、供应商、价格线索和质量指标知识源清单 | KDS 候选 |
 | `AIS-HBLC-IND-202606-0003` | KNO | 行业 | 建立行业、政策标准、包装需求和客户场景知识源清单 | KDS 候选 |
-| `AIS-HBLC-ORD-202606-0004` | BIZ | 订单 | 建立销售订单线索、客户报价和采购意向候选清单 | KDS 候选 + WAES |
-| `AIS-HBLC-TPL-202606-0005` | SOP | 新工厂复制 | 将葛化母版转化为 HBLC 新工厂复制模板 | KDS 候选 + WAES |
+| `AIS-HBLC-ORD-202606-0004` | BIZ | 订单 | 建立销售订单线索、客户报价和采购意向候选清单 | KDS 候选 + WAME |
+| `AIS-HBLC-TPL-202606-0005` | SOP | 新工厂复制 | 将葛化母版转化为 HBLC 新工厂复制模板 | KDS 候选 + WAME |
 | `AIS-HBLC-RSK-202606-0006` | RSK | 权限 | 标记原料价格、供应商报价、订单金额、投资边界等 DSR-L3 字段 | 权限账本 |
 
 ## 13. 首批知识缺口与悬赏候选
@@ -213,11 +213,11 @@ DSR-L3 字段默认只建立受控索引，不进入共享知识库正文，不�
 | 阶段 | 输入 | 输出 | 是否可开放 |
 |---|---|---|---|
 | P0 资料目录预检 | 五类资料包目录和来源线索 | 缺口清单、密级判断、责任主体 | 否 |
-| P1 候选登记 | 脱敏摘要、字段清单、来源索引 | KDS 候选对象、WAES 规则记录 | 项目组内 |
+| P1 候选登记 | 脱敏摘要、字段清单、来源索引 | KDS 候选对象、WAME 规则记录 | 项目组内 |
 | P2 评估模型试算 | 候选资料和权重参数 | `FactoryExpansionAssessment` 候选 | 项目组内 |
 | P3 知识页和模板编制 | 候选对象、葛化母版结构 | Brain 知识页、复制模板候选 | 需授权 |
 | P4 合作单位受控试用 | 本单位资料和授权资料 | 补证任务、悬赏候选、贡献候选 | 本单位范围 |
-| P5 下一阶段确认 | 评分、缺口、风险、WAES 记录 | 是否进入 GFIS 接入准备或拓厂深化 | 用户/委员会确认 |
+| P5 下一阶段确认 | 评分、缺口、风险、WAME 记录 | 是否进入 GFIS 接入准备或拓厂深化 | 用户/委员会确认 |
 
 ## 16. Definition of Done
 
@@ -231,7 +231,7 @@ DSR-L3 字段默认只建立受控索引，不进入共享知识库正文，不�
 | 第一阶段不做 GFIS 深度运行边界 | done |
 | KDS 11 底座池与增强账本挂接 | done |
 | 知识缺口与悬赏候选 | done |
-| WAES、人工、委员会和用户治理边界 | done |
+| WAME、人工、委员会和用户治理边界 | done |
 | LOOP evidence 待本轮记录纳入 | pending |
 
 本轮不要求真实资料已提交、真实拓厂评估已通过、真实 GFIS 接入已启动、真实订单或原料事实已确认、真实悬赏已发布、真实 KDS API 已同步或收益分配已发生。
@@ -245,4 +245,4 @@ DSR-L3 字段默认只建立受控索引，不进入共享知识库正文，不�
 2. AI 额度自用、贡献、共享和奖励规则。
 3. 收益池按到账正式确认、开票统计口径和自购额度不入池规则。
 4. 增强治理账本对象挂接 KDS 11 池的统一状态机。
-5. WAES / 委员会 / LOOP evidence 的确认、冻结、争议、撤销和追溯扣减流程。
+5. WAME / 委员会 / LOOP evidence 的确认、冻结、争议、撤销和追溯扣减流程。

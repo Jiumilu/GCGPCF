@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-69BAD1B287
 title: GPCF-L4-GFIS-REPAIR-001 GFIS Runtime SOP E2E Precheck
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, Brain, PKC, XiaoG, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, Brain, PKC, XiaoG, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -53,7 +53,7 @@ GPC PlatformOrder
 -> GFIS InventoryBatch
 -> GFIS DeliveryNote
 -> GPC/POD ProofOfDelivery
--> WAES EvidenceRecord
+-> WAME EvidenceRecord
 -> KDS KnowledgeBacklink
 -> Brain/PKC/XiaoG read/query/remind/track
 ```
@@ -67,7 +67,7 @@ GPC PlatformOrder
 | `PYTHONDONTWRITEBYTECODE=1 python3 scripts/validate_gcfis_core_flows.py` | pass |
 | `PYTHONDONTWRITEBYTECODE=1 python3 scripts/validate_gcfis_p0_extensions.py` | pass |
 | `PYTHONDONTWRITEBYTECODE=1 python3 scripts/validate_gfis_work_order_api_contract.py` | pass |
-| `PYTHONDONTWRITEBYTECODE=1 python3 scripts/validate_gfis_waes_gate_events.py` | pass |
+| `PYTHONDONTWRITEBYTECODE=1 python3 scripts/validate_gfis_wame_gate_events.py` | pass |
 | `PYTHONDONTWRITEBYTECODE=1 python3 scripts/validate_gfis_outbound_pod_finance_boundary.py` | pass |
 | `git diff --check -- .` in GFIS repo | pass |
 

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-4A7B830DE5
 title: GFIS Assistant DKS-178 Routing Queue Notification Acknowledgement Preview No-write 规则
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, Brain, PKC]
+related_projects: [GFIS, GPC, WAME, KDS, Brain, PKC]
 domain: docs
 status: controlled
 version: v1.0
@@ -27,7 +27,7 @@ DKS-178 定义从 DKS-177 notification preview 派生的 acknowledgement preview
 - 不创建 acknowledgement、receipt、read receipt，也不更新 delivery status。
 - 不创建 notification、message、inbox item，不发送外部通知。
 - 不创建 routing queue、queue item、approval assignment 或 approval lock。
-- 不写 GFIS、GPC、ERP、MES、KDS fact、KDS lifecycle、WAES gate result、KWE work item 或 Harness evidence。
+- 不写 GFIS、GPC、ERP、MES、KDS fact、KDS lifecycle、WAME gate result、KWE work item 或 Harness evidence。
 
 ## DKS-178 验收口径
 

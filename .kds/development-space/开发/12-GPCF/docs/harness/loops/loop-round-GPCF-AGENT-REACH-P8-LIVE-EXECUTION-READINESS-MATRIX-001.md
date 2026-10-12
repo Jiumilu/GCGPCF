@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-LOOP-AGENT-REACH-P8-LIVE-EXECUTION-READINESS-MATRIX-001
 title: Agent-Reach P8 真实搜索执行准备矩阵 Loop 001
 project: GPCF
-related_projects: [GPC, WAES, GPCF]
+related_projects: [GPC, WAME, GPCF]
 domain: docs
 status: controlled
 version: v1.0

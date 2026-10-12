@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-61F5839244
 title: CodeGraph watchlist post-Studio 监控证据
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, Brain, GPCF, Studio]
+related_projects: [GFIS, GPC, WAME, KDS, Brain, GPCF, Studio]
 domain: docs
 status: controlled
 version: v1.0

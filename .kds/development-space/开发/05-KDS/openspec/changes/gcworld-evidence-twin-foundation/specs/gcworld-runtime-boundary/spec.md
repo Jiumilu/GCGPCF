@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-GCWORLD-007
 title: spec
 project: KDS
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, MMC]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, MMC]
 domain: openspec
 status: draft
 version: v1.0
@@ -19,7 +19,7 @@ superseded_by: []
 ## ADDED Requirements
 
 ### Requirement: GCWORLD 系统边界
-系统 SHALL 保持以下职责分离：WAS-Ontology 负责世界语义；KDS 负责来源、主张、事实、证据和事实生命周期；GCWORLD 负责世界投影、运行上下文与工作台视图；XWAIL 负责智能体认知和协同；WAES 负责规则、风险、权限和状态门禁裁决；KWE 负责编排工单、确认包和人工流转；MMC 负责模型、API、MCP 和连接器能力；GFIS、GPC、ERP 等业务系统负责现实执行和业务主账；Brain/PKC 提供知识与个人团队入口；LOOP/Harness 负责证据、验收、审计和持续治理。GCWORLD MUST NOT 绕过或复制任何责任系统的权威职责。
+系统 SHALL 保持以下职责分离：WAS-Ontology 负责世界语义；KDS 负责来源、主张、事实、证据和事实生命周期；GCWORLD 负责世界投影、运行上下文与工作台视图；XWAIL 负责智能体认知和协同；WAME 负责规则、风险、权限和状态门禁裁决；KWE 负责编排工单、确认包和人工流转；MMC 负责模型、API、MCP 和连接器能力；GFIS、GPC、ERP 等业务系统负责现实执行和业务主账；Brain/PKC 提供知识与个人团队入口；LOOP/Harness 负责证据、验收、审计和持续治理。GCWORLD MUST NOT 绕过或复制任何责任系统的权威职责。
 
 #### Scenario: 智能体提出合同相关动作
 - **WHEN** 智能体在 GCWORLD 中提出合同相关动作

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-CGFSR019
 title: Loop Round - CodeGraph GFIS 只读 Scope Review
 project: GPCF
-related_projects: [GFIS, GPC, WAES, GPCF]
+related_projects: [GFIS, GPC, WAME, GPCF]
 domain: docs
 status: controlled
 version: v1.0

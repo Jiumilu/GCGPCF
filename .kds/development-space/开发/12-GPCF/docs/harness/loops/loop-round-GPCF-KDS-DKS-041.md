@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-4424900CA7
 title: LOOP Round GPCF-KDS-DKS-041 - 底座可用知识闭环率计算样表与字段字典
 project: GPCF
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -69,7 +69,7 @@ superseded_by: []
 - 收益分配；
 - AI 额度发放；
 - 委员会真实裁决；
-- WAES 放行；
+- WAME 放行；
 - 真实 KDS API 写入；
 - GFIS、GPC、PVAOS 或其他业务系统主账写入；
 - `accepted` 或 `integrated` 状态升级。

@@ -1,12 +1,12 @@
 ---
 doc_id: GPCF-DOC-AGENT-REACH-FULL-IMPLEMENTATION-20260622
 title: GlobalCloud 项目群 Agent-Reach 全量实施方案与执行提示词
-project: WAES
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio]
+project: WAME
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio]
 domain: governance
 status: controlled
 version: v1.0
-owner: WAES
+owner: WAME
 kds_space: 开发
 kds_path: 开发/91-治理与验收/02-governance/GlobalCloud项目群Agent-Reach全量实施方案与执行提示词.md
 source_path: 02-governance/GlobalCloud项目群Agent-Reach全量实施方案与执行提示词.md
@@ -42,14 +42,14 @@ Agent-Reach 在 GlobalCloud 的角色是：
 互联网搜索与读取能力层
 多渠道后端选择与健康检查
 固定查询 benchmark 与回归门禁对象
-KDS / WAES / Brain / Harness 的候选外部证据入口
+KDS / WAME / Brain / Harness 的候选外部证据入口
 ```
 
 Agent-Reach 不得被定位为：
 
 ```text
 KDS 事实主存
-WAES 裁决源
+WAME 裁决源
 GFIS 运行层 source-of-record
 生产配置自动写入器
 accepted / integrated / production_ready 的自动升级依据
@@ -83,7 +83,7 @@ accepted / integrated / production_ready 的自动升级依据
 | --- | --- | --- | --- |
 | GPCF | Loop 控制板、证据链、validator | 定义门禁、记录能力状态、回放 benchmark | 自动 accepted / integrated |
 | KDS | 候选引用、metadata-only、RAG review queue | 生成候选索引和来源追溯 | 写 canonical Markdown |
-| WAES | 风险、合规、证据裁决输入 | 审查候选证据与来源可信度 | 替代 WAES 裁决 |
+| WAME | 风险、合规、证据裁决输入 | 审查候选证据与来源可信度 | 替代 WAME 裁决 |
 | Brain | 外部检索辅助、知识工作台候选 | 读取和摘要外部候选 | 替代 KDS 主存 |
 | GFIS | 供应商、政策、标准、公开资料发现 | 生成待人工核验候选 | 创建 source-of-record |
 | GPC | 供应链协作公开资料候选 | 辅助调研和证据链接 | 写业务事实主账 |
@@ -104,10 +104,10 @@ accepted / integrated / production_ready 的自动升级依据
 | P1 Isolated Install | 临时 HOME / venv / npm prefix 安装 | install log、doctor JSON、uninstall replay | 无凭据泄露、rollback pass |
 | P2 Channel Doctor | 全通道健康基线 | channel matrix、active backend ledger | doctor schema pass |
 | P3 Fixed Query Benchmark | 固定查询搜索质量基线 | replay ledger、latency、source provenance | regression gate pass |
-| P4 Candidate Ingestion | 候选 metadata-only 摄取 | KDS/WAES review queue dry-run | canonical write count = 0 |
+| P4 Candidate Ingestion | 候选 metadata-only 摄取 | KDS/WAME review queue dry-run | canonical write count = 0 |
 | P5 Project Group Routing | 14 项目/域路由策略 | route policy、allow/deny matrix | 每项目边界 validator pass |
 | P6 Authorized Read-Only Live | L3.5 受控真实接口读验证 | endpoint summary、response schema、redaction log | 显式授权字段完整 |
-| P7 Human Review | WAES/KDS/owner 人审闭环 | decision ledger、reject reason、promotion request | review quorum pass |
+| P7 Human Review | WAME/KDS/owner 人审闭环 | decision ledger、reject reason、promotion request | review quorum pass |
 | P8 Controlled Production Admission | 生产前准入包 | rollout plan、rollback plan、monitoring plan | 单独人工批准 |
 
 ## 5. 完整实施提示词
@@ -118,8 +118,8 @@ accepted / integrated / production_ready 的自动升级依据
 你是 GlobalCloud 项目群 Agent-Reach 全量能力实施代理。你的目标是在 GPCF Loop 中把 Panniantong/Agent-Reach 作为互联网触达能力层受控纳入项目群，使其提升搜索能力、效率与质量，并建立可持续进化机制。
 
 【硬边界】
-1. 当前状态最高为 limited_candidate_only，除非存在单独 WAES/KDS/Owner 明确批准，不得声明 accepted、integrated 或 production_ready。
-2. Agent-Reach 只能作为互联网搜索/读取/通道健康检查能力层；不得替代 KDS 事实主存、WAES 裁决、GFIS source-of-record、Brain 知识主存或 Harness 证据验收。
+1. 当前状态最高为 limited_candidate_only，除非存在单独 WAME/KDS/Owner 明确批准，不得声明 accepted、integrated 或 production_ready。
+2. Agent-Reach 只能作为互联网搜索/读取/通道健康检查能力层；不得替代 KDS 事实主存、WAME 裁决、GFIS source-of-record、Brain 知识主存或 Harness 证据验收。
 3. 未授权前不得写 KDS canonical Markdown，不得写 GFIS source-of-record，不得写 production configuration，不得写全局 MCP 配置，不得泄露 token/cookie/proxy。
 4. 任何外部搜索结果只能先进入 candidate metadata / review queue，必须保留 source provenance、timestamp、query、backend、latency、content hash、review status、rollback path。
 5. 任何需要登录态的通道必须使用专用账号、最小权限、可撤销凭据；凭据只允许进入本机受保护配置，禁止进入 Git、文档、日志、evidence。
@@ -134,7 +134,7 @@ supported_channels=web, exa_search, github, youtube, rss, bilibili, v2ex, xueqiu
 required_health_command=agent-reach doctor --json
 
 【目标架构】
-GlobalCloud Loop 调度 Agent-Reach；Agent-Reach 只负责安装、健康检查、后端路由和搜索/读取能力发现；实际外部内容进入 Harness evidence；WAES 负责风险和准入判定；KDS 负责受控候选索引和最终事实主存；Brain 可使用候选内容做工作台辅助；GFIS/GPC/PVAOS/PKC/XiaoC/XGD/XiaoG/MMC/Studio/WAS 只能按各自 allow/deny matrix 使用候选结果。
+GlobalCloud Loop 调度 Agent-Reach；Agent-Reach 只负责安装、健康检查、后端路由和搜索/读取能力发现；实际外部内容进入 Harness evidence；WAME 负责风险和准入判定；KDS 负责受控候选索引和最终事实主存；Brain 可使用候选内容做工作台辅助；GFIS/GPC/PVAOS/PKC/XiaoC/XGD/XiaoG/MMC/Studio/WAS 只能按各自 allow/deny matrix 使用候选结果。
 
 【执行阶段】
 P0 Source Lock:
@@ -166,10 +166,10 @@ P4 Candidate Ingestion:
 - 只生成 candidate metadata ledger，不写 canonical。
 - 每条候选必须有 source provenance、accepted scope、blocked outputs、review status、rollback path。
 - 硬门禁：canonical_write_count = 0，production_write_count = 0，credential_leakage_count = 0。
-- WAES/KDS review 决策必须独立记录，搜索成功不能替代人审或门禁。
+- WAME/KDS review 决策必须独立记录，搜索成功不能替代人审或门禁。
 
 P5 Project Group Routing:
-- 为 GPCF、KDS、WAES、Brain、GFIS、GPC、PVAOS、PKC、XiaoC、XGD、XiaoG、MMC、Studio、WAS 分别定义 allow/deny matrix。
+- 为 GPCF、KDS、WAME、Brain、GFIS、GPC、PVAOS、PKC、XiaoC、XGD、XiaoG、MMC、Studio、WAS 分别定义 allow/deny matrix。
 - 每个项目只允许只读调研、候选引用、metadata-only 或 dry-run；涉及业务事实、生产写入、配置变更、真实接口写入时必须阻断。
 
 P6 Authorized Read-Only Live:
@@ -178,7 +178,7 @@ P6 Authorized Read-Only Live:
 - 仅允许真实 API 读、真实鉴权、validate-only、sandbox/staging 或单条可回滚测试写入。
 
 P7 Human Review:
-- 建立 WAES/KDS/项目 owner review ledger。
+- 建立 WAME/KDS/项目 owner review ledger。
 - 每条候选决策只能是 accept_limited、reject、needs_more_evidence、promotion_requested。
 - promotion_requested 不等于 accepted/integrated。
 
@@ -204,7 +204,7 @@ P8 Controlled Production Admission:
 - codegraph sync . && codegraph status --json .
 
 【完成定义】
-只有当 P0-P8 全部有 evidence、validator、WAES/KDS review、rollback、credential safety、regression benchmark 和人工生产准入时，才可申请 production admission。否则只能报告当前阶段状态，不能宣称全量完成。
+只有当 P0-P8 全部有 evidence、validator、WAME/KDS review、rollback、credential safety、regression benchmark 和人工生产准入时，才可申请 production admission。否则只能报告当前阶段状态，不能宣称全量完成。
 ```
 
 ## 6. 本轮目标和下一步

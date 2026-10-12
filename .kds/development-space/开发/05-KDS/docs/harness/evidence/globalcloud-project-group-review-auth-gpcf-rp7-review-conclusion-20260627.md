@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-REVIEW-AUTH-GPCF-RP7-REVIEW-CONCLUSION-20260627
 title: GlobalCloud 项目群 REVIEW-AUTH GPCF-RP7 Review 结论登记 2026-06-27
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0

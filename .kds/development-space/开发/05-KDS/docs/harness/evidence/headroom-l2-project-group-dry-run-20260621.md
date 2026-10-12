@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-07ADF1B23E
 title: Headroom L2 Project Group Dry Run Evidence
 project: KDS
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio]
 domain: docs
 status: controlled
 version: v1.0
@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/05-KDS/docs/harness/evidence/headroom-l2-project-group-dry-run-20260621.md
 source_path: docs/harness/evidence/headroom-l2-project-group-dry-run-20260621.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-24
+last_reviewed: 2026-06-21
 supersedes: []
 superseded_by: []
 ---
@@ -33,7 +33,7 @@ superseded_by: []
 | 字段 | 值 |
 |---|---|
 | project_count | 15 |
-| projects_covered | GPCF, KDS, Brain, WAES, GFIS, GPC, PVAOS, Edge, PKC, XiaoC, XGD, XiaoG, MMC, Studio, WAS |
+| projects_covered | GPCF, KDS, Brain, WAME, GFIS, GPC, PVAOS, Edge, PKC, XiaoC, XGD, XiaoG, MMC, Studio, WAS |
 | source_fixture | `fixtures/headroom/headroom-l2-project-group-sources.json` |
 | evidence_json | `docs/harness/evidence/headroom-l2-project-group-dry-run-20260621.json` |
 | generator | `tools/kds-sync/generate_headroom_l2_project_group_dry_run.py` |

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-LOOP-COGNEE-P4-REAL-WRITEBACK-PRECHECK-003
 title: Loop Round - GPCF Cognee P4 真实写入前置复核与确认 003
 project: GPCF
-related_projects: [GPC, WAES, GPCF]
+related_projects: [GPC, WAME, GPCF]
 domain: docs
 status: controlled
 version: v1.0

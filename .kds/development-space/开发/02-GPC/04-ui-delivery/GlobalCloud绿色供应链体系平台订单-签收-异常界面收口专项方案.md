@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-E12B78B67D
 title: GlobalCloud 绿色供应链体系平台订单-样品确认-签收-异常界面收口专项方案
 project: GPC
-related_projects: [GFIS, GPC, WAES]
+related_projects: [GFIS, GPC, WAME]
 domain: ui-delivery
 status: controlled
 version: v1.0

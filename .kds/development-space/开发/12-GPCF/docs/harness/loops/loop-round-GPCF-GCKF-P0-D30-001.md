@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-16CAD61995
 title: GC-Knowledge Fabric P0-D30 Harness Governance 审查决策接收 dry-run LOOP 证据
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0

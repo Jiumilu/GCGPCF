@@ -2,8 +2,8 @@
 doc_id: GPCF-DOC-1E408CB4A5
 title: WAS 真实源记录候选预检执行证据
 project: KDS
-related_projects: [GPC, WAME, KDS, GPCF, Studio]
-domain: ontology-governance
+related_projects: [GPC, WAME, KDS, GPCF]
+domain: docs
 status: controlled
 version: v1.0
 owner: KDS

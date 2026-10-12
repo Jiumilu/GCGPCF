@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-GCKFP0FORMALEVIDENCEEXECUTIONCOMMITTEETRIGGERPACKAGEPREVIEWCURRENTSTATED14520260622
 title: GCKF P0 正式 evidence 执行委员会触发包预览当前态证据 D145
 project: GPCF
-related_projects: [GPCF, WAES]
+related_projects: [GPCF, WAME]
 domain: docs
 status: controlled
 version: v1.0

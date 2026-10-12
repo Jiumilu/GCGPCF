@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-3DBC8DC5C3
 title: GlobalCloud 智慧工厂专项架构图集
 project: GPCF
-related_projects: [GFIS, GPC, PVAOS, WAME, Brain, XiaoC, XGD, GPCF]
+related_projects: [GFIS, GPC, PVAOS, WAME, Brain, XiaoC, XGD, GPCF, Studio]
 domain: architecture
 status: controlled
 version: v1.0

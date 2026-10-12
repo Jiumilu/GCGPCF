@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-CODEGRAPH-DEV-EXECUTION-BENEFIT-PROOF-20260626
 title: CodeGraph 开发执行层收益证明 2026-06-26
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -18,7 +18,7 @@ superseded_by: []
 
 # CodeGraph 开发执行层收益证明 2026-06-26
 
-本轮执行 `GPCF-CODEGRAPH-DEV-EXECUTION-BENEFIT-PROOF-015`。范围是开发态收益证明，不进入新的业务代码开发，不提交、不推送、不部署，不执行生产写入、外部 API 写入、真实 KDS 写入或真实 WAES 写入。
+本轮执行 `GPCF-CODEGRAPH-DEV-EXECUTION-BENEFIT-PROOF-015`。范围是开发态收益证明，不进入新的业务代码开发，不提交、不推送、不部署，不执行生产写入、外部 API 写入、真实 KDS 写入或真实 WAME 写入。
 
 ## 结论
 
@@ -52,7 +52,7 @@ CodeGraph 已经从治理层进入业务开发执行层的开工门禁和 eviden
 - 不声明 GFIS 业务实现完成。
 - 不声明 accepted、integrated 或 production_ready。
 - 不声明 commit、push、deploy、production_write 或 external_api_write。
-- 不把 CodeGraph 当作 WAES 最终裁决。
+- 不把 CodeGraph 当作 WAME 最终裁决。
 - GFIS runtime SOP 仍为 `repair_required`。
 - 现有阻塞仍是 `FAIL: KDS coverage must not have missing controlled sources`，以及真实回执文件、客户确认函、签章完成件或等效正式原件尚未到达。
 

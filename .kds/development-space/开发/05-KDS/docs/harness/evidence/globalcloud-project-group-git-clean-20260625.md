@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-PROJECT-GROUP-GIT-CLEAN-20260625
 title: GlobalCloud 项目群 17 仓 Git Clean 门禁证据 2026-06-25
 project: KDS
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0

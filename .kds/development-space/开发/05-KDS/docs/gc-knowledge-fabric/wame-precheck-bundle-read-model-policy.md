@@ -1,26 +1,26 @@
 ---
 doc_id: GPCF-DOC-1946E4144B
-title: WAES Precheck Bundle Read Model No-write 规则
+title: WAME Precheck Bundle Read Model No-write 规则
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, Brain]
+related_projects: [GFIS, GPC, WAME, KDS, Brain]
 domain: docs
 status: controlled
 version: v1.0
 owner: KDS
 kds_space: 开发
-kds_path: 开发/05-KDS/docs/gc-knowledge-fabric/waes-precheck-bundle-read-model-policy.md
-source_path: docs/gc-knowledge-fabric/waes-precheck-bundle-read-model-policy.md
+kds_path: 开发/05-KDS/docs/gc-knowledge-fabric/wame-precheck-bundle-read-model-policy.md
+source_path: docs/gc-knowledge-fabric/wame-precheck-bundle-read-model-policy.md
 sync_direction: bidirectional
 last_reviewed: 2026-06-24
 supersedes: []
 superseded_by: []
 ---
 
-# WAES Precheck Bundle Read Model No-write 规则
+# WAME Precheck Bundle Read Model No-write 规则
 
 ## 1. 定位
 
-WAES Precheck Bundle Read Model 是 DKS-106 `WAES Action Gate Precheck` 之后的只读聚合视图。
+WAME Precheck Bundle Read Model 是 DKS-106 `WAME Action Gate Precheck` 之后的只读聚合视图。
 
 它把多个 precheck 候选聚合给 Brain、KWE、GFIS Assistant 使用，帮助不同入口展示：
 
@@ -45,7 +45,7 @@ WAES Precheck Bundle Read Model 是 DKS-106 `WAES Action Gate Precheck` 之后�
 
 Read Model 不得直接执行以下动作：
 
-- 写入 `waes_gate_results`；
+- 写入 `wame_gate_results`；
 - 创建真实 KWE WorkItem；
 - 修改 KDS lifecycle；
 - 写入 KDS fact 或 accepted fact；
@@ -71,7 +71,7 @@ Read Model 不得直接执行以下动作：
 - `requiredActions`
 - `reviewerRequirements`
 - `blockedActions`
-- `canCreateWaesGateResult`
+- `canCreateWameGateResult`
 - `canCreateKweWorkItem`
 - `canPromoteLifecycle`
 - `noWrite`
@@ -88,15 +88,15 @@ Read Model 不得直接执行以下动作：
 
 必须阻断：
 
-- create_waes_gate_result；
+- create_wame_gate_result；
 - create_kwe_work_item；
 - promote_lifecycle；
 - write_business_system；
 - complete_committee_decision；
 - confirm_revenue_or_score。
 
-## 6. 与 WAES / KWE 的关系
+## 6. 与 WAME / KWE 的关系
 
-WAES Precheck Bundle Read Model 不是 WAES Gate Result，也不是 KWE WorkItem。
+WAME Precheck Bundle Read Model 不是 WAME Gate Result，也不是 KWE WorkItem。
 
 它只让 Brain、KWE 和 GFIS Assistant 安全读取 precheck 聚合状态。任何真实 gate result、task、lifecycle 或业务写回都必须进入后续受控流程。

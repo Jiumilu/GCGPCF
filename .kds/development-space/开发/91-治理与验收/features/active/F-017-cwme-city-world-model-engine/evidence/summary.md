@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-F017-CWME-EVIDENCE-20261011
 title: F-017 证据摘要（B4 首月件 B4-1—B4-5 验收）
 project: GPCF
-related_projects: [AAAS, Brain, WAS, XiaoC, WAES, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP]
+related_projects: [AAAS, Brain, WAS, XiaoC, WAME, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP]
 domain: governance
 status: controlled
 version: v1.0
@@ -28,7 +28,7 @@ superseded_by: []
 - screenshots: waived（本体/生成物/图库，无 UI 变更）
 - api: waived（本地只读文件 + 本机容器）
 - lint: 脚本纯标准库 + rdflib/pyshacl；产物经 `tsc --noEmit` 与 SQLite 执行验证
-- risk: 未授权项列明——无生产承诺、无 WAES 发布、无跨项目写账、无对外发送
+- risk: 未授权项列明——无生产承诺、无 WAME 发布、无跨项目写账、无对外发送
 <!-- GPCF_EVIDENCE_GATE_END -->
 
 ## 一、B4 首月件验收矩阵

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-523635A3FD
 title: evidence
 project: MMC
-related_projects: [GPC, WAES, KDS, MMC, GPCF]
+related_projects: [GPC, WAME, KDS, MMC, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/11-MMC/docs/harness/MMC/evidence/README.md
 source_path: docs/harness/MMC/evidence/README.md
 sync_direction: bidirectional
-last_reviewed: 2026-10-11
+last_reviewed: 2026-10-12
 supersedes: []
 superseded_by: []
 ---

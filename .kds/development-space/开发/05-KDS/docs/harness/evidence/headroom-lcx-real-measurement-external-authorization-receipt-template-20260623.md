@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-HEADROOM-LCX-REAL-MEASUREMENT-EXTERNAL-AUTHORIZATION-RECEIPT-TEMPLATE-20260623
 title: Headroom LCX Real Measurement External Authorization Receipt Template
 project: KDS
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio]
 domain: docs
 status: controlled
 version: v1.0
@@ -33,7 +33,7 @@ superseded_by: []
 | item | value |
 |---|---|
 | project_count | `15` |
-| projects | `GPCF, KDS, Brain, WAES, GFIS, GPC, PVAOS, Edge, PKC, XiaoC, XGD, XiaoG, MMC, Studio, WAS` |
+| projects | `GPCF, KDS, Brain, WAME, GFIS, GPC, PVAOS, Edge, PKC, XiaoC, XGD, XiaoG, MMC, Studio, WAS` |
 | receipt_status | `template_only_pending_external_receipt` |
 | sanitized_production_usage_ledger | `docs/harness/evidence/headroom-lcx-sanitized-production-usage-ledger-20260623.json` |
 
@@ -47,7 +47,7 @@ superseded_by: []
 | `authorized_at` | `"2026-06-23T14:30:00+08:00"` |
 | `sanitized_production_usage_ledger` | `"docs/harness/evidence/headroom-lcx-sanitized-production-usage-ledger-20260623.json"` |
 | `rollback_plan_id` | `"HEADROOM-LCX-ROLLBACK-PLAN-20260622-001"` |
-| `waes_harness_admission_decision` | `"admitted_for_sanitized_measurement_precheck"` |
+| `wame_harness_admission_decision` | `"admitted_for_sanitized_measurement_precheck"` |
 | `execution_operator` | `"REQUIRED_EXTERNAL_OPERATOR"` |
 | `execution_started_at` | `"REQUIRED_EXTERNAL_TIMESTAMP_WITH_TIMEZONE"` |
 | `execution_finished_at` | `"REQUIRED_EXTERNAL_TIMESTAMP_WITH_TIMEZONE"` |
@@ -62,8 +62,8 @@ superseded_by: []
 | `real_measurement_open` | `false` |
 | `production_token_measurement_allowed` | `false` |
 | `measured_production_tokens` | `false` |
-| `answer_equivalence` | `"REQUIRED_EXTERNAL_WAES_HARNESS_DECISION"` |
-| `waes_harness_receipt_decision` | `"REQUIRED_EXTERNAL_RECEIPT_DECISION"` |
+| `answer_equivalence` | `"REQUIRED_EXTERNAL_WAME_HARNESS_DECISION"` |
+| `wame_harness_receipt_decision` | `"REQUIRED_EXTERNAL_RECEIPT_DECISION"` |
 | `rollback_exercised` | `"REQUIRED_EXTERNAL_BOOLEAN"` |
 | `evidence_refs` | `["docs/harness/evidence/headroom-lcx-real-measurement-authorization-chain-replay-20260623.json", "docs/harness/evidence/headroom-lcx-real-measurement-authorization-window-grant-20260623.json", "docs/harness/evidence/headroom-lcx-sanitized-production-usage-ledger-20260623.json"]` |
 | `accepted` | `false` |

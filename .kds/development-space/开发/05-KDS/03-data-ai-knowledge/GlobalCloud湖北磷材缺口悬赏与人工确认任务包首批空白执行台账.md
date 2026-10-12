@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-77DB51C32D
 title: GlobalCloud 湖北磷材缺口悬赏与人工确认任务包首批空白执行台账
 project: KDS
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain]
 domain: data-ai-knowledge
 status: controlled
 version: v1.0
@@ -26,7 +26,7 @@ superseded_by: []
 
 本文承接 DKS-038《GlobalCloud 湖北磷材 SOP 候选写回规则到缺口悬赏与人工确认任务包》，把 `MCT`、`BAC`、`CTC`、`CLC` 和 `PPC` 对象转成首批可填报的空白执行台账。
 
-本文是执行登记模板，不是实际执行记录。本文不证明已收到真实资料、不发布悬赏、不冻结资源、不结算积分、不分配收益、不发放 AI 额度、不进行委员会真实裁决、不发布 Brain 页面、不放行 WAES、不写真实 KDS API、不写 GFIS、GPC、PVAOS 或其他业务系统主账。
+本文是执行登记模板，不是实际执行记录。本文不证明已收到真实资料、不发布悬赏、不冻结资源、不结算积分、不分配收益、不发放 AI 额度、不进行委员会真实裁决、不发布 Brain 页面、不放行 WAME、不写真实 KDS API、不写 GFIS、GPC、PVAOS 或其他业务系统主账。
 
 ## 2. 输入关系
 
@@ -41,19 +41,19 @@ superseded_by: []
 
 | 字段 | 可选值 | 含义 |
 |---|---|---|
-| `executionState` | planned / assigned_candidate / source_submitted_candidate / waes_rule_recorded / human_review_pending / committee_if_needed / returned / withdrawn / closed | 任务执行状态 |
+| `executionState` | planned / assigned_candidate / source_submitted_candidate / wame_rule_recorded / human_review_pending / committee_if_needed / returned / withdrawn / closed | 任务执行状态 |
 | `sourceReceiptStatus` | blank / waiting_source / metadata_received / redacted_source_received / returned / blocked | 资料接收状态 |
-| `waesRecordStatus` | blank / planned / recorded / returned / blocked | WAES 规则记录状态 |
+| `wameRecordStatus` | blank / planned / recorded / returned / blocked | WAME 规则记录状态 |
 | `humanReviewStatus` | blank / pending / pass / partial / returned / blocked | 人工确认状态 |
 | `committeeStatus` | none / filing_planned / decision_planned / filed / decided / not_required | 委员会备案或裁决状态 |
 | `bountyStatus` | candidate_only / ready_for_sponsor / resource_pending_freeze / published_if_confirmed / withdrawn / closed | 悬赏状态 |
 | `settlementStatus` | not_applicable / prohibited_before_acceptance / pending_dispute_period / settled | 结算状态 |
 
-本台账首批行均不得出现 `settled`、`published_if_confirmed`、`decided` 或 `closed`，除非后续有独立 LOOP 证据、人工确认、WAES 记录和委员会或发起方确认。
+本台账首批行均不得出现 `settled`、`published_if_confirmed`、`decided` 或 `closed`，除非后续有独立 LOOP 证据、人工确认、WAME 记录和委员会或发起方确认。
 
 ## 4. ManualConfirmationExecutionRegister
 
-| registerId | taskId | linkedControlPointId | executionState | sourceReceiptStatus | waesRecordStatus | humanReviewStatus | committeeStatus | kdsPoolRefs | enhancedLedgerRefs | evidenceSlot | nextAction |
+| registerId | taskId | linkedControlPointId | executionState | sourceReceiptStatus | wameRecordStatus | humanReviewStatus | committeeStatus | kdsPoolRefs | enhancedLedgerRefs | evidenceSlot | nextAction |
 |---|---|---|---|---|---|---|---|---|---|---|---|
 | `MER-HBLC-FEA-202606-0001` | `MCT-HBLC-FEA-202606-0001` | `SCP-HBLC-FEA-202606-0001` | planned | blank | planned | blank | none | 装备池 / 产能池 / 政策池 / 数据池 / 场景池 | 贡献账本 / SOP 账本 / 悬赏池 | 待填来源索引、脱敏摘要、负责人确认 | 等待湖北磷材项目组确认拓厂来源接收口径 |
 | `MER-HBLC-FEA-202606-0002` | `MCT-HBLC-FEA-202606-0002` | `SCP-HBLC-FEA-202606-0001` | planned | blank | planned | blank | none | 装备池 / 产能池 / 政策池 / 数据池 / 场景池 | 贡献账本 / SOP 账本 / 悬赏池 / 争议池 | 待填 KDS 池挂接与增强账本挂接表 | 等待 KDS 记录人复核挂接关系 |
@@ -66,7 +66,7 @@ superseded_by: []
 | registerId | bountyActivationId | linkedTaskId | bountyStatus | settlementStatus | sourceReceiptStatus | eligibleParticipants | visibility | resourceBoundary | evidenceSlot | nextAction |
 |---|---|---|---|---|---|---|---|---|---|---|
 | `BER-HBLC-FEA-202606-0001` | `BAC-HBLC-FEA-202606-0001` | `MCT-HBLC-FEA-202606-0001` | candidate_only | prohibited_before_acceptance | blank | 湖北磷材项目组 / 受邀合作单位 / 项目组授权人员 | directed | 未确认资源来源，不冻结积分、收益或 AI 额度 | 待填悬赏范围、验收标准、资源来源 | 等待发起方确认是否进入悬赏准备 |
-| `BER-HBLC-IND-202606-0001` | `BAC-HBLC-IND-202606-0001` | `MCT-HBLC-IND-202606-0001` | candidate_only | prohibited_before_acceptance | blank | 所有授权人员或单位 / 受邀专家 / 资料责任方 | semi_public_or_directed | 不得直接确认高可信结论或政策适用结论 | 待填来源范围、可信层级规则 | 等待 WAES 规则记录 |
+| `BER-HBLC-IND-202606-0001` | `BAC-HBLC-IND-202606-0001` | `MCT-HBLC-IND-202606-0001` | candidate_only | prohibited_before_acceptance | blank | 所有授权人员或单位 / 受邀专家 / 资料责任方 | semi_public_or_directed | 不得直接确认高可信结论或政策适用结论 | 待填来源范围、可信层级规则 | 等待 WAME 规则记录 |
 | `BER-HBLC-ORD-202606-0001` | `BAC-HBLC-ORD-202606-0001` | `MCT-HBLC-ORD-202606-0001` | candidate_only | prohibited_before_acceptance | blank | 销售责任方 / 渠道方 / 受邀合作单位 | directed | 无到账不得确认正式产值积分或正式收益分配 | 待填线索来源、客户匿名编号、收益边界 | 等待线索责任方补齐来源摘要 |
 | `BER-HBLC-ORD-202606-0002` | `BAC-HBLC-ORD-202606-0002` | `MCT-HBLC-ORD-202606-0002` | candidate_only | prohibited_before_acceptance | blank | 销售责任方 / 财务联系人 / 项目组授权人员 | private_or_directed | 开票只作统计、财务和流程口径；正式收入按到账 | 待填潜在产值、开票统计、到账跟踪 | 等待财务复核字段定义 |
 
@@ -83,7 +83,7 @@ superseded_by: []
 
 | registerId | closureId | linkedTaskId | executionState | closeAsPassEvidence | closeAsPartialEvidence | returnEvidence | withdrawEvidence | currentBoundary |
 |---|---|---|---|---|---|---|---|---|
-| `CLR-HBLC-FEA-202606-0001` | `CLC-HBLC-FEA-202606-0001` | `MCT-HBLC-FEA-202606-0001` | planned | 待填来源索引、区域资料、项目负责人确认、WAES 记录 | 待填部分来源说明 | 待填来源缺失或责任主体不清说明 | 待填来源证伪或授权撤回说明 | 未满足关闭条件 |
+| `CLR-HBLC-FEA-202606-0001` | `CLC-HBLC-FEA-202606-0001` | `MCT-HBLC-FEA-202606-0001` | planned | 待填来源索引、区域资料、项目负责人确认、WAME 记录 | 待填部分来源说明 | 待填来源缺失或责任主体不清说明 | 待填来源证伪或授权撤回说明 | 未满足关闭条件 |
 | `CLR-HBLC-FEA-202606-0002` | `CLC-HBLC-FEA-202606-0002` | `MCT-HBLC-FEA-202606-0002` | planned | 待填 KDS 11 池和增强账本完整挂接表 | 待填增强账本待补说明 | 待填账本游离或池挂接错误说明 | 待填误挂接风险说明 | 未满足关闭条件 |
 | `CLR-HBLC-IND-202606-0001` | `CLC-HBLC-IND-202606-0001` | `MCT-HBLC-IND-202606-0001` | planned | 待填权威来源链接、检索时间、适用范围、可信层级建议 | 待填适用范围继续评估说明 | 待填缺来源或缺检索时间说明 | 待填来源失效或授权不可用说明 | 未满足关闭条件 |
 | `CLR-HBLC-ORD-202606-0001` | `CLC-HBLC-ORD-202606-0001` | `MCT-HBLC-ORD-202606-0001` | planned | 待填线索来源、客户匿名编号、需求时间、责任人、收益边界 | 待填客户匿名编号或责任人待补说明 | 待填误写正式订单、开票或到账收入说明 | 待填线索撤回或证伪说明 | 未满足关闭条件 |
@@ -94,7 +94,7 @@ superseded_by: []
 | registerId | participationId | linkedBountyActivationId | participantScope | allowedContribution | restrictedContribution | settlementBoundary | submissionSlot | nextAction |
 |---|---|---|---|---|---|---|---|---|
 | `PER-HBLC-FEA-202606-0001` | `PPC-HBLC-FEA-202606-0001` | `BAC-HBLC-FEA-202606-0001` | 湖北磷材项目组、受邀合作单位成员、授权专家 | 拓厂来源摘要、区域资料索引、政策来源索引、差异项说明 | 未授权原文、敏感价格、合同原文或个人信息 | 验收前只形成个人贡献候选 | 待填提交入口和脱敏要求 | 等待参与范围确认 |
-| `PER-HBLC-IND-202606-0001` | `PPC-HBLC-IND-202606-0001` | `BAC-HBLC-IND-202606-0001` | 所有授权人员或单位、受邀专家 | 权威来源链接、检索时间、适用范围说明 | 非权威资料不得写成高可信结论 | 可信层级升级必须经 WAES 和人工确认 | 待填来源提交入口 | 等待可信来源标准确认 |
+| `PER-HBLC-IND-202606-0001` | `PPC-HBLC-IND-202606-0001` | `BAC-HBLC-IND-202606-0001` | 所有授权人员或单位、受邀专家 | 权威来源链接、检索时间、适用范围说明 | 非权威资料不得写成高可信结论 | 可信层级升级必须经 WAME 和人工确认 | 待填来源提交入口 | 等待可信来源标准确认 |
 | `PER-HBLC-ORD-202606-0001` | `PPC-HBLC-ORD-202606-0001` | `BAC-HBLC-ORD-202606-0001` | 销售责任方、渠道方、受邀合作单位成员 | 线索来源摘要、客户匿名编号、需求时间、责任主体候选 | 客户实名、未授权合同原文、正式收入声明 | 到账前不得确认正式产值积分或收益分配 | 待填线索提交入口和权限说明 | 等待订单线索脱敏模板确认 |
 
 ## 9. 证据清单
@@ -105,7 +105,7 @@ superseded_by: []
 2. 脱敏摘要和权限说明。
 3. KDS 11 池挂接关系。
 4. 增强账本挂接关系。
-5. WAES 规则记录或规则内记录说明。
+5. WAME 规则记录或规则内记录说明。
 6. 人工确认记录。
 7. 需要委员会时的备案或裁决记录。
 8. LOOP 轮次证据与回滚说明。
@@ -162,7 +162,7 @@ superseded_by: []
 4. 把自购 AI 额度纳入统一收益池、悬赏池或再分配池。
 5. 未经确认发布悬赏、冻结资源、结算积分或分配收益。
 6. 未经委员会备案或裁决处理重大争议。
-7. 未经授权写入真实 KDS API、WAES 放行或业务系统主账。
+7. 未经授权写入真实 KDS API、WAME 放行或业务系统主账。
 8. 未经人工确认发布 Brain 页面或升级 SOP 生效。
 9. 将本文档或本地镜像写成 `accepted` 或 `integrated` 完成。
 
@@ -174,7 +174,7 @@ superseded_by: []
 4. 有实际收入的建议才可进入产值类正式贡献；无收入只能进入知识或潜在产值候选。
 5. 合作单位自购 AI 额度先自用，不进入统一收益池或悬赏资源池。
 6. 一般违规可酌情溯源扣除，重大违规按事实比例或全部扣除，具体由委员会机制处理。
-7. AI 只产生候选事实、候选 SOP、候选悬赏和候选写回建议，不替代人工确认、WAES 规则、委员会裁决或业务主账。
+7. AI 只产生候选事实、候选 SOP、候选悬赏和候选写回建议，不替代人工确认、WAME 规则、委员会裁决或业务主账。
 
 ## 13. 完成定义
 

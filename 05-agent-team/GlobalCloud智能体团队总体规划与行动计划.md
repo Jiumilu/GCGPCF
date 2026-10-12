@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-FE641179EC
 title: GlobalCloud 智能体团队总体规划与行动计划
 project: XiaoC
-related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, XiaoC, XGD, GPCF]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, XiaoC, XGD, GPCF, Studio]
 domain: agent-team
 status: controlled
 version: v1.0

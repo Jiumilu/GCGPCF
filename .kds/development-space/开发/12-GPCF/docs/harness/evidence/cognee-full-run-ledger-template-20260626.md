@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-41D9B30C5E
 title: Cognee 全量运行账本模板 2026-06-26
 project: GPCF
-related_projects: [GPCF, WAES]
+related_projects: [GPCF, WAME]
 domain: docs
 status: controlled
 version: v1.0

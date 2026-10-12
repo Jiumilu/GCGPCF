@@ -2,7 +2,7 @@
 doc_id: GPCF-LOOP-OPERATIONAL-GATE-TRIAGE-001
 title: Loop Round GPCF-LOOP-OPERATIONAL-GATE-TRIAGE-001
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0

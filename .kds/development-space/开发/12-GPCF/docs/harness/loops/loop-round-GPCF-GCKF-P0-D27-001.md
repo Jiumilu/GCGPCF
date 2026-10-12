@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-4F5857B240
 title: GC-Knowledge Fabric P0-D27 正式 evidence 批准预检 dry-run LOOP 证据
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0

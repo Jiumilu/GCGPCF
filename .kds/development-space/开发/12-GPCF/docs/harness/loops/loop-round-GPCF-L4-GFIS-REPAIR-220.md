@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-D93CE7B7E6
 title: Loop Round — GPCF-L4-GFIS-REPAIR-220
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -31,7 +31,7 @@ superseded_by: []
 
 ## 本轮目标
 
-同步 GFIS `GFIS-RUNTIME-SOP-E2E-210`：在 209 轮确认目标路径仍无真实 source-record 后，把该事实转成责任方重提交升级队列。该轮不表示外部通知已真实发送，不释放 hold，不进入 dispatch confirmation、runtime primary key、review queue、runtime intake、WAES review 或 verified artifact。
+同步 GFIS `GFIS-RUNTIME-SOP-E2E-210`：在 209 轮确认目标路径仍无真实 source-record 后，把该事实转成责任方重提交升级队列。该轮不表示外部通知已真实发送，不释放 hold，不进入 dispatch confirmation、runtime primary key、review queue、runtime intake、WAME review 或 verified artifact。
 
 ## 输入
 
@@ -67,7 +67,7 @@ superseded_by: []
 | runtime_primary_key_missing | 1 |
 | review_queue | 0 |
 | runtime_intake | 0 |
-| waes_review | 0 |
+| wame_review | 0 |
 | verified | 0 |
 | runtime_sop_e2e | repair_required |
 
@@ -91,7 +91,7 @@ superseded_by: []
 - 本轮不表示已收到客户订单原件、平台订单回执或责任方响应。
 - 本轮不表示存在有效 source-of-record。
 - 本轮不释放 source-record open hold。
-- 本轮不创建 dispatch confirmation、KDS write receipt、WAES confirmation、runtime primary key、review queue、runtime intake 或 verified artifact。
+- 本轮不创建 dispatch confirmation、KDS write receipt、WAME confirmation、runtime primary key、review queue、runtime intake 或 verified artifact。
 - 本轮不执行 Git push、生产写入、真实外部 API 写入、数据库迁移、权限变更、部署或 accepted/integrated 状态升级。
 
 ## 真实性计数

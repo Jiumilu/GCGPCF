@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-3A5C57AC3E
 title: GlobalCloud PVAOS Loop State
 project: PVAOS
-related_projects: [GPC, PVAOS, WAES, GPCF]
+related_projects: [GPC, PVAOS, WAME, GPCF]
 domain: docs
 status: controlled
 version: v1.0

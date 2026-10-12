@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-E17EF2D241
 title: Loop Round - CodeGraph watchlist 授权包
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, Brain, GPCF, Studio]
+related_projects: [GFIS, GPC, WAME, KDS, Brain, GPCF, Studio]
 domain: docs
 status: controlled
 version: v1.0

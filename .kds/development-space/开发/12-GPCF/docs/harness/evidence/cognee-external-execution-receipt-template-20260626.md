@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-3A8D1D4E72
 title: Cognee 外部执行回执正式模板 2026-06-26
 project: GPCF
-related_projects: [GPCF, WAES]
+related_projects: [GPCF, WAME]
 domain: docs
 status: controlled
 version: v1.0
@@ -33,7 +33,7 @@ superseded_by: []
 | `execution_scope` | `cognee_p4_external_execution_validation_only` | 固定范围 |
 | `execution_target` | `cognee_self_hosted_validation_gateway_staging` | 与 intake 保持一致 |
 | `execution_owner` | `lujunxiang` | 与 intake 保持一致 |
-| `authorized_by` | `lujunxiang / WAES Duty Reviewer` | 来源于 LIVE-002 签核 |
+| `authorized_by` | `lujunxiang / WAME Duty Reviewer` | 来源于 LIVE-002 签核 |
 | `authorized_at` | `2026-06-26T10:15:00+08:00` | 来源于签核完成时间 |
 | `executed_at` | `REQUIRED_REAL_TIMESTAMP` | 真实执行完成时间 |
 | `record_count` | `5` | 当前最小验证批次 |
@@ -60,7 +60,7 @@ superseded_by: []
 |---|---|
 | `production_write` | `false_until_independent_production_receipt_exists` |
 | `accepted` | `false_until_harness_acceptance` |
-| `integrated` | `false_until_waes_integration_decision` |
+| `integrated` | `false_until_wame_integration_decision` |
 | `production_ready` | `false_until_full_run_gate_closure` |
 
 ## 5. 非声明

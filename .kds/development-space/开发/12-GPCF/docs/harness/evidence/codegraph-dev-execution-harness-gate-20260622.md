@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-D2709494C0
 title: CodeGraph 业务开发执行 Harness 门禁证据
 project: GPCF
-related_projects: [GPC, WAES, GPCF]
+related_projects: [GPC, WAME, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -42,7 +42,7 @@ Harness/Loop gate 必须检查未来业务开发 evidence 是否包含：
 - `changed_files` 超出 `files_allowed_to_change`：blocked。
 - `accepted`、`integrated`、`production_ready` 为 true：blocked。
 - `production_write` 或 `external_api_write` 为 true：blocked。
-- 声明 CodeGraph 替代 WAES/Harness/人工验收裁决：blocked。
+- 声明 CodeGraph 替代 WAME/Harness/人工验收裁决：blocked。
 
 ## Dry-run 结果
 
@@ -54,7 +54,7 @@ negative_block_reason=empty_affected_tests_without_fallback_reason
 
 ## 边界
 
-本轮不代表业务完成，不代表 WAES 通过，不代表 Harness 最终验收，不执行提交、推送、部署、生产写入或外部 API 写入。
+本轮不代表业务完成，不代表 WAME 通过，不代表 Harness 最终验收，不执行提交、推送、部署、生产写入或外部 API 写入。
 
 ## 下一轮输入
 

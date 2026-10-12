@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-HEADROOM-LCX-COMPLETION-AUDIT-001
 title: "Loop Round: GPCF-HEADROOM-LCX-COMPLETION-AUDIT-001"
 project: GPCF
-related_projects: [GPC, WAES, GPCF]
+related_projects: [GPC, WAME, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -52,7 +52,7 @@ Headroom 图谱已完成受控收口，但 completion audit 仍然显示真实�
 
 ## 下一轮
 
-等待 WAES/Harness 对真实测量授权窗口和 admission decision 做出新的裁决。
+等待 WAME/Harness 对真实测量授权窗口和 admission decision 做出新的裁决。
 
 ## 审计快照
 

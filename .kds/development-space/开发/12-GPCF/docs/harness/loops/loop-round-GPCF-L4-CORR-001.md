@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-F03D128E75
 title: GPCF-L4-CORR-001 Loop Self Correction
 project: GPCF
-related_projects: [GFIS, GPC, WAES, GPCF]
+related_projects: [GFIS, GPC, WAME, GPCF]
 domain: docs
 status: controlled
 version: v1.0

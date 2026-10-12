@@ -1,12 +1,12 @@
 ---
 doc_id: GPCF-DOC-0A2D9C6B81
 title: LOOP Multi-Agent Execution Policy
-project: WAES
-related_projects: [GFIS, WAES, KDS]
+project: WAME
+related_projects: [GFIS, WAME, KDS]
 domain: governance
 status: controlled
 version: v1.0
-owner: WAES
+owner: WAME
 kds_space: 开发
 kds_path: 开发/91-治理与验收/02-governance/loop/LOOP_MULTI_AGENT_EXECUTION_POLICY.md
 source_path: 02-governance/loop/LOOP_MULTI_AGENT_EXECUTION_POLICY.md
@@ -18,7 +18,7 @@ superseded_by: []
 
 # LOOP Multi-Agent Execution Policy
 
-本文件登记当前 Codex 与 GlobalCloud LOOP 工程体系中的默认多智能体/团队执行方案。它只定义执行面选择、边界和证据要求，不替代 `LOOP_CONTROL_BOARD.md`、`LOOP_AUTONOMY_POLICY.md`、OpsX Full Cycle、Harness Governance、WAES 裁决或 KDS TOKEN 安全边界。
+本文件登记当前 Codex 与 GlobalCloud LOOP 工程体系中的默认多智能体/团队执行方案。它只定义执行面选择、边界和证据要求，不替代 `LOOP_CONTROL_BOARD.md`、`LOOP_AUTONOMY_POLICY.md`、OpsX Full Cycle、Harness Governance、WAME 裁决或 KDS TOKEN 安全边界。
 
 ## 默认分层
 
@@ -39,7 +39,7 @@ superseded_by: []
 - `explorer` 只做代码、文档、门禁、风险、依赖的只读调查。
 - `worker` 只在写入范围清晰时使用，必须声明负责文件或模块，不得与其他 worker 共享写入边界。
 - 同轮默认最多 3 个并行 agent；单 agent 最多 12 个文件、30 分钟、1 次重试。
-- 跨项目、跨仓库、真实外部 API、生产配置、KDS/WAES/GFIS 真实写入、部署、推送、状态提升必须另行授权。
+- 跨项目、跨仓库、真实外部 API、生产配置、KDS/WAME/GFIS 真实写入、部署、推送、状态提升必须另行授权。
 - `LOOP_CONTROL_BOARD.md`、`09-status/gpcf-project-status-matrix.md`、主 evidence 和 Governance Summary 只能由 Orchestrator 修改。
 - 子智能体只能提交 design note、delivery note、局部 validator 结果和局部 dry-run 结果，不得直接修改状态矩阵、Control Board 或主 evidence。
 
@@ -89,7 +89,7 @@ Contract Agent
 Runtime Intake Agent
 Primary Key / Source Validation Agent
 Review Queue Agent
-WAES Candidate / Artifact Agent
+WAME Candidate / Artifact Agent
 Boundary Validator Agent
 ```
 

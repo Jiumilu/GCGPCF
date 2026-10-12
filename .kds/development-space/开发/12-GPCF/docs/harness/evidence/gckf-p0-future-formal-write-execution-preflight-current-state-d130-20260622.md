@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-GCKFP0FUTUREFORMALWRITEEXECUTIONPREFLIGHTCURRENTSTATED13020260622
 title: GCKF P0 未来正式写入执行预检当前态证据 D130
 project: GPCF
-related_projects: [GPCF, WAES]
+related_projects: [GPCF, WAME]
 domain: docs
 status: controlled
 version: v1.0

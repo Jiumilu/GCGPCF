@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-GENERATED-OUTPUT-DIST-ISOLATION-20260627
 title: GlobalCloud 项目群 SOP/PKC generated-output-dist 提交前隔离重放判定
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, PKC, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, PKC, GPCF]
 domain: docs
 status: controlled
 version: v1.0

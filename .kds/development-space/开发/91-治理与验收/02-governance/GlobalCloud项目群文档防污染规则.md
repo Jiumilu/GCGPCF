@@ -1,12 +1,12 @@
 ---
 doc_id: GPCF-DOC-87DD7D79CD
 title: GlobalCloud 项目群文档防污染规则
-project: WAES
-related_projects: [GFIS, GPC, WAES, KDS, Brain, XiaoC, XGD, XiaoG, GPCF, Studio]
+project: WAME
+related_projects: [GFIS, GPC, WAME, KDS, Brain, XiaoC, XGD, XiaoG, GPCF, Studio]
 domain: governance
 status: controlled
 version: v1.0
-owner: WAES
+owner: WAME
 kds_space: 开发
 kds_path: 开发/91-治理与验收/02-governance/GlobalCloud项目群文档防污染规则.md
 source_path: 02-governance/GlobalCloud项目群文档防污染规则.md
@@ -61,7 +61,7 @@ superseded_by: []
 | 错误写法 | 正确边界 |
 |---|---|
 | Brain 替代 KDS 主存 | KDS 是主存，Brain 是编制与引擎/UI 层 |
-| WAES 执行业务审批 | WAES 做治理门控，不承办业务事务 |
+| WAME 执行业务审批 | WAME 做治理门控，不承办业务事务 |
 | GPC 写工厂执行事实 | GFIS 是工厂事实主账 |
 | AI 直接写业务主账 | AI 只能给建议，必须经授权与主责系统处理 |
 

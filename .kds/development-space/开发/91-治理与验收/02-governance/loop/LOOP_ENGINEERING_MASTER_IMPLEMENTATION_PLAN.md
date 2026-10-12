@@ -1,12 +1,12 @@
 ---
 doc_id: GPCF-DOC-6E7DCE4A91
 title: LOOP 工程体系整体实施规范
-project: WAES
-related_projects: [AAAS, Brain, WAS, XiaoC, WAES, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP]
+project: WAME
+related_projects: [AAAS, Brain, WAS, XiaoC, WAME, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP]
 domain: governance
 status: controlled
 version: v1.0
-owner: WAES
+owner: WAME
 kds_space: 开发
 kds_path: 开发/91-治理与验收/02-governance/loop/LOOP_ENGINEERING_MASTER_IMPLEMENTATION_PLAN.md
 source_path: 02-governance/loop/LOOP_ENGINEERING_MASTER_IMPLEMENTATION_PLAN.md
@@ -45,7 +45,7 @@ LOOP 工程体系的基线目标是：把 GlobalCloud 项目群的需求、实�
 
 | 维度 | 基线要求 |
 |---|---|
-| 事实真实 | 业务完成只能来自真实 source-of-record、runtime primary key、review queue、runtime intake、WAES review、verified artifact 和人工确认 |
+| 事实真实 | 业务完成只能来自真实 source-of-record、runtime primary key、review queue、runtime intake、WAME review、verified artifact 和人工确认 |
 | 工程可执行 | 每轮必须形成输入、判断、动作、输出、检查、反馈和下一轮候选 |
 | 证据可回放 | 每个关键结论必须能回指文档、validator 输出、evidence JSON/Markdown 或 Git diff |
 | 状态可控 | 没有 evidence 时不得升级状态；文档债务存在时状态最高为 `partial` |
@@ -65,8 +65,8 @@ LOOP 必须把 Delivery Loop 与 Governance Loop 的职责分开：
 
 | Loop | 默认服务对象 | 可推进事项 | 不得释放 |
 |---|---|---|---|
-| Delivery Loop | `development_lane` | 本地开发、fixture E2E、controlled sample E2E、dry-run、contract validator、runtime intake development、review queue development、WAES review candidate development、verified artifact candidate development、`development_ready_for_real_business_validation` | 真实业务验证、accepted、integrated、production_ready、customer_accepted |
-| Governance Loop | `real_business_validation_lane`、`acceptance_lane`、`production_lane` | 真实 source-of-record 验证、owner/WAES/客户验收裁决、生产就绪、交付和状态提升 | 未经人工确认的状态升级 |
+| Delivery Loop | `development_lane` | 本地开发、fixture E2E、controlled sample E2E、dry-run、contract validator、runtime intake development、review queue development、WAME review candidate development、verified artifact candidate development、`development_ready_for_real_business_validation` | 真实业务验证、accepted、integrated、production_ready、customer_accepted |
+| Governance Loop | `real_business_validation_lane`、`acceptance_lane`、`production_lane` | 真实 source-of-record 验证、owner/WAME/客户验收裁决、生产就绪、交付和状态提升 | 未经人工确认的状态升级 |
 
 P0/P1/P2/P3 门禁必须区分开发阻断与验证阻断。`real_source_records = 0` 可以阻断真实业务验证、生产动作、客户交付声明和状态提升；不得阻断本地开发、fixture E2E、dry-run、contract validator 或开发完成候选。
 
@@ -108,7 +108,7 @@ GFIS-RUNTIME-SOP-E2E-DEV-COMPLETION-001
 |---|---|---|
 | LOOP | 编排微循环、中循环、大循环，管理状态上限和下一步 | 不替代业务事实、不替代人工确认 |
 | KDS | 受控知识事实主存与镜像 | 不替代 GFIS 运行层事实 |
-| WAES | 授权、风险、门禁、审查和最终裁决 | 不替代业务主账 |
+| WAME | 授权、风险、门禁、审查和最终裁决 | 不替代业务主账 |
 | Harness | 执行、证据、回放、指标和验收准备 | 不替代原始凭证 |
 | GFIS | 工厂运行层事实与 SOP E2E 主体 | 不被 Demo、fixture、KDS candidate 或 Loop 文档替代 |
 | GPCF | 项目群总控、文档治理、状态矩阵和跨项目 evidence 汇聚 | 不直接创建业务完成事实 |
@@ -179,7 +179,7 @@ LOOP 工程体系的阶段性目标不是纯文档治理型 LOOP，而是工程�
 | 总体业务闭环 | 端到端绿色供应链闭环 |
 | 第一落地点 | GFIS 运行层 SOP E2E |
 | 输入分层 | `test_data_lane`、`candidate_lane`、`real_business_lane` |
-| 候选转真实 | 业务 owner + WAES + Harness 组合放行 |
+| 候选转真实 | 业务 owner + WAME + Harness 组合放行 |
 | 任务包完成定义 | 文档 + validator + evidence + 状态同步 + 运行层事实或明确阻塞 |
 | 冲突裁决 | 分层优先：项目本地运行证据优先判运行事实，GPCF 判项目群状态，不一致则 `review_required` 或 `repair_required` |
 | 代码权限 | 受控工程修改；不得默认触碰生产写入、外部 API 写入、schema、部署、权限、commit 或 push |
@@ -277,7 +277,7 @@ LOOP 工程实施方案必须纳入技能、工具和方法。能力不再只作
 界面工程/UI/工作台专项能力必须纳入 LOOP 能力池并受同等级门禁约束：
 
 - `@product-design`
-- `WAES` 母框架复用
+- `WAME` 母框架复用
 - `ui-ux-pro-max`
 - `Figma`
 - `Storybook`
@@ -293,7 +293,7 @@ LOOP 工程实施方案必须纳入技能、工具和方法。能力不再只作
 - `Prompt profile`
 - `Design options`
 - `Selected option`
-- `WAES baseline reuse`
+- `WAME baseline reuse`
 - `UI gate status`
 
 UI 轮次还必须遵守 [LOOP UI Product First Control](./LOOP_UI_PRODUCT_FIRST_CONTROL.md)：
@@ -335,7 +335,7 @@ delivery_efficiency_gate
 | v1.2 | 项目群任务队列 | 建立跨项目调度、任务包队列和 `candidate_lane` 可审查机制 | 规划中 |
 | v1.3 | 交付效率控制 | 把高合规低进展、过细切片、治理证据吞没产品进展升级为项目群级 Delivery Loop 门禁 | 当前补强 |
 | v2.0 | 工程执行型 LOOP | 形成工程执行主进程，GFIS 运行层 SOP E2E 进入真实业务 lane 候选 | 阻塞中 |
-| v2.1 | 跨项目联动执行 | GPC、GFIS、KDS、WAES 形成可回放联动，candidate 到 real 的放行可验证 | 未启动 |
+| v2.1 | 跨项目联动执行 | GPC、GFIS、KDS、WAME 形成可回放联动，candidate 到 real 的放行可验证 | 未启动 |
 | v3.0 | 受控自治运行 | 具备可回滚、可审计、可授权的受控自治，端到端绿色供应链闭环进入候选 | 未启动 |
 | v4.0 | 生产级准入评估 | 形成生产级准入评估材料，但不自动上线、不自动 accepted 或 integrated | 未启动 |
 
@@ -403,7 +403,7 @@ delivery_efficiency_gate
 - runtime primary key ready > 0。
 - review queue > 0。
 - runtime intake > 0。
-- WAES review > 0。
+- WAME review > 0。
 - verified artifact > 0。
 - 人工确认和回放证据存在。
 
@@ -464,7 +464,7 @@ delivery_efficiency_gate
 ## 13. 非声明边界
 
 - 本文不创建 source-of-record。
-- 本文不创建 runtime primary key、review queue、runtime intake、WAES review 或 verified artifact。
+- 本文不创建 runtime primary key、review queue、runtime intake、WAME review 或 verified artifact。
 - 本文不证明 UAT、生产、客户满意、财务、accepted 或 integrated 完成。
 - 本文不授权 production write、external API write、schema sync、bench migrate、deployment、permission change、commit 或 push。
 - 本文不因登记技能、工具或方法而授权写入、上线、外部 API 调用、自动提交、自动推送或自动验收。

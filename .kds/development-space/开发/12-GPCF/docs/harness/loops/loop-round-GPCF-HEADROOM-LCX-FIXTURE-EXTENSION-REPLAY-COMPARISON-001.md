@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-HEADROOM-LCX-FIXTURE-EXTENSION-REPLAY-COMPARISON-20260622
 title: Loop Round GPCF Headroom LCX Fixture Extension Replay Comparison 001
 project: GPCF
-related_projects: [GPC, WAES, GPCF]
+related_projects: [GPC, WAME, GPCF]
 domain: docs
 status: controlled
 version: v1.0

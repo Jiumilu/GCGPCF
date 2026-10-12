@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-31F21E6BD5
 title: GlobalCloud Loop Git Version Gates
 project: GPCF
-related_projects: [GPCF, WAES]
+related_projects: [GPCF, WAME]
 domain: operational-skill
 status: operational_controlled
 version: v1.0
@@ -57,7 +57,7 @@ python3 .codex/skills/globalcloud-project-group-git-clean/scripts/project_group_
 - `GlobalCloud Brain`
 - `WAS世界资产体系`
 - `GlobalCloud XiaoC`
-- `GlobalCloud WAES`
+- `GlobalCloud WAME`
 - `GlobalCloud GPC`
 - `GlobalCloud Studio`
 - `GlobalCoud GPCF`

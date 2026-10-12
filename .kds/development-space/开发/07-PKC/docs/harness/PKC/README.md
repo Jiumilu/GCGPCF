@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-CE5FF86E87
 title: PKC
 project: PKC
-related_projects: [GPC, WAES, KDS, Brain, PKC, GPCF]
+related_projects: [GPC, WAME, KDS, Brain, PKC, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/07-PKC/docs/harness/PKC/README.md
 source_path: docs/harness/PKC/README.md
 sync_direction: bidirectional
-last_reviewed: 2026-10-11
+last_reviewed: 2026-10-12
 supersedes: []
 superseded_by: []
 ---

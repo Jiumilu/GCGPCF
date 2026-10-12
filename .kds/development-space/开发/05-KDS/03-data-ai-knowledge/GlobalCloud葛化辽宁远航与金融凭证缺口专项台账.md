@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-EE793CBD55
 title: GlobalCloud 葛化辽宁远航与金融凭证缺口专项台账
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: data-ai-knowledge
 status: controlled
 version: v1.0
@@ -65,7 +65,7 @@ superseded_by: []
 | `targetFactory` | 是 | 葛化目标工厂或未来复制工厂 |
 | `oemCarrier` | 条件必填 | 现代精工或其他预运营期承接方 |
 | `responsibilitySplit` | 是 | 目标工厂负责未来承接和建设运营准备；OEM 承接方负责当前生产、质量、发货等事实责任 |
-| `waesGateRef` | 是 | WAES 规则记录、阻断或人工确认候选 |
+| `wameGateRef` | 是 | WAME 规则记录、阻断或人工确认候选 |
 | `gfisActionMode` | 是 | `no_write` / `candidate_only` / `manual_entry_after_confirmation` / `blocked` |
 | `kdsPoolRefs` | 是 | 订单池、物流池、资金池、数据池、场景池 |
 | `forbiddenClaims` | 是 | 不得声明客户确认已取得、POD 已取得、到账已确认、GFIS verified artifact 已形成 |
@@ -103,7 +103,7 @@ superseded_by: []
 | `sourceHashOrOfflineSeal` | 条件必填 | hash、封存编号或线下保管索引 |
 | `storageLocation` | 是 | 只写受控位置或封存索引，不写敏感原文 |
 | `humanReviewer` | 是 | 财务责任人或授权复核人，未确认时填待确认 |
-| `waesGateRef` | 是 | governance_blocked / manual_confirmation_required / committee_review_required |
+| `wameGateRef` | 是 | governance_blocked / manual_confirmation_required / committee_review_required |
 | `kdsPoolRefs` | 是 | 资金池、订单池、数据池、争议池 |
 | `forbiddenUses` | 是 | 不得进入开放问答，不得确认到账，不得作为收益分配依据 |
 
@@ -113,13 +113,13 @@ superseded_by: []
 index_requested
   -> metadata_received
   -> redaction_checked
-  -> waes_rule_recorded_or_blocked
+  -> wame_rule_recorded_or_blocked
   -> human_review_pending
   -> committee_review_required(optional)
   -> index_usable_for_candidate
 ```
 
-任何一步缺少保管责任、可见范围、脱敏状态或 WAES 门禁时，状态保持 `governance_blocked`，不得进入 RAG 开放问答、收益分配或正式产值积分。
+任何一步缺少保管责任、可见范围、脱敏状态或 WAME 门禁时，状态保持 `governance_blocked`，不得进入 RAG 开放问答、收益分配或正式产值积分。
 
 ## 8. DSR 与 RAG 准入
 
@@ -136,7 +136,7 @@ DSR-L3 不进入共享知识库正文，不进入普通 AI 问答。AI 只能回
 | bountyId | 关联缺口 | 发布前条件 | 可奖励类型 | 当前状态 |
 |---|---|---|---|---|
 | `KGB-GH-D050-LY-001` | `KGR-GH-D050-LY-001` | 资源冻结、验收标准、可见范围、争议路径、委员会备案 | 知识积分、AI 服务权益、潜在产值贡献候选 | `bounty_candidate_not_published` |
-| `KGB-GH-D051-FIN-001` | `KGR-GH-D050-FIN-001` | 财务保管责任、脱敏模板、可见范围、WAES 门禁、委员会备案 | 治理贡献、知识贡献 | `bounty_candidate_not_published` |
+| `KGB-GH-D051-FIN-001` | `KGR-GH-D050-FIN-001` | 财务保管责任、脱敏模板、可见范围、WAME 门禁、委员会备案 | 治理贡献、知识贡献 | `bounty_candidate_not_published` |
 | `KGB-GH-D051-HUMAN-001` | `KGR-GH-D051-HUMAN-001` | 人工评测角色、评分表、签认格式 | 治理贡献 | `bounty_candidate_not_published` |
 
 悬赏候选不得自动发布。发布必须满足资源冻结、验收条件、争议处理和委员会备案。没有实际收入时不得列入正式产值贡献；到账后才可进入正式收益池参考。
@@ -145,7 +145,7 @@ DSR-L3 不进入共享知识库正文，不进入普通 AI 问答。AI 只能回
 
 | sopCandidateId | 来源 | SOP 阶段 | AI 可建议 | 不得自动执行 |
 |---|---|---|---|---|
-| `AIS-GH-SOP-D051-LY-001` | `KSP-GH-LY-D051-001` | 辽宁远航补证链路 | 责任方提交包、客户确认补证、GFIS 候选隔离、WAES 阻断说明 | 不创建正式订单、不放行 runtime intake、不确认 verified artifact |
+| `AIS-GH-SOP-D051-LY-001` | `KSP-GH-LY-D051-001` | 辽宁远航补证链路 | 责任方提交包、客户确认补证、GFIS 候选隔离、WAME 阻断说明 | 不创建正式订单、不放行 runtime intake、不确认 verified artifact |
 | `AIS-GH-SOP-D051-FIN-001` | `FEI-GH-D051-001` | 金融凭证脱敏索引 | 脱敏索引字段、保管责任、可见范围、问答边界 | 不输出敏感原文、不确认到账、不触发收益分配 |
 | `AIS-GH-SOP-D051-HUMAN-001` | `KGR-GH-D051-HUMAN-001` | 人工评测签认 | 评分表、红线、退回原因、复测条件 | 不替代人工签认或委员会裁决 |
 
@@ -159,20 +159,20 @@ DSR-L3 不进入共享知识库正文，不进入普通 AI 问答。AI 只能回
 
 积分池、收益池、额度池、悬赏池、争议池、潜在产值池、SOP 账本和贡献账本统一纳入 KDS 底座 11 池的事实基础数据体系，但不替代底座 11 池。增强账本必须挂接到底座池后才能作为收益、系统、业务分配参考。
 
-## 12. WAES 与人工确认
+## 12. WAME 与人工确认
 
-| 场景 | WAES 规则口径 | 人工或委员会口径 |
+| 场景 | WAME 规则口径 | 人工或委员会口径 |
 |---|---|---|
 | 规则以内的字段缺口 | 记录 `governance_recorded` 或 `returned_for_evidence` | 资料责任人补证 |
 | 缺客户确认或原始凭证 | 记录 `governance_blocked` | 责任方提交原始凭证或等效确认 |
 | 金融凭证 DSR-L3 | 记录 `manual_confirmation_required` 或 `committee_review_required` | 财务责任人确认保管、脱敏和可见范围 |
-| 潜在产值转正式产值 | WAES 记录规则和证据状态 | 到账证据与委员会或授权人工确认 |
-| 争议或重大违规 | WAES 触发争议规则 | 委员会多数决并备案 |
+| 潜在产值转正式产值 | WAME 记录规则和证据状态 | 到账证据与委员会或授权人工确认 |
+| 争议或重大违规 | WAME 触发争议规则 | 委员会多数决并备案 |
 
 ## 13. 本轮结论
 
 1. 辽宁远航报价 PDF 可作为报价来源锚点，但不能替代客户确认、采购订单、合同、POD 或 GFIS live proof。
-2. 辽宁远航运行层仍缺客户确认和 62 个责任方凭证槽位响应，不得进入 runtime intake、WAES review、verified 或 accepted。
+2. 辽宁远航运行层仍缺客户确认和 62 个责任方凭证槽位响应，不得进入 runtime intake、WAME review、verified 或 accepted。
 3. 金融凭证必须先形成 `FEI-GH-D051-001` 类型脱敏索引，默认 DSR-L3，默认不进入普通问答。
 4. 本轮新增的悬赏、积分、贡献、SOP 和写回均为候选，不产生确认积分或收益分配。
 5. 下一步应进入人工填报包和确认队列，而不是系统写入或状态升级。
@@ -184,7 +184,7 @@ DSR-L3 不进入共享知识库正文，不进入普通 AI 问答。AI 只能回
 1. 辽宁远航客户确认、采购订单、合同、POD、质量或到账已经取得。
 2. 金融凭证可以开放问答、共享正文、确认到账或进入收益分配。
 3. 葛化 GFIS AI 助手三件套已经真实上线或人工评测通过。
-4. GFIS、WAES、KDS API、GPC、PVAOS、Finance 或生产系统已经写入。
+4. GFIS、WAME、KDS API、GPC、PVAOS、Finance 或生产系统已经写入。
 5. 知识缺口悬赏已经发布，积分、额度、收益或潜在产值已经确认。
 6. 本专题可以进入 `accepted`、`complete` 或 `integrated`。
 
@@ -193,4 +193,4 @@ DSR-L3 不进入共享知识库正文，不进入普通 AI 问答。AI 只能回
 建议 `GPCF-KDS-DKS-052` 进入“葛化辽宁远航补证请求包与金融凭证脱敏索引空白填报包”，形成两个可交给责任方填报的模板：
 
 1. `KSP-GH-LY-D052-001`：辽宁远航客户确认、采购订单/合同、POD、质量、责任方提交包。
-2. `FEI-GH-D052-001`：金融凭证 DSR-L3 脱敏索引、保管责任、可见范围和 WAES 门禁填报表。
+2. `FEI-GH-D052-001`：金融凭证 DSR-L3 脱敏索引、保管责任、可见范围和 WAME 门禁填报表。

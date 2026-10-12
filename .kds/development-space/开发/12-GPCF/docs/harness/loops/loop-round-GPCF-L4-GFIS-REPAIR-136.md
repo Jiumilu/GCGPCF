@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-81F6C9A00B
 title: Loop Round GPCF-L4-GFIS-REPAIR-136
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, XGD, GPCF, Studio]
+related_projects: [GFIS, GPC, WAME, KDS, XGD, GPCF, Studio]
 domain: docs
 status: controlled
 version: v1.0
@@ -43,11 +43,11 @@ superseded_by: []
 
 ## GFIS 输出
 
-`liaoning_yuanhang_customer_commercial_proof_hold_release_action_package=pass packages=3 open=3 action_items=18 target_files=12 manual_authorizations_required=3 submission_files_found=0 authorization_envelope_files_found=0 receiving_checklist_files_found=0 handoff_acknowledgment_files_found=0 structure_valid=0 manual_authorized=0 release_allowed=0 review_queue=0 runtime_ready=0 waes_review=0 verified=0 state=customer_commercial_proof_hold_release_actions_open runtime_sop_e2e=repair_required`
+`liaoning_yuanhang_customer_commercial_proof_hold_release_action_package=pass packages=3 open=3 action_items=18 target_files=12 manual_authorizations_required=3 submission_files_found=0 authorization_envelope_files_found=0 receiving_checklist_files_found=0 handoff_acknowledgment_files_found=0 structure_valid=0 manual_authorized=0 release_allowed=0 review_queue=0 runtime_ready=0 wame_review=0 verified=0 state=customer_commercial_proof_hold_release_actions_open runtime_sop_e2e=repair_required`
 
 GFIS 主 validator 新增输出：
 
-`runtime_liaoning_yuanhang_customer_commercial_proof_hold_release_action_package=customer_commercial_proof_hold_release_actions_open:packages=3:open=3:action_items=18:target_files=12:manual_authorizations_required=3:submission_files_found=0:authorization_envelope_files_found=0:receiving_checklist_files_found=0:handoff_acknowledgment_files_found=0:structure_valid=0:manual_authorized=0:release_allowed=0:review_queue=0:runtime_ready=0:waes_review=0:verified=0`
+`runtime_liaoning_yuanhang_customer_commercial_proof_hold_release_action_package=customer_commercial_proof_hold_release_actions_open:packages=3:open=3:action_items=18:target_files=12:manual_authorizations_required=3:submission_files_found=0:authorization_envelope_files_found=0:receiving_checklist_files_found=0:handoff_acknowledgment_files_found=0:structure_valid=0:manual_authorized=0:release_allowed=0:review_queue=0:runtime_ready=0:wame_review=0:verified=0`
 
 ## GPCF 回写
 
@@ -70,8 +70,8 @@ GFIS 主 validator 新增输出：
 ## 边界
 
 - 未创建真实客户确认函、采购订单、合同、owner response、完整 authorization envelope、接收清单文件、handoff acknowledgment 或 manual authorization。
-- 未解除 hold、未创建 review queue、runtime intake、WAES review 或 verified artifact。
-- 未执行生产写入、真实外部 API 写入、真实 KDS/WAES 写入、数据库迁移、权限变更、部署、Git push 或 accepted/integrated。
+- 未解除 hold、未创建 review queue、runtime intake、WAME review 或 verified artifact。
+- 未执行生产写入、真实外部 API 写入、真实 KDS/WAME 写入、数据库迁移、权限变更、部署、Git push 或 accepted/integrated。
 - 未修改 ECS、阿里云、Caddy/Nginx、SSH 隧道、Docker/Compose、systemd/launchd 或任何运行时配置；Hermes 保持只读边界。
 
 ## 真实性计数
@@ -87,4 +87,4 @@ GFIS 主 validator 新增输出：
 
 ## 下一步
 
-`GFIS-RUNTIME-SOP-E2E-130`：等待业务责任方提交真实客户商业凭证文件及人工授权后，逐项执行 submission、authorization envelope、receiving checklist、handoff acknowledgment、结构有效和人工授权校验；仍无真实文件时 review/runtime/WAES 全部阻断。
+`GFIS-RUNTIME-SOP-E2E-130`：等待业务责任方提交真实客户商业凭证文件及人工授权后，逐项执行 submission、authorization envelope、receiving checklist、handoff acknowledgment、结构有效和人工授权校验；仍无真实文件时 review/runtime/WAME 全部阻断。

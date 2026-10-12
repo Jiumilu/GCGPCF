@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-342D34B205
 title: WAS Real Source Record Monitor 004 Evidence
 project: KDS
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio]
 domain: docs
 status: controlled
 version: v1.0
@@ -41,7 +41,7 @@ superseded_by: []
 | runtime_primary_key_ready | `0` |
 | review_queue | `0` |
 | runtime_intake | `0` |
-| waes_review | `0` |
+| wame_review | `0` |
 | verified | `0` |
 | accepted | `false` |
 | integrated | `false` |
@@ -49,7 +49,7 @@ superseded_by: []
 
 ## 项目群范围
 
-本轮继续覆盖整个 GlobalCloud 项目群：GFIS、GPC、PVAOS、WAES、KDS、Brain、PKC、XiaoC、XGD、XiaoG、MMC、GPCF、Studio、WAS。
+本轮继续覆盖整个 GlobalCloud 项目群：GFIS、GPC、PVAOS、WAME、KDS、Brain、PKC、XiaoC、XGD、XiaoG、MMC、GPCF、Studio、WAS。
 
 ## 负例覆盖
 
@@ -59,8 +59,8 @@ superseded_by: []
 
 ## 禁止升级
 
-本轮不创建 runtime primary key、review queue、runtime intake、WAES review 或 verified artifact；不得声明 accepted、integrated 或 production_ready。
+本轮不创建 runtime primary key、review queue、runtime intake、WAME review 或 verified artifact；不得声明 accepted、integrated 或 production_ready。
 
 ## 下一轮
 
-下一轮为 `GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-005`。只有真实 P4 输入和候选文件质量均通过，才允许进入后续 WAES gate input candidate。
+下一轮为 `GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-005`。只有真实 P4 输入和候选文件质量均通过，才允许进入后续 WAME gate input candidate。

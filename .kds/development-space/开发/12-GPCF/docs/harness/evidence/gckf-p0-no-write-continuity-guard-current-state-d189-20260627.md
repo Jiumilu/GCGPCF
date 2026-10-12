@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-GCKFP0NOWRITECONTINUITYD18920260627
 title: GCKF P0 No-write 连续性门禁当前态 D189
 project: GPCF
-related_projects: [GPCF, GFIS, GPC, WAES, KDS]
+related_projects: [GPCF, GFIS, GPC, WAME, KDS]
 domain: docs
 status: controlled
 version: v1.0
@@ -64,4 +64,4 @@ D189 现扫描 `fixtures/api`、`docs/harness/evidence` 与 `docs/harness/loops`
 
 ## 下一轮
 
-若收到真实 repair owner response、签署响应包、WAES review note 与人工确认，应新增 arrival scan refresh；未收到前保持 `no_write_continuity_guard_with_hold`。
+若收到真实 repair owner response、签署响应包、WAME review note 与人工确认，应新增 arrival scan refresh；未收到前保持 `no_write_continuity_guard_with_hold`。

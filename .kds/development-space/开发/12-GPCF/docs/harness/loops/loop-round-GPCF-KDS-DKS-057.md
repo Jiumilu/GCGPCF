@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-D7DE0A02C1
 title: LOOP Round GPCF-KDS-DKS-057 - 葛化 DKS-056 补证提醒发送授权包与回执字段模板
 project: GPCF
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, XiaoC, GPCF]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, XiaoC, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -102,7 +102,7 @@ superseded_by: []
 - 发送飞书、小即、邮件或其它外部通知；
 - 接收真实回执、客户确认、采购订单、合同、POD、质量、开票、到账或金融凭证；
 - 保存金融凭证原文、账户、金额明细、银行流水、合同全文或未授权截图；
-- GFIS、WAES、KDS API、GPC、PVAOS、Finance 或生产系统写入；
+- GFIS、WAME、KDS API、GPC、PVAOS、Finance 或生产系统写入；
 - 发布悬赏、冻结资源、确认积分、发放额度或分配收益；
 - 人工签认或委员会裁决；
 - 关闭 GFIS `real_business_lane=repair_required`；

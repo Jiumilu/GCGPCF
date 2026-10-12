@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-5D6D87B8C4
 title: GPCF CodeGraph Project Group Steady State Verify 004
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, Brain, GPCF, Studio]
+related_projects: [GFIS, GPC, WAME, KDS, Brain, GPCF, Studio]
 domain: docs
 status: controlled
 version: v1.0
@@ -30,7 +30,7 @@ superseded_by: []
 - 读取当前 14 仓 `codegraph status --json .`。
 - 读取 14 仓 `git status --short -- .codegraph`。
 - 复核 Brain 活动漂移、GFIS policy exception、Studio/WAS/GPCF 覆盖状态。
-- 复核 Loop、Harness、WAES、KDS/OKF 接入证据。
+- 复核 Loop、Harness、WAME、KDS/OKF 接入证据。
 - 生成 steady-state evidence 与 validator。
 
 ## 输出
@@ -45,7 +45,7 @@ superseded_by: []
 - `python3 tools/kds-sync/validate_codegraph_project_group_full_coverage.py`
 - `python3 tools/kds-sync/validate_codegraph_authorization_model.py`
 - `python3 tools/kds-sync/validate_codegraph_loop_schema.py`
-- `python3 tools/kds-sync/validate_codegraph_waes_gate_policy.py`
+- `python3 tools/kds-sync/validate_codegraph_wame_gate_policy.py`
 - `python3 tools/kds-sync/validate_codegraph_kds_candidate_policy.py`
 - `python3 tools/kds-sync/check_document_pollution.py`
 - `python3 tools/kds-sync/validate_kds_token.py`

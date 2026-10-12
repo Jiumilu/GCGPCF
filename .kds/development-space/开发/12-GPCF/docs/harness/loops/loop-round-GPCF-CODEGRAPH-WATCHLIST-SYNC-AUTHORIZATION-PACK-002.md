@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-005FDDA3DC
 title: GPCF CodeGraph Watchlist Sync Authorization Pack 002
 project: GPCF
-related_projects: [GFIS, GPC, WAES, Brain, GPCF, Studio]
+related_projects: [GFIS, GPC, WAME, Brain, GPCF, Studio]
 domain: docs
 status: controlled
 version: v1.0

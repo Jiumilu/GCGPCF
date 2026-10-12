@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-910C95E754
 title: LOOP Round GPCF KDS DKS-209
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -36,9 +36,9 @@ superseded_by: []
 - `scripts/gfis/validate_gfis_assistant_dks_209_routing_queue_notification_ack_escalation_digest_delivery_ack_escalation_sla_breach_review_preview.py`
 - `docs/gc-knowledge-fabric/gfis-assistant-dks-209-routing-queue-notification-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-preview-policy.md`
 
-## WAES / KWE / GFIS 边界
+## WAME / KWE / GFIS 边界
 
-- WAES：只保留门禁引用，不创建 gate result。
+- WAME：只保留门禁引用，不创建 gate result。
 - KWE：只保留候选 next step，不创建 work item、breach review、committee case 或 freeze request。
 - GFIS：只展示候选审查预览，不写回业务字段。
 - Harness：不生成正式 evidence，仅保留本地验证输出。

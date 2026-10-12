@@ -1,22 +1,22 @@
 ---
 doc_id: GPCF-DOC-CC30FEEA9C
-title: WAES Manifest 与 loop-state 补齐包
+title: WAME Manifest 与 loop-state 补齐包
 project: KDS
-related_projects: [GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF]
+related_projects: [GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF]
 domain: docs
 status: controlled
 version: v1.0
 owner: KDS
 kds_space: 开发
-kds_path: 开发/05-KDS/docs/harness/gpcf-waes-manifest-loopstate-pack-lr025.md
-source_path: docs/harness/gpcf-waes-manifest-loopstate-pack-lr025.md
+kds_path: 开发/05-KDS/docs/harness/gpcf-wame-manifest-loopstate-pack-lr025.md
+source_path: docs/harness/gpcf-wame-manifest-loopstate-pack-lr025.md
 sync_direction: bidirectional
 last_reviewed: 2026-06-24
 supersedes: []
 superseded_by: []
 ---
 
-# WAES Manifest 与 loop-state 补齐包
+# WAME Manifest 与 loop-state 补齐包
 
 ## Round
 
@@ -26,7 +26,7 @@ superseded_by: []
 | 模式 | Loop L3 托管冲刺模式 |
 | 本次 L3 计数 | 9/15 |
 | 当前状态上限 | `partial` |
-| 目标 | 为 WAES 治理控制塔补齐 Manifest 和 loop-state。 |
+| 目标 | 为 WAME 治理控制塔补齐 Manifest 和 loop-state。 |
 | 下一轮 | GPCF-CF-LR-026 |
 
 ## 项目准备度队列
@@ -40,7 +40,7 @@ superseded_by: []
 | MMC | MM | P1 | Manifest；loop-state；项目主线/架构边界；evidence；验收审计 | not_started_or_partial |
 | KDS | KD | P1 | loop-state；验收审计；KDS TOKEN 上线同步证据 | partial |
 | Brain | BR | P1 | loop-state；项目主线/架构边界；evidence；验收审计 | partial |
-| WAES | WA | P2 | Manifest；loop-state | partial |
+| WAME | WA | P2 | Manifest；loop-state | partial |
 | GPC | GP | P2 | Manifest；loop-state；一期蓝图验收证据 | partial |
 | XiaoC | XC | P2 | loop-state；UI 测试证据；Wrangler/模型路由证据 | partial |
 
@@ -62,7 +62,7 @@ superseded_by: []
 
 | 输出项 | 路径或状态 |
 |---|---|
-| 本轮受控文档 | `docs/harness/gpcf-waes-manifest-loopstate-pack-lr025.md` |
+| 本轮受控文档 | `docs/harness/gpcf-wame-manifest-loopstate-pack-lr025.md` |
 | Loop record | `docs/harness/loops/loop-round-GPCF-CF-LR-025.md` |
 | Evidence batch | `docs/harness/evidence/gpcf_l3_project_readiness_rounds_lr017_lr031.json` |
 | Validator | `tools/kds-sync/validate_gpcf_l3_project_readiness_rounds.py` |

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-429E306B5F
 title: ODF Phase 4 小批量准入试运行方案
 project: GPCF
-related_projects: [WAES, KDS, GPCF]
+related_projects: [WAME, KDS, GPCF]
 domain: status
 status: controlled
 version: v1.0

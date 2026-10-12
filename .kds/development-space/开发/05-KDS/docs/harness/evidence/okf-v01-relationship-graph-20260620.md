@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-9B884D2365
 title: OKF v0.1 关系图谱证据
 project: KDS
-related_projects: [WAES, KDS]
+related_projects: [WAME, KDS]
 domain: docs
 status: controlled
 version: v1.0

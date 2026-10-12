@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-259A611CFF
 title: GPCF-L4-GFIS-REPAIR-061 GFIS KDS candidate expansion truth guard
 project: GPCF
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -43,7 +43,7 @@ superseded_by: []
 | 辽宁远航 23 个样箱测试签收或测试反馈 | 54 | `canonical-kds-readonly/PVA价值联盟/项目文件/辽宁远航国际物流/01_行动台账.md` | 测试记录编号、测试签收附件、客户反馈原件、客户签收单号 |
 | 江西委托工厂样箱生产记录 | 8 | `canonical-kds-readonly/wiki/sources/_llmwiki_canonical/工业绿链/项目/葛化/葛化五项P0执行方案_20260521.md` | 委托生产单号、完工记录编号、生产批次号、代工签收附件 |
 | 2026-05 辽宁远航项目报价单 | 47 | `canonical-kds-readonly/PVA价值联盟/项目文件/辽宁远航国际物流/报价/宝马循环周转箱_正式报价书_IGL-BMW-QT-20260520-001.pdf` | 客户确认函 |
-| 2026-06 现代精工产线量产计划或转量产批准 | 57 | `canonical-kds-readonly/wiki/sources/_llmwiki_canonical/工业绿链/项目/葛化/葛化物流确认清单及预运营pmo执行方案260521V2.md` | 转量产批准单号、放行批准附件、量产计划编号、WAES evidence ref |
+| 2026-06 现代精工产线量产计划或转量产批准 | 57 | `canonical-kds-readonly/wiki/sources/_llmwiki_canonical/工业绿链/项目/葛化/葛化物流确认清单及预运营pmo执行方案260521V2.md` | 转量产批准单号、放行批准附件、量产计划编号、WAME evidence ref |
 
 ## Evidence
 
@@ -74,4 +74,4 @@ superseded_by: []
 
 ## Next
 
-下一轮应把 GFIS `LiaoningYuanhangProofCollectionPackage` 的 4 项开放请求转为业务方可执行的原始凭证采集清单，要求每项必须提供正式编号、附件、`source_record_uri`、`source_record_hash`、`kds_backlink_path` 和对应 WAES/GPC/GFIS 确认锚点。
+下一轮应把 GFIS `LiaoningYuanhangProofCollectionPackage` 的 4 项开放请求转为业务方可执行的原始凭证采集清单，要求每项必须提供正式编号、附件、`source_record_uri`、`source_record_hash`、`kds_backlink_path` 和对应 WAME/GPC/GFIS 确认锚点。

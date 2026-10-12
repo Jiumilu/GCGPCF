@@ -1,14 +1,14 @@
 ---
 doc_id: GPCF-DOC-BF9AA5F60D
 title: Headroom LCX 运行模型
-project: WAES
-related_projects: [WAES]
+project: WAME
+related_projects: [WAME]
 domain: general
 status: controlled
 version: v1.0
-owner: WAES
+owner: WAME
 kds_space: 开发
-kds_path: 开发/04-WAES/loop/context/headroom/docs/operating-model.md
+kds_path: 开发/04-WAME/loop/context/headroom/docs/operating-model.md
 source_path: loop/context/headroom/docs/operating-model.md
 sync_direction: bidirectional
 last_reviewed: 2026-06-21
@@ -32,7 +32,7 @@ SDK 接入只用于受控应用、RAG、Harness 和 Agent runtime 的脱敏上�
 
 ## LCX-MCP
 
-`headroom_compress` 和 `headroom_stats` 可见；`headroom_retrieve` 受限，必须满足 WAES retrieve gate。
+`headroom_compress` 和 `headroom_stats` 可见；`headroom_retrieve` 受限，必须满足 WAME retrieve gate。
 
 ## LCX-Agent-Wrap
 
@@ -44,7 +44,7 @@ CCR 可以恢复原文，但恢复动作必须记录任务、调用者、理由�
 
 ## LCX-Learn
 
-`learn-preview.sh` 只运行 preview。候选经验必须经过 Harness evidence、WAES pass 和 Owner 审核后才能进入工作记忆。
+`learn-preview.sh` 只运行 preview。候选经验必须经过 Harness evidence、WAME pass 和 Owner 审核后才能进入工作记忆。
 
 ## LCX-Output-Shaper
 

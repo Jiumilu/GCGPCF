@@ -1,7 +1,7 @@
 ---
 type: Architecture Document
-title: GlobalCloud绿色供应链体系WAES控制塔治理架构图
-description: WAES 控制塔治理架构
+title: GlobalCloud绿色供应链体系WAME控制塔治理架构图
+description: WAME 控制塔治理架构
 resource: file:///Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCoud GPCF/01-architecture/GlobalCloud绿色供应链体系WAES控制塔治理架构图.md
 tags: [architecture, controlled, kds, okf-derived]
 timestamp: 2026-06-22T00:00:00Z
@@ -14,7 +14,7 @@ derivation_policy: metadata_only_no_body_copy
 
 # Summary
 
-WAES 控制塔治理架构
+WAME 控制塔治理架构
 
 # Source Of Record
 
@@ -34,6 +34,6 @@ WAES 控制塔治理架构
 
 # Citations
 
-[1] [GlobalCloud绿色供应链体系WAES控制塔治理架构图](/../01-architecture/GlobalCloud绿色供应链体系WAES控制塔治理架构图.md)
+[1] [GlobalCloud绿色供应链体系WAME控制塔治理架构图](/../01-architecture/GlobalCloud绿色供应链体系WAES控制塔治理架构图.md)
 
-<!-- okf_concept_id: /concepts/01-architecture/GlobalCloud绿色供应链体系WAES控制塔治理架构图 -->
+<!-- okf_concept_id: /concepts/01-architecture/GlobalCloud绿色供应链体系WAME控制塔治理架构图 -->

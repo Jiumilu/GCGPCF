@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-0D6920E7D2
 title: CodeGraph 项目群稳态验证证据
 project: KDS
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio]
 domain: docs
 status: controlled
 version: v1.0
@@ -42,7 +42,7 @@ superseded_by: []
 | GlobalCloud GFIS | policy_exception | 1022 | 13152 | 38142 | 1 | 0 |
 | GlobalCloud GPC | up_to_date | 70 | 705 | 1995 | 0 | 0 |
 | GlobalCloud PVAOS | up_to_date | 604 | 8899 | 28838 | 0 | 0 |
-| GlobalCloud WAES | up_to_date | 281 | 3511 | 11298 | 0 | 0 |
+| GlobalCloud WAME | up_to_date | 281 | 3511 | 11298 | 0 | 0 |
 | GlobalCloud KDS | up_to_date | 518 | 3499 | 7115 | 0 | 0 |
 | GlobalCloud Brain | pending_sync | 153 | 2594 | 6071 | 5 | 0 |
 | GlobalCloud PKC | up_to_date | 110 | 1034 | 2685 | 0 | 0 |
@@ -62,8 +62,8 @@ superseded_by: []
 | 漂移可见性 | Brain 活动漂移被识别为 watchlist；GFIS residual 被保留为 policy exception | pass |
 | Loop 接入 | Loop schema 已要求 snapshot、query、impact、test、risk 和 evidence 字段 | pass |
 | Harness 接入 | impact report 与 evidence bundle 模板已存在 | pass |
-| WAES 接入 | 高风险权限、租户、资金、KDS、Ontology、API、Harness、Loop 变更需要 CodeGraph 输入 | pass |
-| KDS/OKF 接入 | CodeGraph 输出仅作为 candidate，升格需要 Harness evidence、WAES gate 和 human review | pass |
+| WAME 接入 | 高风险权限、租户、资金、KDS、Ontology、API、Harness、Loop 变更需要 CodeGraph 输入 | pass |
+| KDS/OKF 接入 | CodeGraph 输出仅作为 candidate，升格需要 Harness evidence、WAME gate 和 human review | pass |
 | 成本与质量改进 | 已具备低风险 impact-report dry-run 条件，但尚未形成量化成本 delta | next_round_required |
 
 ## 保留边界

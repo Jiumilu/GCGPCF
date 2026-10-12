@@ -41,7 +41,7 @@ superseded_by: []
 
 ## 反馈
 
-- 请求包已提交（submitted=true）；`registry_entry_added=false`、`governance_reviewed=false`、`waes_authorized=false`、`accepted=false`。
+- 请求包已提交（submitted=true）；`registry_entry_added=false`、`governance_reviewed=false`、`wame_authorized=false`、`accepted=false`。
 - 随附缺口请求：`state-request:rejected`、`term-request` ×8。
 
 ## 下一轮

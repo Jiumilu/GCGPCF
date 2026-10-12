@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-3D72B51384
 title: GFIS Assistant DKS-179 Routing Queue Notification Acknowledgement Escalation Preview No-write 规则
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, Brain, PKC]
+related_projects: [GFIS, GPC, WAME, KDS, Brain, PKC]
 domain: docs
 status: controlled
 version: v1.0
@@ -38,7 +38,7 @@ DKS-179 不允许执行以下动作：
 - 不创建 notification、acknowledgement、receipt、read receipt。
 - 不更新 delivery status。
 - 不创建 approval assignment、approval lock、approval packet、approval request、approval decision。
-- 不创建 committee decision、freeze action、Harness evidence、WAES gate result。
+- 不创建 committee decision、freeze action、Harness evidence、WAME gate result。
 - 不写 GFIS、GPC、ERP、MES、KDS lifecycle、KDS fact、KDS accepted fact 或 external API。
 
 ## 验收口径

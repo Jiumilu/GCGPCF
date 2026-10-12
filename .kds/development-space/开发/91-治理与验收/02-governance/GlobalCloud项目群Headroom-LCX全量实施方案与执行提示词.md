@@ -1,12 +1,12 @@
 ---
 doc_id: GPCF-DOC-5E60043D38
 title: GlobalCloud 项目群 Headroom LCX 全量实施方案与执行提示词
-project: WAES
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio]
+project: WAME
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio]
 domain: governance
 status: controlled
 version: v1.0
-owner: WAES
+owner: WAME
 kds_space: 开发
 kds_path: 开发/91-治理与验收/02-governance/GlobalCloud项目群Headroom-LCX全量实施方案与执行提示词.md
 source_path: 02-governance/GlobalCloud项目群Headroom-LCX全量实施方案与执行提示词.md
@@ -40,7 +40,7 @@ Headroom 不得被定位为：
 ```text
 Agent 框架
 KDS 替代品
-WAES 替代品
+WAME 替代品
 Harness 替代品
 业务事实源
 验收裁决源
@@ -56,7 +56,7 @@ Harness 替代品
 | 1 | GPCF | Loop 控制板、治理日志、项目群状态摘要 | L2/L3 dry-run | 需授权 |
 | 2 | KDS | RAG chunk、开发空间检索结果、metadata-only 摘要 | L2/L3 dry-run | 需授权 |
 | 3 | Brain | 知识检索候选、引用回指候选、工作台上下文 | L2/L3 dry-run | 需授权 |
-| 4 | WAES | 审计输入、风险摘要、门禁候选上下文 | L2/L3 dry-run | 需授权 |
+| 4 | WAME | 审计输入、风险摘要、门禁候选上下文 | L2/L3 dry-run | 需授权 |
 | 5 | GFIS | runtime log、测试数据门禁输出、受控 dry-run trace | L2/L3 dry-run | 需授权 |
 | 6 | GPC | 协同链路 dry-run、公共服务 trace、链路日志 | L2/L3 dry-run | 需授权 |
 | 7 | PVAOS | 门户配置审计、组织/伙伴配置 diff | L2/L3 dry-run | 需授权 |
@@ -75,7 +75,7 @@ Harness 替代品
 GlobalCloud / LOOP Engineering
 |
 +-- KDS: 知识事实主存与受控镜像
-+-- WAES: 规则、门禁、风险和授权裁决
++-- WAME: 规则、门禁、风险和授权裁决
 +-- Harness: 执行、证据、回放、指标和验收准备
 +-- Agent Runtime: Codex / Claude / Cursor / LiteLLM / LangChain / 项目自研 Agent
 +-- LCX Headroom Layer:
@@ -95,7 +95,7 @@ GlobalCloud / LOOP Engineering
 |---|---|
 | Headroom / LCX | 只处理上下文压缩、恢复、成本观测和候选记忆 |
 | Harness | 记录压缩前后 token、恢复行为、质量等价和可回放证据 |
-| WAES | 判断是否允许压缩、恢复、写记忆、启用 output shaping 或进入生产代理 |
+| WAME | 判断是否允许压缩、恢复、写记忆、启用 output shaping 或进入生产代理 |
 | KDS | 登记能力、版本、策略和 evidence 索引，不接收 Headroom memory 作为正式事实 |
 | Loop | 组织任务闭环、阶段升级、失败学习和下一轮输入 |
 
@@ -106,7 +106,7 @@ GlobalCloud / LOOP Engineering
 | Proxy | LCX-Proxy | 作为 Agent/App 到 LLM provider 的受控出口 | 先 dev/test，生产禁用 |
 | Library | LCX-SDK | 嵌入 KDS RAG、Brain、Harness、Agent runtime | 只处理脱敏样本 |
 | Agent wrap | LCX-Agent-Wrap | 统一封装 Codex、Claude、Cursor、Aider、Copilot 等 | 只能由 Loop 启动器调用 |
-| MCP server | LCX-MCP | 暴露 compress/retrieve/stats 工具 | retrieve 需要 WAES 高权限 |
+| MCP server | LCX-MCP | 暴露 compress/retrieve/stats 工具 | retrieve 需要 WAME 高权限 |
 | CCR | LCX-CCR | 压缩后按需恢复原文 | 取回必须进入 evidence |
 | Cross-agent memory | LCX-Working-Memory | 工程工作记忆、路径修正、失败经验 | 禁止作为业务事实 |
 | Failure learning | LCX-Learn | 从失败会话生成候选经验 | 只允许 preview/dry-run |
@@ -143,7 +143,7 @@ loop/context/headroom/
   harness/
     evidence.schema.yaml
     metrics.schema.yaml
-  waes/
+  wame/
     headroom-policy.yaml
     sensitive-pass-through.yaml
     ccr-retrieve-gate.yaml
@@ -248,7 +248,7 @@ MCP retrieve 必须写入恢复原因和调用者
 | MCP config | `loop/context/headroom/mcp.json` |
 | SDK adapter docs | `loop/context/headroom/docs/operating-model.md` |
 | KDS registry object | `loop/context/headroom/kds/context-optimization-component.yaml` |
-| WAES retrieve gate | `loop/context/headroom/waes/ccr-retrieve-gate.yaml` |
+| WAME retrieve gate | `loop/context/headroom/wame/ccr-retrieve-gate.yaml` |
 
 采集字段：
 
@@ -267,7 +267,7 @@ headroom_evidence:
   ccr_retrieve_count: number
   ccr_retrieve_reason: string
   policy_profile: string
-  waes_decision: pass | warn | block
+  wame_decision: pass | warn | block
   answer_equivalence: pass | partial | fail | unknown
   marker_gate: pass | fail
   timestamp: string
@@ -288,7 +288,7 @@ headroom_evidence:
 失败会话
   -> headroom learn preview
   -> Harness 记录失败 evidence
-  -> WAES 判定可写范围
+  -> WAME 判定可写范围
   -> Owner 审核
   -> 写入项目工作记忆
   -> 必要时形成 KDS candidate
@@ -300,7 +300,7 @@ headroom_evidence:
 |---|---|---|
 | L0 | 临时会话记忆 | 可自动，TTL 短 |
 | L1 | 工程工作记忆 | Harness evidence + Owner 审核 |
-| L2 | 受控知识事实 | KDS/WAES 正式流程，Headroom 不直写 |
+| L2 | 受控知识事实 | KDS/WAME 正式流程，Headroom 不直写 |
 
 禁止写入：
 
@@ -311,7 +311,7 @@ headroom_evidence:
 收益分配规则
 政策性判断
 合规结论
-WAES 门禁结论
+WAME 门禁结论
 KDS 正式事实
 ```
 
@@ -357,10 +357,10 @@ P5 不是当前授权范围。只有同时满足以下条件，才能申请：
 连续多窗口成本观测通过
 answer_equivalence >= 95%
 CCR 可恢复率 100%
-WAES 敏感内容拦截 100%
+WAME 敏感内容拦截 100%
 marker_gate 100%
 无 Headroom memory 事实污染
-accepted=false/integrated=false/production_ready=false 直到 Harness/WAES 另行裁决
+accepted=false/integrated=false/production_ready=false 直到 Harness/WAME 另行裁决
 ```
 
 ## 7. 授权模型
@@ -371,17 +371,17 @@ accepted=false/integrated=false/production_ready=false 直到 Harness/WAES 另�
 | LCX_PROXY_RUN | LOOP_AGENT_OPERATOR, DEVOPS_OWNER | dev/test/staging proxy | Harness trace required |
 | LCX_AGENT_WRAP | DEVELOPER, AGENT_OPERATOR | agent wrap | project policy required |
 | LCX_MCP_USE | APPROVED_AGENT, REVIEWER | compress/stats | tool visibility controlled |
-| LCX_CCR_RETRIEVE | PROJECT_OWNER, REVIEWER, WAES_APPROVED_AGENT | retrieve 原文 | reason + evidence + sensitive check |
+| LCX_CCR_RETRIEVE | PROJECT_OWNER, REVIEWER, WAME_APPROVED_AGENT | retrieve 原文 | reason + evidence + sensitive check |
 | LCX_MEMORY_WRITE | PROJECT_OWNER, LOOP_MEMORY_STEWARD | 写工作记忆 | review required |
 | LCX_LEARN_APPLY | PROJECT_OWNER, LOOP_ENGINEERING_LEAD | 应用失败经验 | human approval |
 | LCX_OUTPUT_SHAPER_ENABLE | PROJECT_OWNER, LOOP_PLATFORM_ADMIN | 输出压缩 | 禁止验收/合规/财务/合同 |
 
-## 8. WAES 门禁包
+## 8. WAME 门禁包
 
 建议策略文件：
 
 ```text
-loop/context/headroom/waes/headroom-policy.yaml
+loop/context/headroom/wame/headroom-policy.yaml
 ```
 
 核心规则：
@@ -432,7 +432,7 @@ headroom_evidence:
   ccr_retrieve_count:
   ccr_retrieve_reason:
   policy_profile:
-  waes_decision:
+  wame_decision:
   answer_equivalence:
   marker_gate:
   sensitive_redaction_gate:
@@ -474,7 +474,7 @@ usage_modes:
 trust_level: L2_ENGINEERING_TOOL
 fact_authority: false
 evidence_authority: false
-policy_controlled_by: WAES
+policy_controlled_by: WAME
 evidence_recorded_by: Harness
 kds_status: candidate_component
 ```
@@ -517,21 +517,21 @@ saving_rate = gross_saving / baseline_cost
 ```text
 1. 15 个项目/域均有 LCX route：allowed、blocked、pending_authorization 三态之一。
 2. LCX-Proxy、LCX-SDK、LCX-MCP、LCX-Agent-Wrap 均有受控配置和回放 evidence。
-3. LCX-CCR retrieve 有 WAES gate、调用理由和 Harness evidence。
+3. LCX-CCR retrieve 有 WAME gate、调用理由和 Harness evidence。
 4. LCX-Learn 默认 preview，不自动写 AGENTS.md / CLAUDE.md / GEMINI.md。
 5. LCX-Working-Memory 只承载工程工作记忆，不承载业务事实。
 6. LCX-Output-Shaper 按 profile 启停，验收/合规/财务/合同默认关闭。
 7. 成本模型覆盖输入、输出、cache write、cache read、runtime cost。
 8. 每次压缩都有 tokens_before、tokens_after、saving_rate、quality gate。
 9. KDS 只登记能力和 evidence 索引，不接收 Headroom memory 作为正式事实。
-10. WAES 仍是授权与门禁裁决层。
+10. WAME 仍是授权与门禁裁决层。
 11. Harness 仍是证据、回放和验收准备层。
 12. 未经生产授权前，所有 production_admission_gate=false。
 ```
 
 ## 13. 全量实现提示词
 
-以下提示词用于把本方案交给后续 Codex/Agent 继续执行。执行时必须保留本仓 AGENTS.md、Loop、KDS、WAES、Harness 边界。
+以下提示词用于把本方案交给后续 Codex/Agent 继续执行。执行时必须保留本仓 AGENTS.md、Loop、KDS、WAME、Harness 边界。
 
 ```text
 你是 GlobalCloud 项目群 GPCF 总控仓的工程执行 Agent。请严格执行
@@ -540,11 +540,11 @@ saving_rate = gross_saving / baseline_cost
 
 目标：
 把 `chopratejas/headroom` 纳入整个 GlobalCloud 项目群，作为 LCX / LOOP Context Optimization Layer。
-范围必须覆盖 15 个项目/域：GPCF、KDS、Brain、WAES、GFIS、GPC、PVAOS、Edge、PKC、XiaoC、XGD、XiaoG、MMC、Studio、WAS。
+范围必须覆盖 15 个项目/域：GPCF、KDS、Brain、WAME、GFIS、GPC、PVAOS、Edge、PKC、XiaoC、XGD、XiaoG、MMC、Studio、WAS。
 
 定位约束：
 Headroom 只能作为上下文压缩、成本治理、可逆上下文缓存、工作记忆候选和失败经验学习候选能力。
-不得把 Headroom 作为 Agent 框架、KDS 替代品、WAES 替代品、Harness 替代品、业务事实源、验收裁决源或生产自治授权源。
+不得把 Headroom 作为 Agent 框架、KDS 替代品、WAME 替代品、Harness 替代品、业务事实源、验收裁决源或生产自治授权源。
 
 实施阶段：
 P0：建立 OSS / License / Security / Runtime 隔离安装包，默认 `HEADROOM_TELEMETRY=off`。
@@ -564,9 +564,9 @@ P5：只生成生产准入申请包，不得自行进入生产。
 7. `loop/context/headroom/adapters/*`
 8. `loop/context/headroom/harness/evidence.schema.yaml`
 9. `loop/context/headroom/harness/metrics.schema.yaml`
-10. `loop/context/headroom/waes/headroom-policy.yaml`
-11. `loop/context/headroom/waes/sensitive-pass-through.yaml`
-12. `loop/context/headroom/waes/ccr-retrieve-gate.yaml`
+10. `loop/context/headroom/wame/headroom-policy.yaml`
+11. `loop/context/headroom/wame/sensitive-pass-through.yaml`
+12. `loop/context/headroom/wame/ccr-retrieve-gate.yaml`
 13. `loop/context/headroom/kds/context-optimization-component.yaml`
 14. `loop/context/headroom/scripts/install-headroom.sh`
 15. `loop/context/headroom/scripts/start-proxy.sh`
@@ -587,9 +587,9 @@ project_id、source_path、allowed_modes、blocked_modes、requires_authorizatio
 
 Harness evidence 要求：
 每次 Headroom 介入必须记录：
-task_id、loop_round_id、project_id、agent_id、model_id、mode、content_type、tokens_before、tokens_after、tokens_saved、saving_rate、ccr_enabled、ccr_retrieve_count、policy_profile、waes_decision、answer_equivalence、marker_gate、sensitive_redaction_gate、measured_production_tokens、accepted、integrated、production_ready。
+task_id、loop_round_id、project_id、agent_id、model_id、mode、content_type、tokens_before、tokens_after、tokens_saved、saving_rate、ccr_enabled、ccr_retrieve_count、policy_profile、wame_decision、answer_equivalence、marker_gate、sensitive_redaction_gate、measured_production_tokens、accepted、integrated、production_ready。
 
-WAES 门禁要求：
+WAME 门禁要求：
 高敏内容默认 block_or_passthrough。
 CCR retrieve 必须 require_evidence。
 Headroom memory 不得成为 KDS 正式事实源。
@@ -618,10 +618,10 @@ python3 tools/kds-sync/validate_headroom_project_group_application_router.py
 成功标准：
 15 个项目/域都有 LCX route。
 LCX-Proxy、LCX-SDK、LCX-MCP、LCX-Agent-Wrap 均有受控配置。
-CCR retrieve 有 WAES gate 和 Harness evidence。
+CCR retrieve 有 WAME gate 和 Harness evidence。
 成本模型可回放，且不保存敏感原文。
 文档门禁、污染检查、KDS TOKEN 检查通过。
-全量实现完成前仍保持 accepted=false、integrated=false、production_ready=false，除非用户另行授权并由 Harness/WAES evidence 裁决。
+全量实现完成前仍保持 accepted=false、integrated=false、production_ready=false，除非用户另行授权并由 Harness/WAME evidence 裁决。
 
 输出要求：
 用中文写实施记录。

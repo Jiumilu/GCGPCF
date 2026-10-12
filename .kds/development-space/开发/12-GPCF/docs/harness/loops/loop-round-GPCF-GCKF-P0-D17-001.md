@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-8C41475AD9
 title: GC-Knowledge Fabric P0-D17 Route Adapter Dry-run Contract LOOP evidence
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0

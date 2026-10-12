@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-90C8663294
 title: Ontology/WAS 3 小时实施 P1 Source Record 准备度证据
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -22,7 +22,7 @@ superseded_by: []
 
 `GPCF-ONTOLOGY-WAS-3H-P1-SOURCE-READINESS-001` 已完成 P1：真实 `CustomerRequirementOrPlatformOrder` source-record 准备度清单与字段完成矩阵。
 
-本 evidence 只定义未来真实提交的准备度要求和 hold reason，不写入 GFIS 接收目录，不创建真实 source-of-record、runtime primary key、review queue、runtime intake、WAES review 或 verified artifact，不升级 accepted、integrated 或 production_ready。
+本 evidence 只定义未来真实提交的准备度要求和 hold reason，不写入 GFIS 接收目录，不创建真实 source-of-record、runtime primary key、review queue、runtime intake、WAME review 或 verified artifact，不升级 accepted、integrated 或 production_ready。
 
 ## P1 启动字段
 
@@ -62,7 +62,7 @@ superseded_by: []
 | P1-C02 | product_and_delivery | 必须包含客户确认产品规格与交付要求 |
 | P1-C03 | traceability | 必须包含 KDS backlink、SHA-256 source record hash、接收时间和 runtime site context |
 | P1-C04 | was_semantic_contract | 必须绑定 WAS S01 的 `data_asset`、`commerce_flow`、`pending_business_verification`、`T4` 语义契约 |
-| P1-C05 | promotion_safety | 人工业务核验和 WAES review 前不得跳过 `pending_business_verification` |
+| P1-C05 | promotion_safety | 人工业务核验和 WAME review 前不得跳过 `pending_business_verification` |
 
 ## 字段完成矩阵
 
@@ -76,7 +76,7 @@ superseded_by: []
 | trustLevel | WAS S01 | ready_by_rule |
 | sourceRefs | source_of_record_backlink | missing_real_input |
 | evidenceRefs | GFIS REAL-001 source record intake gate | ready_by_rule |
-| waesGateRefs | WAES source record review gate | ready_by_rule |
+| wameGateRefs | WAME source record review gate | ready_by_rule |
 | promotionBlockers | WAS S01 | ready_by_rule |
 | nextAction | WAS S01 | ready_by_rule |
 | kdsBacklink | source_of_record_backlink | missing_real_input |
@@ -92,7 +92,7 @@ superseded_by: []
 - `owner_confirmation_missing`
 - `runtime_site_context_missing`
 - `was_required_fields_missing`
-- `waes_gate_ref_missing`
+- `wame_gate_ref_missing`
 - `kds_backlink_mismatch`
 - `lifecycle_promoted_before_manual_verification`
 

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-7813EC28BF
 title: GCKF P0 正式 evidence 委员会受理确认 notification receipt aggregation repair request acknowledgement routing repair owner notification acknowledgement receipt aggregation preview 当前态证据 D181
 project: GPCF
-related_projects: [GPCF, WAES]
+related_projects: [GPCF, WAME]
 domain: docs
 status: controlled
 version: v1.0

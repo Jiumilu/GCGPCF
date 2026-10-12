@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-5CC1AFF87D
 title: GPCF-L4-GFIS-REPAIR-249
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -58,7 +58,7 @@ superseded_by: []
 - `runtime_primary_key_ready=0`
 - `review_queue=0`
 - `runtime_intake=0`
-- `waes_review=0`
+- `wame_review=0`
 - `verified=0`
 - `runtime_sop_e2e=repair_required`
 
@@ -86,4 +86,4 @@ stop_type=authorization_boundary
 
 ## 下一轮
 
-`GFIS-RUNTIME-SOP-E2E-240`：建立 release override approval request dispatch confirmation hold release precheck；在真实确认文件、派发授权、收件方/通道确认、hash、KDS backlink 和 WAES candidate 均未满足时继续阻断 hold release。
+`GFIS-RUNTIME-SOP-E2E-240`：建立 release override approval request dispatch confirmation hold release precheck；在真实确认文件、派发授权、收件方/通道确认、hash、KDS backlink 和 WAME candidate 均未满足时继续阻断 hold release。

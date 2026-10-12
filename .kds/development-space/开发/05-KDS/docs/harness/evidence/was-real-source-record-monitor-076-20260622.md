@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-6C0AA90076
 title: WAS Real Source Record Monitor 076 证据
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -20,7 +20,7 @@ superseded_by: []
 
 ## 范围
 
-`GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-076` 将绿色供应链覆盖扩展到空气排放许可、烟囱排放监测、VOCs 清单、颗粒物控制、厂界噪声、异味投诉响应和环保检查通知证据链。只有补齐这些证据，Ontology 才能安全地把空气排放、噪声、异味和环保监管风险绑定到下游 WAES/KDS/runtime 门禁中。
+`GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-076` 将绿色供应链覆盖扩展到空气排放许可、烟囱排放监测、VOCs 清单、颗粒物控制、厂界噪声、异味投诉响应和环保检查通知证据链。只有补齐这些证据，Ontology 才能安全地把空气排放、噪声、异味和环保监管风险绑定到下游 WAME/KDS/runtime 门禁中。
 
 ## 监控检查
 
@@ -42,7 +42,7 @@ superseded_by: []
 | runtime_primary_key_ready | `0` |
 | review_queue | `0` |
 | runtime_intake | `0` |
-| waes_review | `0` |
+| wame_review | `0` |
 | verified | `0` |
 | accepted | `false` |
 | integrated | `false` |
@@ -73,7 +73,7 @@ python3 tools/kds-sync/validate_was_real_source_record_monitor_076.py
 
 - 本证据不创建也不推断空气排放许可、烟囱排放监测报告、VOCs 清单、颗粒物控制记录、厂界噪声监测报告、异味投诉响应记录或环保检查通知记录。
 - 本证据不写入 GFIS/KWE 运行层。
-- 本证据不创建 KDS 正式事实、WAES review、runtime primary key、review queue、runtime intake、verified artifact，也不形成 accepted、integrated 或 production ready 状态。
+- 本证据不创建 KDS 正式事实、WAME review、runtime primary key、review queue、runtime intake、verified artifact，也不形成 accepted、integrated 或 production ready 状态。
 
 ## 下一轮
 

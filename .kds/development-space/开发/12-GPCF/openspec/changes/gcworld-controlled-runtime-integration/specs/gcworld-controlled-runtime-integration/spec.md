@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-GCWORLD-047
 title: spec
 project: GPCF
-related_projects: [GPCF, WAES]
+related_projects: [GPCF, WAME]
 domain: openspec
 status: draft
 version: v1.0
@@ -22,7 +22,7 @@ superseded_by: []
 系统 SHALL 按观察、解析、世界快照、推理、裁决、确认、执行、取证、提升和学习推进真实动作。需要写入或外部影响的动作在裁决与规定确认完成前 MUST NOT 调用执行系统。
 
 #### Scenario: R3动作缺少人工确认
-- **WHEN** 动作已经获得WAES条件允许但尚未取得规定的人工确认
+- **WHEN** 动作已经获得WAME条件允许但尚未取得规定的人工确认
 - **THEN** 系统停留在待确认状态，不调用连接器，也不生成成功回执
 
 ### Requirement: 运行身份逐层收窄
@@ -61,9 +61,9 @@ superseded_by: []
 - **THEN** 系统记录部分完成回执并按批准策略执行或请求补偿，不伪造成功
 
 ### Requirement: 故障时默认拒绝或只读
-WAES不可用、事实版本不可验证、身份上下文不完整或撤销状态未知时，高风险动作 MUST 被阻断，低风险操作最多降级为只读。
+WAME不可用、事实版本不可验证、身份上下文不完整或撤销状态未知时，高风险动作 MUST 被阻断，低风险操作最多降级为只读。
 
-#### Scenario: WAES在重大动作前不可用
+#### Scenario: WAME在重大动作前不可用
 - **WHEN** R4动作无法获得当前有效裁决
 - **THEN** 系统阻断动作，不使用缓存允许或普通紧急开关绕过
 

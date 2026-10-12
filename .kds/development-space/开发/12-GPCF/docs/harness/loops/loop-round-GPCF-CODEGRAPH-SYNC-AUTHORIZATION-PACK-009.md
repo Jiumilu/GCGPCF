@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-277A170C82
 title: GPCF CodeGraph Sync Authorization Pack 009
 project: GPCF
-related_projects: [GFIS, GPC, WAES, Brain, GPCF, Studio]
+related_projects: [GFIS, GPC, WAME, Brain, GPCF, Studio]
 domain: docs
 status: controlled
 version: v1.0

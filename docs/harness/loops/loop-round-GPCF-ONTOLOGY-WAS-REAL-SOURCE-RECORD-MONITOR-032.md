@@ -3,7 +3,7 @@ doc_id: GPCF-DOC-91A1D48832
 title: "Loop Round: GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-032"
 project: GPCF
 related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio]
-domain: ontology-governance
+domain: docs
 status: controlled
 version: v1.0
 owner: GPCF

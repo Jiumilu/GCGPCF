@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-0F24C05984
 title: ODF 试点样本准入台账
 project: KDS
-related_projects: [GPC, WAES, KDS, GPCF]
+related_projects: [GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -31,8 +31,8 @@ superseded_by: []
 
 | sample_id | source_path | source_hash | odf_hash | markdown_hash | owner | status |
 | --- | --- | --- | --- | --- | --- | --- |
-| `ODF-PILOT-20260617-001` | `02-governance/GlobalCloud项目群文档防污染规则.md` | `76add94d9481fbdb993707f0874d8bde8b0f2e13043643027b80711de7c84317` | `2405c97d8a34dca0df812602c90eab26a7869060efbae89fcb67c187c442a72e` | `76add94d9481fbdb993707f0874d8bde8b0f2e13043643027b80711de7c84317` | WAES | `pilot_sample` |
-| `ODF-PILOT-20260617-002` | `02-governance/GlobalCloud项目群KDS开发空间安全规范.md` | `31a84c070bfc15f79146a667d42fced62337b1606f2f7603f5172bc4856c9d2c` | `898d7ade933455868c91e23834e3eb4ecc54ae35cef61f0b71725c0ff9753a3d` | `31a84c070bfc15f79146a667d42fced62337b1606f2f7603f5172bc4856c9d2c` | WAES | `pilot_sample` |
+| `ODF-PILOT-20260617-001` | `02-governance/GlobalCloud项目群文档防污染规则.md` | `76add94d9481fbdb993707f0874d8bde8b0f2e13043643027b80711de7c84317` | `2405c97d8a34dca0df812602c90eab26a7869060efbae89fcb67c187c442a72e` | `76add94d9481fbdb993707f0874d8bde8b0f2e13043643027b80711de7c84317` | WAME | `pilot_sample` |
+| `ODF-PILOT-20260617-002` | `02-governance/GlobalCloud项目群KDS开发空间安全规范.md` | `31a84c070bfc15f79146a667d42fced62337b1606f2f7603f5172bc4856c9d2c` | `898d7ade933455868c91e23834e3eb4ecc54ae35cef61f0b71725c0ff9753a3d` | `31a84c070bfc15f79146a667d42fced62337b1606f2f7603f5172bc4856c9d2c` | WAME | `pilot_sample` |
 | `ODF-PILOT-20260617-003` | `.okf/index.md` | `c2dace42e1cd8ce5e9693d800d71f8b64cf74d3eaeb42040a1c24a1a1d6f7103` | `63425cb11337dcf3f35e3dfca6a9417e1a2acbf4242dd552603a1941f5583cbd` | `c2dace42e1cd8ce5e9693d800d71f8b64cf74d3eaeb42040a1c24a1a1d6f7103` | GPCF | `pilot_sample` |
 
 ## 准入字段完整性

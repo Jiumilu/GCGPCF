@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-D4D814B761
 title: GPCF-L4-GFIS-REPAIR-080 GFIS 辽宁远航客户确认正式来源门禁
 project: GPCF
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -80,7 +80,7 @@ pass
 - 本轮确认 GFIS 运行层能识别正式来源缺失。
 - 本轮不确认客户确认函已经取得。
 - 本轮不确认报价 PDF、弱确认、业务口述、KDS discovery 或采集请求可替代客户确认函。
-- 本轮不确认样箱测试签收/反馈、江西委托生产完工记录、现代精工转量产批准或 WAES evidence ref 已取得。
+- 本轮不确认样箱测试签收/反馈、江西委托生产完工记录、现代精工转量产批准或 WAME evidence ref 已取得。
 - 本轮不确认 GFIS runtime SOP E2E 通过。
 - 本轮不升级 accepted/integrated。
 
@@ -105,4 +105,4 @@ pass
 
 ## 下一步
 
-优先接收辽宁远航客户确认函、客户盖章/签字确认或等效正式确认原件脱敏索引；取得后再在 GFIS 提交 formal source type real submission 候选，并保持人工/WAES/KDS 复核。GPCF 在这些原件进入复核前继续保持 GFIS/GPCF `repair_required`。
+优先接收辽宁远航客户确认函、客户盖章/签字确认或等效正式确认原件脱敏索引；取得后再在 GFIS 提交 formal source type real submission 候选，并保持人工/WAME/KDS 复核。GPCF 在这些原件进入复核前继续保持 GFIS/GPCF `repair_required`。

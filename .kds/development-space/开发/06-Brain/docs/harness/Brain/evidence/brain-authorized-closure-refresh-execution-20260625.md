@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-BRAIN-AUTHORIZED-CLOSURE-REFRESH-EXECUTION-20260625
 title: Brain 授权型闭包证据刷新执行结果 2026-06-25
 project: Brain
-related_projects: [WAES, Brain]
+related_projects: [WAME, Brain]
 domain: docs
 status: controlled
 version: v1.0

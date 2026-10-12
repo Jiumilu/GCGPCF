@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-A19137FC74
 title: GC-Knowledge Fabric P0 正式证据执行委员会立案回执预览 dry-run v0.1
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -22,7 +22,7 @@ superseded_by: []
 
 本文档定义 P0-D52 的委员会 case opening receipt 预览 dry-run。
 
-D52 只预览 D51 committee docket readiness preview 之后，案卷材料接收回执的候选字段、材料索引确认、审阅分派确认、权限与回避边界、冻结保持、WAES 负向门禁、Harness no-write 边界和退回路径。
+D52 只预览 D51 committee docket readiness preview 之后，案卷材料接收回执的候选字段、材料索引确认、审阅分派确认、权限与回避边界、冻结保持、WAME 负向门禁、Harness no-write 边界和退回路径。
 
 ## 2. 输入
 
@@ -38,7 +38,7 @@ D52 只预览 D51 committee docket readiness preview 之后，案卷材料接收
 | 范围 | 预览要求 |
 |---|---|
 | Receipt roles | 继承 D51 docket roles |
-| Receipt sections | 覆盖来源 docket readiness lineage、receipt scope、receipt envelope fields、receipt readiness prerequisites、material index acknowledgement、reviewer assignment acknowledgement、authority and recusal boundary、freeze retention statement、WAES negative gate snapshot、Harness no-write、return path 和 no-write attestation |
+| Receipt sections | 覆盖来源 docket readiness lineage、receipt scope、receipt envelope fields、receipt readiness prerequisites、material index acknowledgement、reviewer assignment acknowledgement、authority and recusal boundary、freeze retention statement、WAME negative gate snapshot、Harness no-write、return path 和 no-write attestation |
 | Receipt envelope | 只作为候选回执结构，不记录正式回执 |
 | Decision constraints | 明确 receipt preview 不是 formal receipt，不产生 intake acceptance、提交、案卷创建、正式回执、立案、裁决、确认、冻结释放、收益/贡献确认或 evidence 写入 |
 
@@ -58,7 +58,7 @@ D52 只预览 D51 committee docket readiness preview 之后，案卷材料接收
 - 不写 KDS、GFIS、GPC 或业务系统。
 - 不写 Harness evidence 或 formal evidence。
 - 不写收益分配或贡献积分。
-- 不覆盖 WAES 门禁。
+- 不覆盖 WAME 门禁。
 - 不提升 lifecycle。
 - 不标记 accepted / integrated / production_ready。
 

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-C5B4E2F928
 title: GC-Knowledge Fabric P0-D31 未来正式写入执行预检 dry-run LOOP 证据
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0

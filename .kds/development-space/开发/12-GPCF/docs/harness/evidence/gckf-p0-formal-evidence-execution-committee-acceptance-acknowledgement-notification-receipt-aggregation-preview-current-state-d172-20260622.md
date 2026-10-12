@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-81D22E53DC
 title: GCKF P0 正式 evidence 委员会受理确认 notification receipt aggregation 预览当前态证据 D172
 project: GPCF
-related_projects: [GPCF, WAES]
+related_projects: [GPCF, WAME]
 domain: docs
 status: controlled
 version: v1.0

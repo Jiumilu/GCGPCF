@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-LOOP-COGNEE-P4-REAL-WRITEBACK-LIVE-001
 title: Loop Round - GPCF Cognee P4 真实写入运行演练 001
 project: GPCF
-related_projects: [GPC, WAES, GPCF]
+related_projects: [GPC, WAME, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -57,7 +57,7 @@ python3 loop/context/cognee/scripts/validate-cognee-p4-real-writeback-live.py \
 ## stop
 
 - 停止类型：`implementation_boundary`
-- 停止原因：预检链路已具备脚本运行条件，但生产级 live 写入仍需 owner 与 WAES 双签确认，当前保持 dry-run 演练边界。
+- 停止原因：预检链路已具备脚本运行条件，但生产级 live 写入仍需 owner 与 WAME 双签确认，当前保持 dry-run 演练边界。
 - 当前状态：`accepted=false`，`integrated=false`，`production_ready=false`。
 
 ## verify
@@ -112,5 +112,5 @@ python3 loop/context/cognee/scripts/run-cognee-p4-real-writeback-live.py \
 
 ## debug
 
-- 关键阻断：脚本层已就绪，当前闭环关键点在执行授权（Owner/WAES 双签）与 live-write 审批，未完成前不得进入生产执行。
+- 关键阻断：脚本层已就绪，当前闭环关键点在执行授权（Owner/WAME 双签）与 live-write 审批，未完成前不得进入生产执行。
 - 下一步建议：进入 `GPCF-COGNEE-P4-REAL-WRITEBACK-LIVE-002` 完成双签签核文本与人工授权确认。

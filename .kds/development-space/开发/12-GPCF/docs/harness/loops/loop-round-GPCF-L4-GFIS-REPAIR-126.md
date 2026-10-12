@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-9A12E19CF2
 title: GPCF-L4-GFIS-REPAIR-126
 project: GPCF
-related_projects: [GFIS, GPC, WAES, XGD, GPCF, Studio]
+related_projects: [GFIS, GPC, WAME, XGD, GPCF, Studio]
 domain: docs
 status: controlled
 version: v1.0
@@ -33,7 +33,7 @@ superseded_by: []
 ## 输入
 
 - GFIS 运行层 `formal_quotation_source_intake` 已受控，报价来源、hash 和字段抽取通过。
-- GFIS 仍缺客户确认函、采购订单或合同、商业责任方回执、完整 authorization envelope、review queue、runtime intake、WAES review 和 verified artifact。
+- GFIS 仍缺客户确认函、采购订单或合同、商业责任方回执、完整 authorization envelope、review queue、runtime intake、WAME review 和 verified artifact。
 - 用户补充阿里云 ECS 当前访问机制、裸 IP FunASR/TTS 兜底入口、RustDesk 基线和 Hermes 不得修改 ECS/阿里云/Caddy/隧道/Docker 的配置变更控制要求。
 
 ## 动作
@@ -68,7 +68,7 @@ superseded_by: []
 ## 真实性边界
 
 - 本轮没有执行 Git push、生产写入、真实外部 API 写入、数据库迁移、权限变更、部署、ECS/Caddy/隧道/Docker 配置修改或 accepted/integrated 状态升级。
-- 报价 PDF 只能作为正式报价来源锚点，不能替代客户确认、采购订单、合同、授权 envelope、owner response、review queue、runtime intake、WAES review 或 verified artifact。
+- 报价 PDF 只能作为正式报价来源锚点，不能替代客户确认、采购订单、合同、授权 envelope、owner response、review queue、runtime intake、WAME review 或 verified artifact。
 - ECS 文档只固化运行边界和变更控制，不证明公网入口全部恢复，也不代表执行过任何真实基础设施变更。
 
 ## 下一轮

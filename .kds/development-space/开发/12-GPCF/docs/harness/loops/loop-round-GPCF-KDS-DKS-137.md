@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-07B2D0579B
 title: LOOP Round GPCF KDS DKS-137
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, Brain, PKC, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, Brain, PKC, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -20,14 +20,14 @@ superseded_by: []
 
 ## 本轮目标
 
-建立 GFIS Assistant repair notification snooze queue approval acknowledgement digest delivery acknowledgement escalation SLA breach review preview 的 no-write 规则、类型、夹具和校验器，承接 DKS-136 escalation SLA preview，但只展示候选 breach review 类型、严重度、审查路径、候选审查人、证据缺口和下一步建议，不创建真实 breach record、争议、委员会事项、冻结请求、提醒、审批请求、审批决定、Harness evidence、KWE 工单、WAES 结果、KDS 状态提升或业务写回。
+建立 GFIS Assistant repair notification snooze queue approval acknowledgement digest delivery acknowledgement escalation SLA breach review preview 的 no-write 规则、类型、夹具和校验器，承接 DKS-136 escalation SLA preview，但只展示候选 breach review 类型、严重度、审查路径、候选审查人、证据缺口和下一步建议，不创建真实 breach record、争议、委员会事项、冻结请求、提醒、审批请求、审批决定、Harness evidence、KWE 工单、WAME 结果、KDS 状态提升或业务写回。
 
 ## 输入
 
 - DKS-136 escalation SLA preview 边界。
 - DKS-135 delivery acknowledgement escalation preview 边界。
 - `okf/committee-policy.yaml`。
-- `okf/waes-gate-policy.yaml`。
+- `okf/wame-gate-policy.yaml`。
 - GFIS / Brain / PKC no-write contract 覆盖清单。
 
 ## 动作
@@ -54,4 +54,4 @@ superseded_by: []
 
 ## 反馈
 
-DKS-137 仍是本地预览与候选展示能力，不代表 breach record、dispute、committee case、freeze request、approval request、approval decision、KWE 工单、WAES 结果、Harness evidence 或委员会决议已经创建。下一轮可继续推进 DKS-138：approval acknowledgement digest delivery acknowledgement escalation SLA breach review resolution option preview no-write，用于展示候选处置选项，但仍不得写入真实通知、确认、审批、冻结或 evidence。
+DKS-137 仍是本地预览与候选展示能力，不代表 breach record、dispute、committee case、freeze request、approval request、approval decision、KWE 工单、WAME 结果、Harness evidence 或委员会决议已经创建。下一轮可继续推进 DKS-138：approval acknowledgement digest delivery acknowledgement escalation SLA breach review resolution option preview no-write，用于展示候选处置选项，但仍不得写入真实通知、确认、审批、冻结或 evidence。

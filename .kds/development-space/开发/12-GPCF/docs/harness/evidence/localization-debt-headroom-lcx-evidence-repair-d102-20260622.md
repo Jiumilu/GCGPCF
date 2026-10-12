@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-LOCALIZATIONDEBTHEADROOMLCXEVIDENCEREPAIRD10220260622
 title: Headroom LCX evidence D102 中文化修复证据
 project: GPCF
-related_projects: [GPCF, WAES]
+related_projects: [GPCF, WAME]
 domain: docs
 status: controlled
 version: v1.0
@@ -36,8 +36,8 @@ D102 对 4 个 Headroom LCX evidence 文档进行中文化修复。
 
 - `docs/harness/evidence/headroom-lcx-p3-learn-preview-working-memory-gate-20260621.md`
 - `docs/harness/evidence/headroom-lcx-rollback-plan-20260622-001.md`
-- `docs/harness/evidence/headroom-lcx-waes-harness-admission-decision-admitted-20260622.md`
-- `docs/harness/evidence/headroom-lcx-waes-harness-admission-decision-blocked-20260622.md`
+- `docs/harness/evidence/headroom-lcx-wame-harness-admission-decision-admitted-20260622.md`
+- `docs/harness/evidence/headroom-lcx-wame-harness-admission-decision-blocked-20260622.md`
 
 ## 边界
 

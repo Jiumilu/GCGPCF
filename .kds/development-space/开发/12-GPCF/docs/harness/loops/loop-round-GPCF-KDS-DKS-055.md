@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-4DB9304756
 title: LOOP Round GPCF-KDS-DKS-055 - 葛化 DKS-054 执行包派发授权信封与负例拒收门禁
 project: GPCF
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, XiaoC, GPCF]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, XiaoC, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -48,10 +48,10 @@ superseded_by: []
 
 1. 7 个 `DAE-GH-D055-*` 派发授权信封草案。
 2. 派发前置字段字典。
-3. 缺人工授权、缺接收人、缺渠道、缺 KDS/WAES 回链时的阻断规则。
+3. 缺人工授权、缺接收人、缺渠道、缺 KDS/WAME 回链时的阻断规则。
 4. 口头授权、LOOP 文档当授权、demo/fixture、DSR-L3 原文外发、状态越权升级、悬赏越权发布等负例拒收规则。
 5. 7 个 `DHR-GH-D055-*` hold 槽位。
-6. WAES、RAG、DSR、AI、积分、收益、额度、悬赏和委员会边界。
+6. WAME、RAG、DSR、AI、积分、收益、额度、悬赏和委员会边界。
 
 ## 4. 本轮动作
 
@@ -104,7 +104,7 @@ superseded_by: []
 - 发送飞书、小即、邮件或其它外部通知；
 - 接收真实客户确认、采购订单、合同、POD、质量、开票、到账或金融凭证；
 - 保存金融凭证原文、账户、金额明细、银行流水、合同全文或未授权截图；
-- GFIS、WAES、KDS API、GPC、PVAOS、Finance 或生产系统写入；
+- GFIS、WAME、KDS API、GPC、PVAOS、Finance 或生产系统写入；
 - 发布悬赏、冻结资源、确认积分、发放额度或分配收益；
 - 人工签认或委员会裁决；
 - 关闭 GFIS `real_business_lane=repair_required`；

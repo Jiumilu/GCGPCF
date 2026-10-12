@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-B3B80176A1
 title: GC-Knowledge Fabric P0 正式证据执行回执路由预检查预览 dry-run v0.1
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -22,7 +22,7 @@ superseded_by: []
 
 本文档定义 P0-D59 的 acknowledgement routing precheck 预览 dry-run。
 
-D59 承接 D58 repair request acknowledgement preview，只预览候选回执后的路由预检查字段、路由资格、审阅通道、阻断原因、后续路径、冻结保持、WAES 负向门禁和 Harness no-write 边界。
+D59 承接 D58 repair request acknowledgement preview，只预览候选回执后的路由预检查字段、路由资格、审阅通道、阻断原因、后续路径、冻结保持、WAME 负向门禁和 Harness no-write 边界。
 
 ## 2. 输入
 
@@ -50,7 +50,7 @@ D59 承接 D58 repair request acknowledgement preview，只预览候选回执后
 - 不写 KDS、GFIS、GPC 或业务系统。
 - 不写 Harness evidence 或 formal evidence。
 - 不写收益分配或贡献积分。
-- 不覆盖 WAES 门禁。
+- 不覆盖 WAME 门禁。
 - 不提升 lifecycle。
 - 不标记 accepted / integrated / production_ready。
 

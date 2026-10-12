@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-D0174E85D8
 title: unified-permission-middleware
 project: KDS
-related_projects: [GPC, WAES, KDS, GPCF]
+related_projects: [GPC, WAME, KDS, GPCF]
 domain: openspec
 status: draft
 version: v1.0
@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/05-KDS/openspec/changes/kds-production-hardening/specs/unified-permission-middleware/README.md
 source_path: openspec/changes/kds-production-hardening/specs/unified-permission-middleware/README.md
 sync_direction: bidirectional
-last_reviewed: 2026-10-11
+last_reviewed: 2026-10-12
 supersedes: []
 superseded_by: []
 ---

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-227F0B5940
 title: GPCF-L4-GFIS-REPAIR-194 GFIS 审阅授权信封预检
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -27,7 +27,7 @@ superseded_by: []
 - business_positioning: GFIS 是葛化工厂建设期间现代精工 OEM 生产的运行系统，也是葛化自建工厂投产后的同一运行系统。
 - target_object_family: `CustomerRequirementOrPlatformOrder`
 - target_stage: `01_customer_requirement_platform_order`
-- target_gap: 审阅授权信封不可用；review/runtime/WAES/verified 必须继续 blocked。
+- target_gap: 审阅授权信封不可用；review/runtime/WAME/verified 必须继续 blocked。
 
 ## 已读取输入
 
@@ -70,7 +70,7 @@ superseded_by: []
 | runtime_primary_key_missing | 1 |
 | review_queue | 0 |
 | manual_review | 0 |
-| waes_review | 0 |
+| wame_review | 0 |
 | runtime_intake | 0 |
 | verified | 0 |
 | state | `customer_requirement_platform_order_review_authorization_envelope_blocked_missing_real_authorization` |
@@ -104,11 +104,11 @@ superseded_by: []
 - 未创建运行时主键。
 - 未创建 review queue 项。
 - 未执行人工审阅。
-- 未执行 WAES 审阅。
+- 未执行 WAME 审阅。
 - 未执行 runtime intake。
 - 未创建 verified 工件。
 - 未设置 accepted 或 integrated 状态。
-- 未执行生产写入、真实外部 API 写入、KDS 写入、WAES 写入、数据库迁移、schema sync、权限变更、ECS/Aliyun/Caddy/tunnel/Docker 变更、部署、Git push 或 merge。
+- 未执行生产写入、真实外部 API 写入、KDS 写入、WAME 写入、数据库迁移、schema sync、权限变更、ECS/Aliyun/Caddy/tunnel/Docker 变更、部署、Git push 或 merge。
 
 ## 真实轮次计数
 
@@ -121,4 +121,4 @@ superseded_by: []
 
 ## 下一目标
 
-`GFIS-RUNTIME-SOP-E2E-188`：构建 `CustomerRequirementOrPlatformOrder` 审阅授权信封负样本门禁，证明弱授权说明、Loop 文本、Demo 状态、KDS 候选、报价和合同草案不能创建 review/runtime/WAES/verified 状态。
+`GFIS-RUNTIME-SOP-E2E-188`：构建 `CustomerRequirementOrPlatformOrder` 审阅授权信封负样本门禁，证明弱授权说明、Loop 文本、Demo 状态、KDS 候选、报价和合同草案不能创建 review/runtime/WAME/verified 状态。

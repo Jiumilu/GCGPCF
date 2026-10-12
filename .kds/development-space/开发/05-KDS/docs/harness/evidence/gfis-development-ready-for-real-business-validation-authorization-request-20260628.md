@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-GFIS-DEV-READY-AUTH-20260628
 title: GFIS development_ready_for_real_business_validation 授权确认请求 2026-06-28
 project: KDS
-related_projects: [GFIS, WAES, KDS]
+related_projects: [GFIS, WAME, KDS]
 domain: docs
 status: controlled
 version: v1.0

@@ -1,12 +1,12 @@
 ---
 doc_id: GPCF-DOC-LOOP-V11-SLIMMING-DELIVERY-RECOVERY
 title: LOOP v1.1 治理瘦身与交付恢复基线
-project: WAES
-related_projects: [GFIS, GPC, WAES, KDS, PKC, GPCF]
+project: WAME
+related_projects: [GFIS, GPC, WAME, KDS, PKC, GPCF]
 domain: governance
 status: controlled
 version: v1.0
-owner: WAES
+owner: WAME
 kds_space: 开发
 kds_path: 开发/91-治理与验收/02-governance/loop/LOOP_GOVERNANCE_SLIMMING_AND_DELIVERY_RECOVERY.md
 source_path: 02-governance/loop/LOOP_GOVERNANCE_SLIMMING_AND_DELIVERY_RECOVERY.md
@@ -73,7 +73,7 @@ Governance Loop 继续使用 `run / stop / verify / recover / debug`，并保留
 |---|---|---|---|
 | L0 | 最高规范层 | 项目群实施方案、Master Plan、Gate Classification、Autonomy Policy、Multi-Agent Policy | 只在重大架构变化时更新 |
 | L1 | 项目群控制层 | Control Board、Status Matrix、Session Registry、Capability Registry | 记录当前事实和主线，不写业务完成事实 |
-| L2 | 项目执行层 | GFIS Delivery Completion Sprint、KDS blocker review、WAES candidate、SOP/PKC maintenance | 只按当前主线推进，不做全局泛化 |
+| L2 | 项目执行层 | GFIS Delivery Completion Sprint、KDS blocker review、WAME candidate、SOP/PKC maintenance | 只按当前主线推进，不做全局泛化 |
 | L3 | 任务切片层 | DEV-COMP-001 到 DEV-COMP-007 等开发切片 | 默认 Delivery Loop；每切片最多 1 个主 evidence |
 
 执行约束：
@@ -140,7 +140,7 @@ customer_accepted
 |---|---|---|
 | G0 快速开发 | 纯本地、mock、无敏感边界 | 切片结束一条记录 |
 | G1 受控开发 | 普通项目主开发、多文件、测试、接口契约 | 每切片 1 个 round + 1 个验证结果 |
-| G2 严格治理 | KDS、WAES、生产配置、真实 API、schema、状态提升 | 完整 `run / stop / verify / recover / debug` |
+| G2 严格治理 | KDS、WAME、生产配置、真实 API、schema、状态提升 | 完整 `run / stop / verify / recover / debug` |
 
 ## 当前项目建议状态
 
@@ -149,7 +149,7 @@ customer_accepted
 | GPCF | governance | evolve | L2 | partial | G1/G2 | 治理瘦身，不再扩张 |
 | GFIS | dev | build | L3_candidate | partial | G1 | runtime SOP E2E 最小闭环 |
 | KDS | dev | audit | L2 | partial | G2 | KDS blocker 已解除；保持 hold review、dry-run 和真实 KDS API 未授权边界 |
-| WAES | governance | audit | L1/L2 | guarded | G2 | 裁决层，不参与日常开发 |
+| WAME | governance | audit | L1/L2 | guarded | G2 | 裁决层，不参与日常开发 |
 | SOP/PKC | maintenance | verify | L2 | partial | G0/G1 | 专项验证和小切片维护 |
 
 ## 当前阶段工具白名单
@@ -189,7 +189,7 @@ real measurement
 1. GFIS：最高优先级，完成 Delivery Completion Sprint。
 2. GPCF：维护 v1.1 瘦身基线，不再扩治理。
 3. KDS：只处理 sensitive、token、real API write 边界。
-4. WAES：等待 GFIS candidate 进入裁决输入。
+4. WAME：等待 GFIS candidate 进入裁决输入。
 5. SOP / PKC：小修维护和专项 dry-run。
 6. 其他 `ready_for_review` 项目：默认暂缓，不抢占主线。
 
@@ -199,7 +199,7 @@ real measurement
 
 - runtime intake > 0。
 - review queue > 0。
-- WAES review > 0。
+- WAME review > 0。
 - verified artifact candidate > 0。
 
 在上述计数保持 0 时，不扩展 L4/L5，不启动 L3.5/L4 评估，不声明 accepted、integrated、production_ready 或 customer_accepted。
@@ -207,7 +207,7 @@ real measurement
 ## 非声明边界
 
 - 本基线不创建 GFIS source-of-record。
-- 本基线不创建 runtime primary key、review queue、runtime intake、WAES review 或 verified artifact。
+- 本基线不创建 runtime primary key、review queue、runtime intake、WAME review 或 verified artifact。
 - 本基线不授权生产写入、真实外部 API 写入、schema migrate、bench migrate、commit、push 或 deploy。
 - 本基线不声明 accepted、integrated、production_ready 或 customer_accepted。
 

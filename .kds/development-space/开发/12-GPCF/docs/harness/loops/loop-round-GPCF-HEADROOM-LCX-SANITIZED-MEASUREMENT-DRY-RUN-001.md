@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-D83FE8C1B1
 title: Loop Round GPCF Headroom LCX Sanitized Measurement Dry Run 001
 project: GPCF
-related_projects: [GPC, WAES, GPCF]
+related_projects: [GPC, WAME, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -20,7 +20,7 @@ superseded_by: []
 
 ## 输入
 
-- WAES/Harness 已准入 `admitted_for_sanitized_measurement_precheck`。
+- WAME/Harness 已准入 `admitted_for_sanitized_measurement_precheck`。
 - 当前只允许脱敏台账元数据 dry-run。
 
 ## 动作

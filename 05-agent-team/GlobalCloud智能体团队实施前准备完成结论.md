@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-2F22FF007C
 title: GlobalCloud 智能体团队实施前准备完成结论
 project: XiaoC
-related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, XiaoC, XGD, GPCF]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, XiaoC, XGD, GPCF, Studio]
 domain: agent-team
 status: controlled
 version: v1.0

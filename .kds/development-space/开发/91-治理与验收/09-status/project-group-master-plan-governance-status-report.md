@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-PROJECT-GROUP-MASTER-PLAN-GOVERNANCE-STATUS-20260624
 title: GlobalCloud 项目群总体方案治理最终状态报告
 project: GPCF
-related_projects: [AAAS, Brain, WAS, XiaoC, WAES, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP]
+related_projects: [AAAS, Brain, WAS, XiaoC, WAME, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP]
 domain: status
 status: controlled
 version: v1.0
@@ -49,7 +49,7 @@ non_completion_scope = business implementation, runtime production readiness, cu
 | 项目总体方案标准模板 | controlled | `templates/project-master-plan-template.md` |
 | 变更传导与用户确认模板 | controlled | `02-governance/project-master-plan-change-propagation-template.md` |
 | WAS / XWAIL / AaaS / GPC 当前有效总体方案 | controlled | 对应项目仓总体方案文件 |
-| 第一批项目总体方案 | controlled | WAES、GFIS、PVAOS、KDS、Brain、Studio 总体方案 |
+| 第一批项目总体方案 | controlled | WAME、GFIS、PVAOS、KDS、Brain、Studio 总体方案 |
 | 第二批项目总体方案 | controlled | MMC、PKC、SOP、XGD、XiaoC、XiaoG 总体方案 |
 | GPCF 项目总体方案 | controlled | `GlobalCloud GPCF 总体方案.md` |
 | SOP AGENTS | controlled | `GlobalCloud SOP/AGENTS.md` |

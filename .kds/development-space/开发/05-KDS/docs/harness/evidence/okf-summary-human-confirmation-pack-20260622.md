@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-3F8439F1D4
 title: OKF Summary Human Confirmation Pack 2026-06-22
 project: KDS
-related_projects: [GPC, WAES, KDS, GPCF]
+related_projects: [GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0

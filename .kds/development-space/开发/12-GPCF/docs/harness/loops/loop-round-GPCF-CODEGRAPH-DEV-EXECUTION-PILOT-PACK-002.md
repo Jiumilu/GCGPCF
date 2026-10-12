@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-9464E9A367
 title: Loop Round - GPCF-CODEGRAPH-DEV-EXECUTION-PILOT-PACK-002
 project: GPCF
-related_projects: [GPC, WAES, GPCF]
+related_projects: [GPC, WAME, GPCF]
 domain: docs
 status: controlled
 version: v1.0

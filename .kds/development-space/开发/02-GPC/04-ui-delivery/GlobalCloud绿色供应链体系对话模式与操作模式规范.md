@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-5D5E27312C
 title: GlobalCloud 绿色供应链体系对话模式与操作模式规范
 project: GPC
-related_projects: [GFIS, GPC, PVAOS, WAES, Brain, XiaoC, XGD, Studio]
+related_projects: [GFIS, GPC, PVAOS, WAME, Brain, XiaoC, XGD, Studio]
 domain: ui-delivery
 status: controlled
 version: v1.0
@@ -20,7 +20,7 @@ superseded_by: []
 
 日期：2026-06-08
 状态：对话模式与操作模式规范 v1
-适用范围：WAES、PVAOS、GPC、GFIS、Brain、XiaoC（蚁后）、Hermes/XGD（大象），以及最终交付中的 Web、桌面端、移动端、消息端交互。
+适用范围：WAME、PVAOS、GPC、GFIS、Brain、XiaoC（蚁后）、Hermes/XGD（大象），以及最终交付中的 Web、桌面端、移动端、消息端交互。
 目的：统一体系内“怎么问、怎么答、怎么操作、怎么确认、怎么驳回、怎么关闭”，避免不同产品各自形成不同的交互语言和操作习惯。
 
 ---
@@ -163,7 +163,7 @@ superseded_by: []
 
 1. 复盘结论不得冒充正式治理结论
 2. AI 复盘只能作为草案或辅助分析
-3. 正式结论必须由 WAES 或人工确认形成
+3. 正式结论必须由 WAME 或人工确认形成
 
 ---
 
@@ -191,7 +191,7 @@ superseded_by: []
 1. 治理确认不得与业务确认混用
 2. 治理确认必须绑定证据
 3. 治理确认必须可审计
-4. 治理确认结果必须进入 WAES 治理记录
+4. 治理确认结果必须进入 WAME 治理记录
 
 ---
 
@@ -275,7 +275,7 @@ superseded_by: []
 
 ### 9.2 治理确认
 
-治理确认只允许发生在 WAES：
+治理确认只允许发生在 WAME：
 
 - 规则确认
 - 指标确认
@@ -287,7 +287,7 @@ superseded_by: []
 
 1. 不得用治理确认替代业务确认
 2. 不得用 AI 建议替代业务确认
-3. 不得把业务确认写成 WAES 审批
+3. 不得把业务确认写成 WAME 审批
 
 ---
 

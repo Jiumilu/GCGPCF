@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-63536E3201
 title: Evidence Index — XiaoC
 project: XiaoC
-related_projects: [GPC, WAES, XiaoC, GPCF]
+related_projects: [GPC, WAME, XiaoC, GPCF]
 domain: docs
 status: controlled
 version: v1.0

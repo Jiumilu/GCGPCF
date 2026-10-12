@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-B1974D0089
 title: "Loop Round: GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-089"
 project: GPCF
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio]
 domain: docs
 status: controlled
 version: v1.0
@@ -44,7 +44,7 @@ superseded_by: []
 ## stop
 
 - stop_type: `authorization_boundary`
-- stop_evidence: 当前 `docs/harness/intake` 仍只有模板，真实 P4 source-record 未提交；不得进入 WAES review 或 GFIS/KWE runtime writeback。
+- stop_evidence: 当前 `docs/harness/intake` 仍只有模板，真实 P4 source-record 未提交；不得进入 WAME review 或 GFIS/KWE runtime writeback。
 
 ## verify
 
@@ -55,7 +55,7 @@ python3 tools/kds-sync/validate_was_real_source_record_monitor_089.py
 ## recover
 
 - 恢复点：删除本轮 089 evidence、loop round、validator、fixtures，并将控制板、状态矩阵、coverage refresh 回退到 MONITOR-088 / v5.56 / loop_round_count=117。
-- 本轮未写 GFIS/KWE runtime，未写真实 KDS API，未创建 WAES review，因此恢复不涉及生产回滚。
+- 本轮未写 GFIS/KWE runtime，未写真实 KDS API，未创建 WAME review，因此恢复不涉及生产回滚。
 
 ## debug
 
@@ -70,7 +70,7 @@ loop_was_context:
     - GFIS
     - GPC
     - PVAOS
-    - WAES
+    - WAME
     - KDS
     - Brain
     - PKC
@@ -100,7 +100,7 @@ loop_was_context:
     - docs/harness/intake/was-real-source-record-candidate-template.yaml
   validator_refs:
     - tools/kds-sync/validate_was_real_source_record_monitor_089.py
-  waes_gate: blocked_without_kds_bound_green_finance_esg_evidence
+  wame_gate: blocked_without_kds_bound_green_finance_esg_evidence
   loop_role: evidence_boundary_monitor
   llm_role: candidate_generation_only
   rag_role: controlled_reference_only
@@ -111,11 +111,11 @@ loop_was_context:
     runtime_primary_key_ready: 0
     review_queue: 0
     runtime_intake: 0
-    waes_review: 0
+    wame_review: 0
     verified: 0
     accepted: false
     integrated: false
     production_ready: false
   next_round: GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-090
-  no_write_declaration: no_gfis_runtime_write_no_kds_official_fact_no_waes_review_no_accepted_integrated_or_production_ready
+  no_write_declaration: no_gfis_runtime_write_no_kds_official_fact_no_wame_review_no_accepted_integrated_or_production_ready
 ```

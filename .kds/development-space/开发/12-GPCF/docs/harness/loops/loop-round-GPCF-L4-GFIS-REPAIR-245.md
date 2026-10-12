@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-B379CD806B
 title: GPCF-L4-GFIS-REPAIR-245
 project: GPCF
-related_projects: [GFIS, GPC, WAES, GPCF]
+related_projects: [GFIS, GPC, WAME, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -35,7 +35,7 @@ superseded_by: []
 
 - GPCF 总控记录 `GPCF-L4-GFIS-REPAIR-245`。
 - GFIS 当前主线记录为 `GFIS-RUNTIME-SOP-E2E-235`。
-- 关键计数：`confirmation_slots=1`、`confirmation_files_found=0`、`valid_confirmations=0`、`missing_confirmations=1`、`dispatch_allowed=0`、`request_items_dispatched=0`、`release_override_allowed=0`、`hold_release_allowed=0`、`runtime_primary_key_ready=0`、`review_queue=0`、`runtime_intake=0`、`waes_review=0`、`verified=0`。
+- 关键计数：`confirmation_slots=1`、`confirmation_files_found=0`、`valid_confirmations=0`、`missing_confirmations=1`、`dispatch_allowed=0`、`request_items_dispatched=0`、`release_override_allowed=0`、`hold_release_allowed=0`、`runtime_primary_key_ready=0`、`review_queue=0`、`runtime_intake=0`、`wame_review=0`、`verified=0`。
 
 ## 验证
 
@@ -47,7 +47,7 @@ superseded_by: []
 ## 下一步
 
 - 本轮只证明派发确认缺口已扫描且无真实确认文件。
-- 本轮不证明请求已派发、审批已回执、open hold 已释放、runtime primary key 已创建、review/runtime/WAES/verified 已完成。
+- 本轮不证明请求已派发、审批已回执、open hold 已释放、runtime primary key 已创建、review/runtime/WAME/verified 已完成。
 - 下一轮建议：`GFIS-RUNTIME-SOP-E2E-236`，建立 dispatch confirmation negative fixture guard。
 
 ## 真实性计数

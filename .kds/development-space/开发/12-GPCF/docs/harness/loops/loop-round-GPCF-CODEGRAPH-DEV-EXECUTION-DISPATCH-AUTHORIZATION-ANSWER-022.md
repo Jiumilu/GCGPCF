@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-CODEGRAPH-DEV-EXECUTION-DISPATCH-AUTHORIZATION-ANSWER-022
 title: Loop Round - GPCF-CODEGRAPH-DEV-EXECUTION-DISPATCH-AUTHORIZATION-ANSWER-022
 project: GPCF
-related_projects: [GPC, WAES, KDS, GPCF]
+related_projects: [GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -23,7 +23,7 @@ superseded_by: []
 - 输入：021 目标完成度审计显示 `goal_complete=false`，且派发授权仍为 `not_authorized`。
 - 目标：记录当前没有新的明确授权回答，并应用默认未授权策略。
 - 动作：固化 selected option、effective authorization、允许恢复路径和下一轮 hold。
-- 边界：不派发、不提交、不推送、不部署、不生产写入、不外部 API 写入、不真实 KDS/WAES 写入。
+- 边界：不派发、不提交、不推送、不部署、不生产写入、不外部 API 写入、不真实 KDS/WAME 写入。
 
 ## stop
 
@@ -43,7 +43,7 @@ python3 tools/kds-sync/validate_codegraph_dev_execution_dispatch_authorization_a
 
 - 最后安全状态：`GPCF-CODEGRAPH-DEV-EXECUTION-GOAL-COMPLETION-AUDIT-021`
 - 可重试动作：用户明确选择授权项后，进入相应 precheck 或继续保持 prepared。
-- 不可重试动作：无授权时派发、写外部系统、写真实 KDS/WAES、升级状态。
+- 不可重试动作：无授权时派发、写外部系统、写真实 KDS/WAME、升级状态。
 
 ## debug
 

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-BF2C4E0A91
 title: Studio Kanban 导航拓扑复核证据
 project: GPCF
-related_projects: [GPC, WAES, GPCF, Studio]
+related_projects: [GPC, WAME, GPCF, Studio]
 domain: docs
 status: controlled
 version: v1.0
@@ -64,7 +64,7 @@ Status ceiling: ui_evidence_candidate
 | G2 Design Tokens | partial | 本轮不新增令牌映射证据 | 继续执行项目群统一令牌映射 |
 | G3 Component Consistency | partial | `Kanban` 页与 `chat` 页使用了两套导航壳层，且入口拓扑不对称：`Kanban -> chat` 有入口，`chat -> kanban` 无入口 | 需统一专业工作台与聊天主界面的导航基线 |
 | G4 Evidence And Governance | partial | 本轮只复核导航拓扑，不覆盖 receipt / audit / source record | 后续在真实任务数据场景补验证 |
-| G5 AI Fact Separation | partial | 当前问题已从“路由异常”收敛为“聊天主界面与工作台入口边界未统一” | 需按 WAES 母框架定义工作台/AI 双域入口规范 |
+| G5 AI Fact Separation | partial | 当前问题已从“路由异常”收敛为“聊天主界面与工作台入口边界未统一” | 需按 WAME 母框架定义工作台/AI 双域入口规范 |
 | G6 Accessibility | partial | 本轮未新增完整键盘路径验证 | 后续补导航与表单完整键盘路径 |
 | G7 Responsive And Text Robustness | pass | 本轮未推翻第 003 轮桌面/移动端无水平溢出证据 | 后续补真实任务长文本验证 |
 | G8 Runtime Verification | pass | `Kanban` 真实运行、`Kanban -> chat` 页面内导航真实有效；第 003 轮 `reload` 判断被收敛为直跳路径伪缺陷 | 后续如修导航，只需复验入口可达性 |

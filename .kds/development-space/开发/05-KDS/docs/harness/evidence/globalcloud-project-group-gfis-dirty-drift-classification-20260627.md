@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-GFIS-DIRTY-DRIFT-CLASSIFICATION-20260627
 title: GlobalCloud 项目群 GFIS Dirty 漂移分类证据 2026-06-27
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -96,7 +96,7 @@ git rev-parse --abbrev-ref --symbolic-full-name @{u}
 
 - 若目标是恢复 17 仓全量 clean，需要 GFIS owner 或用户另行授权 GFIS 仓内处理策略：保留并 review、提交候选、或恢复这些 timestamp-only evidence drift。
 - 当前授权不允许在 GFIS 仓库执行任何 stage、commit、push、reset、checkout、clean 或删除。
-- 当前结论不提升 GFIS、GPCF、WAES、KDS 或项目群状态。
+- 当前结论不提升 GFIS、GPCF、WAME、KDS 或项目群状态。
 
 ## 状态声明
 

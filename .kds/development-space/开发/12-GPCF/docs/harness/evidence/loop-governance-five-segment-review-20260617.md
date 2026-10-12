@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-2EEC93C354
 title: Loop 治理五段式审查证据
 project: GPCF
-related_projects: [GFIS, GPC, WAES, GPCF]
+related_projects: [GFIS, GPC, WAME, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -55,4 +55,4 @@ Evidence ID: `LOOP-GOV-FIVE-SEGMENT-REVIEW-20260617`
 
 - 本证据不重写历史轮次记录。
 - 本证据不证明 GFIS runtime SOP E2E 已通过。
-- 本证据不创建 source-of-record、runtime primary key、review queue、runtime intake、WAES review、verified artifact、accepted 或 integrated 状态。
+- 本证据不创建 source-of-record、runtime primary key、review queue、runtime intake、WAME review、verified artifact、accepted 或 integrated 状态。

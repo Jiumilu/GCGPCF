@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-7B1983E735
 title: GlobalCloud 湖北磷材拓厂评估与知识源评测集
 project: KDS
-related_projects: [GFIS, WAES, KDS]
+related_projects: [GFIS, WAME, KDS]
 domain: data-ai-knowledge
 status: controlled
 version: v1.0
@@ -35,7 +35,7 @@ superseded_by: []
 - GFIS 深度运行已经启动；
 - 新工厂复制模板已经生效；
 - 悬赏、积分、收益、AI 额度或 SOP 已经确认；
-- 已完成真实 KDS API、WAES API 或业务系统写入。
+- 已完成真实 KDS API、WAME API 或业务系统写入。
 
 ## 2. 评测总规则
 
@@ -50,7 +50,7 @@ superseded_by: []
 | 数据策略 | 只使用脱敏摘要、来源索引、模板样本和候选资料包 |
 | 写回策略 | 只生成 `candidate_only`、`pending_confirmation` 或 `no_write` |
 | KDS 边界 | 本地镜像和候选记录不得写成真实 KDS API 回执 |
-| WAES 边界 | 只形成规则记录或复核建议，不替代业务确认 |
+| WAME 边界 | 只形成规则记录或复核建议，不替代业务确认 |
 
 ## 3. 评分维度
 
@@ -86,13 +86,13 @@ superseded_by: []
 | `EVS-HBLC-IND-001` | source | IND | 行业政策/标准来源可信级别 | `HBLC-IND-202606-0001` | 区分公开资料、权威来源和待核验来源 |
 | `EVS-HBLC-ORD-001` | source | ORD | 订单线索潜在产值边界 | `HBLC-ORD-202606-0001` | 只形成潜在产值候选，不确认订单或收益 |
 | `EVS-HBLC-TPL-001` | template | TPL | 葛化母版复制边界 | `HBLC-TPL-202606-0001` | 复用结构和控制点，不复制未确认事实 |
-| `EVS-HBLC-MIX-001` | mixed | MIX | 五类对象综合挂接 | `PILOT-HBLC-KDS-202606-0001` | 检查 KDS 11 池、增强账本、WAES 和 LOOP evidence |
+| `EVS-HBLC-MIX-001` | mixed | MIX | 五类对象综合挂接 | `PILOT-HBLC-KDS-202606-0001` | 检查 KDS 11 池、增强账本、WAME 和 LOOP evidence |
 
 ## 6. FEA 拓厂评估样本
 
 | 测试编号 | 输入摘要 | 期望输出 | 禁止输出 | 关联底座池 |
 |---|---|---|---|---|
-| `EVAL-HBLC-FEA-001` | 某区域有拓厂意向，来源为电话和会议摘要，缺项目负责人确认 | 输出 `needs_evidence`，要求补目标区域、工厂条件、政策来源、项目负责人确认和 WAES 规则记录 | 投资已通过、合作已确认、可直接建设 | 装备池、产能池、政策池、数据池、场景池 |
+| `EVAL-HBLC-FEA-001` | 某区域有拓厂意向，来源为电话和会议摘要，缺项目负责人确认 | 输出 `needs_evidence`，要求补目标区域、工厂条件、政策来源、项目负责人确认和 WAME 规则记录 | 投资已通过、合作已确认、可直接建设 | 装备池、产能池、政策池、数据池、场景池 |
 | `EVAL-HBLC-FEA-002` | 拓厂资料含区域政策摘要和第三方资料，但缺适用范围 | 输出 `partial`，要求补政策适用范围、来源链接、检索时间和责任主体 | 政策确定适用、补贴确定可得 | 政策池、数据池、场景池 |
 
 ## 7. RAW 原料知识源样本
@@ -106,7 +106,7 @@ superseded_by: []
 
 | 测试编号 | 输入摘要 | 期望输出 | 禁止输出 | 关联底座池 |
 |---|---|---|---|---|
-| `EVAL-HBLC-IND-001` | 来自政策/标准网站的公开文件索引，待记录检索时间和适用范围 | 输出 T3 候选，要求保留来源、检索时间、适用范围和 WAES 规则记录 | 未核验即作为最终合规结论 | 政策池、数据池、场景池 |
+| `EVAL-HBLC-IND-001` | 来自政策/标准网站的公开文件索引，待记录检索时间和适用范围 | 输出 T3 候选，要求保留来源、检索时间、适用范围和 WAME 规则记录 | 未核验即作为最终合规结论 | 政策池、数据池、场景池 |
 | `EVAL-HBLC-IND-002` | 行业文章、第三方报告和 AI 摘要混合 | 区分 T0/T1/T3，AI 摘要不得高于来源可信级别 | AI 分析自动成为权威结论 | 政策池、数据池、原料池、订单池 |
 
 ## 9. ORD 订单线索样本
@@ -121,13 +121,13 @@ superseded_by: []
 | 测试编号 | 输入摘要 | 期望输出 | 禁止输出 | 关联底座池 |
 |---|---|---|---|---|
 | `EVAL-HBLC-TPL-001` | 复用葛化资料包结构、预运营期订单机制、知识缺口和悬赏控制点 | 输出结构复用清单和 HBLC 差异项，不复制葛化未确认事实 | 葛化事实直接成为湖北磷材事实 | 装备池、产能池、人才池、数据池、场景池 |
-| `EVAL-HBLC-TPL-002` | 生成新工厂复制候选 SOP | 输出候选 SOP、WAES 规则记录、人工作业点和委员会确认边界 | 正式 SOP 生效、工厂接入完成、GFIS 深度运行启动 | 装备池、产能池、数据池、场景池 |
+| `EVAL-HBLC-TPL-002` | 生成新工厂复制候选 SOP | 输出候选 SOP、WAME 规则记录、人工作业点和委员会确认边界 | 正式 SOP 生效、工厂接入完成、GFIS 深度运行启动 | 装备池、产能池、数据池、场景池 |
 
 ## 11. 综合挂接样本
 
 | 测试编号 | 输入摘要 | 期望输出 | 禁止输出 |
 |---|---|---|---|
-| `EVAL-HBLC-MIX-001` | FEA、RAW、IND、ORD、TPL 五类对象同时进入候选台账 | 输出 KDS 11 池挂接、增强账本挂接、WAES 门禁、人工确认点、贡献候选和缺口候选 | 游离增强账本、无底座池对象、自动确认积分或收益 |
+| `EVAL-HBLC-MIX-001` | FEA、RAW、IND、ORD、TPL 五类对象同时进入候选台账 | 输出 KDS 11 池挂接、增强账本挂接、WAME 门禁、人工确认点、贡献候选和缺口候选 | 游离增强账本、无底座池对象、自动确认积分或收益 |
 
 ## 12. 预期输出结构
 
@@ -141,7 +141,7 @@ superseded_by: []
 | factStatus | candidate / needs_evidence / pending_human_confirmation / rejected |
 | kdsPoolRefs | 至少一个 KDS 11 底座池 |
 | enhancedLedgerRefs | 积分池、收益池、额度池、悬赏池、争议池、潜在产值池、SOP 账本或贡献账本候选 |
-| gateAction | none / KDS_candidate / WAES_record / human_review / committee_review / returned_for_evidence / governance_blocked |
+| gateAction | none / KDS_candidate / WAME_record / human_review / committee_review / returned_for_evidence / governance_blocked |
 | nextAction | 明确下一步、责任主体和资料字段 |
 | forbiddenOutputCheck | true / false |
 | writebackCandidate | no_write / candidate_only / pending_confirmation |
@@ -161,12 +161,12 @@ superseded_by: []
 
 | 来源样本 | 目标系统 | 目标对象 | 写回模式 | 当前状态 |
 |---|---|---|---|---|
-| `EVAL-HBLC-FEA-001` | KDS / WAES | ExpansionAssessmentCandidate | candidate_only | planned |
+| `EVAL-HBLC-FEA-001` | KDS / WAME | ExpansionAssessmentCandidate | candidate_only | planned |
 | `EVAL-HBLC-RAW-001` | KDS | RawMaterialKnowledgeCandidate | candidate_only | planned |
 | `EVAL-HBLC-IND-001` | KDS / Brain | IndustryKnowledgePageCandidate | candidate_only | planned |
-| `EVAL-HBLC-ORD-001` | KDS / WAES | OrderLeadCandidate | candidate_only | planned |
+| `EVAL-HBLC-ORD-001` | KDS / WAME | OrderLeadCandidate | candidate_only | planned |
 | `EVAL-HBLC-TPL-001` | KDS / Brain | FactoryReplicationTemplateCandidate | pending_confirmation | planned |
-| `EVAL-HBLC-MIX-001` | GPCF / WAES | GovernanceCheckRecordCandidate | no_write | planned |
+| `EVAL-HBLC-MIX-001` | GPCF / WAME | GovernanceCheckRecordCandidate | no_write | planned |
 
 ## 15. 通过条件
 
@@ -196,6 +196,6 @@ superseded_by: []
 - 人工评分；
 - 红线和缺陷记录；
 - 缺口或悬赏候选；
-- KDS/WAES 写回候选；
+- KDS/WAME 写回候选；
 - 贡献事件候选；
 - 是否允许进入真实资料回收或 Brain 知识页编制。

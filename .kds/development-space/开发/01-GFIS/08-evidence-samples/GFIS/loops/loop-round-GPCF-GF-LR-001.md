@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-E574C9CB52
 title: Loop Round GPCF-GF-LR-001
 project: GFIS
-related_projects: [GFIS, GPC, WAES, KDS, Brain, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, Brain, GPCF]
 domain: evidence
 status: controlled
 version: v1.0
@@ -45,7 +45,7 @@ superseded_by: []
 | 新增 | `08-evidence-samples/GFIS/gfis-business-object-candidates.md` | 首批业务对象候选 |
 | 新增 | `08-evidence-samples/GFIS/gfis-document-record-candidates.md` | 单据与记录候选 |
 | 新增 | `08-evidence-samples/GFIS/gfis-quality-gate-candidates.md` | 质量、安全和业务门禁候选 |
-| 新增 | `08-evidence-samples/GFIS/gfis-gpc-boundary-notes.md` | GFIS/GPC/WAES/KDS/Brain 边界说明 |
+| 新增 | `08-evidence-samples/GFIS/gfis-gpc-boundary-notes.md` | GFIS/GPC/WAME/KDS/Brain 边界说明 |
 | 新增 | `08-evidence-samples/GFIS/gfis-field-study-data-capture.md` | 现场采集表 |
 | 新增 | `08-evidence-samples/GFIS/evidence-index.md` | GFIS 首轮 evidence 索引 |
 | 新增 | `GFIS:docs/harness/loop-state.md` | GFIS 独立项目仓 Loop 状态 |
@@ -78,7 +78,7 @@ superseded_by: []
   - 现场真实数据尚未采集。
 - 风险项：
   - 培训资料包含商务、财务、客户交付内容，容易把 GFIS 扩张为 GPC。
-  - 部分质量放行动作必须由 WAES 形成治理门禁，GFIS 只提供工厂事实。
+  - 部分质量放行动作必须由 WAME 形成治理门禁，GFIS 只提供工厂事实。
 - 下一轮输入：
   - 将本轮抽取包继续转化为 GFIS 数据字典 v0.1 和接口契约草案。
   - 现场采集真实工单、质检、入库、出库样本。

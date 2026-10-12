@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-C9A9990A7A
 title: GC-Knowledge Fabric P0 正式证据执行审阅人受理确认预览 dry-run v0.1
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -22,7 +22,7 @@ superseded_by: []
 
 本文档定义 P0-D64 的 reviewer acceptance acknowledgement 预览 dry-run。
 
-D64 承接 D63 routing receipt reviewer acceptance precheck preview，只预览候选审阅人接受确认回执需要具备的确认字段、接收矩阵、路由映射、回避复核、阻断码、保持条件、WAES 负向门禁和 Harness no-write 边界。
+D64 承接 D63 routing receipt reviewer acceptance precheck preview，只预览候选审阅人接受确认回执需要具备的确认字段、接收矩阵、路由映射、回避复核、阻断码、保持条件、WAME 负向门禁和 Harness no-write 边界。
 
 ## 2. 输入
 
@@ -51,7 +51,7 @@ D64 承接 D63 routing receipt reviewer acceptance precheck preview，只预览�
 - 不写 KDS、GFIS、GPC 或业务系统。
 - 不写 Harness evidence 或 formal evidence。
 - 不写收益分配或贡献积分。
-- 不覆盖 WAES 门禁。
+- 不覆盖 WAME 门禁。
 - 不提升 lifecycle。
 - 不标记 accepted / integrated / production_ready。
 

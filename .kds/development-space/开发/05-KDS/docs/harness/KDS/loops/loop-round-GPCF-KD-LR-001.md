@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-8DA5979C40
 title: Loop Round GPCF-KD-LR-001
 project: KDS
-related_projects: [GPC, WAES, KDS, Brain, PKC, GPCF]
+related_projects: [GPC, WAME, KDS, Brain, PKC, GPCF]
 domain: docs
 status: controlled
 version: v1.0

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-CODEGRAPH-DEV-EXECUTION-NO-SEND-DISPATCH-PRECHECK-20260626
 title: CodeGraph 开发执行层 No-send 派发预检 2026-06-26
 project: KDS
-related_projects: [GPC, WAES, KDS, GPCF]
+related_projects: [GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -48,7 +48,7 @@ superseded_by: []
 
 ## 预检后禁止
 
-禁止 actual dispatch、external API write、real KDS write、real WAES write、production write、deployment、git commit、git push 和 business status upgrade。
+禁止 actual dispatch、external API write、real KDS write、real WAME write、production write、deployment、git commit、git push 和 business status upgrade。
 
 ## 验证命令
 

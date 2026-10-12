@@ -1,17 +1,17 @@
 ---
 doc_id: GPCF-DOC-2C07E0A2D0
 title: gbrain-multitenant-deploy-v1-20260610-202348
-project: WAES
-related_projects: [GPC, WAES, KDS, Brain, GPCF]
+project: WAME
+related_projects: [GPC, WAME, KDS, Brain, GPCF]
 domain: harness-evidence
 status: archive
 version: v1.0
-owner: WAES
+owner: WAME
 kds_space: 开发
 kds_path: 开发/92-证据与会话归档/.harness/runs/gbrain-multitenant-deploy-v1-20260610-202348/README.md
 source_path: .harness/runs/gbrain-multitenant-deploy-v1-20260610-202348/README.md
 sync_direction: bidirectional
-last_reviewed: 2026-10-11
+last_reviewed: 2026-10-12
 supersedes: []
 superseded_by: []
 ---
@@ -24,7 +24,7 @@ superseded_by: []
 
 KDS 空间：`开发`
 
-关联项目：WAES
+关联项目：WAME
 
 受控规则：
 
@@ -36,6 +36,6 @@ KDS 空间：`开发`
 
 | doc_id | title | source_path | project | status |
 | --- | --- | --- | --- | --- |
-| GPCF-DOC-2C07E0A2D0 | gbrain-multitenant-deploy-v1-20260610-202348 | .harness/runs/gbrain-multitenant-deploy-v1-20260610-202348/README.md | WAES | archive |
-| GPCF-DOC-210BFA30D4 | Acceptance Matrix: gbrain-multitenant-deploy-v1 | .harness/runs/gbrain-multitenant-deploy-v1-20260610-202348/acceptance-matrix.md | WAES | archive |
-| GPCF-DOC-8352F39CCF | Harness Governance Status Audit: gbrain-multitenant-deploy-v1 | .harness/runs/gbrain-multitenant-deploy-v1-20260610-202348/status-audit.md | WAES | archive |
+| GPCF-DOC-2C07E0A2D0 | gbrain-multitenant-deploy-v1-20260610-202348 | .harness/runs/gbrain-multitenant-deploy-v1-20260610-202348/README.md | WAME | archive |
+| GPCF-DOC-210BFA30D4 | Acceptance Matrix: gbrain-multitenant-deploy-v1 | .harness/runs/gbrain-multitenant-deploy-v1-20260610-202348/acceptance-matrix.md | WAME | archive |
+| GPCF-DOC-8352F39CCF | Harness Governance Status Audit: gbrain-multitenant-deploy-v1 | .harness/runs/gbrain-multitenant-deploy-v1-20260610-202348/status-audit.md | WAME | archive |

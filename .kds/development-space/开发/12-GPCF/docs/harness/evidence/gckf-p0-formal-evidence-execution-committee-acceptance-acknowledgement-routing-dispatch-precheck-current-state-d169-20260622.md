@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-GCKFP0FORMALEVIDENCEEXECUTIONCOMMITTEEACCEPTANCEACKNOWLEDGEMENTROUTINGDISPATCHPRECHECKCURRENTSTATED16920260622
 title: GCKF P0 正式 evidence 委员会受理确认 routing dispatch precheck 当前态证据 D169
 project: GPCF
-related_projects: [GPCF, WAES]
+related_projects: [GPCF, WAME]
 domain: docs
 status: controlled
 version: v1.0

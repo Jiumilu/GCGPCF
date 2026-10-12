@@ -2,7 +2,7 @@
 doc_id: GPCF-LOOP-UI-STUDIO-WORKBENCH-014
 title: Loop Round GPCF-UI-STUDIO-WORKBENCH-014
 project: GPCF
-related_projects: [GPC, WAES, GPCF, Studio]
+related_projects: [GPC, WAME, GPCF, Studio]
 domain: docs
 status: controlled
 version: v1.0

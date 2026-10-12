@@ -3,7 +3,7 @@ doc_id: GPCF-DOC-6C0AA9099
 title: WAS Real Source Record Monitor 099 证据
 project: KDS
 related_projects: [GFIS, GPC, PVAOS, WAME, KDS, GPCF]
-domain: ontology-governance
+domain: docs
 status: controlled
 version: v1.0
 owner: KDS

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-3874DD0406
 title: GlobalCloud 智能体团队PMBOK项目管理台账
 project: XiaoC
-related_projects: [GPC, WAES, XiaoC]
+related_projects: [GPC, WAME, XiaoC]
 domain: agent-team
 status: controlled
 version: v1.0

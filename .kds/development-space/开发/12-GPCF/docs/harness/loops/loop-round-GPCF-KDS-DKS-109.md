@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-8B1529EEB1
 title: LOOP Round GPCF-KDS-DKS-109 - GFIS Assistant Repair Prompt Checklist No-write
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, Brain, PKC, MMC, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, Brain, PKC, MMC, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -20,18 +20,18 @@ superseded_by: []
 
 ## 本轮目标
 
-在 DKS-108 `GFIS Assistant WAES Guidance Packet No-write` 之后，建立 GFIS Assistant 面向操作人的修复提示清单。
+在 DKS-108 `GFIS Assistant WAME Guidance Packet No-write` 之后，建立 GFIS Assistant 面向操作人的修复提示清单。
 
-本轮只允许把 WAES guidance、文档验收、metadata-only、委员会材料和冻结风险转成可读 checklist，不允许提交 evidence，不允许创建真实 KWE WorkItem、GapRecord、BountyRecord 或 WAES Gate Result，不允许推进 KDS 生命周期，不允许写回 GFIS/GPC/ERP/MES。
+本轮只允许把 WAME guidance、文档验收、metadata-only、委员会材料和冻结风险转成可读 checklist，不允许提交 evidence，不允许创建真实 KWE WorkItem、GapRecord、BountyRecord 或 WAME Gate Result，不允许推进 KDS 生命周期，不允许写回 GFIS/GPC/ERP/MES。
 
 ## 本轮输入
 
 - `docs/harness/loops/loop-round-GPCF-KDS-DKS-108.md`
-- `docs/gc-knowledge-fabric/gfis-assistant-waes-guidance-packet-policy.md`
-- `okf/gfis-assistant-waes-guidance-packet-policy.yaml`
-- `packages/shared/src/knowledge/gfis-assistant-waes-guidance-packet.ts`
-- `fixtures/gfis/waes-guidance-packet-dry-run.json`
-- `scripts/gfis/validate_gfis_assistant_waes_guidance_packet.py`
+- `docs/gc-knowledge-fabric/gfis-assistant-wame-guidance-packet-policy.md`
+- `okf/gfis-assistant-wame-guidance-packet-policy.yaml`
+- `packages/shared/src/knowledge/gfis-assistant-wame-guidance-packet.ts`
+- `fixtures/gfis/wame-guidance-packet-dry-run.json`
+- `scripts/gfis/validate_gfis_assistant_wame_guidance_packet.py`
 
 ## 本轮动作
 
@@ -82,7 +82,7 @@ superseded_by: []
 - `create_gap_record`
 - `create_bounty_record`
 - `create_kwe_work_item`
-- `create_waes_gate_result`
+- `create_wame_gate_result`
 - `approve_business_write`
 - `promote_lifecycle`
 
@@ -91,7 +91,7 @@ superseded_by: []
 ### DKS-109 validator
 
 ```text
-gfis_assistant_repair_prompt_checklist=pass checklists=4 items=5 repair_required=1 open=1 blocked=2 metadata_only_items=3 submits_evidence=0 creates_gap_records=0 creates_bounty_records=0 creates_kwe_work_items=0 creates_waes_gate_results=0 approves_business_write=0 promotes_lifecycle=0 checklists_with_blocked_actions=4 writes_gfis=0 writes_gpc=0 writes_erp=0 writes_mes=0 writes_waes_gate_result=0 writes_kwe_work_item=0 writes_gap_record=0 writes_bounty_record=0 writes_kds_lifecycle=0 writes_kds_fact=0 writes_kds_accepted_fact=0 writes_target_receipt=0 writes_committee_decision_completion=0 writes_revenue_or_score_confirmation=0 writes_quota_transfer=0 writes_bounty_settlement=0 writes_external_api=0
+gfis_assistant_repair_prompt_checklist=pass checklists=4 items=5 repair_required=1 open=1 blocked=2 metadata_only_items=3 submits_evidence=0 creates_gap_records=0 creates_bounty_records=0 creates_kwe_work_items=0 creates_wame_gate_results=0 approves_business_write=0 promotes_lifecycle=0 checklists_with_blocked_actions=4 writes_gfis=0 writes_gpc=0 writes_erp=0 writes_mes=0 writes_wame_gate_result=0 writes_kwe_work_item=0 writes_gap_record=0 writes_bounty_record=0 writes_kds_lifecycle=0 writes_kds_fact=0 writes_kds_accepted_fact=0 writes_target_receipt=0 writes_committee_decision_completion=0 writes_revenue_or_score_confirmation=0 writes_quota_transfer=0 writes_bounty_settlement=0 writes_external_api=0
 ```
 
 ### coverage gate
@@ -117,11 +117,11 @@ tsc -p packages/api/tsconfig.json --noEmit
 
 ### 全量 no-write 回归
 
-已通过 GFIS、WAES、KWE、KDS、Brain/PKC、RAG、MMC、治理账本、coverage、OKF parse 与 TypeScript 编译链路。关键 no-write 计数保持为 0：
+已通过 GFIS、WAME、KWE、KDS、Brain/PKC、RAG、MMC、治理账本、coverage、OKF parse 与 TypeScript 编译链路。关键 no-write 计数保持为 0：
 
 - GFIS/GPC/ERP/MES 写入：0
 - KDS lifecycle / fact / accepted fact 写入：0
-- WAES Gate Result 写入：0
+- WAME Gate Result 写入：0
 - KWE WorkItem 写入：0
 - GapRecord / BountyRecord 创建：0
 - Target Receipt 写入：0
@@ -150,4 +150,4 @@ DKS-110 建议进入 `GFIS Assistant Repair Submission Intake No-write`：
 
 ## 本轮结论
 
-DKS-109 满足本轮 Definition of Done：GFIS Assistant 可以把 WAES guidance 与修复要求转成受控、可展示、可验证的 repair prompt checklist，但没有形成任何正式提交、正式工单、正式门禁结果、正式业务写回或正式收益/积分/额度/悬赏动作。
+DKS-109 满足本轮 Definition of Done：GFIS Assistant 可以把 WAME guidance 与修复要求转成受控、可展示、可验证的 repair prompt checklist，但没有形成任何正式提交、正式工单、正式门禁结果、正式业务写回或正式收益/积分/额度/悬赏动作。

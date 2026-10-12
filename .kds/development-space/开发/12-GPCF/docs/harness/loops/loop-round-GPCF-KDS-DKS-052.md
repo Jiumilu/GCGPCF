@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-079B8FB8E5
 title: LOOP Round GPCF-KDS-DKS-052 - 葛化辽宁远航补证请求包与金融凭证脱敏索引空白填报包
 project: GPCF
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -40,7 +40,7 @@ superseded_by: []
 
 ## 2. 多 agent 判断
 
-本轮适合有限多 agent 并行：读侧可并行核查葛化/GFIS/辽宁远航、湖北磷材、积分收益与 RAG/WAES；写侧不适合并行，因为新增文档、LOOP 记录、KDS 本地镜像、文档台账和状态口径均为共享对象。
+本轮适合有限多 agent 并行：读侧可并行核查葛化/GFIS/辽宁远航、湖北磷材、积分收益与 RAG/WAME；写侧不适合并行，因为新增文档、LOOP 记录、KDS 本地镜像、文档台账和状态口径均为共享对象。
 
 执行方式：3 个 explorer 只读核查，主 agent 统一写入、合并、验证和收口。
 
@@ -48,14 +48,14 @@ superseded_by: []
 |---|---|---|
 | 葛化 / GFIS / 辽宁远航 | GFIS 合成链路可关闭，但真实业务链路仍为 `repair_required`；辽宁远航缺客户确认、采购订单/合同、POD、质量、金融凭证和责任方响应，不得写成 runtime verified artifact | `KSP-GH-LY-D052-001` 只做补证请求包和人工确认候选 |
 | 湖北磷材 | 湖北磷材当前适合作为第二并行线，重点是拓厂项目、原料/行业/订单、新工厂复制模板；不混入本轮葛化 DKS-052 填报包 | 保持 DKS-052 范围只处理葛化辽宁远航和金融凭证 |
-| 积分 / 收益 / AI 额度 / WAES / RAG | 金融凭证默认 `DSR-L3`；收益和积分不得自动确认；悬赏未冻结资源不得发布；自购 AI 额度先自用；WAES 只记录规则和边界，不替代业务主账或委员会裁决 | `FEI-GH-D052-001` 只做脱敏索引和门禁记录候选 |
+| 积分 / 收益 / AI 额度 / WAME / RAG | 金融凭证默认 `DSR-L3`；收益和积分不得自动确认；悬赏未冻结资源不得发布；自购 AI 额度先自用；WAME 只记录规则和边界，不替代业务主账或委员会裁决 | `FEI-GH-D052-001` 只做脱敏索引和门禁记录候选 |
 
 ## 3. 本轮目标
 
 将 DKS-051 的两个模板推进为可交给责任方填报的空白包：
 
 1. `KSP-GH-LY-D052-001`：辽宁远航客户确认、采购订单/合同、样箱、质量、发货、POD、责任方提交包。
-2. `FEI-GH-D052-001`：金融凭证 DSR-L3 脱敏索引、保管责任、可见范围和 WAES 门禁填报表。
+2. `FEI-GH-D052-001`：金融凭证 DSR-L3 脱敏索引、保管责任、可见范围和 WAME 门禁填报表。
 
 ## 4. 本轮动作
 
@@ -109,7 +109,7 @@ superseded_by: []
 - 接收真实外部资料；
 - 派发真实补证请求；
 - 接收或保存金融凭证原文；
-- GFIS、WAES、KDS API、GPC、PVAOS、Finance 或生产系统写入；
+- GFIS、WAME、KDS API、GPC、PVAOS、Finance 或生产系统写入；
 - 悬赏发布、资源冻结、积分确认或收益分配；
 - 人工签认或委员会裁决；
 - 关闭 GFIS `real_business_lane=repair_required`；

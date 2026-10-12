@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-F57E6B4E33
 title: Loop Round GPCF-CODEGRAPH-PROJECT-GROUP-001
 project: GPCF
-related_projects: [GFIS, GPC, WAES, GPCF, Studio]
+related_projects: [GFIS, GPC, WAME, GPCF, Studio]
 domain: docs
 status: controlled
 version: v1.0

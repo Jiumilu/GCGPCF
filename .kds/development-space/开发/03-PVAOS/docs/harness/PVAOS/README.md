@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-C16FB51046
 title: PVAOS
 project: PVAOS
-related_projects: [GPC, PVAOS, WAES, KDS, GPCF]
+related_projects: [GPC, PVAOS, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/03-PVAOS/docs/harness/PVAOS/README.md
 source_path: docs/harness/PVAOS/README.md
 sync_direction: bidirectional
-last_reviewed: 2026-10-11
+last_reviewed: 2026-10-12
 supersedes: []
 superseded_by: []
 ---

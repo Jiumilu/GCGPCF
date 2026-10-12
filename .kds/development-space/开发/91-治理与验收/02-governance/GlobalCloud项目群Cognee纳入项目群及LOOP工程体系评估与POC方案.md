@@ -1,12 +1,12 @@
 ---
 doc_id: GPCF-DOC-3A9B7F4E12
 title: GlobalCloud 项目群 Cognee 纳入项目群及 LOOP 工程体系评估与 POC 方案
-project: WAES
-related_projects: [GPC, PVAOS, WAES, KDS, Brain, GPCF]
+project: WAME
+related_projects: [GPC, PVAOS, WAME, KDS, Brain, GPCF]
 domain: governance
 status: controlled
 version: v1.0
-owner: WAES
+owner: WAME
 kds_space: 开发
 kds_path: 开发/91-治理与验收/02-governance/GlobalCloud项目群Cognee纳入项目群及LOOP工程体系评估与POC方案.md
 source_path: 02-governance/GlobalCloud项目群Cognee纳入项目群及LOOP工程体系评估与POC方案.md
@@ -38,12 +38,12 @@ superseded_by: []
 
 - 长期上下文记忆（跨任务、跨会话）候选
 - 语义检索/召回增强（尤其适合方案内回放）
-- 失败经验复用候选（待 WAES 批准后写入）
+- 失败经验复用候选（待 WAME 批准后写入）
 
 不作为：
 
 - 业务事实源（Source of Record）
-- WAES 代替品
+- WAME 代替品
 - KDS 或 Brain 的正式知识源替代
 - 未授权生产写入入口
 
@@ -67,8 +67,8 @@ superseded_by: []
 ### 3.2 风险评估（高优先级）
 
 - 语义漂移导致误召回、误导性建议
-- 与 WAES 门禁边界不一致导致越权记忆写入
-- 与现网 Headroom/Waes 检索链路冲突
+- 与 WAME 门禁边界不一致导致越权记忆写入
+- 与现网 Headroom/Wame 检索链路冲突
 - 运营成本与 token 变化不透明
 
 ### 3.3 风险缓解
@@ -82,15 +82,15 @@ superseded_by: []
 
 ### 4.1 与 LOOP 边界对齐
 
-- 认定：gpcf-loop 的真实进展仍由 harness evidence、WAES 审核与 production-runtime 等级决定。
+- 认定：gpcf-loop 的真实进展仍由 harness evidence、WAME 审核与 production-runtime 等级决定。
 - 认定：cognee 的成功不等于业务完成。
 - 认定：任何 production API write / external write / deploy / commit / push 仍需明示授权。
 
-### 4.2 与 KDS / Brain / WAES 对齐
+### 4.2 与 KDS / Brain / WAME 对齐
 
 - KDS 仍是项目事实与知识源。
 - Brain 仍为知识引擎与检索编排。
-- WAES 保留最终门禁与策略裁决。
+- WAME 保留最终门禁与策略裁决。
 - cognee 不变更 AGENTS、CLAUDE、项目源文档。
 
 ## 5. 试点实施方案（2 周）
@@ -108,7 +108,7 @@ superseded_by: []
 
 ```text
 Agent Runtime
- ├─ 主链：Headroom/现有 LCX Retrieval -> WAES -> 业务输出
+ ├─ 主链：Headroom/现有 LCX Retrieval -> WAME -> 业务输出
  ├─ 并行链：Cognee Recall -> 证据标注 -> 候选补充
  └─ 两链统一输出到 Loop evidence，记录 source_tag 与 confidence
 ```
@@ -202,9 +202,9 @@ Agent Runtime
   - 不开启生产代理自动写入
 
 - 要求保留的事（MUST）：
-  - WAES marker 全量打点
+  - WAME marker 全量打点
   - Harness evidence 全量回放
-  - 任何写入需 owner+WAES 双授权
+  - 任何写入需 owner+WAME 双授权
   - 停止条件可回退并可复盘
 
 ## 9. 变更建议（下一个动作）
@@ -212,5 +212,5 @@ Agent Runtime
 建议优先做清单：
 
 1. 在 `02-governance` 下建立 1 页“COGNEE 接入白名单清单”
-2. 先补齐 `LOOP_EXECUTION_RULES`/WAES marker 与现有日志 schema 的字段映射
+2. 先补齐 `LOOP_EXECUTION_RULES`/WAME marker 与现有日志 schema 的字段映射
 3. 完成 P0 配置并给出是否进入 P1 的 `Go/No-Go` 审批材料

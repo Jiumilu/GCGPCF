@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-E53A07CE0C
 title: GFIS Assistant Repair Notification Snooze Queue Approval Route Preview No-write 规则
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, Brain, PKC]
+related_projects: [GFIS, GPC, WAME, KDS, Brain, PKC]
 domain: docs
 status: controlled
 version: v1.0
@@ -74,7 +74,7 @@ superseded_by: []
 - createsExternalSharePermission = false。
 - createsPublicationApproval = false。
 - createsHarnessEvidence = false。
-- createsWaesGateResult = false。
+- createsWameGateResult = false。
 - createsKweWorkItem = false。
 - persistsEvidence = false。
 - approvesBusinessWrite = false。
@@ -90,7 +90,7 @@ superseded_by: []
 - writesApprovalRequest / writesApprovalDecision。
 - writesShareLink / writesAclGrant / writesExternalSharePermission。
 - writesPublicationApproval。
-- writesWaesGateResult / writesKweWorkItem / writesHarnessEvidence。
+- writesWameGateResult / writesKweWorkItem / writesHarnessEvidence。
 - writesKdsLifecycle / writesKdsFact / writesKdsAcceptedFact。
 - writesExternalApi。
 

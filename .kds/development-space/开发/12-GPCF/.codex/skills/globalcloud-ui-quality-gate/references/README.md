@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-F6E5D4C3B2
 title: references
 project: GPCF
-related_projects: [GPC, WAES, KDS, GPCF]
+related_projects: [GPC, WAME, KDS, GPCF]
 domain: operational-skill
 status: operational_controlled
 version: v1.0

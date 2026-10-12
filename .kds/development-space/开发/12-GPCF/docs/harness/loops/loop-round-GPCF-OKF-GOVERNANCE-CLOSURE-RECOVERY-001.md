@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-55A6B73433
 title: Loop Round GPCF-OKF-GOVERNANCE-CLOSURE-RECOVERY-001
 project: GPCF
-related_projects: [GPC, WAES, KDS, GPCF]
+related_projects: [GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-5CF2361DE8
 title: CodeGraph Studio sync-only precheck 证据
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, Brain, GPCF, Studio]
+related_projects: [GFIS, GPC, WAME, KDS, Brain, GPCF, Studio]
 domain: docs
 status: controlled
 version: v1.0
@@ -86,7 +86,7 @@ Studio 索引闭合不等于业务开发闭合；下一轮应转回 Brain/GFIS/K
 - 不声明 release、deployment、workflow release write。
 - 不声明 commit 或 push。
 - 不声明 Brain、GFIS、KDS sync-only closure 完成。
-- 不声明 CodeGraph 可替代 WAES、Harness 或人工验收裁决。
+- 不声明 CodeGraph 可替代 WAME、Harness 或人工验收裁决。
 
 ## 下一轮
 

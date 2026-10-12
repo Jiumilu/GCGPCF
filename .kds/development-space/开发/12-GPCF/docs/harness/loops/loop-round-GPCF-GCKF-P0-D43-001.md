@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-C3C1B47BE9
 title: Loop Round GPCF-GCKF-P0-D43-001
 project: GPCF
-related_projects: [GPC, WAES, GPCF]
+related_projects: [GPC, WAME, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -52,10 +52,10 @@ superseded_by: []
 
 - 签署回执预览 SOP 候选：D42 approval packet preview → D43 signer receipt preview → 后续 signer receipt escalation digest preview。
 
-## 本轮 WAES 门禁结果
+## 本轮 WAME 门禁结果
 
 - 当前仅为 dry-run preview。
-- 不允许自动越过 WAES / KWE / Harness。
+- 不允许自动越过 WAME / KWE / Harness。
 - 不允许由 AI 或脚本直接形成正式回执、正式审批、正式 evidence 或 accepted 生命周期。
 
 ## 本轮人工确认事项

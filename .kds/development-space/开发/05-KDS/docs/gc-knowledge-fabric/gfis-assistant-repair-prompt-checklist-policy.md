@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-659DE796AC
 title: GFIS Assistant Repair Prompt Checklist No-write 规则
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS]
+related_projects: [GFIS, GPC, WAME, KDS]
 domain: docs
 status: controlled
 version: v1.0
@@ -20,7 +20,7 @@ superseded_by: []
 
 ## 1. 定位
 
-GFIS Assistant Repair Prompt Checklist 是 DKS-108 `GFIS Assistant WAES Guidance Packet` 之后的操作补证清单。
+GFIS Assistant Repair Prompt Checklist 是 DKS-108 `GFIS Assistant WAME Guidance Packet` 之后的操作补证清单。
 
 它把 guidance packet 中的门禁解释和补证提示转成可展示、可勾选、可追踪的 checklist 候选，帮助操作人员理解还缺哪些来源、证据、权限确认、metadata-only 处理或委员会材料。
 
@@ -31,7 +31,7 @@ Checklist 只能展示补证要求，不得直接执行以下动作：
 - 提交资料；
 - 创建真实 KWE WorkItem；
 - 创建 GapRecord 或 BountyRecord；
-- 写入 WAES Gate Result；
+- 写入 WAME Gate Result；
 - 改变 KDS lifecycle；
 - 写入 KDS fact 或 accepted fact；
 - 写入 GFIS / GPC / ERP / MES；
@@ -77,7 +77,7 @@ Checklist 只能展示补证要求，不得直接执行以下动作：
 - create_gap_record；
 - create_bounty_record；
 - create_kwe_work_item；
-- create_waes_gate_result；
+- create_wame_gate_result；
 - approve_business_write；
 - promote_lifecycle。
 
@@ -85,4 +85,4 @@ Checklist 只能展示补证要求，不得直接执行以下动作：
 
 Repair Prompt Checklist 不是资料提交，不是验收通过，不是写回批准。
 
-它只把 GFIS Assistant 的 WAES guidance 转成操作人员可读的候选清单。任何资料提交、缺口创建、门禁结果、工单、状态提升或业务写回，都必须进入后续受控流程。
+它只把 GFIS Assistant 的 WAME guidance 转成操作人员可读的候选清单。任何资料提交、缺口创建、门禁结果、工单、状态提升或业务写回，都必须进入后续受控流程。

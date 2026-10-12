@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-3DB2BD8346
 title: GPCF CodeGraph Sync-only Closure 010 Authorized
 project: GPCF
-related_projects: [GPC, WAES, KDS, Brain, GPCF, Studio]
+related_projects: [GPC, WAME, KDS, Brain, GPCF, Studio]
 domain: docs
 status: controlled
 version: v1.0
@@ -51,4 +51,4 @@ superseded_by: []
 
 Brain/Studio 的 CodeGraph sync-only closure 已按授权执行完成。Brain 与 Studio 当前 pending=0，`.codegraph/` Git status 为空。本轮未进入业务开发，未提交、未推送、未部署，未升级 accepted / integrated / production_ready。
 
-下一轮进入 `GPCF-CODEGRAPH-PROJECT-GROUP-STEADY-STATE-RECHECK-011`，重点复核 14 仓稳态、漂移阈值与 Loop/Harness/WAES/KDS 接入证据。
+下一轮进入 `GPCF-CODEGRAPH-PROJECT-GROUP-STEADY-STATE-RECHECK-011`，重点复核 14 仓稳态、漂移阈值与 Loop/Harness/WAME/KDS 接入证据。

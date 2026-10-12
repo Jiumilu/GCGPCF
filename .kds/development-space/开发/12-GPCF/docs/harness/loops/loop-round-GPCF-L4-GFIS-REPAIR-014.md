@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-8AB30F85DB
 title: GPCF-L4-GFIS-REPAIR-014 GFIS Sync Event Candidate Fallback
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, Brain, PKC, XiaoG, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, Brain, PKC, XiaoG, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -53,9 +53,9 @@ GFIS 运行层现在可以在未授权 schema sync/migrate 的情况下，通过
 
 - 3 个样品段候选。
 - 4 个运行层证据候选。
-- 1 个 WAES/KDS/Brain/PKC/XiaoG 交接候选。
+- 1 个 WAME/KDS/Brain/PKC/XiaoG 交接候选。
 
-完整 SOP E2E 仍保持 `repair_required`，原因是 5 项 KDS 葛化真实业务输入、POD、WAES/KDS 回执和运行层 UAT evidence 仍缺。项目群评分保持 79/100 repair，不恢复 100/100。
+完整 SOP E2E 仍保持 `repair_required`，原因是 5 项 KDS 葛化真实业务输入、POD、WAME/KDS 回执和运行层 UAT evidence 仍缺。项目群评分保持 79/100 repair，不恢复 100/100。
 
 ## 禁止与边界
 

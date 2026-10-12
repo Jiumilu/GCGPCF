@@ -2,7 +2,7 @@
 doc_id: GPCF-LOOP-GCKF-P0-D88-001
 title: Loop Round GPCF-GCKF-P0-D88-001
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -55,6 +55,6 @@ execution_mode=local_evidence_no_write
 
 ## 反馈
 
-当前中文化债务仍存在，门禁应保持 `rework_required`。本轮只把 369 个命中项聚合成 9 个目录级 work item，便于后续 scoped 分批修复；不直接批量改写正文，不改变 GC-Knowledge Fabric candidate/no-write 边界，不改变 GFIS `real_business_lane=repair_required`，不创建真实 source-of-record、runtime primary key、review queue、runtime intake、WAES review 或 verified artifact，不执行真实 KDS API 写入或业务系统写回，不升级 accepted、integrated 或 production_ready。
+当前中文化债务仍存在，门禁应保持 `rework_required`。本轮只把 369 个命中项聚合成 9 个目录级 work item，便于后续 scoped 分批修复；不直接批量改写正文，不改变 GC-Knowledge Fabric candidate/no-write 边界，不改变 GFIS `real_business_lane=repair_required`，不创建真实 source-of-record、runtime primary key、review queue、runtime intake、WAME review 或 verified artifact，不执行真实 KDS API 写入或业务系统写回，不升级 accepted、integrated 或 production_ready。
 
 下一轮建议 D89：从 D88 workpack 中选择 `docs/gc-knowledge-fabric` bucket，做第一批 scoped 中文化修复预检和小范围可回滚修复。

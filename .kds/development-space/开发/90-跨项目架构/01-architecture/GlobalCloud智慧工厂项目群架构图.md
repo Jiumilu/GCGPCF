@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-475051A08A
 title: GlobalCloud 绿色供应链体系项目群架构图
 project: GPCF
-related_projects: [GFIS, GPC, PVAOS, WAES, Brain, XiaoC, XGD, XiaoG, GPCF, Studio]
+related_projects: [GFIS, GPC, PVAOS, WAME, Brain, XiaoC, XGD, XiaoG, GPCF, Studio]
 domain: architecture
 status: controlled
 version: v1.0
@@ -24,7 +24,7 @@ superseded_by: []
 当前阅读口径：
 
 1. 平台主线系统看 `GPC`。
-2. `WAES` 是治理平面，不是业务主账。
+2. `WAME` 是治理平面，不是业务主账。
 3. `GFIS` 是工厂事实平面。
 4. 宪法内容以治理门禁方式进入图中，不单独形成业务平台。
 
@@ -34,7 +34,7 @@ superseded_by: []
 flowchart TB
   subgraph GOV["治理与监控层"]
     Harness["GlobalCloud 开发控制台<br/>Harness Engineering<br/>项目注册 / Manifest / 验收 / 状态纪律"]
-    WAES["GlobalCloud WAES<br/>跨系统控制塔 / Agent Desktop<br/>规则 / 证据 / 状态治理<br/>指标 / 风险 / 异常 / 复盘"]
+    WAME["GlobalCloud WAME<br/>跨系统控制塔 / Agent Desktop<br/>规则 / 证据 / 状态治理<br/>指标 / 风险 / 异常 / 复盘"]
     Brain["GlobalCloud Brain<br/>长期知识库 / SOP / RAG<br/>案例 / 标准 / 质量与物流知识"]
     XiaoC["GlobalCloud XiaoC（蚁后）<br/>Prompt / MCP / 模型路由<br/>Agent 模板 / 任务拆解 / 汇总评估"]
     Hermes["GlobalCloud XiaoG Agent<br/>Hermes WebUI<br/>轻量执行入口 / 后台任务 / 会话工具"]
@@ -58,24 +58,24 @@ flowchart TB
   Edge --> GFIS
   GFIS --> LocalOps
 
-  GFIS -- "确认事件<br/>订单 / 工单 / 质检 / 库存 / 发货" --> WAES
+  GFIS -- "确认事件<br/>订单 / 工单 / 质检 / 库存 / 发货" --> WAME
   GFIS -- "发货出库 / 产能 / 库存 / 质量状态" --> GPC
   GPC -- "订单协同 / 到货预约 / 运输 / 签收回单" --> GFIS
   Odoo -. "可选 back-office 集成" .-> GPC
   PVAOS -- "组织 / 项目 / 伙伴 / 客户入口" --> GPC
-  PVAOS -- "生态协作状态" --> WAES
+  PVAOS -- "生态协作状态" --> WAME
 
-  WAES -- "只读看板 / 风险 / 治理 / 证据" --> Hermes
-  WAES -- "治理待办 / 预警 / 证据结果" --> XGD
+  WAME -- "只读看板 / 风险 / 治理 / 证据" --> Hermes
+  WAME -- "治理待办 / 预警 / 证据结果" --> XGD
   Brain -- "SOP / 规则 / 案例 / 知识上下文" --> XiaoC
   XiaoC -- "Agent Prompt / MCP / 模型路由 / 任务拆解" --> Hermes
-  Hermes -- "日报 / 异常摘要 / 建议草案" --> WAES
+  Hermes -- "日报 / 异常摘要 / 建议草案" --> WAME
   XGD -- "长程分析 / 语音查询 / 异常上报 / 现场提醒" --> Hermes
 
   Harness -. "工程边界 / 命令入口 / 验收证据" .-> GFIS
   Harness -. "工程边界 / 命令入口 / 验收证据" .-> GPC
   Harness -. "工程边界 / 命令入口 / 验收证据" .-> PVAOS
-  Harness -. "工程边界 / 命令入口 / 验收证据" .-> WAES
+  Harness -. "工程边界 / 命令入口 / 验收证据" .-> WAME
   Harness -. "工程边界 / 命令入口 / 验收证据" .-> Brain
   Harness -. "工程边界 / 命令入口 / 验收证据" .-> XiaoC
   Harness -. "工程边界 / 命令入口 / 验收证据" .-> Hermes
@@ -89,7 +89,7 @@ flowchart TB
 
   class Field,Edge,GFIS,LocalOps execution;
   class GPC,PVAOS,Odoo platform;
-  class WAES tower;
+  class WAME tower;
   class Brain,XiaoC,Hermes,XGD ai;
   class Harness gov;
 ```
@@ -98,7 +98,7 @@ flowchart TB
 
 1. **GFIS 是单厂执行事实源**：生产、质量、库存、设备、发货等最终业务事实归 GFIS。
 2. **GPC 是跨企业协同平台**：供应商、客户、运输、签收、公共服务和绿色供应链协同归 GPC；Odoo GPC 仅保留为历史原型或可选 back-office connector。
-3. **WAES 是治理与监控中枢和证据平面**：聚合指标、风险、治理规则、证据，不审批具体事务，不直接改写生产主账。
+3. **WAME 是治理与监控中枢和证据平面**：聚合指标、风险、治理规则、证据，不审批具体事务，不直接改写生产主账。
 4. **Brain/XiaoC（蚁后）/Hermes/XGD（大象） 是 AI 支撑层**：Brain 提供知识，XiaoC 负责能力生产、模型路由、任务拆解和汇总，Hermes/XGD 承载长程 Agent、重分析和多端交互。
 5. **Harness 是工程治理底座**：约束所有项目的边界、命令、验证、人工确认和状态纪律。
 6. **四流是横向校验口径**：治理流约束业务流，业务流产生数据流，数据流支撑治理流，AI 服务流消费数据流并受治理流约束。
@@ -114,6 +114,6 @@ flowchart LR
   L4 --> L5["L5 安全关键控制<br/>AI 不得接管"]
 
   AI["Brain / XiaoC / Hermes / XGD（大象）"] -. "只能到 L1-L3 默认能力" .-> L3
-  WAES["WAES 治理与证据台账"] -. "承接 L4 治理授权" .-> L4
+  WAME["WAME 治理与证据台账"] -. "承接 L4 治理授权" .-> L4
   GFIS["GFIS / GPC 主责系统"] -. "承接具体事务确认" .-> L4
 ```

@@ -495,4 +495,3 @@ superseded_by: []
    - iteration 34、35 连续两轮「采集本地可回放证据」无实质进展；api/summary 两类均依赖真实接入，本地隔离不可能满足；本地纵切（33 项 scope 主体、e2e）已达成。
 5. 是否可以提交？
    - 是（stage-1 冻结记录）。恢复条件＝真实接入就绪（stage-2 启动时重采 API/summary 证据）。
-

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-6FD038491B
 title: ODF Phase 2 扩大样本验证闭环报告
 project: KDS
-related_projects: [WAES, KDS]
+related_projects: [WAME, KDS]
 domain: docs
 status: controlled
 version: v1.0

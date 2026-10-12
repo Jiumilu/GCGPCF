@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-192890AD56
 title: GFIS 单据与记录候选清单
 project: GFIS
-related_projects: [GFIS, GPC, WAES, GPCF]
+related_projects: [GFIS, GPC, WAME, GPCF]
 domain: evidence
 status: controlled
 version: v1.0

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-XWAIL-REAL-RUNTIME-BASELINE-20260624
 title: XWAIL 真实运行基线证据 2026-06-24
 project: GPCF
-related_projects: [GPC, WAES, GPCF]
+related_projects: [GPC, WAME, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -22,7 +22,7 @@ superseded_by: []
 
 本文记录 XWAIL 在 `GlobalCloud 项目群实施方案` 下的首轮真实运行基线采集结果。
 
-本文只证明本轮已检查 XWAIL 仓库的可执行入口、项目群治理验证和当前阻塞；不声明 XWAIL Validator 已实现，不声明 XWAIL 工具链闭环完成，不声明 WAES 发布或 AaaS 绑定完成。
+本文只证明本轮已检查 XWAIL 仓库的可执行入口、项目群治理验证和当前阻塞；不声明 XWAIL Validator 已实现，不声明 XWAIL 工具链闭环完成，不声明 WAME 发布或 AaaS 绑定完成。
 
 ## 2. 执行环境
 
@@ -81,7 +81,7 @@ xwail_repair_required = validator_commands_missing
 
 - 不登记 XWAIL Validator 已实现；
 - 不登记 XWAIL 工具链闭环完成；
-- 不登记任何模型已通过 WAES 发布；
+- 不登记任何模型已通过 WAME 发布；
 - 不登记任何 AaaS ServicePackage 已绑定 XWAIL 已发布模型；
 - 不登记客户验收通过。
 

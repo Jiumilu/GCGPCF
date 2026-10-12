@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-B680DAF761
 title: was-real-source-record-monitor-20260621
 project: GPCF
-related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio, WAS]
+related_projects: [GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -15,6 +15,7 @@ last_reviewed: 2026-06-24
 supersedes: []
 superseded_by: []
 ---
+
 required_p4_inputs | `6`
 submitted_real_inputs | `0`
 accepted_for_next_gate | `0`

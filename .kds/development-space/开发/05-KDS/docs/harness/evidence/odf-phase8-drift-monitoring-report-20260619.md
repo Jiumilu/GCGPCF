@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-F79CA37779
 title: ODF Phase 8 漂移监控报告
 project: KDS
-related_projects: [WAES, KDS]
+related_projects: [WAME, KDS]
 domain: docs
 status: controlled
 version: v1.0

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-15D17CA64A
 title: ODF Phase 4 小批量准入试运行闭环报告
 project: KDS
-related_projects: [WAES, KDS]
+related_projects: [WAME, KDS]
 domain: docs
 status: controlled
 version: v1.0

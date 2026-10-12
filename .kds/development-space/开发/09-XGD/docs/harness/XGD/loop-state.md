@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-B8F78D5CEF
 title: GlobalCloud XGD Loop State
 project: XGD
-related_projects: [GPC, WAES, KDS, Brain, XGD, GPCF]
+related_projects: [GPC, WAME, KDS, Brain, XGD, GPCF]
 domain: docs
 status: controlled
 version: v1.0

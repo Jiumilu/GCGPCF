@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-931CDE09CE
 title: KDS OKF v0.1 Agent 消费 smoke 测试证据
 project: KDS
-related_projects: [WAES, KDS, GPCF]
+related_projects: [WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0

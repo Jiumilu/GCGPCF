@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-887051BE9B
 title: Loop Round GPCF-L4-GFIS-REPAIR-140
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -70,12 +70,12 @@ GFIS git diff --check -- .: pass
 - 首批 1 吨闭环验收记录。
 - 出厂全检记录。
 - 客户验收单/POD。
-- WAES evidence confirmation。
+- WAME evidence confirmation。
 - KDS backlink write receipt。
 
 ## 禁止升级声明
 
-本轮不把合同审阅/修订稿写成已签约、已验收、已投产或 verified artifact；不释放 review queue、runtime intake、WAES review、POD、KDS write receipt、accepted 或 integrated。
+本轮不把合同审阅/修订稿写成已签约、已验收、已投产或 verified artifact；不释放 review queue、runtime intake、WAME review、POD、KDS write receipt、accepted 或 integrated。
 
 ## 真实计数
 

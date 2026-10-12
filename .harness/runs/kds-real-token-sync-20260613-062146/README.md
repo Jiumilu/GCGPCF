@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/92-证据与会话归档/.harness/runs/kds-real-token-sync-20260613-062146/README.md
 source_path: .harness/runs/kds-real-token-sync-20260613-062146/README.md
 sync_direction: bidirectional
-last_reviewed: 2026-10-11
+last_reviewed: 2026-10-12
 supersedes: []
 superseded_by: []
 ---
@@ -39,7 +39,7 @@ KDS 空间：`开发`
 | GPCF-DOC-66C878138B | kds-real-token-sync-20260613-062146 | .harness/runs/kds-real-token-sync-20260613-062146/README.md | WAME | archive |
 | GPCF-DOC-C93F8F0441 | Acceptance Matrix: KDS Real Token Sync | .harness/runs/kds-real-token-sync-20260613-062146/acceptance-matrix.md | WAME | archive |
 | GPCF-DOC-71D00E7EBE | evidence | .harness/runs/kds-real-token-sync-20260613-062146/evidence/README.md | WAME | archive |
-| GPCF-DOC-B89D14C3C8 | git-change-groups | .harness/runs/kds-real-token-sync-20260613-062146/git-change-groups.md | WAME | archive |
+| GPCF-DOC-B89D14C3C8 | KDS Real Token Sync Git Change Groups | .harness/runs/kds-real-token-sync-20260613-062146/git-change-groups.md | WAME | archive |
 | GPCF-DOC-D5957ABBD9 | patches | .harness/runs/kds-real-token-sync-20260613-062146/patches/README.md | WAME | archive |
-| GPCF-DOC-0498FF3BEF | status-audit | .harness/runs/kds-real-token-sync-20260613-062146/status-audit.md | WAME | archive |
+| GPCF-DOC-0498FF3BEF | Harness Status Audit: KDS Real Token Sync | .harness/runs/kds-real-token-sync-20260613-062146/status-audit.md | WAME | archive |
 | GPCF-DOC-44F8F11A42 | workspaces | .harness/runs/kds-real-token-sync-20260613-062146/workspaces/README.md | WAME | archive |

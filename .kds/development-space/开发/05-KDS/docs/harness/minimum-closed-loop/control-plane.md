@@ -1,5 +1,5 @@
 ---
-doc_id: GPCF-DOC-9886BDB110
+doc_id: GPCF-L4-MCL-CONTROL-PLANE
 title: L4 Minimum Closed Loop Control Plane
 project: KDS
 related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF]
@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/05-KDS/docs/harness/minimum-closed-loop/control-plane.md
 source_path: docs/harness/minimum-closed-loop/control-plane.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-12
+last_reviewed: 2026-06-13
 supersedes: []
 superseded_by: []
 ---

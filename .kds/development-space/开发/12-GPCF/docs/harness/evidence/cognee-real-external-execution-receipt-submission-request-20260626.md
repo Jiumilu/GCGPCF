@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-8F9F2F5A0D
 title: Cognee 真实外部执行回执提交请求包 2026-06-26
 project: GPCF
-related_projects: [GPCF, WAES]
+related_projects: [GPCF, WAME]
 domain: docs
 status: controlled
 version: v1.0

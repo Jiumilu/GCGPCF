@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-8A71ED6EAD
 title: LOOP Round GPCF KDS DKS-263
 project: GPCF
-related_projects: [GPC, WAES, KDS, GPCF]
+related_projects: [GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -36,9 +36,9 @@ superseded_by: []
 - `scripts/gfis/validate_gfis_assistant_dks_263_ack_escalation_sla_breach_review_resolution_option_approval_packet_routing_queue_notification_ack_escalation_preview.py`
 - `docs/gc-knowledge-fabric/gfis-assistant-dks-263-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-ack-escalation-preview-policy.md`
 
-## WAES / KWE / Harness 边界
+## WAME / KWE / Harness 边界
 
-本轮只生成候选预览，不创建 escalation、timeout event、KWE work item，不创建 notification、acknowledgement、receipt、read receipt，不更新 delivery status，不发送外部通知，不创建 WAES、Harness、KDS lifecycle 或业务写回。
+本轮只生成候选预览，不创建 escalation、timeout event、KWE work item，不创建 notification、acknowledgement、receipt、read receipt，不更新 delivery status，不发送外部通知，不创建 WAME、Harness、KDS lifecycle 或业务写回。
 
 ## 下一轮建议
 

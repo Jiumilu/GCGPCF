@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-C4980D88C1
 title: KDS Phase 10 Self-refresh Stabilization Workpack
 project: KDS
-related_projects: [GPC, WAES, KDS, GPCF]
+related_projects: [GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0

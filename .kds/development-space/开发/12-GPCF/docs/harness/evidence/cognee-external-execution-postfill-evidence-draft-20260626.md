@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-CE7B176B8D
 title: Cognee 外部执行后回填 Evidence 草稿 2026-06-26
 project: GPCF
-related_projects: [GPCF, WAES]
+related_projects: [GPCF, WAME]
 domain: docs
 status: controlled
 version: v1.0
@@ -67,7 +67,7 @@ superseded_by: []
 |---|---|
 | `production_write` | `false_until_independent_production_receipt_exists` |
 | `accepted` | `false_until_harness_acceptance` |
-| `integrated` | `false_until_waes_integration_decision` |
+| `integrated` | `false_until_wame_integration_decision` |
 | `production_ready` | `false_until_full_run_gate_closure` |
 
 ## 7. 非声明

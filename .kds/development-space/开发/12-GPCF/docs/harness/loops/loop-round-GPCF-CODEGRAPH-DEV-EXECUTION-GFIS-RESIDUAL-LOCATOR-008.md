@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-82997F4582
 title: Loop Round - CodeGraph GFIS 残余 added Locator
 project: GPCF
-related_projects: [GFIS, GPC, WAES, GPCF]
+related_projects: [GFIS, GPC, WAME, GPCF]
 domain: docs
 status: controlled
 version: v1.0

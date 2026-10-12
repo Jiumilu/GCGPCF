@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-CODEGRAPH-DEV-EXECUTION-DISPATCH-AUTHORIZATION-ANSWER-RESUMED-20260626
 title: CodeGraph 开发执行层派发授权回答恢复记录 2026-06-26
 project: KDS
-related_projects: [GPC, WAES, KDS, GPCF]
+related_projects: [GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -55,7 +55,7 @@ superseded_by: []
 
 ## 详情齐备前禁止
 
-禁止 actual dispatch、external API write、real KDS write、real WAES write、production write、deployment、git commit、git push 和 business status upgrade。
+禁止 actual dispatch、external API write、real KDS write、real WAME write、production write、deployment、git commit、git push 和 business status upgrade。
 
 ## 下一轮
 

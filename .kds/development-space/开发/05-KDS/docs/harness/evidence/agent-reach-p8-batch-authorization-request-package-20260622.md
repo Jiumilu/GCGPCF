@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-AGENT-REACH-P8-BATCH-AUTHORIZATION-REQUEST-PACKAGE-20260622
 title: Agent-Reach P8 批次真实搜索授权申请包 2026-06-22
 project: KDS
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio]
 domain: docs
 status: controlled
 version: v1.0
@@ -33,7 +33,7 @@ superseded_by: []
 
 | batch | 授权文本 | 项目 |
 | --- | --- | --- |
-| p8-batch-1 | `授权执行 Agent-Reach P8 Project Group Full Live Search Batch 1` | GPCF、KDS、WAES、Brain、GFIS |
+| p8-batch-1 | `授权执行 Agent-Reach P8 Project Group Full Live Search Batch 1` | GPCF、KDS、WAME、Brain、GFIS |
 | p8-batch-2 | `授权执行 Agent-Reach P8 Project Group Full Live Search Batch 2` | GPC、PVAOS、PKC、XiaoC、XGD |
 | p8-batch-3 | `授权执行 Agent-Reach P8 Project Group Full Live Search Batch 3` | XiaoG、MMC、Studio、WAS |
 

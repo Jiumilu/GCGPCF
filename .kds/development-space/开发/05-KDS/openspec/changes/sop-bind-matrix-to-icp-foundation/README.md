@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-DA59B18707
 title: sop-bind-matrix-to-icp-foundation
 project: KDS
-related_projects: [GPC, WAES, KDS, GPCF, ICP]
+related_projects: [GPC, WAME, KDS, GPCF, ICP]
 domain: openspec
 status: draft
 version: v1.0
@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/05-KDS/openspec/changes/sop-bind-matrix-to-icp-foundation/README.md
 source_path: openspec/changes/sop-bind-matrix-to-icp-foundation/README.md
 sync_direction: bidirectional
-last_reviewed: 2026-10-11
+last_reviewed: 2026-10-12
 supersedes: []
 superseded_by: []
 ---

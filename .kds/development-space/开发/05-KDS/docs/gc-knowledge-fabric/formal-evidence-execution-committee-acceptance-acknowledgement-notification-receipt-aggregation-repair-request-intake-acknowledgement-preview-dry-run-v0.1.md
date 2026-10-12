@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-GCKFCOMMITTEEACCEPTACKNOTIFICATIONRECEIPTAGGREGATIONREPAIRINTAKEACKV01
 title: GC-Knowledge Fabric P0 正式证据执行委员会受理回执通知回执汇总修复请求受理回执预览 dry-run v0.1
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -22,7 +22,7 @@ superseded_by: []
 
 本文档定义 P0-D76 的 repair request intake acknowledgement preview dry-run。
 
-D76 承接 D75 repair request completeness precheck，只预览补正接收候选包被接收后的候选回执确认视图，包括来源完整性预检 lineage、候选回执摘要、预检结果快照、缺失材料缺口快照、提交方通知边界、ACL 可见性边界、下一步提示、保持原因、WAES 负向门禁和 Harness no-write 边界。
+D76 承接 D75 repair request completeness precheck，只预览补正接收候选包被接收后的候选回执确认视图，包括来源完整性预检 lineage、候选回执摘要、预检结果快照、缺失材料缺口快照、提交方通知边界、ACL 可见性边界、下一步提示、保持原因、WAME 负向门禁和 Harness no-write 边界。
 
 ## 2. 输入
 
@@ -45,7 +45,7 @@ D76 承接 D75 repair request completeness precheck，只预览补正接收候�
 - 不写 KDS、GFIS、GPC 或业务系统。
 - 不写 Harness evidence 或 formal evidence。
 - 不写收益分配或贡献积分。
-- 不覆盖 WAES 门禁。
+- 不覆盖 WAME 门禁。
 - 不提升 lifecycle。
 - 不标记 accepted / integrated / production_ready。
 

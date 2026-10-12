@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-2577C0AD4E
 title: GFIS Assistant Routing Queue Notification Acknowledgement Preview No-write 规则
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, Brain, PKC]
+related_projects: [GFIS, GPC, WAME, KDS, Brain, PKC]
 domain: docs
 status: controlled
 version: v1.0
@@ -33,7 +33,7 @@ superseded_by: []
 - DKS-163 approval packet preview 引用。
 - DKS-162 resolution option preview 引用。
 - DKS-161 breach review preview 引用。
-- GC-Knowledge Fabric AI 候选边界、WAES 门禁、KWE 人工确认与 Harness evidence 规则。
+- GC-Knowledge Fabric AI 候选边界、WAME 门禁、KWE 人工确认与 Harness evidence 规则。
 
 ## 输出字段
 
@@ -68,7 +68,7 @@ DKS-166 严格禁止：
 - 创建 routing queue、queue item、approval assignment、approval lock。
 - 创建 approval packet、approval request、approval decision。
 - 创建 committee decision 或 freeze action。
-- 写入 WAES、KWE、Harness evidence、KDS lifecycle、KDS fact 或 accepted fact。
+- 写入 WAME、KWE、Harness evidence、KDS lifecycle、KDS fact 或 accepted fact。
 - 执行 GFIS、GPC、ERP、MES 或外部 API 写入。
 
 所有 `creates*` / `updates*` 必须为 `false`，所有 `noWrite` 写入计数必须为 `0`。
@@ -86,8 +86,8 @@ DKS-166 严格禁止：
 - required evidence 总数：6。
 - acknowledgement reason 总数：6。
 - blocked acknowledgement 总数：3。
-- acknowledgement / receipt / read receipt / delivery status / notification / message / inbox / external send / routing / approval / committee / freeze / Harness / WAES / KWE / KDS / business writes 全部为 0。
+- acknowledgement / receipt / read receipt / delivery status / notification / message / inbox / external send / routing / approval / committee / freeze / Harness / WAME / KWE / KDS / business writes 全部为 0。
 
 ## 后续提升条件
 
-如需把 acknowledgement preview 转为真实确认、真实回执、真实已读回执、真实投递状态更新、真实通知、真实队列任务或任何业务写回，必须另行进入 WAES 门禁、KWE 工单、人工确认与 Harness evidence，不得由本 preview 自动提升。
+如需把 acknowledgement preview 转为真实确认、真实回执、真实已读回执、真实投递状态更新、真实通知、真实队列任务或任何业务写回，必须另行进入 WAME 门禁、KWE 工单、人工确认与 Harness evidence，不得由本 preview 自动提升。

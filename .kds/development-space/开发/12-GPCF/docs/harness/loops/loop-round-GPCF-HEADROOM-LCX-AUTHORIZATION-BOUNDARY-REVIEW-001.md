@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-CB613DC3D1
 title: Loop Round GPCF-HEADROOM-LCX-AUTHORIZATION-BOUNDARY-REVIEW-001
 project: GPCF
-related_projects: [GPC, WAES, KDS, GPCF]
+related_projects: [GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -28,7 +28,7 @@ superseded_by: []
 ## 动作
 
 1. 记录用户授权信号。
-2. 对照 P5 所需 6 项字段：授权窗口、审批人、审批时间、脱敏生产 token 台账、回滚计划、WAES/Harness 准入裁决。
+2. 对照 P5 所需 6 项字段：授权窗口、审批人、审批时间、脱敏生产 token 台账、回滚计划、WAME/Harness 准入裁决。
 3. 生成授权边界审查 evidence 和 validator。
 
 ## 输出
@@ -54,4 +54,4 @@ python3 tools/kds-sync/loop_document_gate.py --check-only
 
 ## 下一轮
 
-补齐授权窗口、审批人、审批时间、脱敏生产 token 台账、回滚计划和 WAES/Harness 准入裁决后，进入 `GPCF-HEADROOM-LCX-AUTHORIZED-MEASUREMENT-PRECHECK-001`。
+补齐授权窗口、审批人、审批时间、脱敏生产 token 台账、回滚计划和 WAME/Harness 准入裁决后，进入 `GPCF-HEADROOM-LCX-AUTHORIZED-MEASUREMENT-PRECHECK-001`。

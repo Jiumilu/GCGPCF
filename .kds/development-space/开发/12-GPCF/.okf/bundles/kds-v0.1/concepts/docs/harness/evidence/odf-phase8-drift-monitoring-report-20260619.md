@@ -7,7 +7,7 @@ tags: [controlled, evidence, kds, odf, okf-derived]
 timestamp: 2026-06-22T00:00:00Z
 kds_path: 开发/05-KDS/docs/harness/evidence/odf-phase8-drift-monitoring-report-20260619.md
 source_path: docs/harness/evidence/odf-phase8-drift-monitoring-report-20260619.md
-source_hash: 98832bc933238598af9491a8be4cf37178a0a840b724ccd5336dc2cd167ba9c3
+source_hash: c8712542a84e87a39dac40a6f3e17ee15c5264caa538e684c79387e455224548
 source_of_record: kds
 derivation_policy: metadata_only_no_body_copy
 ---

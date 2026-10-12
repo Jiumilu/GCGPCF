@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-C927D25E90
 title: GFIS-RUNTIME-SOP-E2E-235
 project: GFIS
-related_projects: [GFIS, WAES]
+related_projects: [GFIS, WAME]
 domain: evidence
 status: controlled
 version: v1.0
@@ -49,7 +49,7 @@ superseded_by: []
 - `runtime_primary_key_ready=0`
 - `review_queue=0`
 - `runtime_intake=0`
-- `waes_review=0`
+- `wame_review=0`
 - `verified=0`
 - `runtime_sop_e2e=repair_required`
 
@@ -63,7 +63,7 @@ superseded_by: []
 ## 下一步
 
 - `GFIS-RUNTIME-SOP-E2E-236`：建立 release override approval request dispatch confirmation negative fixture guard。
-- 下一轮仍不得派发请求、释放 open hold、创建运行层主键、进入 review/runtime/WAES 或升级 accepted/integrated。
+- 下一轮仍不得派发请求、释放 open hold、创建运行层主键、进入 review/runtime/WAME 或升级 accepted/integrated。
 
 ## 真实性计数
 

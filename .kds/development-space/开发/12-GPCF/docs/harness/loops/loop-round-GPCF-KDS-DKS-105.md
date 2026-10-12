@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-9973B3048C
 title: LOOP Round GPCF-KDS-DKS-105 - KWE Action Validation Workpack No-write
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, Brain, PKC, MMC, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, Brain, PKC, MMC, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -22,7 +22,7 @@ superseded_by: []
 
 在 DKS-104 KWE Queue Action Intake Request 之后，建立 KWE Action Validation Workpack no-write 契约，使 action request 可以被转换为校验工包候选，用于检查 actor permission、route consistency、payload integrity、evidence presence、metadata-only boundary、blocked reason 和 no-write guard。
 
-本轮只定义 validation workpack 候选，不创建真实 KWE WorkItem，不完成人工确认或委员会决议，不改变 KDS lifecycle，不写 KDS fact 或 accepted fact，不写 WAES Gate Result，不写 GFIS/GPC/ERP/MES，不生成 target receipt，不确认收益、积分、额度或悬赏，不调用外部 API。
+本轮只定义 validation workpack 候选，不创建真实 KWE WorkItem，不完成人工确认或委员会决议，不改变 KDS lifecycle，不写 KDS fact 或 accepted fact，不写 WAME Gate Result，不写 GFIS/GPC/ERP/MES，不生成 target receipt，不确认收益、积分、额度或悬赏，不调用外部 API。
 
 ## 2. 本轮输入
 
@@ -50,7 +50,7 @@ superseded_by: []
 ### 4.1 DKS-105 专项检查
 
 ```text
-kwe_action_validation_workpack=pass workpacks=5 validation_passed=1 repair_required=1 committee_review_candidates=1 freeze_review_candidates=1 blocked=1 creates_kwe_work_items=0 promotes_lifecycle=0 workpacks_with_followups=5 writes_kwe_work_item=0 writes_kds_lifecycle=0 writes_kds_fact=0 writes_kds_accepted_fact=0 writes_waes_gate_result=0 writes_business_system=0 writes_target_receipt=0 writes_committee_decision_completion=0 writes_revenue_or_score_confirmation=0 writes_quota_transfer=0 writes_bounty_settlement=0 writes_external_api=0
+kwe_action_validation_workpack=pass workpacks=5 validation_passed=1 repair_required=1 committee_review_candidates=1 freeze_review_candidates=1 blocked=1 creates_kwe_work_items=0 promotes_lifecycle=0 workpacks_with_followups=5 writes_kwe_work_item=0 writes_kds_lifecycle=0 writes_kds_fact=0 writes_kds_accepted_fact=0 writes_wame_gate_result=0 writes_business_system=0 writes_target_receipt=0 writes_committee_decision_completion=0 writes_revenue_or_score_confirmation=0 writes_quota_transfer=0 writes_bounty_settlement=0 writes_external_api=0
 ```
 
 ### 4.2 覆盖矩阵
@@ -69,7 +69,7 @@ tsc -p packages/api/tsconfig.json --noEmit: pass
 
 ### 4.4 回归链
 
-本轮回归链覆盖 DKS-096 至 DKS-105，以及既有 KDS、WAES、KWE、GFIS、Brain/PKC、Governance、RAG、MMC、状态机、对象关系 no-write smoke。
+本轮回归链覆盖 DKS-096 至 DKS-105，以及既有 KDS、WAME、KWE、GFIS、Brain/PKC、Governance、RAG、MMC、状态机、对象关系 no-write smoke。
 
 ```text
 regression=pass
@@ -90,7 +90,7 @@ api_tsc=pass
 - writes_kds_lifecycle
 - writes_kds_fact
 - writes_kds_accepted_fact
-- writes_waes_gate_result
+- writes_wame_gate_result
 - writes_business_system
 - writes_target_receipt
 - writes_committee_decision_completion
@@ -107,17 +107,17 @@ api_tsc=pass
 |---|---|---|
 | validation workpack 被误用为真实 KWE WorkItem | controlled | `createsKweWorkItem=false`，写入计数为 0 |
 | validation_passed 被误解为审批通过 | controlled | validation_passed 只代表可进入下一步候选审查 |
-| committee / freeze 候选被误写成完成 | controlled | 不生成 committee decision completion，不写 WAES freeze result |
+| committee / freeze 候选被误写成完成 | controlled | 不生成 committee decision completion，不写 WAME freeze result |
 | metadata-only 泄露原文 | controlled | validator 阻断 raw / 原文 refs |
 | blocked request 被放行 | controlled | blocked workpack 必须保留 blocked_reason_presence |
 
 ## 7. 下一轮建议
 
-DKS-106 建议进入 WAES Action Gate Precheck No-write：
+DKS-106 建议进入 WAME Action Gate Precheck No-write：
 
 - 输入 DKS-105 validation workpack；
-- 输出 WAES gate precheck 候选，覆盖 source/evidence/permission/sensitive/freeze/writeback 前置检查；
-- 保持 precheck-only，不写 WAES Gate Result，不创建 KWE WorkItem，不改变 KDS 状态，不写 GFIS。
+- 输出 WAME gate precheck 候选，覆盖 source/evidence/permission/sensitive/freeze/writeback 前置检查；
+- 保持 precheck-only，不写 WAME Gate Result，不创建 KWE WorkItem，不改变 KDS 状态，不写 GFIS。
 
 ## 8. LOOP 结论
 

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-AGENT-REACH-GREEN-SUPPLY-CHAIN-PRIORITY-TARGETS-20260623
 title: Agent-Reach 绿色供应链重点搜索对象证据 2026-06-23
 project: KDS
-related_projects: [GFIS, WAS, WAME, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS]
 domain: docs
 status: controlled
 version: v1.0

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-DEV-TASK-QUEUE-20260626
 title: GlobalCloud 项目群开发态任务队列
 project: GFIS
-related_projects: [AAAS, Brain, WAS, XiaoC, WAES, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP]
+related_projects: [AAAS, Brain, WAS, XiaoC, WAME, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP]
 domain: docs
 status: controlled
 version: v1.0
@@ -46,21 +46,21 @@ customer_accepted = false
 |---|---|---|---|---|
 | GlobalCloud AAAS | `pre_wave1_review_bridge` | `XWAIL -> AaaS` | `AUTH-AAAS-LOOP-GATE-DELEGATE-REVIEW-20260627` | 先复核 delegated wrapper replay，再决定是否进入 AaaS 绑定预检；单仓锚点复用 `globalcloud-project-group-pre-wave1-review-authorization-request-20260627.md` 第 `5.5.1 AAAS delegated wrapper 单仓核对卡 / 5.6.1 AAAS delegated wrapper 确认后状态传导摘要` |
 | GlobalCloud Brain | `human_review_boundary` | `KDS -> Brain` | `BRAIN-HUMAN-REVIEW-DECISION-001` | Brain 当前开发态只准备人工审查决策，不进入 accepted/integrated |
-| WAS世界资产体系 | `semantic_mapping_boundary` | `WAS -> Ontology -> XWAIL` | `WAS-XWAIL-ONTOLOGY-MAPPING-001` | WAS 当前开发态只允许语义映射候选，不进入事实主存或 WAES 发布 |
-| GlobalCloud XiaoC | `environment_block_boundary` | `PKC/XGD/XiaoG/XiaoC/MMC/SOP -> KDS/Brain/WAES` | `XIAOC-MODEL-ROUTING-DRYRUN-001` | XiaoC 当前先受环境阻塞，保持 dry-run 候选边界 |
-| GlobalCloud WAES | `repair_authorization_boundary` | `WAES -> XWAIL` | `AUTH-WAVE1-WAES-LINT-RUNTIME-20260626` | WAES 当前开发态入口是 repair 授权，不直接进入源码修复或发布 |
+| WAS世界资产体系 | `semantic_mapping_boundary` | `WAS -> Ontology -> XWAIL` | `WAS-XWAIL-ONTOLOGY-MAPPING-001` | WAS 当前开发态只允许语义映射候选，不进入事实主存或 WAME 发布 |
+| GlobalCloud XiaoC | `environment_block_boundary` | `PKC/XGD/XiaoG/XiaoC/MMC/SOP -> KDS/Brain/WAME` | `XIAOC-MODEL-ROUTING-DRYRUN-001` | XiaoC 当前先受环境阻塞，保持 dry-run 候选边界 |
+| GlobalCloud WAME | `repair_authorization_boundary` | `WAME -> XWAIL` | `AUTH-WAVE1-WAME-LINT-RUNTIME-20260626` | WAME 当前开发态入口是 repair 授权，不直接进入源码修复或发布 |
 | GlobalCloud GPC | `external_runtime_boundary` | `GFIS -> GPC` | `AUTH-WAVE1-GPC-EXTERNAL-RUNTIME-20260626` | GPC 当前开发态只补外部 runtime 证据，不声明完整场景交付 |
-| GlobalCloud Studio | `local_release_review_boundary` | `Studio -> GPCF/WAES` | `STUDIO-WORKFLOW-PERMISSIONS-001` | Studio 当前开发态只停留在本地 release/review 边界 |
+| GlobalCloud Studio | `local_release_review_boundary` | `Studio -> GPCF/WAME` | `STUDIO-WORKFLOW-PERMISSIONS-001` | Studio 当前开发态只停留在本地 release/review 边界 |
 | GlobalCoud GPCF | `authorization_to_pre_execution_total_bridge` | `GPCF -> all projects` | `GPCF-PRE-WAVE1-REVIEW-AUTHORIZATION-REQUEST-20260627-001` | GPCF 当前开发态先过 `GPCF/Brain/SOP` 三仓 review 桥接入口；KDS 不再属于当前 active dirty/sensitive 边界 |
-| GlobalCloud XWAIL | `pre_wave1_review_bridge` | `WAES -> XWAIL` | `AUTH-XWAIL-LOOP-GATE-DELEGATE-REVIEW-20260627` | XWAIL 当前开发态先复核 wrapper replay，再决定 contract precheck；单仓锚点复用 `globalcloud-project-group-pre-wave1-review-authorization-request-20260627.md` 第 `5.5.2 XWAIL delegated wrapper 单仓核对卡 / 5.6.2 XWAIL delegated wrapper 确认后状态传导摘要` |
+| GlobalCloud XWAIL | `pre_wave1_review_bridge` | `WAME -> XWAIL` | `AUTH-XWAIL-LOOP-GATE-DELEGATE-REVIEW-20260627` | XWAIL 当前开发态先复核 wrapper replay，再决定 contract precheck；单仓锚点复用 `globalcloud-project-group-pre-wave1-review-authorization-request-20260627.md` 第 `5.5.2 XWAIL delegated wrapper 单仓核对卡 / 5.6.2 XWAIL delegated wrapper 确认后状态传导摘要` |
 | GlobalCloud GFIS | `source_record_boundary` | `GFIS/GPC/PVAOS -> SCaaS` | `AUTH-GFIS-SCHEME-REVIEW-20260626` | GFIS 当前开发态保持 SOR 缺口边界，不进入真实业务链；当前 live Git 已 clean，不再属于 active dirty review 边界 |
-| GlobalCloud MMC | `local_document_smoke_boundary` | `PKC/XGD/XiaoG/XiaoC/MMC/SOP -> KDS/Brain/WAES` | `MMC-GOVERNANCE-TEMPLATE-SMOKE-001` | MMC 当前开发态只允许治理模板 smoke，不进入下游接入 |
-| GlobalCloud KDS | `pre_wave1_review_bridge` | `KDS -> Brain` | `KDS-BRAIN-REPORT-HOLD-REVIEW-001` | KDS blocker 已解除并保持 clean；当前只保留资金报告、sync-run 接收/归档、Brain/WAES 消费和真实 KDS API 同步的 owner review 边界，不进入 Brain accepted 判断 |
-| GlobalCloud XiaoG | `authorization_pack_boundary` | `PKC/XGD/XiaoG/XiaoC/MMC/SOP -> KDS/Brain/WAES` | `XIAOG-LIVE-API-AUTH-PACK-001` | XiaoG 当前开发态只建立 live API 授权包，不触发真实外部动作 |
+| GlobalCloud MMC | `local_document_smoke_boundary` | `PKC/XGD/XiaoG/XiaoC/MMC/SOP -> KDS/Brain/WAME` | `MMC-GOVERNANCE-TEMPLATE-SMOKE-001` | MMC 当前开发态只允许治理模板 smoke，不进入下游接入 |
+| GlobalCloud KDS | `pre_wave1_review_bridge` | `KDS -> Brain` | `KDS-BRAIN-REPORT-HOLD-REVIEW-001` | KDS blocker 已解除并保持 clean；当前只保留资金报告、sync-run 接收/归档、Brain/WAME 消费和真实 KDS API 同步的 owner review 边界，不进入 Brain accepted 判断 |
+| GlobalCloud XiaoG | `authorization_pack_boundary` | `PKC/XGD/XiaoG/XiaoC/MMC/SOP -> KDS/Brain/WAME` | `XIAOG-LIVE-API-AUTH-PACK-001` | XiaoG 当前开发态只建立 live API 授权包，不触发真实外部动作 |
 | GlobalCloud PVAOS | `local_release_review_boundary` | `PVAOS -> SCaaS` | `PVAOS-RELEASE-REVIEW-001` | PVAOS 当前开发态只停留在本地 release review 候选 |
-| GlobalCloud SOP | `pre_wave1_review_bridge` | `PKC/XGD/XiaoG/XiaoC/MMC/SOP -> KDS/Brain/WAES` | `AUTH-SOP-LOOP-GATE-DELEGATE-REVIEW-20260627` | SOP 当前开发态先复核 wrapper replay，再进入 scenario owner review 主动作；单仓锚点复用 `globalcloud-project-group-pre-wave1-review-authorization-request-20260627.md` 第 `5.5.3 SOP delegated wrapper 单仓核对卡 / 5.6.3 SOP delegated wrapper 确认后状态传导摘要` |
-| GlobalCloud PKC | `local_dev_dryrun_boundary` | `PKC/XGD/XiaoG/XiaoC/MMC/SOP -> KDS/Brain/WAES` | `PKC-KDS-BRAIN-WORKFLOW-DRYRUN-001` | PKC 当前开发态只允许本地 dry-run，不写真实个人数据 |
-| GlobalCloud XGD | `local_dev_smoke_boundary` | `PKC/XGD/XiaoG/XiaoC/MMC/SOP -> KDS/Brain/WAES` | `XGD-TICK-BRAIN-SMOKE-001` | XGD 当前开发态只允许 bounded smoke，不触发真实外部动作 |
+| GlobalCloud SOP | `pre_wave1_review_bridge` | `PKC/XGD/XiaoG/XiaoC/MMC/SOP -> KDS/Brain/WAME` | `AUTH-SOP-LOOP-GATE-DELEGATE-REVIEW-20260627` | SOP 当前开发态先复核 wrapper replay，再进入 scenario owner review 主动作；单仓锚点复用 `globalcloud-project-group-pre-wave1-review-authorization-request-20260627.md` 第 `5.5.3 SOP delegated wrapper 单仓核对卡 / 5.6.3 SOP delegated wrapper 确认后状态传导摘要` |
+| GlobalCloud PKC | `local_dev_dryrun_boundary` | `PKC/XGD/XiaoG/XiaoC/MMC/SOP -> KDS/Brain/WAME` | `PKC-KDS-BRAIN-WORKFLOW-DRYRUN-001` | PKC 当前开发态只允许本地 dry-run，不写真实个人数据 |
+| GlobalCloud XGD | `local_dev_smoke_boundary` | `PKC/XGD/XiaoG/XiaoC/MMC/SOP -> KDS/Brain/WAME` | `XGD-TICK-BRAIN-SMOKE-001` | XGD 当前开发态只允许 bounded smoke，不触发真实外部动作 |
 
 ## P0 全仓任务
 
@@ -70,11 +70,11 @@ customer_accepted = false
 | P0 | GlobalCloud Brain | dirty=3 diff=pass | 分类 Brain L4 retrieval 变更，复跑前端构建 | `npm run build -- --mode development` |
 | P0 | WAS世界资产体系 | dirty=4 untracked=1 diff=pass | 分类 WAS 语义契约变更，确认 untracked 是否为受控 evidence | `git status --short --branch && git diff --check -- .` |
 | P0 | GlobalCloud XiaoC | dirty=3 diff=pass | 分类 XiaoC 模型路由/编排变更，复跑本地 harness | `git status --short --branch && git diff --check -- .` |
-| P0 | GlobalCloud WAES | dirty=3 diff=pass | 分类 WAES integration-release 变更，保持只做治理/审计候选 | `git status --short --branch && git diff --check -- .` |
+| P0 | GlobalCloud WAME | dirty=3 diff=pass | 分类 WAME integration-release 变更，保持只做治理/审计候选 | `git status --short --branch && git diff --check -- .` |
 | P0 | GlobalCloud GPC | dirty=6 diff=pass | 分类 GPC 平台开发变更，补最小验证入口 | `git status --short --branch && git diff --check -- .` |
 | P0 | GlobalCloud Studio | dirty=12 untracked=4 diff=pass | 分类 release review readiness 变更，保持发布动作 blocked | `npm run harness:check` |
 | P0 | GlobalCoud GPCF | live dirty=current / diff=pass / git_gate_partial | 继续拆分治理/evidence/KDS mirror 大工作区，并先通过 `GPCF/Brain/SOP` 三仓 review 授权入口 | `python3 tools/kds-sync/loop_document_gate.py --check-only` |
-| P0 | GlobalCloud XWAIL | dirty=1 untracked=1 diff=pass / wrapper_review_required | 先进入 delegated wrapper replay review，再进入 WAES/AAAS contract precheck 候选链 | `git status --short --untracked-files=all && git diff --check -- .` |
+| P0 | GlobalCloud XWAIL | dirty=1 untracked=1 diff=pass / wrapper_review_required | 先进入 delegated wrapper replay review，再进入 WAME/AAAS contract precheck 候选链 | `git status --short --untracked-files=all && git diff --check -- .` |
 | P0 | GlobalCloud GFIS | clean / diff=pass / repair_required | 保持真实 source-of-record 缺口边界，当前不作为 active dirty review 仓 | `git status --short --untracked-files=all && git diff --check -- .` |
 | P0 | GlobalCloud MMC | dirty=3 diff=pass | 分类 MMC governance template smoke 变更，复跑 runtime tests | `MMC_TEST_MODE=true python3 -m pytest runtime/tests/ -q` |
 | P0 | GlobalCloud KDS | clean / diff=pass / sensitive_path=resolved_not_in_git_status | 保留 KDS hold review 与 API contract dry-run 边界；不作为当前 dirty/sensitive 阻塞源 | `python3 tools/kds-sync/validate_project_group_dev_first_goal_and_kds_blocker_20260628.py` |

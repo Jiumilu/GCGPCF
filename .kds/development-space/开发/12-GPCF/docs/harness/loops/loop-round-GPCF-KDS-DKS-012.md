@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-0C87D9984C
 title: Loop Round GPCF-KDS-DKS-012
 project: GPCF
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, XiaoC, XGD, GPCF, Studio]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, XiaoC, XGD, GPCF, Studio]
 domain: docs
 status: controlled
 version: v1.0
@@ -34,7 +34,7 @@ superseded_by: []
 1. 使用 Loop Orchestrator 规则确认本工作必须纳入 GPCF Loop，不自动升级 accepted / integrated。
 2. 使用 Document Governance 规则确认新增文档必须具备 frontmatter、KDS 开发空间路径、受控台账和本地 KDS 镜像。
 3. 新增 `GlobalCloud绿色供应链分布式知识系统权限与密级矩阵.md`。
-4. 将用户治理权、委员会多数决、合作单位本单位可见、AI 不越权、WAES 边界审核和 KDS 11 池写入统一矩阵。
+4. 将用户治理权、委员会多数决、合作单位本单位可见、AI 不越权、WAME 边界审核和 KDS 11 池写入统一矩阵。
 5. 明确 DKS-013 建议进入合作单位接入与组织空间初始化清单。
 
 ## 3. 输出
@@ -83,7 +83,7 @@ GPCF-KDS-DKS-013：
 建议覆盖：
 
 1. 葛化和湖北磷材组织空间初始化。
-2. 飞书、小即、KDS、WAES、Hermes 的账号和资料接入流程。
+2. 飞书、小即、KDS、WAME、Hermes 的账号和资料接入流程。
 3. DSR-L0 至 DSR-L3 初始密级配置。
 4. 合作单位 AI 额度账户、积分账户、悬赏账户初始化。
 5. 首批资料包目录、责任人、门禁和验收清单。

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-BA482BB4F5
 title: GlobalCloud 绿色供应链体系统一组件与设计令牌规范
 project: GPC
-related_projects: [GFIS, GPC, PVAOS, WAES, Brain, XiaoC, XGD, Studio]
+related_projects: [GFIS, GPC, PVAOS, WAME, Brain, XiaoC, XGD, Studio]
 domain: ui-delivery
 status: controlled
 version: v1.0
@@ -20,7 +20,7 @@ superseded_by: []
 
 日期：2026-06-08
 状态：统一组件与设计令牌规范 v1
-适用范围：WAES、PVAOS、GPC、GFIS、Brain、XiaoC（蚁后）、Hermes/XGD（大象），以及最终交付中的 Web、桌面端、移动端、消息端界面。
+适用范围：WAME、PVAOS、GPC、GFIS、Brain、XiaoC（蚁后）、Hermes/XGD（大象），以及最终交付中的 Web、桌面端、移动端、消息端界面。
 目的：把前面的界面分阶段治理规则、统一体验骨架规范、最终交付界面规范与样式规范、对话模式与操作模式规范，进一步收口为可落地的设计系统约束，确保最终交付产品在颜色、字体、间距、图标、组件、状态标签、弹窗、表格、表单等方面形成统一产品语言。
 
 ---

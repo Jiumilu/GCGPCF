@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-55875D9017
 title: GPCF-L4-GFIS-REPAIR-143
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -20,7 +20,7 @@ superseded_by: []
 
 ## 本轮目标
 
-按 Loop 新真实性规则，只完成 1 个真实实质轮次：把 GFIS 辽宁远航合同链从签章完成件接收门禁推进到真实回执接收目录扫描，防止把合同审阅稿、用户口述、KDS 候选或 Demo 数据冒充为签章完成、客户确认、采购订单、KDS write receipt、WAES confirmation 或运行层完成。
+按 Loop 新真实性规则，只完成 1 个真实实质轮次：把 GFIS 辽宁远航合同链从签章完成件接收门禁推进到真实回执接收目录扫描，防止把合同审阅稿、用户口述、KDS 候选或 Demo 数据冒充为签章完成、客户确认、采购订单、KDS write receipt、WAME confirmation 或运行层完成。
 
 ## 输入
 
@@ -40,8 +40,8 @@ superseded_by: []
 ## 关键结果
 
 ```text
-liaoning_yuanhang_contract_chain_real_receipt_directory_scan=pass scanned_roles=8 signed_completion_files_found=0 kds_write_receipt_files_found=0 waes_confirmation_files_found=0 customer_confirmation=false purchase_order_or_contract=false runtime_ready=0 verified=0 state=contract_chain_real_receipt_directory_scan_no_real_receipts runtime_sop_e2e=repair_required
-runtime_liaoning_yuanhang_contract_chain_real_receipt_directory_scan=contract_chain_real_receipt_directory_scan_no_real_receipts:scanned_roles=8:signed_completion_files_found=0:kds_write_receipt_files_found=0:waes_confirmation_files_found=0:customer_confirmation=false:purchase_order_or_contract=false:runtime_ready=0:verified=0
+liaoning_yuanhang_contract_chain_real_receipt_directory_scan=pass scanned_roles=8 signed_completion_files_found=0 kds_write_receipt_files_found=0 wame_confirmation_files_found=0 customer_confirmation=false purchase_order_or_contract=false runtime_ready=0 verified=0 state=contract_chain_real_receipt_directory_scan_no_real_receipts runtime_sop_e2e=repair_required
+runtime_liaoning_yuanhang_contract_chain_real_receipt_directory_scan=contract_chain_real_receipt_directory_scan_no_real_receipts:scanned_roles=8:signed_completion_files_found=0:kds_write_receipt_files_found=0:wame_confirmation_files_found=0:customer_confirmation=false:purchase_order_or_contract=false:runtime_ready=0:verified=0
 RUNTIME_EXIT_CODE:2
 ```
 
@@ -51,7 +51,7 @@ RUNTIME_EXIT_CODE:2
 - GFIS 运行层 SOP E2E 仍为 `repair_required`。
 - 现代精工 OEM 是当前 GFIS 运行层。
 - 葛化自建工厂投产后是未来 GFIS 运行层。
-- `signed_completion_files_found=0`、`kds_write_receipt_files_found=0`、`waes_confirmation_files_found=0`。
+- `signed_completion_files_found=0`、`kds_write_receipt_files_found=0`、`wame_confirmation_files_found=0`。
 - `customer_confirmation=false`、`purchase_order_or_contract=false`。
 
 ## 真实计数
@@ -69,7 +69,7 @@ RUNTIME_EXIT_CODE:2
 - 未执行生产写入。
 - 未执行真实外部 API 写入。
 - 未执行真实 KDS 写入。
-- 未执行真实 WAES 写入。
+- 未执行真实 WAME 写入。
 - 未执行数据库迁移、bench migrate 或 schema sync。
 - 未执行权限变更、部署、ECS/阿里云/Caddy/隧道/Docker 配置变更。
 - 未将状态升级为 accepted 或 integrated。

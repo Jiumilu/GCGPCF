@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-7CDB7728FF
 title: Loop Round GPCF-L4-GFIS-REPAIR-172
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -40,7 +40,7 @@ superseded_by: []
 
 ## 关键结果
 
-`liaoning_yuanhang_runtime_document_evidence_slot_owner_response_submission_package_dispatch_authorization_envelope_intake_precheck=pass objects=12 proof_slots=62 expected_submission_packages=62 expected_acknowledgements=62 expected_dispatch_authorization_envelopes=62 submitted_envelopes=0 structure_valid_envelopes=0 manual_authorized_envelopes=0 recipient_confirmed_envelopes=0 dispatch_channel_confirmed_envelopes=0 dispatch_allowed=0 acknowledgements_found=0 owner_responses=0 submission_packages_found=0 valid_submission_packages=0 release_allowed=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0 state=owner_response_submission_package_dispatch_authorization_envelope_intake_precheck_blocked runtime_sop_e2e=repair_required`
+`liaoning_yuanhang_runtime_document_evidence_slot_owner_response_submission_package_dispatch_authorization_envelope_intake_precheck=pass objects=12 proof_slots=62 expected_submission_packages=62 expected_acknowledgements=62 expected_dispatch_authorization_envelopes=62 submitted_envelopes=0 structure_valid_envelopes=0 manual_authorized_envelopes=0 recipient_confirmed_envelopes=0 dispatch_channel_confirmed_envelopes=0 dispatch_allowed=0 acknowledgements_found=0 owner_responses=0 submission_packages_found=0 valid_submission_packages=0 release_allowed=0 review_queue=0 runtime_intake=0 wame_review=0 verified=0 state=owner_response_submission_package_dispatch_authorization_envelope_intake_precheck_blocked runtime_sop_e2e=repair_required`
 
 ## 验证
 
@@ -52,7 +52,7 @@ superseded_by: []
 
 ## 边界
 
-本轮只建立接收预检和只读门禁。不创建真实 dispatch authorization envelope、handoff acknowledgement、owner response、submission package、live proof、FactoryOrder、WorkOrder、DeliveryNote、POD、KDS/WAES 回指事实或 accepted/integrated 状态。不执行生产写入、真实外部 API、bench migrate、schema sync、真实 KDS/WAES 写入、权限变更、部署、Git push 或 ECS/阿里云/Caddy/隧道/Docker 变更。
+本轮只建立接收预检和只读门禁。不创建真实 dispatch authorization envelope、handoff acknowledgement、owner response、submission package、live proof、FactoryOrder、WorkOrder、DeliveryNote、POD、KDS/WAME 回指事实或 accepted/integrated 状态。不执行生产写入、真实外部 API、bench migrate、schema sync、真实 KDS/WAME 写入、权限变更、部署、Git push 或 ECS/阿里云/Caddy/隧道/Docker 变更。
 
 ## 真实计数
 

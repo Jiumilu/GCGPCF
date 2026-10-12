@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-AD7000100E
 title: Evidence Index — MMC
 project: MMC
-related_projects: [GPC, WAES, MMC, GPCF]
+related_projects: [GPC, WAME, MMC, GPCF]
 domain: docs
 status: controlled
 version: v1.0

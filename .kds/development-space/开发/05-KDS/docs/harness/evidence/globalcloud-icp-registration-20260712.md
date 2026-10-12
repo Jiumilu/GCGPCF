@@ -2,7 +2,7 @@
 doc_id: GPCF-EVIDENCE-ICP-REGISTRATION-20260712
 title: GlobalCloud ICP 项目群候选登记证据
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, GPCF, ICP]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF, ICP]
 domain: docs
 status: controlled
 version: v1.0
@@ -40,7 +40,7 @@ integrated: false
 production_ready: false
 ```
 
-本登记只确认项目群治理入口已经建立，不确认真实 KDS/GPC/GFIS 数据接入、WAES 审批、部署、生产运行或客户验收。
+本登记只确认项目群治理入口已经建立，不确认真实 KDS/GPC/GFIS 数据接入、WAME 审批、部署、生产运行或客户验收。
 
 ## 验证结果
 

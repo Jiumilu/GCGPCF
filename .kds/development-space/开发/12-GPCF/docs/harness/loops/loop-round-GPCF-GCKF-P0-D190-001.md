@@ -2,7 +2,7 @@
 doc_id: GPCF-LOOP-GCKF-P0-D190-001
 title: Loop Round GPCF-GCKF-P0-D190-001
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF, Studio]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF, Studio]
 domain: docs
 status: controlled
 version: v1.0
@@ -55,7 +55,7 @@ superseded_by: []
 ### stop
 
 - stop_type: `authorization_boundary`
-- 停止证据：真实 repair owner response、签署响应包、WAES review note 与人工确认均未到达。
+- 停止证据：真实 repair owner response、签署响应包、WAME review note 与人工确认均未到达。
 - 状态上限：`review_ready_with_hold`。
 
 ### verify
@@ -78,7 +78,7 @@ superseded_by: []
 ### debug
 
 - D190 只证明当前应停在 authorization boundary。
-- stop condition 不能替代真实 response、WAES review note、人工确认或业务完成证明。
+- stop condition 不能替代真实 response、WAME review note、人工确认或业务完成证明。
 
 ## 当前态复放
 

@@ -37,7 +37,7 @@ superseded_by: []
 - `production_write_authorized=false`
 - `external_api_write_authorized=false`
 - `real_kds_write_authorized=false`
-- `real_waes_write_authorized=false`
+- `real_wame_write_authorized=false`
 
 ## 非声明
 

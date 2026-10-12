@@ -1,28 +1,28 @@
 ---
 doc_id: GPCF-DOC-79B503879D
-title: GFIS Assistant WAES Guidance Packet No-write 规则
+title: GFIS Assistant WAME Guidance Packet No-write 规则
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS]
+related_projects: [GFIS, GPC, WAME, KDS]
 domain: docs
 status: controlled
 version: v1.0
 owner: KDS
 kds_space: 开发
-kds_path: 开发/05-KDS/docs/gc-knowledge-fabric/gfis-assistant-waes-guidance-packet-policy.md
-source_path: docs/gc-knowledge-fabric/gfis-assistant-waes-guidance-packet-policy.md
+kds_path: 开发/05-KDS/docs/gc-knowledge-fabric/gfis-assistant-wame-guidance-packet-policy.md
+source_path: docs/gc-knowledge-fabric/gfis-assistant-wame-guidance-packet-policy.md
 sync_direction: bidirectional
 last_reviewed: 2026-06-24
 supersedes: []
 superseded_by: []
 ---
 
-# GFIS Assistant WAES Guidance Packet No-write 规则
+# GFIS Assistant WAME Guidance Packet No-write 规则
 
 ## 1. 定位
 
-GFIS Assistant WAES Guidance Packet 是 DKS-107 `WAES Precheck Bundle Read Model` 之后的 GFIS 助手指导包。
+GFIS Assistant WAME Guidance Packet 是 DKS-107 `WAME Precheck Bundle Read Model` 之后的 GFIS 助手指导包。
 
-它把 GFIS Assistant 可见的 WAES precheck bundle 转换为用户可理解的门禁解释、补证提示、metadata-only 提示和人工/委员会路径提示。
+它把 GFIS Assistant 可见的 WAME precheck bundle 转换为用户可理解的门禁解释、补证提示、metadata-only 提示和人工/委员会路径提示。
 
 ## 2. 能力边界
 
@@ -37,7 +37,7 @@ Guidance Packet 可以：
 Guidance Packet 不能：
 
 - 批准 GFIS 正式写回；
-- 写入 WAES Gate Result；
+- 写入 WAME Gate Result；
 - 创建 KWE WorkItem；
 - 改变 KDS lifecycle；
 - 写入 GFIS / GPC / ERP / MES；
@@ -64,7 +64,7 @@ Guidance Packet 不能：
 - `blockedActions`
 - `allowedAssistantActions`
 - `approvedForBusinessWrite`
-- `createsWaesGateResult`
+- `createsWameGateResult`
 - `createsKweWorkItem`
 - `promotesLifecycle`
 - `noWrite`
@@ -83,7 +83,7 @@ Guidance Packet 不能：
 
 允许：
 
-- explain_waes_gate；
+- explain_wame_gate；
 - suggest_repair；
 - show_metadata_boundary；
 - show_manual_confirmation；
@@ -93,7 +93,7 @@ Guidance Packet 不能：
 阻断：
 
 - approve_business_write；
-- create_waes_gate_result；
+- create_wame_gate_result；
 - create_kwe_work_item；
 - promote_lifecycle；
 - complete_committee_decision；
@@ -103,4 +103,4 @@ Guidance Packet 不能：
 
 Guidance Packet 不是 GFIS 写回批准，不是业务状态更新，也不是 target receipt。
 
-它只让 GFIS Assistant 安全解释门禁与补证路径。任何真实写回必须经过 WAES、KWE、人工或委员会确认，并由授权业务系统执行。
+它只让 GFIS Assistant 安全解释门禁与补证路径。任何真实写回必须经过 WAME、KWE、人工或委员会确认，并由授权业务系统执行。

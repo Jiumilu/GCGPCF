@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-2ED858DAC6
 title: GFIS-RUNTIME-SOP-E2E-241
 project: GFIS
-related_projects: [GFIS, WAES, KDS]
+related_projects: [GFIS, WAME, KDS]
 domain: evidence
 status: controlled
 version: v1.0
@@ -21,8 +21,8 @@ superseded_by: []
 ## 输入
 
 - 上一轮 `GFIS-RUNTIME-SOP-E2E-240` 已证明 dispatch confirmation hold release precheck 仍被阻断。
-- 当前真实缺口仍为：真实派发确认文件 0、人工派发授权 0、收件方身份确认 0、人工通道确认 0、KDS backlink 0、WAES evidence candidate 0。
-- 本轮只允许做负例守卫，防止 GFIS Demo、KDS candidate-only、用户口述、Loop 文档、缺 hash/KDS backlink 或缺 WAES candidate 的弱放行声明释放 open hold。
+- 当前真实缺口仍为：真实派发确认文件 0、人工派发授权 0、收件方身份确认 0、人工通道确认 0、KDS backlink 0、WAME evidence candidate 0。
+- 本轮只允许做负例守卫，防止 GFIS Demo、KDS candidate-only、用户口述、Loop 文档、缺 hash/KDS backlink 或缺 WAME candidate 的弱放行声明释放 open hold。
 
 ## 执行动作
 
@@ -55,7 +55,7 @@ superseded_by: []
 - `runtime_primary_key_ready=0`
 - `review_queue=0`
 - `runtime_intake=0`
-- `waes_review=0`
+- `wame_review=0`
 - `verified=0`
 - `runtime_sop_e2e=repair_required`
 
@@ -76,5 +76,5 @@ superseded_by: []
 - batch_generated: false
 - substance_gate: pass
 - stop_type: authorization_boundary
-- 本轮只证明 6 类弱放行声明均被拒收；不释放 open hold，不创建 dispatch confirmation、责任方响应、提交包、source-of-record、运行层主键、review queue、runtime intake、WAES review、verified artifact 或 accepted/integrated 状态。
+- 本轮只证明 6 类弱放行声明均被拒收；不释放 open hold，不创建 dispatch confirmation、责任方响应、提交包、source-of-record、运行层主键、review queue、runtime intake、WAME review、verified artifact 或 accepted/integrated 状态。
 - 下一轮建议：`GFIS-RUNTIME-SOP-E2E-242` 建立 dispatch confirmation release attempt hard-stop audit，在真实派发确认链路缺失时记录受控 release attempt 并 hard-stop。

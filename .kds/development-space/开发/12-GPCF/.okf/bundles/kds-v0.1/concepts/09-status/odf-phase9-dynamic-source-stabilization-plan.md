@@ -7,7 +7,7 @@ tags: [controlled, kds, odf, okf-derived, status]
 timestamp: 2026-06-22T00:00:00Z
 kds_path: 开发/91-治理与验收/09-status/odf-phase9-dynamic-source-stabilization-plan.md
 source_path: 09-status/odf-phase9-dynamic-source-stabilization-plan.md
-source_hash: 2a5c30f64850d4ededc857f629ca9d889e90a37fc6b0629b54f4f040475f90af
+source_hash: 493eb4b2a8e72215397ddb668e525db51eb508512d0873fe25277e0d209d6f9b
 source_of_record: kds
 derivation_policy: metadata_only_no_body_copy
 ---

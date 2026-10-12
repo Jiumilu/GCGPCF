@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-2656290CFC
 title: GlobalCloud 绿色供应链体系总体实施路线与交付保障方案
 project: GPCF
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, XiaoC, XGD, XiaoG, GPCF, Studio]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, XiaoC, XGD, XiaoG, GPCF, Studio]
 domain: architecture
 status: controlled
 version: v1.0
@@ -46,7 +46,7 @@ superseded_by: []
 
 体系按 12 个交付包推进：
 
-1. WAES 治理与控制塔交付包
+1. WAME 治理与控制塔交付包
 2. PVAOS 生态入口交付包
 3. GPC 运营协同交付包
 4. GFIS 工厂执行交付包
@@ -88,7 +88,7 @@ superseded_by: []
 
 输出：
 
-1. WAES 初始化、治理、证据、状态骨架
+1. WAME 初始化、治理、证据、状态骨架
 2. PVAOS 组织、项目、入口骨架
 3. GPC 订单、ASN、运输、POD 骨架
 4. GFIS 工单、质量、库存、发货骨架
@@ -114,14 +114,14 @@ superseded_by: []
 3. 缺料预警与补料建议
 4. 质量异常闭环
 5. 运输签收异常闭环
-6. WAES 日报与复盘闭环
+6. WAME 日报与复盘闭环
 
 完成标准：
 
 1. 事件链贯通设计完成
 2. 证据链可回指
 3. AI 无越权主账写入
-4. WAES 仍只做治理不做事务审批
+4. WAME 仍只做治理不做事务审批
 
 ### 3.4 阶段3：试运行阶段
 
@@ -220,10 +220,10 @@ superseded_by: []
 
 本体系要达到能动运转，必须至少满足：
 
-1. WAES 能发起项目与发布验证
+1. WAME 能发起项目与发布验证
 2. PVAOS + GPC 能协同
 3. GFIS + Edge 能执行
-4. WAES 能治理
+4. WAME 能治理
 5. 事件、证据、批次、订单、异常可追踪
 6. 知识、复盘、日报、异常可回流
 7. 新增池、新工厂、新连接器、新 Agent 不推翻架构

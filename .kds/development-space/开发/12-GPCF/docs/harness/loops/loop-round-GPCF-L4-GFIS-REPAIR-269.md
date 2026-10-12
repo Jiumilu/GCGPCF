@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-9B0D5B23C0
 title: GPCF-L4-GFIS-REPAIR-269
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -47,7 +47,7 @@ superseded_by: []
 - `runtime_primary_key_ready=0`
 - `review_queue=0`
 - `runtime_intake=0`
-- `waes_review=0`
+- `wame_review=0`
 - `verified=0`
 - `runtime_sop_e2e=repair_required`
 
@@ -60,7 +60,7 @@ superseded_by: []
 
 ## 结论
 
-本轮只证明辽宁远航正式报价单 KDS 候选已映射到 `CustomerRequirementOrPlatformOrder` 的 source-record 候选门禁。因客户采购确认、平台订单回执或等效正式确认仍缺失，不能升级为 valid source record，也不能创建运行层主键、review queue、runtime intake、WAES review 或 verified artifact。
+本轮只证明辽宁远航正式报价单 KDS 候选已映射到 `CustomerRequirementOrPlatformOrder` 的 source-record 候选门禁。因客户采购确认、平台订单回执或等效正式确认仍缺失，不能升级为 valid source record，也不能创建运行层主键、review queue、runtime intake、WAME review 或 verified artifact。
 
 ## 真实性计数
 

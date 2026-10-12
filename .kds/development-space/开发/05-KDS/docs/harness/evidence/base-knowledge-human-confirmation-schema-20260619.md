@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-9C22552EEE
 title: 基础知识人工确认模式
 project: KDS
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS]
 domain: docs
 status: controlled
 version: v1.0
@@ -41,7 +41,7 @@ This schema defines the fields required for future manual confirmation of non-ha
 | sourceCandidateId | string | true | - | 来自 DKS-044 的写回候选 ID。 |
 | baseKnowledgeId | string | true | - | 底座知识对象 ID。 |
 | confirmingUnit | string | true | - | 执行确认的人员或单位。 |
-| confirmerRole | string | true | source_owner, project_owner, kds_operator, waes_reviewer, other_authorized | 确认人角色。 |
+| confirmerRole | string | true | source_owner, project_owner, kds_operator, wame_reviewer, other_authorized | 确认人角色。 |
 | sourceRefsReviewed | array | true | - | 已核验的来源、证据或台账引用。 |
 | factStatus | string | true | confirmed, partially_confirmed, rejected, more_evidence_required | 候选事实状态。 |
 | gapClosureOpinion | string | true | keep_open, ready_for_committee, ready_for_writeback_candidate, reject_candidate | 缺口处理意见。 |
@@ -59,7 +59,7 @@ This schema defines the fields required for future manual confirmation of non-ha
 | createsConfirmationFact | false |
 | createsCommitteeDecision | false |
 | realKdsApiWrite | false |
-| waesWrite | false |
+| wameWrite | false |
 | businessLedgerWrite | false |
 | settlementWrite | false |
 | ragAdmission | false |
@@ -69,5 +69,5 @@ This schema defines the fields required for future manual confirmation of non-ha
 
 - This file defines schema only and does not create human confirmation facts.
 - This file defines schema only and does not create committee decisions.
-- No real KDS API, WAES, GFIS, GPC, PVAOS, finance, settlement, RAG admission, or production write is performed.
+- No real KDS API, WAME, GFIS, GPC, PVAOS, finance, settlement, RAG admission, or production write is performed.
 - Any future use of this schema still requires explicit human or committee action and a separate controlled evidence record.

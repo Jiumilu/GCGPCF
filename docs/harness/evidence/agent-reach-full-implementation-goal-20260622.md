@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-AGENT-REACH-FULL-GOAL-20260622
 title: Agent-Reach Full Implementation Goal 2026-06-22
 project: KDS
-related_projects: [GFIS, GPC, WAME, KDS, GPCF]
+related_projects: [GFIS, GPC, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0

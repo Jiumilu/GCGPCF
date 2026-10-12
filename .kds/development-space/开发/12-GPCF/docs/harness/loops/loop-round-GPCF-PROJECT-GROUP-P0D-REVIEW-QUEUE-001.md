@@ -2,7 +2,7 @@
 doc_id: GPCF-LOOP-PROJECT-GROUP-P0D-REVIEW-QUEUE-001
 title: Loop Round GPCF-PROJECT-GROUP-P0D-REVIEW-QUEUE-001
 project: GPCF
-related_projects: [GPC, WAES, KDS, PKC, GPCF, Studio]
+related_projects: [GPC, WAME, KDS, PKC, GPCF, Studio]
 domain: docs
 status: controlled
 version: v1.0

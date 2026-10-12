@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-AGENT-REACH-P2-CONTROLLED-ADAPTER-20260622
 title: Agent-Reach P2 受控 Adapter Skeleton 证据 2026-06-22
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0

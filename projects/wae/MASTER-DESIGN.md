@@ -1,21 +1,16 @@
 ---
 doc_id: GPCF-DOC-455691886F
-title: 世界资产浏览器（WAE）统一界面框架总体设计
-project: WAE
-related_projects: [GPCF, WAME, WAS, PVAOS, PKC, Brain, GFIS, GPC, Studio, XiaoG, XGD, XiaoC, MMC, ICP, AAAS, SOP, PQC, SpaceAI, SpaceAIStudio]
-domain: ui-delivery
+title: 世界资产浏览器（WAE）统一界面框架总体设计 v0.1
+project: GPCF
+related_projects: [GPCF]
+domain: governance
 status: controlled
-version: v0.1
-owner: WAE
+version: v1.0
+owner: GPCF
 kds_space: 开发
 kds_path: 开发/91-治理与验收/projects/wae/MASTER-DESIGN.md
 source_path: projects/wae/MASTER-DESIGN.md
 sync_direction: bidirectional
-inherits:
-  - GPCF:01-architecture/GlobalCloud 项目群总体方案.md
-  - GPCF:04-ui-delivery/GlobalCloud项目群界面工程整体实施方案.md
-  - GPCF:04-ui-delivery/WAME专业工作台母框架差距评估.md
-  - GPCF:04-ui-delivery/WAME专业工作台母框架升级方案.md
 last_reviewed: 2026-10-12
 supersedes: []
 superseded_by: []

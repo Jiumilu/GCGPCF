@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-5E87A1BF6A
 title: GC-Knowledge Fabric P0 正式证据执行重入审批包预览 dry-run v0.1
 project: KDS
-related_projects: [WAES, KDS]
+related_projects: [WAME, KDS]
 domain: docs
 status: controlled
 version: v1.0
@@ -28,7 +28,7 @@ superseded_by: []
 
 - request owner
 - repair reviewer
-- WAES gate owner
+- WAME gate owner
 - KWE workflow owner
 - Harness reviewer
 - committee representative
@@ -46,7 +46,7 @@ superseded_by: []
 - approval refresh
 - verification plan refresh
 - rollback drill refresh
-- WAES reentry gate
+- WAME reentry gate
 - KWE reentry work item
 - Harness review input
 - responsibility boundary
@@ -69,7 +69,7 @@ superseded_by: []
 - missing approval refresh candidate ref
 - missing verification plan refresh candidate ref
 - missing rollback drill refresh candidate ref
-- missing WAES reentry gate candidate ref
+- missing WAME reentry gate candidate ref
 - missing KWE reentry work item candidate ref
 - missing Harness review input ref
 - missing responsibility boundary ref

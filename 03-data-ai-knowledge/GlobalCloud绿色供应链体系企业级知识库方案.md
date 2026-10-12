@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-D48C6EB801
 title: GlobalCloud 绿色供应链体系企业级知识库方案
 project: KDS
-related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, XiaoC, XGD]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, XiaoC, XGD, Studio]
 domain: data-ai-knowledge
 status: controlled
 version: v1.0

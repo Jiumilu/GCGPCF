@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-7A0378665D
 title: Loop Round — GPCF-L4-GFIS-REPAIR-231
 project: GPCF
-related_projects: [GFIS, GPC, WAES, GPCF]
+related_projects: [GFIS, GPC, WAME, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -66,7 +66,7 @@ valid_source_records=0
 runtime_primary_key_ready=0
 review_queue=0
 runtime_intake=0
-waes_review=0
+wame_review=0
 verified=0
 runtime_sop_e2e=repair_required
 ```
@@ -80,7 +80,7 @@ runtime_customer_requirement_platform_order_source_record_pending_business_verif
 
 ## 下一步
 
-本轮只证明弱人工核验完成文件会被拒收，不证明已收到真实客户订单、平台订单回执、合规人工核验完成文件、source-of-record、运行层主键、review queue、runtime intake、WAES review、verified artifact 或业务完成。
+本轮只证明弱人工核验完成文件会被拒收，不证明已收到真实客户订单、平台订单回执、合规人工核验完成文件、source-of-record、运行层主键、review queue、runtime intake、WAME review、verified artifact 或业务完成。
 
 下一轮建议：`GFIS-RUNTIME-SOP-E2E-222`，建立人工核验完成文件真实接收扫描与 hold gate。
 

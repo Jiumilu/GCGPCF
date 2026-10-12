@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-1CB6D50E9D
 title: GFIS Assistant DKS-263 摘要投递确认升级 SLA 违约审阅处置选项审批包路由队列通知确认升级预览策略
 project: KDS
-related_projects: [GFIS, WAES, KDS]
+related_projects: [GFIS, WAME, KDS]
 domain: docs
 status: controlled
 version: v1.0
@@ -28,7 +28,7 @@ superseded_by: []
 
 ## 硬边界
 
-DKS-263 不创建 escalation、timeout event、KWE work item，不创建 notification、acknowledgement、receipt、read receipt，不更新 delivery status，不发送外部通知，也不创建 approval assignment、approval lock、approval packet、approval request、approval decision、committee decision、freeze action、WAES gate result、Harness evidence、KDS lifecycle 或任何业务写回。
+DKS-263 不创建 escalation、timeout event、KWE work item，不创建 notification、acknowledgement、receipt、read receipt，不更新 delivery status，不发送外部通知，也不创建 approval assignment、approval lock、approval packet、approval request、approval decision、committee decision、freeze action、WAME gate result、Harness evidence、KDS lifecycle 或任何业务写回。
 
 ## 验证
 

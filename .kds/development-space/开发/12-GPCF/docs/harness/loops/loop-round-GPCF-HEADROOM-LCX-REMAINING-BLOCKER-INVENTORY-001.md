@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-HEADROOM-LCX-REMAINING-BLOCKER-INVENTORY-001
 title: "Loop Round: GPCF-HEADROOM-LCX-REMAINING-BLOCKER-INVENTORY-001"
 project: GPCF
-related_projects: [GPC, WAES, GPCF]
+related_projects: [GPC, WAME, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -50,4 +50,4 @@ superseded_by: []
 
 ## 下一轮
 
-如果未来真的出现授权窗口或 WAES/Harness 新裁决，可以直接把 blocker inventory 的 requirement_id 回填到实际授权字段和执行 runner。
+如果未来真的出现授权窗口或 WAME/Harness 新裁决，可以直接把 blocker inventory 的 requirement_id 回填到实际授权字段和执行 runner。

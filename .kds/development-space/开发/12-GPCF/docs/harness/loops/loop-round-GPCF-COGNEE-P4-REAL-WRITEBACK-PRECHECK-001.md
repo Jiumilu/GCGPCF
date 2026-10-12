@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-LOOP-COGNEE-P4-REAL-WRITEBACK-PRECHECK-001
 title: Loop Round - GPCF Cognee P4 真实写入前置预检 001
 project: GPCF
-related_projects: [GPC, WAES, GPCF]
+related_projects: [GPC, WAME, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -31,7 +31,7 @@ superseded_by: []
 
 - 重新确认 P1/P2/P3 的真实门禁要求，转为可执行 P4 前置矩阵。
 - 明确必须满足的写入安全条件：
-  - `cognee` 与 WAES 的授权链完整；
+  - `cognee` 与 WAME 的授权链完整；
   - 回写目标链路具备 run-time 可达性；
   - 回写与回滚失败可观测且可自动阻断。
 - 制定 P4 执行记录最小字段（round id、case id、write mode、authorization token source、rollback proof、error surface）。
@@ -50,7 +50,7 @@ superseded_by: []
 预检通过条件：
 
 - `cognee-p1-recall_output`: `pilot_gate_pass=true`（P1 recall 精度与答案等效门禁完成）
-- WAES marker/write 门禁仍可触发 `pass with watchlist`（仅允许受控执行）
+- WAME marker/write 门禁仍可触发 `pass with watchlist`（仅允许受控执行）
 - 真实写入 runbook 与回滚脚本补齐
 - 已确认下一轮写入边界为可控环境 `authorization_complete=false` 时的 dry-exec 与 preflight
 

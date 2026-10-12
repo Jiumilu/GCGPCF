@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-ED9FF3FA80
 title: 文档防污染哨兵扩展规则
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0

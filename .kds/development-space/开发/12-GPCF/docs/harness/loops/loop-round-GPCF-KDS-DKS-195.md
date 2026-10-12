@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-5F48EAA3B4
 title: LOOP Round GPCF KDS DKS-195
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -20,13 +20,13 @@ superseded_by: []
 
 ## 本轮目标
 
-建立 GFIS Assistant DKS-195 routing queue notification acknowledgement escalation digest delivery acknowledgement escalation preview no-write 边界，使 DKS-194 delivery acknowledgement preview 可派生为确认升级预览，但不产生真实 escalation、escalation task、delivery acknowledgement、digest delivery、delivery record、KWE 工单、通知、回执、审批、冻结、证据、WAES 结果或业务写回。
+建立 GFIS Assistant DKS-195 routing queue notification acknowledgement escalation digest delivery acknowledgement escalation preview no-write 边界，使 DKS-194 delivery acknowledgement preview 可派生为确认升级预览，但不产生真实 escalation、escalation task、delivery acknowledgement、digest delivery、delivery record、KWE 工单、通知、回执、审批、冻结、证据、WAME 结果或业务写回。
 
 ## 本轮输入
 
 - DKS-194 digest delivery acknowledgement preview dry-run fixture。
 - 既有 DKS-183 delivery acknowledgement escalation preview 类型、OKF policy 和 validator 模式。
-- GC-Knowledge Fabric no-write、WAES、KDS、Harness、LOOP 受控边界。
+- GC-Knowledge Fabric no-write、WAME、KDS、Harness、LOOP 受控边界。
 
 ## 本轮输出
 
@@ -48,7 +48,7 @@ superseded_by: []
 
 ## No-write 结论
 
-本轮只生成 acknowledgement escalation preview 候选视图，不创建 escalation，不创建 escalation task，不创建 delivery acknowledgement，不创建 digest delivery，不创建 delivery record，不写 GFIS/GPC/ERP/MES/KDS，不创建 Harness evidence 或 WAES gate result。
+本轮只生成 acknowledgement escalation preview 候选视图，不创建 escalation，不创建 escalation task，不创建 delivery acknowledgement，不创建 digest delivery，不创建 delivery record，不写 GFIS/GPC/ERP/MES/KDS，不创建 Harness evidence 或 WAME gate result。
 
 ## 下一轮
 

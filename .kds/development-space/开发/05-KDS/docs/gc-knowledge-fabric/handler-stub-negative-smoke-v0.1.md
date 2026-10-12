@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-234FFF6184
 title: GC-Knowledge Fabric Handler Stub Negative Smoke v0.1
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -73,7 +73,7 @@ python3 scripts/api/validate_gckf_p0_handler_stub_negative_smoke.py
 - 5 个 negative case 全部通过。
 - 2 个错误路径均抛出预期错误。
 - 3 个 guard case 均保持 no-write。
-- candidate case 仍需 WAES/KWE 后续流程，不形成正式事实。
+- candidate case 仍需 WAME/KWE 后续流程，不形成正式事实。
 
 ## 6. 下一步
 

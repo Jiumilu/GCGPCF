@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-0A73F98BE4
 title: Cognee 外部执行回填检查清单 2026-06-26
 project: GPCF
-related_projects: [GPCF, WAES]
+related_projects: [GPCF, WAME]
 domain: docs
 status: controlled
 version: v1.0
@@ -50,7 +50,7 @@ superseded_by: []
 |---|---|
 | `production_write` | `false`，除非另有独立 production receipt |
 | `accepted` | `false`，除非 Harness 单独裁决 |
-| `integrated` | `false`，除非 WAES 单独裁决 |
+| `integrated` | `false`，除非 WAME 单独裁决 |
 | `production_ready` | `false`，除非 full-run gap 全部关闭 |
 | `full_run_claim` | `false`，除非全量运行链路另行完成 |
 

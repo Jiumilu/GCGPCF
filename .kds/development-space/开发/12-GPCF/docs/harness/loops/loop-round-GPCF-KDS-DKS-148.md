@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-E36792E243
 title: LOOP Round GPCF KDS DKS-148
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, Brain, PKC, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, Brain, PKC, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -20,7 +20,7 @@ superseded_by: []
 
 ## 本轮目标
 
-建立 approval packet routing queue notification acknowledgement escalation digest delivery acknowledgement escalation SLA preview 的 no-write 规则、类型、夹具和校验器，承接 DKS-147 acknowledgement escalation preview，但只展示候选 SLA 窗口、已用分钟、剩余分钟、逾期分钟、SLA 风险、候选升级责任人和下一步建议，不创建真实 SLA timer、escalation、reminder、escalation task、delivery acknowledgement、approval request、approval decision、Harness evidence、WAES 结果、KWE work item、KDS 状态提升或业务写回。
+建立 approval packet routing queue notification acknowledgement escalation digest delivery acknowledgement escalation SLA preview 的 no-write 规则、类型、夹具和校验器，承接 DKS-147 acknowledgement escalation preview，但只展示候选 SLA 窗口、已用分钟、剩余分钟、逾期分钟、SLA 风险、候选升级责任人和下一步建议，不创建真实 SLA timer、escalation、reminder、escalation task、delivery acknowledgement、approval request、approval decision、Harness evidence、WAME 结果、KWE work item、KDS 状态提升或业务写回。
 
 ## 输入
 
@@ -28,7 +28,7 @@ superseded_by: []
 - DKS-146 delivery acknowledgement preview 边界。
 - DKS-145 digest delivery preview 边界。
 - `okf/committee-policy.yaml`。
-- `okf/waes-gate-policy.yaml`。
+- `okf/wame-gate-policy.yaml`。
 - GFIS / Brain / PKC no-write contract 覆盖清单。
 
 ## 动作
@@ -56,4 +56,4 @@ superseded_by: []
 
 ## 反馈
 
-DKS-148 仍是本地预览与候选展示能力，不代表 SLA timer、escalation、reminder、escalation task、delivery acknowledgement、approval request、approval decision、WAES 结果、Harness evidence 或委员会决议已经创建。下一轮可继续推进 DKS-149：approval packet routing queue notification acknowledgement escalation digest delivery acknowledgement escalation SLA breach review preview no-write，用于展示候选 SLA breach review 预览，但仍不得写入真实审批、裁决、冻结、通知、确认、升级、摘要投递或 evidence。
+DKS-148 仍是本地预览与候选展示能力，不代表 SLA timer、escalation、reminder、escalation task、delivery acknowledgement、approval request、approval decision、WAME 结果、Harness evidence 或委员会决议已经创建。下一轮可继续推进 DKS-149：approval packet routing queue notification acknowledgement escalation digest delivery acknowledgement escalation SLA breach review preview no-write，用于展示候选 SLA breach review 预览，但仍不得写入真实审批、裁决、冻结、通知、确认、升级、摘要投递或 evidence。

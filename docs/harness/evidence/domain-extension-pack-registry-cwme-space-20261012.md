@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-DOMAIN-EXTENSION-PACK-REGISTRY-CWME-SPACE-20261012
 title: 域扩展包登记（CWME 城市空间域扩展包）· 2026-10-12
 project: KDS
-related_projects: [WAME, CWME, KDS, GPCF]
+related_projects: [GPC, PVAOS, WAME, KDS, MMC, GPCF]
 domain: docs
 status: controlled
 version: v1.0

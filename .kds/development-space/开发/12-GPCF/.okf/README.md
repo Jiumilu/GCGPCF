@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-8DB9DCE902
 title: .okf
 project: GPCF
-related_projects: [GPCF, GPC, WAES, KDS]
+related_projects: [GPCF, GPC, WAME, KDS]
 domain: governance
 status: controlled
 version: v1.0
@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/12-GPCF/.okf/README.md
 source_path: .okf/README.md
 sync_direction: bidirectional
-last_reviewed: 2026-10-11
+last_reviewed: 2026-10-12
 supersedes: []
 superseded_by: []
 ---
@@ -41,7 +41,7 @@ KDS 空间：`开发`
 | GPCF-DOC-E3A50CA31F | OKF Architecture Bundle 只读索引 | .okf/architecture/index.md | GPCF | controlled |
 | GPCF-DOC-F0799E0052 | Summary | .okf/bundles/architecture-v0.1/concepts/01-architecture/AI驱动GFIS与GlobalCloud体系结合分析.md | GPCF | controlled |
 | GPCF-DOC-6333B7AEA2 | Summary | .okf/bundles/architecture-v0.1/concepts/01-architecture/GlobalCloud体系最小闭环与三阶段激活深度总表.md | GPCF | controlled |
-| GPCF-DOC-B48C1B7420 | Summary | .okf/bundles/architecture-v0.1/concepts/01-architecture/GlobalCloud绿色供应链体系WAES控制塔治理架构图.md | GPCF | controlled |
+| GPCF-DOC-BD939AD888 | Summary | .okf/bundles/architecture-v0.1/concepts/01-architecture/GlobalCloud绿色供应链体系WAME控制塔治理架构图.md | GPCF | controlled |
 | GPCF-DOC-D278ACC161 | Summary | .okf/bundles/architecture-v0.1/concepts/01-architecture/GlobalCloud绿色供应链体系总架构.md | GPCF | controlled |
 | GPCF-DOC-6F7F2D47CD | Summary | .okf/bundles/architecture-v0.1/concepts/01-architecture/GlobalCloud项目群交叉分析报告.md | GPCF | controlled |
 | GPCF-DOC-0C6ABE0306 | Summary | .okf/bundles/architecture-v0.1/concepts/01-architecture/GlobalCloud项目群最小闭环L4实施方案.md | GPCF | controlled |

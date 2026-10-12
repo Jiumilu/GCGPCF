@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-09655E45C0
 title: ADR：GPC 从 Odoo 二开调整为原生公共服务平台
 project: GPCF
-related_projects: [GFIS, GPC, PVAOS, WAES, XiaoC, XGD, GPCF, Studio]
+related_projects: [GFIS, GPC, PVAOS, WAME, XiaoC, XGD, GPCF, Studio]
 domain: architecture
 status: controlled
 version: v1.0
@@ -21,12 +21,12 @@ superseded_by: []
 日期：2026-06-07
 状态：已纳入 GlobalCloud 绿色供应链体系设计
 决策范围：GlobalCloud GPC 在 GlobalCloud 绿色供应链体系中的技术路线和系统边界
-当前口径：GPC 归入运营与协同层；WAES 归入治理与监控层，只做规则、监控、治理、证据、状态和 AI 授权，不参与具体事务审批。
+当前口径：GPC 归入运营与协同层；WAME 归入治理与监控层，只做规则、监控、治理、证据、状态和 AI 授权，不参与具体事务审批。
 
 当前阅读口径：
 
 1. `GPC` 是绿色供应链平台一期主线系统。
-2. `WAES` 不承办平台业务事务审批。
+2. `WAME` 不承办平台业务事务审批。
 3. `GFIS` 保持工厂事实源地位。
 4. 宪法内容主要通过治理规则、证据门禁、状态升级和 AI 授权约束进入平台。
 
@@ -73,7 +73,7 @@ GPC 只做跨企业协同和外部服务：
 - POD 签收回单。
 - 绿色供应链公共服务。
 - 园区、监管、联盟协同。
-- 与 GFIS、WAES、PVAOS 的事件/API 集成。
+- 与 GFIS、WAME、PVAOS 的事件/API 集成。
 
 GPC 不做：
 
@@ -97,15 +97,15 @@ GPC 不做：
 | 权限 | 租户 / 组织 / 角色 / 外部伙伴 / 业务确认权限 |
 | 工作流 | 轻量状态机，先不引入重 BPM |
 | 证据 | Evidence Ledger |
-| AI | 通过 WAES/Hermes/XiaoC 进入治理授权链；具体业务执行仍进入 GPC/GFIS 内部确认流程，不直接写业务事实 |
+| AI | 通过 WAME/Hermes/XiaoC 进入治理授权链；具体业务执行仍进入 GPC/GFIS 内部确认流程，不直接写业务事实 |
 
 四流优化补充：
 
 | 维度 | GPC 责任 | 边界 |
 |---|---|---|
-| 治理流 | 接受 WAES 的规则、指标、连接器和 AI 授权约束 | 不承办 WAES 治理审批 |
+| 治理流 | 接受 WAME 的规则、指标、连接器和 AI 授权约束 | 不承办 WAME 治理审批 |
 | 业务流 | 平台订单、样品申请、客户签样、转量产、ASN、预约、运输、POD、外部异常、多厂分单 | 不做 GFIS 工厂执行主账，不做配方研发和样品检测事实 |
-| 数据流 | 通过连接器合同发布事件、业务确认引用和证据 | 不共享 GFIS/WAES 数据库 |
+| 数据流 | 通过连接器合同发布事件、业务确认引用和证据 | 不共享 GFIS/WAME 数据库 |
 | AI 服务流 | 接收 AI 建议和草案，业务动作在 GPC 内部确认 | 不接受 AI 直接写签收、承诺或异常关闭事实 |
 
 ## 5. 一期最小对象
@@ -158,7 +158,7 @@ gfis.inventory.availability_changed
 | 发货出库事实 | GFIS |
 | 客户/供应商外部协同 | GPC |
 | 车辆、承运商、在途、签收、回单 | GPC |
-| 跨系统看板、治理规则、证据、状态审计 | WAES |
+| 跨系统看板、治理规则、证据、状态审计 | WAME |
 
 ## 8. 迁移路径
 
@@ -168,7 +168,7 @@ gfis.inventory.availability_changed
 4. 建立 GPC 最小服务原型，只覆盖订单、预约、运输、签收、回单。
 5. GFIS 输出发货事件给 GPC。
 6. GPC 输出签收回传给 GFIS。
-7. WAES 读取 GFIS/GPC 事件并进入控制塔、治理规则和证据台账。
+7. WAME 读取 GFIS/GPC 事件并进入控制塔、治理规则和证据台账。
 8. 如未来确需财务、会计、CRM back-office，再通过 Odoo connector 接入，不把 Odoo 放回主线。
 
 ## 9. 验收口径
@@ -179,7 +179,7 @@ GPC 一期不能用“页面存在”作为完成标准，必须满足：
 2. 一次 GFIS 发货能生成 GPC 运输/发运记录。
 3. 一次客户签收能形成 POD，并回传 GFIS。
 4. 一次运输异常能进入 `ExceptionCase` 并闭环。
-5. WAES 能只读展示订单、运输、签收、异常和证据。
+5. WAME 能只读展示订单、运输、签收、异常和证据。
 6. AI 只能生成建议和摘要，不能直接改写发货、签收、质量和库存事实。
 
 ## 10. 影响

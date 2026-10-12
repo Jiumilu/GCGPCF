@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-8C1A3F9020
 title: Loop Round - CodeGraph watchlist steady monitor 20260623
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, Brain, GPCF, Studio]
+related_projects: [GFIS, GPC, WAME, KDS, Brain, GPCF, Studio]
 domain: docs
 status: controlled
 version: v1.0

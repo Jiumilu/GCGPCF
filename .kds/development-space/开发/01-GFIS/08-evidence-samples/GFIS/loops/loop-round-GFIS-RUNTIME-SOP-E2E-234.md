@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-B1AA215813
 title: GFIS-RUNTIME-SOP-E2E-234
 project: GFIS
-related_projects: [GFIS, WAES]
+related_projects: [GFIS, WAME]
 domain: evidence
 status: controlled
 version: v1.0
@@ -23,7 +23,7 @@ superseded_by: []
 - 上一轮：`GFIS-RUNTIME-SOP-E2E-233`
 - 上一轮状态：release override approval request package 已准备，但 `request_items_authorized=0`、`request_items_dispatched=0`、`request_acknowledgements_found=0`、`request_owner_responses=0`。
 - 本轮目标：建立 release override approval request dispatch authorization preflight，只判断是否允许派发请求包。
-- 授权边界：不得派发、不得释放 open hold、不得创建 dispatch confirmation、不得进入 review/runtime/WAES、不得写生产或真实外部 API、不得升级 accepted/integrated。
+- 授权边界：不得派发、不得释放 open hold、不得创建 dispatch confirmation、不得进入 review/runtime/WAME、不得写生产或真实外部 API、不得升级 accepted/integrated。
 
 ## 执行动作
 
@@ -57,7 +57,7 @@ superseded_by: []
 - `runtime_primary_key_ready=0`
 - `review_queue=0`
 - `runtime_intake=0`
-- `waes_review=0`
+- `wame_review=0`
 - `verified=0`
 - `runtime_sop_e2e=repair_required`
 

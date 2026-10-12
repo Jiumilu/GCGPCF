@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-GCKFP0FORMALEVIDENCEEXECUTIONREVIEWERACCEPTANCEACKNOWLEDGEMENTROUTINGPACKAGEPREVIEWCURRENTSTATED16420260622
 title: GCKF P0 正式 evidence 审阅接受确认路由包预览当前态证据 D164
 project: GPCF
-related_projects: [GPCF, WAES]
+related_projects: [GPCF, WAME]
 domain: docs
 status: controlled
 version: v1.0

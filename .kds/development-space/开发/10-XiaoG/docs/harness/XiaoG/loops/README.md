@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-CC7297EBCF
 title: loops
 project: XiaoG
-related_projects: [GPC, WAES, KDS, XiaoG, GPCF]
+related_projects: [GPC, WAME, KDS, XiaoG, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/10-XiaoG/docs/harness/XiaoG/loops/README.md
 source_path: docs/harness/XiaoG/loops/README.md
 sync_direction: bidirectional
-last_reviewed: 2026-10-11
+last_reviewed: 2026-10-12
 supersedes: []
 superseded_by: []
 ---

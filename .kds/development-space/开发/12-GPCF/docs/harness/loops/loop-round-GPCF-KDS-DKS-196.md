@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-06BCE407DA
 title: LOOP Round GPCF KDS DKS-196
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -20,13 +20,13 @@ superseded_by: []
 
 ## 本轮目标
 
-建立 GFIS Assistant DKS-196 routing queue notification acknowledgement escalation digest delivery acknowledgement escalation SLA preview no-write 边界，使 DKS-195 acknowledgement escalation preview 可派生为 SLA 风险预览，但不产生真实 SLA timer、escalation、reminder、escalation task、证据、WAES 结果或业务写回。
+建立 GFIS Assistant DKS-196 routing queue notification acknowledgement escalation digest delivery acknowledgement escalation SLA preview no-write 边界，使 DKS-195 acknowledgement escalation preview 可派生为 SLA 风险预览，但不产生真实 SLA timer、escalation、reminder、escalation task、证据、WAME 结果或业务写回。
 
 ## 本轮输入
 
 - DKS-195 acknowledgement escalation preview dry-run fixture。
 - 既有 DKS-184 delivery acknowledgement escalation SLA preview 类型、OKF policy 和 validator 模式。
-- GC-Knowledge Fabric no-write、WAES、KDS、Harness、LOOP 受控边界。
+- GC-Knowledge Fabric no-write、WAME、KDS、Harness、LOOP 受控边界。
 
 ## 本轮输出
 
@@ -48,7 +48,7 @@ superseded_by: []
 
 ## No-write 结论
 
-本轮只生成 SLA preview 候选视图，不创建 SLA timer，不创建 escalation，不创建 reminder，不创建 escalation task，不写 GFIS/GPC/ERP/MES/KDS，不创建 Harness evidence 或 WAES gate result。
+本轮只生成 SLA preview 候选视图，不创建 SLA timer，不创建 escalation，不创建 reminder，不创建 escalation task，不写 GFIS/GPC/ERP/MES/KDS，不创建 Harness evidence 或 WAME gate result。
 
 ## 下一轮
 

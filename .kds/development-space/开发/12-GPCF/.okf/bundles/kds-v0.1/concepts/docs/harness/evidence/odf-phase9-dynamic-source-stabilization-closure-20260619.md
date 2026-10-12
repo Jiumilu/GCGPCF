@@ -7,7 +7,7 @@ tags: [controlled, evidence, kds, odf, okf-derived]
 timestamp: 2026-06-22T00:00:00Z
 kds_path: 开发/05-KDS/docs/harness/evidence/odf-phase9-dynamic-source-stabilization-closure-20260619.md
 source_path: docs/harness/evidence/odf-phase9-dynamic-source-stabilization-closure-20260619.md
-source_hash: cb7dcf162664438eee794ff6f01de58263f7469a2cb372b1fcacb7181036e295
+source_hash: 7adcbb6413c7e96b92d2c245cb10a1e5855d53525fd4d961f4645be5df484325
 source_of_record: kds
 derivation_policy: metadata_only_no_body_copy
 ---

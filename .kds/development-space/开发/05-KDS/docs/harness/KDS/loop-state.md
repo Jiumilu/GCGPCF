@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-19C33DD1F8
 title: GlobalCloud KDS Loop State
 project: KDS
-related_projects: [GPC, WAES, KDS, GPCF]
+related_projects: [GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0

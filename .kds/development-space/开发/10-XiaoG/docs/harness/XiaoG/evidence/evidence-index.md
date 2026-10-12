@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-C1614FDCEB
 title: Evidence Index — XiaoG
 project: XiaoG
-related_projects: [GFIS, GPC, WAES, XiaoG, GPCF]
+related_projects: [GFIS, GPC, WAME, XiaoG, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -29,7 +29,7 @@ superseded_by: []
 ## 缺口
 
 - 真实 XiaoG 项目仓未确认。
-- 设备/语音接入、GFIS/WAES 触发链路和真实设备验证尚未完成。
+- 设备/语音接入、GFIS/WAME 触发链路和真实设备验证尚未完成。
 - 未经人工验收不得升级 `accepted` 或 `integrated`。
 
-Current state remains `partial` until XiaoG 真实项目仓、设备/语音接入验证、GFIS/WAES 触发链路和人工验收完成。
+Current state remains `partial` until XiaoG 真实项目仓、设备/语音接入验证、GFIS/WAME 触发链路和人工验收完成。

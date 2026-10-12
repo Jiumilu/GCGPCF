@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-DBC74FB02B
 title: Loop Round GPCF-L4-GFIS-REPAIR-006
 project: GPCF
-related_projects: [GFIS, GPC, WAES, GPCF]
+related_projects: [GFIS, GPC, WAME, GPCF]
 domain: docs
 status: controlled
 version: v1.0

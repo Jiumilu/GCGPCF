@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-B096D9C533
 title: L3 session 重启与计数器台账
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0

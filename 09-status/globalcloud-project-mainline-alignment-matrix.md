@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-6CE17269E9
 title: GlobalCloud 项目群项目主线对齐矩阵
 project: GPCF
-related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio]
 domain: status
 status: controlled
 version: v1.0

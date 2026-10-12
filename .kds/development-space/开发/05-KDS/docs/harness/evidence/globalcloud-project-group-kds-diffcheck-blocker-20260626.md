@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-PROJECT-GROUP-KDS-DIFFCHECK-BLOCKER-20260626
 title: GlobalCloud 项目群 KDS Diff Check 阻塞证据 2026-06-26
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, Brain, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, Brain, GPCF]
 domain: docs
 status: controlled
 version: v1.0

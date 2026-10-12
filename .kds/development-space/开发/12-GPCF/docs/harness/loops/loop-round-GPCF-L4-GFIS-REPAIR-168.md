@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-E0B9FE7949
 title: GPCF-L4-GFIS-REPAIR-168 GFIS owner response 提交包隔离扫描器
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -45,20 +45,20 @@ GFIS 新增 owner response 提交包隔离扫描 JSON/Markdown、builder、valid
 项目级 validator 输出：
 
 ```text
-liaoning_yuanhang_runtime_document_evidence_slot_owner_response_submission_package_quarantine_scanner=pass objects=12 proof_slots=62 expected_submission_packages=62 submission_packages_found=0 structure_valid_submission_packages=0 quarantine_candidates=0 quarantined_packages=0 accepted_packages=0 rejected_packages=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0 state=owner_response_submission_package_quarantine_blocked_no_submission_packages runtime_sop_e2e=repair_required
+liaoning_yuanhang_runtime_document_evidence_slot_owner_response_submission_package_quarantine_scanner=pass objects=12 proof_slots=62 expected_submission_packages=62 submission_packages_found=0 structure_valid_submission_packages=0 quarantine_candidates=0 quarantined_packages=0 accepted_packages=0 rejected_packages=0 review_queue=0 runtime_intake=0 wame_review=0 verified=0 state=owner_response_submission_package_quarantine_blocked_no_submission_packages runtime_sop_e2e=repair_required
 ```
 
 主 runtime SOP validator expected exit 2，并新增：
 
 ```text
-runtime_liaoning_yuanhang_runtime_document_evidence_slot_owner_response_submission_package_quarantine_scanner=owner_response_submission_package_quarantine_blocked_no_submission_packages:objects=12:proof_slots=62:expected_submission_packages=62:submission_packages_found=0:structure_valid_submission_packages=0:quarantine_candidates=0:quarantined_packages=0:accepted_packages=0:rejected_packages=0:review_queue=0:runtime_intake=0:waes_review=0:verified=0
+runtime_liaoning_yuanhang_runtime_document_evidence_slot_owner_response_submission_package_quarantine_scanner=owner_response_submission_package_quarantine_blocked_no_submission_packages:objects=12:proof_slots=62:expected_submission_packages=62:submission_packages_found=0:structure_valid_submission_packages=0:quarantine_candidates=0:quarantined_packages=0:accepted_packages=0:rejected_packages=0:review_queue=0:runtime_intake=0:wame_review=0:verified=0
 ```
 
 GFIS Demo E2E `26 passed` 只能登记为 `pass_demo_only`，不能作为运行层 SOP E2E 验收证据。
 
 ## 授权边界
 
-本轮未执行 Git push、生产写入、真实外部 API 写入、真实 KDS/WAES 写入、数据库迁移、schema sync、权限变更、部署、ECS/阿里云/Caddy/隧道/Docker 变更，未将任何状态升级为 accepted 或 integrated。
+本轮未执行 Git push、生产写入、真实外部 API 写入、真实 KDS/WAME 写入、数据库迁移、schema sync、权限变更、部署、ECS/阿里云/Caddy/隧道/Docker 变更，未将任何状态升级为 accepted 或 integrated。
 
 ## 真实性计数
 

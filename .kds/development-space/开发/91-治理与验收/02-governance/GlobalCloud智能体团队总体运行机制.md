@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-7F63F2D675
 title: GlobalCloud 智能体团队总体运行机制
 project: WAME
-related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio]
 domain: governance
 status: controlled
 version: v1.0

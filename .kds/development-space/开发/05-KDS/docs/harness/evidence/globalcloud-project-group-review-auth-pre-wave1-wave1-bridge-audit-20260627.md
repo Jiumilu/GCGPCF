@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-PROJECT-GROUP-REVIEW-AUTH-PRE-WAVE1-WAVE1-BRIDGE-AUDIT-20260627
 title: GlobalCloud 项目群 REVIEW-AUTH / Pre-Wave1 / Wave1 桥接审计 2026-06-27
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0

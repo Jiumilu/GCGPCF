@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-41C37C2200
 title: OKF v0.1 Summary Approval Request Gate
 project: KDS
-related_projects: [GPCF, KDS, WAME]
+related_projects: [KDS]
 domain: docs
 status: controlled
 version: v1.0

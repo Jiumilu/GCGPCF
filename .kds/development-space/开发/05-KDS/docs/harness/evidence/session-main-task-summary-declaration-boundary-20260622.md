@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-FACA370CCA
 title: 会话主任务总结与声明控制边界
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, Brain, GPCF, Studio]
+related_projects: [GFIS, GPC, WAME, KDS, Brain, GPCF, Studio]
 domain: docs
 status: controlled
 version: v1.0

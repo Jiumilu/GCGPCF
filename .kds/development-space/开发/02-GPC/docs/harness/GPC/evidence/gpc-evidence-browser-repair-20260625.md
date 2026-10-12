@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-84431522D2
 title: GPC Evidence/Browser 修复与边界证据 2026-06-25
 project: GPC
-related_projects: [GFIS, GPC, PVAOS, WAES, GPCF]
+related_projects: [GFIS, GPC, PVAOS, WAME, GPCF]
 domain: docs
 status: controlled
 version: v1.0

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-6C0AA9098
 title: WAS Real Source Record Monitor 098 证据
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -20,7 +20,7 @@ superseded_by: []
 
 ## 范围
 
-`GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-098` 将绿色供应链覆盖扩展到循环经济、回收处置、逆向物流和再利用/回收率证据边界。该边界用于约束任何回收、再利用、处置或循环经济声明进入 WAES/KDS/GFIS/RAG/Pool 依赖前，必须具备可追溯、可复核、不可由 LLM 或治理文档替代的真实证据链。
+`GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-098` 将绿色供应链覆盖扩展到循环经济、回收处置、逆向物流和再利用/回收率证据边界。该边界用于约束任何回收、再利用、处置或循环经济声明进入 WAME/KDS/GFIS/RAG/Pool 依赖前，必须具备可追溯、可复核、不可由 LLM 或治理文档替代的真实证据链。
 
 ## 监控检查
 
@@ -42,7 +42,7 @@ superseded_by: []
 | runtime_primary_key_ready | `0` |
 | review_queue | `0` |
 | runtime_intake | `0` |
-| waes_review | `0` |
+| wame_review | `0` |
 | verified | `0` |
 | accepted | `False` |
 | integrated | `False` |
@@ -73,7 +73,7 @@ python3 tools/kds-sync/validate_was_real_source_record_monitor_098.py
 
 - 本证据不创建也不推断回收计划批准、逆向物流回执、回收证书、废弃物转移联单、授权处置许可、再利用/回收率计算或 KDS 循环结果发布回执。
 - 本证据不写入 GFIS/KWE 运行层。
-- 本证据不创建 KDS 正式事实、WAES review、runtime primary key、review queue、runtime intake、verified artifact，也不形成 accepted、integrated 或 production ready 状态。
+- 本证据不创建 KDS 正式事实、WAME review、runtime primary key、review queue、runtime intake、verified artifact，也不形成 accepted、integrated 或 production ready 状态。
 
 ## 下一轮
 

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-66A701A0F6
 title: GPCF-KDS-DKS-003 完整实施提示词 Loop 记录
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0

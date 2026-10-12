@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-817579A2B2
 title: loops
 project: XGD
-related_projects: [GPC, WAES, KDS, XGD, GPCF]
+related_projects: [GPC, WAME, KDS, XGD, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/09-XGD/docs/harness/XGD/loops/README.md
 source_path: docs/harness/XGD/loops/README.md
 sync_direction: bidirectional
-last_reviewed: 2026-10-11
+last_reviewed: 2026-10-12
 supersedes: []
 superseded_by: []
 ---

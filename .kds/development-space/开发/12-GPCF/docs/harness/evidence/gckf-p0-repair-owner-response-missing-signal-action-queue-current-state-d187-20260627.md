@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-GCKFP0RESPONSESIGNALACTIOND18720260627
 title: GCKF P0 修复负责人响应缺失信号补齐队列当前态 D187
 project: GPCF
-related_projects: [GPCF, GFIS, GPC, WAES, KDS]
+related_projects: [GPCF, GFIS, GPC, WAME, KDS]
 domain: docs
 status: controlled
 version: v1.0
@@ -43,7 +43,7 @@ D187 承接 D186 的 arrival scan，把四项缺失信号转成可追踪补齐�
 |---|---|---|---|
 | D187-AQ-001 | real_repair_owner_response | controlled repair owner response document | blocked_waiting_external_input |
 | D187-AQ-002 | signed_response_package | signed response package | blocked_waiting_external_input |
-| D187-AQ-003 | waes_review_note | WAES review note | blocked_waiting_external_input |
+| D187-AQ-003 | wame_review_note | WAME review note | blocked_waiting_external_input |
 | D187-AQ-004 | human_confirmation_record | human confirmation record | blocked_waiting_external_input |
 
 ## 禁止动作

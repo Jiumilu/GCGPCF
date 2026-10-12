@@ -28,7 +28,7 @@ integrated: false
 production_ready: false
 ```
 
-当前只完成独立仓库、OpenSpec、24×11契约、三场景、API、测试和本地运行证据。下一门禁是人工确认与 WAES/GPCF 治理审查。
+当前只完成独立仓库、OpenSpec、24×11契约、三场景、API、测试和本地运行证据。下一门禁是人工确认与 WAME/GPCF 治理审查。
 
 ## OpenSpec 入口
 

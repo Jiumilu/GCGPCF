@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-35411435D9
 title: WAS Completion Audit Evidence
 project: KDS
-related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio, WAS]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-89DA7794F3
 title: GPCF-L4-GFIS-REPAIR-197
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -42,13 +42,13 @@ manual_authorized=0
 recipient_identity_confirmed=0
 dispatch_channel_confirmed=0
 kds_source_backlink_valid=0
-waes_evidence_candidate_ready=0
+wame_evidence_candidate_ready=0
 release_allowed=0
 collection_open=0
 quarantine_allowed=0
 review_queue=0
 manual_review=0
-waes_review=0
+wame_review=0
 runtime_intake=0
 verified=0
 runtime_primary_key_ready=0
@@ -76,9 +76,9 @@ runtime_sop_e2e=repair_required
 ## 边界
 
 - 本轮只证明 GFIS 运行层 0 有效 review authorization envelope 的事实已转为 open hold。
-- 不证明真实客户订单、平台订单、授权 envelope、运行层主键、review queue、runtime intake、WAES review、verified artifact、KDS write receipt 或业务完成。
-- 未执行 Git push、生产写入、真实外部 API 写入、真实 KDS/WAES 写入、数据库迁移、schema sync、权限变更、ECS/阿里云/Caddy/隧道/Docker 变更、部署或 accepted/integrated 状态升级。
+- 不证明真实客户订单、平台订单、授权 envelope、运行层主键、review queue、runtime intake、WAME review、verified artifact、KDS write receipt 或业务完成。
+- 未执行 Git push、生产写入、真实外部 API 写入、真实 KDS/WAME 写入、数据库迁移、schema sync、权限变更、ECS/阿里云/Caddy/隧道/Docker 变更、部署或 accepted/integrated 状态升级。
 
 ## 下一轮建议
 
-`GFIS-RUNTIME-SOP-E2E-191`：围绕 `CustomerRequirementOrPlatformOrder` 建立 review authorization envelope hold release precheck；无真实授权信封、人工授权、接收人身份、分发通道、KDS backlink 与 WAES candidate 前继续保持 `review_queue=0`、`runtime_intake=0`、`verified=0`。
+`GFIS-RUNTIME-SOP-E2E-191`：围绕 `CustomerRequirementOrPlatformOrder` 建立 review authorization envelope hold release precheck；无真实授权信封、人工授权、接收人身份、分发通道、KDS backlink 与 WAME candidate 前继续保持 `review_queue=0`、`runtime_intake=0`、`verified=0`。

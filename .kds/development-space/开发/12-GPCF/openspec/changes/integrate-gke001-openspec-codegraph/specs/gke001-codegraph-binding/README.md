@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-64A8C66ABB
 title: gke001-codegraph-binding
 project: GPCF
-related_projects: [AAAS, Brain, WAS, XiaoC, WAES, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP]
+related_projects: [AAAS, Brain, WAS, XiaoC, WAME, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP]
 domain: openspec
 status: draft
 version: v1.0
@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/12-GPCF/openspec/changes/integrate-gke001-openspec-codegraph/specs/gke001-codegraph-binding/README.md
 source_path: openspec/changes/integrate-gke001-openspec-codegraph/specs/gke001-codegraph-binding/README.md
 sync_direction: bidirectional
-last_reviewed: 2026-10-11
+last_reviewed: 2026-10-12
 supersedes: []
 superseded_by: []
 ---

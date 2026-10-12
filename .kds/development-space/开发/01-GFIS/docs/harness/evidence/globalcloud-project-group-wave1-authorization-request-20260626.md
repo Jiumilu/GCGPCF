@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-PROJECT-GROUP-WAVE1-AUTHORIZATION-REQUEST-20260626
 title: GlobalCloud 项目群 Wave 1 真实执行授权请求 2026-06-26
 project: GFIS
-related_projects: [AAAS, Brain, WAS, XiaoC, WAES, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP]
+related_projects: [AAAS, Brain, WAS, XiaoC, WAME, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP]
 domain: docs
 status: controlled
 version: v1.0
@@ -77,7 +77,7 @@ customer_accepted = false
 
 | auth_id | 对应 pack | 请求动作 | 授权字段 | 授权后允许的最大动作 | 仍需另行确认 | 未确认时状态 |
 |---|---|---|---|---|---|---|
-| `AUTH-WAVE1-WAES-LINT-RUNTIME-20260626` | `WAVE1-WAES-LINT-RUNTIME-001` | 允许进入 WAES lint/runtime 修复与本地质量门禁执行 | `allow_wave1_waes_lint_runtime` | 仅限 WAES 本地修复、命令运行和 evidence 记录 | stage、commit、push、发布、权限变更、accepted/integrated/customer acceptance | `authorization_required / repair_required` |
+| `AUTH-WAVE1-WAME-LINT-RUNTIME-20260626` | `WAVE1-WAME-LINT-RUNTIME-001` | 允许进入 WAME lint/runtime 修复与本地质量门禁执行 | `allow_wave1_wame_lint_runtime` | 仅限 WAME 本地修复、命令运行和 evidence 记录 | stage、commit、push、发布、权限变更、accepted/integrated/customer acceptance | `authorization_required / repair_required` |
 | `AUTH-WAVE1-GFIS-REAL-SOR-20260626` | `WAVE1-GFIS-REAL-SOR-001` | 允许接收或登记 GFIS 真实 source-of-record 输入并做预检 | `allow_wave1_gfis_real_sor_intake` | 仅限 source-of-record intake/precheck 和 evidence 记录 | 生产写入、客户验收、SCaaS 完整交付、accepted/integrated | `business_input_required / repair_required` |
 | `AUTH-WAVE1-GPC-EXTERNAL-RUNTIME-20260626` | `WAVE1-GPC-EXTERNAL-RUNTIME-001` | 允许执行 GPC 外部运行证据采集与本地/外部门禁 | `allow_wave1_gpc_external_runtime` | 仅限 GPC 运行证据采集、命令运行和 evidence 记录 | 外部系统写入、生产变更、stage、commit、push、客户验收 | `external_runtime_evidence_required` |
 | `AUTH-WAVE1-BRAIN-HUMAN-REVIEW-20260626` | `WAVE1-BRAIN-HUMAN-REVIEW-001` | 允许进入 Brain 人工审查决策准备 | `allow_wave1_brain_human_review` | 仅限 Brain review decision evidence 和 rework/accepted_candidate 判断准备 | accepted、integrated、production_ready、客户验收 | `ready_for_review / authorization_boundary` |
@@ -88,7 +88,7 @@ customer_accepted = false
 | 输入 | 传导结果 | 限制 |
 |---|---|---|
 | 用户确认单个 `AUTH-WAVE1-*` | 对应 pack 可进入执行前回执登记 | 不影响其它 Wave 1 pack |
-| `allow_wave1_waes_lint_runtime=true` | 可运行 WAES 修复相关命令 | 不允许 stage、commit、push 或发布 |
+| `allow_wave1_wame_lint_runtime=true` | 可运行 WAME 修复相关命令 | 不允许 stage、commit、push 或发布 |
 | `allow_wave1_gfis_real_sor_intake=true` | 可接收/登记 GFIS SOR 并预检 | 不允许生产写入或客户验收声明 |
 | `allow_wave1_gpc_external_runtime=true` | 可采集 GPC 外部运行证据 | 不允许伪造生产确认或扩大到其它项目 |
 | `allow_wave1_brain_human_review=true` | 可准备 Brain 人工审查结论 | 不等于 accepted 或 integrated |

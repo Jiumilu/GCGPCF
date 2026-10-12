@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-8055ED77AE
 title: GPCF CodeGraph Impact Metrics Baseline 006
 project: GPCF
-related_projects: [GPC, WAES, GPCF]
+related_projects: [GPC, WAME, GPCF]
 domain: docs
 status: controlled
 version: v1.0

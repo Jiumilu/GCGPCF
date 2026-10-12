@@ -2,7 +2,7 @@
 doc_id: GPCF-EVIDENCE-79B4D3F1A6
 title: Studio 默认凭据整改态账户动作白名单复验
 project: GPCF
-related_projects: [GPCF, WAES, Studio]
+related_projects: [GPCF, WAME, Studio]
 domain: docs
 status: controlled
 version: v1.0

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-16D9DC63AA
 title: AI 驱动 GFIS 与 GlobalCloud 绿色供应链体系结合分析
 project: GPCF
-related_projects: [GPCF, GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC]
+related_projects: [GPCF, GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, Studio]
 domain: architecture
 status: controlled
 version: v1.0

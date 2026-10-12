@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-LOOP-AGENT-REACH-P2-CONTROLLED-ADAPTER-SKELETON-001
 title: Agent-Reach P2 受控 Adapter Skeleton Loop 记录
 project: GPCF
-related_projects: [GPC, WAES, GPCF]
+related_projects: [GPC, WAME, GPCF]
 domain: docs
 status: controlled
 version: v1.0

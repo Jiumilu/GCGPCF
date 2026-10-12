@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-HEADROOM-LCX-GRAPH-20260623
 title: Headroom LCX Graph
 project: GFIS
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio]
 domain: general
 status: controlled
 version: v1.0
@@ -64,26 +64,26 @@ flowchart TD
 
 | project_id | allowed_modes | blocked_modes | requires_authorization | current_gate |
 |---|---|---|---|---|
-| GPCF | proxy_dry_run, sdk_dry_run, mcp_compress, mcp_stats, agent_wrap_dry_run | production_proxy, mcp_retrieve_without_waes_gate, cross_project_memory_as_fact, learn_apply_auto, output_shaper_acceptance, production_external_write | true | dry_run_only |
-| KDS | sdk_dry_run, mcp_compress, mcp_stats | production_proxy, mcp_retrieve_without_waes_gate, cross_project_memory_as_fact, learn_apply_auto, output_shaper_acceptance, production_external_write | true | dry_run_only |
-| Brain | sdk_dry_run, mcp_compress, mcp_stats | production_proxy, mcp_retrieve_without_waes_gate, cross_project_memory_as_fact, learn_apply_auto, output_shaper_acceptance, production_external_write | true | dry_run_only |
-| WAES | sdk_dry_run, mcp_compress, mcp_stats | production_proxy, mcp_retrieve_without_waes_gate, cross_project_memory_as_fact, learn_apply_auto, output_shaper_acceptance, production_external_write | true | dry_run_only |
-| GFIS | sdk_dry_run, mcp_compress, mcp_stats | production_proxy, mcp_retrieve_without_waes_gate, cross_project_memory_as_fact, learn_apply_auto, output_shaper_acceptance, production_external_write | true | dry_run_only |
-| GPC | proxy_dry_run, sdk_dry_run, mcp_compress, mcp_stats | production_proxy, mcp_retrieve_without_waes_gate, cross_project_memory_as_fact, learn_apply_auto, output_shaper_acceptance, production_external_write | true | dry_run_only |
-| PVAOS | sdk_dry_run, mcp_compress, mcp_stats | production_proxy, mcp_retrieve_without_waes_gate, cross_project_memory_as_fact, learn_apply_auto, output_shaper_acceptance, production_external_write | true | dry_run_only |
-| Edge | sdk_dry_run, mcp_compress, mcp_stats | production_proxy, mcp_retrieve_without_waes_gate, cross_project_memory_as_fact, learn_apply_auto, output_shaper_acceptance, production_external_write | true | dry_run_only |
-| PKC | sdk_dry_run, mcp_compress, mcp_stats | production_proxy, mcp_retrieve_without_waes_gate, cross_project_memory_as_fact, learn_apply_auto, output_shaper_acceptance, production_external_write | true | dry_run_only |
-| XiaoC | proxy_dry_run, sdk_dry_run, mcp_compress, mcp_stats, agent_wrap_dry_run | production_proxy, mcp_retrieve_without_waes_gate, cross_project_memory_as_fact, learn_apply_auto, output_shaper_acceptance, production_external_write | true | dry_run_only |
-| XGD | proxy_dry_run, sdk_dry_run, mcp_compress, mcp_stats, agent_wrap_dry_run | production_proxy, mcp_retrieve_without_waes_gate, cross_project_memory_as_fact, learn_apply_auto, output_shaper_acceptance, production_external_write | true | dry_run_only |
-| XiaoG | sdk_dry_run, mcp_compress, mcp_stats | production_proxy, mcp_retrieve_without_waes_gate, cross_project_memory_as_fact, learn_apply_auto, output_shaper_acceptance, production_external_write | true | dry_run_only |
-| MMC | sdk_dry_run, mcp_compress, mcp_stats | production_proxy, mcp_retrieve_without_waes_gate, cross_project_memory_as_fact, learn_apply_auto, output_shaper_acceptance, production_external_write | true | dry_run_only |
-| Studio | proxy_dry_run, sdk_dry_run, mcp_compress, mcp_stats, agent_wrap_dry_run | production_proxy, mcp_retrieve_without_waes_gate, cross_project_memory_as_fact, learn_apply_auto, output_shaper_acceptance, production_external_write | true | dry_run_only |
-| WAS | sdk_dry_run, mcp_compress, mcp_stats | production_proxy, mcp_retrieve_without_waes_gate, cross_project_memory_as_fact, learn_apply_auto, output_shaper_acceptance, production_external_write | true | dry_run_only |
+| GPCF | proxy_dry_run, sdk_dry_run, mcp_compress, mcp_stats, agent_wrap_dry_run | production_proxy, mcp_retrieve_without_wame_gate, cross_project_memory_as_fact, learn_apply_auto, output_shaper_acceptance, production_external_write | true | dry_run_only |
+| KDS | sdk_dry_run, mcp_compress, mcp_stats | production_proxy, mcp_retrieve_without_wame_gate, cross_project_memory_as_fact, learn_apply_auto, output_shaper_acceptance, production_external_write | true | dry_run_only |
+| Brain | sdk_dry_run, mcp_compress, mcp_stats | production_proxy, mcp_retrieve_without_wame_gate, cross_project_memory_as_fact, learn_apply_auto, output_shaper_acceptance, production_external_write | true | dry_run_only |
+| WAME | sdk_dry_run, mcp_compress, mcp_stats | production_proxy, mcp_retrieve_without_wame_gate, cross_project_memory_as_fact, learn_apply_auto, output_shaper_acceptance, production_external_write | true | dry_run_only |
+| GFIS | sdk_dry_run, mcp_compress, mcp_stats | production_proxy, mcp_retrieve_without_wame_gate, cross_project_memory_as_fact, learn_apply_auto, output_shaper_acceptance, production_external_write | true | dry_run_only |
+| GPC | proxy_dry_run, sdk_dry_run, mcp_compress, mcp_stats | production_proxy, mcp_retrieve_without_wame_gate, cross_project_memory_as_fact, learn_apply_auto, output_shaper_acceptance, production_external_write | true | dry_run_only |
+| PVAOS | sdk_dry_run, mcp_compress, mcp_stats | production_proxy, mcp_retrieve_without_wame_gate, cross_project_memory_as_fact, learn_apply_auto, output_shaper_acceptance, production_external_write | true | dry_run_only |
+| Edge | sdk_dry_run, mcp_compress, mcp_stats | production_proxy, mcp_retrieve_without_wame_gate, cross_project_memory_as_fact, learn_apply_auto, output_shaper_acceptance, production_external_write | true | dry_run_only |
+| PKC | sdk_dry_run, mcp_compress, mcp_stats | production_proxy, mcp_retrieve_without_wame_gate, cross_project_memory_as_fact, learn_apply_auto, output_shaper_acceptance, production_external_write | true | dry_run_only |
+| XiaoC | proxy_dry_run, sdk_dry_run, mcp_compress, mcp_stats, agent_wrap_dry_run | production_proxy, mcp_retrieve_without_wame_gate, cross_project_memory_as_fact, learn_apply_auto, output_shaper_acceptance, production_external_write | true | dry_run_only |
+| XGD | proxy_dry_run, sdk_dry_run, mcp_compress, mcp_stats, agent_wrap_dry_run | production_proxy, mcp_retrieve_without_wame_gate, cross_project_memory_as_fact, learn_apply_auto, output_shaper_acceptance, production_external_write | true | dry_run_only |
+| XiaoG | sdk_dry_run, mcp_compress, mcp_stats | production_proxy, mcp_retrieve_without_wame_gate, cross_project_memory_as_fact, learn_apply_auto, output_shaper_acceptance, production_external_write | true | dry_run_only |
+| MMC | sdk_dry_run, mcp_compress, mcp_stats | production_proxy, mcp_retrieve_without_wame_gate, cross_project_memory_as_fact, learn_apply_auto, output_shaper_acceptance, production_external_write | true | dry_run_only |
+| Studio | proxy_dry_run, sdk_dry_run, mcp_compress, mcp_stats, agent_wrap_dry_run | production_proxy, mcp_retrieve_without_wame_gate, cross_project_memory_as_fact, learn_apply_auto, output_shaper_acceptance, production_external_write | true | dry_run_only |
+| WAS | sdk_dry_run, mcp_compress, mcp_stats | production_proxy, mcp_retrieve_without_wame_gate, cross_project_memory_as_fact, learn_apply_auto, output_shaper_acceptance, production_external_write | true | dry_run_only |
 
 ## 当前覆盖
 
 - 15 个项目/域路由已齐，且每条路由均保持 `requires_authorization=true`
-- WAES/Harness 已进入脱敏测量前置裁决，但生产 token 测量仍为 false
+- WAME/Harness 已进入脱敏测量前置裁决，但生产 token 测量仍为 false
 - 成本图已经可回放，但只基于受控与脱敏证据
 - 回滚图已指向回滚计划，但不构成生产放行
 - 等价性图目前仍是 synthetic only，真实业务等价性未证明

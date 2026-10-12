@@ -1,14 +1,14 @@
 ---
 doc_id: GPCF-DOC-AGENT-REACH-OSS-REVIEW-20260622
 title: Agent-Reach OSS 审查
-project: WAES
-related_projects: [WAES, KDS]
+project: WAME
+related_projects: [WAME, KDS]
 domain: general
 status: controlled
 version: v1.0
-owner: WAES
+owner: WAME
 kds_space: 开发
-kds_path: 开发/04-WAES/third_party/agent-reach/OSS_REVIEW.md
+kds_path: 开发/04-WAME/third_party/agent-reach/OSS_REVIEW.md
 source_path: third_party/agent-reach/OSS_REVIEW.md
 sync_direction: bidirectional
 last_reviewed: 2026-06-24
@@ -64,4 +64,4 @@ superseded_by: []
 
 在任何复制或分发包中保留 attribution 与 warranty text 的前提下，`MIT` license 与受控候选 pilot 兼容。
 
-P0 不批准生产使用。生产准入仍需要 P1-P8 evidence、WAES/KDS review、credential safety、rollback、benchmark 与明确 approval。
+P0 不批准生产使用。生产准入仍需要 P1-P8 evidence、WAME/KDS review、credential safety、rollback、benchmark 与明确 approval。

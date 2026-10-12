@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-6C0AA90058
 title: WAS Real Source Record Monitor 058 证据
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -20,7 +20,7 @@ superseded_by: []
 
 ## 范围
 
-`GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-058` 将绿色供应链覆盖扩展到包装循环体系：包装规格、再生含量声明、包装供应商证明、包装减废计划、可循环包装追踪、包装回收证明和包装合规标签。只有补齐这些证据，Ontology 才能安全地把包装循环、回收标签、供应商包装证明和包装减废绩效绑定到下游 WAES/KDS/runtime 门禁中。
+`GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-058` 将绿色供应链覆盖扩展到包装循环体系：包装规格、再生含量声明、包装供应商证明、包装减废计划、可循环包装追踪、包装回收证明和包装合规标签。只有补齐这些证据，Ontology 才能安全地把包装循环、回收标签、供应商包装证明和包装减废绩效绑定到下游 WAME/KDS/runtime 门禁中。
 
 ## 监控检查
 
@@ -42,7 +42,7 @@ superseded_by: []
 | runtime_primary_key_ready | `0` |
 | review_queue | `0` |
 | runtime_intake | `0` |
-| waes_review | `0` |
+| wame_review | `0` |
 | verified | `0` |
 | accepted | `false` |
 | integrated | `false` |
@@ -73,7 +73,7 @@ python3 tools/kds-sync/validate_was_real_source_record_monitor_058.py
 
 - 本证据不创建也不推断包装规格、再生含量声明、包装供应商证明、包装减废计划、可循环包装追踪、包装回收证明或包装合规标签证据。
 - 本证据不写入 GFIS/KWE 运行层。
-- 本证据不创建 KDS 正式事实、WAES review、runtime primary key、review queue、runtime intake、verified artifact，也不形成 accepted、integrated 或 production ready 状态。
+- 本证据不创建 KDS 正式事实、WAME review、runtime primary key、review queue、runtime intake、verified artifact，也不形成 accepted、integrated 或 production ready 状态。
 
 ## 下一轮
 

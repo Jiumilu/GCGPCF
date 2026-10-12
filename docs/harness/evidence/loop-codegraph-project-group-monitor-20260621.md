@@ -26,7 +26,7 @@ superseded_by: []
 
 本轮执行 `GPCF-CODEGRAPH-PROJECT-GROUP-MONITOR-001` 后追加受控 `.codegraph` 同步复核，只维护 CodeGraph 本地索引，不进入任何项目内部开发。
 
-14 个仓库仍全部有 `.codegraph/` 本地索引，全部通过 `.git/info/exclude` 保护，`.codegraph/` Git 状态总数为 `0`。
+15 个仓库仍全部有 `.codegraph/` 本地索引，全部通过 `.git/info/exclude` 保护，`.codegraph/` Git 状态总数为 `0`。
 
 当前监控结果为 `project_group_codegraph_monitor_pass_with_watchlist`：13 仓 up-to-date，1 仓 Studio watch，Brain 与 GFIS 已回到 green。
 

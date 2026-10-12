@@ -2,7 +2,7 @@
 doc_id: GPCF-LOOP-GCKF-P0-D184-001
 title: Loop Round GPCF-GCKF-P0-D184-001
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -26,7 +26,7 @@ superseded_by: []
 
 ## 动作
 
-本轮新增修复负责人 response intake 负例门禁，明确 checklist、未签署包、缺 WAES review note、缺人工确认的晋升请求都必须被拒绝。
+本轮新增修复负责人 response intake 负例门禁，明确 checklist、未签署包、缺 WAME review note、缺人工确认的晋升请求都必须被拒绝。
 
 本轮不执行 response intake，不发送通知，不确认责任，不打开 committee case，不写 formal evidence。
 
@@ -49,7 +49,7 @@ superseded_by: []
 ### stop
 
 - stop_type: `hold_required`
-- 停止证据：真实 repair owner response、签署响应包、WAES review note 与人工确认尚未收到。
+- 停止证据：真实 repair owner response、签署响应包、WAME review note 与人工确认尚未收到。
 - 状态上限：`review_ready_with_hold`。
 
 ### verify
@@ -68,7 +68,7 @@ superseded_by: []
 ### debug
 
 - D183 只证明响应收集清单已结构化。
-- D184 只证明错误输入会被拒绝；负例门禁不能替代真实响应、WAES review note 或人工确认。
+- D184 只证明错误输入会被拒绝；负例门禁不能替代真实响应、WAME review note 或人工确认。
 
 ## 边界
 
@@ -79,4 +79,4 @@ superseded_by: []
 
 ## 下一轮
 
-收到真实 repair owner response、签署响应包、WAES review note 与人工确认后，进入 response intake precheck；未收到前继续保持 hold。
+收到真实 repair owner response、签署响应包、WAME review note 与人工确认后，进入 response intake precheck；未收到前继续保持 hold。

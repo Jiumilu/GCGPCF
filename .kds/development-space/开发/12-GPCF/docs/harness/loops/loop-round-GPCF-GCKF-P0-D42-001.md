@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-92FC058222
 title: GC-Knowledge Fabric P0-D42 正式 evidence 执行重入批准包预览 dry-run LOOP 证据
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0

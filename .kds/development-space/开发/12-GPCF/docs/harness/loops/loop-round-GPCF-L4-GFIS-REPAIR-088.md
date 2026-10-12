@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-D2A947A430
 title: GPCF-L4-GFIS-REPAIR-088 GFIS 辽宁远航业务事实链索引
 project: GPCF
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -64,4 +64,4 @@ validator_exit=2
 
 ## 结论
 
-本轮只把用户一手业务线索固化为 GFIS 运行层 KDS targeted search 与原始凭证采集输入。它不满足客户确认函、样箱测试记录、江西委托生产记录、现代精工转量产批准或 WAES evidence ref，也不允许升级 `accepted` / `integrated`。
+本轮只把用户一手业务线索固化为 GFIS 运行层 KDS targeted search 与原始凭证采集输入。它不满足客户确认函、样箱测试记录、江西委托生产记录、现代精工转量产批准或 WAME evidence ref，也不允许升级 `accepted` / `integrated`。

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-54C6C8B58B
 title: GlobalCloud Brain-KDS 知识编制与知识 UI 边界清单
 project: KDS
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF]
 domain: data-ai-knowledge
 status: controlled
 version: v1.0
@@ -20,13 +20,13 @@ superseded_by: []
 
 日期：2026-06-17
 状态：v0.1 受控边界清单
-适用范围：Brain、KDS、GPCF、WAES、PKC、GFIS、GPC、PVAOS、XiaoC / 小即、XGD、XiaoG、MMC，以及葛化物流和湖北磷材绿色供应链试点。
+适用范围：Brain、KDS、GPCF、WAME、PKC、GFIS、GPC、PVAOS、XiaoC / 小即、XGD、XiaoG、MMC，以及葛化物流和湖北磷材绿色供应链试点。
 
 ## 1. 定位
 
 本文是 `GPCF-KDS-DKS-015` 的主交付，用于明确 Brain 与 KDS 在分布式知识事实体系中的边界。
 
-总原则是：KDS 存事实，Brain 编知识。KDS 负责知识主存、11 个底座资源池、候选事实、确认事实、证据索引、增强治理账本挂接、权限密级、可信级别和 WAES 门禁引用；Brain 负责在权限过滤后的 KDS 上下文之上，编制知识页面、知识地图、知识产品化表达、SOP 展示和跨项目知识编排。
+总原则是：KDS 存事实，Brain 编知识。KDS 负责知识主存、11 个底座资源池、候选事实、确认事实、证据索引、增强治理账本挂接、权限密级、可信级别和 WAME 门禁引用；Brain 负责在权限过滤后的 KDS 上下文之上，编制知识页面、知识地图、知识产品化表达、SOP 展示和跨项目知识编排。
 
 本文只定义 Brain 消费 KDS、展示知识、组织知识和输出候选建议的边界，不表示 Brain 已接入真实系统、不表示真实资料已入库、不表示任何业务事实、积分、收益、订单、POD 或财务事项已经确认。
 
@@ -37,20 +37,20 @@ superseded_by: []
 | 事实保存 | 保存候选事实、确认事实、证据索引、底座资源池挂接 | 不保存为事实主账，只读取受控事实 |
 | 知识编制 | 提供受控知识对象、可信来源、权限过滤上下文 | 编制知识页面、知识地图、专题包、SOP 展示 |
 | 业务确认 | 记录确认状态和业务系统引用 | 不确认业务事实 |
-| 规则门禁 | 挂接 WAES 规则、证据、密级、例外记录 | 显示门禁状态和引用，不替代 WAES |
-| 权限密级 | 维护 DSR、角色、组织、可见范围 | 按 KDS / MMC / WAES 过滤后展示 |
+| 规则门禁 | 挂接 WAME 规则、证据、密级、例外记录 | 显示门禁状态和引用，不替代 WAME |
+| 权限密级 | 维护 DSR、角色、组织、可见范围 | 按 KDS / MMC / WAME 过滤后展示 |
 | AI 输出 | 接收候选建议和来源索引 | 可生成摘要、解释、SOP 展示和候选补充建议 |
 | 责任边界 | KDS 是事实底座 | Brain 是知识表达和编排层 |
 
 ## 3. Brain 可消费的 KDS 上下文
 
-Brain 只消费通过 KDS、WAES、MMC 规则过滤后的上下文。可消费对象包括：
+Brain 只消费通过 KDS、WAME、MMC 规则过滤后的上下文。可消费对象包括：
 
 | 上下文 | 来源 | Brain 用法 | 必要约束 |
 |---|---|---|---|
 | 知识对象 | KDS 数据池、政策池、原料池、场景池 | 知识页面、专题解释、行业知识包 | 必须保留来源和可信级别 |
 | 事实对象 | KDS 订单池、产能池、资金池、运力池等 | 事实时间线、项目进度、订单链路展示 | 必须显示候选 / 确认状态 |
-| 证据索引 | KDS 数据池、WAES 证据门禁 | 证据摘要、证据缺口、文档验收视图 | DSR-L2 / DSR-L3 默认只显示元数据或脱敏摘要 |
+| 证据索引 | KDS 数据池、WAME 证据门禁 | 证据摘要、证据缺口、文档验收视图 | DSR-L2 / DSR-L3 默认只显示元数据或脱敏摘要 |
 | SOP 对象 | SOP 账本并挂接场景池、订单池、产能池等 | 全局 SOP、分段 SOP、岗位 SOP、预运营期订单 SOP 展示 | 不得把展示状态写成 SOP 已执行 |
 | 项目资料 | GPCF Loop、GFIS、GPC、PVAOS 等来源 | 项目知识页、项目地图、试点进度页 | 必须保留来源系统和责任主体 |
 | 行业资料 | 权威政策 / 标准网站、第三方文档、网络搜索 | 行业知识卡、政策标准解释、可信来源引用 | 必须保留版本、时间、适用范围 |
@@ -65,11 +65,11 @@ Brain 只消费通过 KDS、WAES、MMC 规则过滤后的上下文。可消费�
 | KnowledgeMap | 项目、订单、工厂、原料、政策、SOP 的关系地图 | 否 |
 | KnowledgeProduct | 对外或内部复用的知识包、专题包、案例包 | 否 |
 | SOPView | 全局 SOP、分段 SOP、岗位 SOP、预运营期订单 SOP 的展示页 | 否 |
-| CrossProjectKnowledgeView | 横跨 GFIS、GPC、PVAOS、KDS、WAES、PKC 等项目的知识编排视图 | 否 |
+| CrossProjectKnowledgeView | 横跨 GFIS、GPC、PVAOS、KDS、WAME、PKC 等项目的知识编排视图 | 否 |
 | KnowledgeGapView | 知识缺口、证据缺口、悬赏候选和补证建议展示 | 否 |
-| CandidateSuggestion | Brain 基于受控知识生成的候选补充建议 | 否，必须回到 KDS / WAES / 人工确认 |
+| CandidateSuggestion | Brain 基于受控知识生成的候选补充建议 | 否，必须回到 KDS / WAME / 人工确认 |
 
-Brain 输出可以成为 KDS 的候选知识、候选 SOP、候选缺口或候选事实输入，但必须重新进入 KDS 候选登记、WAES 门禁和人工确认流程。
+Brain 输出可以成为 KDS 的候选知识、候选 SOP、候选缺口或候选事实输入，但必须重新进入 KDS 候选登记、WAME 门禁和人工确认流程。
 
 ## 5. 编制流程
 
@@ -80,7 +80,7 @@ KDSResourceQuery
   -> BrainCompilationDraft
   -> SourceAndTrustAnnotation
   -> KnowledgePageOrMapDraft
-  -> WAESDisplayBoundaryCheck
+  -> WAMEDisplayBoundaryCheck
   -> HumanReviewIfRequired
   -> PublishedKnowledgeView
   -> KDSBacklinkAndLoopEvidence
@@ -102,7 +102,7 @@ Brain 从 KDS 查询底座资源池对象和增强治理账本对象。查询必
 
 ### 5.2 PermissionAndClassificationFilter
 
-Brain 不自行放大权限。权限过滤来自 KDS、MMC、WAES 和合作单位空间规则：
+Brain 不自行放大权限。权限过滤来自 KDS、MMC、WAME 和合作单位空间规则：
 
 1. 合作单位默认只能看到自己的明细。
 2. 被邀请、被授权或参与悬赏后，才可查看对应任务范围内的他方材料。
@@ -113,9 +113,9 @@ Brain 不自行放大权限。权限过滤来自 KDS、MMC、WAES 和合作单�
 
 Brain 可以对上下文进行摘要、归类、重组、图谱化、时间线化、SOP 展示化和知识产品化，但不得删除来源、不得改变确认状态、不得隐去密级和门禁提示。
 
-### 5.4 WAESDisplayBoundaryCheck
+### 5.4 WAMEDisplayBoundaryCheck
 
-Brain 展示页面如涉及规则、证据、权限、边界、例外、争议、收益或重大 SOP，应显示 WAES 门禁状态。WAES 仍只确认规则、证据、权限、边界和例外，不替代业务主账确认。
+Brain 展示页面如涉及规则、证据、权限、边界、例外、争议、收益或重大 SOP，应显示 WAME 门禁状态。WAME 仍只确认规则、证据、权限、边界和例外，不替代业务主账确认。
 
 ## 6. 知识 UI 类型
 
@@ -128,7 +128,7 @@ Brain 展示页面如涉及规则、证据、权限、边界、例外、争议�
 | SOP 展示页 | 全局 SOP、分段 SOP、岗位 SOP、预运营期订单 SOP | 葛化和复制工厂共用 | 不代表 SOP 已执行 |
 | 贡献与悬赏页 | 积分候选、悬赏候选、提交、验收、争议状态 | 知识缺口积分交易 | 不确认正式积分和收益 |
 | 权威来源页 | 政策、标准、政府或行业网站、可信级别 | 绿色供应链政策标准 | 必须显示版本和适用范围 |
-| 治理审计页 | GPCF Loop、WAES 门禁、KDS 挂接、文档治理 | 项目群总控 | 不升级 accepted / integrated |
+| 治理审计页 | GPCF Loop、WAME 门禁、KDS 挂接、文档治理 | 项目群总控 | 不升级 accepted / integrated |
 
 ## 7. 试点映射
 
@@ -169,13 +169,13 @@ Brain 在湖北磷材第一阶段提供：
 | 贡献与悬赏页 | 人才池、数据池、场景池 | 积分池、悬赏池、争议池 |
 | 治理审计页 | 数据池、人才池、场景池 | 争议池、贡献账本、SOP 账本 |
 
-所有 Brain 页面必须保留 `sourceRefs`、`baseResourcePools`、`enhancedLedgerLinks`、`classificationLevel`、`trustLevel`、`waesGateRefs`、`loopEvidenceRefs` 和 `publishedVersion`。
+所有 Brain 页面必须保留 `sourceRefs`、`baseResourcePools`、`enhancedLedgerLinks`、`classificationLevel`、`trustLevel`、`wameGateRefs`、`loopEvidenceRefs` 和 `publishedVersion`。
 
 ## 9. 不得越界清单
 
 1. Brain 不替代 KDS 事实底座。
 2. Brain 不替代 GFIS、GPC、PVAOS 等来源系统主账。
-3. Brain 不替代 WAES 规则和证据门禁。
+3. Brain 不替代 WAME 规则和证据门禁。
 4. Brain 不确认订单、生产、质量、POD、到账、开票、收益、积分、争议或重大违规裁决。
 5. Brain 不绕过权限、密级、合作单位可见范围和用户治理权。
 6. Brain 不把 AI 输出、知识页面、知识地图或 SOP 展示写成业务完成。
@@ -187,12 +187,12 @@ Brain 在湖北磷材第一阶段提供：
 |---|---|
 | brainObjectId | Brain 编制对象统一编号 |
 | objectType | KnowledgePage / KnowledgeMap / KnowledgeProduct / SOPView / KnowledgeGapView |
-| sourceRefs | KDS / WAES / GFIS / GPC / PVAOS / GPCF 等来源引用 |
+| sourceRefs | KDS / WAME / GFIS / GPC / PVAOS / GPCF 等来源引用 |
 | baseResourcePools | KDS 11 个底座资源池挂接 |
 | enhancedLedgerLinks | 增强治理账本挂接 |
 | classificationLevel | DSR-L0 / DSR-L1 / DSR-L2 / DSR-L3 |
 | trustLevel | T0 / T1 / T2 / T3 |
-| waesGateRefs | WAES 门禁记录引用 |
+| wameGateRefs | WAME 门禁记录引用 |
 | permissionScope | 组织、角色、合作单位、项目组和人员可见范围 |
 | confirmationStatus | draft / candidate / reviewed / published / withdrawn |
 | humanReviewRequired | 是否需要人工复核 |

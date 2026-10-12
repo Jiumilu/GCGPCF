@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-52B18BDBE9
 title: GlobalCloud 绿色供应链体系 LLM Wiki 与 Brain 测试评估矩阵
 project: KDS
-related_projects: [GPC, PVAOS, WAES, KDS, Brain, XiaoC, XGD, Studio]
+related_projects: [GPC, PVAOS, WAME, KDS, Brain, XiaoC, XGD, Studio]
 domain: data-ai-knowledge
 status: controlled
 version: v1.0
@@ -20,7 +20,7 @@ superseded_by: []
 
 日期：2026-06-07
 状态：评估矩阵 v1
-适用范围：`LLM Wiki`、`Brain`、`WAES`、`KDS`（知识主存层设计）。
+适用范围：`LLM Wiki`、`Brain`、`WAME`、`KDS`（知识主存层设计）。
 
 ## 1. 评估目标
 

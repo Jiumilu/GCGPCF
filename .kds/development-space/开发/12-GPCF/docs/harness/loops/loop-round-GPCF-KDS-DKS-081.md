@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-36DBE4BB63
 title: LOOP Round GPCF-KDS-DKS-081 - GC-Knowledge Fabric 统一状态机策略
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, Brain, PKC, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, Brain, PKC, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -67,8 +67,8 @@ superseded_by: []
 | 状态机 policy smoke | pass | `status_machine_policy_smoke=pass states=11 promotion_rules=10 terminal_states=superseded,archived ai_boundary=covered loop_boundary=covered formal_writeback_requires_accepted=true revenue_confirmation_requires_accepted=true template_is_not_fact=true writes_kds_fact=0 writes_business_system=0 writes_revenue_distribution=0 writes_external_api=0` |
 | 覆盖矩阵 | pass | `okf_types_api_validator_coverage=pass coverage_items=9 okf_files=16 type_files=18 api_files=15 validator_files=16 fixture_files=16 missing_files=0 no_write=covered business_writes=0 external_api_writes=0` |
 | TypeScript 类型检查 | pass | `tsc -p packages/shared/tsconfig.json --noEmit` 与 `tsc -p packages/api/tsconfig.json --noEmit` 均无报错 |
-| 既有 API route no-write smoke | pass | Brain/PKC、Governance、GFIS、KWE、WAES、KDS v2 endpoint smoke 全部 pass，真实写入计数均为 0 |
-| 既有 dry-run validators | pass | LOOP Dashboard、Brain/PKC entry contract、GFIS document acceptance E2E、GFIS assistant no-write、Governance ledger、KDS search、WAES minimum gates、KWE minimum workflow 全部 pass |
+| 既有 API route no-write smoke | pass | Brain/PKC、Governance、GFIS、KWE、WAME、KDS v2 endpoint smoke 全部 pass，真实写入计数均为 0 |
+| 既有 dry-run validators | pass | LOOP Dashboard、Brain/PKC entry contract、GFIS document acceptance E2E、GFIS assistant no-write、Governance ledger、KDS search、WAME minimum gates、KWE minimum workflow 全部 pass |
 | OKF parse | pass | `okf_parse=pass yaml_files=15 json_files=1` |
 | 文档治理门禁 | pass | 首次运行因新增 `docs/gc-knowledge-fabric/` 目录缺 README 出现 `missing_readme_dirs=1`，已补 `docs/gc-knowledge-fabric/README.md` 后重跑通过：`document_pollution=pass`、`kds_token=pass fingerprint=bfd9553d`、`loop_document_gate.py` 输出 `gate=pass`、`missing_readme_dirs=0` |
 | LOOP 文档门禁残留项 | known gap | `status_counts.missing=1`、`project_counts.missing=1` 为既有仓库元数据缺口，本轮未扩大该缺口 |
@@ -84,6 +84,6 @@ superseded_by: []
 
 ## 8. 下一轮建议
 
-- `GPCF-KDS-DKS-082`：建立核心对象关系图与最小字段契约，覆盖 Source/Evidence/KnowledgeObject/FactCandidate/WAESGateResult/KWE/Decision/Writeback/Contribution/Revenue/Harness/LOOP 的关系链。
-- `GPCF-KDS-DKS-083`：建立 WAES Gate 输入输出契约与 hard-stop reason code validator。
+- `GPCF-KDS-DKS-082`：建立核心对象关系图与最小字段契约，覆盖 Source/Evidence/KnowledgeObject/FactCandidate/WAMEGateResult/KWE/Decision/Writeback/Contribution/Revenue/Harness/LOOP 的关系链。
+- `GPCF-KDS-DKS-083`：建立 WAME Gate 输入输出契约与 hard-stop reason code validator。
 - `GPCF-KDS-DKS-084`：建立 GFIS Writeback Sandbox 契约与 no-write/sandbox/approved-write 边界 smoke。

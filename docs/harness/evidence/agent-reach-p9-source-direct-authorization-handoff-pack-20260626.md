@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-AGENT-REACH-P9-SOURCE-DIRECT-AUTH-HANDOFF-20260626
 title: Agent-Reach P9S Source Direct Authorization Handoff Pack 2026-06-26
 project: KDS
-related_projects: [GFIS, WAS, WAME, KDS, GPCF]
+related_projects: [GFIS, KDS]
 domain: docs
 status: controlled
 version: v1.0

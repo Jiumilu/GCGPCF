@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-22B59B08B7
 title: GlobalCloud 绿色供应链体系实施项目控制与量化机制
 project: WAME
-related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, XiaoC, XGD, XiaoG, GPCF]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, XiaoC, XGD, XiaoG, GPCF, Studio]
 domain: governance
 status: controlled
 version: v1.0

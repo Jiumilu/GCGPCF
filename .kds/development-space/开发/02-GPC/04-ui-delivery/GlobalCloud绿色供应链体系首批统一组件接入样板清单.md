@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-5371CCBDCB
 title: GlobalCloud 绿色供应链体系首批统一组件接入样板清单
 project: GPC
-related_projects: [GPC, PVAOS, WAES]
+related_projects: [GPC, PVAOS, WAME]
 domain: ui-delivery
 status: controlled
 version: v1.0

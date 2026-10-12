@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-6C1B946AA5
 title: GlobalCloud 智能体团队专项回报汇总台账
 project: XiaoC
-related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio]
 domain: agent-team
 status: controlled
 version: v1.0

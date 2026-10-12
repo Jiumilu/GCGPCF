@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-D5A774D7ED
 title: GPCF-L4-GFIS-REPAIR-270
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -56,7 +56,7 @@ superseded_by: []
 - runtime_primary_key_ready: `0`
 - review_queue: `0`
 - runtime_intake: `0`
-- waes_review: `0`
+- wame_review: `0`
 - verified: `0`
 - runtime_sop_e2e: `repair_required`
 
@@ -70,7 +70,7 @@ superseded_by: []
 
 ## 结论
 
-报价单与 KDS 受控数据只能进入 pending_business_verification。当前不能生成 valid source record，不能进入 runtime primary key、review queue、runtime intake、WAES review 或 verified artifact。
+报价单与 KDS 受控数据只能进入 pending_business_verification。当前不能生成 valid source record，不能进入 runtime primary key、review queue、runtime intake、WAME review 或 verified artifact。
 
 ## 下一轮
 

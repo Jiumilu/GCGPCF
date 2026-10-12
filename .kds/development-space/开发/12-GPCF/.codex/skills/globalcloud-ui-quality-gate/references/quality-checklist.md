@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-1F2E3D4C5B
 title: quality-checklist
 project: GPCF
-related_projects: [GPC, WAES, KDS, GPCF]
+related_projects: [GPC, WAME, KDS, GPCF]
 domain: operational-skill
 status: operational_controlled
 version: v1.0

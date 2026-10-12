@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-2BC3BD8BEA
 title: GlobalCloud 绿色供应链体系界面实施差距清单
 project: GPC
-related_projects: [GFIS, GPC, PVAOS, WAES, Brain, XiaoC, XGD, Studio]
+related_projects: [GFIS, GPC, PVAOS, WAME, Brain, XiaoC, XGD, Studio]
 domain: ui-delivery
 status: controlled
 version: v1.0
@@ -85,7 +85,7 @@ superseded_by: []
 
 ## 3. 分系统差距
 
-### 3.1 WAES
+### 3.1 WAME
 
 当前优势：
 

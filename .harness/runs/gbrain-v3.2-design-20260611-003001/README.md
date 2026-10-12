@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/92-证据与会话归档/.harness/runs/gbrain-v3.2-design-20260611-003001/README.md
 source_path: .harness/runs/gbrain-v3.2-design-20260611-003001/README.md
 sync_direction: bidirectional
-last_reviewed: 2026-10-11
+last_reviewed: 2026-10-12
 supersedes: []
 superseded_by: []
 ---
@@ -37,4 +37,4 @@ KDS 空间：`开发`
 | doc_id | title | source_path | project | status |
 | --- | --- | --- | --- | --- |
 | GPCF-DOC-60D38E1B72 | gbrain-v3.2-design-20260611-003001 | .harness/runs/gbrain-v3.2-design-20260611-003001/README.md | WAME | archive |
-| GPCF-DOC-253B627E40 | proposal | .harness/runs/gbrain-v3.2-design-20260611-003001/proposal.md | WAME | archive |
+| GPCF-DOC-253B627E40 | GCBrain v3.2 — 智能知识平台 设计方案 | .harness/runs/gbrain-v3.2-design-20260611-003001/proposal.md | WAME | archive |

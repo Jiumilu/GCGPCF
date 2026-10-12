@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-FIVE-DIRECTION-MEMORY-LOCALIZATION-CORRECTION-001
 title: LOOP 运行控制闭环长期记忆中文纠偏 20260622
 project: GPCF
-related_projects: [GPC, WAES, GPCF]
+related_projects: [GPC, WAME, GPCF]
 domain: docs
 status: controlled
 version: v1.0

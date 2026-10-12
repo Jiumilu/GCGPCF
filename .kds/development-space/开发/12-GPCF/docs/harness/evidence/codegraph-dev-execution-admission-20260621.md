@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-A1E6C5C544
 title: CodeGraph 业务开发执行层准入证据
 project: GPCF
-related_projects: [GPC, WAES, GPCF]
+related_projects: [GPC, WAME, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -52,7 +52,7 @@ codegraph affected "<候选文件>" --json
 
 ## 边界
 
-本证据不代表业务完成，不代表 WAES 通过，不代表 Harness 最终验收，不授予生产写入或外部 API 写入权限。
+本证据不代表业务完成，不代表 WAME 通过，不代表 Harness 最终验收，不授予生产写入或外部 API 写入权限。
 
 ## 下一轮输入
 

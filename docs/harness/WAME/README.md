@@ -1,5 +1,5 @@
 ---
-doc_id: GPCF-DOC-04C744A2DC
+doc_id: GPCF-DOC-67DE113160
 title: WAME
 project: WAME
 related_projects: [GPC, WAME, KDS, GPCF]
@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/04-WAME/docs/harness/WAME/README.md
 source_path: docs/harness/WAME/README.md
 sync_direction: bidirectional
-last_reviewed: 2026-10-11
+last_reviewed: 2026-10-12
 supersedes: []
 superseded_by: []
 ---
@@ -36,12 +36,12 @@ KDS 空间：`开发`
 
 | doc_id | title | source_path | project | status |
 | --- | --- | --- | --- | --- |
-| GPCF-DOC-04C744A2DC | WAME | docs/harness/WAME/README.md | WAME | controlled |
-| GPCF-DOC-144B2195C3 | evidence | docs/harness/WAME/evidence/README.md | WAME | controlled |
+| GPCF-DOC-67DE113160 | WAME | docs/harness/WAME/README.md | WAME | controlled |
+| GPCF-DOC-5A67E0843C | evidence | docs/harness/WAME/evidence/README.md | WAME | controlled |
 | GPCF-DOC-460215ED8F | evidence-index | docs/harness/WAME/evidence/evidence-index.md | WAME | controlled |
 | GPCF-DOC-WAME-LINT-RUNTIME-REPAIR-AUTHORIZATION-20260625 | WAME lint runtime 修复授权包 2026-06-25 | docs/harness/WAME/evidence/wame-lint-runtime-repair-authorization-20260625.md | WAME | controlled |
 | GPCF-DOC-WAME-REAL-RUNTIME-BASELINE-20260624 | WAME 真实运行基线证据 2026-06-24 | docs/harness/WAME/evidence/wame-real-runtime-baseline-20260624.md | WAME | controlled |
 | GPCF-DOC-FFA52ED4FF | loop-state | docs/harness/WAME/loop-state.md | WAME | controlled |
-| GPCF-DOC-4F7B5760F0 | loops | docs/harness/WAME/loops/README.md | WAME | controlled |
+| GPCF-DOC-A319C725B1 | loops | docs/harness/WAME/loops/README.md | WAME | controlled |
 | GPCF-DOC-5F557A77DA | Loop Round GPCF-WA-LR-001 | docs/harness/WAME/loops/loop-round-GPCF-WA-LR-001.md | WAME | controlled |
 | GPCF-DOC-C378E21CCF | Loop Round GPCF-WA-LR-002：WAME 门禁语义验证清单 | docs/harness/WAME/loops/loop-round-GPCF-WA-LR-002.md | WAME | controlled |

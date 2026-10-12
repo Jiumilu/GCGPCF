@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-GSCROLEVIEWLOOP001
 title: loop-round-GPCF-KDS-GSC-ROLE-VIEW-ENTITY-001
 project: GPCF
-related_projects: [GPC, PVAOS, WAES, KDS, GPCF]
+related_projects: [GPC, PVAOS, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -55,7 +55,7 @@ superseded_by: []
 
 触发以下任一条件必须停止升级：
 
-1. 缺少人工授权或 WAES 规则记录。
+1. 缺少人工授权或 WAME 规则记录。
 2. 实体页出现真实账号创建、真实 KDS API 写入、生产权限配置或业务验收完成声明。
 3. 出现 `accepted`、`integrated`、`production_ready`、`customer_accepted` 等未经人工确认的状态提升。
 4. 将角色视图实体误写为 D190 的恢复触发器，或在四项外部信号未满足时生成新的 GCKF 执行轮次。

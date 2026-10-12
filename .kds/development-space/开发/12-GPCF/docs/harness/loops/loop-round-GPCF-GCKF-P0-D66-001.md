@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-10F16E916E
 title: Loop Round GPCF-GCKF-P0-D66-001
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -39,11 +39,11 @@ superseded_by: []
 | D66 routing package intake guard preview validator | `scripts/api/validate_gckf_p0_formal_evidence_execution_routing_package_intake_guard_preview_dry_run.py` |
 | D66 routing package intake guard preview doc | `docs/gc-knowledge-fabric/formal-evidence-execution-routing-package-intake-guard-preview-dry-run-v0.1.md` |
 
-## 4. WAES / Harness 边界
+## 4. WAME / Harness 边界
 
 | 项目 | 结果 |
 |---|---|
-| WAES gate override | not_allowed |
+| WAME gate override | not_allowed |
 | Harness evidence write | not_executed |
 | Formal evidence write | not_executed |
 | Intake guard execution | not_executed |

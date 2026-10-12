@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-FCCA958E2C
 title: GlobalCloud 绿色供应链体系知识主存层与知识引擎层分层方案
 project: KDS
-related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, XiaoC, XGD]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, XiaoC, XGD, Studio]
 domain: data-ai-knowledge
 status: controlled
 version: v1.0

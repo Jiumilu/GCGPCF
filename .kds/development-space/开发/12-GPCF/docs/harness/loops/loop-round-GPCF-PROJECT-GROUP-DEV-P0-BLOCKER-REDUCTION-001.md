@@ -2,7 +2,7 @@
 doc_id: GPCF-LOOP-PROJECT-GROUP-DEV-P0-BLOCKER-REDUCTION-001
 title: Loop Round GPCF-PROJECT-GROUP-DEV-P0-BLOCKER-REDUCTION-001
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -60,7 +60,7 @@ cd "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCoud GPCF" && python3 .c
 
 - 17 仓均 dirty；这只阻断提交/推送/验收，不阻断开发态。
 - GPCF dirty/untracked 数量仍高，需要后续专门拆分治理、KDS mirror 和 evidence 类变更。
-- GFIS/WAS/WAES 的真实业务证据和人工验收仍是验收态阻点，不作为开发态硬停止。
+- GFIS/WAS/WAME 的真实业务证据和人工验收仍是验收态阻点，不作为开发态硬停止。
 
 ## 输出
 

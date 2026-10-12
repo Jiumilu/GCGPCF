@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-DB96D52951
 title: Loop Integration Policy
 project: GPCF
-related_projects: [GPCF, WAES, KDS]
+related_projects: [GPCF, WAME, KDS]
 domain: operational-skill
 status: operational_controlled
 version: v1.0

@@ -1,3 +1,21 @@
+---
+doc_id: GPCF-DOC-27101F3BEB
+title: GBrain 多租户知识库权限体系 — v3.1 Hardening
+project: KDS
+related_projects: [KDS, GFIS, GPC, PVAOS, WAME, Brain]
+domain: docs
+status: controlled
+version: v1.0
+owner: KDS
+kds_space: 开发
+kds_path: 开发/05-KDS/docs/harness/multi-tenant-permission-design.md
+source_path: docs/harness/multi-tenant-permission-design.md
+sync_direction: bidirectional
+last_reviewed: 2026-10-12
+supersedes: []
+superseded_by: []
+---
+
 # GBrain 多租户知识库权限体系 — v3.1 Hardening
 
 > 版本: v3.1

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-B053B83539
 title: globalcloud-document-governance
 project: GPCF
-related_projects: [GPC, WAES, KDS, GPCF]
+related_projects: [GPC, WAME, KDS, GPCF]
 domain: operational-skill
 status: operational_controlled
 version: v1.0

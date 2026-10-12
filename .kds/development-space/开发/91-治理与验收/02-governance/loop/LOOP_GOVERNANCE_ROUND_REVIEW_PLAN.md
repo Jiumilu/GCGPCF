@@ -1,12 +1,12 @@
 ---
 doc_id: GPCF-DOC-8A21A00749
 title: Loop 治理轮次复核计划
-project: WAES
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+project: WAME
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: governance
 status: controlled
 version: v1.0
-owner: WAES
+owner: WAME
 kds_space: 开发
 kds_path: 开发/91-治理与验收/02-governance/loop/LOOP_GOVERNANCE_ROUND_REVIEW_PLAN.md
 source_path: 02-governance/loop/LOOP_GOVERNANCE_ROUND_REVIEW_PLAN.md
@@ -72,7 +72,7 @@ loop_round_efficiency_audit=pass total_rounds=335 audit_checked=30 hard_checked=
 | targeted_annotation_ready | 现有证据支持窄范围 annotation，不改变业务状态。 |
 | index_level_exception | 证据不足以安全 annotation；将记录保留为 historical debt 并记录 exception。 |
 | validator_rule_update | 收紧或澄清 validator，不改写历史事实。 |
-| defer_to_implementation_main_process | 该项依赖真实 GFIS source records、runtime intake、WAES review 或 verified artifacts。 |
+| defer_to_implementation_main_process | 该项依赖真实 GFIS source records、runtime intake、WAME review 或 verified artifacts。 |
 
 ## 完成定义 (`Definition Of Done`)
 
@@ -80,10 +80,10 @@ loop_round_efficiency_audit=pass total_rounds=335 audit_checked=30 hard_checked=
 - Locator counts 与 review plan 保持同步。
 - Hard window 保持 clean。
 - 不执行 bulk rewrite。
-- 本治理复核计划不创建 source-of-record、runtime primary key、review queue、runtime intake、WAES review、verified artifact、accepted 或 integrated 状态。
+- 本治理复核计划不创建 source-of-record、runtime primary key、review queue、runtime intake、WAME review、verified artifact、accepted 或 integrated 状态。
 
 ## 非声明边界
 
 - 机器断言：`does not prove GFIS runtime SOP E2E passed`。
-- 本计划不接收、创建或验证 customer order originals、platform order receipts、owner submissions、KDS write receipts、WAES confirmations 或 UAT acceptance。
+- 本计划不接收、创建或验证 customer order originals、platform order receipts、owner submissions、KDS write receipts、WAME confirmations 或 UAT acceptance。
 - 本计划不授权 production write、external API write、schema sync、bench migrate、deployment、permission change、commit 或 push。

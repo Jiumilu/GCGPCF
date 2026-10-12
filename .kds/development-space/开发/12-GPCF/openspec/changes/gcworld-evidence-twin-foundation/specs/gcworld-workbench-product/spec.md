@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-GCWORLD-019
 title: spec
 project: GPCF
-related_projects: [GPCF, PVAOS, WAES]
+related_projects: [GPCF, PVAOS, WAME]
 domain: openspec
 status: draft
 version: v1.0

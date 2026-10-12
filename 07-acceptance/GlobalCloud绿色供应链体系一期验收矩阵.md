@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-EB678B0E98
 title: GlobalCloud 绿色供应链体系一期验收矩阵
 project: WAME
-related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, XiaoC, XGD]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, XiaoC, XGD, Studio]
 domain: acceptance
 status: controlled
 version: v1.0

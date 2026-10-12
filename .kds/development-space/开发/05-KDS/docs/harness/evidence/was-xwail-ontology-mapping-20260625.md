@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-WAS-XWAIL-ONTOLOGY-MAPPING-20260625
 title: WAS-XWAIL-Ontology 映射证据 2026-06-25
 project: KDS
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, GPCF]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -35,7 +35,7 @@ superseded_by: []
 
 machine_status: `accepted = false`、`integrated = false`、`production_ready = false`、`customer_accepted = false`
 
-本文只建立 WAS、Ontology 与 XWAIL 的映射候选证据，不修改 WAS 主术语、不写入 KDS API、不写入 GFIS runtime、不发布 WAES、不绑定 AaaS 服务。
+本文只建立 WAS、Ontology 与 XWAIL 的映射候选证据，不修改 WAS 主术语、不写入 KDS API、不写入 GFIS runtime、不发布 WAME、不绑定 AaaS 服务。
 
 ## 2. 已执行命令
 
@@ -53,8 +53,8 @@ machine_status: `accepted = false`、`integrated = false`、`production_ready = 
 |---|---|---|
 | WAS | 定义三层资产、八维、八流、生命周期与治理原则 | 不替代业务事实源，不声明真实业务完成 |
 | Ontology | 定义概念、词表、关系、语义约束和推理结构 | 不替代 XWAIL 契约，不直接写入运行主账 |
-| XWAIL | 定义机器可读模型、字段、Profile、Validator、XAP 包和发布候选契约 | 不重定义 WAS 语义，不绕过 WAES 发布和 AaaS 绑定 |
-| WAES | 对模型注册、授权、发布和运行绑定进行业务实现 | 本证据不声明 WAES 已发布 |
+| XWAIL | 定义机器可读模型、字段、Profile、Validator、XAP 包和发布候选契约 | 不重定义 WAS 语义，不绕过 WAME 发布和 AaaS 绑定 |
+| WAME | 对模型注册、授权、发布和运行绑定进行业务实现 | 本证据不声明 WAME 已发布 |
 | KDS/Brain | 使用语义和证据进行知识治理、检索和推理 | 推理结果不得直接升级为业务事实 |
 
 ## 4. WAS 八维到 XWAIL Dimensions 映射
@@ -81,7 +81,7 @@ machine_status: `accepted = false`、`integrated = false`、`production_ready = 
 | `energy_flow` | 能源供应、消耗、转换和优化 | `FlowRelations.flowType` 中的能源类流 | 当前最小示例未覆盖，后续 Profile 增补 |
 | `commerce_flow` | 报价、订单、合同、采购和服务交付 | `FlowRelations.flowType` 中的商业/服务类流 | 当前最小示例未覆盖，后续 SCaaS Profile 增补 |
 | `knowledge_flow` | 知识创建、迁移、训练、推理和复用 | `FlowRelations.flowType` 中的知识类流 | 当前最小示例未覆盖，后续 Brain/KDS Profile 增补 |
-| `rule_flow` | 规则执行、审批、阻断、审查和确认 | `FlowRelations.flowType` 中的治理类流 | 当前最小示例未覆盖，后续 WAES gate Profile 增补 |
+| `rule_flow` | 规则执行、审批、阻断、审查和确认 | `FlowRelations.flowType` 中的治理类流 | 当前最小示例未覆盖，后续 WAME gate Profile 增补 |
 
 ## 6. Ontology 到 XWAIL 回指规则
 
@@ -106,7 +106,7 @@ machine_status: `accepted = false`、`integrated = false`、`production_ready = 
 | 依赖边 | 本轮影响 |
 |---|---|
 | `WAS -> Ontology -> XWAIL` | 从 `semantic_foundation_candidate` 推进到 `xwail_mapping_candidate` |
-| `WAES -> XWAIL -> AaaS` | 只提供语义映射前置，不解除 WAES repair_required/authorization_boundary |
+| `WAME -> XWAIL -> AaaS` | 只提供语义映射前置，不解除 WAME repair_required/authorization_boundary |
 | `GFIS/GPC/PVAOS -> SCaaS` | 为后续 SCaaS Profile 提供八维八流映射依据，但不证明真实 source-of-record |
 | `KDS -> Brain` | 为知识治理和推理回指提供语义基线，但不允许 Brain 直接写入业务事实 |
 
@@ -115,14 +115,14 @@ machine_status: `accepted = false`、`integrated = false`、`production_ready = 
 - 若 WAS validator 失败，回滚本证据并保持 `semantic_foundation_candidate`。
 - 若 XWAIL validator、XAP build check 或 XAP verify 失败，保持 `ready_for_review / local_dev_boundary`，不进入 `xwail_mapping_candidate`。
 - 若映射与主术语冲突，必须登记 rework，不得修改主术语绕过门禁。
-- 若后续 WAES、AaaS、GFIS、KDS 或 Brain 使用本映射产生冲突，以项目群主方案和人工确认优先。
+- 若后续 WAME、AaaS、GFIS、KDS 或 Brain 使用本映射产生冲突，以项目群主方案和人工确认优先。
 
 ## 10. 禁止声明
 
 - 不声明 WAS 主方案已 accepted。
 - 不声明 Ontology 已覆盖全部业务语义。
 - 不声明 XWAIL 完整工具链完成。
-- 不声明 WAES 已发布。
+- 不声明 WAME 已发布。
 - 不声明 AaaS 已绑定或可订阅。
 - 不声明 GFIS/GPC/PVAOS/SCaaS 真实业务闭环完成。
 - 不声明 KDS API 已真实同步。

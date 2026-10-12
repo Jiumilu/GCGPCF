@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/91-治理与验收/02-governance/loop/README.md
 source_path: 02-governance/loop/README.md
 sync_direction: bidirectional
-last_reviewed: 2026-10-11
+last_reviewed: 2026-10-12
 supersedes: []
 superseded_by: []
 ---
@@ -45,7 +45,7 @@ KDS 空间：`开发`
 | GPCF-DOC-AB6DC46557 | Loop CodeGraph Goal Optimization Plan | 02-governance/loop/LOOP_CODEGRAPH_GOAL_OPTIMIZATION_PLAN.md | WAME | controlled |
 | GPCF-DOC-622398264F | Loop CodeGraph Large File Policy | 02-governance/loop/LOOP_CODEGRAPH_LARGE_FILE_POLICY.md | WAME | controlled |
 | GPCF-DOC-4C7D46A1B3 | LOOP_CODEGRAPH_NORMALIZATION_CHECKLIST | 02-governance/loop/LOOP_CODEGRAPH_NORMALIZATION_CHECKLIST.md | WAME | controlled |
-| GPCF-DOC-23DDC94324 | LOOP_CODEGRAPH_P1_PILOT_ADMISSION | 02-governance/loop/LOOP_CODEGRAPH_P1_PILOT_ADMISSION.md | GPCF | controlled |
+| GPCF-DOC-23DDC94324 | Loop CodeGraph P1 Pilot Admission | 02-governance/loop/LOOP_CODEGRAPH_P1_PILOT_ADMISSION.md | WAME | controlled |
 | GPCF-DOC-6CC5F6A45C | Loop CodeGraph Project Group Coverage | 02-governance/loop/LOOP_CODEGRAPH_PROJECT_GROUP_COVERAGE.md | WAME | controlled |
 | GPCF-DOC-0DF6AA8647 | LOOP Control Board | 02-governance/loop/LOOP_CONTROL_BOARD.md | WAME | controlled |
 | GPCF-DOC-666112D107 | LOOP Delivery Efficiency Control | 02-governance/loop/LOOP_DELIVERY_EFFICIENCY_CONTROL.md | WAME | controlled |
@@ -55,13 +55,13 @@ KDS 空间：`开发`
 | GPCF-DOC-04BF76145B | LOOP Execution Rules | 02-governance/loop/LOOP_EXECUTION_RULES.md | WAME | controlled |
 | GPCF-DOC-LOOP-GATE-CLASSIFICATION-V11 | LOOP Gate Classification | 02-governance/loop/LOOP_GATE_CLASSIFICATION.md | WAME | controlled |
 | GPCF-DOC-FE20CDD358 | Loop Governance Dashboard | 02-governance/loop/LOOP_GOVERNANCE_DASHBOARD.md | WAME | controlled |
-| GPCF-DOC-07906C7E54 | LOOP Governance Efficiency Debt Backlog | 02-governance/loop/LOOP_GOVERNANCE_EFFICIENCY_DEBT_BACKLOG.md | WAME | controlled |
+| GPCF-DOC-07906C7E54 | Loop Governance Efficiency Debt Backlog | 02-governance/loop/LOOP_GOVERNANCE_EFFICIENCY_DEBT_BACKLOG.md | GPCF | controlled |
 | GPCF-DOC-D63AEEB17D | Loop 治理运行边界 | 02-governance/loop/LOOP_GOVERNANCE_OPERATING_BOUNDARY.md | WAME | controlled |
 | GPCF-DOC-48F5DD5538 | Loop Governance Phase Goal | 02-governance/loop/LOOP_GOVERNANCE_PHASE_GOAL.md | WAME | controlled |
 | GPCF-DOC-8A21A00749 | Loop 治理轮次复核计划 | 02-governance/loop/LOOP_GOVERNANCE_ROUND_REVIEW_PLAN.md | WAME | controlled |
 | GPCF-DOC-LOOP-V11-SLIMMING-DELIVERY-RECOVERY | LOOP v1.1 治理瘦身与交付恢复基线 | 02-governance/loop/LOOP_GOVERNANCE_SLIMMING_AND_DELIVERY_RECOVERY.md | WAME | controlled |
 | GPCF-DOC-1B5550FF05 | Loop L3.5 Real API Verification Policy | 02-governance/loop/LOOP_L3_5_REAL_API_VERIFICATION.md | WAME | controlled |
-| GPCF-DOC-5E646AC9A6 | LOOP_L4_AUTONOMOUS_OPERATIONS | 02-governance/loop/LOOP_L4_AUTONOMOUS_OPERATIONS.md | GPCF | controlled |
+| GPCF-DOC-5E646AC9A6 | Loop L4 Autonomous Operations Policy | 02-governance/loop/LOOP_L4_AUTONOMOUS_OPERATIONS.md | WAME | controlled |
 | GPCF-DOC-7FB1181082 | Loop L5 Full Production Autonomy Policy | 02-governance/loop/LOOP_L5_FULL_PRODUCTION_AUTONOMY.md | WAME | controlled |
 | GPCF-DOC-D5550386C6 | Loop Metrics | 02-governance/loop/LOOP_METRICS.md | WAME | controlled |
 | GPCF-DOC-0A2D9C6B81 | LOOP Multi-Agent Execution Policy | 02-governance/loop/LOOP_MULTI_AGENT_EXECUTION_POLICY.md | WAME | controlled |

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-HEADROOM-LCX-REAL-MEASUREMENT-AUTHORIZATION-WINDOW-GRANT-001
 title: 循环回合：GPCF-HEADROOM-LCX-REAL-MEASUREMENT-AUTHORIZATION-WINDOW-GRANT-001
 project: GPCF
-related_projects: [GPC, WAES, GPCF]
+related_projects: [GPC, WAME, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -49,4 +49,4 @@ superseded_by: []
 
 ## 下一轮
 
-若后续要继续推进真实测量执行，再补 token ledger replay 与 WAES/Harness 进一步裁决。
+若后续要继续推进真实测量执行，再补 token ledger replay 与 WAME/Harness 进一步裁决。

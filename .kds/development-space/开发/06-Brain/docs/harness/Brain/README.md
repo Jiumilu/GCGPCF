@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-0857798863
 title: Brain
 project: Brain
-related_projects: [GPC, WAES, KDS, Brain, GPCF]
+related_projects: [GPC, WAME, KDS, Brain, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/06-Brain/docs/harness/Brain/README.md
 source_path: docs/harness/Brain/README.md
 sync_direction: bidirectional
-last_reviewed: 2026-10-11
+last_reviewed: 2026-10-12
 supersedes: []
 superseded_by: []
 ---
@@ -44,6 +44,6 @@ KDS 空间：`开发`
 | GPCF-DOC-BRAIN-REVIEW-HANDOFF-20260625 | Brain 人工审查移交包 2026-06-25 | docs/harness/Brain/evidence/brain-review-handoff-20260625.md | Brain | controlled |
 | GPCF-DOC-BRAIN-TEAM-AUTH-CONTRACT-DRIFT-20260624 | Brain team 空间授权契约 C 口径确认证据 2026-06-24 | docs/harness/Brain/evidence/brain-team-authorization-contract-drift-20260624.md | Brain | controlled |
 | GPCF-DOC-33E55CB86C | Brain 证据索引 | docs/harness/Brain/evidence/evidence-index.md | Brain | controlled |
-| GPCF-DOC-B0F22D2E45 | loop-state | docs/harness/Brain/loop-state.md | Brain | controlled |
+| GPCF-DOC-B0F22D2E45 | GlobalCloud Brain Loop State | docs/harness/Brain/loop-state.md | Brain | controlled |
 | GPCF-DOC-0209DFB721 | loops | docs/harness/Brain/loops/README.md | Brain | controlled |
 | GPCF-DOC-F61B890C31 | Loop Round GPCF-BR-LR-001 | docs/harness/Brain/loops/loop-round-GPCF-BR-LR-001.md | Brain | controlled |

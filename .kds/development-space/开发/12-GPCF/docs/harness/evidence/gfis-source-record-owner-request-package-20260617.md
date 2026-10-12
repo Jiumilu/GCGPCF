@@ -59,7 +59,7 @@ superseded_by: []
 | `runtime_primary_key_missing` | 1 |
 | `review_queue` | 0 |
 | `runtime_intake` | 0 |
-| `waes_review` | 0 |
+| `wame_review` | 0 |
 | `verified` | 0 |
 
 ## 不声明事项
@@ -71,12 +71,12 @@ superseded_by: []
 - `runtime_primary_key_created`: `false`
 - `review_queue_created`: `false`
 - `runtime_intake_created`: `false`
-- `waes_review_created`: `false`
+- `wame_review_created`: `false`
 - `verified_artifact_created`: `false`
 - `production_write`: `false`
 - `real_external_api_write`: `false`
 - `real_kds_write`: `false`
-- `real_waes_write`: `false`
+- `real_wame_write`: `false`
 - `bench_migrate`: `false`
 - `schema_sync`: `false`
 - `permission_change`: `false`

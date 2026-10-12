@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-GCWORLD-045
 title: spec
 project: KDS
-related_projects: [WAES, KDS]
+related_projects: [WAME, KDS]
 domain: openspec
 status: draft
 version: v1.0
@@ -40,7 +40,7 @@ superseded_by: []
 - **THEN** 系统保留两个候选及各自来源并进入人工复核，不生成正式合并
 
 ### Requirement: 事实提升使用受控请求
-任何从GCWORLD候选向KDS事实的提升 SHALL 使用包含命令标识、幂等键、预期事实版本、证据摘要、WAES裁决和人工确认的受控请求。GCWORLD MUST NOT 直接修改KDS存储。
+任何从GCWORLD候选向KDS事实的提升 SHALL 使用包含命令标识、幂等键、预期事实版本、证据摘要、WAME裁决和人工确认的受控请求。GCWORLD MUST NOT 直接修改KDS存储。
 
 #### Scenario: 提升请求缺少人工确认
 - **WHEN** 候选具有充分证据但缺少规定的人工确认

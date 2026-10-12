@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/92-证据与会话归档/08-evidence-samples/session-archives/README.md
 source_path: 08-evidence-samples/session-archives/README.md
 sync_direction: bidirectional
-last_reviewed: 2026-10-11
+last_reviewed: 2026-10-12
 supersedes: []
 superseded_by: []
 ---
@@ -37,4 +37,4 @@ KDS 空间：`开发`
 | doc_id | title | source_path | project | status |
 | --- | --- | --- | --- | --- |
 | GPCF-DOC-71BD3638A9 | session-archives | 08-evidence-samples/session-archives/README.md | WAME | archive |
-| GPCF-DOC-6ACBFCD6E4 | session-019eafc0-ee61-7900-b137-5cf2252bd82f | 08-evidence-samples/session-archives/session-019eafc0-ee61-7900-b137-5cf2252bd82f.md | WAME | archive |
+| GPCF-DOC-6ACBFCD6E4 | 会话归档：019eafc0-ee61-7900-b137-5cf2252bd82f | 08-evidence-samples/session-archives/session-019eafc0-ee61-7900-b137-5cf2252bd82f.md | WAME | archive |

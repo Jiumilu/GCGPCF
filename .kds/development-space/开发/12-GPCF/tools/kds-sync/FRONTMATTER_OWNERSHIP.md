@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-C9A7E8D2B1
 title: Frontmatter 写入权责清单（tools/kds-sync）
 project: GPCF
-related_projects: [GPC, WAES, KDS, GPCF]
+related_projects: [GPC, WAME, KDS, GPCF]
 domain: tools
 status: controlled
 version: v1.0

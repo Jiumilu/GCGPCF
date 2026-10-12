@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-1D2FA3DB71
 title: Loop Round {N}
 project: GPCF
-related_projects: [GPC, WAES, GPCF]
+related_projects: [GPC, WAME, GPCF]
 domain: templates
 status: controlled
 version: v1.0
@@ -50,7 +50,7 @@ superseded_by: []
 | 文档完整性 | | pass/partial/fail | |
 | 规范一致性 | | pass/partial/fail | |
 | Harness 合规 | | pass/partial/fail | |
-| WAES 证据链 | | pass/partial/fail | |
+| WAME 证据链 | | pass/partial/fail | |
 
 ## 5. 反馈
 

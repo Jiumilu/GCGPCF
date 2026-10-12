@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-BF3BEDD74F
 title: Harness Evidence 引用完整性规则
 project: KDS
-related_projects: [WAES, KDS, Brain, PKC]
+related_projects: [WAME, KDS, Brain, PKC]
 domain: docs
 status: controlled
 version: v1.0
@@ -22,7 +22,7 @@ superseded_by: []
 
 Harness evidence 是 GC-Knowledge Fabric 的治理证据层，只记录审计、验收、门禁、委员会、Agent 调用、发布审批和目标系统回执等治理证据。
 
-它不保存普通业务知识正文，不替代 KDS 事实存储，不替代 WAES 门禁，不替代 KWE 流程，不替代人工或委员会确认。
+它不保存普通业务知识正文，不替代 KDS 事实存储，不替代 WAME 门禁，不替代 KWE 流程，不替代人工或委员会确认。
 
 ## 2. 最小字段
 
@@ -50,7 +50,7 @@ Evidence 引用必须满足：
 
 - `objectRefs` 指向 KDS 对象或候选对象。
 - `sourceRefs` 指向来源记录。
-- `gateRefs` 指向 WAES gate 结果或 dry-run gate request。
+- `gateRefs` 指向 WAME gate 结果或 dry-run gate request。
 - `loopRefs` 指向 LOOP record。
 - `decisionRefs` 指向委员会或授权决策记录。
 - 高风险 evidence 必须有 `contentHash` 或 `controlledOriginalRef`。
@@ -84,7 +84,7 @@ Harness evidence 不能：
 - 直接允许外部共享。
 - 存储敏感原文、密钥、Token、合同敏感条款、POD 原件或金融凭证原文。
 
-Evidence 只能作为后续 KDS、WAES、KWE、Brain/PKC、委员会和 LOOP 的引用依据。
+Evidence 只能作为后续 KDS、WAME、KWE、Brain/PKC、委员会和 LOOP 的引用依据。
 
 ## 6. 完整性输出
 

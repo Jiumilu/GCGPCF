@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-3B8269766A
 title: GFIS Assistant DKS-270 SLA 违约审阅处置选项预览策略
 project: KDS
-related_projects: [GFIS, WAES, KDS]
+related_projects: [GFIS, WAME, KDS]
 domain: docs
 status: controlled
 version: v1.0
@@ -28,7 +28,7 @@ superseded_by: []
 
 ## 硬边界
 
-DKS-270 不创建 resolution、dispute update、committee decision、freeze action、approval request、approval decision、WAES gate result、Harness evidence、KWE work item、KDS lifecycle 或任何业务写回。
+DKS-270 不创建 resolution、dispute update、committee decision、freeze action、approval request、approval decision、WAME gate result、Harness evidence、KWE work item、KDS lifecycle 或任何业务写回。
 
 ## 验证
 

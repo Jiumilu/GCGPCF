@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-9E0446FD36
 title: GCKF P0 正式 evidence 委员会受理确认 notification receipt aggregation repair request acknowledgement routing delivery precheck 当前态证据 D178
 project: GPCF
-related_projects: [GPCF, WAES, KDS]
+related_projects: [GPCF, WAME, KDS]
 domain: docs
 status: controlled
 version: v1.0

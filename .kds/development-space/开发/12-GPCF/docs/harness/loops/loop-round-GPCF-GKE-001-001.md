@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-LOOP-GKE-001-001
 title: Loop Round GPCF-GKE-001-001
 project: GPCF
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, MMC, GPCF, Studio]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, MMC, GPCF, Studio]
 domain: docs
 status: controlled
 version: v1.0
@@ -20,7 +20,7 @@ superseded_by: []
 
 ## 输入
 
-用户要求将 KDS 实施、GPCF F-013、Studio 以及后续 Brain、MMC、WAES、GFIS、GPC、PVAOS 的知识工程工作统一纳入项目群一级工程 `GlobalCloud Knowledge Engineering`（`GKE-001`），并提供总体目标、七层架构、对象模型、生命周期、三会话分工、交接协议、权限、验收门和当前执行约束。
+用户要求将 KDS 实施、GPCF F-013、Studio 以及后续 Brain、MMC、WAME、GFIS、GPC、PVAOS 的知识工程工作统一纳入项目群一级工程 `GlobalCloud Knowledge Engineering`（`GKE-001`），并提供总体目标、七层架构、对象模型、生命周期、三会话分工、交接协议、权限、验收门和当前执行约束。
 
 输入文档：
 

@@ -2,7 +2,7 @@
 doc_id: GPCF-OS-ICP-SOP-COUPLING-PROPOSAL-20260713
 title: proposal
 project: KDS
-related_projects: [GPC, WAES, KDS, GPCF, ICP]
+related_projects: [GPC, WAME, KDS, GPCF, ICP]
 domain: openspec
 status: draft
 version: v1.0
@@ -44,7 +44,7 @@ ICP 已形成产业模型、资源池、场景规则和控制候选，SOP 已形
 ## Impact
 
 - Program：GlobalCloud 项目群总体方案体系与实施方案体系。
-- Projects：ICP、SOP、GPCF；WAES 负责授权和状态裁决，KDS 负责受控知识与 canonical 边界。
+- Projects：ICP、SOP、GPCF；WAME 负责授权和状态裁决，KDS 负责受控知识与 canonical 边界。
 - Feature：`F-012 icp-sop-foundation-coupling`。
 - Repositories：`GlobalCloud ICP`、`GlobalCloud SOP`、`GlobalCoud GPCF`。
 - Documents：ICP/SOP 两份总体方案、两份实施方案，以及 GPCF 项目群主方案中的协同传导和依赖关系。

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-LOCALIZATIONDEBTKDSDKSROUTINGTEXTREPAIRD10520260622
 title: KDS-DKS 路由文本 D105 中文化修复证据
 project: KDS
-related_projects: [WAES, KDS]
+related_projects: [WAME, KDS]
 domain: docs
 status: controlled
 version: v1.0

@@ -7,7 +7,7 @@ tags: [controlled, evidence, kds, odf, okf-derived]
 timestamp: 2026-06-22T00:00:00Z
 kds_path: 开发/05-KDS/docs/harness/evidence/odf-phase2-sample-ledger-20260617.md
 source_path: docs/harness/evidence/odf-phase2-sample-ledger-20260617.md
-source_hash: fb6f055c0f43528147fff057af5b39ccd4b448634d553cb50f7ca94c262e9f60
+source_hash: 6f945e15f444e4fbc0092d2e01d0b93f0d3c0cbf4257dbd2ca9e3fa7ca51cd20
 source_of_record: kds
 derivation_policy: metadata_only_no_body_copy
 ---

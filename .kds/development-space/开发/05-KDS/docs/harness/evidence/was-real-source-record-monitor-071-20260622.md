@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-6C0AA90071
 title: WAS Real Source Record Monitor 071 证据
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -20,7 +20,7 @@ superseded_by: []
 
 ## 范围
 
-`GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-071` 将绿色供应链覆盖扩展到劳工、人权与社会责任证据链：劳工标准审核报告、工时与工资记录、职业健康安全记录、员工申诉机制记录、人权尽调记录、强迫劳动筛查记录、社区影响咨询记录。只有补齐这些证据，Ontology 才能安全地把劳工合规、工资工时、职业健康安全、申诉机制、人权尽调、强迫劳动风险和社区影响绑定到下游 WAES/KDS/runtime 门禁中。
+`GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-071` 将绿色供应链覆盖扩展到劳工、人权与社会责任证据链：劳工标准审核报告、工时与工资记录、职业健康安全记录、员工申诉机制记录、人权尽调记录、强迫劳动筛查记录、社区影响咨询记录。只有补齐这些证据，Ontology 才能安全地把劳工合规、工资工时、职业健康安全、申诉机制、人权尽调、强迫劳动风险和社区影响绑定到下游 WAME/KDS/runtime 门禁中。
 
 ## 监控检查
 
@@ -42,7 +42,7 @@ superseded_by: []
 | runtime_primary_key_ready | `0` |
 | review_queue | `0` |
 | runtime_intake | `0` |
-| waes_review | `0` |
+| wame_review | `0` |
 | verified | `0` |
 | accepted | `false` |
 | integrated | `false` |
@@ -73,7 +73,7 @@ python3 tools/kds-sync/validate_was_real_source_record_monitor_071.py
 
 - 本证据不创建也不推断劳工标准审核报告、工时工资记录、职业健康安全记录、员工申诉机制记录、人权尽调记录、强迫劳动筛查记录或社区影响咨询记录。
 - 本证据不写入 GFIS/KWE 运行层。
-- 本证据不创建 KDS 正式事实、WAES review、runtime primary key、review queue、runtime intake、verified artifact，也不形成 accepted、integrated 或 production ready 状态。
+- 本证据不创建 KDS 正式事实、WAME review、runtime primary key、review queue、runtime intake、verified artifact，也不形成 accepted、integrated 或 production ready 状态。
 
 ## 下一轮
 

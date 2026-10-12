@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-GCWORLD-021
 title: spec
 project: KDS
-related_projects: [PVAOS, WAES, KDS]
+related_projects: [PVAOS, WAME, KDS]
 domain: openspec
 status: draft
 version: v1.0

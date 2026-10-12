@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-3F160ABA27
 title: L4 最小闭环对象契约
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -25,13 +25,13 @@ superseded_by: []
 | PlatformOrder | GPC | 平台订单意图与客户需求锚点 |
 | SampleRequest | GPC / GFIS | 量产放行前的样品或样箱申请 |
 | SampleWorkOrder | GFIS | 工厂运行层样品工单 |
-| SampleApproval | GPC / WAES | 客户签收或豁免门禁 |
-| ProductionRelease | WAES | FactoryOrder 之前的受控放行决策 |
+| SampleApproval | GPC / WAME | 客户签收或豁免门禁 |
+| ProductionRelease | WAME | FactoryOrder 之前的受控放行决策 |
 | OrderMapping | GPCF | 平台记录与运行层记录之间的跨项目追踪映射 |
 | FactoryOrder | GFIS | 放行门禁之后的工厂运行层订单 |
 | ProofOfDelivery | GFIS / GPC | 交付与客户签收证据 |
-| ExternalException | WAES | 异常与升级记录 |
-| EvidenceRecord | WAES | 证据元数据与审查状态 |
+| ExternalException | WAME | 异常与升级记录 |
+| EvidenceRecord | WAME | 证据元数据与审查状态 |
 | KnowledgeBacklink | KDS | 指向源材料的受控知识回链 |
 
 ## 门禁规则
@@ -44,8 +44,8 @@ superseded_by: []
   验证锚点：`SampleApproval.status in ["approved", "waived"]`。
 - `ProductionRelease.status` 必须为 `approved`。
   验证锚点：`ProductionRelease.status == "approved"`。
-- `WAES.gate` 必须为 `confirmed`。
-  验证锚点：`WAES.gate == "confirmed"`。
+- `WAME.gate` 必须为 `confirmed`。
+  验证锚点：`WAME.gate == "confirmed"`。
 
 ## 当前边界
 

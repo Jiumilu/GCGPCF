@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-5B135F1774
 title: LOOP Round GPCF-KDS-DKS-079 - GC-Knowledge Fabric Governance 端点无写入冒烟
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, Brain, PKC, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, Brain, PKC, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -22,7 +22,7 @@ superseded_by: []
 
 建立 Governance endpoint skeleton 和本地 no-write route smoke，验证第一阶段 LOOP、evidence、Knowledge CI、贡献/收益/额度/悬赏台账入口已经显式声明 evidence 边界、dry-run 约束和禁止真实业务/收益/额度/悬赏写入。
 
-本轮只检查本地 TypeScript route registry 和 fixture，不启动服务，不触达真实 governance ledger、KDS、WAES、KWE、GFIS、GPC、Brain、PKC 或外部 API。
+本轮只检查本地 TypeScript route registry 和 fixture，不启动服务，不触达真实 governance ledger、KDS、WAME、KWE、GFIS、GPC、Brain、PKC 或外部 API。
 
 ## 2. 本轮输入资料
 
@@ -57,7 +57,7 @@ superseded_by: []
 - `python3 scripts/governance/validate_governance_endpoint_no_write_smoke.py`
 - `python3 scripts/gfis/validate_gfis_endpoint_no_write_smoke.py`
 - `python3 scripts/kwe/validate_kwe_endpoint_no_write_smoke.py`
-- `python3 scripts/waes/validate_waes_endpoint_no_write_smoke.py`
+- `python3 scripts/wame/validate_wame_endpoint_no_write_smoke.py`
 - `python3 scripts/kds/validate_kds_v2_endpoint_no_write_smoke.py`
 - `python3 scripts/coverage/validate_okf_types_api_validator_coverage.py`
 - `python3 scripts/loop_dashboard/validate_knowledge_closure_metrics.py`
@@ -66,7 +66,7 @@ superseded_by: []
 - `python3 scripts/gfis/validate_gfis_assistant_no_write_smoke.py`
 - `python3 scripts/governance/validate_governance_ledger_dry_run.py`
 - `python3 scripts/kds/validate_kds_search_dry_run.py`
-- `python3 scripts/waes/validate_waes_minimum_gates.py`
+- `python3 scripts/wame/validate_wame_minimum_gates.py`
 - `python3 scripts/kwe/validate_kwe_minimum_workflow.py`
 - `tsc -p packages/shared/tsconfig.json --noEmit`
 - `tsc -p packages/api/tsconfig.json --noEmit`
@@ -80,18 +80,18 @@ superseded_by: []
 | 检查 | 结果 |
 |---|---|
 | Governance endpoint no-write smoke | `governance_endpoint_no_write_smoke=pass endpoints=8 read_only=5 loop_record_request=1 evidence_request=1 knowledge_ci_dry_run=1 evidence_boundary=8 dry_run_only=1 writes_business_system=0 writes_accepted_fact=0 writes_revenue_distribution=0 writes_quota_mutation=0 writes_bounty_settlement=0 writes_external_api=0 no_write=covered` |
-| GFIS endpoint no-write smoke | `gfis_endpoint_no_write_smoke=pass endpoints=4 assistant_query=1 usage_guidance=1 document_acceptance_check=1 writeback_candidate=1 kds_search_required=4 waes_gate_required=4 kwe_finality_required=4 writes_fact=0 writes_business_system=0 writes_accepted_fact=0 writes_revenue_distribution=0 writes_external_api=0 no_write=covered` |
-| KWE endpoint no-write smoke | `kwe_endpoint_no_write_smoke=pass endpoints=10 read_only=1 work_request=3 waes_gated_requests=6 human_or_committee_finality=9 writes_accepted_fact=0 writes_business_system=0 writes_revenue_distribution=0 writes_external_api=0 no_write=covered` |
-| WAES endpoint no-write smoke | `waes_endpoint_no_write_smoke=pass endpoints=7 gate_check=6 freeze_request=1 human_or_committee_finality=7 writes_gate_result=0 writes_business_system=0 writes_accepted_fact=0 writes_revenue_distribution=0 writes_external_api=0 no_write=covered` |
-| KDS v2 endpoint no-write smoke | `kds_v2_endpoint_no_write_smoke=pass endpoints=11 read_only=7 candidate_only=4 waes_gated_candidates=4 kwe_flow_candidates=4 direct_business_writes=0 accepted_lifecycle_writes=0 external_api_writes=0 real_kds_writes=0 no_write=covered` |
+| GFIS endpoint no-write smoke | `gfis_endpoint_no_write_smoke=pass endpoints=4 assistant_query=1 usage_guidance=1 document_acceptance_check=1 writeback_candidate=1 kds_search_required=4 wame_gate_required=4 kwe_finality_required=4 writes_fact=0 writes_business_system=0 writes_accepted_fact=0 writes_revenue_distribution=0 writes_external_api=0 no_write=covered` |
+| KWE endpoint no-write smoke | `kwe_endpoint_no_write_smoke=pass endpoints=10 read_only=1 work_request=3 wame_gated_requests=6 human_or_committee_finality=9 writes_accepted_fact=0 writes_business_system=0 writes_revenue_distribution=0 writes_external_api=0 no_write=covered` |
+| WAME endpoint no-write smoke | `wame_endpoint_no_write_smoke=pass endpoints=7 gate_check=6 freeze_request=1 human_or_committee_finality=7 writes_gate_result=0 writes_business_system=0 writes_accepted_fact=0 writes_revenue_distribution=0 writes_external_api=0 no_write=covered` |
+| KDS v2 endpoint no-write smoke | `kds_v2_endpoint_no_write_smoke=pass endpoints=11 read_only=7 candidate_only=4 wame_gated_candidates=4 kwe_flow_candidates=4 direct_business_writes=0 accepted_lifecycle_writes=0 external_api_writes=0 real_kds_writes=0 no_write=covered` |
 | 覆盖矩阵 validator | `okf_types_api_validator_coverage=pass coverage_items=8 okf_files=15 type_files=17 api_files=13 validator_files=14 fixture_files=14 missing_files=0 no_write=covered business_writes=0 external_api_writes=0` |
-| LOOP Dashboard 指标 dry-run | `knowledge_closure_metrics=pass objects=5 closure_score=53 rag_safe_rate=0.2 blocked_knowledge_rate=0.2 repair_required_gap_count=1 waes_interception_count=2 human_confirmation_completion_rate=0.5 committee_closure_rate=0.5 revenue_candidate_to_formal_rate=0.5 bounty_closure_rate=0.333333 ai_candidate_adoption_rate=0.4 external_share_violation_count=1 sensitive_metadata_only_rate=0.4 no_write=covered kds_writes=0 waes_writes=0 kwe_writes=0 business_writes=0 external_api_writes=0` |
-| Brain/PKC 入口契约 smoke | `brain_pkc_entry_contract_smoke=pass cases=4 surfaces=brain,pkc covered_views=18 blocked_actions=19 no_write=covered kds_writes=0 waes_writes=0 kwe_writes=0 business_writes=0 external_api_writes=0` |
+| LOOP Dashboard 指标 dry-run | `knowledge_closure_metrics=pass objects=5 closure_score=53 rag_safe_rate=0.2 blocked_knowledge_rate=0.2 repair_required_gap_count=1 wame_interception_count=2 human_confirmation_completion_rate=0.5 committee_closure_rate=0.5 revenue_candidate_to_formal_rate=0.5 bounty_closure_rate=0.333333 ai_candidate_adoption_rate=0.4 external_share_violation_count=1 sensitive_metadata_only_rate=0.4 no_write=covered kds_writes=0 wame_writes=0 kwe_writes=0 business_writes=0 external_api_writes=0` |
+| Brain/PKC 入口契约 smoke | `brain_pkc_entry_contract_smoke=pass cases=4 surfaces=brain,pkc covered_views=18 blocked_actions=19 no_write=covered kds_writes=0 wame_writes=0 kwe_writes=0 business_writes=0 external_api_writes=0` |
 | GFIS 文档验收 E2E dry-run | `gfis_document_acceptance_e2e=pass cases=3 fact_candidates=3 gaps=4 human_or_blocked_cases=3 writeback_candidates_only=1 business_writes=0 kds_fact_writes=0 external_api_writes=0` |
 | GFIS Assistant no-write smoke | `gfis_assistant_no_write_smoke=pass runs=4 knowledge=covered usage=covered document_acceptance=covered writeback_candidate=covered business_writes=0 external_api_writes=0 kds_writes=0` |
 | Governance Ledger dry-run | `governance_ledger_dry_run=pass contributions=2 revenues=3 quotas=3 bounties=2 formal_distribution_eligible=1 confirmed_contributions=1 valid_quotas=2 invalid_quotas=1 settlement_eligible_bounties=1 real_revenue_distributions=0 real_quota_mutations=0 real_bounty_settlements=0` |
 | KDS Search dry-run | `kds_search_dry_run=pass objects=5 results=1 tenant_filter=covered acl_filter=covered domain_filter=covered pool_filter=covered project_filter=covered rag_filter=covered keyword_filter=covered result_fields=covered real_kds_reads=0 vector_reads=0 graph_reads=0` |
-| WAES minimum gates dry-run | `waes_minimum_gates=pass cases=6 passed_cases=6 evaluated_gates=16 source_gate=covered evidence_gate=covered rag_gate=covered writeback_gate=covered revenue_gate=covered contribution_gate=covered sensitive_data_gate=covered real_writes=0 external_api_writes=0` |
+| WAME minimum gates dry-run | `wame_minimum_gates=pass cases=6 passed_cases=6 evaluated_gates=16 source_gate=covered evidence_gate=covered rag_gate=covered writeback_gate=covered revenue_gate=covered contribution_gate=covered sensitive_data_gate=covered real_writes=0 external_api_writes=0` |
 | KWE minimum workflow dry-run | `kwe_minimum_workflow=pass workflows=4 promotable_candidates=1 blocked_or_pending_candidates=3 ai_direct_fact_writes=0 kds_fact_writes=0 gfis_writes=0` |
 | Shared Types 编译检查 | `tsc -p packages/shared/tsconfig.json --noEmit` 通过 |
 | API Contract 编译检查 | `tsc -p packages/api/tsconfig.json --noEmit` 通过 |
@@ -102,7 +102,7 @@ superseded_by: []
 | 差异检查 | `git diff --check -- docs/harness/loops/loop-round-GPCF-KDS-DKS-079.md fixtures/governance/endpoint-no-write-smoke.json scripts/governance/validate_governance_endpoint_no_write_smoke.py packages/api/src/governance/routes.ts packages/api/src/index.ts fixtures/coverage/okf-types-api-validator-coverage.json scripts/coverage/validate_okf_types_api_validator_coverage.py` 通过 |
 | 敏感词与误升级扫描 | 通过，未发现指定误升级表述或密钥模式 |
 
-`loop_document_gate.py` 仍显示仓库级 `status_counts.missing=1` 和 `project_counts.missing=1`，该项为全仓既有元数据缺口。本轮 route smoke 不证明真实 HTTP 服务已启动或真实 Governance API 已部署，不创建真实 evidence、真实 LOOP 状态升级、收益分配、额度变更、悬赏结算、KDS 对象、WAES GateResult、KWE WorkItem 或 GFIS 写回。
+`loop_document_gate.py` 仍显示仓库级 `status_counts.missing=1` 和 `project_counts.missing=1`，该项为全仓既有元数据缺口。本轮 route smoke 不证明真实 HTTP 服务已启动或真实 Governance API 已部署，不创建真实 evidence、真实 LOOP 状态升级、收益分配、额度变更、悬赏结算、KDS 对象、WAME GateResult、KWE WorkItem 或 GFIS 写回。
 
 ## 8. 风险与边界
 

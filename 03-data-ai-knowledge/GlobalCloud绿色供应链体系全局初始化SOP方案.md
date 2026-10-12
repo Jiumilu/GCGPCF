@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-1362AFC964
 title: GlobalCloud 绿色供应链体系全局初始化 SOP 方案
 project: KDS
-related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, XiaoC, XGD, GPCF]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, XiaoC, XGD, GPCF, Studio, ICP]
 domain: data-ai-knowledge
 status: controlled
 version: v1.0

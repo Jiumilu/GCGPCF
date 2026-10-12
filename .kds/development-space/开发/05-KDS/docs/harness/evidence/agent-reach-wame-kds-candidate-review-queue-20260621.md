@@ -1,26 +1,26 @@
 ---
 doc_id: GPCF-DOC-06F87D27BD
-title: Agent-Reach WAES KDS Candidate Review Queue 20260621
+title: Agent-Reach WAME KDS Candidate Review Queue 20260621
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
 owner: KDS
 kds_space: 开发
-kds_path: 开发/05-KDS/docs/harness/evidence/agent-reach-waes-kds-candidate-review-queue-20260621.md
-source_path: docs/harness/evidence/agent-reach-waes-kds-candidate-review-queue-20260621.md
+kds_path: 开发/05-KDS/docs/harness/evidence/agent-reach-wame-kds-candidate-review-queue-20260621.md
+source_path: docs/harness/evidence/agent-reach-wame-kds-candidate-review-queue-20260621.md
 sync_direction: bidirectional
 last_reviewed: 2026-06-24
 supersedes: []
 superseded_by: []
 ---
 
-# Agent-Reach WAES KDS Candidate Review Queue 20260621
+# Agent-Reach WAME KDS Candidate Review Queue 20260621
 
 ## 结论
 
-`GPCF-AGENT-REACH-WAES-KDS-CANDIDATE-REVIEW-QUEUE-001` 已建立，队列状态为 `ready_for_human_review`。本轮只从 replay ledger 生成评审队列，`external_search_invoked=false`，不自动 accept，不写 KDS canonical，不生产集成，不升级任何项目状态。
+`GPCF-AGENT-REACH-WAME-KDS-CANDIDATE-REVIEW-QUEUE-001` 已建立，队列状态为 `ready_for_human_review`。本轮只从 replay ledger 生成评审队列，`external_search_invoked=false`，不自动 accept，不写 KDS canonical，不生产集成，不升级任何项目状态。
 
 ## 队列策略
 
@@ -60,7 +60,7 @@ superseded_by: []
 
 | 字段 | 判定 |
 |---|---|
-| waes_review_status | `ready_for_human_review` |
+| wame_review_status | `ready_for_human_review` |
 | kds_admission | `limited_candidate_only` |
 | rag_admission | `limited` |
 | status_upgrade_allowed | false |
@@ -75,7 +75,7 @@ superseded_by: []
 - 不创建 GFIS source-of-record。
 - 不升级 GPCF accepted/integrated/production_ready 状态。
 - 不把 Agent-Reach 结果转成强 RAG 引用。
-- 不代表 WAES/KDS 已人工接受这些候选来源。
+- 不代表 WAME/KDS 已人工接受这些候选来源。
 
 ## 下一门禁
 

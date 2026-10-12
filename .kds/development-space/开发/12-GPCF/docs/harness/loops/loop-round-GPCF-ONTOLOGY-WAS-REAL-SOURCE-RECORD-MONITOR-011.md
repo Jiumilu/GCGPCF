@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-BE5378EE6E
 title: "Loop Round: GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-011"
 project: GPCF
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio]
 domain: docs
 status: controlled
 version: v1.0
@@ -63,7 +63,7 @@ loop_was_context:
     - GFIS
     - GPC
     - PVAOS
-    - WAES
+    - WAME
     - KDS
     - Brain
     - PKC
@@ -80,11 +80,11 @@ loop_was_context:
   source_of_record: KDS
   ontology_role: real_source_record_monitor_011
   ai_source_boundary: llm_and_rag_candidate_only
-  waes_gate: blocked_until_real_source_record_and_binding_proofs_exist
+  wame_gate: blocked_until_real_source_record_and_binding_proofs_exist
   loop_role: evidence_closure
   llm_role: candidate_generation_only
   rag_role: controlled_reference_only
-  runtime_writeback: blocked_without_waes_kds_owner_confirmation
+  runtime_writeback: blocked_without_wame_kds_owner_confirmation
   rejected_ai_source_cases:
     - llm_generated_source_record
     - rag_reference_promotion
@@ -98,7 +98,7 @@ loop_was_context:
     runtime_primary_key_ready: 0
     review_queue: 0
     runtime_intake: 0
-    waes_review: 0
+    wame_review: 0
     verified: 0
     accepted: false
     integrated: false

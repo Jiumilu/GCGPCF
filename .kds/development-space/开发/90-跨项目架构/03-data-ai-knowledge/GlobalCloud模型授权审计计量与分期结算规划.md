@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-1212817FF5
 title: GlobalCloud 模型授权审计计量与分期结算规划
 project: GPCF
-related_projects: [GPCF, PVAOS, WAES]
+related_projects: [GPCF, PVAOS, WAME]
 domain: data-ai-knowledge
 status: controlled
 version: v1.0
@@ -28,9 +28,9 @@ superseded_by: []
 2. 模型成本统计不等于用户收费。
 3. 本地模型也必须纳入计量，但计量方式可以不同于云模型。
 
-## 2. WAES 授权治理
+## 2. WAME 授权治理
 
-WAES 负责：
+WAME 负责：
 
 1. 场景授权等级
 2. 项目允许档位

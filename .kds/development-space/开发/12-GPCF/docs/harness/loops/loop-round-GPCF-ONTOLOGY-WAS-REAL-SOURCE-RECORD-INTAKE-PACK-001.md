@@ -61,7 +61,7 @@ related_objects: [CustomerRequirementOrPlatformOrder]
 related_events: [ontology_was_real_source_record_intake_package]
 source_refs: [was://scenario/gfis-runtime-sop-e2e/S01-customer-requirement-or-platform-order]
 evidence_refs: [docs/harness/evidence/ontology-was-real-source-record-intake-pack-20260621.md]
-wame_gate_refs: [waes://gate/customer-order-source-record-review]
+wame_gate_refs: [wame://gate/customer-order-source-record-review]
 kds_backlinks: [pending_real_source_record]
 promotion_blockers: [valid_source_record_missing, customer_confirmation_missing]
 next_action: enter_candidate_precheck_after_real_owner_submission
@@ -71,3 +71,5 @@ no_write_declaration: no_gfis_runtime_write_no_kds_official_fact_no_wame_review_
 ## 反馈
 
 真实 source-record intake package 已建立。下一步需要业务责任方提供真实客户订单原件或平台订单回执；真实候选出现后进入 `GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-CANDIDATE-PRECHECK-001`。
+WAME gate ref
+wame://gate/customer-order-source-record-review

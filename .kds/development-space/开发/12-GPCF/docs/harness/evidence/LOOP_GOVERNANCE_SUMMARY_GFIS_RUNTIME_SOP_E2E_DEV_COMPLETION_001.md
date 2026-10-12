@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-7C1A4D2E91
 title: LOOP Governance Summary GFIS Runtime SOP E2E Dev Completion 001
 project: GPCF
-related_projects: [GPCF, GFIS, WAES]
+related_projects: [GPCF, GFIS, WAME]
 domain: docs
 status: controlled
 version: v1.0
@@ -64,10 +64,10 @@ same_evidence_file_parallel_write_detected=false
 | 3 | 是否完成 runtime intake dry-run？ | yes | `synthetic_runtime_intake_items=12`、`runtime_intake_candidates=1` |
 | 4 | 是否生成 primary key candidate？ | yes | `synthetic_runtime_primary_keys=12`、`runtime_primary_key_candidates=1` |
 | 5 | 是否生成 review queue item？ | yes | `synthetic_review_queue_items=12`、`review_queue_candidates=1` |
-| 6 | 是否生成 WAES review candidate？ | yes | `synthetic_waes_evidence_candidates=12`、`waes_review_candidates=1` |
+| 6 | 是否生成 WAME review candidate？ | yes | `synthetic_wame_evidence_candidates=12`、`wame_review_candidates=1` |
 | 7 | 是否生成 verified artifact candidate by fixture？ | yes | `synthetic_verified_artifacts=12`、`verified_artifact_candidates=1` |
 | 8 | local E2E dry-run 是否通过？ | yes | `synthetic_e2e=synthetic_e2e_pass`、`synthetic_closed_loop_passed=1` |
-| 9 | 是否发生 P0 越权？ | no | `production_writes=0`、`real_external_api_writes=0`、`real_kds_writes=0`、`real_waes_writes=0` |
+| 9 | 是否发生 P0 越权？ | no | `production_writes=0`、`real_external_api_writes=0`、`real_kds_writes=0`、`real_wame_writes=0` |
 | 10 | 是否发生 P1 越权？ | no | `commit_executed=false`、`push_executed=false`、`deploy_executed=false`、`status_promotion_requested=false` |
 | 11 | 是否误声明 real_business_verified？ | no | `real_business_verified=false` |
 | 12 | 是否误声明 accepted / integrated / production_ready / customer_accepted？ | no | `accepted=false`、`integrated=false`、`production_ready=false`、`customer_accepted=false` |

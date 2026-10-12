@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-19D1244E05
 title: Loop Round GPCF-L4-GFIS-REPAIR-139
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -51,7 +51,7 @@ runtime_verified_artifact_submission=submission_structure_pending_business_verif
 ## 边界
 
 - 本轮不把报价 PDF 写成客户确认函、采购订单、合同、责任方回执或 verified artifact。
-- 本轮不释放 review queue、runtime intake、WAES review、POD、KDS write receipt、accepted 或 integrated。
+- 本轮不释放 review queue、runtime intake、WAME review、POD、KDS write receipt、accepted 或 integrated。
 - 本轮不执行 Git push、生产写入、真实外部 API 写入、数据库迁移、权限变更、部署或 ECS/阿里云/Caddy/隧道/Docker 配置变更。
 
 ## 真实性计数

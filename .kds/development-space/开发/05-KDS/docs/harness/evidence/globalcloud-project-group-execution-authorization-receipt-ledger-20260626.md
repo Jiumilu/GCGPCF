@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-PROJECT-GROUP-EXECUTION-AUTHORIZATION-RECEIPT-LEDGER-20260626
 title: GlobalCloud 项目群真实执行授权回执总账 2026-06-26
 project: KDS
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, GPCF, Studio]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, GPCF, Studio]
 domain: docs
 status: controlled
 version: v1.0

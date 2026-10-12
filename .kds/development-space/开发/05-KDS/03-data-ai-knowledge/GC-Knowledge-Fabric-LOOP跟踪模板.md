@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-2BE90FCE73
 title: GC-Knowledge Fabric LOOP跟踪模板
 project: KDS
-related_projects: [WAES, KDS]
+related_projects: [WAME, KDS]
 domain: data-ai-knowledge
 status: controlled
 version: v1.0
@@ -39,7 +39,7 @@ superseded_by: []
 
 ## 6. 本轮新增候选 SOP
 
-## 7. 本轮 WAES 门禁结果
+## 7. 本轮 WAME 门禁结果
 
 ## 8. 本轮人工确认事项
 
@@ -62,7 +62,7 @@ superseded_by: []
 
 - 没有 evidence，不得提升为 accepted。
 - 没有人工或委员会确认，不得形成正式事实。
-- 没有 WAES 门禁，不得进入写回。
+- 没有 WAME 门禁，不得进入写回。
 - 没有到账依据，不得进入正式收益。
 - 没有脱敏或 metadata-only 处理，不得开放敏感资料。
 

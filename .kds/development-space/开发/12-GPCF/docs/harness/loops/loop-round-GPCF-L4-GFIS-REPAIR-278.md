@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-DF7D2E0475
 title: GPCF-L4-GFIS-REPAIR-278
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -33,7 +33,7 @@ superseded_by: []
 GFIS 268 validator 输出：
 
 ```text
-gfis_customer_requirement_platform_order_owner_reminder_dispatch_authorization_negative_fixture_guard=pass source_receiving_scan_items=1 source_dispatch_authorization_files_found=0 source_valid_dispatch_authorizations=0 source_missing_dispatch_authorizations=1 negative_fixture_count=6 rejected_fixture_count=6 accepted_fixture_count=0 dispatch_authorization_files_found=0 valid_dispatch_authorizations=0 recipient_confirmations_found=0 channel_confirmations_found=0 kds_backlinks_found=0 demo_authorizations_accepted=0 loop_document_authorizations_accepted=0 dispatch_allowed=0 owner_reminders_dispatched=0 external_notifications_sent=0 valid_source_records=0 runtime_primary_key_recheck_allowed=0 runtime_primary_key_ready=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0 blocked=1 state=customer_requirement_platform_order_owner_reminder_dispatch_authorization_negative_fixtures_rejected runtime_sop_e2e=repair_required
+gfis_customer_requirement_platform_order_owner_reminder_dispatch_authorization_negative_fixture_guard=pass source_receiving_scan_items=1 source_dispatch_authorization_files_found=0 source_valid_dispatch_authorizations=0 source_missing_dispatch_authorizations=1 negative_fixture_count=6 rejected_fixture_count=6 accepted_fixture_count=0 dispatch_authorization_files_found=0 valid_dispatch_authorizations=0 recipient_confirmations_found=0 channel_confirmations_found=0 kds_backlinks_found=0 demo_authorizations_accepted=0 loop_document_authorizations_accepted=0 dispatch_allowed=0 owner_reminders_dispatched=0 external_notifications_sent=0 valid_source_records=0 runtime_primary_key_recheck_allowed=0 runtime_primary_key_ready=0 review_queue=0 runtime_intake=0 wame_review=0 verified=0 blocked=1 state=customer_requirement_platform_order_owner_reminder_dispatch_authorization_negative_fixtures_rejected runtime_sop_e2e=repair_required
 ```
 
 ## GPCF 回写
@@ -64,7 +64,7 @@ gfis_customer_requirement_platform_order_owner_reminder_dispatch_authorization_n
 - 未创建 runtime primary key。
 - 未进入 review queue。
 - 未进入 runtime intake。
-- 未进入 WAES review。
+- 未进入 WAME review。
 - 未形成 verified artifact。
 - 未执行生产写入、真实外部 API、数据库迁移、权限变更、部署、Git push 或 accepted/integrated 升级。
 

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-34D70D18D2
 title: GFIS Assistant DKS-200 Routing Queue Notification Acknowledgement Escalation Digest Delivery Acknowledgement Escalation SLA Breach Review Resolution Option Approval Packet Routing Queue Preview No-write 规则
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, Brain, PKC]
+related_projects: [GFIS, GPC, WAME, KDS, Brain, PKC]
 domain: docs
 status: controlled
 version: v1.0
@@ -27,7 +27,7 @@ superseded_by: []
 - DKS-199 approval packet preview fixture。
 - DKS-198 resolution option preview 引用。
 - DKS-197 SLA breach review preview 引用。
-- WAES/KWE/GFIS no-write 契约。
+- WAME/KWE/GFIS no-write 契约。
 
 ## 输出
 
@@ -41,7 +41,7 @@ superseded_by: []
 
 ## 硬边界
 
-DKS-200 不创建真实 routing queue、queue item、approval assignment、approval lock、approval packet、approval request、approval decision、committee decision、freeze action、Harness evidence、WAES result 或 KWE work item。
+DKS-200 不创建真实 routing queue、queue item、approval assignment、approval lock、approval packet、approval request、approval decision、committee decision、freeze action、Harness evidence、WAME result 或 KWE work item。
 
 DKS-200 不写入 GFIS/GPC/ERP/MES，不提升 KDS lifecycle，不生成 accepted fact，不调用外部 API。
 

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-0C519C97BD
 title: GlobalCloud 体系最小闭环与三阶段激活深度总表
 project: GPCF
-related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio]
 domain: architecture
 status: controlled
 version: v1.0

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-A7F413046C
 title: Loop Round GPCF-KDS-DKS-016
 project: GPCF
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -21,7 +21,7 @@ superseded_by: []
 日期：2026-06-17
 状态：v0.1 受控 Loop 记录
 主题：PKC-KDS 个人知识与贡献入口清单
-项目群范围：GFIS、GPC、PVAOS、WAES、KDS、Brain、PKC 个人知识、XiaoC / 小即、XGD、XiaoG、MMC、GPCF。
+项目群范围：GFIS、GPC、PVAOS、WAME、KDS、Brain、PKC 个人知识、XiaoC / 小即、XGD、XiaoG、MMC、GPCF。
 
 ## 1. 输入
 
@@ -73,7 +73,7 @@ python3 tools/kds-sync/loop_document_gate.py
 
 ## 5. 反馈
 
-本轮把 PKC 从“个人入口”收口为受 KDS、WAES、MMC、GPCF 和委员会机制约束的个人知识、个人贡献和个人 AI 服务入口。
+本轮把 PKC 从“个人入口”收口为受 KDS、WAME、MMC、GPCF 和委员会机制约束的个人知识、个人贡献和个人 AI 服务入口。
 
 本轮不创建真实账号、不写生产系统、不开放真实资料、不启动真实 AI 服务计费、不确认订单、质量、POD、到账、收益、积分或业务完成。
 

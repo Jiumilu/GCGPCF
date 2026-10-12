@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-0C4A339FD2
 title: GlobalCloud 绿色供应链体系首批统一组件清单
 project: GPC
-related_projects: [GFIS, GPC, PVAOS, WAES]
+related_projects: [GFIS, GPC, PVAOS, WAME]
 domain: ui-delivery
 status: controlled
 version: v1.0

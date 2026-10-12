@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-F5B3269058
 title: GlobalCloud 企业级知识系统总目标与执行分解表
 project: KDS
-related_projects: [GPC, PVAOS, WAES, KDS, Brain]
+related_projects: [GPC, PVAOS, WAME, KDS, Brain]
 domain: data-ai-knowledge
 status: controlled
 version: v1.0
@@ -19,7 +19,7 @@ superseded_by: []
 # GlobalCloud 企业级知识系统总目标与执行分解表
 
 日期：2026-06-08
-适用范围：GlobalCloud 绿色供应链体系中的知识主存层、LLM Wiki、Brain、WAES 以及与一期验收矩阵、对象目录、事件合同相关的知识域实施工作。
+适用范围：GlobalCloud 绿色供应链体系中的知识主存层、LLM Wiki、Brain、WAME 以及与一期验收矩阵、对象目录、事件合同相关的知识域实施工作。
 状态：执行控制文档。用于统一目标、阶段、交付物、完成标准与当前进度，不代表系统已运行完成。
 
 ## 1. 总目标
@@ -47,7 +47,7 @@ superseded_by: []
    - `LLM Wiki`
    - `Brain`
    - `Brain`
-   - `WAES`
+   - `WAME`
 2. 建立三条硬状态机：
    - 知识发布状态机
    - 知识 ingest 状态机
@@ -82,7 +82,7 @@ superseded_by: []
 2. `LLM Wiki` 是知识编制与组织视图。
 3. `Brain` 是主知识引擎。
 4. `Brain` 是知识服务层。
-5. `WAES` 是知识治理与审计层。
+5. `WAME` 是知识治理与审计层。
 
 ### 3.2 状态机完整
 
@@ -95,7 +95,7 @@ superseded_by: []
    - 进入条件
    - 退出条件
    - 证据要求
-   - WAES 审计点
+   - WAME 审计点
    - 禁止动作
 
 ### 3.3 评测结论落地

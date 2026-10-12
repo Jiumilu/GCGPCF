@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-8C7F2F6005
 title: Cognee 外部执行层接入验证清单 2026-06-26
 project: GPCF
-related_projects: [GPC, WAES, GPCF]
+related_projects: [GPC, WAME, GPCF]
 domain: docs
 status: controlled
 version: v1.0

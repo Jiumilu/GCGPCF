@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-AGENT-REACH-ISOLATED-INSTALL-20260622
 title: Agent-Reach 隔离安装审查
 project: GFIS
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: general
 status: controlled
 version: v1.0

@@ -1,12 +1,12 @@
 ---
 doc_id: GPCF-DOC-9B8C2D4F61
 title: LOOP 能力注册表
-project: WAES
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio, WAS]
+project: WAME
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio, WAS]
 domain: governance
 status: controlled
 version: v1.0
-owner: WAES
+owner: WAME
 kds_space: 开发
 kds_path: 开发/91-治理与验收/02-governance/loop/LOOP_CAPABILITY_REGISTRY.md
 source_path: 02-governance/loop/LOOP_CAPABILITY_REGISTRY.md
@@ -62,7 +62,7 @@ superseded_by: []
 
 ## 核心方法
 
-六段式、任务包、evidence、no-write、test_data_lane、candidate_lane、real_business_lane、owner、WAES、Harness、三层评分、分层裁决、受控工程修改、按任务授权、CodeGraph、外部搜索/检索、RAG/语义索引、多智能体并行开发、Codex 内置 sub-agent、gstack 专家审计、OMX 候选 worker runtime、Agents SDK + Codex MCP 候选编排平台、Agent-Reach、Ontology、Headroom、WAS / Ontology-WAS、OKF/ODF、LCX、WAES-KDS RAG writeback、只读索引、依赖分析、调用图分析、公开资料核验、受控文档召回、分离文件分析、Superpowers LOOP execution discipline、method.superpowers.loop_execution_discipline。
+六段式、任务包、evidence、no-write、test_data_lane、candidate_lane、real_business_lane、owner、WAME、Harness、三层评分、分层裁决、受控工程修改、按任务授权、CodeGraph、外部搜索/检索、RAG/语义索引、多智能体并行开发、Codex 内置 sub-agent、gstack 专家审计、OMX 候选 worker runtime、Agents SDK + Codex MCP 候选编排平台、Agent-Reach、Ontology、Headroom、WAS / Ontology-WAS、OKF/ODF、LCX、WAME-KDS RAG writeback、只读索引、依赖分析、调用图分析、公开资料核验、受控文档召回、分离文件分析、Superpowers LOOP execution discipline、method.superpowers.loop_execution_discipline。
 
 ## 候选方法能力
 
@@ -81,7 +81,7 @@ superseded_by: []
 | `family.headroom` | cost/runtime measurement method | candidate/pilot | medium/high by sub-capability | `validate_headroom_*`; Headroom dry-run/proxy/runtime evidence |
 | `family.okf_odf` | governance method family | controlled with restrictions | medium/high by sub-capability | `validate_okf_*`; ODF gate evidence |
 | `family.lcx` | governance method family | candidate/pilot | medium/high by sub-capability | `validate_headroom_lcx_*`; LCX authorization evidence |
-| `family.waes_kds_rag_writeback` | gate/writeback method | candidate/pilot | medium/high by sub-capability | `validate_was_waes_kds_rag_writeback_gate_pack.py`; RAG index evidence; writeback evidence |
+| `family.wame_kds_rag_writeback` | gate/writeback method | candidate/pilot | medium/high by sub-capability | `validate_was_wame_kds_rag_writeback_gate_pack.py`; RAG index evidence; writeback evidence |
 | `family.multi_agent_execution` | execution method family | controlled/pilot/candidate by sub-capability | medium/high by sub-capability | `LOOP_MULTI_AGENT_EXECUTION_POLICY.md`; agent output evidence; LOOP gates |
 | `family.gke_knowledge_engineering` | first-level engineering domain | controlled governance / partial runtime | medium/high by operation | `GlobalCloud项目群知识工程规范.md`; F-013 evidence; KDS/Studio/Brain/MMC handoff; LOOP gates |
 
@@ -89,7 +89,7 @@ superseded_by: []
 
 只读分析、索引、评估、候选生成可以进入 `controlled`。写回、同步、外部 API、跨仓执行、成本测量、自动修复必须保持 `pilot` 或 `candidate`，且必须有显式任务授权。
 
-写入、自动化、跨仓和外部 API 子能力不得因能力登记获得生产权限。真实 KDS API 写入、WAES 写回、GFIS 运行层写入、生产 token、生产成本测量、外部 API 写入必须另行授权。
+写入、自动化、跨仓和外部 API 子能力不得因能力登记获得生产权限。真实 KDS API 写入、WAME 写回、GFIS 运行层写入、生产 token、生产成本测量、外部 API 写入必须另行授权。
 
 多智能体执行默认由 Codex 内置 `multi_agent_v1` 与 `globalcloud-collaborative-dev` 承担，状态为 `controlled`。`gstack` 仅作为专家审计组，状态为 `pilot`。OMX 与 OpenAI Agents SDK + Codex MCP 仅作为 `candidate`，未完成隔离 smoke、hook/adapter 审计、evidence adapter 和 validator 前，不得进入 L4/L5 或替代 LOOP 主控。
 

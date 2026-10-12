@@ -2,8 +2,8 @@
 doc_id: GPCF-DOC-C0E41F6177
 title: WAS 真实源记录候选预检执行 002 证据
 project: GPCF
-related_projects: [GPC, WAME, GPCF, Studio]
-domain: ontology-governance
+related_projects: [GPC, WAME, GPCF]
+domain: docs
 status: controlled
 version: v1.0
 owner: GPCF

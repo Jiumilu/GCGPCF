@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-ADB6828C57
 title: evidence
 project: XGD
-related_projects: [GPC, WAES, KDS, Brain, XGD, GPCF]
+related_projects: [GPC, WAME, KDS, Brain, XGD, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/09-XGD/docs/harness/XGD/evidence/README.md
 source_path: docs/harness/XGD/evidence/README.md
 sync_direction: bidirectional
-last_reviewed: 2026-10-11
+last_reviewed: 2026-10-12
 supersedes: []
 superseded_by: []
 ---

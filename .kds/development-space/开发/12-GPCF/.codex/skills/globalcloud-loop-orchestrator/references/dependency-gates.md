@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-7D1942C7DD
 title: GlobalCloud Loop Dependency Gates
 project: GPCF
-related_projects: [WAES, GPCF]
+related_projects: [WAME, GPCF]
 domain: operational-skill
 status: operational_controlled
 version: v1.0

@@ -1,12 +1,12 @@
 ---
 doc_id: GPCF-DOC-31D8E9632A
 title: GlobalCloud Studio LOOP Initialization
-project: WAES
-related_projects: [GFIS, GPC, WAES, KDS, PKC, XiaoG, MMC, GPCF, Studio]
+project: WAME
+related_projects: [GFIS, GPC, WAME, KDS, PKC, XiaoG, MMC, GPCF, Studio]
 domain: governance
 status: controlled
 version: v1.0
-owner: WAES
+owner: WAME
 kds_space: 开发
 kds_path: 开发/91-治理与验收/02-governance/loop/studio/LOOP-STUDIO-INITIALIZATION.md
 source_path: 02-governance/loop/studio/LOOP-STUDIO-INITIALIZATION.md

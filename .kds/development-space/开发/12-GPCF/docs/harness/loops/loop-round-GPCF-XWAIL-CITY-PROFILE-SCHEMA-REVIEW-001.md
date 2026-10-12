@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-AB4172336C
 title: Loop Round GPCF XWAIL City Profile Schema Review 001
 project: GPCF
-related_projects: [GPC, WAES, KDS, GPCF]
+related_projects: [GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0

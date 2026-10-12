@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-718A85136C
 title: Studio Channels Chat 入口补齐验证证据
 project: GPCF
-related_projects: [GPC, WAES, GPCF, Studio]
+related_projects: [GPC, WAME, GPCF, Studio]
 domain: docs
 status: controlled
 version: v1.0
@@ -85,7 +85,7 @@ Status ceiling: ui_evidence_candidate
 | G2 Design Tokens | partial | 本轮仅补入口，不涉及统一令牌 | 继续对齐项目群令牌规范 |
 | G3 Component Consistency | pass | `chat -> channels -> chat` 双向导航闭环已打通 | 后续转入更外围入口一致性或键盘路径 |
 | G4 Evidence And Governance | partial | 本轮补的是入口层，不覆盖业务 evidence / audit 全链 | 继续补业务证据链 |
-| G5 AI Fact Separation | partial | `chat` 与工作台入口边界继续改善，但双域治理规则仍未全量落地 | 继续按 WAES 母框架治理 |
+| G5 AI Fact Separation | partial | `chat` 与工作台入口边界继续改善，但双域治理规则仍未全量落地 | 继续按 WAME 母框架治理 |
 | G6 Accessibility | partial | 本轮未补完整键盘导航与焦点顺序验证 | 后续补键盘路径 |
 | G7 Responsive And Text Robustness | pass | 新入口在真实聊天页已可见且未破坏既有布局 | 后续补移动端细节复验 |
 | G8 Runtime Verification | pass | 定向单测和真实 Safari 双向点击都通过 | 运行态证据成立 |

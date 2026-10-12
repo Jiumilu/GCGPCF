@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-GCKFP0REPAIROWNERRESPONSENEGFIXD18420260626
 title: GCKF P0 修复负责人响应负例门禁当前态 D184
 project: GPCF
-related_projects: [GPCF, WAES, KDS]
+related_projects: [GPCF, WAME, KDS]
 domain: docs
 status: controlled
 version: v1.0
@@ -41,14 +41,14 @@ D184 接续 D183 的修复负责人响应收集清单，新增 response intake �
 
 - 把 D183 collection checklist 当作真实 response。
 - 未签署 response package。
-- 缺少 WAES review note 的 response。
+- 缺少 WAME review note 的 response。
 - 缺少人工确认的 lifecycle promotion request。
 
 ## 当前阻塞
 
 - 尚未收到真实 repair owner response。
 - 尚未收到签署响应包。
-- 尚未形成 WAES review note。
+- 尚未形成 WAME review note。
 - 尚未形成人工确认。
 
 ## 禁止动作
@@ -61,4 +61,4 @@ D184 接续 D183 的修复负责人响应收集清单，新增 response intake �
 
 ## 下一轮
 
-收到真实 repair owner response、签署响应包、WAES review note 与人工确认后，进入 response intake precheck；未收到前继续保持 hold。
+收到真实 repair owner response、签署响应包、WAME review note 与人工确认后，进入 response intake precheck；未收到前继续保持 hold。

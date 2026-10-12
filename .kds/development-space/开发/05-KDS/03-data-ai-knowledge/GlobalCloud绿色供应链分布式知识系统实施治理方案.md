@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-85BD23AD58
 title: GlobalCloud绿色供应链分布式知识系统实施治理方案
 project: KDS
-related_projects: [KDS, GPC, WAES]
+related_projects: [KDS, GPC, WAME]
 domain: data-ai-knowledge
 status: controlled
 version: v1.0

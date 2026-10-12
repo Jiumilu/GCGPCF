@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-74DFF5CB30
 title: Loop Round GPCF-HEADROOM-LCX-AUTHORIZED-MEASUREMENT-PRECHECK-001
 project: GPCF
-related_projects: [GPC, WAME, KDS, GPCF]
+related_projects: [GPC, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0

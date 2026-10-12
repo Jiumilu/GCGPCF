@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-766DBAA9E3
 title: GlobalCloud 绿色供应链分布式知识系统当前实施分析与下一阶段推进
 project: KDS
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, GPCF]
 domain: data-ai-knowledge
 status: controlled
 version: v1.0
@@ -39,7 +39,7 @@ superseded_by: []
 2. 14 条写回候选均为 `candidate_only`，没有关闭缺口，没有形成 RAG 准入、指挥舱强引用或业务主账写入。
 3. 委员会仅有模板和队列，没有成立记录、表决记录或 DecisionRecord。
 4. 积分、收益、AI 额度、悬赏、争议均为规则或候选状态，没有真实结算。
-5. GFIS 当前仍是 `synthetic_dev_lane=dev_closed`，但 `real_business_lane=repair_required`，真实 source-of-record、真实运行层主键、真实 review queue、真实 runtime intake、真实 WAES review 和真实 verified artifact 均未形成。
+5. GFIS 当前仍是 `synthetic_dev_lane=dev_closed`，但 `real_business_lane=repair_required`，真实 source-of-record、真实运行层主键、真实 review queue、真实 runtime intake、真实 WAME review 和真实 verified artifact 均未形成。
 
 ## 2. 多 agent 并行判断
 
@@ -82,7 +82,7 @@ superseded_by: []
 | GFIS 文档验收助手 | 有 8 类验收模板和缺口规则 | 未收到真实资料包，未执行验收 | 对葛化七类资料包建立资料接收和脱敏验收台账 |
 | AI 候选事实驱动 SOP | 有 `AIS-GH-SOP-*` 和评测集 | 仍为候选，不得发布正式 SOP | 建立候选 SOP 写回记录，进入人工确认队列 |
 | 葛化订单运行母版 | 有预运营期订单方向和字段/单据映射入口 | 关键母版文件当前仅有 frontmatter 或缺正文 | 下一轮补齐预运营期订单字段、单据和状态机正文 |
-| 辽宁远航链路 | 有 8 类证据缺口和悬赏草案 | 客户确认、样箱反馈、POD、质量、金融、KDS/WAES 回执均未取得 | 建立真实资料接收清单和优先补证顺序 |
+| 辽宁远航链路 | 有 8 类证据缺口和悬赏草案 | 客户确认、样箱反馈、POD、质量、金融、KDS/WAME 回执均未取得 | 建立真实资料接收清单和优先补证顺序 |
 | 现代精工 OEM 过渡 | 有责任区分规则和验收红线 | 缺 OEM 授权、生产/质量/发货原始证据 | 先做脱敏索引和可披露范围确认 |
 | 质量/发货/POD/金融门禁 | 有 DVA 验收规则和红线 | 无真实凭证、签收、到账证据 | 建立 DSR-L2 / DSR-L3 元数据模板和责任人 |
 | 湖北磷材拓厂项目知识库 | 有五类资料包和评估模型 | 未收到真实资料，未形成知识页 | 先运行资料目录预检和 FactoryExpansionAssessment 空白样表 |
@@ -128,7 +128,7 @@ superseded_by: []
 | P0 | 建立葛化七类资料包接收台账 | KPK-GH 七类资料包状态、密级、责任人、缺口 | DSR-L2 / DSR-L3 脱敏检查 | 不开放敏感原文 |
 | P0 | 将 DKS-047 空白模板转为填报前校验 | 字段级校验器和填报前置条件 | 校验器通过 | 不填报、不确认 |
 | P1 | 建立湖北磷材五类资料目录预检 | HBLC 资料包目录、来源、密级、缺口 | 资料目录预检表 | 不做 GFIS 深度 |
-| P1 | 建立权威政策/标准来源白名单 | T3 来源清单、检索日期、适用范围 | WAES 规则记录 | 不把网络搜索直接当权威 |
+| P1 | 建立权威政策/标准来源白名单 | T3 来源清单、检索日期、适用范围 | WAME 规则记录 | 不把网络搜索直接当权威 |
 | P1 | 建立候选积分和潜在产值参数基线 | MMC 参数草案、兑换系数版本 | 人工或委员会备案 | 不确认积分和收益 |
 | P1 | 建立悬赏发布前置门禁 | 冻结资源、验收标准、争议入口 | 委员会模板检查 | 不发布真实悬赏 |
 | P2 | 建立 RAG 准入分级 | safe / limited / repair / blocked 分级规则 | 底座闭环率 + hard-stop | repair 或 blocked 不准强引用 |
@@ -140,7 +140,7 @@ superseded_by: []
 1. 资料来源、字段完整性、密级、脱敏和可见范围。
 2. 葛化资料包是否进入内测评测。
 3. 湖北磷材资料目录是否进入候选知识库。
-4. 规则内事项的 WAES governance_recorded。
+4. 规则内事项的 WAME governance_recorded。
 
 委员会适用：
 
@@ -158,5 +158,5 @@ superseded_by: []
 1. 葛化 GFIS 已正式接入或 AI 助手已上线。
 2. 湖北磷材拓厂模板已验收或可商业复制。
 3. 任何真实订单、到账、质量、POD、金融凭证、收益、积分、悬赏或争议已经确认。
-4. 任何真实 KDS API、WAES、GFIS、GPC、PVAOS、Finance 或生产系统写入已经发生。
+4. 任何真实 KDS API、WAME、GFIS、GPC、PVAOS、Finance 或生产系统写入已经发生。
 5. 本专题已经进入 `accepted`、`complete` 或 `integrated`。

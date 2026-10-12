@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-8AD9ECEAB7
 title: GPCF-L4-GFIS-REPAIR-074 GFIS 辽宁远航业务事实 discovery intake
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -54,7 +54,7 @@ git diff --check -- . => pass
 ## 真实性边界
 
 - 本轮证明 GFIS 已能用用户业务线索和 KDS discovery 缩小报价客户确认采集范围。
-- 本轮不证明辽宁远航客户确认函、样箱测试签收/反馈、江西委托生产单、现代精工转量产批准或 WAES evidence ref 已取得。
+- 本轮不证明辽宁远航客户确认函、样箱测试签收/反馈、江西委托生产单、现代精工转量产批准或 WAME evidence ref 已取得。
 - `formal_confirmation_candidate_count=0`、`real_submissions=0`、`verified_artifacts=0`、`runtime_sop_e2e=repair_required` 均保持不变。
 - Demo E2E 26 passed 只登记为展示层回归，不作为 GFIS 运行层 SOP E2E 验收。
 

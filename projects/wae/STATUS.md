@@ -1,12 +1,12 @@
 ---
 doc_id: GPCF-DOC-420E49DB6F
 title: WAE 状态
-project: WAE
-related_projects: [WAE]
+project: GPCF
+related_projects: [GPCF]
 domain: governance
 status: controlled
 version: v1.0
-owner: WAE
+owner: GPCF
 kds_space: 开发
 kds_path: 开发/91-治理与验收/projects/wae/STATUS.md
 source_path: projects/wae/STATUS.md

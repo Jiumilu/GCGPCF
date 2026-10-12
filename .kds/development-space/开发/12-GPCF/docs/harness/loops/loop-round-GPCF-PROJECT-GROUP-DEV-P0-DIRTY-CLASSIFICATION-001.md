@@ -2,7 +2,7 @@
 doc_id: GPCF-LOOP-PROJECT-GROUP-DEV-P0-DIRTY-CLASSIFICATION-001
 title: Loop Round GPCF-PROJECT-GROUP-DEV-P0-DIRTY-CLASSIFICATION-001
 project: GPCF
-related_projects: [GPC, WAES, PKC, GPCF]
+related_projects: [GPC, WAME, PKC, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -61,7 +61,7 @@ cd "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCoud GPCF" && python3 to
 
 ## debug
 
-- WAES 授权仍是验收/发布/状态提升边界，但不再是本轮开发态唯一硬阻点。
+- WAME 授权仍是验收/发布/状态提升边界，但不再是本轮开发态唯一硬阻点。
 - GPC 触及测试文件，需要项目级测试闭环。
 - SOP/PKC 含 generated/output/dist 类路径，提交前必须隔离或 owner 明确确认。
 - GPCF 工作区规模大，必须按路径族拆分提交候选，禁止整包处理。

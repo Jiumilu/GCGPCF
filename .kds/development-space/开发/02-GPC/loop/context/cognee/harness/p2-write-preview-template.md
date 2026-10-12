@@ -20,7 +20,7 @@ superseded_by: []
 
 > 用于受控环境下对 `remember_preview / forget_preview / retrieve_preview` 的对照跑，记录授权边界与阻断结果。
 
-| task_id | round_id | project_id | scenario | operation | owner | payload_tier | waes_decision | write_requested | write_allowed | owner_authorization_present | unauthorized_write_blocked | token_before | token_after | latency_ms | marker_gate |
+| task_id | round_id | project_id | scenario | operation | owner | payload_tier | wame_decision | write_requested | write_allowed | owner_authorization_present | unauthorized_write_blocked | token_before | token_after | latency_ms | marker_gate |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | ---: | ---: | ---: | --- |
 | `cognee-p2-task-001` | `loop-round-xxx` | `GPCF` | `loop_gate` | `remember_preview` | `GPCF` | `preview` | `pass` | `true` | `false` | `false` | `true` | `1200` | `1100` | `90` | `pass` |
 

@@ -1,12 +1,12 @@
 ---
 doc_id: GPCF-DOC-LOOP-UI-PRODUCT-FIRST-CONTROL
 title: LOOP UI Product First Control
-project: WAES
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio, ICP]
+project: WAME
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio, ICP]
 domain: governance
 status: controlled
 version: v1.0
-owner: WAES
+owner: WAME
 kds_space: 开发
 kds_path: 开发/91-治理与验收/02-governance/loop/LOOP_UI_PRODUCT_FIRST_CONTROL.md
 source_path: 02-governance/loop/LOOP_UI_PRODUCT_FIRST_CONTROL.md
@@ -38,7 +38,7 @@ Functional completeness and quality are prerequisites, not substitutes for usabi
 
 ## 2. 控制范围
 
-本控制适用于项目登记表中的全部 18 个项目：`AAAS`、`Brain`、`WAS`、`XiaoC`、`WAES`、`GPC`、`Studio`、`GPCF`、`XWAIL`、`GFIS`、`MMC`、`KDS`、`XiaoG`、`PVAOS`、`SOP`、`PKC`、`XGD`、`ICP`，以及后续经项目群登记表纳管的新增项目。
+本控制适用于项目登记表中的全部 18 个项目：`AAAS`、`Brain`、`WAS`、`XiaoC`、`WAME`、`GPC`、`Studio`、`GPCF`、`XWAIL`、`GFIS`、`MMC`、`KDS`、`XiaoG`、`PVAOS`、`SOP`、`PKC`、`XGD`、`ICP`，以及后续经项目群登记表纳管的新增项目。
 
 覆盖对象包括：
 

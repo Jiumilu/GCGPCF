@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-62CFF582B3
 title: Loop Round — GPCF-L4-GFIS-REPAIR-171
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -85,7 +85,7 @@ git diff --check -- .
 - 未执行 Git push。
 - 未生产写入。
 - 未真实外部 API 写入。
-- 未真实 KDS/WAES 写入。
+- 未真实 KDS/WAME 写入。
 - 未数据库迁移。
 - 未 bench migrate。
 - 未 schema sync。

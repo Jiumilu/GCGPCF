@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-GCWORLD-027
 title: KDS全量组织资产普查与世界初始化规范
 project: KDS
-related_projects: [PVAOS, WAES, KDS, MMC]
+related_projects: [PVAOS, WAME, KDS, MMC]
 domain: openspec
 status: draft
 version: v1.0
@@ -81,7 +81,7 @@ superseded_by: []
 4. 对名称、别名、曾用名、简称和跨语言名称形成显式别名关系；
 5. 对冲突证据保留并标注，不得用后写记录覆盖历史事实；
 6. 由指定人工责任人确认合并、拆分、驳回或保持未决；
-7. 形成事实提升候选，交由WAES和独立写入授权处理。
+7. 形成事实提升候选，交由WAME和独立写入授权处理。
 
 任何缺少权威锚点的身份不得生成正式 `worldAssetId`。人工确认也不能替代后续写入授权和治理门禁。
 

@@ -2,7 +2,7 @@
 doc_id: GPCF-LOOP-PROJECT-GROUP-DEV-FIRST-KDS-BLOCKER-001
 title: "LOOP Round: Project Group Dev First KDS Blocker"
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, Brain, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, Brain, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -87,5 +87,5 @@ active_dirty_repos = GlobalCoud GPCF, GlobalCloud GFIS, GlobalCloud SOP
 
 - KDS 不再是项目群 active dirty/sensitive 阻塞源。
 - 项目群剩余 live dirty 边界为 `GlobalCoud GPCF`、`GlobalCloud GFIS`、`GlobalCloud SOP`。
-- GFIS 真实业务 lane 仍为 `repair_required`，真实 source-of-record、runtime intake、review queue、WAES review、verified artifact 均为 0。
+- GFIS 真实业务 lane 仍为 `repair_required`，真实 source-of-record、runtime intake、review queue、WAME review、verified artifact 均为 0。
 - 下一步应回到 LOOP v1.1 治理瘦身与交付恢复：优先推进 GFIS runtime SOP E2E 最小真实闭环输入请求。

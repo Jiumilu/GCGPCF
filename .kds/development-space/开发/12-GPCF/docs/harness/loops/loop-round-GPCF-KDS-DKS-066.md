@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-A04F9FEBDC
 title: LOOP Round GPCF-KDS-DKS-066 - GC-Knowledge Fabric GFIS Assistant No-write Smoke
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -22,7 +22,7 @@ superseded_by: []
 
 建立 GFIS 三类助手 no-write contract smoke，验证 GFIS Knowledge Assistant、GFIS Usage Assistant、GFIS Document Acceptance Assistant 只输出回答、引用、缺口、候选事实、门禁结果和写回候选，不直接写 GFIS/GPC/ERP/MES 或真实 KDS。
 
-本轮只运行本地 fixture 和 smoke validator，不触达真实 GFIS、KDS、WAES、GPC 或外部 API。
+本轮只运行本地 fixture 和 smoke validator，不触达真实 GFIS、KDS、WAME、GPC 或外部 API。
 
 ## 2. 本轮输入资料
 
@@ -30,7 +30,7 @@ superseded_by: []
 - `packages/api/src/kds/v2/contracts.ts`
 - `packages/shared/src/knowledge/fact-candidate.ts`
 - `packages/shared/src/knowledge/writeback-candidate.ts`
-- `scripts/waes/validate_waes_minimum_gates.py`
+- `scripts/wame/validate_wame_minimum_gates.py`
 - `scripts/kwe/validate_kwe_minimum_workflow.py`
 - `docs/harness/loops/loop-round-GPCF-KDS-DKS-065.md`
 
@@ -50,7 +50,7 @@ superseded_by: []
 ## 5. 本轮验证计划
 
 - `python3 scripts/gfis/validate_gfis_assistant_no_write_smoke.py`
-- `python3 scripts/waes/validate_waes_minimum_gates.py`
+- `python3 scripts/wame/validate_wame_minimum_gates.py`
 - `python3 scripts/kwe/validate_kwe_minimum_workflow.py`
 - `tsc -p packages/shared/tsconfig.json --noEmit`
 - `tsc -p packages/api/tsconfig.json --noEmit`
@@ -65,7 +65,7 @@ superseded_by: []
 |---|---|
 | GFIS Assistant no-write smoke | `gfis_assistant_no_write_smoke=pass runs=4 knowledge=covered usage=covered document_acceptance=covered writeback_candidate=covered business_writes=0 external_api_writes=0 kds_writes=0` |
 | Fixture JSON 解析 | `gfis_fixture_json=pass` |
-| WAES dry-run validator | `waes_minimum_gates=pass cases=6 passed_cases=6 evaluated_gates=16 source_gate=covered evidence_gate=covered rag_gate=covered writeback_gate=covered revenue_gate=covered contribution_gate=covered sensitive_data_gate=covered real_writes=0 external_api_writes=0` |
+| WAME dry-run validator | `wame_minimum_gates=pass cases=6 passed_cases=6 evaluated_gates=16 source_gate=covered evidence_gate=covered rag_gate=covered writeback_gate=covered revenue_gate=covered contribution_gate=covered sensitive_data_gate=covered real_writes=0 external_api_writes=0` |
 | KWE dry-run validator | `kwe_minimum_workflow=pass workflows=4 promotable_candidates=1 blocked_or_pending_candidates=3 ai_direct_fact_writes=0 kds_fact_writes=0 gfis_writes=0` |
 | Shared Types 编译检查 | `tsc -p packages/shared/tsconfig.json --noEmit` 通过 |
 | API Contract 编译检查 | `tsc -p packages/api/tsconfig.json --noEmit` 通过 |

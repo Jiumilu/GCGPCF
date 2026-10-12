@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-31C8301AA8
 title: GPCF-L4-GFIS-REPAIR-121
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -43,13 +43,13 @@ superseded_by: []
 ## Output
 
 ```text
-liaoning_yuanhang_authorization_envelope_complete_submission_post_scan_hold_gate=pass holds=4 open=4 complete_envelopes=0 release_allowed=0 collection_open=0 quarantine_allowed=0 review_queue_ready=0 review_queue=0 runtime_ready=0 waes_review=0 verified=0 state=complete_submission_post_scan_hold_open runtime_sop_e2e=repair_required
+liaoning_yuanhang_authorization_envelope_complete_submission_post_scan_hold_gate=pass holds=4 open=4 complete_envelopes=0 release_allowed=0 collection_open=0 quarantine_allowed=0 review_queue_ready=0 review_queue=0 runtime_ready=0 wame_review=0 verified=0 state=complete_submission_post_scan_hold_open runtime_sop_e2e=repair_required
 ```
 
 主 runtime SOP validator 新增：
 
 ```text
-runtime_liaoning_yuanhang_authorization_envelope_complete_submission_post_scan_hold_gate=pass:holds=4:open=4:complete_envelopes=0:release_allowed=0:collection_open=0:quarantine_allowed=0:review_queue_ready=0:review_queue=0:runtime_ready=0:waes_review=0:verified=0:state=complete_submission_post_scan_hold_open
+runtime_liaoning_yuanhang_authorization_envelope_complete_submission_post_scan_hold_gate=pass:holds=4:open=4:complete_envelopes=0:release_allowed=0:collection_open=0:quarantine_allowed=0:review_queue_ready=0:review_queue=0:runtime_ready=0:wame_review=0:verified=0:state=complete_submission_post_scan_hold_open
 ```
 
 ## Check
@@ -87,7 +87,7 @@ git diff --check -- .
 ## Feedback
 
 - GFIS 运行层仍是唯一 SOP 主体。
-- 本轮没有真实 KDS 写入、WAES 写入、生产写入、外部 API 写入、bench migrate、schema sync、权限变更、部署、Git push 或 accepted/integrated 升级。
+- 本轮没有真实 KDS 写入、WAME 写入、生产写入、外部 API 写入、bench migrate、schema sync、权限变更、部署、Git push 或 accepted/integrated 升级。
 - 用户补充的 2026-01 辽宁远航 23 个样箱测试、江西工厂委托生产、2026-05 辽宁远航采购计划/项目报价单和 2026-06 现代精工产线量产计划仍为 `unverified_trace_hint`。
 - complete-submission post-scan hold gate 只能证明 release hold 被机器维持，不能替代完整授权 envelope、接收人身份确认、dispatch sent、责任方回执、source anchors、review queue、runtime intake 或 verified artifact。
 
@@ -109,7 +109,7 @@ git diff --check -- .
 - bench_migrate=false
 - schema_sync=false
 - true_kds_write=false
-- true_waes_write=false
+- true_wame_write=false
 - permission_change=false
 - accepted_integrated_claim=false
 - demo_substitution=false

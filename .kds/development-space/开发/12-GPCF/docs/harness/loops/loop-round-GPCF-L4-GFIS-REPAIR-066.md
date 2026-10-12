@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-5A9E4BF63F
 title: GPCF-L4-GFIS-REPAIR-066 GFIS runtime validator submission integration
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -80,4 +80,4 @@ git diff --check -- .: pass
 
 ## 下一步
 
-接收首个脱敏原始凭证索引，或建立结构合格但未业务验真的 `pending_business_verification` submission 样例；继续保持 GFIS/GPCF `repair_required`，直到 5 类 live proof、WAES/KDS/GPC/POD 回执和运行层 SOP Master 均通过。
+接收首个脱敏原始凭证索引，或建立结构合格但未业务验真的 `pending_business_verification` submission 样例；继续保持 GFIS/GPCF `repair_required`，直到 5 类 live proof、WAME/KDS/GPC/POD 回执和运行层 SOP Master 均通过。

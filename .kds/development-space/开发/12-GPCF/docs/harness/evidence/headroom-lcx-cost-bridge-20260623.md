@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-HEADROOM-LCX-COST-BRIDGE-20260623
 title: Headroom LCX Cost Bridge Evidence
 project: GPCF
-related_projects: [GPCF, WAES]
+related_projects: [GPCF, WAME]
 domain: docs
 status: controlled
 version: v1.0

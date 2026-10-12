@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-65F6280578
 title: LOOP Round GPCF-KDS-DKS-115 - GFIS Assistant 修复准入读模型无写入
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, Brain, PKC, MMC, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, Brain, PKC, MMC, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -22,7 +22,7 @@ superseded_by: []
 
 把 DKS-114 的 GFIS Assistant Repair Handoff Review Admission 推进为 Brain / PKC / GFIS Assistant 可读取的 admission read model，只展示审阅候选方向、metadata-only 边界、阻断原因、缺口提示和 no-write notice。
 
-本轮不创建真实 ReadReceipt、AdmissionRecord、Review Queue Item、KWE WorkItem、ConfirmationRecord、DecisionRecord、WAES Gate Result，不持久化 evidence，不提升 KDS lifecycle，不写 GFIS / GPC / ERP / MES。
+本轮不创建真实 ReadReceipt、AdmissionRecord、Review Queue Item、KWE WorkItem、ConfirmationRecord、DecisionRecord、WAME Gate Result，不持久化 evidence，不提升 KDS lifecycle，不写 GFIS / GPC / ERP / MES。
 
 ## 输入
 
@@ -63,7 +63,7 @@ superseded_by: []
 ### DKS-115 专用校验
 
 ```text
-gfis_assistant_repair_admission_read_model=pass models=5 brain=2 pkc=1 gfis_assistant=2 repair_required=2 metadata_only_admitted=1 committee_agenda_blocked=1 freeze_review_blocked=1 metadata_only_bundles=4 controlled_original_bundles=2 models_with_masked_fields=5 models_with_missing_requirements=4 models_with_blocked_reasons=4 creates_read_receipts=0 creates_admission_records=0 creates_review_queue_items=0 creates_kwe_work_items=0 creates_confirmation_records=0 creates_decision_records=0 creates_waes_gate_results=0 persists_evidence=0 approves_business_write=0 promotes_lifecycle=0 completes_committee_decision=0 writes_gfis=0 writes_gpc=0 writes_erp=0 writes_mes=0 writes_waes_gate_result=0 writes_kwe_work_item=0 writes_read_receipt=0 writes_admission_record=0 writes_review_queue_item=0 writes_confirmation_record=0 writes_decision_record=0 writes_gap_record=0 writes_bounty_record=0 writes_kds_lifecycle=0 writes_kds_fact=0 writes_kds_accepted_fact=0 writes_evidence_record=0 writes_target_receipt=0 writes_committee_decision_completion=0 writes_revenue_or_score_confirmation=0 writes_quota_transfer=0 writes_bounty_settlement=0 writes_external_api=0
+gfis_assistant_repair_admission_read_model=pass models=5 brain=2 pkc=1 gfis_assistant=2 repair_required=2 metadata_only_admitted=1 committee_agenda_blocked=1 freeze_review_blocked=1 metadata_only_bundles=4 controlled_original_bundles=2 models_with_masked_fields=5 models_with_missing_requirements=4 models_with_blocked_reasons=4 creates_read_receipts=0 creates_admission_records=0 creates_review_queue_items=0 creates_kwe_work_items=0 creates_confirmation_records=0 creates_decision_records=0 creates_wame_gate_results=0 persists_evidence=0 approves_business_write=0 promotes_lifecycle=0 completes_committee_decision=0 writes_gfis=0 writes_gpc=0 writes_erp=0 writes_mes=0 writes_wame_gate_result=0 writes_kwe_work_item=0 writes_read_receipt=0 writes_admission_record=0 writes_review_queue_item=0 writes_confirmation_record=0 writes_decision_record=0 writes_gap_record=0 writes_bounty_record=0 writes_kds_lifecycle=0 writes_kds_fact=0 writes_kds_accepted_fact=0 writes_evidence_record=0 writes_target_receipt=0 writes_committee_decision_completion=0 writes_revenue_or_score_confirmation=0 writes_quota_transfer=0 writes_bounty_settlement=0 writes_external_api=0
 ```
 
 ### 覆盖率校验
@@ -87,7 +87,7 @@ tsc -p packages/api/tsconfig.json --noEmit = pass
 
 ### 全量 no-write 回归
 
-完整回归链覆盖 GFIS Assistant、WAES、KWE、KDS、RAG、Brain/PKC、MMC、Governance、LOOP Dashboard、覆盖率、OKF 解析和 TypeScript 编译，结果为 pass。
+完整回归链覆盖 GFIS Assistant、WAME、KWE、KDS、RAG、Brain/PKC、MMC、Governance、LOOP Dashboard、覆盖率、OKF 解析和 TypeScript 编译，结果为 pass。
 
 关键边界均为 0：
 
@@ -95,7 +95,7 @@ tsc -p packages/api/tsconfig.json --noEmit = pass
 - `writes_gpc=0`
 - `writes_erp=0`
 - `writes_mes=0`
-- `writes_waes_gate_result=0`
+- `writes_wame_gate_result=0`
 - `writes_kwe_work_item=0`
 - `writes_read_receipt=0`
 - `writes_admission_record=0`
@@ -138,7 +138,7 @@ tsc -p packages/api/tsconfig.json --noEmit
 
 客户满意度未在本轮收集；原因是本轮为受控 no-write 契约推进，不涉及真实用户界面交互。
 
-跨项目依赖无新增未登记阻塞；GFIS、WAES、KWE、KDS、Brain、PKC 均保持候选和只读边界。
+跨项目依赖无新增未登记阻塞；GFIS、WAME、KWE、KDS、Brain、PKC 均保持候选和只读边界。
 
 回滚方式：移除本轮新增 DKS-115 文件，并撤销 README、shared index、coverage fixture、coverage validator 中 DKS-115 条目。
 
@@ -148,4 +148,4 @@ DKS-116 建议进入 `GFIS Assistant Repair Read Model Action Guard No-write`：
 
 - 输入 DKS-115 read model。
 - 定义 Brain / PKC / GFIS Assistant 可展示动作与阻断动作的按钮级 action guard。
-- 仍不创建真实 ReadReceipt、AdmissionRecord、Review Queue Item、KWE WorkItem、ConfirmationRecord、DecisionRecord、WAES Gate Result 或业务写回。
+- 仍不创建真实 ReadReceipt、AdmissionRecord、Review Queue Item、KWE WorkItem、ConfirmationRecord、DecisionRecord、WAME Gate Result 或业务写回。

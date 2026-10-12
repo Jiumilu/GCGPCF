@@ -2,7 +2,7 @@
 doc_id: GPCF-LOOP-UI-TOOLCHAIN-PROMPT-GOVERNANCE-001
 title: Loop Round GPCF-UI-TOOLCHAIN-PROMPT-GOVERNANCE-001
 project: GPCF
-related_projects: [GPC, WAES, GPCF]
+related_projects: [GPC, WAME, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -30,11 +30,11 @@ superseded_by: []
 
 ## run
 
-1. 复核项目群现有 UI 总控方案、统一规范、UI Quality Gate 技能、Loop 模板和校验器，确认此前已落地 UI gate，但尚未把 `@product-design`、工具上下文包、提示词能力、三方案机制和 `WAES` 母框架复用写成强制字段。
+1. 复核项目群现有 UI 总控方案、统一规范、UI Quality Gate 技能、Loop 模板和校验器，确认此前已落地 UI gate，但尚未把 `@product-design`、工具上下文包、提示词能力、三方案机制和 `WAME` 母框架复用写成强制字段。
 2. 采用最小必要改动策略，不新建平行总控文件，直接增强现有总控文件与统一规范。
-3. 将项目群界面工程标准工具链固定为：`@product-design -> WAES -> ui-ux-pro-max -> Figma -> Storybook -> impeccable -> Playwright/browser -> axe-core/Lighthouse -> GPCF UI Gate`。
-4. 把 `工具上下文包`、`提示词能力`、`三方案机制`、`WAES baseline reuse` 写入总控方案、统一规范和 Loop 模板。
-5. 同步增强 `globalcloud-ui-quality-gate` 技能与 `tool-routing`，使其把 `@product-design` 和 `WAES` 复用路由写成未来 UI 轮次的真实前置。
+3. 将项目群界面工程标准工具链固定为：`@product-design -> WAME -> ui-ux-pro-max -> Figma -> Storybook -> impeccable -> Playwright/browser -> axe-core/Lighthouse -> GPCF UI Gate`。
+4. 把 `工具上下文包`、`提示词能力`、`三方案机制`、`WAME baseline reuse` 写入总控方案、统一规范和 Loop 模板。
+5. 同步增强 `globalcloud-ui-quality-gate` 技能与 `tool-routing`，使其把 `@product-design` 和 `WAME` 复用路由写成未来 UI 轮次的真实前置。
 6. 更新 `validate_loop_ui_quality_baseline.py`，把新增字段与路由纳入机检。
 
 ## stop
@@ -55,9 +55,9 @@ git diff --check -- 04-ui-delivery/GlobalCloud项目群界面工程整体实施�
 
 关键验证结论：
 
-1. `validate_loop_ui_quality_baseline.py` 现在同时检查 `@product-design`、工具上下文包、提示词能力、三方案机制和 `WAES` 复用字段。
-2. `LOOP_ROUND_TEMPLATE.md` 已新增 `Tool route`、`Context package`、`Prompt profile`、`Design options`、`Selected option`、`WAES baseline reuse`。
-3. `globalcloud-ui-quality-gate` 技能已把 `@product-design` 设为设计型 UI 工作的前置层，`tool-routing` 已定义其与 `WAES` 的强制路由。
+1. `validate_loop_ui_quality_baseline.py` 现在同时检查 `@product-design`、工具上下文包、提示词能力、三方案机制和 `WAME` 复用字段。
+2. `LOOP_ROUND_TEMPLATE.md` 已新增 `Tool route`、`Context package`、`Prompt profile`、`Design options`、`Selected option`、`WAME baseline reuse`。
+3. `globalcloud-ui-quality-gate` 技能已把 `@product-design` 设为设计型 UI 工作的前置层，`tool-routing` 已定义其与 `WAME` 的强制路由。
 
 ## recover
 

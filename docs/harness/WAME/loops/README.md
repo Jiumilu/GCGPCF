@@ -1,5 +1,5 @@
 ---
-doc_id: GPCF-DOC-4F7B5760F0
+doc_id: GPCF-DOC-A319C725B1
 title: loops
 project: WAME
 related_projects: [GPC, WAME, KDS, GPCF]
@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/04-WAME/docs/harness/WAME/loops/README.md
 source_path: docs/harness/WAME/loops/README.md
 sync_direction: bidirectional
-last_reviewed: 2026-10-11
+last_reviewed: 2026-10-12
 supersedes: []
 superseded_by: []
 ---
@@ -36,6 +36,6 @@ KDS 空间：`开发`
 
 | doc_id | title | source_path | project | status |
 | --- | --- | --- | --- | --- |
-| GPCF-DOC-4F7B5760F0 | loops | docs/harness/WAME/loops/README.md | WAME | controlled |
+| GPCF-DOC-A319C725B1 | loops | docs/harness/WAME/loops/README.md | WAME | controlled |
 | GPCF-DOC-5F557A77DA | Loop Round GPCF-WA-LR-001 | docs/harness/WAME/loops/loop-round-GPCF-WA-LR-001.md | WAME | controlled |
 | GPCF-DOC-C378E21CCF | Loop Round GPCF-WA-LR-002：WAME 门禁语义验证清单 | docs/harness/WAME/loops/loop-round-GPCF-WA-LR-002.md | WAME | controlled |

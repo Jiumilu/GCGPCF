@@ -7,7 +7,7 @@ tags: [controlled, governance, kds, kds-governance, okf-derived]
 timestamp: 2026-06-22T00:00:00Z
 kds_path: 开发/91-治理与验收/02-governance/GlobalCloud项目群KDS开发空间安全规范.md
 source_path: 02-governance/GlobalCloud项目群KDS开发空间安全规范.md
-source_hash: 949721f99f5c5685f09bd19b1fda656eaac4f03af369b3e786426401783477a9
+source_hash: 4fa0320a43793596823cb48be025f20e61d036148400aef11c668c9cbf08363b
 source_of_record: kds
 derivation_policy: metadata_only_no_body_copy
 ---

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-03FB1D644C
 title: Document Control Policy
 project: GPCF
-related_projects: [WAES, KDS, GPCF]
+related_projects: [WAME, KDS, GPCF]
 domain: operational-skill
 status: operational_controlled
 version: v1.0

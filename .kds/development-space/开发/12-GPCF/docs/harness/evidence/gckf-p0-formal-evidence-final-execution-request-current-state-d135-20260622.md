@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-GCKFP0FORMALEVIDENCEFINALEXECUTIONREQUESTCURRENTSTATED13520260622
 title: GCKF P0 正式 evidence 最终执行请求当前态证据 D135
 project: GPCF
-related_projects: [GPCF, WAES]
+related_projects: [GPCF, WAME]
 domain: docs
 status: controlled
 version: v1.0

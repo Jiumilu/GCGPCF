@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-0214F1962A
 title: GFIS Assistant Repair Submission Intake No-write 规则
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS]
+related_projects: [GFIS, GPC, WAME, KDS]
 domain: docs
 status: controlled
 version: v1.0
@@ -22,7 +22,7 @@ superseded_by: []
 
 GFIS Assistant Repair Submission Intake 是 DKS-109 `Repair Prompt Checklist` 之后的提交意向候选包。
 
-它把已处理或仍被阻断的 checklist 转成可审阅的 intake request，表达“用户准备提交什么、引用哪些 metadata/evidence hint、建议进入哪类人工路径”。它不是资料提交，不是 KWE 工单，不是 GapRecord，不是 BountyRecord，也不是 WAES Gate Result。
+它把已处理或仍被阻断的 checklist 转成可审阅的 intake request，表达“用户准备提交什么、引用哪些 metadata/evidence hint、建议进入哪类人工路径”。它不是资料提交，不是 KWE 工单，不是 GapRecord，不是 BountyRecord，也不是 WAME Gate Result。
 
 ## 2. No-write 边界
 
@@ -32,7 +32,7 @@ Intake 只能作为提交前候选，不得直接执行以下动作：
 - 持久化 evidence；
 - 创建 GapRecord 或 BountyRecord；
 - 创建 KWE WorkItem；
-- 写入 WAES Gate Result；
+- 写入 WAME Gate Result；
 - 推进 KDS lifecycle；
 - 写入 KDS fact 或 accepted fact；
 - 写入 GFIS / GPC / ERP / MES；
@@ -77,7 +77,7 @@ Intake 只能作为提交前候选，不得直接执行以下动作：
 - create_gap_record；
 - create_bounty_record；
 - create_kwe_work_item；
-- create_waes_gate_result；
+- create_wame_gate_result；
 - approve_business_write；
 - promote_lifecycle；
 - complete_committee_decision。
@@ -86,4 +86,4 @@ Intake 只能作为提交前候选，不得直接执行以下动作：
 
 Repair Submission Intake 只能作为人工审阅前的候选输入。
 
-后续如果确需提交资料，必须进入单独的受控提交流程；如果确需创建缺口、悬赏、KWE 工单、WAES Gate Result 或业务写回，必须分别通过 KWE、WAES、Harness evidence 和人工/委员会确认，不得由 GFIS Assistant 直接完成。
+后续如果确需提交资料，必须进入单独的受控提交流程；如果确需创建缺口、悬赏、KWE 工单、WAME Gate Result 或业务写回，必须分别通过 KWE、WAME、Harness evidence 和人工/委员会确认，不得由 GFIS Assistant 直接完成。

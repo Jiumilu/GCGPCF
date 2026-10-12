@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-LOOP-OPERATIONAL-GATE-TRIAGE-20260624
 title: Loop Operational Gate Triage 20260624
 project: GPCF
-related_projects: [GFIS, GPC, WAES, GPCF]
+related_projects: [GFIS, GPC, WAME, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -135,7 +135,7 @@ next=real-source-record-or-business-input-remediation
 ## 非声明事项
 
 - 本轮不创建真实客户订单、平台订单、采购订单、POD、售后记录、质量记录或满意度反馈。
-- 本轮不创建 valid source record、runtime primary key、review queue、runtime intake、WAES review 或 verified artifact。
+- 本轮不创建 valid source record、runtime primary key、review queue、runtime intake、WAME review 或 verified artifact。
 - 本轮不升级 `accepted`、`integrated` 或 `production_ready`。
 - 本轮不声明“所有阻塞已解除”。
 

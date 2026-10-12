@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-5649B07956
 title: GPCF CodeGraph Project Group Graphized Evidence
 project: KDS
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio]
 domain: docs
 status: controlled
 version: v1.0
@@ -22,7 +22,7 @@ superseded_by: []
 
 本轮状态为 `project_group_codegraph_graphized_with_studio_watch_and_no_controlled_residual`。
 
-项目群当前 14 个本机 Git 仓均已纳入 CodeGraph 本地图谱，且 `.codegraph/` 均保持 Git 保护。GlobalCloud Studio 与 WAS世界资产体系均已纳入项目群图谱范围。
+项目群当前 15 个本机 Git 仓均已纳入 CodeGraph 本地图谱，且 `.codegraph/` 均保持 Git 保护。GlobalCloud Studio 与 WAS世界资产体系均已纳入项目群图谱范围。
 
 当前 14 个项目中，13 仓 `codegraph status` 为 up-to-date，Brain 已回到 green，Studio 为 watch，GFIS residual 已清零。
 
@@ -48,7 +48,7 @@ superseded_by: []
 | GlobalCloud PKC | 110 | 1034 | 2685 | up_to_date |
 | GlobalCloud PVAOS | 604 | 8899 | 28838 | up_to_date |
 | GlobalCloud Studio | 797 | 14457 | 46854 | pending_sync_watchlist |
-| GlobalCloud WAES | 281 | 3511 | 11298 | up_to_date |
+| GlobalCloud WAME | 281 | 3511 | 11298 | up_to_date |
 | GlobalCloud XGD | 181 | 3645 | 9914 | up_to_date |
 | GlobalCloud XiaoC | 1176 | 15520 | 64515 | up_to_date |
 | GlobalCloud XiaoG | 752 | 13943 | 45987 | up_to_date |
@@ -105,3 +105,5 @@ GFIS 已执行 `codegraph sync`，同步结果为 `Added: 1 - 0 nodes`。同步�
 `GPCF-CODEGRAPH-ACTIVE-DRIFT-MONITOR-001`
 
 目标：持续监控 Brain 与 Studio 活动 CodeGraph drift，保持 14 仓覆盖与 GFIS 受控 residual 策略，不进入项目业务开发。
+Studio 活动漂移
+Added: 0 files

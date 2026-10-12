@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-B899E9688A
 title: GPCF-L4-GFIS-REPAIR-115
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -65,7 +65,7 @@ git diff --check -- .
 
 - GFIS 运行层仍是唯一 SOP 主体。
 - GFIS Demo E2E 26 passed 仅为 `pass_demo_only`。
-- 本轮没有真实 KDS 写入、WAES 写入、生产写入、外部 API 写入、bench migrate、schema sync、权限变更、部署、Git push 或 accepted/integrated 升级。
+- 本轮没有真实 KDS 写入、WAME 写入、生产写入、外部 API 写入、bench migrate、schema sync、权限变更、部署、Git push 或 accepted/integrated 升级。
 - 用户补充的 2026-01 辽宁远航 23 个样箱测试、江西工厂委托生产、2026-05 辽宁远航采购计划/项目报价单和 2026-06 现代精工产线量产计划仍为 `unverified_trace_hint`。
 - KDS 命中和用户事实不能替代真实 authorization envelope、人工分发授权、接收人身份确认、dispatch sent、责任方回执、source anchors、review queue、runtime intake 或 verified artifact。
 
@@ -87,7 +87,7 @@ git diff --check -- .
 - bench_migrate=false
 - schema_sync=false
 - true_kds_write=false
-- true_waes_write=false
+- true_wame_write=false
 - permission_change=false
 - accepted_integrated_claim=false
 - demo_substitution=false

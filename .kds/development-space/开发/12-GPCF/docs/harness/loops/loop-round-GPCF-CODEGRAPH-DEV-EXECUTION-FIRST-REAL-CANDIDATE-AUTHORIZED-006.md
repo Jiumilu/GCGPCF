@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-5A4D73BB84
 title: Loop Round - CodeGraph 首个真实业务候选授权执行
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -22,7 +22,7 @@ superseded_by: []
 
 - 用户授权：`全部授权`
 - 解释边界：GFIS 首个真实候选最小实现包 + 候选范围 GFIS CodeGraph sync。
-- 禁止边界：不 commit、不 push、不 deploy、不生产写入、不外部 API 写入、不真实 KDS/WAES 写入。
+- 禁止边界：不 commit、不 push、不 deploy、不生产写入、不外部 API 写入、不真实 KDS/WAME 写入。
 
 ## 动作
 

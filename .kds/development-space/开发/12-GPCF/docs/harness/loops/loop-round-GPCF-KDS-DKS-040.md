@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-C0F0BD428C
 title: LOOP Round GPCF-KDS-DKS-040 - 湖北磷材缺口悬赏与人工确认任务包首批虚拟填报演练
 project: GPCF
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, GPCF]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -70,7 +70,7 @@ superseded_by: []
 - AI 额度发放；
 - 委员会真实备案或裁决；
 - Brain 页面正式发布；
-- WAES 放行；
+- WAME 放行；
 - 真实 KDS API 写入；
 - GFIS、GPC、PVAOS 或其他业务系统主账写入；
 - 生产配置、权限、部署、数据库迁移或外部系统写入；

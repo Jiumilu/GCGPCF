@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-8B82DFE880
 title: GPCF CodeGraph GFIS Residual Notice Investigation
 project: GPCF
-related_projects: [GFIS, GPC, WAES, GPCF]
+related_projects: [GFIS, GPC, WAME, GPCF]
 domain: docs
 status: controlled
 version: v1.0

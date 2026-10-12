@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-CADCE617E6
 title: Agent-Reach Exa local pilot evidence
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, Brain, PKC, XiaoC, XGD, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, Brain, PKC, XiaoC, XGD, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -78,7 +78,7 @@ docs/harness/evidence/agent-reach-exa-local-pilot-authorization.json
 - 本 evidence 不写 KDS canonical Markdown。
 - 本 evidence 不创建 GFIS source-of-record。
 - 本 evidence 不授权生产写入。
-- 本 evidence 不升级 GPCF、GFIS、KDS、Brain、WAES、GPC、PKC、XiaoC 或 XGD 状态。
+- 本 evidence 不升级 GPCF、GFIS、KDS、Brain、WAME、GPC、PKC、XiaoC 或 XGD 状态。
 
 ## 下一步
 

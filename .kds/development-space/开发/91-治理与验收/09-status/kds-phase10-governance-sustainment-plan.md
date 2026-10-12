@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-2FC4D9D04B
 title: KDS Phase 10 Governance Sustainment Plan
 project: GPCF
-related_projects: [GPCF, WAES, KDS]
+related_projects: [GPCF, WAME, KDS]
 domain: status
 status: controlled
 version: v1.0

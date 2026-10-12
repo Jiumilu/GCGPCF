@@ -1,12 +1,12 @@
 ---
 doc_id: GPCF-DOC-95CB463CBF
 title: Loop Agent-Reach L3候选搜索流水线目标
-project: WAES
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+project: WAME
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: governance
 status: controlled
 version: v1.0
-owner: WAES
+owner: WAME
 kds_space: 开发
 kds_path: 开发/91-治理与验收/02-governance/loop/LOOP_AGENT_REACH_L3_CANDIDATE_PIPELINE.md
 source_path: 02-governance/loop/LOOP_AGENT_REACH_L3_CANDIDATE_PIPELINE.md
@@ -20,7 +20,7 @@ superseded_by: []
 
 ## 目标
 
-建立 `GPCF-AGENT-REACH-L3-CANDIDATE-PIPELINE-001`，把 Agent-Reach 从一次性 PoC/benchmark 推进为可回放、可评分、可进入 WAES/KDS 人工评审的只读候选搜索流水线。
+建立 `GPCF-AGENT-REACH-L3-CANDIDATE-PIPELINE-001`，把 Agent-Reach 从一次性 PoC/benchmark 推进为可回放、可评分、可进入 WAME/KDS 人工评审的只读候选搜索流水线。
 
 本目标不代表生产集成，不写 KDS canonical Markdown，不创建 GFIS source-of-record，不升级 GPCF accepted/integrated/production_ready 状态。
 
@@ -34,7 +34,7 @@ superseded_by: []
 | 输出强度 | `kds_admission=limited_candidate_only`，`rag_admission=limited` |
 | 安全 | `credential_leakage_count=0`，`production_write_count=0`，`kds_canonical_write_count=0` |
 | 回滚 | 继续要求 `rollback_verified=true` |
-| 评审 | 输出进入 WAES/KDS review queue，不自动 accepted 或 integrated |
+| 评审 | 输出进入 WAME/KDS review queue，不自动 accepted 或 integrated |
 
 ## 流水线阶段
 
@@ -44,13 +44,13 @@ superseded_by: []
 | P1 Normalize | URL、query、channel | 去重、补齐来源字段 | normalized_candidate_set | duplicate_rate <= 20% |
 | P2 Score | latency、provenance、trust hint | 计算候选评分 | scored_candidate_set | source_provenance_rate = 1.0 |
 | P3 Admit | scored candidates | 标记 RAG admission | limited_admission_ledger | no strong citation |
-| P4 Review | limited ledger | 交给 WAES/KDS 人工评审 | review_queue_item | no auto accept |
+| P4 Review | limited ledger | 交给 WAME/KDS 人工评审 | review_queue_item | no auto accept |
 
 ## 下一阶段约束
 
 - 只允许只读 replay 和离线评分。
 - 不允许配置 Cookie 或主账号登录态。
-- 不允许写生产、KDS canonical、GFIS、GPC、WAES 状态。
+- 不允许写生产、KDS canonical、GFIS、GPC、WAME 状态。
 - 不允许把搜索结果直接转为强引用。
 - 不允许把本流水线作为 Agent-Reach 已生产集成证据。
 

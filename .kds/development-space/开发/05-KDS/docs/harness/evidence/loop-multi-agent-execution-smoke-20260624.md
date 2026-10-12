@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-LOOP-MULTI-AGENT-EXECUTION-SMOKE-20260624
 title: LOOP Multi-Agent Execution Smoke Evidence 2026-06-24
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -18,7 +18,7 @@ superseded_by: []
 
 # LOOP Multi-Agent Execution Smoke Evidence 2026-06-24
 
-本证据记录 `GPCF-LOOP-MULTI-AGENT-EXECUTION-SMOKE-001` 的受控多智能体试运行。目标是验证当前 Codex 内置 `multi_agent_v1` 能否作为 LOOP 多智能体执行面的默认受控试运行入口；本轮不做业务代码修改、不执行生产写入、不调用真实外部 API、不写入真实 KDS/WAES/GFIS 运行层、不升级 `accepted`、`integrated` 或 `production_ready`。
+本证据记录 `GPCF-LOOP-MULTI-AGENT-EXECUTION-SMOKE-001` 的受控多智能体试运行。目标是验证当前 Codex 内置 `multi_agent_v1` 能否作为 LOOP 多智能体执行面的默认受控试运行入口；本轮不做业务代码修改、不执行生产写入、不调用真实外部 API、不写入真实 KDS/WAME/GFIS 运行层、不升级 `accepted`、`integrated` 或 `production_ready`。
 
 ## 输入
 
@@ -65,7 +65,7 @@ superseded_by: []
 | production_write | `false` |
 | real_external_api_write | `false` |
 | kds_fact_write | `false` |
-| waes_gate_result_write | `false` |
+| wame_gate_result_write | `false` |
 | gfis_runtime_write | `false` |
 | accepted_allowed | `false` |
 | integrated_allowed | `false` |
@@ -89,7 +89,7 @@ superseded_by: []
 - 不声明完整运行态已达成。
 - 不声明质量、可用性、客户满意门禁已解除。
 - 不声明 KDS API 已同步。
-- 不声明 WAES/Harness 已验收。
+- 不声明 WAME/Harness 已验收。
 - 不声明 `accepted`、`integrated` 或 `production_ready`。
 
 ## Next

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-FB59ECF423
 title: OKF v0.1 集合门禁证据
 project: KDS
-related_projects: [WAES, KDS]
+related_projects: [WAME, KDS]
 domain: docs
 status: controlled
 version: v1.0

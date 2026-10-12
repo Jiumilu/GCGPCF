@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-D36642BBEA
 title: LOOP Round GPCF-KDS-DKS-210
 project: GPCF
-related_projects: [GPC, WAES, KDS, GPCF]
+related_projects: [GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0

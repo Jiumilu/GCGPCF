@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-1DCB795545
 title: GlobalCloud 绿色供应链体系进一步梳理与提示词库
 project: GPCF
-related_projects: [GFIS, GPC, PVAOS, WAME, Brain, XiaoC, XGD, XiaoG, GPCF]
+related_projects: [GFIS, GPC, PVAOS, WAME, Brain, XiaoC, XGD, XiaoG, GPCF, Studio]
 domain: architecture
 status: controlled
 version: v1.0

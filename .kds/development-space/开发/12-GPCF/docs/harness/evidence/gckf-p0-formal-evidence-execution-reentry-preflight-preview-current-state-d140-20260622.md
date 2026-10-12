@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-GCKFP0FORMALEVIDENCEEXECUTIONREENTRYPREFLIGHTPREVIEWCURRENTSTATED14020260622
 title: GCKF P0 正式 evidence 执行重入预检预览当前态证据 D140
 project: GPCF
-related_projects: [GPCF, WAES]
+related_projects: [GPCF, WAME]
 domain: docs
 status: controlled
 version: v1.0

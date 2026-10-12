@@ -1,12 +1,12 @@
 ---
 doc_id: GPCF-DOC-1B5550FF05
 title: Loop L3.5 Real API Verification Policy
-project: WAES
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+project: WAME
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: governance
 status: controlled
 version: v1.0
-owner: WAES
+owner: WAME
 kds_space: 开发
 kds_path: 开发/91-治理与验收/02-governance/loop/LOOP_L3_5_REAL_API_VERIFICATION.md
 source_path: 02-governance/loop/LOOP_L3_5_REAL_API_VERIFICATION.md

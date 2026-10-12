@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-AC4F4B6A2E
 title: Loop Round GPCF-OKF-SUMMARY-ADMISSION-PRECHECK-002
 project: GPCF
-related_projects: [GPC, WAES, KDS, GPCF]
+related_projects: [GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0

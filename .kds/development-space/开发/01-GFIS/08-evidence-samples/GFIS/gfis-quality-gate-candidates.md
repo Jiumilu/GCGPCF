@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-6B5483766B
 title: GFIS 质量与安全门禁候选
 project: GFIS
-related_projects: [GFIS, GPC, WAES, GPCF]
+related_projects: [GFIS, GPC, WAME, GPCF]
 domain: evidence
 status: controlled
 version: v1.0
@@ -22,7 +22,7 @@ Round ID：`GPCF-GF-LR-001`
 
 ## 门禁清单
 
-| 门禁 | 触发点 | GFIS 事实 | WAES 判定 | 默认动作 |
+| 门禁 | 触发点 | GFIS 事实 | WAME 判定 | 默认动作 |
 |---|---|---|---|---|
 | 未检验不得入库 | 原料到厂、成品完工 | 检验记录、结果、检验人 | 是否允许入库 | 阻断入库 |
 | 未确认不得量产 | 首件完成 | 首件确认数据 | 是否允许批量生产 | 阻断工单放量 |
@@ -38,8 +38,8 @@ Round ID：`GPCF-GF-LR-001`
 |---|---|---|
 | draft | 候选门禁，未现场确认 | 仅用于设计 |
 | active | 已确认可执行 | 可进入 GFIS 开发任务 |
-| waes_required | 需要 WAES 审批或放行规则 | 不得由 GFIS 单独判定 |
+| wame_required | 需要 WAME 审批或放行规则 | 不得由 GFIS 单独判定 |
 
 ## 首轮结论
 
-GFIS 只负责记录事实、发起阻断和提供证据；最终放行、豁免、越权控制应由 WAES 形成治理判定。
+GFIS 只负责记录事实、发起阻断和提供证据；最终放行、豁免、越权控制应由 WAME 形成治理判定。

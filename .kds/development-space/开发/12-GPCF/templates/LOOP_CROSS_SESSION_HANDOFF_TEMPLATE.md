@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-0F4B8E6C2A
 title: LOOP 跨会话交接模板
 project: GPCF
-related_projects: [GPCF, WAES, KDS]
+related_projects: [GPCF, WAME, KDS]
 domain: templates
 status: controlled
 version: v1.0

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-D72226E1D3
 title: Loop Handoff Template
 project: GPCF
-related_projects: [GPCF, WAES]
+related_projects: [GPCF, WAME]
 domain: templates
 status: controlled
 version: v1.0

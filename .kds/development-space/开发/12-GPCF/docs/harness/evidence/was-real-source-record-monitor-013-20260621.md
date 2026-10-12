@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-102515B96D
 title: WAS Real Source Record Monitor 013 Evidence
 project: GPCF
-related_projects: [GFIS, GPC, WAES, GPCF]
+related_projects: [GFIS, GPC, WAME, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -22,7 +22,7 @@ superseded_by: []
 
 `GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-013` 已建立绿色供应链全链路证据门禁。
 
-当前仍没有真实 P4 candidate 文件。碳足迹、材料来源、合规证书、绿色金融、供应商-运输-交付追踪和跨链一致性证据均不得由 Ontology、LLM 或 RAG 推断生成，也不得在缺真实 source record 时推进 WAES/GFIS/KWE。
+当前仍没有真实 P4 candidate 文件。碳足迹、材料来源、合规证书、绿色金融、供应商-运输-交付追踪和跨链一致性证据均不得由 Ontology、LLM 或 RAG 推断生成，也不得在缺真实 source record 时推进 WAME/GFIS/KWE。
 
 ## 监控指标
 
@@ -43,7 +43,7 @@ superseded_by: []
 | runtime_primary_key_ready | `0` |
 | review_queue | `0` |
 | runtime_intake | `0` |
-| waes_review | `0` |
+| wame_review | `0` |
 | verified | `0` |
 | accepted | `false` |
 | integrated | `false` |
@@ -71,4 +71,4 @@ python3 tools/kds-sync/validate_was_real_source_record_monitor_013.py
 
 ## 边界
 
-本 evidence 不接受无真实 source record 的绿色供应链画像，不推断碳足迹、材料来源、合规证书或绿色金融证据，不创建 runtime intake、review queue、WAES review、verified artifact、accepted、integrated 或 production_ready。
+本 evidence 不接受无真实 source record 的绿色供应链画像，不推断碳足迹、材料来源、合规证书或绿色金融证据，不创建 runtime intake、review queue、WAME review、verified artifact、accepted、integrated 或 production_ready。

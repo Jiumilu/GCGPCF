@@ -1,8 +1,8 @@
 ---
 doc_id: GPCF-DOC-048292E4DB
-title: GC-Knowledge Fabric P0-D4 WAES 最小门禁 Dry-run LOOP evidence
+title: GC-Knowledge Fabric P0-D4 WAME 最小门禁 Dry-run LOOP evidence
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -16,37 +16,37 @@ supersedes: []
 superseded_by: []
 ---
 
-# GC-Knowledge Fabric P0-D4 WAES 最小门禁 Dry-run LOOP evidence
+# GC-Knowledge Fabric P0-D4 WAME 最小门禁 Dry-run LOOP evidence
 
 ## 本轮目标
 
-完成 P0-D4：建立 WAES Source、Evidence、RAG、Writeback、Contribution、Revenue Gate 的最小 dry-run 样例，覆盖 `passed`、`repair_required`、`blocked`、`metadata_only`、`human_required`、`committee_required`。
+完成 P0-D4：建立 WAME Source、Evidence、RAG、Writeback、Contribution、Revenue Gate 的最小 dry-run 样例，覆盖 `passed`、`repair_required`、`blocked`、`metadata_only`、`human_required`、`committee_required`。
 
 ## 本轮输入资料
 
-- `okf/waes-gate-policy.yaml`
+- `okf/wame-gate-policy.yaml`
 - `okf/rag-admission-policy.yaml`
 - `okf/writeback-policy.yaml`
 - `okf/contribution-policy.yaml`
 - `okf/revenue-policy.yaml`
 - `okf/redaction-policy.yaml`
-- `docs/gc-knowledge-fabric/waes-minimum-dry-run-cases-v0.1.md`
-- `fixtures/waes/gckf-p0-waes-minimum-dry-run-cases-v0.1.json`
+- `docs/gc-knowledge-fabric/wame-minimum-dry-run-cases-v0.1.md`
+- `fixtures/wame/gckf-p0-wame-minimum-dry-run-cases-v0.1.json`
 
 ## 本轮新增知识对象
 
-- `docs/gc-knowledge-fabric/waes-minimum-dry-run-cases-v0.1.md`
-- `fixtures/waes/gckf-p0-waes-minimum-dry-run-cases-v0.1.json`
+- `docs/gc-knowledge-fabric/wame-minimum-dry-run-cases-v0.1.md`
+- `fixtures/wame/gckf-p0-wame-minimum-dry-run-cases-v0.1.json`
 - `docs/harness/loops/loop-round-GPCF-GCKF-P0-D4-001.md`
 
 ## 本轮检查
 
 | 检查项 | 结果 |
 |---|---|
-| 是否覆盖 6 类最小 WAES Gate | 是 |
+| 是否覆盖 6 类最小 WAME Gate | 是 |
 | 是否覆盖主要 gate status | 是 |
 | 是否包含 no-write 断言 | 是 |
-| 是否真实写入 WAES Gate Result | 否 |
+| 是否真实写入 WAME Gate Result | 否 |
 | 是否升级 KDS lifecycle | 否 |
 | 是否写入 GFIS/GPC/ERP/MES | 否 |
 | 是否确认收益、积分或委员会决议 | 否 |
@@ -64,5 +64,5 @@ superseded_by: []
 进入 P0-D5：
 
 - 建立 KWE 最小 WorkItem、Gap、Bounty、Confirmation Workpack dry-run。
-- 将 WAES dry-run 输出作为 KWE 输入候选。
+- 将 WAME dry-run 输出作为 KWE 输入候选。
 - 验证候选事实到人工确认包的 no-write 流转。

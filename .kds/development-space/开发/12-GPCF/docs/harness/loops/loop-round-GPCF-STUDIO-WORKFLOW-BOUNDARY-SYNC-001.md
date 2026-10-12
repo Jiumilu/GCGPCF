@@ -2,7 +2,7 @@
 doc_id: GPCF-LOOP-STUDIO-WORKFLOW-BOUNDARY-SYNC-001
 title: Loop Round GPCF-STUDIO-WORKFLOW-BOUNDARY-SYNC-001
 project: GPCF
-related_projects: [GPC, WAES, GPCF, Studio]
+related_projects: [GPC, WAME, GPCF, Studio]
 domain: docs
 status: controlled
 version: v1.0

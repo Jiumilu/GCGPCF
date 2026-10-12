@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-AC8367DD7C
 title: GFIS-RUNTIME-SOP-E2E-258
 project: GFIS
-related_projects: [GFIS, GPC, WAES, KDS]
+related_projects: [GFIS, GPC, WAME, KDS]
 domain: evidence
 status: controlled
 version: v1.0
@@ -22,7 +22,7 @@ superseded_by: []
 
 - 来源轮次：`GFIS-RUNTIME-SOP-E2E-257`
 - 输入事实：257 轮已建立真实责任方补证材料接收扫描器，但 `valid_remediation_evidence_files=0`、`remediation_evidence_intake_blocked=1`。
-- 本轮真实缺口：完整 12 阶段 SOP 均缺真实业务输入、运行层主键、review queue、runtime intake、WAES review 与 verified artifact。
+- 本轮真实缺口：完整 12 阶段 SOP 均缺真实业务输入、运行层主键、review queue、runtime intake、WAME review 与 verified artifact。
 
 ## 动作
 
@@ -39,7 +39,7 @@ superseded_by: []
 - `runtime_primary_key_ready_stages=0`
 - `review_queue_ready_stages=0`
 - `runtime_intake_ready_stages=0`
-- `waes_review_ready_stages=0`
+- `wame_review_ready_stages=0`
 - `verified_stages=0`
 - `blocked_stages=12`
 - `convergence_queue_items=12`
@@ -54,7 +54,7 @@ superseded_by: []
 ## 反馈
 
 - 本轮只把 12 阶段缺口转为受控收敛队列。
-- 不创建客户订单、平台订单、样品、工单、质检、库存、发货、POD、WAES review、KDS write receipt、运行层主键或 verified artifact。
+- 不创建客户订单、平台订单、样品、工单、质检、库存、发货、POD、WAME review、KDS write receipt、运行层主键或 verified artifact。
 - 下一轮候选：从 12 阶段队列中选择一个阶段，建立真实输入接收门禁或 owner response handoff，不得伪造业务凭证。
 
 ## 真实性计数

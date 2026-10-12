@@ -1,30 +1,30 @@
 ---
-doc_id: GPCF-DOC-XWAIL-WAES-AAAS-CONTRACT-PRECHECK-20260625
-title: XWAIL-WAES-AaaS 契约预检证据 2026-06-25
+doc_id: GPCF-DOC-XWAIL-WAME-AAAS-CONTRACT-PRECHECK-20260625
+title: XWAIL-WAME-AaaS 契约预检证据 2026-06-25
 project: GPCF
-related_projects: [GPCF, WAES]
+related_projects: [GPCF, WAME]
 domain: docs
 status: controlled
 version: v1.0
 owner: GPCF
 kds_space: 开发
-kds_path: 开发/12-GPCF/docs/harness/XWAIL/evidence/xwail-waes-aaas-contract-precheck-20260625.md
-source_path: docs/harness/XWAIL/evidence/xwail-waes-aaas-contract-precheck-20260625.md
+kds_path: 开发/12-GPCF/docs/harness/XWAIL/evidence/xwail-wame-aaas-contract-precheck-20260625.md
+source_path: docs/harness/XWAIL/evidence/xwail-wame-aaas-contract-precheck-20260625.md
 sync_direction: bidirectional
 last_reviewed: 2026-06-25
 supersedes: []
 superseded_by: []
 ---
 
-# XWAIL-WAES-AaaS 契约预检证据 2026-06-25
+# XWAIL-WAME-AaaS 契约预检证据 2026-06-25
 
 ## 1. 范围
 
-本文在本地集成预检边界内收口 `XWAIL-WAES-AAAS-CONTRACT-PRECHECK-001`。
+本文在本地集成预检边界内收口 `XWAIL-WAME-AAAS-CONTRACT-PRECHECK-001`。
 
-本文检查当前 XWAIL 最小 Validator/XAP 命令，以及当前 AaaS ServicePackage/Metering/SLA/EvidenceRequirement 命令，是否可以共同作为后续 WAES 注册、授权和发布门禁的候选输入。
+本文检查当前 XWAIL 最小 Validator/XAP 命令，以及当前 AaaS ServicePackage/Metering/SLA/EvidenceRequirement 命令，是否可以共同作为后续 WAME 注册、授权和发布门禁的候选输入。
 
-本文不执行 WAES 发布，也不证明生产绑定已经完成。
+本文不执行 WAME 发布，也不证明生产绑定已经完成。
 
 ## 2. 已执行命令
 
@@ -42,15 +42,15 @@ superseded_by: []
 
 | 项 | 值 |
 |---|---|
-| task_id | `XWAIL-WAES-AAAS-CONTRACT-PRECHECK-001` |
-| result | `xwail_waes_aaas_contract_precheck = pass` |
+| task_id | `XWAIL-WAME-AAAS-CONTRACT-PRECHECK-001` |
+| result | `xwail_wame_aaas_contract_precheck = pass` |
 | xwail_status_candidate | `integration_precheck_candidate` |
 | aaas_status_candidate | `integration_precheck_candidate` |
-| waes_status | `repair_required / authorization_boundary` |
+| wame_status | `repair_required / authorization_boundary` |
 | commands_passed | 7 |
 | commands_failed | 0 |
-| dependency_edge | `WAES -> XWAIL -> AaaS` |
-| validator | `tools/kds-sync/validate_xwail_waes_aaas_contract_precheck.py` |
+| dependency_edge | `WAME -> XWAIL -> AaaS` |
+| validator | `tools/kds-sync/validate_xwail_wame_aaas_contract_precheck.py` |
 
 ## 4. 边界
 
@@ -62,8 +62,8 @@ superseded_by: []
 
 本文不证明：
 
-- WAES lint/runtime 已修复；
-- WAES 注册、授权、发布或 release 已完成；
+- WAME lint/runtime 已修复；
+- WAME 注册、授权、发布或 release 已完成；
 - AaaS 客户订阅、真实计费、结算或 SLA 强制执行已完成；
 - SCaaS 客户交付已完成；
 - accepted、integrated、production_ready 或 customer_accepted 已完成。
@@ -73,7 +73,7 @@ accepted = false
 integrated = false
 production_ready = false
 customer_accepted = false
-waes_publication = false
+wame_publication = false
 aaas_real_billing = false
 customer_subscription = false
 ```

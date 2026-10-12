@@ -1,22 +1,22 @@
 ---
 doc_id: GPCF-DOC-A9483B7541
-title: Headroom LCX WAES Harness 准入决定 admitted 20260622
+title: Headroom LCX WAME Harness 准入决定 admitted 20260622
 project: GPCF
-related_projects: [GPCF, WAES]
+related_projects: [GPCF, WAME]
 domain: docs
 status: controlled
 version: v1.0
 owner: GPCF
 kds_space: 开发
-kds_path: 开发/12-GPCF/docs/harness/evidence/headroom-lcx-waes-harness-admission-decision-admitted-20260622.md
-source_path: docs/harness/evidence/headroom-lcx-waes-harness-admission-decision-admitted-20260622.md
+kds_path: 开发/12-GPCF/docs/harness/evidence/headroom-lcx-wame-harness-admission-decision-admitted-20260622.md
+source_path: docs/harness/evidence/headroom-lcx-wame-harness-admission-decision-admitted-20260622.md
 sync_direction: bidirectional
 last_reviewed: 2026-06-22
 supersedes: []
 superseded_by: []
 ---
 
-# Headroom LCX WAES Harness 准入决定 admitted 20260622
+# Headroom LCX WAME Harness 准入决定 admitted 20260622
 
 ## 决定
 
@@ -32,8 +32,8 @@ superseded_by: []
 
 | gate | value |
 |---|---|
-| waes_harness_admission_decision | admitted_for_sanitized_measurement_precheck |
-| waes_harness_admitted | true |
+| wame_harness_admission_decision | admitted_for_sanitized_measurement_precheck |
+| wame_harness_admitted | true |
 | production_token_measurement_allowed | false |
 | measured_production_tokens | false |
 | production_admission_gate | false |

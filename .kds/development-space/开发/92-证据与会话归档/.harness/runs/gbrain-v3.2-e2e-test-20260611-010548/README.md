@@ -1,17 +1,17 @@
 ---
 doc_id: GPCF-DOC-AAE51A57F5
 title: gbrain-v3.2-e2e-test-20260611-010548
-project: WAES
-related_projects: [GPC, WAES, KDS, Brain, GPCF]
+project: WAME
+related_projects: [GPC, WAME, KDS, Brain, GPCF]
 domain: harness-evidence
 status: archive
 version: v1.0
-owner: WAES
+owner: WAME
 kds_space: 开发
 kds_path: 开发/92-证据与会话归档/.harness/runs/gbrain-v3.2-e2e-test-20260611-010548/README.md
 source_path: .harness/runs/gbrain-v3.2-e2e-test-20260611-010548/README.md
 sync_direction: bidirectional
-last_reviewed: 2026-10-11
+last_reviewed: 2026-10-12
 supersedes: []
 superseded_by: []
 ---
@@ -24,7 +24,7 @@ superseded_by: []
 
 KDS 空间：`开发`
 
-关联项目：WAES
+关联项目：WAME
 
 受控规则：
 
@@ -36,8 +36,8 @@ KDS 空间：`开发`
 
 | doc_id | title | source_path | project | status |
 | --- | --- | --- | --- | --- |
-| GPCF-DOC-AAE51A57F5 | gbrain-v3.2-e2e-test-20260611-010548 | .harness/runs/gbrain-v3.2-e2e-test-20260611-010548/README.md | WAES | archive |
-| GPCF-DOC-CAC95B5694 | acceptance-matrix | .harness/runs/gbrain-v3.2-e2e-test-20260611-010548/acceptance-matrix.md | WAES | archive |
-| GPCF-DOC-CDEF748B2E | evidence | .harness/runs/gbrain-v3.2-e2e-test-20260611-010548/evidence/README.md | WAES | archive |
-| GPCF-DOC-A31BE9423A | Harness Status Audit — 全功能实测 | .harness/runs/gbrain-v3.2-e2e-test-20260611-010548/status-audit.md | WAES | archive |
-| GPCF-DOC-FD9FD5FE29 | 全功能实测矩阵 | .harness/runs/gbrain-v3.2-e2e-test-20260611-010548/test-matrix.md | WAES | archive |
+| GPCF-DOC-AAE51A57F5 | gbrain-v3.2-e2e-test-20260611-010548 | .harness/runs/gbrain-v3.2-e2e-test-20260611-010548/README.md | WAME | archive |
+| GPCF-DOC-CAC95B5694 | acceptance-matrix | .harness/runs/gbrain-v3.2-e2e-test-20260611-010548/acceptance-matrix.md | WAME | archive |
+| GPCF-DOC-CDEF748B2E | evidence | .harness/runs/gbrain-v3.2-e2e-test-20260611-010548/evidence/README.md | WAME | archive |
+| GPCF-DOC-A31BE9423A | Harness Status Audit — 全功能实测 | .harness/runs/gbrain-v3.2-e2e-test-20260611-010548/status-audit.md | WAME | archive |
+| GPCF-DOC-FD9FD5FE29 | 全功能实测矩阵 | .harness/runs/gbrain-v3.2-e2e-test-20260611-010548/test-matrix.md | WAME | archive |

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-E839C7F5A4
 title: Headroom Project Group Admission Evidence
 project: KDS
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio]
 domain: docs
 status: controlled
 version: v1.0
@@ -71,7 +71,7 @@ Headroom 已进入 GPCF 项目群治理准入与成本模型定义阶段，角�
 
 | 字段 | 值 |
 |---|---|
-| projects_covered | GPCF, KDS, Brain, WAES, GFIS, GPC, PVAOS, Edge, PKC, XiaoC, XGD, XiaoG, MMC, Studio, WAS |
+| projects_covered | GPCF, KDS, Brain, WAME, GFIS, GPC, PVAOS, Edge, PKC, XiaoC, XGD, XiaoG, MMC, Studio, WAS |
 | admission_level | `L1_governance_defined_L2_dry_run_ready` |
 | telemetry_required_default | `off` |
 | cross_project_memory | `disabled_first_round` |

@@ -1,12 +1,12 @@
 ---
 doc_id: GPCF-DOC-FE2C0C050F
 title: WAS Loop Context Coverage Refresh Evidence
-project: WAS
-related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio, WAS]
-domain: ontology-governance
+project: KDS
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
+domain: docs
 status: controlled
 version: v1.0
-owner: GPCF
+owner: KDS
 kds_space: 开发
 kds_path: 开发/05-KDS/docs/harness/evidence/was-loop-context-coverage-refresh-20260621.md
 source_path: docs/harness/evidence/was-loop-context-coverage-refresh-20260621.md

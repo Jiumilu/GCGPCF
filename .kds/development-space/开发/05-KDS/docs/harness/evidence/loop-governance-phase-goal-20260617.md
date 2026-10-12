@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-28A638C09E
 title: Loop 治理阶段目标证据
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS]
+related_projects: [GFIS, GPC, WAME, KDS]
 domain: docs
 status: controlled
 version: v1.0
@@ -46,7 +46,7 @@ Evidence ID: `LOOP-GOV-PHASE-20260617`
 | runtime_primary_key_ready | 0 |
 | review_queue | 0 |
 | runtime_intake | 0 |
-| waes_review | 0 |
+| wame_review | 0 |
 | verified | 0 |
 | accepted_integrated_allowed | false |
 
@@ -65,8 +65,8 @@ Evidence ID: `LOOP-GOV-PHASE-20260617`
 
 ## 非声明事项
 
-- 本证据不是客户订单、平台订单回执、source-of-record、WAES confirmation、KDS write receipt、POD、UAT 或客户满意度材料。
-- 本证据不创建 runtime primary key、review queue、runtime intake、WAES review、verified artifact、accepted 状态或 integrated 状态。
+- 本证据不是客户订单、平台订单回执、source-of-record、WAME confirmation、KDS write receipt、POD、UAT 或客户满意度材料。
+- 本证据不创建 runtime primary key、review queue、runtime intake、WAME review、verified artifact、accepted 状态或 integrated 状态。
 - 本证据不执行生产写入、外部 API 写入、schema sync、bench migrate、部署、权限变更、Git push 或 Git commit。
 
 ## 下一步治理工作

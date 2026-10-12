@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-6BE2644E8A
 title: GFIS Assistant DKS-177 Routing Queue Notification Preview No-write 规则
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, Brain, PKC]
+related_projects: [GFIS, GPC, WAME, KDS, Brain, PKC]
 domain: docs
 status: controlled
 version: v1.0
@@ -26,7 +26,7 @@ DKS-177 定义从 DKS-176 routing queue preview 派生的 notification preview�
 
 - 不创建 notification、notification delivery、message、inbox item。
 - 不发送外部通知，不创建 routing queue、queue item、approval assignment 或 approval lock。
-- 不写 GFIS、GPC、ERP、MES、KDS fact、KDS lifecycle、WAES gate result、KWE work item 或 Harness evidence。
+- 不写 GFIS、GPC、ERP、MES、KDS fact、KDS lifecycle、WAME gate result、KWE work item 或 Harness evidence。
 - 不把候选 notification preview 解释为正式通知、正式送达、正式分派或业务写回依据。
 
 ## DKS-177 验收口径

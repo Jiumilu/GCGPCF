@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/91-治理与验收/07-acceptance/README.md
 source_path: 07-acceptance/README.md
 sync_direction: bidirectional
-last_reviewed: 2026-10-11
+last_reviewed: 2026-10-12
 supersedes: []
 superseded_by: []
 ---
@@ -39,5 +39,5 @@ KDS 路径前缀：`开发/12-GPCF/07-acceptance/`
 
 | doc_id | title | source_path | project | status |
 | --- | --- | --- | --- | --- |
-| GPCF-DOC-EB678B0E98 | GlobalCloud绿色供应链体系一期验收矩阵 | 07-acceptance/GlobalCloud绿色供应链体系一期验收矩阵.md | WAME | controlled |
+| GPCF-DOC-EB678B0E98 | GlobalCloud 绿色供应链体系一期验收矩阵 | 07-acceptance/GlobalCloud绿色供应链体系一期验收矩阵.md | WAME | controlled |
 | GPCF-DOC-652F1E79A2 | 验收矩阵 | 07-acceptance/README.md | WAME | controlled |

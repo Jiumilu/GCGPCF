@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-LOOP-ROUND-PROJECT-GROUP-PRE-WAVE1-REVIEW-AUTHORIZATION-REQUEST-001
 title: loop-round-GPCF-PROJECT-GROUP-PRE-WAVE1-REVIEW-AUTHORIZATION-REQUEST-001
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0

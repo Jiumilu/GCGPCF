@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-LOOP-DELIVERY-ROUND-TEMPLATE
 title: LOOP Delivery Round Template
 project: GPCF
-related_projects: [GPCF, WAES, KDS]
+related_projects: [GPCF, WAME, KDS]
 domain: templates
 status: controlled
 version: v1.0

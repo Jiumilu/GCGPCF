@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-EA727B1BCF
 title: Loop Round GPCF-L4-GFIS-REPAIR-152
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -59,13 +59,13 @@ superseded_by: []
 GFIS validator：
 
 ```text
-liaoning_yuanhang_contract_chain_real_receipt_empty_directory_hold_register=pass hold_items=5 open_holds=5 closed_holds=0 owner_responses=0 submitted_files=0 valid_receipts=0 completed_handoffs=0 structure_valid=0 release_allowed=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0 state=empty_directory_holds_open_waiting_real_receipts runtime_sop_e2e=repair_required
+liaoning_yuanhang_contract_chain_real_receipt_empty_directory_hold_register=pass hold_items=5 open_holds=5 closed_holds=0 owner_responses=0 submitted_files=0 valid_receipts=0 completed_handoffs=0 structure_valid=0 release_allowed=0 review_queue=0 runtime_intake=0 wame_review=0 verified=0 state=empty_directory_holds_open_waiting_real_receipts runtime_sop_e2e=repair_required
 ```
 
 GFIS 主 runtime SOP validator expected exit 2：
 
 ```text
-runtime_liaoning_yuanhang_contract_chain_real_receipt_empty_directory_hold_register=empty_directory_holds_open_waiting_real_receipts:hold_items=5:open_holds=5:closed_holds=0:owner_responses=0:submitted_files=0:valid_receipts=0:completed_handoffs=0:structure_valid=0:release_allowed=0:review_queue=0:runtime_intake=0:waes_review=0:verified=0
+runtime_liaoning_yuanhang_contract_chain_real_receipt_empty_directory_hold_register=empty_directory_holds_open_waiting_real_receipts:hold_items=5:open_holds=5:closed_holds=0:owner_responses=0:submitted_files=0:valid_receipts=0:completed_handoffs=0:structure_valid=0:release_allowed=0:review_queue=0:runtime_intake=0:wame_review=0:verified=0
 RUNTIME_EXIT_CODE:2
 ```
 
@@ -89,14 +89,14 @@ npm run test:e2e
 - release_allowed: 0
 - review_queue: 0
 - runtime_intake: 0
-- waes_review: 0
+- wame_review: 0
 - verified: 0
 - runtime_sop_e2e: repair_required
 
 ## 边界确认
 
-本轮未执行真实 KDS 写入、真实 WAES 写入、生产系统写入、真实外部 API 写入、物流 API、数据库迁移、schema sync、`bench migrate`、权限变更、部署、ECS/阿里云/Caddy/隧道/Docker 变更、Git push、accepted 或 integrated 升级。
+本轮未执行真实 KDS 写入、真实 WAME 写入、生产系统写入、真实外部 API 写入、物流 API、数据库迁移、schema sync、`bench migrate`、权限变更、部署、ECS/阿里云/Caddy/隧道/Docker 变更、Git push、accepted 或 integrated 升级。
 
 ## 下一轮建议
 
-`GFIS-RUNTIME-SOP-E2E-146`：将 5 个 open hold 转成责任方补证 action package / reminder dispatch preflight。未获明确授权前，只生成待发送包和门禁，不真实发送、不写 KDS/WAES/外部 API。
+`GFIS-RUNTIME-SOP-E2E-146`：将 5 个 open hold 转成责任方补证 action package / reminder dispatch preflight。未获明确授权前，只生成待发送包和门禁，不真实发送、不写 KDS/WAME/外部 API。

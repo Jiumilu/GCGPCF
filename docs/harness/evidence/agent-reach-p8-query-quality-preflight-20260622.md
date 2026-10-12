@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-AGENT-REACH-P8-QUERY-QUALITY-PREFLIGHT-20260622
 title: Agent-Reach P8 查询质量预检证据 2026-06-22
 project: KDS
-related_projects: [GPCF, KDS, WAME, Brain, GFIS, GPC, PVAOS, PKC, XiaoC, XGD, XiaoG, MMC, Studio, WAS]
+related_projects: [GFIS, WAME, KDS]
 domain: docs
 status: controlled
 version: v1.0

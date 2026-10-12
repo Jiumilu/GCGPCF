@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-HEADROOM-LCX-L35-CONTROLLED-SANITIZED-PILOT-WINDOW-20260622
 title: Loop Round GPCF Headroom LCX L3.5 Controlled Sanitized Pilot Window 001
 project: GPCF
-related_projects: [GPC, WAES, KDS, GPCF]
+related_projects: [GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0

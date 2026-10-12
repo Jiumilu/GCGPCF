@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-0D3224DFB9
 title: GlobalCloud 智能体实施团队准备度评估
 project: XiaoC
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, XiaoC, XGD, GPCF, Studio]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, XiaoC, XGD, GPCF, Studio]
 domain: agent-team
 status: controlled
 version: v1.0
@@ -175,7 +175,7 @@ superseded_by: []
 
 1. 已形成第一版 6 个专项真实项目仓库映射（未含仓图/接稳/评衡/证验）
 2. 已形成第一版只读预检计划
-3. 已拿到 WAES、GFIS、GPC、Brain、XiaoC（蚁后）、Hermes/XGD（大象） 的首轮仓库级只读证据
+3. 已拿到 WAME、GFIS、GPC、Brain、XiaoC（蚁后）、Hermes/XGD（大象） 的首轮仓库级只读证据
 4. 已确认 PVAOS 当前分支和 remote
 
 未完成：

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-9377D0E7EE
 title: Loop CodeGraph Active Drift Metrics Evidence
 project: KDS
-related_projects: [KDS, GFIS, GPC, WAES, Brain, GPCF, Studio]
+related_projects: [KDS, GFIS, GPC, WAME, Brain, GPCF, Studio]
 domain: docs
 status: controlled
 version: v1.0

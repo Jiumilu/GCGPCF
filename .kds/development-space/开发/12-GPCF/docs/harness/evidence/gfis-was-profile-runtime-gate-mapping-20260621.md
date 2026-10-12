@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-825C3B3AC5
 title: GFIS WAS Profile Runtime Gate Mapping Evidence
 project: GPCF
-related_projects: [GFIS, GPC, WAES, GPCF]
+related_projects: [GFIS, GPC, WAME, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -45,11 +45,11 @@ GFIS runtime SOP E2E 的 WAS scenario profile 已在 GPCF 侧建立只读语义�
 ## 非声明
 
 - 本 evidence 不修改 GFIS 运行代码。
-- 本 evidence 不创建真实 source-of-record、runtime primary key、review queue、runtime intake、WAES review 或 verified artifact。
+- 本 evidence 不创建真实 source-of-record、runtime primary key、review queue、runtime intake、WAME review 或 verified artifact。
 - 本 evidence 不证明 GFIS 真实业务 SOP E2E 完成。
 - 本 evidence 不升级 accepted、integrated 或 production_ready。
 
 ## 下一步
 
 1. 将该 mapping 作为 GFIS 真实 source-of-record 进入前的语义检查基线。
-2. 后续真实凭证进入 GFIS 时，按 WAS stage 的 `assetDimension`、`flowType`、`sourceRefs`、`evidenceRefs`、`waesGateRefs`、`promotionBlockers`、`nextAction` 做逐项准入。
+2. 后续真实凭证进入 GFIS 时，按 WAS stage 的 `assetDimension`、`flowType`、`sourceRefs`、`evidenceRefs`、`wameGateRefs`、`promotionBlockers`、`nextAction` 做逐项准入。

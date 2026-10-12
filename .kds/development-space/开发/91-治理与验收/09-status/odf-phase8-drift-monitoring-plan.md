@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-4B4A93C3B9
 title: ODF Phase 8 小批量回归与漂移监控方案
 project: GPCF
-related_projects: [GPCF, WAES, KDS]
+related_projects: [GPCF, WAME, KDS]
 domain: status
 status: controlled
 version: v1.0

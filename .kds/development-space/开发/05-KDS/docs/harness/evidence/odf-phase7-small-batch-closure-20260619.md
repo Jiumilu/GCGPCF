@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-6E11376EB9
 title: ODF Phase 7 小批量样本闭环报告
 project: KDS
-related_projects: [WAES, KDS]
+related_projects: [WAME, KDS]
 domain: docs
 status: controlled
 version: v1.0

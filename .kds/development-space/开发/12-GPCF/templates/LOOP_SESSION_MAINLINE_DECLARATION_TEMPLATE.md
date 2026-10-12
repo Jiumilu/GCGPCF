@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-9A5D7C1B3E
 title: LOOP 会话主线声明模板
 project: GPCF
-related_projects: [GPCF, WAES, KDS]
+related_projects: [GPCF, WAME, KDS]
 domain: templates
 status: controlled
 version: v1.0

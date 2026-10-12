@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-5B2E774848
 title: GPCF-L4-GFIS-REPAIR-072 GFIS 辽宁远航业务原话检索与运行态重载复测
 project: GPCF
-related_projects: [GFIS, GPC, PVAOS, WAME, KDS, GPCF]
+related_projects: [GFIS, GPC, PVAOS, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0

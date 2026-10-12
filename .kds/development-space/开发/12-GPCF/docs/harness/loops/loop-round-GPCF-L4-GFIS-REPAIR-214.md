@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-0F1C7DEBD8
 title: GPCF-L4-GFIS-REPAIR-214
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -94,8 +94,8 @@ superseded_by: []
 - 请求包不是 source-of-record。
 - 本轮没有收到 owner response。
 - 本轮没有创建 runtime primary key。
-- 本轮没有创建 review queue、runtime intake、WAES review 或 verified artifact。
-- 本轮没有执行生产写入、真实外部 API 写入、真实 KDS/WAES 写入、数据库迁移、权限变更、部署、提交、推送或 accepted/integrated 升级。
+- 本轮没有创建 review queue、runtime intake、WAME review 或 verified artifact。
+- 本轮没有执行生产写入、真实外部 API 写入、真实 KDS/WAME 写入、数据库迁移、权限变更、部署、提交、推送或 accepted/integrated 升级。
 
 ## 真实性计数
 
@@ -110,4 +110,4 @@ superseded_by: []
 
 ## 下一步
 
-从 `GPC_or_Liaoning_Yuanhang_order_owner` 取得真实客户订单原件或平台订单回执 JSON，放入 GFIS 指定 source-of-record 接收目录并运行 GFIS source-of-record validators。通过后再推进 dispatch confirmation、WAES confirmation、KDS write receipt 与 runtime primary key。
+从 `GPC_or_Liaoning_Yuanhang_order_owner` 取得真实客户订单原件或平台订单回执 JSON，放入 GFIS 指定 source-of-record 接收目录并运行 GFIS source-of-record validators。通过后再推进 dispatch confirmation、WAME confirmation、KDS write receipt 与 runtime primary key。

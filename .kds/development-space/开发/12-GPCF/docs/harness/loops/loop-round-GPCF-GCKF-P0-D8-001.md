@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-FABE0ED6B3
 title: GC-Knowledge Fabric P0-D8 Shared Types 与 API Contract 对齐 LOOP evidence
 project: GPCF
-related_projects: [GPC, WAES, KDS, GPCF]
+related_projects: [GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -27,7 +27,7 @@ superseded_by: []
 - `fixtures/api/gckf-p0-api-skeleton-input-matrix-v0.1.json`
 - `packages/shared/src/knowledge/*`
 - `packages/api/src/kds/v2/contracts.ts`
-- `packages/api/src/waes/contracts.ts`
+- `packages/api/src/wame/contracts.ts`
 - `packages/api/src/kwe/contracts.ts`
 - `packages/api/src/gfis/contracts.ts`
 - `packages/api/src/governance/contracts.ts`
@@ -67,5 +67,5 @@ superseded_by: []
 进入 P0-D9：
 
 - 建立物理数据模型与 migration draft 矩阵。
-- 对齐 `knowledge_objects`、`object_pool_bindings`、`waes_gate_results`、`kwe_work_items` 等 P0 表。
+- 对齐 `knowledge_objects`、`object_pool_bindings`、`wame_gate_results`、`kwe_work_items` 等 P0 表。
 - 只做 schema dry-run，不执行数据库迁移、不写生产库。

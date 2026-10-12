@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-3C1883627B
 title: GFIS Assistant Approval Packet Routing Queue Notification Acknowledgement Escalation Digest Delivery Acknowledgement Escalation SLA Breach Review Resolution Option Approval Packet Preview No-write 规则
 project: KDS
-related_projects: [KDS, GFIS, WAES, Brain, PKC]
+related_projects: [KDS, GFIS, WAME, Brain, PKC]
 domain: docs
 status: controlled
 version: v1.0
@@ -28,7 +28,7 @@ DKS-163 在 DKS-162 resolution option preview 基础上生成候选 approval pac
 
 ## 不写入边界
 
-本规则不得创建 approval packet、approval request、approval decision、committee decision、freeze action、Harness evidence、WAES gate result、KWE work item，不得修改 lifecycle、业务事实、业务写回、收益、积分或外部系统。
+本规则不得创建 approval packet、approval request、approval decision、committee decision、freeze action、Harness evidence、WAME gate result、KWE work item，不得修改 lifecycle、业务事实、业务写回、收益、积分或外部系统。
 
 ## 输入边界
 

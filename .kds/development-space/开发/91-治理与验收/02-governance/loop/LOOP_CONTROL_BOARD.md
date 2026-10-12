@@ -1,12 +1,12 @@
 ---
 doc_id: GPCF-DOC-0DF6AA8647
 title: LOOP Control Board
-project: WAES
-related_projects: [AAAS, Brain, WAS, XiaoC, WAES, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP]
+project: WAME
+related_projects: [AAAS, Brain, WAS, XiaoC, WAME, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP]
 domain: governance
 status: controlled
 version: v1.0
-owner: WAES
+owner: WAME
 kds_space: 开发
 kds_path: 开发/91-治理与验收/02-governance/loop/LOOP_CONTROL_BOARD.md
 source_path: 02-governance/loop/LOOP_CONTROL_BOARD.md
@@ -63,7 +63,7 @@ real_source_records_zero_is_not_dev_blocker=true
 runtime_primary_key_ready=0
 review_queue=0
 runtime_intake=0
-waes_review=0
+wame_review=0
 verified=0
 authorization_granted = false
 action_executed = false
@@ -585,7 +585,7 @@ run_gfis_runtime_sop_dev_completion_dry_run.py
 P0=GFIS Delivery Completion Sprint
 P1=GPCF v1.1 slimming baseline maintenance
 P2=KDS sensitive/token/real API boundary only
-P3=WAES candidate intake after GFIS candidate ready
+P3=WAME candidate intake after GFIS candidate ready
 P4=SOP/PKC maintenance
 P5=other ready_for_review projects deferred
 ```
@@ -613,7 +613,7 @@ decision:
     - GFIS
     - GPCF
     - KDS
-    - WAES
+    - WAME
     - all_project_group
   development_lane:
     status: continue_allowed
@@ -627,7 +627,7 @@ decision:
       - controlled_sample_e2e
       - runtime_intake_development
       - review_queue_development
-      - waes_review_candidate_development
+      - wame_review_candidate_development
       - verified_artifact_candidate_development
       - development_ready_for_real_business_validation
     progress:
@@ -641,7 +641,7 @@ decision:
       - source_owner_confirmation
       - real_runtime_intake
       - real_review_queue
-      - real_waes_review
+      - real_wame_review
       - real_verified_artifact_candidate
   forbidden_claims:
     - real_business_verified
@@ -705,7 +705,7 @@ GFIS:
       - Runtime Intake Agent
       - Primary Key / Source Validation Agent
       - Review Queue Agent
-      - WAES Candidate / Artifact Agent
+      - WAME Candidate / Artifact Agent
       - Boundary Validator Agent
     file_lock_required: true
     same_file_parallel_write_allowed: false
@@ -725,7 +725,7 @@ GFIS:
     primary_key_candidate_generated: true
     source_validation_passed: true
     review_queue_item_generated: true
-    waes_review_candidate_generated: true
+    wame_review_candidate_generated: true
     verified_artifact_candidate_by_fixture: true
     verified_artifact_candidate_by_fixture_generated: true
     local_e2e_dry_run_passed: true
@@ -737,7 +737,7 @@ GFIS:
     valid_source_records: 0
     runtime_intake: 0
     review_queue: 0
-    waes_review: 0
+    wame_review: 0
     verified: 0
     status: pending_source_of_record
 
@@ -756,7 +756,7 @@ GFIS:
 - `02-governance/loop/LOOP_GOVERNANCE_SLIMMING_AND_DELIVERY_RECOVERY.md`
 - `registry/project-state-matrix.yaml`
 
-项目词表锚点：XWAIL / AaaS / AAAS / SOP / WAES / GPC / GFIS / KDS / GPCF。
+项目词表锚点：XWAIL / AaaS / AAAS / SOP / WAME / GPC / GFIS / KDS / GPCF。
 
 历史口径说明：`dirty_repo_count = 7` 只作为 2026-06-26/2026-06-27 replay 口径保留；当前 live 判断以三仓 dirty 和 KDS blocker 已解除为准，不得恢复 KDS sensitive_path blocked。
 
@@ -788,7 +788,7 @@ still_forbidden:
   - commit_push_deploy_without_authorization
 ```
 
-本裁决不改变 GFIS 真实业务链路门禁：`real_business_lane=repair_required`、`valid_source_records=0`、`runtime_primary_key_ready=0`、`review_queue=0`、`runtime_intake=0`、`waes_review=0`、`verified=0` 仍阻断真实业务验证、状态提升和客户验收。
+本裁决不改变 GFIS 真实业务链路门禁：`real_business_lane=repair_required`、`valid_source_records=0`、`runtime_primary_key_ready=0`、`review_queue=0`、`runtime_intake=0`、`wame_review=0`、`verified=0` 仍阻断真实业务验证、状态提升和客户验收。
 
 ## GKE-001 A10C12 当前状态只读复核
 
@@ -861,3 +861,15 @@ A10R27 `GKE-001-COORDINATION-20260815-102-A10R27`（SHA-256 `b9062e5cde46be63415
 MMC 当前 source/runtime 仍为 `19/17`，聚焦 `2/23` 与 tracked 全量 `160` 通过；精确差异仍仅是 Release 0 `search/read` 两个 POST。Studio 聚焦 `130`、全量测试、build、strict、Harness 与 CodeGraph 通过；Brain 聚焦 `125`、全量 `393`、typecheck、build、alignment 与 strict 通过。Studio 与 Brain 结果仍是静态及 mocked transport 证据，不是认证运行态。
 
 Release 0 当前串行门收敛为：KDS 独立远端查询与 non-force dry-run -> 另行真实 push 授权；MMC 非披露 direct `admin/super_admin` 主体核验 -> 另行 `17 -> 19` guarded CAS；Studio 已存在、非敏感且权威绑定的认证项目会话 -> 单独授权真实 Search -> WikiPreview -> Chat E2E -> F-013 最终复核。任何真实凭据使用、policy apply、fixture 写入、E2E、push、deploy 或状态提升均未由本轮授权。
+was_project_group_ontology_registry=pass
+was_loop_context_coverage_refresh=pass
+hold_required=1
+real_source_records=0
+accepted=false
+integrated=false
+production_ready=false
+current_round: GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-100
+当前轮次 | `GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-100`
+was_real_source_record_monitor_100=pass
+下一轮应进入 `GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-101`
+# 完成度审计入口：docs/harness/evidence/was-completion-audit-20260621.json

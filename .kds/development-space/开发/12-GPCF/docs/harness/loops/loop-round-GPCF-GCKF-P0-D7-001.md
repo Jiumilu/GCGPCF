@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-877AEFA91F
 title: GC-Knowledge Fabric P0-D7 API 骨架输入矩阵 LOOP evidence
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -20,12 +20,12 @@ superseded_by: []
 
 ## 本轮目标
 
-完成 P0-D7：建立 KDS v2、WAES、KWE、GFIS Assistant、Governance LOOP 的 API 骨架输入矩阵，把首批端点限定为只读、候选、请求或门禁 dry-run。
+完成 P0-D7：建立 KDS v2、WAME、KWE、GFIS Assistant、Governance LOOP 的 API 骨架输入矩阵，把首批端点限定为只读、候选、请求或门禁 dry-run。
 
 ## 本轮输入资料
 
 - `fixtures/kds/v2-endpoint-no-write-smoke.json`
-- `fixtures/waes/endpoint-no-write-smoke.json`
+- `fixtures/wame/endpoint-no-write-smoke.json`
 - `fixtures/kwe/endpoint-no-write-smoke.json`
 - `fixtures/gfis/endpoint-no-write-smoke.json`
 - `fixtures/governance/endpoint-no-write-smoke.json`
@@ -45,7 +45,7 @@ superseded_by: []
 | API 分组数 | 5 |
 | 首批端点数 | 40 |
 | 是否覆盖 KDS v2 | 是 |
-| 是否覆盖 WAES | 是 |
+| 是否覆盖 WAME | 是 |
 | 是否覆盖 KWE | 是 |
 | 是否覆盖 GFIS Assistant | 是 |
 | 是否覆盖 Governance LOOP | 是 |

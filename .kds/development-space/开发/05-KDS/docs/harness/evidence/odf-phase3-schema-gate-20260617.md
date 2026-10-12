@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-146EB71EF5
 title: ODF Phase 3 Schema Gate Evidence
 project: KDS
-related_projects: [WAES, KDS]
+related_projects: [WAME, KDS]
 domain: docs
 status: controlled
 version: v1.0

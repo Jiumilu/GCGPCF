@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-5C7E8CBD65
 title: Loop Round GPCF-KDS-DKS-247
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -26,7 +26,7 @@ superseded_by: []
 
 - DKS-246 resolution option preview fixture
 - 既有 approval packet preview 字段与门禁口径
-- GC-Knowledge Fabric AI 只生成候选、WAES/KWE/Harness 不被绕过的底线
+- GC-Knowledge Fabric AI 只生成候选、WAME/KWE/Harness 不被绕过的底线
 
 ## 输出
 

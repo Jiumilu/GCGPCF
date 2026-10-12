@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-LOOP-AGENT-REACH-P5B-LIVE-SEARCH-PRECHECK-CORRECTED-AUTHORIZATION-001
 title: LOOP Round GPCF-AGENT-REACH-P5B-LIVE-SEARCH-PRECHECK-CORRECTED-AUTHORIZATION-001
 project: GPCF
-related_projects: [GPC, WAES, GPCF]
+related_projects: [GPC, WAME, GPCF]
 domain: docs
 status: controlled
 version: v1.0

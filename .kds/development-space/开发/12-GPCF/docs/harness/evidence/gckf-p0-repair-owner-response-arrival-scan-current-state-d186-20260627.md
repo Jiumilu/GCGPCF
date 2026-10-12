@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-GCKFP0RESPONSEARRIVALSCAND18620260627
 title: GCKF P0 修复负责人响应到达扫描当前态 D186
 project: GPCF
-related_projects: [GPCF, GFIS, GPC, WAES, KDS]
+related_projects: [GPCF, GFIS, GPC, WAME, KDS]
 domain: docs
 status: controlled
 version: v1.0
@@ -43,14 +43,14 @@ D186 承接 D185 的会话主线接管证据，只做真实 repair owner respons
 |---|---|---|---|
 | real_repair_owner_response | controlled_document_submission | not_found | missing_actual_repair_owner_response |
 | signed_response_package | signed_response_package | not_found | missing_signed_response_package |
-| waes_review_note | waes_review_note | not_found | missing_waes_review_note |
+| wame_review_note | wame_review_note | not_found | missing_wame_review_note |
 | human_confirmation_record | human_confirmation_record | not_found | missing_human_confirmation |
 
 ## 当前阻塞
 
 - 尚未收到真实 repair owner response。
 - 尚未收到签署响应包。
-- 尚未形成 WAES review note。
+- 尚未形成 WAME review note。
 - 尚未形成人工确认。
 - 当前只能保持 hold，不允许 response intake。
 
@@ -66,11 +66,11 @@ D186 承接 D185 的会话主线接管证据，只做真实 repair owner respons
 
 ## 下一轮
 
-若四项 arrival signals 全部到达并通过 WAES 与人工确认，进入 response intake precheck；未到达前继续保持 hold。
+若四项 arrival signals 全部到达并通过 WAME 与人工确认，进入 response intake precheck；未到达前继续保持 hold。
 
 ## 2026-08-10 到达声明漂移扫描
 
 - D186 validator 已从固定 response 文件名检查扩展为当前 GCKF JSON/Markdown 的精确肯定性声明扫描。
-- 扫描键包括 `actualRepairOwnerResponseReceived`、`responseArrivalConfirmed`、`signedPackagePresent`、`waesReviewNotePresent`、`humanConfirmationPresent` 与 `responseIntakeAllowed`。
+- 扫描键包括 `actualRepairOwnerResponseReceived`、`responseArrivalConfirmed`、`signedPackagePresent`、`wameReviewNotePresent`、`humanConfirmationPresent` 与 `responseIntakeAllowed`。
 - 当前扫描结果为 `true_trigger_claims=0`；模板、preview、待人工复核声明和布尔值 `false` 不构成到达信号。
 - 后续任一受控 GCKF 文件出现上述键的 `true` 声明时，D186 必须失败并要求新的 arrival scan refresh；旧 `0/4` hold 不得继续沿用。

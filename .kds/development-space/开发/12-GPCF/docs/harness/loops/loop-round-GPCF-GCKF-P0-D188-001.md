@@ -2,7 +2,7 @@
 doc_id: GPCF-LOOP-GCKF-P0-D188-001
 title: Loop Round GPCF-GCKF-P0-D188-001
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -30,7 +30,7 @@ superseded_by: []
 
 - controlled_repair_owner_response。
 - signed_response_package。
-- waes_review_note。
+- wame_review_note。
 - human_confirmation_record。
 
 本轮不发送通知，不执行 action queue，不执行 response intake，不确认责任，不打开 committee case，不写 formal evidence，不写 KDS API。
@@ -73,7 +73,7 @@ superseded_by: []
 ### debug
 
 - D187 只证明四项缺失信号已形成 no-write 队列。
-- D188 只证明 response intake 前授权边界当前未满足；precheck 不能替代真实 response、WAES review note 或人工确认。
+- D188 只证明 response intake 前授权边界当前未满足；precheck 不能替代真实 response、WAME review note 或人工确认。
 
 ## 边界
 

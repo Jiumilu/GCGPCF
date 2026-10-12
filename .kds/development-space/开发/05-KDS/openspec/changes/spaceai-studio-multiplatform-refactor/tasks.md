@@ -2,7 +2,7 @@
 doc_id: GPCF-OS-SPACEAI-STUDIO-MULTIPLATFORM-REFACTOR-TASKS-20261010
 title: tasks
 project: KDS
-related_projects: [WAES, KDS, GPCF, Studio, ICP, SpaceAIStudio, SpaceAI]
+related_projects: [WAME, KDS, GPCF, Studio, ICP, SpaceAIStudio, SpaceAI]
 domain: openspec
 status: draft
 version: v1.0

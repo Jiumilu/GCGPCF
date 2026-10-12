@@ -2,7 +2,7 @@
 doc_id: GPCF-LOOP-UI-STUDIO-WORKBENCH-016
 title: Loop Round GPCF-UI-STUDIO-WORKBENCH-016
 project: GPCF
-related_projects: [GPC, WAES, GPCF, Studio]
+related_projects: [GPC, WAME, GPCF, Studio]
 domain: docs
 status: controlled
 version: v1.0
@@ -117,7 +117,7 @@ Status ceiling: ui_evidence_candidate
 |---|---|---|---|
 | G1 Surface Structure | pass | 后端门禁把聊天入口与账户整改入口串成固定路径 | 后续可补路由级守卫 |
 | G2 Design Tokens | pass | 本轮未改视觉层 | 无 |
-| G3 Component Consistency | pass | 沿用 WAES/Studio 现有框架和账户页治理入口 | 无 |
+| G3 Component Consistency | pass | 沿用 WAME/Studio 现有框架和账户页治理入口 | 无 |
 | G4 Evidence And Governance | pass | 已从提示升级到后端真实阻断，且证据边界清楚 | 后续补运行态证据 |
 | G5 AI Fact Separation | not_applicable | 本轮不涉及 AI 建议展示 | 无 |
 | G6 Accessibility | partial | 未新增完整 a11y 验证 | 后续补充 |

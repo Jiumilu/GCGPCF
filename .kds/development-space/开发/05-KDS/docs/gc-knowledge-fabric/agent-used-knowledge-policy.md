@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-F87EFE5DF7
 title: AgentUsedKnowledge 调用证据与越权读取规则
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, MMC]
+related_projects: [GFIS, GPC, WAME, KDS, MMC]
 domain: docs
 status: controlled
 version: v1.0
@@ -29,7 +29,7 @@ AgentUsedKnowledge 是 MMC 对 AI、Agent、Connector 和 MCP 能力调用的治
 - 读取了哪些 KDS 对象、来源和 evidence。
 - 使用了什么检索 scope、domain、pool 和 ACL。
 - 生成了哪些候选输出。
-- 是否触发 WAES 门禁。
+- 是否触发 WAME 门禁。
 - 是否存在越权读取、低可信强引用、敏感原文暴露或绕过 KWE promotion。
 
 本契约只记录调用证据和门禁判断，不授予 Agent 事实确认权、业务写回权、收益分配权、积分确认权或委员会裁决权。
@@ -41,10 +41,10 @@ Agent / Connector 请求
 → MMC 记录 invocation
 → KDS 检索候选知识
 → ACL / Domain / Pool / RAG admission 过滤
-→ WAES 识别 overread / low-trust / sensitive / cross-supplier 风险
+→ WAME 识别 overread / low-trust / sensitive / cross-supplier 风险
 → AgentUsedKnowledge evidence candidate
 → KWE 或 Harness 接收证据
-→ 人工 / 委员会 / WAES 后续确认
+→ 人工 / 委员会 / WAME 后续确认
 ```
 
 ## 3. 最小记录字段
@@ -65,7 +65,7 @@ Agent / Connector 请求
 - retrievedObjectRefs
 - sourceRefs
 - evidenceRefs
-- waesGateRefs
+- wameGateRefs
 - outputCandidateRefs
 - overreadSignals
 - outcome
@@ -76,7 +76,7 @@ Agent / Connector 请求
 
 ## 4. 越权读取风险信号
 
-WAES / MMC 至少识别以下风险：
+WAME / MMC 至少识别以下风险：
 
 - cross_tenant_access
 - cross_supplier_access
@@ -120,7 +120,7 @@ Agent 不能：
 - invocation 摘要。
 - 读取对象清单。
 - RAG admission 快照。
-- WAES gate 结果。
+- WAME gate 结果。
 - overread 信号。
 - 被阻断或降级的原因。
 

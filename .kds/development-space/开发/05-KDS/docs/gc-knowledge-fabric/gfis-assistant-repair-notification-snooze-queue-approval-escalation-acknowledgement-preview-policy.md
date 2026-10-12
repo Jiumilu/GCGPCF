@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-4A34D350C7
 title: GFIS Assistant Repair Notification Snooze Queue Approval Escalation Acknowledgement Preview No-write 规则
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, Brain, PKC]
+related_projects: [GFIS, GPC, WAME, KDS, Brain, PKC]
 domain: docs
 status: controlled
 version: v1.0
@@ -22,7 +22,7 @@ superseded_by: []
 
 本规则定义 GFIS Assistant repair notification snooze queue 的审批升级确认预览边界。
 
-升级确认预览承接 DKS-130 approval SLA escalation preview，只展示候选阅读确认、候选确认人、确认边界、确认风险和下一步建议。它不是正式确认记录，不创建 read receipt，不创建 acknowledgement，不分配确认人，不创建提醒，不创建 KWE 工单，不创建 WAES 结果，不写 Harness evidence，不修改 KDS lifecycle，不触发 GFIS/GPC/ERP/MES 写回。
+升级确认预览承接 DKS-130 approval SLA escalation preview，只展示候选阅读确认、候选确认人、确认边界、确认风险和下一步建议。它不是正式确认记录，不创建 read receipt，不创建 acknowledgement，不分配确认人，不创建提醒，不创建 KWE 工单，不创建 WAME 结果，不写 Harness evidence，不修改 KDS lifecycle，不触发 GFIS/GPC/ERP/MES 写回。
 
 ## 2. 输入
 
@@ -71,7 +71,7 @@ superseded_by: []
 - createsApprovalRequest = false。
 - createsApprovalDecision = false。
 - createsHarnessEvidence = false。
-- createsWaesGateResult = false。
+- createsWameGateResult = false。
 - createsKweWorkItem = false。
 - persistsEvidence = false。
 - approvesBusinessWrite = false。
@@ -86,7 +86,7 @@ superseded_by: []
 - writesAcknowledgement / writesReadReceipt / writesAcknowledgerAssignment。
 - writesReminder / writesEscalationTask。
 - writesApprovalRequest / writesApprovalDecision。
-- writesWaesGateResult / writesKweWorkItem / writesHarnessEvidence。
+- writesWameGateResult / writesKweWorkItem / writesHarnessEvidence。
 - writesKdsLifecycle / writesKdsFact / writesKdsAcceptedFact。
 - writesExternalApi。
 

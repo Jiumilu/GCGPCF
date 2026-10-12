@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-DEV-P0-BLOCKER-REDUCTION-20260626
 title: GlobalCloud 项目群开发态 P0 阻点消减证据
 project: KDS
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio]
 domain: docs
 status: controlled
 version: v1.0
@@ -55,7 +55,7 @@ superseded_by: []
 | GlobalCloud Brain | codex/brain-l4-retrieval | 3 | 0 | pass | dev_allowed_with_dirty_classification |
 | WAS世界资产体系 | main | 4 | 1 | pass | dev_allowed_with_dirty_classification |
 | GlobalCloud XiaoC | main | 3 | 0 | pass | dev_allowed_with_dirty_classification |
-| GlobalCloud WAES | waes/integration-release | 3 | 0 | pass | dev_allowed_with_dirty_classification |
+| GlobalCloud WAME | waes/integration-release | 3 | 0 | pass | dev_allowed_with_dirty_classification |
 | GlobalCloud GPC | main | 6 | 0 | pass | dev_allowed_with_dirty_classification |
 | GlobalCloud Studio | main | 12 | 4 | pass | dev_allowed_with_dirty_classification |
 | GlobalCoud GPCF | codex/kds-token-sync-gpcf | 659 | 226 | pass | dev_allowed_with_dirty_classification |
@@ -73,7 +73,7 @@ superseded_by: []
 
 - 提交/推送前：必须逐仓完成 dirty 分类、敏感路径复核、项目级测试。
 - 验收前：必须补齐 customer satisfaction、dependency gate 和项目级 evidence。
-- GFIS/WAS 真实业务链路：真实 source-of-record、WAES review、verified artifact 仍是验收态阻点，不阻断开发态。
+- GFIS/WAS 真实业务链路：真实 source-of-record、WAME review、verified artifact 仍是验收态阻点，不阻断开发态。
 
 ## 验证命令
 

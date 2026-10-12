@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-B4BA49F0D7
 title: OKF 引入与治理闭环恢复报告 2026-06-22
 project: KDS
-related_projects: [GPC, WAES, KDS, GPCF]
+related_projects: [GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0

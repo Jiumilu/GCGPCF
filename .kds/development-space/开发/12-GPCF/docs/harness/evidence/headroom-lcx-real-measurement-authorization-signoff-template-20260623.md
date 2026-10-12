@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-HEADROOM-LCX-REAL-MEASUREMENT-AUTHORIZATION-SIGNOFF-TEMPLATE-20260623
 title: Headroom LCX Real Measurement Authorization Signoff Template Evidence
 project: GPCF
-related_projects: [GPCF, WAES]
+related_projects: [GPCF, WAME]
 domain: docs
 status: controlled
 version: v1.0
@@ -46,7 +46,7 @@ superseded_by: []
 | `authorized_at` | required | `REQUIRED_USER_INPUT` | 绑定带时区的授权时间 |
 | `sanitized_production_token_ledger` | required | `REQUIRED_USER_INPUT` | 只允许脱敏账本引用 |
 | `rollback_plan_id` | required | `REQUIRED_USER_INPUT` | 绑定回滚预案或 runbook ID |
-| `waes_harness_admission_decision` | required | `REQUIRED_USER_INPUT` | 绑定 WAES/Harness 裁决证据 |
+| `wame_harness_admission_decision` | required | `REQUIRED_USER_INPUT` | 绑定 WAME/Harness 裁决证据 |
 
 ## 签署区
 

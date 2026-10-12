@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-DE330E086C
 title: GPCF-L4-002 MMC Production Resource Policy Evidence Intake
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, MMC, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, MMC, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -24,7 +24,7 @@ superseded_by: []
 |---|---|
 | Round ID | GPCF-L4-002 |
 | 对应项目轮次 | MMC-L4-002 |
-| 涉及项目 | MMC, GFIS, GPC, WAES, KDS, GPCF |
+| 涉及项目 | MMC, GFIS, GPC, WAME, KDS, GPCF |
 | 本轮业务节点 | 设备、产线、工序能力、生产资源与样品转量产资源门禁 |
 | 真实项目仓路径 | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud MMC` |
 | KDS retrieval | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud MMC/docs/harness/evidence/kds-retrieval-MMC-L4-002.json` |

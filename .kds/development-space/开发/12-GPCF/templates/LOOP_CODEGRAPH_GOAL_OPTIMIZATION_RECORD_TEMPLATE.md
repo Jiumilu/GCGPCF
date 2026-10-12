@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-4C34AF960B
 title: Loop CodeGraph Goal Optimization Record Template
 project: GPCF
-related_projects: [GPCF, WAES, KDS]
+related_projects: [GPCF, WAME, KDS]
 domain: templates
 status: controlled
 version: v1.0
@@ -100,5 +100,5 @@ superseded_by: []
 ## 8. 非声明
 
 - 本记录不证明业务完成。
-- 本记录不替代源码复核、测试、文档门禁、KDS TOKEN 门禁、Harness/WAES 判定或人工确认。
+- 本记录不替代源码复核、测试、文档门禁、KDS TOKEN 门禁、Harness/WAME 判定或人工确认。
 - 本记录不授权生产写入、真实外部 API 写入、数据库迁移、权限变更、部署、推送或合并。

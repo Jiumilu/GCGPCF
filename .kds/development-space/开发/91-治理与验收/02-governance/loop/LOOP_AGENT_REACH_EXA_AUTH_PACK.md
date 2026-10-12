@@ -1,12 +1,12 @@
 ---
 doc_id: GPCF-DOC-A882F89F6C
 title: Loop Agent-Reach Exa授权包
-project: WAES
-related_projects: [GFIS, GPC, WAES, KDS, Brain, PKC, XiaoC, XGD, GPCF]
+project: WAME
+related_projects: [GFIS, GPC, WAME, KDS, Brain, PKC, XiaoC, XGD, GPCF]
 domain: governance
 status: controlled
 version: v1.0
-owner: WAES
+owner: WAME
 kds_space: 开发
 kds_path: 开发/91-治理与验收/02-governance/loop/LOOP_AGENT_REACH_EXA_AUTH_PACK.md
 source_path: 02-governance/loop/LOOP_AGENT_REACH_EXA_AUTH_PACK.md
@@ -46,7 +46,7 @@ superseded_by: []
 ```text
 authorized_mode=agent-reach-exa-local-pilot
 authorized_scope=local_tmp_or_user_tooling
-authorized_projects=GPCF,KDS,Brain,PKC,XiaoC,XGD,WAES
+authorized_projects=GPCF,KDS,Brain,PKC,XiaoC,XGD,WAME
 allow_network_download=true/false
 allow_npm_package_install=true/false
 allow_global_npm_install=true/false
@@ -141,7 +141,7 @@ mcporter config list > /tmp/agent-reach-exa-after.json
 - Agent-Reach 已生产集成。
 - KDS canonical Markdown 已写入。
 - GFIS source-of-record 已创建。
-- GPCF、GFIS、KDS、Brain、WAES、GPC、PKC、XiaoC 或 XGD 状态可升级。
+- GPCF、GFIS、KDS、Brain、WAME、GPC、PKC、XiaoC 或 XGD 状态可升级。
 
 ## 10. 下一步
 

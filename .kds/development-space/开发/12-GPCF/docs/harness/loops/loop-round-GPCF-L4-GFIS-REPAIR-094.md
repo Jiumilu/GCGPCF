@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-6828F2860A
 title: loop-round-GPCF-L4-GFIS-REPAIR-094
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -32,7 +32,7 @@ superseded_by: []
 
 ## 本轮目标
 
-将 GFIS `GFIS-RUNTIME-SOP-E2E-087` 的辽宁远航正式原始凭证 review-readiness gate 纳入 GPCF 总控。该 gate 只证明 GFIS 能阻断无 review-ready submission 的人工/WAES 复核，不证明真实原始凭证已提交。
+将 GFIS `GFIS-RUNTIME-SOP-E2E-087` 的辽宁远航正式原始凭证 review-readiness gate 纳入 GPCF 总控。该 gate 只证明 GFIS 能阻断无 review-ready submission 的人工/WAME 复核，不证明真实原始凭证已提交。
 
 ## GFIS 实质产出
 
@@ -92,10 +92,10 @@ git diff --check -- .
 - 未执行生产写入。
 - 未执行真实外部 API 写入。
 - 未执行 bench migrate 或 schema sync。
-- 未执行真实 KDS/WAES 写入。
+- 未执行真实 KDS/WAME 写入。
 - 未执行 Git push、部署、权限变更或合并。
 - 未把 Demo、KDS 候选、报价 PDF、行动台账、沟通纪要或用户口述升级为 accepted/integrated。
-- 未把 review-readiness gate 计为客户确认函、样箱测试记录、江西委托生产记录、现代精工转量产放行或 WAES evidence ref。
+- 未把 review-readiness gate 计为客户确认函、样箱测试记录、江西委托生产记录、现代精工转量产放行或 WAME evidence ref。
 
 ## 下一轮
 

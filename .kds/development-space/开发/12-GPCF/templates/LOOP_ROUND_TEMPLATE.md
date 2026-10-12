@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-C3B9DFCB0C
 title: LOOP_ROUND_TEMPLATE
 project: GPCF
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, GPCF]
 domain: templates
 status: controlled
 version: v1.0
@@ -90,7 +90,7 @@ L3、L3.5、L4、L5 必填。每轮至少满足 4/5，才可计为 `substantive_
 
 ## 3.1 KDS 关联数据检索
 
-涉及真实开发、契约、mock、dry-run 或 evidence 时必填。KDS 只提供受控语义、字段口径、SOP、案例和 evidence 回指，不替代 GPC/GFIS/WAES/PVAOS 的当前业务事实。
+涉及真实开发、契约、mock、dry-run 或 evidence 时必填。KDS 只提供受控语义、字段口径、SOP、案例和 evidence 回指，不替代 GPC/GFIS/WAME/PVAOS 的当前业务事实。
 
 | 字段 | 值 |
 |---|---|
@@ -226,16 +226,16 @@ Loop 模式为 L4 时必填。评分标准来源：`01-architecture/GlobalCloud�
 | 字段 | 值 |
 |---|---|
 | UI scope | true / false |
-| Tool route | `@product-design -> WAES -> ui-ux-pro-max -> Figma -> Storybook -> impeccable -> Playwright/browser -> axe-core/Lighthouse -> GPCF UI Gate` / project-specific route / not_applicable |
+| Tool route | `@product-design -> WAME -> ui-ux-pro-max -> Figma -> Storybook -> impeccable -> Playwright/browser -> axe-core/Lighthouse -> GPCF UI Gate` / project-specific route / not_applicable |
 | Context package | completed / partial / missing / not_applicable |
 | Prompt profile | functional-accuracy / visual-quality / usability-experience / governance-evidence / scope-control / mixed / not_applicable |
 | Design options | 3 / 1_with_existing_selected_direction / not_applicable |
 | Selected option | 1 / 2 / 3 / existing / not_applicable |
-| WAES baseline reuse | shell / page-skeleton / core-components / full-stack / exception-approved / not_applicable |
+| WAME baseline reuse | shell / page-skeleton / core-components / full-stack / exception-approved / not_applicable |
 | Surface | list / detail / edit-config / operation-workbench / exception-handling / evidence-audit / ai-chat / ai-sidebar / brand-marketing / mobile-desktop-shell / not_applicable |
 | Repository/path |  |
 | Scope |  |
-| Tools used | `@product-design` / WAES / Impeccable / ui-ux-pro-max / Playwright / browser / Figma / Storybook / axe-core / Lighthouse / manual / not_applicable |
+| Tools used | `@product-design` / WAME / Impeccable / ui-ux-pro-max / Playwright / browser / Figma / Storybook / axe-core / Lighthouse / manual / not_applicable |
 | Tools unavailable |  |
 | Verification |  |
 | Status ceiling | ui_evidence_candidate / partial / blocked / rework_required / not_applicable |
@@ -247,7 +247,7 @@ Context package:
 Prompt profile:
 Design options:
 Selected option:
-WAES baseline reuse:
+WAME baseline reuse:
 Surface:
 Repository/path:
 Scope:

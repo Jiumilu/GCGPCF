@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-EBA4B9A09F
 title: Loop Round GPCF-L4-GFIS-REPAIR-209
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -42,7 +42,7 @@ superseded_by: []
 
 ## 本轮目标
 
-把 GFIS `GFIS-RUNTIME-SOP-E2E-202` 纳入 GPCF 总控：第一个运行对象族 `CustomerRequirementOrPlatformOrder` 的 owner/manual request dispatch confirmation hold release precheck 已建立，但仍因缺真实派发确认文件、人工派发授权、接收人身份确认、人工通道确认、KDS backlink 与 WAES evidence candidate 而保持阻断。
+把 GFIS `GFIS-RUNTIME-SOP-E2E-202` 纳入 GPCF 总控：第一个运行对象族 `CustomerRequirementOrPlatformOrder` 的 owner/manual request dispatch confirmation hold release precheck 已建立，但仍因缺真实派发确认文件、人工派发授权、接收人身份确认、人工通道确认、KDS backlink 与 WAME evidence candidate 而保持阻断。
 
 ## GFIS 运行层口径
 
@@ -88,7 +88,7 @@ quarantine_allowed=0
 review_queue_ready=0
 review_queue=0
 manual_review=0
-waes_review=0
+wame_review=0
 runtime_intake=0
 verified=0
 runtime_primary_key_ready=0
@@ -120,9 +120,9 @@ GFIS Demo E2E `26 passed`，仅登记为 `pass_demo_only`。
 ## 非声明
 
 - 未释放 hold
-- 未创建 acknowledgement、owner response、submission package、review queue、runtime intake、WAES review 或 verified artifact
+- 未创建 acknowledgement、owner response、submission package、review queue、runtime intake、WAME review 或 verified artifact
 - 未创建客户订单、平台订单、授权 envelope、派发确认、运行层主键或业务单据
-- 未执行生产写入、真实外部 API 写入、真实 KDS 写入、真实 WAES 写入
+- 未执行生产写入、真实外部 API 写入、真实 KDS 写入、真实 WAME 写入
 - 未执行 ECS/阿里云/Caddy/隧道/Docker 变更
 - 未执行数据库迁移、schema sync、权限变更、部署
 - 未声明 accepted/integrated

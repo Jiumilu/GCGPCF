@@ -38,7 +38,7 @@ superseded_by: []
 | authorization_scope | L3.5_controlled_sanitized_pilot_only |
 | sanitized_production_token_ledger | fixtures/headroom/headroom-lcx-project-group-sanitized-fixture-20260622.json |
 | rollback_plan_id | HEADROOM-LCX-ROLLBACK-PLAN-20260622-001 |
-| waes_harness_admission_decision | admitted_for_l3_5_sanitized_pilot_only |
+| wame_harness_admission_decision | admitted_for_l3_5_sanitized_pilot_only |
 | authorization_complete_for_l3_5 | true |
 | authorization_complete_for_l4_l5_or_production | false |
 

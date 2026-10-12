@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-44A0166A25
 title: LOOP Round GPCF KDS DKS-136
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, Brain, PKC, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, Brain, PKC, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -20,7 +20,7 @@ superseded_by: []
 
 ## 本轮目标
 
-建立 GFIS Assistant repair notification snooze queue approval acknowledgement digest delivery acknowledgement escalation SLA preview 的 no-write 规则、类型、夹具和校验器，承接 DKS-135 escalation preview，但只展示候选 SLA 窗口、剩余分钟、超时分钟、SLA 风险、候选升级负责人和下一步建议，不创建真实 SLA 计时器、升级、提醒、投递确认、审批请求、审批决定、Harness evidence、KWE 工单、WAES 结果、KDS 状态提升或业务写回。
+建立 GFIS Assistant repair notification snooze queue approval acknowledgement digest delivery acknowledgement escalation SLA preview 的 no-write 规则、类型、夹具和校验器，承接 DKS-135 escalation preview，但只展示候选 SLA 窗口、剩余分钟、超时分钟、SLA 风险、候选升级负责人和下一步建议，不创建真实 SLA 计时器、升级、提醒、投递确认、审批请求、审批决定、Harness evidence、KWE 工单、WAME 结果、KDS 状态提升或业务写回。
 
 ## 输入
 
@@ -59,4 +59,4 @@ superseded_by: []
 
 ## 反馈
 
-DKS-136 仍是本地预览与候选展示能力，不代表 SLA timer、escalation、reminder、delivery acknowledgement、approval request、approval decision、KWE 工单、WAES 结果、Harness evidence 或委员会决议已经创建。下一轮可继续推进 DKS-137：approval acknowledgement digest delivery acknowledgement escalation SLA breach review preview no-write，用于展示候选 breach review 边界，但仍不得写入真实通知、确认、审批或 evidence。
+DKS-136 仍是本地预览与候选展示能力，不代表 SLA timer、escalation、reminder、delivery acknowledgement、approval request、approval decision、KWE 工单、WAME 结果、Harness evidence 或委员会决议已经创建。下一轮可继续推进 DKS-137：approval acknowledgement digest delivery acknowledgement escalation SLA breach review preview no-write，用于展示候选 breach review 边界，但仍不得写入真实通知、确认、审批或 evidence。

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-6D92B5F4E7
 title: Studio 工作台入口拓扑矩阵证据
 project: GPCF
-related_projects: [GPC, WAES, GPCF, Studio]
+related_projects: [GPC, WAME, GPCF, Studio]
 domain: docs
 status: controlled
 version: v1.0

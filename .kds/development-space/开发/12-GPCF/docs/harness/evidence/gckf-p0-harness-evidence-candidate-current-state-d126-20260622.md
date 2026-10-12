@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-GCKFP0HARNESSEVIDENCECANDIDATECURRENTSTATED12620260622
 title: GCKF P0 Harness evidence 候选记录当前态证据 D126
 project: GPCF
-related_projects: [GPCF, WAES]
+related_projects: [GPCF, WAME]
 domain: docs
 status: controlled
 version: v1.0

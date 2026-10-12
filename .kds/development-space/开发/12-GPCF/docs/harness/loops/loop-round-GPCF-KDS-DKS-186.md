@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-324CB5A8A0
 title: LOOP Round GPCF KDS DKS-186
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -36,11 +36,11 @@ superseded_by: []
 - `scripts/gfis/validate_gfis_assistant_dks_186_routing_queue_notification_acknowledgement_escalation_digest_delivery_ack_escalation_sla_breach_review_resolution_option_preview.py`
 - `docs/gc-knowledge-fabric/gfis-assistant-dks-186-routing-queue-notification-acknowledgement-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-preview-policy.md`
 
-## WAES / Harness 边界
+## WAME / Harness 边界
 
 - 只允许 preview candidate。
 - 不创建 resolution、dispute update、committee decision、freeze action、approval request、approval decision。
-- 不创建 Harness evidence、WAES gate result、KWE work item。
+- 不创建 Harness evidence、WAME gate result、KWE work item。
 - 不写 GFIS、GPC、ERP、MES、KDS lifecycle、KDS fact、KDS accepted fact 或 external API。
 
 ## 验证计划

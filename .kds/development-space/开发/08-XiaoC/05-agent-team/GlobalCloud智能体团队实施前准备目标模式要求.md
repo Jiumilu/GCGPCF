@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-3D6A5A4056
 title: GlobalCloud 智能体团队实施前准备目标模式要求
 project: XiaoC
-related_projects: [GFIS, GPC, WAES, KDS, XiaoC, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, XiaoC, GPCF]
 domain: agent-team
 status: controlled
 version: v1.0

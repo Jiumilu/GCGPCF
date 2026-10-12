@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-653FE10892
 title: GFIS Assistant DKS-245 SLA Breach Review Preview Policy
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS]
+related_projects: [GFIS, GPC, WAME, KDS]
 domain: docs
 status: controlled
 version: v1.0
@@ -28,7 +28,7 @@ superseded_by: []
 - 不创建 dispute、committee case、freeze request。
 - 不创建 reminder、approval request、approval decision。
 - 不写 GFIS、GPC、ERP、MES。
-- 不写 WAES gate result、KWE work item、Harness evidence。
+- 不写 WAME gate result、KWE work item、Harness evidence。
 - 不提升 KDS lifecycle，不生成 accepted fact。
 - 不调用外部 API。
 

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-62DA58CFFC
 title: GPCF-L4-GFIS-REPAIR-192
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -44,7 +44,7 @@ superseded_by: []
 |---|---|---|
 | py_compile | `python3 -m py_compile scripts/build_gfis_customer_requirement_platform_order_source_record_post_receipt_quarantine_release_hard_stop.py scripts/validate_gfis_customer_requirement_platform_order_source_record_post_receipt_quarantine_release_hard_stop.py scripts/validate_gfis_runtime_sop_e2e.py gcfis_custom/gcfis_custom/api.py` | pass |
 | builder | `python3 scripts/build_gfis_customer_requirement_platform_order_source_record_post_receipt_quarantine_release_hard_stop.py` | `attempted_release=1 hard_stops=1 hard_stop_reasons=8 submitted_files_found=0 structure_valid_records=0 quarantine_records=0 release_allowed=0` |
-| validator | `python3 scripts/validate_gfis_customer_requirement_platform_order_source_record_post_receipt_quarantine_release_hard_stop.py` | pass；`runtime_primary_key_ready=0 runtime_primary_key_missing=1 review_queue=0 runtime_intake=0 waes_review=0 verified=0` |
+| validator | `python3 scripts/validate_gfis_customer_requirement_platform_order_source_record_post_receipt_quarantine_release_hard_stop.py` | pass；`runtime_primary_key_ready=0 runtime_primary_key_missing=1 review_queue=0 runtime_intake=0 wame_review=0 verified=0` |
 | runtime SOP validator | `PYTHONDONTWRITEBYTECODE=1 python3 scripts/validate_gfis_runtime_sop_e2e.py` | expected exit 2；`runtime_customer_requirement_platform_order_source_record_post_receipt_quarantine_release_hard_stop=customer_requirement_platform_order_source_record_release_attempt_hard_stopped_missing_real_source`；`gfis_runtime_sop_e2e=repair_required` |
 | Demo E2E | `npm run test:e2e` | 26 passed；`pass_demo_only` |
 | diff hygiene | `git diff --check -- .` | pass |
@@ -62,7 +62,7 @@ superseded_by: []
 - `runtime_primary_key_missing=1`
 - `review_queue=0`
 - `runtime_intake=0`
-- `waes_review=0`
+- `wame_review=0`
 - `verified=0`
 - `runtime_sop_e2e=repair_required`
 
@@ -70,7 +70,7 @@ superseded_by: []
 
 - 不声明客户订单或平台订单已取得。
 - 不声明运行层主键已生成。
-- 不声明 quarantine business record、review queue、runtime intake、WAES review 或 verified artifact 已成立。
+- 不声明 quarantine business record、review queue、runtime intake、WAME review 或 verified artifact 已成立。
 - 不声明 GFIS SOP E2E 通过。
 - 不恢复 `100/100`、closed、accepted 或 integrated。
 
@@ -79,7 +79,7 @@ superseded_by: []
 - 未执行 Git push。
 - 未执行生产写入。
 - 未执行真实外部 API 写入。
-- 未执行真实 KDS/WAES 写入。
+- 未执行真实 KDS/WAME 写入。
 - 未执行 `bench migrate` 或 schema sync。
 - 未执行权限变更、部署、生产配置修改或 ECS/阿里云/Caddy/隧道/Docker 变更。
 
@@ -94,4 +94,4 @@ superseded_by: []
 
 ## 下一轮建议
 
-`GFIS-RUNTIME-SOP-E2E-186`：围绕 `CustomerRequirementOrPlatformOrder` 建立真实源记录到 review queue 的预检骨架。真实 source-of-record 未到达前，继续保持 `review_queue=0`、`runtime_intake=0`、`waes_review=0`、`verified=0`。
+`GFIS-RUNTIME-SOP-E2E-186`：围绕 `CustomerRequirementOrPlatformOrder` 建立真实源记录到 review queue 的预检骨架。真实 source-of-record 未到达前，继续保持 `review_queue=0`、`runtime_intake=0`、`wame_review=0`、`verified=0`。

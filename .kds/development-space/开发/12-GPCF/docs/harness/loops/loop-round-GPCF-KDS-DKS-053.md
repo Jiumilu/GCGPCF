@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-9F28DE7848
 title: LOOP Round GPCF-KDS-DKS-053 - 葛化 DKS-052 填报包 dry-run 验收与人工确认队列视图
 project: GPCF
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -47,13 +47,13 @@ superseded_by: []
 |---|---|---|
 | DKS-052 字段和 dry-run 用例 | 补证包、金融索引、退回/阻断/人工确认/委员会触发 | none |
 | 葛化 GFIS 与 no_write 边界 | 三件套、订单母版、GFIS 真实业务线、候选写回 | none |
-| 积分收益 / WAES / RAG | DSR、RAG、AI 额度、收益池、悬赏、争议 | none |
+| 积分收益 / WAME / RAG | DSR、RAG、AI 额度、收益池、悬赏、争议 | none |
 
 | 只读核查结论 | 本轮采用 |
 |---|---|
 | DKS-052 dry-run 必须覆盖结构合规、缺客户确认、缺 QPOD、OEM 责任混同、敏感元数据、金融索引合规、金融泄露阻断、缺保管责任、委员会收益/潜在产值/争议/违规/悬赏触发、候选写回和全局状态保护 | 主文档采用 `DKS053-*` caseId 矩阵 |
 | GFIS 当前只允许受控文档层、预运营候选、资料验收、字段/缺口/SOP 建议和 synthetic dry-run；真实业务线仍 `repair_required`，真实 source record、runtime primary key、runtime intake、verified artifact 均为 0 | 主文档保持 GFIS `no_write`，DefectRecord 继续 open |
-| DSR-L2 未脱敏必须退回；DSR-L3 只能 metadata_only / sealed_offline；WAES 只记录规则；收益、潜在产值转正式、跨单位权益、重大违规、悬赏结算必须进委员会 | 主文档加入 RAG 负例和全局断言 |
+| DSR-L2 未脱敏必须退回；DSR-L3 只能 metadata_only / sealed_offline；WAME 只记录规则；收益、潜在产值转正式、跨单位权益、重大违规、悬赏结算必须进委员会 | 主文档加入 RAG 负例和全局断言 |
 
 ## 3. 本轮目标
 
@@ -62,7 +62,7 @@ superseded_by: []
 1. 虚拟脱敏样例用例表。
 2. 人工确认队列候选视图。
 3. 委员会队列候选视图。
-4. RAG / WAES 准入视图。
+4. RAG / WAME 准入视图。
 5. 候选写回和候选 SOP 的 no_write / suggestion_only 边界。
 
 ## 4. 本轮动作
@@ -70,7 +70,7 @@ superseded_by: []
 1. 读取 DKS-052、控制板、状态矩阵、订单母版、积分收益规则和队列样式。
 2. 判断多 agent 是否适用，并限制 explorer 为只读。
 3. 新增 `GlobalCloud葛化DKS052填报包dry-run验收与人工确认队列视图.md`。
-4. 定义 17 个 dry-run 用例，覆盖补证包、金融凭证、RAG、WAES、候选写回和 SOP 建议。
+4. 定义 17 个 dry-run 用例，覆盖补证包、金融凭证、RAG、WAME、候选写回和 SOP 建议。
 5. 定义 AssistantOutputRecord、EvalRecord、DefectRecord、WritebackCandidate 和 SOPSuggestion dry-run 记录对象。
 6. 定义 DKS-053 人工确认队列和委员会队列候选视图。
 7. 明确本轮不接收真实材料、不派发、不写主账、不升级状态。
@@ -115,7 +115,7 @@ superseded_by: []
 - 接收真实客户确认、采购订单、合同、POD、质量、开票、到账或金融凭证；
 - 派发真实补证请求；
 - 保存金融凭证原文、账户、金额明细或银行流水；
-- GFIS、WAES、KDS API、GPC、PVAOS、Finance 或生产系统写入；
+- GFIS、WAME、KDS API、GPC、PVAOS、Finance 或生产系统写入；
 - 悬赏发布、资源冻结、积分确认、额度发放或收益分配；
 - 人工签认或委员会裁决；
 - 关闭 GFIS `real_business_lane=repair_required`；

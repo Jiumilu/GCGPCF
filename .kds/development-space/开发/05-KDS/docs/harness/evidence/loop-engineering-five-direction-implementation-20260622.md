@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-D10B09B909
 title: Loop Engineering 五方向实施证据
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -42,12 +42,12 @@ superseded_by: []
 | runtime_primary_key_ready | `0` |
 | review_queue | `0` |
 | runtime_intake | `0` |
-| waes_review | `0` |
+| wame_review | `0` |
 | verified | `0` |
 | production_writes | `0` |
 | real_external_api_writes | `0` |
 | kds_fact_writes | `0` |
-| waes_gate_result_writes | `0` |
+| wame_gate_result_writes | `0` |
 
 ## 恢复检查点
 
@@ -80,7 +80,7 @@ superseded_by: []
 - 写入生产系统
 - 写入真实外部 API
 - 写入 KDS accepted fact
-- 写入 WAES Gate Result
+- 写入 WAME Gate Result
 
 ## 验证命令
 

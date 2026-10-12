@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-25CDA28633
 title: GC-Knowledge Fabric P0 正式证据执行签署人回执预览 dry-run v0.1
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -37,7 +37,7 @@ D43 只预览 D42 re-entry approval packet 的签署回执收集、拒收、超�
 
 | 范围 | 预览要求 |
 |---|---|
-| 签署角色 | 覆盖 request_owner、repair_reviewer、waes_gate_owner、kwe_workflow_owner、harness_reviewer、committee_representative、stop_authority_owner、business_system_owner |
+| 签署角色 | 覆盖 request_owner、repair_reviewer、wame_gate_owner、kwe_workflow_owner、harness_reviewer、committee_representative、stop_authority_owner、business_system_owner |
 | 回执通道 | 覆盖 controlled_register_ack、harness_review_queue_ack、committee_queue_ack、business_owner_ack |
 | 回执状态 | 覆盖 pending、acknowledged、refused、needs_repair、timed_out、escalation_required、voided |
 | 拒收路径 | 要求 refusal_reason_policy_ref，不把拒收自动转成结论 |
@@ -88,4 +88,4 @@ no_write=covered
 
 ## 6. 结论
 
-D43 仍是 candidate_preview，不是正式验收、正式审批或正式 evidence 写入。后续若进入 D44，应继续只做签署回执升级摘要预览或等价 no-write 预演，不得跳过 Harness/WAES/KWE 人工确认边界。
+D43 仍是 candidate_preview，不是正式验收、正式审批或正式 evidence 写入。后续若进入 D44，应继续只做签署回执升级摘要预览或等价 no-write 预演，不得跳过 Harness/WAME/KWE 人工确认边界。

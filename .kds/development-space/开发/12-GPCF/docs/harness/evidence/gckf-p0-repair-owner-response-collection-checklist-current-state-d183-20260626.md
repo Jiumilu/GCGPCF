@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-GCKFP0REPAIROWNERRESPONSECHECKLISTD18320260626
 title: GCKF P0 修复负责人响应收集清单当前态 D183
 project: GPCF
-related_projects: [GPCF, WAES, KDS]
+related_projects: [GPCF, WAME, KDS]
 domain: docs
 status: controlled
 version: v1.0
@@ -47,7 +47,7 @@ D183 接续 D182 的修复负责人响应要求预检，形成响应收集清单
 - 责任边界。
 - 下一动作 owner。
 - no-write 边界确认。
-- WAES review 要求。
+- WAME review 要求。
 - Harness evidence candidate 引用。
 - KDS backlink candidate 引用。
 - 人工确认要求。
@@ -56,7 +56,7 @@ D183 接续 D182 的修复负责人响应要求预检，形成响应收集清单
 
 - 尚未收到真实 repair owner response。
 - 尚未收到签署响应包。
-- 尚未形成 WAES review note。
+- 尚未形成 WAME review note。
 - 尚未形成人工确认。
 
 ## 禁止动作

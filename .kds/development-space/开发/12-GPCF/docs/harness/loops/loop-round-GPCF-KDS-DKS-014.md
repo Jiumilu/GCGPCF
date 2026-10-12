@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-69AA6E8EAB
 title: Loop Round GPCF-KDS-DKS-014
 project: GPCF
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -21,7 +21,7 @@ superseded_by: []
 日期：2026-06-17
 状态：v0.1 受控 Loop 记录
 主题：项目群与分布式 KDS 关系总图
-项目群范围：GFIS、GPC、PVAOS、WAES、KDS、Brain、PKC 个人知识、XiaoC / 小即、XGD、XiaoG、MMC、GPCF。
+项目群范围：GFIS、GPC、PVAOS、WAME、KDS、Brain、PKC 个人知识、XiaoC / 小即、XGD、XiaoG、MMC、GPCF。
 
 ## 1. 输入
 
@@ -37,7 +37,7 @@ superseded_by: []
 2. 将旧队列下的葛化资料包任务书标注为新队列 `GPCF-KDS-DKS-018` 的输入材料。
 3. 新增 `GlobalCloud项目群与分布式KDS关系总图.md`，定义 12 个项目在分布式 KDS 中的定位、输入输出边界和事实责任。
 4. 明确 KDS 11 个底座资源池作为广义 KDS 的事实基础数据底座，积分、收益、额度、悬赏、争议、潜在产值、SOP、贡献等进入增强治理账本并挂接到底座资源池。
-5. 建立 AI 候选输出到 WAES 规则门禁、人工确认、委员会备案和业务系统确认的路径。
+5. 建立 AI 候选输出到 WAME 规则门禁、人工确认、委员会备案和业务系统确认的路径。
 
 ## 3. 输出
 

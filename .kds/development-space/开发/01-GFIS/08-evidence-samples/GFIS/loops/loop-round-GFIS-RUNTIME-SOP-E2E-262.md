@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-751B5CF916
 title: GFIS-RUNTIME-SOP-E2E-262
 project: GFIS
-related_projects: [GFIS, WAES, KDS]
+related_projects: [GFIS, WAME, KDS]
 domain: evidence
 status: controlled
 version: v1.0
@@ -42,7 +42,7 @@ superseded_by: []
 `python3 scripts/validate_gfis_sop_e2e_262.py`：
 
 ```text
-gfis_customer_requirement_platform_order_runtime_primary_key_gate=pass source_record_index_files_found=0 valid_source_records=0 source_record_to_runtime_primary_key_ready=0 runtime_primary_key_gate_items=1 runtime_primary_key_gate_blocked=1 runtime_primary_key_created=0 runtime_primary_key_ready=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0 blocked=1 state=customer_requirement_platform_order_runtime_primary_key_gate_blocked_missing_valid_source_record runtime_sop_e2e=repair_required
+gfis_customer_requirement_platform_order_runtime_primary_key_gate=pass source_record_index_files_found=0 valid_source_records=0 source_record_to_runtime_primary_key_ready=0 runtime_primary_key_gate_items=1 runtime_primary_key_gate_blocked=1 runtime_primary_key_created=0 runtime_primary_key_ready=0 review_queue=0 runtime_intake=0 wame_review=0 verified=0 blocked=1 state=customer_requirement_platform_order_runtime_primary_key_gate_blocked_missing_valid_source_record runtime_sop_e2e=repair_required
 ```
 
 ## 真实性计数
@@ -65,11 +65,11 @@ gfis_customer_requirement_platform_order_runtime_primary_key_gate=pass source_re
 - runtime_primary_key_ready=0
 - review_queue=0
 - runtime_intake=0
-- waes_review=0
+- wame_review=0
 - verified=0
 - runtime_sop_e2e=repair_required
 
-不得创建 GFIS 运行层主键，不得进入 review queue、runtime intake、WAES review、verified artifact，不得升级 accepted/integrated。
+不得创建 GFIS 运行层主键，不得进入 review queue、runtime intake、WAME review、verified artifact，不得升级 accepted/integrated。
 
 ## 下一轮建议
 

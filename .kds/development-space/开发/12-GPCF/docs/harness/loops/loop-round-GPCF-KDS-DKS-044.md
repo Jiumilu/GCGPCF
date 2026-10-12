@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-AC27D15655
 title: LOOP Round GPCF-KDS-DKS-044 - 底座可用知识闭环率 dry-run evidence 与写回候选台账
 project: GPCF
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -54,7 +54,7 @@ superseded_by: []
 | 生成 dry-run evidence 摘要 | 已从 6 个 fixture 生成摘要 |
 | 生成写回候选台账 | 已把 writebackCandidates 转成 candidate-only 台账 |
 | 保留 hard-stop | hard-stop 行只进入候选复核，不进入写回 |
-| 保留边界 | 明确无真实 KDS API、WAES 写入、业务主账写入、RAG 准入或结算 |
+| 保留边界 | 明确无真实 KDS API、WAME 写入、业务主账写入、RAG 准入或结算 |
 
 ## 5. 明确不做范围
 
@@ -69,7 +69,7 @@ superseded_by: []
 - RAG 准入；
 - 指挥舱强引用；
 - 委员会真实裁决；
-- WAES 放行；
+- WAME 放行；
 - 真实 KDS API 写入；
 - GFIS、GPC、PVAOS 或其他业务系统主账写入；
 - `accepted` 或 `integrated` 状态升级。
@@ -98,7 +98,7 @@ superseded_by: []
 | builder frontmatter 保留 | pass | 首次复测发现 builder 覆盖 Markdown frontmatter 导致 `missing_metadata=2`；已修复为保留已有 frontmatter，复测 `missing_metadata=0` |
 | 文档控制 | pass | `tools/kds-sync/document_control.py` 已执行完成；Markdown 摘要 doc_id=`GPCF-DOC-CF3A246F25`，写回候选台账 doc_id=`GPCF-DOC-C13F879695`，本轮 LOOP 记录 doc_id=`GPCF-DOC-AC27D15655` |
 | LOOP 文档门禁 | pass | `repo_md=940`; `kds_md=953`; `local_mirror_ledger_lines=940`; `api_sync_ledger_lines=79`; `missing_metadata=0`; `missing_readme_dirs=0` |
-| 本轮边界 | pass | evidence 摘要显示 `realKdsApiWrite=false`、`waesWrite=false`、`businessLedgerWrite=false`、`settlementWrite=false`、`ragAdmission=false` |
+| 本轮边界 | pass | evidence 摘要显示 `realKdsApiWrite=false`、`wameWrite=false`、`businessLedgerWrite=false`、`settlementWrite=false`、`ragAdmission=false` |
 | 本轮台账 | pass | 写回候选共 14 条，状态均为 `candidate_only`，写权限均为 `none_dry_run_only` |
 | 状态升级 | not_allowed | 本轮不升级 `accepted` 或 `integrated`，仍受 GFIS/GPCF `repair_required` 约束 |
 

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-8DCFDAD068
 title: 阿里云 ECS 当前访问机制与配置变更控制
 project: WAME
-related_projects: [GFIS, WAME, KDS, XGD, GPCF]
+related_projects: [GFIS, WAME, KDS, XGD, GPCF, Studio]
 domain: governance
 status: controlled
 version: v1.0

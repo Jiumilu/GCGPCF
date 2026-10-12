@@ -1,26 +1,26 @@
 ---
 doc_id: GPCF-DOC-5C7F800184
-title: GPCF-AGENT-REACH-WAES-KDS-CANDIDATE-REVIEW-QUEUE-001
+title: GPCF-AGENT-REACH-WAME-KDS-CANDIDATE-REVIEW-QUEUE-001
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
 owner: GPCF
 kds_space: 开发
-kds_path: 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-AGENT-REACH-WAES-KDS-CANDIDATE-REVIEW-QUEUE-001.md
-source_path: docs/harness/loops/loop-round-GPCF-AGENT-REACH-WAES-KDS-CANDIDATE-REVIEW-QUEUE-001.md
+kds_path: 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-AGENT-REACH-WAME-KDS-CANDIDATE-REVIEW-QUEUE-001.md
+source_path: docs/harness/loops/loop-round-GPCF-AGENT-REACH-WAME-KDS-CANDIDATE-REVIEW-QUEUE-001.md
 sync_direction: bidirectional
 last_reviewed: 2026-06-24
 supersedes: []
 superseded_by: []
 ---
 
-# GPCF-AGENT-REACH-WAES-KDS-CANDIDATE-REVIEW-QUEUE-001
+# GPCF-AGENT-REACH-WAME-KDS-CANDIDATE-REVIEW-QUEUE-001
 
 ## 输入
 
-上一轮 `GPCF-AGENT-REACH-CANDIDATE-SEARCH-REPLAY-LEDGER-001` 生成了 5 条待评审候选来源。本轮目标是建立 WAES/KDS 人工评审队列，不自动判断 accept/reject。
+上一轮 `GPCF-AGENT-REACH-CANDIDATE-SEARCH-REPLAY-LEDGER-001` 生成了 5 条待评审候选来源。本轮目标是建立 WAME/KDS 人工评审队列，不自动判断 accept/reject。
 
 ## 动作
 
@@ -35,9 +35,9 @@ superseded_by: []
 
 | 产物 | 路径 |
 |---|---|
-| Evidence JSON | `docs/harness/evidence/agent-reach-waes-kds-candidate-review-queue-20260621.json` |
-| Evidence Markdown | `docs/harness/evidence/agent-reach-waes-kds-candidate-review-queue-20260621.md` |
-| Validator | `tools/kds-sync/validate_agent_reach_waes_kds_candidate_review_queue.py` |
+| Evidence JSON | `docs/harness/evidence/agent-reach-wame-kds-candidate-review-queue-20260621.json` |
+| Evidence Markdown | `docs/harness/evidence/agent-reach-wame-kds-candidate-review-queue-20260621.md` |
+| Validator | `tools/kds-sync/validate_agent_reach_wame_kds_candidate_review_queue.py` |
 
 ## 检查
 
@@ -56,7 +56,7 @@ superseded_by: []
 
 ## 反馈
 
-Agent-Reach 候选来源已进入 WAES/KDS 人工评审队列。下一门禁是逐条登记 `accept_limited` / `reject` / `defer` 及原因；在人工决策前，不得进入 KDS canonical、强 RAG 或生产集成。
+Agent-Reach 候选来源已进入 WAME/KDS 人工评审队列。下一门禁是逐条登记 `accept_limited` / `reject` / `defer` 及原因；在人工决策前，不得进入 KDS canonical、强 RAG 或生产集成。
 
 ## 轮次真实性
 

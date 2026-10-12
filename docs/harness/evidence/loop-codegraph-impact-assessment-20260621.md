@@ -41,7 +41,7 @@ CodeGraph 已经在 LOOP 中发挥实际作用：它不只是生成 `.codegraph/
 
 | 维度 | 分数 | 证据判断 |
 |---|---:|---|
-| 覆盖真实度 | 5 / 5 | 14 个本机 Git 仓均已 indexed，且 `.codegraph/` 未进入 Git |
+| 覆盖真实度 | 5 / 5 | 15 个本机 Git 仓均已 indexed，且 `.codegraph/` 未进入 Git |
 | 漂移发现能力 | 5 / 5 | Brain 活动 drift 扩大到 32 个文件、Studio 出现 4 个 pending 图谱变更，并被 CodeGraph 发现，未被旧完成态掩盖 |
 | LOOP 决策支持 | 5 / 5 | CodeGraph 状态已产生 monitor、sync drift、residual notice、large-file policy、project-group monitor 等下一轮输入 |
 | 降本证据 | 3 / 5 | 已将排查从项目群不确定性压缩到仓级和文件级；但尚未形成连续 MTTD/MTTR 趋势和量化节省 |

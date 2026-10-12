@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-860B374FB8
 title: GC-Knowledge Fabric P0-D28 正式 evidence 写入动作门禁 dry-run LOOP 证据
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0

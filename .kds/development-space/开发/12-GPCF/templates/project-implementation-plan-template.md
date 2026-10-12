@@ -2,7 +2,7 @@
 doc_id: PROJECT-DOC-IMPLEMENTATION-PLAN-TEMPLATE
 title: {{PROJECT_DISPLAY_NAME}} 实施方案
 project: GPCF
-related_projects: [GPC, WAES, GPCF]
+related_projects: [GPC, WAME, GPCF]
 domain: templates
 status: controlled
 version: v1.0

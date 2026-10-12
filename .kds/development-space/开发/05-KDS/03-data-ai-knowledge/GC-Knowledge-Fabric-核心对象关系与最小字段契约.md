@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-2F3CC2EAA1
 title: GC-Knowledge Fabric 核心对象关系与最小字段契约
 project: KDS
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS]
 domain: data-ai-knowledge
 status: controlled
 version: v1.0
@@ -23,7 +23,7 @@ superseded_by: []
 
 ## 1. 目标
 
-本文档定义 GC-Knowledge Fabric P0 阶段核心对象关系和最小字段契约，用于约束后续 OKF YAML、JSON Schema、KDS v2 表结构、WAES Gate、KWE 工单、GFIS 写回沙箱、Harness evidence 和 LOOP 记录。
+本文档定义 GC-Knowledge Fabric P0 阶段核心对象关系和最小字段契约，用于约束后续 OKF YAML、JSON Schema、KDS v2 表结构、WAME Gate、KWE 工单、GFIS 写回沙箱、Harness evidence 和 LOOP 记录。
 
 本文档不代表数据库已创建，也不代表 API 已实现。
 
@@ -34,7 +34,7 @@ SourceRecord
   -> EvidenceRecord
   -> KnowledgeObject
   -> FactCandidate / SOPCandidate / GapRecord
-  -> WAESGateResult
+  -> WAMEGateResult
   -> KWEWorkItem / ConfirmationWorkpack
   -> ConfirmationRecord / DecisionRecord
   -> WritebackCandidate / ContributionRecord / RevenueRecord
@@ -50,10 +50,10 @@ SourceRecord
 | KnowledgeObject | FactCandidate | 知识对象可派生候选事实 |
 | KnowledgeObject | SOPCandidate | 知识对象可派生候选 SOP |
 | KnowledgeObject | GapRecord | 缺来源、缺证据、缺字段时生成缺口 |
-| FactCandidate | WAESGateResult | 候选事实必须过门禁 |
-| SOPCandidate | WAESGateResult | 候选 SOP 必须过门禁 |
-| WritebackCandidate | WAESGateResult | 写回候选必须过写回门禁 |
-| WAESGateResult | KWEWorkItem | 门禁要求人工、补证或委员会时创建工单 |
+| FactCandidate | WAMEGateResult | 候选事实必须过门禁 |
+| SOPCandidate | WAMEGateResult | 候选 SOP 必须过门禁 |
+| WritebackCandidate | WAMEGateResult | 写回候选必须过写回门禁 |
+| WAMEGateResult | KWEWorkItem | 门禁要求人工、补证或委员会时创建工单 |
 | KWEWorkItem | ConfirmationRecord | 人工确认结果 |
 | KWEWorkItem | DecisionRecord | 委员会裁决结果 |
 | ConfirmationRecord | WritebackCandidate | 确认后可进入写回候选 |
@@ -105,13 +105,13 @@ SourceRecord
 | `confidence` | 否 | 置信度 |
 | `sourceRefs` | 是 | 来源 |
 | `evidenceRefs` | 是 | 证据 |
-| `waesGateRefs` | 是 | WAES 门禁 |
+| `wameGateRefs` | 是 | WAME 门禁 |
 | `confirmationStatus` | 是 | 确认状态 |
 | `promotionBlockers` | 否 | 升级阻塞 |
 
 禁止字段：`directBusinessWriteback`。
 
-## 5. WAESGateResult 最小字段
+## 5. WAMEGateResult 最小字段
 
 | 字段 | 必填 | 说明 |
 |---|---|---|
@@ -137,14 +137,14 @@ SourceRecord
 |---|---|---|
 | `candidateId` | 是 | 写回候选 ID |
 | `sourceFactId` | 是 | 来源事实或候选事实 |
-| `targetSystem` | 是 | GFIS/GPC/ERP/MES/KDS/WAES |
+| `targetSystem` | 是 | GFIS/GPC/ERP/MES/KDS/WAME |
 | `targetModule` | 是 | 目标模块 |
 | `targetField` | 是 | 目标字段 |
 | `currentValue` | 否 | 当前值 |
 | `proposedValue` | 是 | 候选值 |
 | `diffReason` | 是 | 差异原因 |
 | `evidenceRefs` | 是 | 证据 |
-| `waesResult` | 是 | 门禁结果 |
+| `wameResult` | 是 | 门禁结果 |
 | `businessOwner` | 是 | 业务负责人 |
 | `confirmationStatus` | 是 | 确认状态 |
 | `writebackMode` | 是 | no-write/sandbox/approved-write/production-write |
@@ -183,7 +183,7 @@ P1 前只允许 `no-write` 和 `sandbox`。
 | `newGapRefs` | 是 | 新增缺口 |
 | `candidateFactRefs` | 是 | 候选事实 |
 | `candidateSopRefs` | 是 | 候选 SOP |
-| `waesResultRefs` | 是 | WAES 结果 |
+| `wameResultRefs` | 是 | WAME 结果 |
 | `confirmationRefs` | 是 | 人工确认 |
 | `committeeRefs` | 是 | 委员会事项 |
 | `risk` | 是 | 风险 |
@@ -236,7 +236,7 @@ expected:
 P0 对象关系与字段契约通过条件：
 
 1. 核心对象关系链完整。
-2. KnowledgeObject、FactCandidate、WAESGateResult、WritebackCandidate、RevenueRecord、LOOPRecord 有最小字段。
+2. KnowledgeObject、FactCandidate、WAMEGateResult、WritebackCandidate、RevenueRecord、LOOPRecord 有最小字段。
 3. Gate、RAG、写回、收益有最小 fixture。
 4. 字段契约明确禁止直接业务写回。
 5. P1 前写回模式限制为 `no-write` 和 `sandbox`。

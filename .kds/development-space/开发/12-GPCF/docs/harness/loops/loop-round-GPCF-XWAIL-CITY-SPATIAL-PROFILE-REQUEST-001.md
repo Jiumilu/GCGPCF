@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-165FB00EF6
 title: Loop Round GPCF XWAIL City Spatial Profile Request 001
 project: GPCF
-related_projects: [GPC, WAES, GPCF]
+related_projects: [GPC, WAME, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -41,7 +41,7 @@ superseded_by: []
 
 ## 反馈
 
-- 请求包已提交（submitted=true）；`governance_reviewed=false`、`waes_authorized=false`、`accepted=false`、`integrated=false`、`production_ready=false`。
+- 请求包已提交（submitted=true）；`governance_reviewed=false`、`wame_authorized=false`、`accepted=false`、`integrated=false`、`production_ready=false`。
 - 获准后将进入 `xwail-city-profile` schema 候选起草（与 F-017 CWME B4-1/B4-2 协同）。
 
 ## 下一轮

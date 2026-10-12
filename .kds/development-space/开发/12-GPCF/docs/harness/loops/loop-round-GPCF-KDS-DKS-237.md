@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-3B0B60DBA5
 title: GPCF KDS DKS-237 Loop
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -44,7 +44,7 @@ superseded_by: []
 - 不创建 routing queue、queue item、approval assignment 或 approval lock。
 - 不创建 approval packet、approval request 或 approval decision。
 - 不创建 committee decision 或 freeze action。
-- 不创建 Harness evidence、WAES gate result 或 KWE work item。
+- 不创建 Harness evidence、WAME gate result 或 KWE work item。
 - 不提升 KDS lifecycle，不写 KDS fact / accepted fact。
 - 不写 GFIS、GPC、ERP、MES，不调用外部 API。
 

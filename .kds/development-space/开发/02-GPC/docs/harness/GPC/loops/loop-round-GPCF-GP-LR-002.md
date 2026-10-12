@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-F7E27E2A98
 title: Loop Round GPCF-GP-LR-002：GPC 蓝图授权前检查清单
 project: GPC
-related_projects: [GFIS, GPC, WAES, GPCF]
+related_projects: [GFIS, GPC, WAME, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -44,3 +44,4 @@ superseded_by: []
 | GFIS/GPC 边界 | pending-human-review | 订单/交付/POD/回款事实边界确认 |
 
 当前状态保持 `partial`；本轮不写入 GPC 蓝图，不改变架构结论，也不标记 accepted/integrated。
+Current state remains `partial`

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-D83CE73173
 title: GlobalCloud 智能体团队真实项目仓库映射与只读预检计划
 project: XiaoC
-related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio]
 domain: agent-team
 status: controlled
 version: v1.0

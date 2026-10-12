@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-612DEF1746
 title: GFIS Assistant Approval Packet Routing Queue Preview No-write 规则
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS]
+related_projects: [GFIS, GPC, WAME, KDS]
 domain: docs
 status: controlled
 version: v1.0
@@ -22,7 +22,7 @@ superseded_by: []
 
 本规则定义 DKS-140 的 approval packet routing queue preview。
 
-它承接 DKS-139 的 approval packet preview，只展示候选审批包进入候选路由队列时的候选槽位、候选处理人、队列状态、优先级、阻断原因和下一步建议，不创建真实 routing queue、queue item、approval assignment、approval lock、approval packet、approval request、approval decision、committee decision、freeze action、WAES 结果、KWE 工单、Harness evidence、KDS 状态提升或业务系统写回。
+它承接 DKS-139 的 approval packet preview，只展示候选审批包进入候选路由队列时的候选槽位、候选处理人、队列状态、优先级、阻断原因和下一步建议，不创建真实 routing queue、queue item、approval assignment、approval lock、approval packet、approval request、approval decision、committee decision、freeze action、WAME 结果、KWE 工单、Harness evidence、KDS 状态提升或业务系统写回。
 
 ## 强边界
 
@@ -35,7 +35,7 @@ superseded_by: []
 - routing queue preview 不创建 approval decision。
 - routing queue preview 不创建 committee decision。
 - routing queue preview 不创建 freeze action。
-- routing queue preview 不是 WAES gate result。
+- routing queue preview 不是 WAME gate result。
 - routing queue preview 不是 KWE work item。
 - routing queue preview 不是 Harness evidence。
 - routing queue preview 不是 KDS lifecycle change。
@@ -54,7 +54,7 @@ superseded_by: []
 - `createsApprovalDecision = false`
 - `createsCommitteeDecision = false`
 - `createsFreezeAction = false`
-- `createsWaesGateResult = false`
+- `createsWameGateResult = false`
 - `createsKweWorkItem = false`
 - `createsHarnessEvidence = false`
 - `promotesLifecycle = false`
@@ -72,4 +72,4 @@ superseded_by: []
 - fixture 覆盖 6 类 routing queue 预览。
 - validator 证明所有写入计数为 0。
 - 覆盖率清单纳入 OKF / Types / Validator / Fixture。
-- 本轮不产生真实审批队列、审批分派、业务写回、真实 KDS 写入、真实 WAES 结果、KWE 工单或 Harness evidence。
+- 本轮不产生真实审批队列、审批分派、业务写回、真实 KDS 写入、真实 WAME 结果、KWE 工单或 Harness evidence。

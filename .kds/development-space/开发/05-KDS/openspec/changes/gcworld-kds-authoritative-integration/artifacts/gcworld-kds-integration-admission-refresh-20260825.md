@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-GCWORLD-051
 title: GCWORLD与KDS权威事实集成准入刷新评估
 project: KDS
-related_projects: [GPC, WAES, KDS, GPCF]
+related_projects: [GPC, WAME, KDS, GPCF]
 domain: openspec
 status: draft
 version: v1.0

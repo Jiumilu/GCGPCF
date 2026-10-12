@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-98EB05CB36
 title: GPCF-L4-GFIS-REPAIR-003 GFIS WorkOrder Runtime API Blocker Isolation
 project: GPCF
-related_projects: [GFIS, GPC, WAES, GPCF]
+related_projects: [GFIS, GPC, WAME, GPCF]
 domain: docs
 status: controlled
 version: v1.0

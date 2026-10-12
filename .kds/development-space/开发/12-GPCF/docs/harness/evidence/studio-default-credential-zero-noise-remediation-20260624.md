@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-5A7D23B8E1
 title: Studio 默认凭据整改零噪声复验证据
 project: GPCF
-related_projects: [GPC, WAES, GPCF, Studio]
+related_projects: [GPC, WAME, GPCF, Studio]
 domain: docs
 status: controlled
 version: v1.0

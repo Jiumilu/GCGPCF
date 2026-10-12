@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-C633FC3ABA
 title: GPCF-L4-GFIS-REPAIR-251
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -39,7 +39,7 @@ superseded_by: []
 - GFIS 保持 `confirmation_files_found=0`、`valid_confirmations=0`、`missing_confirmations=1`。
 - GFIS 保持 `owner_response_allowed=0`、`submission_package_allowed=0`、`dispatch_allowed=0`、`request_items_dispatched=0`、`release_override_allowed=0`。
 - GFIS 保持 `hold_items=1`、`open_holds=1`、`hold_release_allowed=0`。
-- GFIS 保持 `runtime_primary_key_ready=0`、`review_queue=0`、`runtime_intake=0`、`waes_review=0`、`verified=0`、`runtime_sop_e2e=repair_required`。
+- GFIS 保持 `runtime_primary_key_ready=0`、`review_queue=0`、`runtime_intake=0`、`wame_review=0`、`verified=0`、`runtime_sop_e2e=repair_required`。
 
 ## 检查
 
@@ -60,5 +60,5 @@ superseded_by: []
 - batch_generated: false
 - substance_gate: pass
 - stop_type: authorization_boundary
-- 本轮只同步 GFIS 241 负例守卫；不释放 open hold、不派发、不确认、不允许 owner response/submission package、不生成客户订单、平台订单、合规人工核验完成文件、有效 release-ready package、source-of-record、runtime primary key、review queue、runtime intake、WAES review 或 verified artifact。
+- 本轮只同步 GFIS 241 负例守卫；不释放 open hold、不派发、不确认、不允许 owner response/submission package、不生成客户订单、平台订单、合规人工核验完成文件、有效 release-ready package、source-of-record、runtime primary key、review queue、runtime intake、WAME review 或 verified artifact。
 - 下一轮建议：`GFIS-RUNTIME-SOP-E2E-242` 建立 dispatch confirmation release attempt hard-stop audit。

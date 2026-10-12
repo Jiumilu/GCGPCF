@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-WAS-ONTOLOGY-XWAIL-MAPPING-20260623
 title: WAS-Ontology-XWAIL 语义契约与映射机制
 project: GPCF
-related_projects: [GPCF, GFIS, GPC, PVAOS, WAME, KDS, Brain, Studio]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, GPCF, Studio]
 domain: architecture
 status: controlled
 version: v1.0

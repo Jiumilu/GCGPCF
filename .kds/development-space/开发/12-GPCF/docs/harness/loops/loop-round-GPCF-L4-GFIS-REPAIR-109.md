@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-904A1650B6
 title: GPCF-L4-GFIS-REPAIR-109 GFIS Dispatch Authorization Preflight
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -60,7 +60,7 @@ runtime_liaoning_yuanhang_dispatch_authorization_preflight=pass:items=4:blocked=
 
 ## 边界
 
-- 本轮不发出补证请求，不调用真实外部 API，不写生产，不写真实 KDS/WAES。
+- 本轮不发出补证请求，不调用真实外部 API，不写生产，不写真实 KDS/WAME。
 - 本轮不把授权、用户事实、KDS 候选、dispatch checklist 或 preflight 解释为 owner response。
 - 本轮不创建 review queue item，不进入 runtime intake，不生成 verified artifact。
 - 本轮不执行数据库迁移、权限变更、部署、push 或 accepted/integrated 状态升级。

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-EDD3670D2E
 title: Loop Round GPCF-LOOP-DOCUMENT-LOCALIZATION-DEBT-TRIAGE-001
 project: GPCF
-related_projects: [GPC, WAES, KDS, GPCF]
+related_projects: [GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0

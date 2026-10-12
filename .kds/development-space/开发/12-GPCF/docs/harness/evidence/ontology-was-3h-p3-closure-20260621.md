@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-20DAB7011D
 title: Ontology/WAS 3 小时实施 P3 收口与下一步决策证据
 project: GPCF
-related_projects: [GFIS, GPC, WAES, GPCF]
+related_projects: [GFIS, GPC, WAME, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -22,7 +22,7 @@ superseded_by: []
 
 `GPCF-ONTOLOGY-WAS-3H-P3-CLOSURE-001` 已完成 P3：文档治理、Loop gate 和下一步决策边界收口。
 
-本 evidence 证明 3 小时阶段目标从 P0 到 P3 的受控本地 evidence 链已闭合，但不证明真实业务 source-of-record 到达，也不证明 GFIS runtime primary key、review queue、runtime intake、WAES review 或 verified artifact 已形成。
+本 evidence 证明 3 小时阶段目标从 P0 到 P3 的受控本地 evidence 链已闭合，但不证明真实业务 source-of-record 到达，也不证明 GFIS runtime primary key、review queue、runtime intake、WAME review 或 verified artifact 已形成。
 
 ## P3 字段
 
@@ -73,7 +73,7 @@ superseded_by: []
 | runtime_primary_key_ready | `0` |
 | review_queue | `0` |
 | runtime_intake | `0` |
-| waes_review | `0` |
+| wame_review | `0` |
 | verified | `0` |
 | accepted | `false` |
 | integrated | `false` |
@@ -96,7 +96,7 @@ superseded_by: []
 - 创建 runtime primary key。
 - 打开 review queue。
 - 创建 runtime intake。
-- 创建 WAES review。
+- 创建 WAME review。
 - 标记 verified artifact。
 - 标记 accepted 或 integrated。
 - 标记 production_ready。

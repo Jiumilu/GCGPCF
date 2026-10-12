@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-6C0AA90095
 title: WAS Real Source Record Monitor 095 证据
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -20,7 +20,7 @@ superseded_by: []
 
 ## 范围
 
-`GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-095` 将绿色供应链覆盖扩展到第三方保证执行层：核验机构资质、核验人员能力矩阵、保证取样计划、现场访问到场记录、证据抽样轨迹、保证例外日志和最终保证意见。该边界用于约束外部核验执行证据进入 WAES/KDS/GFIS/RAG/Pool 之前必须具备可追溯、可复核、不可由 LLM 或治理文档替代的来源链。
+`GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-095` 将绿色供应链覆盖扩展到第三方保证执行层：核验机构资质、核验人员能力矩阵、保证取样计划、现场访问到场记录、证据抽样轨迹、保证例外日志和最终保证意见。该边界用于约束外部核验执行证据进入 WAME/KDS/GFIS/RAG/Pool 之前必须具备可追溯、可复核、不可由 LLM 或治理文档替代的来源链。
 
 ## 监控检查
 
@@ -42,7 +42,7 @@ superseded_by: []
 | runtime_primary_key_ready | `0` |
 | review_queue | `0` |
 | runtime_intake | `0` |
-| waes_review | `0` |
+| wame_review | `0` |
 | verified | `0` |
 | accepted | `False` |
 | integrated | `False` |
@@ -73,7 +73,7 @@ python3 tools/kds-sync/validate_was_real_source_record_monitor_095.py
 
 - 本证据不创建也不推断核验机构资质、核验人员能力矩阵、保证取样计划、现场访问到场记录、证据抽样轨迹、保证例外日志或最终保证意见。
 - 本证据不写入 GFIS/KWE 运行层。
-- 本证据不创建 KDS 正式事实、WAES review、runtime primary key、review queue、runtime intake、verified artifact，也不形成 accepted、integrated 或 production ready 状态。
+- 本证据不创建 KDS 正式事实、WAME review、runtime primary key、review queue、runtime intake、verified artifact，也不形成 accepted、integrated 或 production ready 状态。
 
 ## 下一轮
 

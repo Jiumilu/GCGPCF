@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-23F8320542
 title: GFIS Writeback Candidate Batch Diff No-write 规则
 project: KDS
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain]
 domain: docs
 status: controlled
 version: v1.0
@@ -18,7 +18,7 @@ superseded_by: []
 
 # GFIS Writeback Candidate Batch Diff No-write 规则
 
-本文件定义 DKS-098 GFIS Writeback Candidate Batch Diff 的最小契约。Batch diff 只用于批量展示候选写回字段差异、WAES gate 结果、KWE 后续动作和敏感处理要求，不代表 GFIS/GPC/ERP/MES 主账写回完成。
+本文件定义 DKS-098 GFIS Writeback Candidate Batch Diff 的最小契约。Batch diff 只用于批量展示候选写回字段差异、WAME gate 结果、KWE 后续动作和敏感处理要求，不代表 GFIS/GPC/ERP/MES 主账写回完成。
 
 ## 一、定位
 
@@ -26,7 +26,7 @@ Batch diff 解决的问题：
 
 - 将多个 `WritebackCandidate` 组织成一批 GFIS 写回候选。
 - 对每条候选展示目标实体、目标字段、当前值、建议值和 diff reason。
-- 对每条候选给出 WAES gate 状态、KWE 后续动作和是否需要人工/委员会。
+- 对每条候选给出 WAME gate 状态、KWE 后续动作和是否需要人工/委员会。
 - 对敏感字段只允许 metadata-only 或 controlled-original 引用。
 - 为 Brain/GFIS 助手展示 no-write 候选差异提供结构化材料。
 
@@ -34,7 +34,7 @@ Batch diff 不做：
 
 - 不写 GFIS/GPC/ERP/MES。
 - 不写 KDS accepted fact。
-- 不落库 WAES gate result。
+- 不落库 WAME gate result。
 - 不创建真实 KWE work item。
 - 不确认收益或积分。
 - 不调用外部 API。
@@ -62,7 +62,7 @@ Batch diff 不做：
 - `basedOnObjectRefs`
 - `evidenceRefs`
 - `poolRefs`
-- `waesGateStatus`
+- `wameGateStatus`
 - `writebackStatus`
 - `diffAction`
 - `sensitiveHandling`
@@ -109,7 +109,7 @@ Batch diff 不做：
 - `approvedForBusinessWrite` 必须为 `false`。
 - `targetReceiptRefs` 必须为空。
 - `writebackStatus=written_back` 在 batch diff 中禁止出现。
-- `waesGateStatus=passed` 也只能进入候选，不代表写回完成。
+- `wameGateStatus=passed` 也只能进入候选，不代表写回完成。
 - 缺 evidence、缺 business owner、敏感原文、POD/金融/质量争议必须阻断或升级。
 - 所有 no-write 计数必须为 0。
 

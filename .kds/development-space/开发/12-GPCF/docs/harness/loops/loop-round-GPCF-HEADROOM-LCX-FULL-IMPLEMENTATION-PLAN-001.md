@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-5FF130412D
 title: Loop Round GPCF-HEADROOM-LCX-FULL-IMPLEMENTATION-PLAN-001
 project: GPCF
-related_projects: [GPC, WAES, KDS, GPCF]
+related_projects: [GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -53,4 +53,4 @@ git diff --check -- 02-governance/GlobalCloud项目群Headroom-LCX全量实施�
 
 本轮只输出全量实施方案和执行提示词，不执行生产代理、不启用跨项目 memory、不运行 `headroom learn --apply`、不写真实 KDS、不处理未脱敏生产材料、不升级 accepted、integrated 或 production_ready。
 
-下一轮可按本方案进入 `GPCF-HEADROOM-LCX-P0-CONTROLLED-PACKAGE-001`，创建 `loop/context/headroom/` 受控能力包、WAES policy、Harness schema、KDS registry 和安装/代理/学习脚本。
+下一轮可按本方案进入 `GPCF-HEADROOM-LCX-P0-CONTROLLED-PACKAGE-001`，创建 `loop/context/headroom/` 受控能力包、WAME policy、Harness schema、KDS registry 和安装/代理/学习脚本。

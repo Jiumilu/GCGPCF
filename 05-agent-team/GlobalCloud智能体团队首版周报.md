@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-114BC60C1B
 title: GlobalCloud 智能体团队首版周报
 project: XiaoC
-related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, XiaoC, XGD, XiaoG, GPCF]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, XiaoC, XGD, XiaoG, GPCF, Studio]
 domain: agent-team
 status: controlled
 version: v1.0

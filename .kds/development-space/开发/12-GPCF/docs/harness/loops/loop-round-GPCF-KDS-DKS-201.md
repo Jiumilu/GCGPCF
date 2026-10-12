@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-76BDCC51E9
 title: LOOP Round GPCF KDS DKS-201
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -36,9 +36,9 @@ superseded_by: []
 - `scripts/gfis/validate_gfis_assistant_dks_201_routing_queue_notification_acknowledgement_escalation_digest_delivery_ack_escalation_sla_breach_review_resolution_option_approval_packet_routing_queue_notification_preview.py`
 - `docs/gc-knowledge-fabric/gfis-assistant-dks-201-routing-queue-notification-acknowledgement-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-preview-policy.md`
 
-## WAES / KWE / GFIS 边界
+## WAME / KWE / GFIS 边界
 
-- WAES：只保留门禁引用，不创建 gate result。
+- WAME：只保留门禁引用，不创建 gate result。
 - KWE：只保留候选 next step，不创建 work item。
 - GFIS：只展示候选通知预览，不写回业务字段。
 - Notification：不创建通知、不创建消息、不创建收件箱项、不发送外部通知。

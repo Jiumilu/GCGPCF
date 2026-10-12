@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-37814096BB
 title: Loop Round GPCF-KDS-DKS-020
 project: GPCF
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -21,7 +21,7 @@ superseded_by: []
 日期：2026-06-17  
 状态：controlled  
 主题：积分池、收益池、额度池、悬赏池、争议池联动规则  
-项目群范围：GFIS、GPC、PVAOS、WAES、KDS、Brain、PKC、XiaoC / 小即、XGD、XiaoG、MMC、GPCF。
+项目群范围：GFIS、GPC、PVAOS、WAME、KDS、Brain、PKC、XiaoC / 小即、XGD、XiaoG、MMC、GPCF。
 
 ## 1. 输入
 
@@ -62,7 +62,7 @@ superseded_by: []
 ## 5. 反馈
 
 1. 本轮把积分、收益、额度、悬赏、争议、潜在产值、贡献和 SOP 统一为 KDS 11 池之上的增强治理账本联动规则。
-2. 规则保留 AI 候选边界、KDS/WAES/人工确认流程、委员会裁决机制和用户治理权。
+2. 规则保留 AI 候选边界、KDS/WAME/人工确认流程、委员会裁决机制和用户治理权。
 3. 本轮只形成治理规则，不声明真实积分、真实收益、真实额度、真实悬赏、真实争议或真实分配已经发生。
 4. 下一阶段建议进入葛化资料包样本表、湖北磷材拓厂评估样本表和 MMC 规则参数表。
 5. 项目群 Loop 编排器仍应按全局 `partial / rework_required` 边界处理：GFIS 运行层 SOP E2E 尚未完成，本文档通过不等于业务完成。

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-069589E530
 title: GlobalCloud 绿色供应链体系四流综合架构分析与优化方案
 project: GPCF
-related_projects: [GFIS, GPC, PVAOS, WAME, Brain, XiaoC, XGD, GPCF]
+related_projects: [GFIS, GPC, PVAOS, WAME, Brain, XiaoC, XGD, GPCF, Studio]
 domain: architecture
 status: controlled
 version: v1.0

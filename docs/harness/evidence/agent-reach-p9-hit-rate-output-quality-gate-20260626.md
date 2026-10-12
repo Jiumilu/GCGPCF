@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-AGENT-REACH-P9-HIT-RATE-OUTPUT-QUALITY-GATE-20260626
 title: Agent-Reach P9 命中率输出质量门禁 2026-06-26
 project: KDS
-related_projects: [GFIS, WAS, WAME, KDS, GPCF]
+related_projects: [GFIS, WAME, KDS]
 domain: docs
 status: controlled
 version: v1.0

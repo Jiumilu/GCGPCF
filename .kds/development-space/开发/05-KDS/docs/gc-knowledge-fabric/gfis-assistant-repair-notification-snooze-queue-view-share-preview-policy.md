@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-D2EC468041
 title: GFIS Assistant Repair Notification Snooze Queue View Share Preview No-write 规则
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, Brain, PKC]
+related_projects: [GFIS, GPC, WAME, KDS, Brain, PKC]
 domain: docs
 status: controlled
 version: v1.0
@@ -37,7 +37,7 @@ superseded_by: []
 | FilterState / QueueItem | 不创建真实筛选状态或队列项 |
 | Notification | 不创建、不关闭、不修改真实 Notification |
 | Harness Evidence | 不创建、不持久化 Harness evidence |
-| WAES / KWE / KDS | 不创建门禁结果、工单或状态变化 |
+| WAME / KWE / KDS | 不创建门禁结果、工单或状态变化 |
 | GFIS/GPC/ERP/MES | 不写业务系统 |
 | 外部 API | 不调用真实外部 API |
 
@@ -91,4 +91,4 @@ tsc -p packages/shared/tsconfig.json --noEmit
 tsc -p packages/api/tsconfig.json --noEmit
 ```
 
-验收通过不代表真实 ShareLink、ACL 授权、外部共享权限、发布审批、SavedView、ViewPreference、Notification、Harness evidence、WAES/KWE/KDS 或业务系统写入已发生。
+验收通过不代表真实 ShareLink、ACL 授权、外部共享权限、发布审批、SavedView、ViewPreference、Notification、Harness evidence、WAME/KWE/KDS 或业务系统写入已发生。

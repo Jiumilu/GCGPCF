@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-0462A0414D
 title: GFIS-RUNTIME-SOP-E2E-257
 project: GFIS
-related_projects: [GFIS, WAES, KDS]
+related_projects: [GFIS, WAME, KDS]
 domain: evidence
 status: controlled
 version: v1.0
@@ -53,7 +53,7 @@ superseded_by: []
 - `runtime_primary_key_ready=0`
 - `review_queue=0`
 - `runtime_intake=0`
-- `waes_review=0`
+- `wame_review=0`
 - `verified=0`
 - `blocked=1`
 - `runtime_sop_e2e=repair_required`
@@ -69,7 +69,7 @@ superseded_by: []
 
 - 本轮只建立真实责任方补证材料接收扫描器。
 - 当前接收目录为空，未发现真实补证文件。
-- 不释放 remediation action hold、不完成 remediation、不释放 owner response 或 submission package、不生成运行层主键、review queue、runtime intake、WAES review 或 verified artifact。
+- 不释放 remediation action hold、不完成 remediation、不释放 owner response 或 submission package、不生成运行层主键、review queue、runtime intake、WAME review 或 verified artifact。
 - 下一轮候选：在真实补证文件到达前，继续围绕完整 12 阶段 SOP 的 KDS/GFIS 输入差距做可执行收敛，不得把空目录或扫描器本身写成业务完成。
 
 ## 真实性计数
