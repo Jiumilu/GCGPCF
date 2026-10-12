@@ -11,11 +11,12 @@
   },
   "source_request": "工业绿链/图谱/ontology/requests/req-term-state-registry-vocab.json",
   "source_material": "工业绿链/图谱/ontology/registry_vocab_review_request_v0.1.md",
-  "request_decision": "admitted_as_candidates（2026-10-12）",
+  "request_decision": "accepted（口径：admitted as candidates，候选登记）",
   "decision_record": {
     "date": "2026-10-12",
     "authority": "老卢（治理方；授权来源：2026-10-12「继续」=按建议执行）",
-    "decision": "admit_as_candidates"
+    "decision": "accepted",
+    "note": "裁定口径：admit as candidates（候选登记；非运行授权）"
   },
   "admitted": {
     "state": [
