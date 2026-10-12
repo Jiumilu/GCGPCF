@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-10-12T13:57:16.174719+08:00",
+  "generated_at": "2026-10-12T14:09:00.964691+08:00",
   "freshness_hours": 12,
   "freshness_ok": true,
   "project_count": 17,
@@ -45,7 +45,7 @@
   "sensitive_repos": [],
   "pass_repo_count": 10,
   "bootstrap_window": false,
-  "previous_generated_at": "2026-10-12T13:57:01.475818+08:00",
+  "previous_generated_at": "2026-10-12T14:07:33.413694+08:00",
   "dirty_details": {
     "GlobalCloud AAAS": {
       "dirty_count": 0,
@@ -116,21 +116,20 @@
       "sensitive_paths": []
     },
     "GlobalCoud GPCF": {
-      "dirty_count": 11,
+      "dirty_count": 10,
       "ahead": 0,
       "behind": 0,
       "paths": [
-        "tools/kds-sync/validate_codegraph_project_group_steady_state_recheck.py",
-        "tools/kds-sync/validate_codegraph_project_group_steady_state_recheck_20260622.py",
-        "tools/kds-sync/validate_codegraph_watchlist_steady_monitor_20260623.py",
-        "tools/kds-sync/validate_loop_codegraph_integration_closure.py",
-        "tools/kds-sync/validate_loop_codegraph_project_group_coverage.py",
-        "tools/kds-sync/validate_loop_codegraph_project_group_graphized.py",
-        "tools/kds-sync/validate_loop_codegraph_project_group_monitor.py",
-        "tools/kds-sync/validate_loop_codegraph_sync_drift.py",
-        "tools/kds-sync/validate_loop_project_group_gate_readiness.py",
-        "tools/kds-sync/validate_project_group_dirty_classification_p0a_20260626.py",
-        "tools/kds-sync/validate_project_group_p0c_minimal_validation_20260626.py"
+        "docs/harness/evidence/okf-v01-approved-summary-writer-positive-fixture-20260620.json",
+        "docs/harness/evidence/okf-v01-approved-summary-writer-positive-fixture-20260620.md",
+        "docs/harness/evidence/okf-v01-summary-admission-gate-20260620.json",
+        "docs/harness/evidence/okf-v01-summary-admission-gate-20260620.md",
+        "docs/harness/evidence/okf-v01-summary-approval-expiry-gate-20260621.json",
+        "docs/harness/evidence/okf-v01-summary-approval-expiry-gate-20260621.md",
+        "docs/harness/evidence/okf-v01-summary-approval-negative-fixtures-20260620.json",
+        "docs/harness/evidence/okf-v01-summary-approval-negative-fixtures-20260620.md",
+        "docs/harness/evidence/okf-v01-summary-approval-request-gate-20260620.json",
+        "docs/harness/evidence/okf-v01-summary-approval-request-gate-20260620.md"
       ],
       "sensitive_paths": []
     },
@@ -208,7 +207,7 @@
       "sensitive_paths": []
     },
     "GlobalCloud KDS": {
-      "dirty_count": 13,
+      "dirty_count": 15,
       "ahead": 2,
       "behind": 0,
       "paths": [
@@ -224,6 +223,8 @@
         "\"concepts/\\345\\274\\200\\345\\217\\221/13-Studio/2026-10-12_Studio_48\\346\\235\\241\\347\\272\\242\\347\\201\\257\\345\\210\\206\\347\\273\\204\\344\\270\\216\\345\\273\\272\\350\\256\\256\\345\\217\\243\\345\\276\\204_v1.3.md\"",
         "\"concepts/\\345\\274\\200\\345\\217\\221/13-Studio/2026-10-12_Studio_48\\346\\235\\241\\347\\272\\242\\347\\201\\257\\346\\211\\247\\350\\241\\214\\346\\270\\205\\345\\215\\225_v1.4.md\"",
         "\"concepts/\\345\\274\\200\\345\\217\\221/13-Studio/2026-10-12_Studio_D\\347\\273\\204\\345\\217\\243\\345\\276\\204\\345\\267\\256\\345\\274\\202\\350\\241\\250_v1.5.md\"",
+        "\"concepts/\\345\\274\\200\\345\\217\\221/13-Studio/2026-10-12_Studio\\344\\270\\232\\345\\212\\241\\345\\212\\237\\350\\203\\275\\345\\256\\236\\347\\216\\260\\345\\211\\215\\347\\233\\256\\346\\240\\207\\346\\217\\220\\347\\244\\272\\350\\257\\215\\351\\233\\206_v1.0.md\"",
+        "\"concepts/\\345\\274\\200\\345\\217\\221/13-Studio/2026-10-12_Studio\\346\\255\\243\\345\\274\\217\\345\\220\\257\\345\\212\\250\\345\\211\\215\\345\\277\\205\\345\\201\\232\\346\\270\\205\\345\\215\\225_v1.0.md\"",
         "\"concepts/\\345\\274\\200\\345\\217\\221/13-Studio/2026-10-12_Studio\\347\\247\\273\\345\\212\\250\\347\\252\\204\\345\\261\\217\\345\\205\\203\\347\\264\\240\\345\\217\\243\\345\\276\\204\\346\\242\\263\\347\\220\\206_v1.0.md\""
       ],
       "sensitive_paths": []
