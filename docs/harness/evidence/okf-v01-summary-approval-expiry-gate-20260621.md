@@ -18,7 +18,7 @@ superseded_by: []
 
 # OKF v0.1 Summary Approval Expiry Gate
 
-generated_at: 2026-10-12T03:53:48.723238+00:00
+generated_at: 2026-10-12T05:32:27.479000+00:00
 
 ## Summary
 

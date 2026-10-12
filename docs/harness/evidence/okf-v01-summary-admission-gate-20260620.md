@@ -18,7 +18,7 @@ superseded_by: []
 
 # OKF v0.1 Summary Admission Gate Evidence
 
-generated_at: 2026-10-12T03:53:48.726028+00:00
+generated_at: 2026-10-12T05:32:27.481671+00:00
 
 ## Summary
 
