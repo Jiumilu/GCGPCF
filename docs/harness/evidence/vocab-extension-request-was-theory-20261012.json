@@ -1,0 +1,54 @@
+{
+  "packageId": "xap.request.vocab-extension.was-theory-20261012",
+  "packageKind": "request",
+  "requestType": "term_request",
+  "from": "was",
+  "to": "wame",
+  "subject": {
+    "ref": "was-theory-vocab-extension-v0.1",
+    "title": "WAS 理论篇术语词表扩展请求（会话报告 V1.0 引入，32 条候选）",
+    "terms_by_category": {
+      "object": [
+        "Human", "Entity", "Environment", "Data", "Capability", "Service",
+        "AI", "Value", "Energy", "Organization",
+        "WorldSlice", "WorldSliceNetwork", "WorldArche"
+      ],
+      "relationship": [
+        "SpacetimeAxis", "CausalityAxis",
+        "GenerationRule", "ConnectionRule", "EvolutionRule", "InteractionRule"
+      ],
+      "state": [
+        "RealWorld", "TrustedWorld", "EvolutionWorld"
+      ],
+      "interface": [
+        "RecordAgent", "TrustAgent", "EvolveAgent",
+        "SituationPanorama", "SpacetimeView", "CausalityView", "ValueView",
+        "ScenarioView", "UncertaintyView", "InteractionView"
+      ]
+    },
+    "count": 32,
+    "category_mapping_note": "按 future_project_policy.must_map_to_registry_categories（object/relationship/event/evidence/state/interface）映射；event/evidence 类目本次无新增（复用既有）。"
+  },
+  "requestedDecision": "admit_vocab_extension_candidates",
+  "evidenceRefs": [
+    "WAS:docs/WAS理论篇_v0.1.md",
+    "KDS:世界资产/2026-10-12_WAS理论体系升级方案_会话报告V1.0结合_v1.0.md",
+    "KDS:raw/世界资产/WAS_Conversation_Review_v1.0.docx"
+  ],
+  "constraints": {
+    "scope_binding": [
+      "WAS(理论层)",
+      "世界模型(WAM/WCM)",
+      "KDS"
+    ],
+    "non_claims": "不改 registry 既有条目；候选登记（非运行授权）；裁定权属治理方"
+  },
+  "currentDecision": "pending_governance_review",
+  "createdAt": "2026-10-12",
+  "traceability": {
+    "original": "WAS:docs/WAS理论篇_v0.1.md（draft_for_review）",
+    "originalStatus": "draft_for_review（随理论篇草案送审）",
+    "process_ref": "GPCF:docs/harness/evidence/vocab-extension-admission-20261012.json（首批 9 条先例，2026-10-12）",
+    "note": "本件为提交态标准形态（留白）；治理裁定记录以 GPCF evidence 为权威"
+  }
+}
