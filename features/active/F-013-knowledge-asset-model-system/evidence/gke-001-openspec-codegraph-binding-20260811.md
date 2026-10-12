@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-GKE001-OPENSPEC-CODEGRAPH-EVIDENCE-20260811
 title: GKE-001 OpenSpec 与 CodeGraph 纳管证据
 project: GPCF
-related_projects: [AAAS, Brain, WAS, XiaoC, WAME, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP]
+related_projects: [AAAS, Brain, WAS, XiaoC, WAES, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP]
 domain: governance
 status: controlled
 version: v1.0

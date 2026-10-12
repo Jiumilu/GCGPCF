@@ -1,0 +1,71 @@
+canonical_v01_candidate_freeze:
+  id: GKE-001-CANONICAL-FREEZE-20261012-001
+  issued_at: '2026-10-12'
+  engineering_domain: GKE-001
+  feature: F-013
+  canonical_owner: F-013 canonical owner
+  coordinator_thread_id: 019f0697-c8ce-7110-8ac8-9a7dbc6ba2a5
+  reviewer_thread_id: 019fc228-2403-7123-9cae-fb9028850b84
+  supersedes:
+    freeze_record: features/active/F-013-knowledge-asset-model-system/artifacts/gke-001-canonical-v0.1-76ac-freeze-20260821.yaml
+    candidate_manifest_sha256: 76ac8d37d61e8904edd8383c246bcadbe5bec0197a50d4bb90085f6d2308e9bf
+    reason: WAES 缩写停用、体系命名统一为 WAME；canonical manifest 消费方键 waes→wame 使候选哈希失效，按授权出本修订
+  decision:
+    revision: v0.1
+    selected_candidate_manifest_sha256: 17c933870449f2803121cae3f36e5e1985fce2337279f86261d411fbca81f5bd
+    status: controlled_candidate_pending_independent_review
+    preserves_historical_anchor_sha256: 8537f3acda011610c1cb67ec13ea690d42a16b5d5ace030ab31762da8969a1de
+    release_unblocked: false
+  current_control_plane:
+  - path: okf/knowledge-asset-contract-manifest.yaml
+    sha256: 17c933870449f2803121cae3f36e5e1985fce2337279f86261d411fbca81f5bd
+  - path: 03-data-ai-knowledge/GlobalCloud知识工程应用体系实施方案.md
+    sha256: 1ba8debd8c3b929daeb1eba7024dbb17b50a03aa9c1c5ff461b087030f4d6876
+  - path: features/active/F-013-knowledge-asset-model-system/artifacts/gke-001-application-program-roadmap-v1.yaml
+    sha256: 04ffb65ed58e300832733ca0fb282873a18113f34d65b05c0ff263835d8bf220
+  - path: governance/openspec/gke001-program-binding.yaml
+    sha256: 4f60015e96d0a1d7706d39738bf618e5836f7c3acb7c5194956c12deb611f506
+  - path: governance/codegraph/gke001-engineering-domain-binding.yaml
+    sha256: 05c219c1129e2ea31e808e34d882760698d4bb72d7c308dfd521a31a84f0b3cd
+  - path: openspec/changes/integrate-gke001-openspec-codegraph/proposal.md
+    sha256: 64e30ac88406810128633a80477844c5ad9ee9847f5c8206e99d017422381e8c
+  - path: tools/kds-sync/validate_gke001_openspec_codegraph_binding.py
+    sha256: 7b3f33c1f903957394235260c3eab46a7b4cd730557ae08d7faac779c81692aa
+  historical_anchors:
+  - path: features/active/F-013-knowledge-asset-model-system/artifacts/gke-001-release0-canonical-read-openapi-candidate-a10p3.yaml
+    sha256: 48dfcb0967a894ee2bd760311d7f84023054b0bcc2bc578292d826e73fbc7c18
+  - path: 02-governance/loop/GKE-001长期实施调度提示词.md
+    sha256: 763bfad7abd9514e664ef7044b6f7b16544404071f5d03211a7265e4c7ab1d3e
+  - path: features/active/F-013-knowledge-asset-model-system/evidence/gke-001-openspec-codegraph-binding-20260811.md
+    sha256: 68a8684f509d8c60c0c1da9fcb771782802b6fc95c7b6de31de2a0a796396c19
+  independent_review:
+    required: true
+    status: pending_independent_review
+    reviewed_at: null
+    review_turn_id: null
+    classification: canonical_v01_17c9_controlled_candidate_freeze_pending_independent_review_release_still_blocked
+    required_scope:
+    - manifest
+    - envelope_schema
+    - vocabulary
+    - current_control_plane
+    - historical_anchor_preservation
+    - non_self_referential_validation
+  authorization:
+    canonical_candidate_freeze_record: true
+    product_repository_write: false
+    real_kds_or_mmc_write: false
+    fixture_or_migration: false
+    authenticated_read_or_e2e: false
+    commit: false
+    push: false
+    deployment: false
+    status_promotion: false
+  rollback:
+    scope: remove_only_this_freeze_record_and_its_validator
+    do_not_rewrite_historical_anchors: true
+    do_not_modify_preexisting_candidate_delta: true
+  status:
+    engineering: active
+    cross_project: partial
+    completion: not_complete

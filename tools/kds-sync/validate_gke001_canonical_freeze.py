@@ -13,8 +13,8 @@ import yaml
 
 
 ROOT = Path(__file__).resolve().parents[2]
-FREEZE = ROOT / "features/active/F-013-knowledge-asset-model-system/artifacts/gke-001-canonical-v0.1-76ac-freeze-20260821.yaml"
-CANDIDATE_SHA = "76ac8d37d61e8904edd8383c246bcadbe5bec0197a50d4bb90085f6d2308e9bf"
+FREEZE = ROOT / "features/active/F-013-knowledge-asset-model-system/artifacts/gke-001-canonical-v0.1-17c9-freeze-20261012.yaml"
+CANDIDATE_SHA = "17c933870449f2803121cae3f36e5e1985fce2337279f86261d411fbca81f5bd"
 HISTORICAL_SHA = "8537f3acda011610c1cb67ec13ea690d42a16b5d5ace030ab31762da8969a1de"
 
 
@@ -42,7 +42,7 @@ def load_freeze() -> dict[str, Any]:
 
 
 def validate(freeze: dict[str, Any]) -> None:
-    require(freeze.get("id") == "GKE-001-CANONICAL-FREEZE-20260821-001", "freeze_id_mismatch")
+    require(freeze.get("id") == "GKE-001-CANONICAL-FREEZE-20261012-001", "freeze_id_mismatch")
     require(freeze.get("engineering_domain") == "GKE-001", "engineering_domain_mismatch")
     require(freeze.get("feature") == "F-013", "feature_mismatch")
     decision = freeze.get("decision")
@@ -73,10 +73,10 @@ def validate(freeze: dict[str, Any]) -> None:
     review = freeze.get("independent_review")
     require(isinstance(review, dict), "independent_review_missing")
     require(review.get("required") is True, "independent_review_not_required")
-    require(review.get("status") == "independently_reviewed", "independent_review_status_mismatch")
-    require(review.get("review_turn_id") == "01a021c3-27f5-7681-9649-e2e27fd23f97", "independent_review_turn_mismatch")
+    require(review.get("status") == "pending_independent_review", "independent_review_status_mismatch")
+    require(review.get("review_turn_id") is None, "independent_review_turn_mismatch")
     require(
-        review.get("classification") == "canonical_v01_76ac_controlled_candidate_freeze_independently_reviewed_release_still_blocked",
+        review.get("classification") == "canonical_v01_17c9_controlled_candidate_freeze_pending_independent_review_release_still_blocked",
         "independent_review_classification_mismatch",
     )
     authorization = freeze.get("authorization")
@@ -115,7 +115,7 @@ def main() -> int:
     print(
         "gke001_canonical_freeze=pass "
         f"candidate_sha256={CANDIDATE_SHA} historical_anchor_sha256={HISTORICAL_SHA} "
-        f"independent_review=independently_reviewed self_test={'pass' if args.self_test else 'not_run'} "
+        f"independent_review=pending_independent_review self_test={'pass' if args.self_test else 'not_run'} "
         "status=active_partial_not_complete"
     )
     return 0

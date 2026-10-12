@@ -29,10 +29,10 @@ gke001_program_binding:
     feature_ref: F-013
     contract_revision: v0.1
     manifest_path: okf/knowledge-asset-contract-manifest.yaml
-    manifest_sha256: 76ac8d37d61e8904edd8383c246bcadbe5bec0197a50d4bb90085f6d2308e9bf
+    manifest_sha256: 17c933870449f2803121cae3f36e5e1985fce2337279f86261d411fbca81f5bd
   application_roadmap:
     path: features/active/F-013-knowledge-asset-model-system/artifacts/gke-001-application-program-roadmap-v1.yaml
-    sha256: 688dd8e28ebdae660e34f97d60a65af5db6a051d09a224fcaf1a614ce0d171ab
+    sha256: 04ffb65ed58e300832733ca0fb282873a18113f34d65b05c0ff263835d8bf220
   openspec_change:
     id: integrate-gke001-openspec-codegraph
     path: openspec/changes/integrate-gke001-openspec-codegraph

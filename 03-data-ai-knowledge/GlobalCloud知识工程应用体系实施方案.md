@@ -27,7 +27,7 @@ program_coordinator_thread: 019f0697-c8ce-7110-8ac8-9a7dbc6ba2a5
 canonical_and_acceptance_thread: 019fc228-2403-7123-9cae-fb9028850b84
 canonical_feature: F-013
 canonical_contract_revision: v0.1
-canonical_manifest_sha256: 76ac8d37d61e8904edd8383c246bcadbe5bec0197a50d4bb90085f6d2308e9bf
+canonical_manifest_sha256: 17c933870449f2803121cae3f36e5e1985fce2337279f86261d411fbca81f5bd
 application_program_roadmap_sha256: 688dd8e28ebdae660e34f97d60a65af5db6a051d09a224fcaf1a614ce0d171ab
 openspec_program_binding: governance/openspec/gke001-program-binding.yaml
 codegraph_domain_binding: governance/codegraph/gke001-engineering-domain-binding.yaml
