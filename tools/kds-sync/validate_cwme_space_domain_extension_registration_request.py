@@ -58,10 +58,10 @@ def main() -> int:
     require_frontmatter(LOOP_ROUND, loop_round)
 
     require(evidence.get("evidence_id") == "CWME-SPACE-DOMAIN-EXTENSION-REGISTRATION-REQUEST-20261011", "invalid evidence id")
-    require(evidence.get("status") == "request_submitted_pending_governance_review", "invalid status")
+    require(evidence.get("status") in ("request_submitted_pending_governance_review", "request_accepted"), "invalid status")
     require(evidence.get("scope") == "cwme_city_space_domain_extension_registration_request_only", "invalid scope")
     require(evidence.get("requested_decision") == "register_cwme_city_space_domain_extension_pack", "requested decision mismatch")
-    require(evidence.get("current_decision") == "pending_governance_review", "current decision must stay pending")
+    require(evidence.get("current_decision") in ("pending_governance_review", "accepted"), "current decision invalid")
 
     pack = evidence.get("extension_pack", {})
     require("cwme-ext.ttl" in str(pack.get("ontology_file", "")), "ontology file ref missing")
@@ -89,8 +89,24 @@ def main() -> int:
     gates = evidence.get("gates", {})
     require(gates.get("request_package_generated") is True, "request package gate must be true")
     require(gates.get("submitted") is True, "submitted gate must be true")
-    for key in ["registry_entry_added", "governance_reviewed", "wame_authorized", "accepted", "integrated", "production_ready"]:
-        require(gates.get(key) is False, f"gate must be false: {key}")
+    decision = evidence.get("current_decision")
+    if decision == "accepted":
+        record = evidence.get("decision_record", {})
+        require(record.get("decision") == "accepted" and record.get("date") and record.get("authority"),
+                "accepted 状态需 decision_record（decision/date/authority）")
+        require(gates.get("governance_reviewed") is True, "accepted 状态 governance_reviewed 必须为 true")
+        require(gates.get("accepted") is True, "accepted 状态 accepted 门必须为 true")
+        if gates.get("registry_entry_added") is True:
+            require("domain-extension-pack-registry" in str(evidence.get("registry_entry_ref", "")),
+                    "registry_entry_added=true 需 registry_entry_ref 指向登记件")
+        else:
+            require(gates.get("registry_entry_added") is False, "registry_entry_added 非真时须为 false")
+        for key in ["wame_authorized", "integrated", "production_ready"]:
+            require(gates.get(key) is False, f"gate must be false: {key}")
+    else:
+        for key in ["registry_entry_added", "governance_reviewed", "wame_authorized", "accepted",
+                    "integrated", "production_ready"]:
+            require(gates.get(key) is False, f"gate must be false: {key}")
 
     for phrase in [
         "CWME-SPACE-DOMAIN-EXTENSION-REGISTRATION-REQUEST-20261011",
@@ -109,9 +125,12 @@ def main() -> int:
     print(
         "cwme_space_domain_extension_registration_request=pass "
         "requested_decision=register_cwme_city_space_domain_extension_pack "
-        "current_decision=pending_governance_review submitted=true registry_entry_added=false "
+        f"current_decision={evidence.get('current_decision')} submitted=true "
+        f"registry_entry_added={str(gates.get('registry_entry_added')).lower()} "
         "attachments=3/3 verified triples>=150 classes>=25 "
-        "accepted=false integrated=false production_ready=false"
+        f"accepted={str(gates.get('accepted')).lower()} "
+        f"integrated={str(gates.get('integrated')).lower()} "
+        f"production_ready={str(gates.get('production_ready')).lower()}"
     )
     return 0
 

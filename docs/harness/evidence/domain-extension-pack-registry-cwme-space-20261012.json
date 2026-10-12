@@ -1,0 +1,55 @@
+{
+  "evidence_id": "GPCF-DOMAIN-EXTENSION-PACK-REGISTRY-CWME-SPACE-20261012",
+  "status": "domain_extension_pack_registered_candidate",
+  "date": "2026-10-12",
+  "round_id": "GPCF-DOMAIN-EXTENSION-PACK-REGISTRY-CWME-SPACE-001",
+  "purpose": "按 WAS 项目群 registry future_project_policy，将 CWME 城市空间域扩展包（本地化扩展本体，cwme-ext.ttl 初版）登记为域扩展包条目（候选），与 IGL 业务域切片（2026-10-11）并列。",
+  "registry_base": {
+    "source_registry": "docs/harness/evidence/was-project-group-ontology-registry-20260621.json",
+    "existing_entries_untouched": 43,
+    "policy": "future_project_policy",
+    "source_request": "docs/harness/evidence/cwme-space-domain-extension-registration-request-20261011.json",
+    "request_decision": "accepted（2026-10-12）"
+  },
+  "extension_pack": {
+    "name": "CWME 城市空间域扩展包",
+    "alias": "CWME City Space Domain Extension Pack",
+    "carrier": "世界资产/世界模型引擎/ontology/",
+    "files": {
+      "ontology": "cwme-ext.ttl（199 triples / 33 类 / 22 对象属性）",
+      "mapping": "cwme-mapping-v1.yaml（spaceai.db 40 表全量处置）",
+      "shapes": "cwme-shapes-min.ttl（4 形状；正例 conforms=True / 负例 5 项检出）"
+    },
+    "peer": "IGL 业务域切片（GreenChainGraphBusinessDomain，2026-10-11）",
+    "scope_binding": [
+      "世界资产(CWME/F-017)",
+      "KDS"
+    ]
+  },
+  "six_category_mapping": {
+    "object": "cwme-ext.ttl 33 类（Site/Building/Zone/Device/Camera/Alarm/PatrolLine 等）",
+    "relationship": "22 对象属性（含 completes/BelongsTo/DeployedOn 等）",
+    "event": "Alarm/Observation（SOSA 对齐方向）",
+    "evidence": "rdflib+pyshacl 实跑记录；mapping-v1 全量处置",
+    "state": "P2-2 exports 候选态（wameStatus=Draft）；P2-3 接入条目 draft",
+    "interface": "ontology/exports/city（XWAIL City Profile 导出物）＋city-api（MMC 已注册）"
+  },
+  "crosswalk": {
+    "file": "工业绿链/图谱/ontology/crosswalk-工业绿链×CWME_v0.1.yaml",
+    "review_status": "draft_confirmed_pending_joint_review（不阻塞本登记）"
+  },
+  "boundary": {
+    "real_source_records": 0,
+    "wame_review": 0,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false,
+    "runtime_write": false,
+    "kds_api_write": false
+  },
+  "non_claims": [
+    "本登记为域扩展包条目（候选），不是运行授权、不是知识库、不替代 KDS source-of-record",
+    "不修改 20260621 registry 既有 43 条",
+    "零写回、零运行状态提升"
+  ]
+}

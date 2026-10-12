@@ -3,11 +3,11 @@
   "task_id": "GPCF-CWME-SPACE-DOMAIN-EXTENSION-REGISTRATION-REQUEST-001",
   "loop_round_id": "GPCF-CWME-SPACE-DOMAIN-EXTENSION-REGISTRATION-REQUEST-001",
   "date": "2026-10-11",
-  "status": "request_submitted_pending_governance_review",
+  "status": "request_accepted",
   "scope": "cwme_city_space_domain_extension_registration_request_only",
   "requester": "F-017 CWME 城市级世界模型引擎（世界资产域）",
   "requested_decision": "register_cwme_city_space_domain_extension_pack",
-  "current_decision": "pending_governance_review",
+  "current_decision": "accepted",
   "extension_pack": {
     "name": "CWME 城市空间域扩展包",
     "ontology_file": "世界资产/世界模型引擎/ontology/cwme-ext.ttl",
@@ -46,11 +46,18 @@
   "gates": {
     "request_package_generated": true,
     "submitted": true,
-    "registry_entry_added": false,
-    "governance_reviewed": false,
+    "registry_entry_added": true,
+    "governance_reviewed": true,
     "wame_authorized": false,
-    "accepted": false,
+    "accepted": true,
     "integrated": false,
     "production_ready": false
-  }
+  },
+  "decision_record": {
+    "date": "2026-10-12",
+    "authority": "老卢（治理方；授权来源：2026-10-12「继续」=按建议执行）",
+    "decision": "accepted",
+    "next_step": "登记域扩展包条目（候选态；不修改 registry 既有 43 条）"
+  },
+  "registry_entry_ref": "docs/harness/evidence/domain-extension-pack-registry-cwme-space-20261012.json"
 }

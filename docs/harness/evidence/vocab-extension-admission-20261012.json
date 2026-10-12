@@ -1,0 +1,50 @@
+{
+  "evidence_id": "GPCF-VOCAB-EXTENSION-ADMISSION-20261012",
+  "status": "vocab_extension_admitted_as_candidates",
+  "date": "2026-10-12",
+  "round_id": "GPCF-VOCAB-EXTENSION-ADMISSION-001",
+  "purpose": "按 WAS 项目群 registry future_project_policy，将 9 条词表请求（state×1＋term×8）裁定为候选（admit as candidates）——与 IGL 域切片、CWME 域扩展包登记同批次。",
+  "registry_base": {
+    "source_registry": "docs/harness/evidence/was-project-group-ontology-registry-20260621.json",
+    "existing_entries_untouched": 43,
+    "policy": "future_project_policy"
+  },
+  "source_request": "工业绿链/图谱/ontology/requests/req-term-state-registry-vocab.json",
+  "source_material": "工业绿链/图谱/ontology/registry_vocab_review_request_v0.1.md",
+  "request_decision": "admitted_as_candidates（2026-10-12）",
+  "decision_record": {
+    "date": "2026-10-12",
+    "authority": "老卢（治理方；授权来源：2026-10-12「继续」=按建议执行）",
+    "decision": "admit_as_candidates"
+  },
+  "admitted": {
+    "state": [
+      "rejected"
+    ],
+    "terms": [
+      "Project",
+      "Person",
+      "Equipment",
+      "BusinessEvent",
+      "Risk",
+      "Decision",
+      "DependsOn",
+      "Blocks"
+    ]
+  },
+  "rulings": {
+    "T-3_Equipment": "新增对象条目（不归 was:physical_asset 子类——保持既有术语结构不动）",
+    "others": "全部按评审材料『处置建议：新增对象/关系条目』执行"
+  },
+  "boundary": {
+    "registry_body_modified": false,
+    "candidate_status_only": true,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false
+  },
+  "non_claims": [
+    "本裁定为候选登记（candidates），不是运行授权、不修改 20260621 registry 既有 43 条",
+    "零写回、零运行状态提升"
+  ]
+}
