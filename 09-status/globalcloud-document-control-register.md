@@ -18,7 +18,7 @@ superseded_by: []
 
 # GlobalCloud 文档控制总台账
 
-日期：2026-10-11
+日期：2026-10-12
 
 用途：登记 GPCF 仓库内所有 Markdown 文档的受控身份、项目归属、状态、源路径与 KDS 开发空间路径。
 
@@ -44,6 +44,7 @@ superseded_by: []
 | ICP | 14-ICP | 0 | 0 | 已建空间，暂无直接镜像文档 |
 | SpaceAIStudio | 15-SpaceAIStudio | 0 | 0 | 已建空间，暂无直接镜像文档 |
 | SpaceAI | 16-SpaceAI | 0 | 0 | 已建空间，暂无直接镜像文档 |
+| WAE | 17-WAE | 2 | 0 | 2026-10-12 立项，KDS 空间待建 |
 
 ## KDS 公共空间文档统计
 
@@ -59,6 +60,8 @@ superseded_by: []
 
 | doc_id | title | source_path | project | related_projects | domain | status | kds_path |
 | --- | --- | --- | --- | --- | --- | --- | --- |
+| GPCF-DOC-455691886F | 世界资产浏览器（WAE）统一界面框架总体设计 | projects/wae/MASTER-DESIGN.md | WAE | GPCF, WAES, WAS, PVAOS, PKC, Brain, GFIS, GPC, Studio, XiaoG, XGD, XiaoC, MMC, ICP, AAAS, SOP, PQC, SpaceAI, SpaceAIStudio | ui-delivery | controlled | 开发/91-治理与验收/projects/wae/MASTER-DESIGN.md |
+| GPCF-DOC-420E49DB6F | WAE 状态 | projects/wae/STATUS.md | WAE | WAE | governance | controlled | 开发/91-治理与验收/projects/wae/STATUS.md |
 | GPCF-DOC-285E77EC87 | globalcloud-17 | $CODEX_HOME/automations/globalcloud-17/README.md | GPC | GPC, WAES, KDS, GPCF | general | controlled | 开发/02-GPC/$CODEX_HOME/automations/globalcloud-17/README.md |
 | GPCF-DOC-9BC6636D29 | globalcloud-17 运行记忆 | $CODEX_HOME/automations/globalcloud-17/memory.md | GPC | GPC, KDS, MMC, GPCF, Studio | general | controlled | 开发/02-GPC/$CODEX_HOME/automations/globalcloud-17/memory.md |
 | GPCF-DOC-C1D2E3F4A5 | impeccable | .agents/skills/impeccable/README.md | GPC | GPC, WAES, KDS, GPCF | general | controlled | 开发/02-GPC/.agents/skills/impeccable/README.md |
