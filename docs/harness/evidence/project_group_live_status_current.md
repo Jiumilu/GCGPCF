@@ -18,14 +18,14 @@ superseded_by: []
 data_layer: derived
 authority_level: A2
 verification_status: source_verified
-generated_at: 2026-10-12 11:07:57 +0800
+generated_at: 2026-10-12 11:09:01 +0800
 ---
 
 # GlobalCloud 项目群当前 Live 状态快照
 
 ## Summary
 
-- generated_at: `2026-10-12T11:07:57.285426+08:00`
+- generated_at: `2026-10-12T11:09:01.377945+08:00`
 - freshness_ok: `true`
 - project_count: `17`
 - pass_repo_count: `13`
@@ -33,13 +33,13 @@ generated_at: 2026-10-12 11:07:57 +0800
 
 ## Current sets
 
-- observed_dirty: `WAS世界资产体系, GlobalCloud WAES, GlobalCoud GPCF, GlobalCloud XGD`
-- observed_ahead: `none`
-- stable_dirty: `GlobalCloud WAES`
-- stable_ahead: `none`
-- volatile_dirty: `GlobalCoud GPCF`
+- observed_dirty: `WAS世界资产体系, GlobalCloud WAES, GlobalCloud XGD`
+- observed_ahead: `GlobalCloud KDS`
+- stable_dirty: `GlobalCloud WAES, GlobalCloud XGD, WAS世界资产体系`
+- stable_ahead: `GlobalCloud KDS`
+- volatile_dirty: `none`
 - sensitive_repos: `none`
-- review_boundary: `GlobalCloud WAES, GlobalCoud GPCF`
+- review_boundary: `GlobalCloud WAES, GlobalCloud XGD, WAS世界资产体系`
 
 ## Repo details
 
@@ -52,11 +52,11 @@ generated_at: 2026-10-12 11:07:57 +0800
 | `GlobalCloud WAES` | 15 | 0 | 0 | `none` |
 | `GlobalCloud GPC` | 0 | 0 | 0 | `none` |
 | `GlobalCloud Studio` | 0 | 0 | 0 | `none` |
-| `GlobalCoud GPCF` | 2 | 0 | 0 | `none` |
+| `GlobalCoud GPCF` | 0 | 0 | 0 | `none` |
 | `GlobalCloud XWAIL` | 0 | 0 | 0 | `none` |
 | `GlobalCloud GFIS` | 0 | 0 | 0 | `none` |
 | `GlobalCloud MMC` | 0 | 0 | 0 | `none` |
-| `GlobalCloud KDS` | 0 | 0 | 0 | `none` |
+| `GlobalCloud KDS` | 0 | 1 | 0 | `none` |
 | `GlobalCloud XiaoG` | 0 | 0 | 0 | `none` |
 | `GlobalCloud PVAOS` | 0 | 0 | 0 | `none` |
 | `GlobalCloud SOP` | 0 | 0 | 0 | `none` |

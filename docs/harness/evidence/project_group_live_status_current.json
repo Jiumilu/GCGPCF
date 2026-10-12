@@ -1,31 +1,35 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-10-12T11:07:57.285426+08:00",
+  "generated_at": "2026-10-12T11:09:01.377945+08:00",
   "freshness_hours": 12,
   "freshness_ok": true,
   "project_count": 17,
   "observed_dirty": [
     "WAS世界资产体系",
     "GlobalCloud WAES",
-    "GlobalCoud GPCF",
     "GlobalCloud XGD"
   ],
-  "observed_ahead": [],
+  "observed_ahead": [
+    "GlobalCloud KDS"
+  ],
   "stable_dirty": [
-    "GlobalCloud WAES"
+    "GlobalCloud WAES",
+    "GlobalCloud XGD",
+    "WAS世界资产体系"
   ],
-  "stable_ahead": [],
-  "volatile_dirty": [
-    "GlobalCoud GPCF"
+  "stable_ahead": [
+    "GlobalCloud KDS"
   ],
+  "volatile_dirty": [],
   "review_boundary": [
     "GlobalCloud WAES",
-    "GlobalCoud GPCF"
+    "GlobalCloud XGD",
+    "WAS世界资产体系"
   ],
   "sensitive_repos": [],
   "pass_repo_count": 13,
   "bootstrap_window": false,
-  "previous_generated_at": "2026-10-12T10:00:07.745908+08:00",
+  "previous_generated_at": "2026-10-12T11:07:57.285426+08:00",
   "dirty_details": {
     "GlobalCloud AAAS": {
       "dirty_count": 0,
@@ -95,13 +99,10 @@
       "sensitive_paths": []
     },
     "GlobalCoud GPCF": {
-      "dirty_count": 2,
+      "dirty_count": 0,
       "ahead": 0,
       "behind": 0,
-      "paths": [
-        "tools/kds-sync/validate_project_implementation_uniqueness.py",
-        "tools/kds-sync/validate_project_master_plan_uniqueness.py"
-      ],
+      "paths": [],
       "sensitive_paths": []
     },
     "GlobalCloud XWAIL": {
@@ -127,7 +128,7 @@
     },
     "GlobalCloud KDS": {
       "dirty_count": 0,
-      "ahead": 0,
+      "ahead": 1,
       "behind": 0,
       "paths": [],
       "sensitive_paths": []
