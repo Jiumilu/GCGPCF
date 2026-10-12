@@ -70,3 +70,4 @@ superseded_by: []
 ## 下一门禁
 
 `authoritative_source_verification_for_deferred_items`
+不代表 WAME/KDS 已接受这些候选来源

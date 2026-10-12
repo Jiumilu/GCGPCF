@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-35411435D9
 title: WAS Completion Audit Evidence
 project: KDS
-related_projects: [GFIS, GPC, WAME, KDS, GPCF]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio, WAS]
 domain: docs
 status: controlled
 version: v1.0
@@ -94,3 +94,4 @@ python3 /Users/lujunxiang/Projects/GlobalCloud\ V0.0.1/WAS世界资产体系/okf
 - 本轮不创建 runtime primary key、review queue、runtime intake、WAME review 或 verified artifact。
 - 本轮不写 GFIS/KWE runtime。
 - 本轮不标记 accepted、integrated 或 production_ready。
+was_project_group_ontology_registry=pass

@@ -15,3 +15,16 @@ last_reviewed: 2026-06-24
 supersedes: []
 superseded_by: []
 ---
+
+| 标记 | 值 |
+|---|---|
+| real_source_records | `0` |
+| valid_source_records | `0` |
+| runtime_primary_key_ready | `0` |
+| review_queue | `0` |
+| runtime_intake | `0` |
+| wame_review | `0` |
+| verified | `0` |
+accepted | `false`
+integrated | `false`
+production_ready | `false`
