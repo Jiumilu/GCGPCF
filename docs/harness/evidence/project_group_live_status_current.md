@@ -18,14 +18,14 @@ superseded_by: []
 data_layer: derived
 authority_level: A2
 verification_status: source_verified
-generated_at: 2026-10-12 11:21:08 +0800
+generated_at: 2026-10-12 11:32:40 +0800
 ---
 
 # GlobalCloud 项目群当前 Live 状态快照
 
 ## Summary
 
-- generated_at: `2026-10-12T11:21:08.347774+08:00`
+- generated_at: `2026-10-12T11:32:40.325760+08:00`
 - freshness_ok: `true`
 - project_count: `17`
 - pass_repo_count: `11`
@@ -52,7 +52,7 @@ generated_at: 2026-10-12 11:21:08 +0800
 | `GlobalCloud WAES` | 15 | 0 | 0 | `none` |
 | `GlobalCloud GPC` | 0 | 0 | 0 | `none` |
 | `GlobalCloud Studio` | 0 | 0 | 0 | `none` |
-| `GlobalCoud GPCF` | 41 | 0 | 0 | `none` |
+| `GlobalCoud GPCF` | 53 | 0 | 0 | `none` |
 | `GlobalCloud XWAIL` | 0 | 0 | 0 | `none` |
 | `GlobalCloud GFIS` | 51 | 0 | 0 | `none` |
 | `GlobalCloud MMC` | 0 | 0 | 0 | `none` |

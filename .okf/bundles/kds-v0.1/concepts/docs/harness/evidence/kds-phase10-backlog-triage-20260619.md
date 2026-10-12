@@ -7,7 +7,7 @@ tags: [controlled, evidence, kds, kds-governance, okf-derived]
 timestamp: 2026-06-22T00:00:00Z
 kds_path: 开发/05-KDS/docs/harness/evidence/kds-phase10-backlog-triage-20260619.md
 source_path: docs/harness/evidence/kds-phase10-backlog-triage-20260619.md
-source_hash: c5da8cd9037404ea943ec589a9ca67a1c445b899184fb2daec97d233b917fffa
+source_hash: a840355d7dd6dc8da9c61f683c4403409784ad1cff680e5804210a7ba54e3c74
 source_of_record: kds
 derivation_policy: metadata_only_no_body_copy
 ---

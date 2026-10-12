@@ -7,7 +7,7 @@ tags: [controlled, kds, kds-governance, okf, okf-derived, status]
 timestamp: 2026-06-22T00:00:00Z
 kds_path: 开发/91-治理与验收/09-status/kds-md-okf-implementation-closure-plan.md
 source_path: 09-status/kds-md-okf-implementation-closure-plan.md
-source_hash: 35c91487b0fc4fe2d5af02521e5c005f61ebae4aca37cef39d7759e4eced0acc
+source_hash: 898e44baf99706652f7911c2fbf51ce61c3804e15ef03c671511084b1d57ece9
 source_of_record: kds
 derivation_policy: metadata_only_no_body_copy
 ---

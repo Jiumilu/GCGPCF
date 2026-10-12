@@ -7,7 +7,7 @@ tags: [controlled, kds, odf, okf-derived, status]
 timestamp: 2026-06-22T00:00:00Z
 kds_path: 开发/91-治理与验收/09-status/odf-phase2-expansion-plan.md
 source_path: 09-status/odf-phase2-expansion-plan.md
-source_hash: 3842c22898d230e6297e670312e7f4baba62a67b5228bc0e3dae23bcd19a4696
+source_hash: 13d0dfcceb9480f72405737c537557d29956c88fa6ace48aee947c19fd6e4e3f
 source_of_record: kds
 derivation_policy: metadata_only_no_body_copy
 ---

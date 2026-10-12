@@ -7,7 +7,7 @@ tags: [controlled, kds, kds-governance, okf-derived, status]
 timestamp: 2026-06-22T00:00:00Z
 kds_path: 开发/91-治理与验收/09-status/kds-readonly-probe-report.md
 source_path: 09-status/kds-readonly-probe-report.md
-source_hash: e990f015b2d7197bccda0f43c1e04f9ef28068c266632094fcf46090b6377a34
+source_hash: 9d2d255fb40d7fca2cc7fd1713dcbc01e735874f3d652bcb45821901524e8b2c
 source_of_record: kds
 derivation_policy: metadata_only_no_body_copy
 ---

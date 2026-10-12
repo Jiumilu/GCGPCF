@@ -7,7 +7,7 @@ tags: [controlled, evidence, kds, odf, okf-derived]
 timestamp: 2026-06-22T00:00:00Z
 kds_path: 开发/05-KDS/docs/harness/evidence/odf-phase4-small-batch-closure-20260617.md
 source_path: docs/harness/evidence/odf-phase4-small-batch-closure-20260617.md
-source_hash: 77f2966f43ee634c3bbecd27510124ae27e71ce0a5bf4801b8a0fed16b39ffe7
+source_hash: dabfbb6cc1477b05cc97375fe34d3f6bbc47964dc796f46ba8b71a2e50ff31ea
 source_of_record: kds
 derivation_policy: metadata_only_no_body_copy
 ---

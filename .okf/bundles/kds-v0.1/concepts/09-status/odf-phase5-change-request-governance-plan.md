@@ -7,7 +7,7 @@ tags: [controlled, kds, odf, okf-derived, status]
 timestamp: 2026-06-22T00:00:00Z
 kds_path: 开发/91-治理与验收/09-status/odf-phase5-change-request-governance-plan.md
 source_path: 09-status/odf-phase5-change-request-governance-plan.md
-source_hash: e8fa7fe305a31358ec3b8d82f6d4e867846543b689b2b931fa56fd0e552a4097
+source_hash: a43297c320f02b7f315cafba88564438084e176a91156276a3471e468daad77b
 source_of_record: kds
 derivation_policy: metadata_only_no_body_copy
 ---

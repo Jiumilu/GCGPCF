@@ -7,7 +7,7 @@ tags: [controlled, kds, odf, okf-derived, status]
 timestamp: 2026-06-22T00:00:00Z
 kds_path: 开发/91-治理与验收/09-status/odf-phase4-small-batch-admission-plan.md
 source_path: 09-status/odf-phase4-small-batch-admission-plan.md
-source_hash: 4f20614bc647eadfbf1f5699c302582a81aa1eb181ae83a8d57a24d75e00d815
+source_hash: 8c409145bd101bfdf45021ef22bae7c508051721bad8373c0c238b98af878bb3
 source_of_record: kds
 derivation_policy: metadata_only_no_body_copy
 ---

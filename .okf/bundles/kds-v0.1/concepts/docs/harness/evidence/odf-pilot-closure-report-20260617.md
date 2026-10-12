@@ -7,7 +7,7 @@ tags: [controlled, evidence, kds, odf, okf-derived]
 timestamp: 2026-06-22T00:00:00Z
 kds_path: 开发/05-KDS/docs/harness/evidence/odf-pilot-closure-report-20260617.md
 source_path: docs/harness/evidence/odf-pilot-closure-report-20260617.md
-source_hash: 08dfeba84098b7fd07cbeec18848f9a1402f767ceaeb356c47f1502a251b8515
+source_hash: e074f619177ff94aac50463267741c371e7d5cbfa2374a090024f3613bc8f998
 source_of_record: kds
 derivation_policy: metadata_only_no_body_copy
 ---

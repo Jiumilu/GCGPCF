@@ -7,7 +7,7 @@ tags: [controlled, kds, odf, okf-derived, status]
 timestamp: 2026-06-22T00:00:00Z
 kds_path: 开发/91-治理与验收/09-status/odf-phase8-drift-monitoring-plan.md
 source_path: 09-status/odf-phase8-drift-monitoring-plan.md
-source_hash: 6ccb48a5e4565c0050cbff2ca98168061e1f52275feb7c93c922678f6a1762d3
+source_hash: 96772ca4abcebd27495dc737ec8993a5c06cf7d47d2684c388c4afed1d7dc1a2
 source_of_record: kds
 derivation_policy: metadata_only_no_body_copy
 ---

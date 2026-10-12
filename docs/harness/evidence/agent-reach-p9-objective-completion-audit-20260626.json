@@ -63,6 +63,6 @@
     "rerun_rework_classification": "search_provider_path_rework_required",
     "rerun_status": "p9_priority_target_hit_rate_rework_required"
   },
-  "source_direct_execution_mode": "post_live_closure_completed",
+  "source_direct_execution_mode": "pre_live_ready",
   "status": "p9_objective_completed"
 }

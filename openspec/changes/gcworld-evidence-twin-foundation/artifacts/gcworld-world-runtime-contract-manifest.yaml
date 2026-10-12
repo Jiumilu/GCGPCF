@@ -6,10 +6,10 @@ scope: 本地夹具与确定性校验，不执行真实动作，不写入事实�
 artifacts:
   - name: 世界运行时Schema
     path: openspec/changes/gcworld-evidence-twin-foundation/artifacts/gcworld-world-runtime.schema.json
-    sha256: 55418744f5bd701533e43407757ba6392fb38fc1328f703f8df7ff3c1cb5f66d
+    sha256: 2f109027912bde47eb0f5eaee9416b632c41b830f0aea19a6ebdd3ef7c6e9765
   - name: 世界运行时正反例
     path: openspec/changes/gcworld-evidence-twin-foundation/artifacts/gcworld-world-runtime-fixtures.json
-    sha256: b14ed8aabe82ad320d564d8d00a3d0da45a06986e02cd174199ba9aeae1fd954
+    sha256: f4924684090e55b84336f14d442b731ed30ca9c204144ba7923153782a9a09de
   - name: 世界运行时校验器
     path: tools/kds-sync/validate_gcworld_world_runtime.py
     sha256: 3f649a66fd9e6d8a168e0f943a0cbd598a7b458d383a96e9d5f7ae6a735e0277

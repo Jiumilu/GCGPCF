@@ -33,19 +33,19 @@ artifacts:
   - role: model_plan
     path: 03-data-ai-knowledge/GlobalCloud知识资产模型体系综合方案.md
     media_type: text/markdown
-    sha256: 428031d9253189da8182d7f6c1e7b9cb7a7bc10e51dfad78cd14ffde2fa452b4
+    sha256: 825934a0d5d25d483ae80532b415a9934300dabbac3d45788b3046836fe99942
   - role: whitepaper
     path: 03-data-ai-knowledge/GlobalCloud知识资产概念模型白皮书.md
     media_type: text/markdown
-    sha256: 27d954c695ad582fa16173f8a0af759dd09f1599dd03516d469bc30ab74d9fc1
+    sha256: f2c8d0077eb3b4ee39bfa55c2e97d493bd0fbeb484c301ab40ca0314fce30017
   - role: schema
     path: okf/knowledge-asset-envelope.schema.json
     media_type: application/schema+json
-    sha256: 4a4f35d86bbe8c65c88574d3cc30c783c86a6ea24f2136032c772363da1f9716
+    sha256: 884395be12d8ebec1bba91575777c70fee2bbcaa7bc2a8b8e471cbb1b7ae64a3
   - role: vocabulary
     path: okf/knowledge-asset-vocabulary.yaml
     media_type: application/yaml
-    sha256: baa324c60c7cc8784a729d96c5f57941b0ecb564e7ffeea6fe7c8b4054521ccd
+    sha256: 8225d2f4d124e9a8b0578c12e8bdacd84485567c87783d36d695f757aec0b000
   - role: canonical_example
     path: okf/knowledge-object.example.json
     media_type: application/json
@@ -61,7 +61,7 @@ artifacts:
   - role: validator
     path: tools/kds-sync/validate_knowledge_asset_model_system.py
     media_type: text/x-python
-    sha256: 23ef584473d804d3e79aff3b3eab0e2e4f73412d8f31bc41dd5d536b5816800f
+    sha256: f383caad50bd3e5bd3441c72733203f95c69107d68fa7582ffc876f7c5adc086
 
 dependencies:
   - role: knowledge_object

@@ -7,7 +7,7 @@ tags: [controlled, kds, kds-governance, okf-derived]
 timestamp: 2026-06-22T00:00:00Z
 kds_path: 开发/05-KDS/03-data-ai-knowledge/GlobalCloudBrain-KDS知识编制与知识UI边界清单.md
 source_path: 03-data-ai-knowledge/GlobalCloudBrain-KDS知识编制与知识UI边界清单.md
-source_hash: f1d520c7caac4fec46c6f2e3ae93aaec92c332c1cc439066c267d5478f4d0b26
+source_hash: e5c9ce177419240098d3287051a9079dc6d46a7f87e00eb8e8b8007599a324fb
 source_of_record: kds
 derivation_policy: metadata_only_no_body_copy
 ---

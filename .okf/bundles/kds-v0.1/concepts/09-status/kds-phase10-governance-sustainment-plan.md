@@ -7,7 +7,7 @@ tags: [controlled, kds, kds-governance, okf-derived, status]
 timestamp: 2026-06-22T00:00:00Z
 kds_path: 开发/91-治理与验收/09-status/kds-phase10-governance-sustainment-plan.md
 source_path: 09-status/kds-phase10-governance-sustainment-plan.md
-source_hash: cd907c7950a619627ef87f8145bd8cf9e966c18e8fb656757e0c47d510a87538
+source_hash: f977613fd080d9566e544a7a6e3e949745076f57ab920e678fa76d3ecab2a83b
 source_of_record: kds
 derivation_policy: metadata_only_no_body_copy
 ---
