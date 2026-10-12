@@ -64,7 +64,6 @@ flowchart TD
   WAS --> XWAIL["XWAIL / 机器契约"]
   Ontology <--> XWAIL
   XWAIL --> WAME["WAME / World Asset Model Engine"]
-  WAME --> WAME["WAME / 世界资产模型引擎"]
   WAME --> AAAS["AaaS / Assets as a Service"]
   AAAS --> SCAAS["SCaaS / Supply Chain as a Service"]
   WAE["WAE / 世界资产浏览器（项目群统一界面框架）"] -. 界面层 .-> WAME

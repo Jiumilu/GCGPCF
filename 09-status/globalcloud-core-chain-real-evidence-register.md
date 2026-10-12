@@ -810,7 +810,7 @@ reason = core-chain real evidence register and evidence standards are establishe
 | 已通过命令 | XWAIL `validate_xwail.py --all`、`build_xap.py --check`、`verify_xap.py --all`；AaaS `validate_service_package.py --all`、`validate_metering.py --all`、`validate_sla.py --all`、`verify_evidence_requirements.py --all` |
 | GPCF 校验器 | `validate_xwail_waes_aaas_contract_precheck.py` |
 | 依赖链 | `WAME -> XWAIL -> AaaS` |
-| 边界 | 只证明本地 contract precheck 候选通过；不声明 WAME 修复、WAME 发布、AaaS 真实绑定、客户订阅、真实计费、accepted、integrated 或 customer_accepted |
+| 边界 | 只证明本地 contract precheck 候选通过；不声明 WAME 修复与发布、AaaS 真实绑定、客户订阅、真实计费、accepted、integrated 或 customer_accepted |
 
 ## 10.1.1 本轮 AaaS-WAES Binding Precheck 证据登记
 
