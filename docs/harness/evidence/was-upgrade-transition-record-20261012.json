@@ -1,0 +1,55 @@
+{
+  "evidence_id": "GPCF-WAS-UPGRADE-TRANSITION-20261012",
+  "status": "transition_recorded",
+  "date": "2026-10-12",
+  "round_id": "WAS-UPGRADE-TRANSITION-001",
+  "purpose": "WAS 升级工程（会话报告 V1.0 引入）交付物批量转正记录——经转正清单自审（技术侧无阻塞项）后，draft_for_review → controlled／active／registered；理论篇升 v1.0、总体方案升 v1.3.0、okf 升 0.2.0。",
+  "authority": {
+    "date": "2026-10-12",
+    "by": "老卢（治理方；授权来源：2026-10-12「继续」=按转正清单建议执行，等同『全部转正』）",
+    "review_list_ref": "KDS:世界资产/2026-10-12_WAS升级交付物评审与转正清单.md"
+  },
+  "preconditions": {
+    "tech_review": "无阻塞项",
+    "evidence": [
+      "WAS okf 校验 13 PASS / 0 FAIL（升版后复跑）",
+      "CWME ci-gate 6/6 PASS（本体/SHACL·防漂移·回验·加载·Neo4j·源一致性）",
+      "受理器回归 41/41",
+      "S3/C3 样例自查（唯一性/引用闭合/源引用）全过"
+    ]
+  },
+  "transitioned": [
+    { "doc": "WAS:docs/WAS理论篇_v0.1.md", "from": "draft_for_review（v0.1）", "to": "controlled（v1.0）" },
+    { "doc": "WAS:docs/GlobalCloud-WAS总体方案V1.2-GPCF统一重构版.md", "from": "v1.3.0-draft", "to": "v1.3.0" },
+    { "doc": "WAS:docs/WAS世界元素与资产类型映射表_v0.1.md", "from": "draft_for_review", "to": "controlled" },
+    { "doc": "WAS:docs/WAS三类边语义词表_v0.1.md", "from": "draft_for_review", "to": "controlled" },
+    { "doc": "WAS:docs/WAS术语与定义治理机制_v0.1.md", "from": "draft_for_review", "to": "controlled" },
+    { "doc": "WAS:docs/灵魂公式1.0能力验收定义_v0.1.md", "from": "draft_for_review", "to": "active（研究线）" },
+    { "doc": "XWAIL:docs/XWAIL扩展议题_was-theory_v0.1.md", "from": "draft_for_review", "to": "registered（修订议程输入）" },
+    { "doc": "KDS:工业绿链/图谱/ontology/world-elements-mapping_v0.1.md", "from": "draft_for_review", "to": "controlled" },
+    { "doc": "KDS:工业绿链/图谱/ontology/edge-classification_v0.1.md", "from": "draft_for_review", "to": "controlled" },
+    { "doc": "KDS:工业绿链/图谱/ontology/exports/slices/gehua-chain-slice-network_v0.1.json", "from": "demo", "to": "controlled（演示性质不变）" },
+    { "doc": "KDS:工业绿链/图谱/evidence/2026-10-12_RA-TA-EA职责映射_v0.1.md", "from": "draft_for_review", "to": "controlled" },
+    { "doc": "KDS:世界资产/世界模型引擎/2026-10-12_CWME事件因果网络设计_v0.1.md", "from": "draft_for_review", "to": "controlled" },
+    { "doc": "KDS:世界资产/世界模型引擎/2026-10-12_CWME术语辨析_视图切片与世界切片_v0.1.md", "from": "draft_for_review", "to": "controlled" },
+    { "doc": "KDS:世界资产/世界模型引擎/ontology/exports/city-slices/city-slice-samples_v0.1.json", "from": "demo", "to": "controlled（演示性质不变）" },
+    { "doc": "KDS:世界资产/世界模型引擎/2026-10-12_态势全景六视图承载映射_v0.1.md", "from": "draft_for_review", "to": "controlled" },
+    { "doc": "KDS:世界资产/WAME/2026-10-12_WAME构元注册概念预留_v0.1.md", "from": "draft_for_review", "to": "controlled" },
+    { "doc": "KDS:世界资产/WAME/2026-10-12_WAME_RA-TA-EA执行环境评估_v0.1.md", "from": "draft_for_review", "to": "controlled" }
+  ],
+  "version_changes": [
+    "WAS 理论篇：v0.1 → v1.0（转正稿）",
+    "WAS 总体方案：v1.3.0-draft → v1.3.0",
+    "okf/ontology.yaml：0.1.0 → 0.2.0（新增 world_model_terms 区段：理论篇术语 32 条转正登记；0.1.0 引用保持有效/兼容）"
+  ],
+  "compatibility": {
+    "old_refs": "0.1.0 历史引用一律不改（mapping.yaml/compat-matrix 等为如实登记的历史记录）；mapping.yaml 已补记 2026-10-12 更新说明",
+    "new_refs": "新引用使用 0.2.0"
+  },
+  "rollback": "各件文本 diff 可反向恢复；四仓提交留痕（WAS/XWAIL/KDS/GPCF）",
+  "non_claims": [
+    "转正 = 文档状态与版本推进，不等于运行就绪、生产就绪或业务完成",
+    "32 条词表候选 → okf 登记为转正落位；GPCF registry 侧候选记录同步保留",
+    "研究件（灵魂公式 1.0 验收）active 不等于已通过验收（对照实证：通过 3／部分 4／待材料 1）"
+  ]
+}
