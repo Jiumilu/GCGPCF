@@ -44,3 +44,7 @@ superseded_by: []
 - 未经人工验收不得升级 `accepted` 或 `integrated`。
 
 Current state remains `partial` until MMC 真实项目仓、模板复用验证和人工验收完成。
+
+| evidence_id | source | date | status |
+|---|---|---|---|
+| MMC-INTAKE-READONLY-CAPABILITY-REGISTRATION-REQUEST-20261014 | docs/harness/MMC/evidence/mmc-intake-readonly-capability-registration-request-20261014.md | 2026-10-14 | request_submitted_pending_governance_review |

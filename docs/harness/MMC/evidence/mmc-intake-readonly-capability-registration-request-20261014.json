@@ -1,0 +1,70 @@
+{
+  "evidence_id": "MMC-INTAKE-READONLY-CAPABILITY-REGISTRATION-REQUEST-20261014",
+  "task_id": "GPCF-MMC-INTAKE-REG-001",
+  "loop_round_id": "GPCF-MMC-INTAKE-REG-001",
+  "date": "2026-10-14",
+  "status": "request_submitted_pending_governance_review",
+  "scope": "mmc_intake_readonly_capability_registration_request_only",
+  "requested_decision": "admit_intake_readonly_capabilities_into_mmc_catalog",
+  "current_decision": "pending_governance_review",
+  "subject": {
+    "target_system": "xap-intake 受理器（127.0.0.1:3210·service=xap-intake·XWAIL 受理链）",
+    "source_file": "GlobalCloud WAES/server/xap-intake/intake_server.py",
+    "capabilities_readonly": [
+      {"capability_id": "intake.xap.health", "method": "GET", "path": "/health", "note": "探活（现场实测 200）"},
+      {"capability_id": "intake.xap.requests_list", "method": "GET", "path": "/intake/requests"},
+      {"capability_id": "intake.xap.request_get", "method": "GET", "path": "/intake/requests/<rid>"},
+      {"capability_id": "intake.xap.receipt_get", "method": "GET", "path": "/intake/receipts/<rid>"},
+      {"capability_id": "intake.xap.publication_get", "method": "GET", "path": "/intake/publications/<packageId>/<version>"},
+      {"capability_id": "intake.xap.projects_list", "method": "GET", "path": "/projects"}
+    ],
+    "readonly_only": true,
+    "excluded_write_surface": [
+      "/intake/submit", "/intake/resubmit", "/intake/decide", "/intake/publish",
+      "/intake/revoke", "/intake/execution-report", "POST /projects", "/projects/sync"
+    ]
+  },
+  "evidenceRefs": [
+    "MMC:docs/planning/m2-d2.1-extension-candidates_v0.1.md（D2.1 扩展候选清单·受理器=P1）",
+    "GlobalCloud WAES:server/xap-intake/intake_server.py（只读端点面·源码核读）",
+    "现场探测：GET http://127.0.0.1:3210/health → 200（2026-10-14）"
+  ],
+  "admission_preconditions": {
+    "source_file_reviewed": true,
+    "readonly_surface_identified": true,
+    "health_endpoint_probed_200": true,
+    "no_waes_repo_modification": true,
+    "no_intake_write_surface_touched": true,
+    "candidate_boundary_retained": true
+  },
+  "requested_boundary": {
+    "allowed_after_settlement": [
+      "MMC catalog 登记 6 条只读能力（candidate 态）",
+      "MMC 侧只读探测（probe）/状态导出"
+    ],
+    "forbidden": [
+      "接入写面（submit/resubmit/decide/publish/revoke/execution-report）",
+      "修改受理器代码或数据",
+      "绕过 governor 鉴权（X-Governor-Key）",
+      "自动裁定或代裁"
+    ]
+  },
+  "gates": {
+    "request_package_generated": true,
+    "submitted": true,
+    "registry_entry_added": false,
+    "governance_reviewed": false,
+    "wame_authorized": false,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false
+  },
+  "validator": "tools/kds-sync/validate_mmc_intake_readonly_capability_registration.py",
+  "non_claims": [
+    "不改受理器代码/数据",
+    "不改 WAES 仓",
+    "不接写面",
+    "裁定权属治理方（留白）",
+    "候选登记（非运行授权）"
+  ]
+}
