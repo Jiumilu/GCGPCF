@@ -97,8 +97,11 @@ def main() -> int:
                 "accepted 状态需 decision_record（decision/date/authority）")
         require(gates.get("governance_reviewed") is True, "accepted 状态 governance_reviewed 必须为 true")
         require(gates.get("accepted") is True, "accepted 状态 accepted 门必须为 true")
-        require(gates.get("registry_entry_added") is True or gates.get("registry_entry_added") is False,
-                "registry_entry_added 须为布尔")
+        if gates.get("registry_entry_added") is True:
+            require("capability-catalog" in str(evidence.get("registry_entry_ref", "")),
+                    "registry_entry_added=true 需 registry_entry_ref 指向 MMC capability-catalog")
+        else:
+            require(gates.get("registry_entry_added") is False, "registry_entry_added 非真时须为 false")
         for key in ["integrated", "production_ready"]:
             require(gates.get(key) is False, f"gate must be false: {key}")
     else:

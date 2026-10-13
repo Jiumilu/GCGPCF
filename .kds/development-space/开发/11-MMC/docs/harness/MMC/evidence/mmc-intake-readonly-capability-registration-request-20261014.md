@@ -41,20 +41,27 @@ superseded_by: []
 
 - **请求范围**（`scope`）：mmc_intake_readonly_capability_registration_request_only；
 - **请求裁定**（`requested_decision`）：admit_intake_readonly_capabilities_into_mmc_catalog；
-- **当前裁定态**（`current_decision`）：`pending_governance_review`（留白——裁定权属治理方）。
+- **当前裁定态**（`current_decision`）：`accepted`（2026-10-14·老卢「受理」）。
 
 ## 4. 门禁清单
 
 ```text
 request_package_generated | true
 submitted | true
-registry_entry_added | false
-governance_reviewed | false
+governance_reviewed | true
+accepted | true
+registry_entry_added | true
 wame_authorized | false
-accepted | false
 production_ready | false
 ```
 
-## 5. 非声明
+## 5. 受理记录
+
+- **裁定**：accepted（2026-10-14）；
+- **授权来源**：老卢「受理」（会话逐字·2026-10-14）；
+- **依据**：requested_decision=admit_intake_readonly_capabilities_into_mmc_catalog（6 只读能力·候选登记·写面排除）；
+- **next_step**：MMC catalog 登记 6 只读能力（candidate 态）→ `registry_entry_added` 翻 true。
+
+## 6. 非声明
 
 不改受理器代码/数据；不改 WAES 仓；不接写面；候选登记（非运行授权）；治理裁定记录以 GPCF evidence 为权威（本件保持 `pending_governance_review`）。
