@@ -381,6 +381,7 @@ def read_feature(path: Path) -> dict[str, Any]:
     data.setdefault("loop", {})
     data.setdefault("evidence", {})
     data.setdefault("blockers", [])
+    data["blockers"] = data.get("blockers") or []   # 归一化：空列表经 render(裸 "blockers:") round-trip 后为 None 的防御
     return data
 
 

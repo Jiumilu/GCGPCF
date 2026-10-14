@@ -182,11 +182,11 @@
       "name": "gpcf-governance-console",
       "project": "gpcf",
       "priority": "P1",
-      "status": "blocked",
-      "current_role": "Evaluator",
-      "workspace": "features/active/F-018-gpcf-governance-console",
+      "status": "closed",
+      "current_role": "Recorder",
+      "workspace": "features/done/F-018-gpcf-governance-console",
       "created_at": "2026-10-14T01:48:01+00:00",
-      "updated_at": "2026-10-14T02:06:33+00:00"
+      "updated_at": "2026-10-14T02:21:05+00:00"
     },
     {
       "id": "F-019",
@@ -198,6 +198,17 @@
       "workspace": "features/active/F-019-icp-industry-console",
       "created_at": "2026-10-14T02:05:18+00:00",
       "updated_at": "2026-10-14T02:06:34+00:00"
+    },
+    {
+      "id": "F-020",
+      "name": "aaas-service-console",
+      "project": "aaas",
+      "priority": "P1",
+      "status": "closed",
+      "current_role": "Recorder",
+      "workspace": "features/done/F-020-aaas-service-console",
+      "created_at": "2026-10-14T02:17:58+00:00",
+      "updated_at": "2026-10-14T02:21:05+00:00"
     }
   ]
 }

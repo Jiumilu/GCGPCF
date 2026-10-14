@@ -1,0 +1,5 @@
+UI evidence detected from Feature artifacts.
+assets:
+- evidence/ui-browser-e2e-overview.png
+notes:
+- evidence/build.txt

@@ -1,0 +1,35 @@
+id: F-020
+name: aaas-service-console
+project: aaas
+status: done
+goal: AaaS 服务商业控制台：把服务包（ServicePackage）/计量/SLA/证据与退出条款/校验器运行面以服务化商业运营工作台呈现，装配进 WAE 门面（母本第 8 项『AaaS 服务台』）。一期只读（导出物模式）；商业候选态如实标注。规划：KDS 体系《AaaS服务商业控制台_全量规划_v0.1》。
+owner: agent-dev-01
+priority: P1
+scope:
+  in:
+    - M1 数据面（本仓导出器：服务包/schema 解析＋四校验器实跑·已交付）
+    - M2 模块与装配（module-aaas-console 六视图界面组件＋WAE 母本第 8 项＋registry v0.8·已交付）
+    - M3 纪律检查（只读/商业候选态标注·已交付）
+    - M4 收口（数据卡契约件/KDS 回写/本工作区）
+  out:
+    - 真实计费/结算/SLA 强制/客户交付（业务边界外）
+    - 写能力（二期）
+acceptance:
+  - M1：导出器真跑 findings=0·四校验器 exit0·high0（达成 2026-10-14）
+  - M2：WAE 母本第 8 项可见可点（达成·E2E 六页签·19 键/八维/4 卡）
+  - M3：模块零写路径 grep 实测（达成）
+  - M4：工作区+KDS 回写闭环（本件）
+loop:
+  current_step: commit
+  iteration: 4
+evidence:
+  tests: pass
+  build: pass
+  screenshots: pass
+  api: waived
+  summary: pass
+blockers:
+registration_note: 编号 F-020（官方工具 gpcf_new_feature.py 分配·自动入队）；老卢拍板序列（2026-10-14：规划→「继续」×2=M1/M2）；交付方式=本线（Hermes）。
+source_plan: 体系/AaaS服务商业控制台_全量规划_v0.1.md（KDS）
+created_at: "2026-10-14T02:17:58+00:00"
+updated_at: "2026-10-14T02:21:05+00:00"
