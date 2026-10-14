@@ -133,10 +133,36 @@ def main() -> int:
         "kds_sync_registers": list_files(st_dir, "kds-*"),
     }
 
-    # ── 视图4 主方案台账 ──
+    # ── 视图4 主方案台账：解析控制台账 §4 项目主方案盘点表 ──
     mp = ROOT / "09-status" / "globalcloud-project-master-plan-control-register.md"
-    sections["master_plan_register"] = {"exists": mp.is_file(), "file": mp.name,
-                                        "mtime": mtime(mp)}
+    mp_rows: list[dict] = []
+    if mp.is_file():
+        try:
+            in_table = False
+            for ln in mp.read_text(encoding="utf-8").splitlines():
+                if ln.startswith("| project | repo_path"):
+                    in_table = True
+                    continue
+                if in_table:
+                    if not ln.startswith("|"):
+                        break
+                    cells = [c.strip() for c in ln.strip("|").split("|")]
+                    if len(cells) != 7 or set(cells[0]) <= set("-: "):
+                        continue
+                    mp_rows.append({
+                        "project": cells[0], "repo_path": cells[1], "plan": cells[2],
+                        "candidates": cells[3], "status": cells[4].strip("`"),
+                        "problem": cells[5], "next_step": cells[6],
+                    })
+        except Exception as e:
+            note("master_plan", f"台账解析失败：{e}")
+    mp_by_status: dict[str, int] = {}
+    for r in mp_rows:
+        mp_by_status[r["status"]] = mp_by_status.get(r["status"], 0) + 1
+    sections["master_plan_register"] = {
+        "exists": mp.is_file(), "file": mp.name, "mtime": mtime(mp),
+        "count": len(mp_rows), "by_status": mp_by_status, "rows": mp_rows,
+    }
 
     # ── 视图7 规则与变更：okf/ + openspec/ ──
     sections["policies"] = {
@@ -148,10 +174,27 @@ def main() -> int:
 
     # ── 视图3 项目群运转：projects/ + registry + 05/06 ──
     proj_names = list_dirs(ROOT / "projects")
+    proj_detail: dict = {}
+    for n in proj_names:
+        d = ROOT / "projects" / n
+        files = {f: (d / f).is_file() for f in ("ROADMAP.md", "STATUS.md", "RISK.md")}
+        mt = 0.0
+        for f in ("ROADMAP.md", "STATUS.md", "RISK.md"):
+            p = d / f
+            if p.is_file():
+                try:
+                    mt = max(mt, p.stat().st_mtime)
+                except Exception:
+                    pass
+        proj_detail[n] = {
+            "files": files,
+            "latest_mtime": (datetime.fromtimestamp(mt, tz=timezone.utc).isoformat() if mt else ""),
+            "file_count": count_files_recursive(d),
+        }
     sections["projects"] = {
         "count": len(proj_names),
         "names": proj_names,
-        "files_per_project": {n: count_files_recursive(ROOT / "projects" / n) for n in proj_names},
+        "detail": proj_detail,
         "state_matrix": (ROOT / "registry" / "project-state-matrix.yaml").is_file(),
         "agent_team_files": count_files(ROOT / "05-agent-team", "*.md"),
         "workstream_files": count_files(ROOT / "06-workstreams", "*.md"),
