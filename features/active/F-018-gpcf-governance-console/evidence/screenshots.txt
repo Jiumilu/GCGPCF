@@ -1,7 +1,0 @@
-UI evidence detected from Feature artifacts.
-assets:
-- evidence/ui-browser-e2e-masterplan.png
-- evidence/ui-browser-e2e-overview.png
-notes:
-- evidence/build.txt
-- evidence/screenshots.txt
