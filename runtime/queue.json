@@ -176,6 +176,28 @@
       "workspace": "features/active/F-017-cwme-city-world-model-engine",
       "created_at": "2026-10-11T05:41:00+00:00",
       "updated_at": "2026-10-11T07:20:58+00:00"
+    },
+    {
+      "id": "F-018",
+      "name": "gpcf-governance-console",
+      "project": "gpcf",
+      "priority": "P1",
+      "status": "blocked",
+      "current_role": "Evaluator",
+      "workspace": "features/active/F-018-gpcf-governance-console",
+      "created_at": "2026-10-14T01:48:01+00:00",
+      "updated_at": "2026-10-14T02:06:33+00:00"
+    },
+    {
+      "id": "F-019",
+      "name": "icp-industry-console",
+      "project": "icp",
+      "priority": "P1",
+      "status": "blocked",
+      "current_role": "Evaluator",
+      "workspace": "features/active/F-019-icp-industry-console",
+      "created_at": "2026-10-14T02:05:18+00:00",
+      "updated_at": "2026-10-14T02:06:34+00:00"
     }
   ]
 }
