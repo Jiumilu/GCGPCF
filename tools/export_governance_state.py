@@ -99,7 +99,13 @@ def main() -> int:
             s = str(item.get("status", "unknown"))
             by_status[s] = by_status.get(s, 0) + 1
         q_stats = {"queue_total": len(q["queue"]), "queue_by_status": by_status,
-                   "schema_version": q.get("schema_version")}
+                   "schema_version": q.get("schema_version"),
+                   "items": [
+                       {"id": it.get("id"), "name": it.get("name"), "project": it.get("project"),
+                        "priority": it.get("priority"), "status": it.get("status"),
+                        "current_role": it.get("current_role"), "updated_at": it.get("updated_at")}
+                       for it in q["queue"]
+                   ]}
     elif q is not None:
         note("delivery", "queue.json 结构不符（无 queue 数组）——如实标注")
     sections["delivery"] = {
@@ -141,9 +147,11 @@ def main() -> int:
     }
 
     # ── 视图3 项目群运转：projects/ + registry + 05/06 ──
+    proj_names = list_dirs(ROOT / "projects")
     sections["projects"] = {
-        "count": len(list_dirs(ROOT / "projects")),
-        "names": list_dirs(ROOT / "projects"),
+        "count": len(proj_names),
+        "names": proj_names,
+        "files_per_project": {n: count_files_recursive(ROOT / "projects" / n) for n in proj_names},
         "state_matrix": (ROOT / "registry" / "project-state-matrix.yaml").is_file(),
         "agent_team_files": count_files(ROOT / "05-agent-team", "*.md"),
         "workstream_files": count_files(ROOT / "06-workstreams", "*.md"),
