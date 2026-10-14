@@ -6,3 +6,4 @@ fixtures/agent-reach/*authorization.local.json
 !.env.example
 .codegraph/
 .zcode/
+runtime/evidence/
