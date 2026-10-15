@@ -11,14 +11,14 @@ kds_space: 开发
 kds_path: 开发/91-治理与验收/09-status/kds-development-space-sync-register.md
 source_path: 09-status/kds-development-space-sync-register.md
 sync_direction: bidirectional
-last_reviewed: 2026-10-12
+last_reviewed: 2026-10-14
 supersedes: []
 superseded_by: []
 ---
 
 # KDS 开发空间同步台账
 
-日期：2026-10-12
+日期：2026-10-14
 
 用途：登记 Git 文档与 KDS `开发` 空间的双向同步映射。当前实现包含仓库内 `.kds/development-space/开发` 本地镜像与真实 KDS API 同步工具链；单文档 API 状态以 `kds_api_status` 和真实同步审计流水为准。
 
@@ -42,8 +42,8 @@ superseded_by: []
 | XiaoC | 08-XiaoC | 68 | 65 | 已建空间 |
 | XGD | 09-XGD | 10 | 7 | 已建空间 |
 | XiaoG | 10-XiaoG | 11 | 8 | 已建空间 |
-| MMC | 11-MMC | 12 | 9 | 已建空间 |
-| GPCF | 12-GPCF | 1957 | 1739 | 已建空间 |
+| MMC | 11-MMC | 13 | 10 | 已建空间 |
+| GPCF | 12-GPCF | 1959 | 1740 | 已建空间 |
 | Studio | 13-Studio | 5 | 2 | 已建空间 |
 | ICP | 14-ICP | 0 | 0 | 已建空间，暂无直接镜像文档 |
 | SpaceAIStudio | 15-SpaceAIStudio | 0 | 0 | 已建空间，暂无直接镜像文档 |
@@ -55,7 +55,7 @@ superseded_by: []
 | --- | --- | --- |
 | 00-项目群总控 | 项目群总入口与根 README | 1 |
 | 90-跨项目架构 | 跨项目架构、主线、数据/知识跨域文档 | 53 |
-| 91-治理与验收 | 治理、验收、状态、台账与门禁文档 | 287 |
+| 91-治理与验收 | 治理、验收、状态、台账与门禁文档 | 288 |
 | 92-证据与会话归档 | Harness、证据样本、历史会话与归档文档 | 95 |
 | 99-过期文档 | deprecated / superseded 文档 | 0 |
 
@@ -1128,6 +1128,7 @@ superseded_by: []
 | GPCF-DOC-523635A3FD | docs/harness/MMC/evidence/README.md | 开发/11-MMC/docs/harness/MMC/evidence/README.md | bidirectional | pending_api |
 | GPCF-DOC-AD7000100E | docs/harness/MMC/evidence/evidence-index.md | 开发/11-MMC/docs/harness/MMC/evidence/evidence-index.md | bidirectional | pending_api |
 | GPCF-DOC-MMC-GOVERNANCE-TEMPLATE-SMOKE-20260625 | docs/harness/MMC/evidence/mmc-governance-template-smoke-20260625.md | 开发/11-MMC/docs/harness/MMC/evidence/mmc-governance-template-smoke-20260625.md | bidirectional | pending_api |
+| GPCF-DOC-MMC-INTAKE-REG-REQUEST-20261014 | docs/harness/MMC/evidence/mmc-intake-readonly-capability-registration-request-20261014.md | 开发/11-MMC/docs/harness/MMC/evidence/mmc-intake-readonly-capability-registration-request-20261014.md | bidirectional | pending_api |
 | GPCF-DOC-F350ADEC6B | docs/harness/MMC/loop-state.md | 开发/11-MMC/docs/harness/MMC/loop-state.md | bidirectional | pending_api |
 | GPCF-DOC-72EF36F3B2 | docs/harness/MMC/loops/README.md | 开发/11-MMC/docs/harness/MMC/loops/README.md | bidirectional | pending_api |
 | GPCF-DOC-923334C992 | docs/harness/MMC/loops/loop-round-GPCF-MM-LR-001.md | 开发/11-MMC/docs/harness/MMC/loops/loop-round-GPCF-MM-LR-001.md | bidirectional | pending_api |
@@ -2995,6 +2996,7 @@ superseded_by: []
 | GPCF-DOC-LOOP-MULTI-AGENT-EXECUTION-SMOKE-001 | docs/harness/loops/loop-round-GPCF-LOOP-MULTI-AGENT-EXECUTION-SMOKE-001.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-LOOP-MULTI-AGENT-EXECUTION-SMOKE-001.md | bidirectional | pending_api |
 | GPCF-LOOP-OPERATIONAL-GATE-TRIAGE-001 | docs/harness/loops/loop-round-GPCF-LOOP-OPERATIONAL-GATE-TRIAGE-001.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-LOOP-OPERATIONAL-GATE-TRIAGE-001.md | bidirectional | pending_api |
 | GPCF-LOOP-V11-GOVERNANCE-RECOVERY-001 | docs/harness/loops/loop-round-GPCF-LOOP-V11-GOVERNANCE-RECOVERY-001.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-LOOP-V11-GOVERNANCE-RECOVERY-001.md | bidirectional | pending_api |
+| GPCF-DOC-MMC-INTAKE-REG-LOOP-20261014 | docs/harness/loops/loop-round-GPCF-MMC-INTAKE-REG-001.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-MMC-INTAKE-REG-001.md | bidirectional | pending_api |
 | GPCF-DOC-55A6B73433 | docs/harness/loops/loop-round-GPCF-OKF-GOVERNANCE-CLOSURE-RECOVERY-001.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-OKF-GOVERNANCE-CLOSURE-RECOVERY-001.md | bidirectional | pending_api |
 | GPCF-DOC-AC4F4B6A2E | docs/harness/loops/loop-round-GPCF-OKF-SUMMARY-ADMISSION-PRECHECK-002.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-OKF-SUMMARY-ADMISSION-PRECHECK-002.md | bidirectional | pending_api |
 | GPCF-DOC-E1CC4F445E | docs/harness/loops/loop-round-GPCF-OKF-SUMMARY-HUMAN-CONFIRMATION-PACK-003.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-OKF-SUMMARY-HUMAN-CONFIRMATION-PACK-003.md | bidirectional | pending_api |
@@ -3486,6 +3488,7 @@ superseded_by: []
 | GPCF-DOC-D67FFAE452 | projects/studio/STATUS.md | 开发/91-治理与验收/projects/studio/STATUS.md | bidirectional | pending_api |
 | GPCF-DOC-455691886F | projects/wae/MASTER-DESIGN.md | 开发/91-治理与验收/projects/wae/MASTER-DESIGN.md | bidirectional | pending_api |
 | GPCF-DOC-WAE-MASTER-DESIGN-V02 | projects/wae/MASTER-DESIGN_v0.2.md | 开发/91-治理与验收/projects/wae/MASTER-DESIGN_v0.2.md | bidirectional | pending_api |
+| GPCF-DOC-WAE-MASTER-DESIGN-V03 | projects/wae/MASTER-DESIGN_v0.3.md | 开发/91-治理与验收/projects/wae/MASTER-DESIGN_v0.3.md | bidirectional | pending_api |
 | GPCF-DOC-420E49DB6F | projects/wae/STATUS.md | 开发/91-治理与验收/projects/wae/STATUS.md | bidirectional | pending_api |
 | WAE-DOC-FORM-COMPARE-20261012 | projects/wae/技术形态对比分析_v0.1.md | 开发/91-治理与验收/projects/wae/技术形态对比分析_v0.1.md | bidirectional | pending_api |
 | GPCF-DOC-25E061C8E6 | projects/wame/RISK.md | 开发/91-治理与验收/projects/wame/RISK.md | bidirectional | pending_api |

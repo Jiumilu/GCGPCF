@@ -11,14 +11,14 @@ kds_space: 开发
 kds_path: 开发/91-治理与验收/09-status/globalcloud-document-control-register.md
 source_path: 09-status/globalcloud-document-control-register.md
 sync_direction: bidirectional
-last_reviewed: 2026-10-12
+last_reviewed: 2026-10-14
 supersedes: []
 superseded_by: []
 ---
 
 # GlobalCloud 文档控制总台账
 
-日期：2026-10-12
+日期：2026-10-14
 
 用途：登记 GPCF 仓库内所有 Markdown 文档的受控身份、项目归属、状态、源路径与 KDS 开发空间路径。
 
@@ -38,8 +38,8 @@ superseded_by: []
 | XiaoC | 08-XiaoC | 68 | 65 | 已建空间 |
 | XGD | 09-XGD | 10 | 7 | 已建空间 |
 | XiaoG | 10-XiaoG | 11 | 8 | 已建空间 |
-| MMC | 11-MMC | 12 | 9 | 已建空间 |
-| GPCF | 12-GPCF | 1957 | 1739 | 已建空间 |
+| MMC | 11-MMC | 13 | 10 | 已建空间 |
+| GPCF | 12-GPCF | 1959 | 1740 | 已建空间 |
 | Studio | 13-Studio | 5 | 2 | 已建空间 |
 | ICP | 14-ICP | 0 | 0 | 已建空间，暂无直接镜像文档 |
 | SpaceAIStudio | 15-SpaceAIStudio | 0 | 0 | 已建空间，暂无直接镜像文档 |
@@ -51,7 +51,7 @@ superseded_by: []
 | --- | --- | --- |
 | 00-项目群总控 | 项目群总入口与根 README | 1 |
 | 90-跨项目架构 | 跨项目架构、主线、数据/知识跨域文档 | 53 |
-| 91-治理与验收 | 治理、验收、状态、台账与门禁文档 | 287 |
+| 91-治理与验收 | 治理、验收、状态、台账与门禁文档 | 288 |
 | 92-证据与会话归档 | Harness、证据样本、历史会话与归档文档 | 95 |
 | 99-过期文档 | deprecated / superseded 文档 | 0 |
 
@@ -1124,6 +1124,7 @@ superseded_by: []
 | GPCF-DOC-523635A3FD | evidence | docs/harness/MMC/evidence/README.md | MMC | GPC, WAME, KDS, MMC, GPCF | docs | controlled | 开发/11-MMC/docs/harness/MMC/evidence/README.md |
 | GPCF-DOC-AD7000100E | Evidence Index — MMC | docs/harness/MMC/evidence/evidence-index.md | MMC | GPC, WAME, MMC, GPCF | docs | controlled | 开发/11-MMC/docs/harness/MMC/evidence/evidence-index.md |
 | GPCF-DOC-MMC-GOVERNANCE-TEMPLATE-SMOKE-20260625 | MMC 治理模板 Smoke 证据 2026-06-25 | docs/harness/MMC/evidence/mmc-governance-template-smoke-20260625.md | MMC | GPC, WAME, KDS, Brain, MMC, GPCF, Studio | docs | controlled | 开发/11-MMC/docs/harness/MMC/evidence/mmc-governance-template-smoke-20260625.md |
+| GPCF-DOC-MMC-INTAKE-REG-REQUEST-20261014 | MMC 受理器只读能力登记请求 2026-10-14 | docs/harness/MMC/evidence/mmc-intake-readonly-capability-registration-request-20261014.md | MMC | GPC, WAME, MMC, GPCF | docs | controlled | 开发/11-MMC/docs/harness/MMC/evidence/mmc-intake-readonly-capability-registration-request-20261014.md |
 | GPCF-DOC-F350ADEC6B | GlobalCloud MMC Loop State | docs/harness/MMC/loop-state.md | MMC | GPC, WAME, KDS, MMC, GPCF | docs | controlled | 开发/11-MMC/docs/harness/MMC/loop-state.md |
 | GPCF-DOC-72EF36F3B2 | loops | docs/harness/MMC/loops/README.md | MMC | GPC, WAME, KDS, MMC, GPCF | docs | controlled | 开发/11-MMC/docs/harness/MMC/loops/README.md |
 | GPCF-DOC-923334C992 | Loop Round GPCF-MM-LR-001 | docs/harness/MMC/loops/loop-round-GPCF-MM-LR-001.md | MMC | GPC, WAME, KDS, MMC, GPCF | docs | controlled | 开发/11-MMC/docs/harness/MMC/loops/loop-round-GPCF-MM-LR-001.md |
@@ -1725,7 +1726,7 @@ superseded_by: []
 | GPCF-DOC-8DC131D430 | Ontology/WAS 3 小时实施 P2 门禁执行与回放证据 | docs/harness/evidence/ontology-was-3h-p2-gate-replay-20260621.md | GPCF | GFIS, GPC, WAME, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/evidence/ontology-was-3h-p2-gate-replay-20260621.md |
 | GPCF-DOC-20DAB7011D | Ontology/WAS 3 小时实施 P3 收口与下一步决策证据 | docs/harness/evidence/ontology-was-3h-p3-closure-20260621.md | GPCF | GFIS, GPC, WAME, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/evidence/ontology-was-3h-p3-closure-20260621.md |
 | GPCF-DOC-C21E66324C | Ontology/WAS 真实 Source Record Intake Package | docs/harness/evidence/ontology-was-real-source-record-intake-pack-20260621.md | KDS | GFIS, GPC, WAME, KDS, GPCF | docs | controlled | 开发/05-KDS/docs/harness/evidence/ontology-was-real-source-record-intake-pack-20260621.md |
-| GPCF-DOC-PROJECTGROUPLIVESTATUSCURRENT20260701 | GlobalCloud 项目群当前 Live 状态快照 | docs/harness/evidence/project_group_live_status_current.md | KDS | GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio | docs | controlled | 开发/05-KDS/docs/harness/evidence/project_group_live_status_current.md |
+| GPCF-DOC-PROJECTGROUPLIVESTATUSCURRENT20260701 | GlobalCloud 项目群当前 Live 状态快照 | docs/harness/evidence/project_group_live_status_current.md | KDS | GFIS, GPC, PVAOS, WAME, KDS, Brain, XiaoC, XGD, XiaoG, MMC, GPCF, Studio | docs | controlled | 开发/05-KDS/docs/harness/evidence/project_group_live_status_current.md |
 | GPCF-DOC-FACA370CCA | 会话主任务总结与声明控制边界 | docs/harness/evidence/session-main-task-summary-declaration-boundary-20260622.md | KDS | GFIS, GPC, WAME, KDS, Brain, GPCF, Studio | docs | controlled | 开发/05-KDS/docs/harness/evidence/session-main-task-summary-declaration-boundary-20260622.md |
 | GPCF-DOC-3A9B82D614 | Session Mainline Drift Watch 20260622 | docs/harness/evidence/session-mainline-drift-watch-20260622.md | KDS | GFIS, GPC, WAME, KDS, GPCF | docs | controlled | 开发/05-KDS/docs/harness/evidence/session-mainline-drift-watch-20260622.md |
 | GPCF-DOC-SESSION-HANDOFF-REQUEST-GATE-20260622 | Session Mainline Handoff Request Gate 20260622 | docs/harness/evidence/session-mainline-handoff-request-gate-20260622.md | KDS | GFIS, GPC, WAME, KDS, GPCF | docs | controlled | 开发/05-KDS/docs/harness/evidence/session-mainline-handoff-request-gate-20260622.md |
@@ -2991,6 +2992,7 @@ superseded_by: []
 | GPCF-DOC-LOOP-MULTI-AGENT-EXECUTION-SMOKE-001 | LOOP Multi-Agent Execution Smoke Round 001 | docs/harness/loops/loop-round-GPCF-LOOP-MULTI-AGENT-EXECUTION-SMOKE-001.md | GPCF | GFIS, GPC, WAME, KDS, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-LOOP-MULTI-AGENT-EXECUTION-SMOKE-001.md |
 | GPCF-LOOP-OPERATIONAL-GATE-TRIAGE-001 | Loop Round GPCF-LOOP-OPERATIONAL-GATE-TRIAGE-001 | docs/harness/loops/loop-round-GPCF-LOOP-OPERATIONAL-GATE-TRIAGE-001.md | GPCF | GFIS, GPC, WAME, KDS, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-LOOP-OPERATIONAL-GATE-TRIAGE-001.md |
 | GPCF-LOOP-V11-GOVERNANCE-RECOVERY-001 | LOOP v1.1 Governance Recovery | docs/harness/loops/loop-round-GPCF-LOOP-V11-GOVERNANCE-RECOVERY-001.md | GPCF | GFIS, GPC, WAME, KDS, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-LOOP-V11-GOVERNANCE-RECOVERY-001.md |
+| GPCF-DOC-MMC-INTAKE-REG-LOOP-20261014 | Loop Round GPCF MMC Intake Registration 001 | docs/harness/loops/loop-round-GPCF-MMC-INTAKE-REG-001.md | GPCF | GPC, WAME, MMC, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-MMC-INTAKE-REG-001.md |
 | GPCF-DOC-55A6B73433 | Loop Round GPCF-OKF-GOVERNANCE-CLOSURE-RECOVERY-001 | docs/harness/loops/loop-round-GPCF-OKF-GOVERNANCE-CLOSURE-RECOVERY-001.md | GPCF | GPC, WAME, KDS, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-OKF-GOVERNANCE-CLOSURE-RECOVERY-001.md |
 | GPCF-DOC-AC4F4B6A2E | Loop Round GPCF-OKF-SUMMARY-ADMISSION-PRECHECK-002 | docs/harness/loops/loop-round-GPCF-OKF-SUMMARY-ADMISSION-PRECHECK-002.md | GPCF | GPC, WAME, KDS, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-OKF-SUMMARY-ADMISSION-PRECHECK-002.md |
 | GPCF-DOC-E1CC4F445E | Loop Round GPCF-OKF-SUMMARY-HUMAN-CONFIRMATION-PACK-003 | docs/harness/loops/loop-round-GPCF-OKF-SUMMARY-HUMAN-CONFIRMATION-PACK-003.md | GPCF | GPC, WAME, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-OKF-SUMMARY-HUMAN-CONFIRMATION-PACK-003.md |
@@ -3482,6 +3484,7 @@ superseded_by: []
 | GPCF-DOC-D67FFAE452 | Studio 状态 | projects/studio/STATUS.md | Studio | Studio | governance | controlled | 开发/91-治理与验收/projects/studio/STATUS.md |
 | GPCF-DOC-455691886F | 世界资产浏览器（WAE）统一界面框架总体设计 v0.1 | projects/wae/MASTER-DESIGN.md | GPCF | GPCF | governance | controlled | 开发/91-治理与验收/projects/wae/MASTER-DESIGN.md |
 | GPCF-DOC-WAE-MASTER-DESIGN-V02 | 世界资产浏览器（WAE）统一界面框架总体设计 v0.2 | projects/wae/MASTER-DESIGN_v0.2.md | GPCF | GPCF | governance | controlled | 开发/91-治理与验收/projects/wae/MASTER-DESIGN_v0.2.md |
+| GPCF-DOC-WAE-MASTER-DESIGN-V03 | 世界资产浏览器（WAE）统一界面框架总体设计 v0.3 | projects/wae/MASTER-DESIGN_v0.3.md | GPCF | GPCF | governance | controlled | 开发/91-治理与验收/projects/wae/MASTER-DESIGN_v0.3.md |
 | GPCF-DOC-420E49DB6F | WAE 状态 | projects/wae/STATUS.md | GPCF | GPCF | governance | controlled | 开发/91-治理与验收/projects/wae/STATUS.md |
 | WAE-DOC-FORM-COMPARE-20261012 | WAE 技术形态对比分析 v0.1 | projects/wae/技术形态对比分析_v0.1.md | GPCF | GPCF | governance | controlled | 开发/91-治理与验收/projects/wae/技术形态对比分析_v0.1.md |
 | GPCF-DOC-25E061C8E6 | WAME 风险 | projects/wame/RISK.md | WAME | WAME | governance | controlled | 开发/91-治理与验收/projects/wame/RISK.md |

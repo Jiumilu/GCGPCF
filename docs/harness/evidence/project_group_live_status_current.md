@@ -18,14 +18,14 @@ superseded_by: []
 data_layer: derived
 authority_level: A2
 verification_status: source_verified
-generated_at: 2026-10-12 16:16:33 +0800
+generated_at: 2026-10-16 06:20:51 +0800
 ---
 
 # GlobalCloud 项目群当前 Live 状态快照
 
 ## Summary
 
-- generated_at: `2026-10-12T16:16:33.618090+08:00`
+- generated_at: `2026-10-16T06:20:51.435343+08:00`
 - freshness_ok: `true`
 - project_count: `18`
 - pass_repo_count: `12`
@@ -33,13 +33,13 @@ generated_at: 2026-10-12 16:16:33 +0800
 
 ## Current sets
 
-- observed_dirty: `GlobalCloud WAES, GlobalCoud GPCF, GlobalCloud XWAIL, GlobalCloud KDS, GlobalCloud XGD`
-- observed_ahead: `GlobalCloud Studio, GlobalCloud KDS`
-- stable_dirty: `GlobalCloud KDS, GlobalCloud WAES, GlobalCloud XGD, GlobalCloud XWAIL, GlobalCoud GPCF`
-- stable_ahead: `GlobalCloud KDS, GlobalCloud Studio`
+- observed_dirty: `GlobalCloud WAES, GlobalCloud WAE, GlobalCoud GPCF, GlobalCloud MMC, GlobalCloud KDS, GlobalCloud XGD`
+- observed_ahead: `GlobalCloud KDS`
+- stable_dirty: `GlobalCloud KDS, GlobalCloud WAES, GlobalCloud XGD, GlobalCoud GPCF`
+- stable_ahead: `GlobalCloud KDS`
 - volatile_dirty: `GlobalCoud GPCF`
-- sensitive_repos: `GlobalCoud GPCF`
-- review_boundary: `GlobalCloud KDS, GlobalCloud WAES, GlobalCloud XGD, GlobalCloud XWAIL, GlobalCoud GPCF`
+- sensitive_repos: `GlobalCloud KDS`
+- review_boundary: `GlobalCloud KDS, GlobalCloud WAES, GlobalCloud XGD, GlobalCoud GPCF`
 
 ## Repo details
 
@@ -51,13 +51,13 @@ generated_at: 2026-10-12 16:16:33 +0800
 | `GlobalCloud XiaoC` | 0 | 0 | 0 | `none` |
 | `GlobalCloud WAES` | 13 | 0 | 0 | `none` |
 | `GlobalCloud GPC` | 0 | 0 | 0 | `none` |
-| `GlobalCloud Studio` | 0 | 21 | 0 | `none` |
-| `GlobalCloud WAE` | 0 | 0 | 0 | `none` |
-| `GlobalCoud GPCF` | 3558 | 0 | 0 | `".kds/development-space/\345\274\200\345\217\221/05-KDS/docs/harness/evidence/headroom-production-token-authorization-action-queue-20260621.md", ".kds/development-space/\345\274\200\345\217\221/12-GPCF/docs/harness/evidence/studio-default-credential-a11y-verified-20260624.md", ".kds/development-space/\345\274\200\345\217\221/12-GPCF/docs/harness/evidence/studio-default-credential-account-action-whitelist-verified-20260625.md", ".kds/development-space/\345\274\200\345\217\221/12-GPCF/docs/harness/evidence/studio-default-credential-backend-enforcement-20260623.md", ".kds/development-space/\345\274\200\345\217\221/12-GPCF/docs/harness/evidence/studio-default-credential-backend-runtime-verified-20260624.md", ".kds/development-space/\345\274\200\345\217\221/12-GPCF/docs/harness/evidence/studio-default-credential-completion-gate-verified-20260625.md", ".kds/development-space/\345\274\200\345\217\221/12-GPCF/docs/harness/evidence/studio-default-credential-login-redirect-verified-20260622.md", ".kds/development-space/\345\274\200\345\217\221/12-GPCF/docs/harness/evidence/studio-default-credential-mobile-runtime-verified-20260623.md", ".kds/development-space/\345\274\200\345\217\221/12-GPCF/docs/harness/evidence/studio-default-credential-post-change-closure-verified-20260622.md", ".kds/development-space/\345\274\200\345\217\221/12-GPCF/docs/harness/evidence/studio-default-credential-prompt-mobile-compact-verified-20260622.md", ".kds/development-space/\345\274\200\345\217\221/12-GPCF/docs/harness/evidence/studio-default-credential-prompt-nonblocking-verified-20260622.md", ".kds/development-space/\345\274\200\345\217\221/12-GPCF/docs/harness/evidence/studio-default-credential-remediation-whitelist-verified-20260625.md", ".kds/development-space/\345\274\200\345\217\221/12-GPCF/docs/harness/evidence/studio-default-credential-runtime-chain-verified-20260623.md", ".kds/development-space/\345\274\200\345\217\221/12-GPCF/docs/harness/evidence/studio-default-credential-zero-noise-remediation-20260624.md", ".kds/development-space/\345\274\200\345\217\221/12-GPCF/docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-SANITIZED-TOKEN-FIXTURE-EXTENSION-001.md", ".kds/development-space/\345\274\200\345\217\221/92-\350\257\201\346\215\256\344\270\216\344\274\232\350\257\235\345\275\222\346\241\243/.harness/runs/kds-real-token-sync-20260613-062146/README.md", ".kds/development-space/\345\274\200\345\217\221/92-\350\257\201\346\215\256\344\270\216\344\274\232\350\257\235\345\275\222\346\241\243/.harness/runs/kds-real-token-sync-20260613-062146/acceptance-matrix.md", ".kds/development-space/\345\274\200\345\217\221/92-\350\257\201\346\215\256\344\270\216\344\274\232\350\257\235\345\275\222\346\241\243/.harness/runs/kds-real-token-sync-20260613-062146/evidence/README.md", ".kds/development-space/\345\274\200\345\217\221/92-\350\257\201\346\215\256\344\270\216\344\274\232\350\257\235\345\275\222\346\241\243/.harness/runs/kds-real-token-sync-20260613-062146/patches/README.md", ".kds/development-space/\345\274\200\345\217\221/92-\350\257\201\346\215\256\344\270\216\344\274\232\350\257\235\345\275\222\346\241\243/.harness/runs/kds-real-token-sync-20260613-062146/workspaces/README.md", .harness/runs/kds-real-token-sync-20260613-062146/README.md, .harness/runs/kds-real-token-sync-20260613-062146/evidence/README.md, .harness/runs/kds-real-token-sync-20260613-062146/patches/README.md, .harness/runs/kds-real-token-sync-20260613-062146/workspaces/README.md` |
-| `GlobalCloud XWAIL` | 1 | 0 | 0 | `none` |
+| `GlobalCloud Studio` | 0 | 0 | 0 | `none` |
+| `GlobalCloud WAE` | 11 | 0 | 0 | `none` |
+| `GlobalCoud GPCF` | 3 | 0 | 0 | `none` |
+| `GlobalCloud XWAIL` | 0 | 0 | 0 | `none` |
 | `GlobalCloud GFIS` | 0 | 0 | 0 | `none` |
-| `GlobalCloud MMC` | 0 | 0 | 0 | `none` |
-| `GlobalCloud KDS` | 3 | 1 | 0 | `none` |
+| `GlobalCloud MMC` | 1 | 0 | 0 | `none` |
+| `GlobalCloud KDS` | 4126 | 14 | 0 | `"entities/\344\274\232\350\256\256\346\212\225\345\275\261/2026-08-04_\344\272\221\344\270\232\345\212\241\347\273\223\347\256\227\345\217\212token\344\270\232\345\212\241\347\233\270\345\205\263\350\256\250\350\256\272_KDS\345\210\206\346\236\220.md"` |
 | `GlobalCloud XiaoG` | 0 | 0 | 0 | `none` |
 | `GlobalCloud PVAOS` | 0 | 0 | 0 | `none` |
 | `GlobalCloud SOP` | 0 | 0 | 0 | `none` |
