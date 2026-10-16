@@ -1,0 +1,1 @@
+{"timestamp": "2026-10-16T00:32:00+00:00", "feature_id": "F-021", "role": "Builder", "status": "evaluate", "input": "World 工程与纳管登记已落地，执行范围验证", "output": "Builder -> Evaluator；status=evaluate", "evidence": "22项目OpenSpec覆盖通过；技能链存在既有wae目录登记不一致"}

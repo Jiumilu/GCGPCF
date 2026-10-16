@@ -1,0 +1,33 @@
+id: F-021
+name: world-project-onboarding
+project: gpcf
+status: blocked
+goal: 将 GlobalCloud World 登记为独立受管项目，建立本地 Git 与私有远端，验证纳管基线并保留既有门禁阻塞
+owner: World
+priority: P2
+scope:
+  in:
+  - World 独立仓库与私有 Git 初始同步
+  - 项目登记、技能链、Feature 白名单与 OpenSpec 映射
+  out:
+  - Studio F-015 或 KDS 数据与源码迁移
+  - 生产发布、业务验收与状态提升
+  - 无关历史门禁整改
+acceptance:
+- World main 与私有远端 HEAD 一致
+- 22 项 OpenSpec 映射通过，World 登记一致
+- 门禁原始结果留存且失败不升级状态
+loop:
+  current_step: evaluate
+  iteration: 2
+evidence:
+  tests: pass
+  build: pass
+  screenshots: waived
+  api: waived
+  summary: pass
+blockers:
+- 中央文档门禁 rework_required（已有元数据、历史状态与本地化问题）
+- 技能链总检查：既有 projects/wae 目录未登记
+created_at: '2026-10-16T00:30:28+00:00'
+updated_at: '2026-10-16T00:32:00+00:00'

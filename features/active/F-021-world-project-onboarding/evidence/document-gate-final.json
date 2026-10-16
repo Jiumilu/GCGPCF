@@ -1,0 +1,51 @@
+{
+  "gate": "rework_required",
+  "gate_reasons": [
+    "missing_metadata",
+    "hard_failure:loop_v11_slimming_delivery_recovery",
+    "hard_failure:loop_engineering_master_plan",
+    "hard_failure:icp_project_registration",
+    "hard_failure:loop_ui_product_first_control",
+    "hard_failure:loop_session_registry",
+    "hard_failure:project_group_current_state_baseline_refresh",
+    "hard_failure:project_group_real_execution_metadata_coverage",
+    "localization_debt"
+  ],
+  "repo_md": 3486,
+  "kds_md": 3489,
+  "local_mirror_ledger_lines": 3472,
+  "local_mirror_unique_docs": 3472,
+  "api_sync_ledger_lines": 141,
+  "missing_metadata": 6,
+  "missing_readme_dirs": 0,
+  "localization_debt": true,
+  "fixed_doc_id_drift": false,
+  "status_counts": {
+    "controlled": 3104,
+    "archive": 95,
+    "okf_derived": 99,
+    "missing": 6,
+    "draft": 119
+  },
+  "project_counts": {
+    "GPC": 54,
+    "WAME": 192,
+    "GFIS": 117,
+    "GPCF": 1817,
+    "KDS": 1080,
+    "XiaoC": 68,
+    "Brain": 14,
+    "MMC": 13,
+    "PKC": 10,
+    "PVAOS": 13,
+    "Studio": 5,
+    "XGD": 10,
+    "XiaoG": 11,
+    "missing": 6,
+    "AAAS": 3,
+    "SOP": 3,
+    "WAE": 1,
+    "WAS": 3,
+    "XWAIL": 3
+  }
+}

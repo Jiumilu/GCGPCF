@@ -1,0 +1,112 @@
+{
+  "date": "2026-10-16",
+  "feature": "F-021",
+  "project": "World",
+  "onboarding": "registered",
+  "overall_status": "partial",
+  "authorization": "user_authorized_onboarding_local_git_private_remote_initial_sync",
+  "confirmation": "business_acceptance_and_production_release_pending",
+  "remote": "https://github.com/Jiumilu/GCWorld",
+  "remote_visibility": "private",
+  "world_registration_consistency": "pass",
+  "markdown_metadata": "pass",
+  "checks": [
+    {
+      "name": "openspec_coverage",
+      "command": [
+        "python3",
+        "tools/kds-sync/validate_project_group_openspec_coverage.py"
+      ],
+      "exit_code": 0,
+      "output": "{\n  \"gate\": \"project_group_openspec_coverage\",\n  \"status\": \"pass\",\n  \"current_project_count\": 22,\n  \"matrix_project_count\": 22,\n  \"policy_counts\": {\n    \"conditional\": 12,\n    \"required\": 10,\n    \"waived\": 0\n  },\n  \"central_entry\": \"openspec/config.yaml\",\n  \"feature_required\": true,\n  \"evidence_required\": true,\n  \"harness_handoff_required\": true,\n  \"accepted_allowed\": false,\n  \"integrated_allowed\": false,\n  \"failures\": []\n}"
+    },
+    {
+      "name": "skill_chain",
+      "command": [
+        "python3",
+        "tools/kds-sync/validate_project_group_skill_chain.py"
+      ],
+      "exit_code": 1,
+      "output": "FAIL validate_project_group_skill_chain: project registry slugs must match projects directory"
+    },
+    {
+      "name": "openspec",
+      "command": [
+        "openspec",
+        "validate",
+        "world-project-onboarding",
+        "--strict"
+      ],
+      "exit_code": 0,
+      "output": "Change 'world-project-onboarding' is valid"
+    },
+    {
+      "name": "diff_check",
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0,
+      "output": ""
+    }
+  ],
+  "central_gate_before": {
+    "gate": "rework_required",
+    "gate_reasons": [
+      "missing_metadata",
+      "hard_failure:project_group_live_status_current",
+      "hard_failure:loop_v11_slimming_delivery_recovery",
+      "hard_failure:loop_engineering_master_plan",
+      "hard_failure:icp_project_registration",
+      "hard_failure:loop_ui_product_first_control",
+      "hard_failure:loop_session_registry",
+      "hard_failure:project_group_current_state_baseline_refresh",
+      "hard_failure:project_group_real_execution_metadata_coverage",
+      "localization_debt"
+    ],
+    "repo_md": 3479,
+    "kds_md": 3489,
+    "local_mirror_ledger_lines": 3472,
+    "local_mirror_unique_docs": 3472,
+    "api_sync_ledger_lines": 141,
+    "missing_metadata": 6,
+    "missing_readme_dirs": 0,
+    "localization_debt": true,
+    "fixed_doc_id_drift": false,
+    "status_counts": {
+      "controlled": 3097,
+      "archive": 95,
+      "okf_derived": 99,
+      "missing": 6,
+      "draft": 119
+    },
+    "project_counts": {
+      "GPC": 54,
+      "WAME": 192,
+      "GFIS": 117,
+      "GPCF": 1810,
+      "KDS": 1080,
+      "XiaoC": 68,
+      "Brain": 14,
+      "MMC": 13,
+      "PKC": 10,
+      "PVAOS": 13,
+      "Studio": 5,
+      "XGD": 10,
+      "XiaoG": 11,
+      "missing": 6,
+      "AAAS": 3,
+      "SOP": 3,
+      "WAE": 1,
+      "WAS": 3,
+      "XWAIL": 3
+    }
+  },
+  "limitations": [
+    "工程初始化，无应用代码；业务范围和技术栈待定",
+    "既有 wae 目录未登记导致技能链总检查失败",
+    "既有中央文档门禁 rework_required；未提升状态"
+  ],
+  "source_boundaries": "sources/ 未修改或复制；Studio F-015 与 KDS 主账未迁移"
+}
