@@ -1,0 +1,50 @@
+id: F-023
+name: was-flow-naming-migration
+project: was
+status: active
+goal: 按《WAS 总体方案 v1.3.0》§19/§21 建立《WAS-V1.2 术语迁移表》并执行八流命名迁移——WAS 仓 okf 基线（was-flows.yaml／schemas／validator／examples）从 OKF P0 旧名切换至 V1.2 规范名；旧名进入兼容窗口（deprecated）；不含任何编造实例与状态提升。
+owner: WAS
+priority: P2
+scope:
+  in:
+    - 《WAS-V1.2 术语迁移表》（WAS 仓 docs，v1.0）
+    - okf 基线命名切换（was-flows.yaml / was_validation_lib / schemas×6 / examples×4）
+    - 兼容 validator（DEPRECATED_FLOWS 窗口）与 gfis profile 覆盖断言精准化
+    - 引用件更新（引用键规范、主方案执行记录）；登记与镜像
+  out:
+    - 八维/三层资产/生命周期与状态分离定义的任何修改
+    - XWAIL 代码改动（ALLOWED_FLOWS 已为新名，无需联动）
+    - ValueFlow/CreditFlow 的实例编造；任何 accepted/integrated/production_ready 声明
+acceptance:
+  - 映射完备：旧 8 名全部有去向（6 更名+1 并入+1 重构），新 8 名各有一对一或「新增」标注
+  - validate_all 13/13 PASS；kds_bundle_pipeline --check-only 契约校验 PASS
+  - WAS 仓旧名残留 100% 落兼容/定义/说明类（数据文件 0 残留）
+  - 迁移表与执行落痕登记进 document-control-register 与 sync-register
+loop:
+  current_step: verification
+  iteration: 1
+evidence:
+  tests: "validate_all 13/13 PASS；pipeline 契约校验 PASS（2026-10-16）"
+  build: waived
+  screenshots: waived
+  api: waived
+  summary: pending
+blockers:
+  - 兼容窗口关闭时点（另行版本发布）待定
+  - 存量引用（GPCF fixtures／KDS WAME 文档）切换批次待排
+created_at: "2026-10-16T04:15:00+00:00"
+updated_at: "2026-10-16T04:15:00+00:00"
+ui_product_first_control:
+  version: v1.1
+  applicability: indirect
+  user_groups: [WAS 治理人员, 文档维护者, 审计人员]
+  primary_human_task: 看懂八流命名迁移的映射、兼容窗口与验证证据
+  machine_interface_boundary: 迁移表与 okf 契约保留机器字段；人类入口呈现映射、执行清单与确认状态
+  gates:
+    functional_completeness: pass
+    quality_baseline: pass
+    multi_user_usability: pending
+    task_flow_e2e_status: pass
+    accessibility_status: waived
+    evidence_overexposure_gate: pass
+  status_ceiling: partial

@@ -1,0 +1,49 @@
+{
+  "evidence_id": "GPCF-WAS-FLOW-NAMING-MIGRATION-20261016",
+  "status": "migration_executed",
+  "date": "2026-10-16",
+  "round_id": "WAS-FLOW-NAMING-MIGRATION-001",
+  "purpose": "按《WAS 总体方案 v1.3.0》§19/§21（P0 交付：八流旧名迁移表＋兼容 validator）执行 WAS 仓 okf 基线八流命名迁移：OKF P0 旧名 → V1.2 规范名；旧名进入兼容窗口（deprecated）。",
+  "authority": {
+    "date": "2026-10-16",
+    "by": "老卢（治理方；授权来源：2026-10-16「继续」「全部继续」＝推进八流命名迁移专项）"
+  },
+  "execution": {
+    "migration_table": "WAS:docs/WAS-V1.2术语迁移表.md（v1.0）",
+    "scope": [
+      "WAS:okf/was/was-flows.yaml（8 旧键 → V1.2 名；新增 Value/Credit；spacetime 移除）",
+      "WAS:okf/validators/was_validation_lib.py（FLOWS=V1.2；DEPRECATED_FLOWS 兼容窗口）",
+      "WAS:okf/schemas/*.json ×6（flow enum：V1.2 名 + 旧名兼容；pilot-scope const 放宽）",
+      "WAS:okf/examples/*.yaml ×4（数据值切换；S11 时空→物流归位；requiredFlows 补齐 V1.2 全 8）",
+      "WAS:docs/WAS引用键与数据出口字段规范_v0.1.md（兼容行指引）",
+      "WAS:docs/GlobalCloud-WAS总体方案V1.2-GPCF统一重构版.md（迁移执行记录＋§19 表更新）",
+      "WAS:okf/validators/validate_gfis_runtime_sop_e2e_profile.py（覆盖断言：核心 6 流；Value/Credit 不编造）"
+    ]
+  },
+  "mapping": {
+    "material_flow": "LogisticsFlow",
+    "information_flow": "InformationFlow",
+    "capital_flow": "FinancialFlow",
+    "energy_flow": "EnergyFlow",
+    "commerce_flow": "ServiceFlow",
+    "rule_flow": "ControlFlow",
+    "knowledge_flow": "并入 InformationFlow",
+    "spacetime_flow": "维度侧 SpaceTimeDimension＋运行侧承接场景流（候选，待版本发布纳入）"
+  },
+  "compatibility": {
+    "decision": "migration_required（已执行）；旧名进入兼容窗口（deprecated，不阻断数据级校验）",
+    "window_close": "另行版本发布（届时旧名报失败）",
+    "baselines_untouched": ["八维", "三层资产", "生命周期与状态分离（属 P0 其它交付物）"]
+  },
+  "evidence": [
+    "validate_all 13/13 PASS（迁移后复跑；本机用户级 jsonschema 环境损坏，以一次性隔离 venv python3.10 运行）",
+    "kds_bundle_pipeline --check-only：validate_all PASS＋precheck_chain PASS",
+    "WAS 仓旧名残留复扫：仅兼容/定义/说明类（数据文件 0 残留）"
+  ],
+  "non_claims": [
+    "迁移执行 ≠ XWAIL V1.2 发布或运行层完成（§19 纪律保留）",
+    "ValueFlow/CreditFlow 无既有业务实例，未编造（gfis profile 断言精准化并如实记录）",
+    "存量引用（GPCF fixtures／KDS WAME 文档中文旧名）留后续批次"
+  ],
+  "rollback": "各件文本 diff 可反向恢复；WAS/GPCF 提交留痕"
+}

@@ -36,14 +36,14 @@ superseded_by: []
 | GPC | 02-GPC | 61 | 53 | 已建空间 |
 | PVAOS | 03-PVAOS | 13 | 10 | 已建空间 |
 | WAME | 04-WAME | 195 | 26 | 已建空间 |
-| KDS | 05-KDS | 992 | 989 | 已建空间 |
+| KDS | 05-KDS | 996 | 993 | 已建空间 |
 | Brain | 06-Brain | 14 | 11 | 已建空间 |
 | PKC | 07-PKC | 10 | 7 | 已建空间 |
 | XiaoC | 08-XiaoC | 68 | 65 | 已建空间 |
 | XGD | 09-XGD | 10 | 7 | 已建空间 |
 | XiaoG | 10-XiaoG | 11 | 8 | 已建空间 |
 | MMC | 11-MMC | 13 | 10 | 已建空间 |
-| GPCF | 12-GPCF | 1979 | 1750 | 已建空间 |
+| GPCF | 12-GPCF | 1984 | 1754 | 已建空间 |
 | Studio | 13-Studio | 5 | 2 | 已建空间 |
 | ICP | 14-ICP | 0 | 0 | 已建空间，暂无直接镜像文档 |
 | SpaceAIStudio | 15-SpaceAIStudio | 0 | 0 | 已建空间，暂无直接镜像文档 |
@@ -55,7 +55,7 @@ superseded_by: []
 | --- | --- | --- |
 | 00-项目群总控 | 项目群总入口与根 README | 1 |
 | 90-跨项目架构 | 跨项目架构、主线、数据/知识跨域文档 | 53 |
-| 91-治理与验收 | 治理、验收、状态、台账与门禁文档 | 299 |
+| 91-治理与验收 | 治理、验收、状态、台账与门禁文档 | 300 |
 | 92-证据与会话归档 | Harness、证据样本、历史会话与归档文档 | 95 |
 | 99-过期文档 | deprecated / superseded 文档 | 0 |
 
@@ -3305,6 +3305,7 @@ superseded_by: []
 | GPCF-WORLD-FEATURES-ACTIVE-F-021-WORLD-PROJECT-ONBOARDING-EVIDENCE-SUMMARY-MD | features/active/F-021-world-project-onboarding/evidence/summary.md | 开发/91-治理与验收/features/active/F-021-world-project-onboarding/evidence/summary.md | bidirectional | pending_api |
 | GPCF-WORLD-FEATURES-ACTIVE-F-021-WORLD-PROJECT-ONBOARDING-JOURNAL-MD | features/active/F-021-world-project-onboarding/journal.md | 开发/91-治理与验收/features/active/F-021-world-project-onboarding/journal.md | bidirectional | pending_api |
 | GPCF-DOC-2611C45131 | features/active/F-022-was-scenario-flow-extension/journal.md | 开发/91-治理与验收/features/active/F-022-was-scenario-flow-extension/journal.md | bidirectional | pending_api |
+| GPCF-DOC-752234F1D9 | features/active/F-023-was-flow-naming-migration/journal.md | 开发/91-治理与验收/features/active/F-023-was-flow-naming-migration/journal.md | bidirectional | pending_api |
 | GPCF-DOC-01B2179D97 | features/done/F-001-supplier-onboarding/evidence/summary.md | 开发/91-治理与验收/features/done/F-001-supplier-onboarding/evidence/summary.md | bidirectional | pending_api |
 | GPCF-DOC-1CB646B985 | features/done/F-001-supplier-onboarding/journal.md | 开发/91-治理与验收/features/done/F-001-supplier-onboarding/journal.md | bidirectional | pending_api |
 | GPCF-DOC-87C12A1121 | features/done/F-002-project-group-feature-queue/evidence/summary.md | 开发/91-治理与验收/features/done/F-002-project-group-feature-queue/evidence/summary.md | bidirectional | pending_api |
@@ -3462,6 +3463,14 @@ superseded_by: []
 | GPCF-SPACEAI-FLOOD-SPEC-README-20261016 | openspec/changes/spaceai-was-city-flood-replay/specs/spaceai-city-slice-replay/README.md | 开发/12-GPCF/openspec/changes/spaceai-was-city-flood-replay/specs/spaceai-city-slice-replay/README.md | bidirectional | pending_api |
 | GPCF-SPACEAI-FLOOD-SPEC-20261016 | openspec/changes/spaceai-was-city-flood-replay/specs/spaceai-city-slice-replay/spec.md | 开发/12-GPCF/openspec/changes/spaceai-was-city-flood-replay/specs/spaceai-city-slice-replay/spec.md | bidirectional | pending_api |
 | GPCF-SPACEAI-FLOOD-TASKS-20261016 | openspec/changes/spaceai-was-city-flood-replay/tasks.md | 开发/12-GPCF/openspec/changes/spaceai-was-city-flood-replay/tasks.md | bidirectional | pending_api |
+| GPCF-DOC-4C32519F10 | openspec/changes/was-flow-naming-migration/README.md | 开发/05-KDS/openspec/changes/was-flow-naming-migration/README.md | bidirectional | pending_api |
+| GPCF-DOC-3EBD68D2C6 | openspec/changes/was-flow-naming-migration/artifacts/README.md | 开发/12-GPCF/openspec/changes/was-flow-naming-migration/artifacts/README.md | bidirectional | pending_api |
+| GPCF-DOC-FCAE31EF6C | openspec/changes/was-flow-naming-migration/design.md | 开发/05-KDS/openspec/changes/was-flow-naming-migration/design.md | bidirectional | pending_api |
+| GPCF-DOC-09F1A04495 | openspec/changes/was-flow-naming-migration/proposal.md | 开发/05-KDS/openspec/changes/was-flow-naming-migration/proposal.md | bidirectional | pending_api |
+| GPCF-DOC-61B63346D3 | openspec/changes/was-flow-naming-migration/specs/README.md | 开发/12-GPCF/openspec/changes/was-flow-naming-migration/specs/README.md | bidirectional | pending_api |
+| GPCF-DOC-5424192D97 | openspec/changes/was-flow-naming-migration/specs/was-flow-naming-migration/README.md | 开发/12-GPCF/openspec/changes/was-flow-naming-migration/specs/was-flow-naming-migration/README.md | bidirectional | pending_api |
+| GPCF-DOC-B7F7C251FF | openspec/changes/was-flow-naming-migration/specs/was-flow-naming-migration/spec.md | 开发/12-GPCF/openspec/changes/was-flow-naming-migration/specs/was-flow-naming-migration/spec.md | bidirectional | pending_api |
+| GPCF-DOC-1DFD8B740C | openspec/changes/was-flow-naming-migration/tasks.md | 开发/05-KDS/openspec/changes/was-flow-naming-migration/tasks.md | bidirectional | pending_api |
 | GPCF-DOC-829B6B4A48 | openspec/changes/was-scenario-flow-extension/README.md | 开发/05-KDS/openspec/changes/was-scenario-flow-extension/README.md | bidirectional | pending_api |
 | GPCF-DOC-2E6C9AAD6C | openspec/changes/was-scenario-flow-extension/artifacts/README.md | 开发/05-KDS/openspec/changes/was-scenario-flow-extension/artifacts/README.md | bidirectional | pending_api |
 | GPCF-DOC-2FF258337C | openspec/changes/was-scenario-flow-extension/artifacts/XWAIL-flowType影响评估说明_20261016.md | 开发/12-GPCF/openspec/changes/was-scenario-flow-extension/artifacts/XWAIL-flowType影响评估说明_20261016.md | bidirectional | pending_api |
