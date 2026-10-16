@@ -36,7 +36,7 @@ superseded_by: []
 - **已完成（2026-10-16 第五批·held 大页补嵌）**：三页 2482 块全部补嵌完成（engineering-gates 370 ＋ wiki/log×2 各 1056）；同步定位 gbrain 0.60.257 本地 provider「批准回旋镖」缺陷（consent=null → 页级批准无授权载体）并沉淀绕行法（gbrain 技能 P1 节）；终验 doctor：partial_embedding OK / embed_staleness OK / 缺嵌 0 / brain_score 88。
 - **已完成（2026-10-16 第四批·会话注入层）**：GCMEM v1.3——Hermes 记忆 provider 插件上线（`memory.provider=gcmem`）：每轮自动预取注入＋纠正/偏好即时捕获＋`gcmem_search` 工具＋熔断保护；实测预取 2.3s / 工具 1.0s / 加载器装载 / 实弹探针通过。
 - **已完成（2026-10-16 第六批·mem0 清尾）**：旧模块链归档（`xiaoji_mem0_memory.py`＋`xiaoji_mem0_daily.sh` → `~/.hermes/backups/mem0-retire-20261016/`）；patrol / lint / feedback 三处引用摘除或更名（分类标签 `gcmem_wrong`）；残留仅注释与已停用留档（backend `mem0_local` 块 disabled）。
-- **进行中**：小G 记忆栈容器侧随下次部署切换。
+- **进行中**：小G 记忆栈容器侧随下次部署切换。⚠️ 状态注记（2026-10-16）：小G 全栈已暂停（老卢指示）——relay + server 已 bootout+disable（恢复见 `~/.globalcloud-xiaog-runtime/ops/PAUSE-20261016.md`）；恢复后继续容器侧切换。
 
 ## 关联
 
