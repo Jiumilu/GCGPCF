@@ -44,6 +44,7 @@ superseded_by: []
 | ICP | 14-ICP | 0 | 0 | 已建空间，暂无直接镜像文档 |
 | SpaceAIStudio | 15-SpaceAIStudio | 0 | 0 | 已建空间，暂无直接镜像文档 |
 | SpaceAI | 16-SpaceAI | 0 | 0 | 已建空间，暂无直接镜像文档 |
+| GCMEM | 17-GCMEM | 0 | 0 | 已建空间，暂无直接镜像文档 |
 
 ## KDS 公共空间文档统计
 
@@ -59,6 +60,8 @@ superseded_by: []
 
 | doc_id | title | source_path | project | related_projects | domain | status | kds_path |
 | --- | --- | --- | --- | --- | --- | --- | --- |
+| GPCF-DOC-EAF988D469 | GCMEM 状态 | projects/gcmem/STATUS.md | GCMEM | GCMEM | governance | controlled | 开发/91-治理与验收/projects/gcmem/STATUS.md |
+| GPCF-DOC-2252D3D171 | GCMEM 总体设计 | projects/gcmem/MASTER-DESIGN.md | GCMEM | GCMEM | architecture | controlled | 开发/91-治理与验收/projects/gcmem/MASTER-DESIGN.md |
 | GPCF-DOC-285E77EC87 | globalcloud-17 | $CODEX_HOME/automations/globalcloud-17/README.md | GPC | GPC, WAME, KDS, GPCF | general | controlled | 开发/02-GPC/$CODEX_HOME/automations/globalcloud-17/README.md |
 | GPCF-DOC-9BC6636D29 | globalcloud-17 运行记忆 | $CODEX_HOME/automations/globalcloud-17/memory.md | GPC | GPC, KDS, MMC, GPCF, Studio | general | controlled | 开发/02-GPC/$CODEX_HOME/automations/globalcloud-17/memory.md |
 | GPCF-DOC-C1D2E3F4A5 | impeccable | .agents/skills/impeccable/README.md | GPC | GPC, WAME, KDS, GPCF | general | controlled | 开发/02-GPC/.agents/skills/impeccable/README.md |
