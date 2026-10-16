@@ -1,0 +1,34 @@
+id: F-022
+name: was-scenario-flow-extension
+project: was
+status: active
+goal: 把「场景流 ScenarioFlow」（2026-10-16 老卢裁定）按 WAS 总体方案 v1.3.0 U16 版本化路径受控承接进 WAS 体系——候选扩展登记 → 治理复核 → 版本发布纳入；闭合 GCWORLD V1.0.1 与 WAS 契约层之间的未闭合项，不改变八流基线。
+owner: WAS
+priority: P2
+scope:
+  in:
+    - 场景流扩展登记件（定义单源＋六项兼容性声明）
+    - OpenSpec change was-scenario-flow-extension 全件
+    - 文档登记与镜像（document_control 增量 scope）
+  out:
+    - 八流/八维/三层资产/生命周期定义的任何修改
+    - XWAIL 契约与 WAME 登记的实际改写（仅声明与建议流转）
+    - 任何 accepted/integrated/production_ready 声明
+acceptance:
+  - 登记件定义与裁定文本、GCWORLD V1.0.1 逐字一致（归一化比对）
+  - change 文档登记进 document-control-register 与 sync-register，镜像一致
+  - 门禁结果如实留存；失败不升级状态
+loop:
+  current_step: registration
+  iteration: 1
+evidence:
+  tests: pending
+  build: pending
+  screenshots: waived
+  api: waived
+  summary: pending
+blockers:
+  - WAS 侧治理复核（承接方式与六项声明）待进行
+  - XWAIL flowType 影响评估待进行
+created_at: "2026-10-16T03:47:28+00:00"
+updated_at: "2026-10-16T03:47:28+00:00"

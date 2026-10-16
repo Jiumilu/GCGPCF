@@ -1,0 +1,41 @@
+---
+doc_id: GPCF-DOC-EE3E7D649C
+title: tasks
+project: KDS
+related_projects: [WAME, KDS]
+domain: openspec
+status: draft
+version: v1.0
+owner: KDS
+kds_space: 开发
+kds_path: 开发/05-KDS/openspec/changes/was-scenario-flow-extension/tasks.md
+source_path: openspec/changes/was-scenario-flow-extension/tasks.md
+sync_direction: bidirectional
+last_reviewed: 2026-10-16
+supersedes: []
+superseded_by: []
+---
+
+## 1. 治理与准入
+
+- [x] 1.1 建立 Feature F-022 `was-scenario-flow-extension` 并绑定本变更（journal 与证据目录）。
+- [x] 1.2 变更文档登记与镜像（`document_control.py` 增量 scope）。
+- [ ] 1.3 WAS 侧复核：承接方式与六项兼容性声明确认（治理侧）。
+
+## 2. 登记件
+
+- [x] 2.1 产出《场景流扩展登记草案》（定义单源＋八流/八维关系＋六项声明＋未决项）。
+- [ ] 2.2 草案复核：WAS/WAME/XWAIL 侧意见；确定正式纳入路径与时点。
+
+## 3. 版本化纳入（后续）
+
+- [ ] 3.1 WAS 主方案扩展记录（版本发布时并入流清单）——待 2.2。
+- [ ] 3.2 Ontology registry 流类目登记（如适用）——待 2.2。
+- [ ] 3.3 XWAIL `flowType` 影响评估与（如确认）档位更新——XWAIL 侧执行。
+- [ ] 3.4 KDS GCWORLD V1.0.1 注记回填（承接完成后）。
+
+## 4. 验证与回滚
+
+- [x] 4.1 术语一致性验证：草案定义 == 裁定文本 == GCWORLD V1.0.1（归一化逐字比对）。
+- [x] 4.2 文档门禁运行与证据留存。
+- [ ] 4.3 回滚预案：登记件 superseded 标记流程（不删除；镜像与登记可逆向同步）。
