@@ -1,12 +1,12 @@
 ---
 doc_id: GPCF-DOC-2252D3D171
-title: GCMEM 总体设计
-project: GCMEM
-related_projects: [GCMEM]
-domain: architecture
+title: GCMEM 总体设计（v1.0 · 2026-10-16）
+project: GPCF
+related_projects: [GPCF]
+domain: governance
 status: controlled
 version: v1.0
-owner: GCMEM
+owner: GPCF
 kds_space: 开发
 kds_path: 开发/91-治理与验收/projects/gcmem/MASTER-DESIGN.md
 source_path: projects/gcmem/MASTER-DESIGN.md

@@ -70,18 +70,21 @@ machine_status: `accepted = false`、`integrated = false`、`production_ready = 
 | `organization_asset` | 组织、角色、责任人与权限 | `Dimensions.Organization` | `org:globalcloud-demo` |
 | `spacetime_asset` | 位置、时间、路线和里程碑 | `Dimensions.SpaceTime` | `geo:demo-park`、`Asia/Shanghai` |
 
-## 5. WAS 八流到 XWAIL FlowRelations 映射
+## 5. WAS 九流到 XWAIL FlowRelations 映射
 
 | WAS flow | Ontology 语义 | XWAIL contract | 当前状态 |
 |---|---|---|---|
-| `material_flow` | 物理资产移动、存储、转化与交付 | `FlowRelations.flowType` 中的物流/物料类流 | 当前示例以 `LogisticsFlow` 表达，需要后续 canonical enum 对齐 |
-| `information_flow` | 数据采集、验证、发布、同步和引用 | `FlowRelations.flowType = InformationFlow` | 已有示例 |
-| `capital_flow` | 投资、付款、结算与分配 | `FlowRelations.flowType` 中的资金类流 | 当前最小示例未覆盖，后续 Profile 增补 |
-| `spacetime_flow` | 定位、调度、追踪、周期化 | `FlowRelations.flowType` 中的时空类流 | 当前最小示例未覆盖，后续 Profile 增补 |
-| `energy_flow` | 能源供应、消耗、转换和优化 | `FlowRelations.flowType` 中的能源类流 | 当前最小示例未覆盖，后续 Profile 增补 |
-| `commerce_flow` | 报价、订单、合同、采购和服务交付 | `FlowRelations.flowType` 中的商业/服务类流 | 当前最小示例未覆盖，后续 SCaaS Profile 增补 |
-| `knowledge_flow` | 知识创建、迁移、训练、推理和复用 | `FlowRelations.flowType` 中的知识类流 | 当前最小示例未覆盖，后续 Brain/KDS Profile 增补 |
-| `rule_flow` | 规则执行、审批、阻断、审查和确认 | `FlowRelations.flowType` 中的治理类流 | 当前最小示例未覆盖，后续 WAME gate Profile 增补 |
+| `LogisticsFlow` | 物理资产移动、存储、转化与交付 | `FlowRelations.flowType` 中的物流/物料类流 | 当前示例以 `LogisticsFlow` 表达，需要后续 canonical enum 对齐 |
+| `InformationFlow` | 数据采集、验证、发布、同步和引用 | `FlowRelations.flowType = InformationFlow` | 已有示例 |
+| `FinancialFlow` | 投资、付款、结算与分配 | `FlowRelations.flowType` 中的资金类流 | 当前最小示例未覆盖，后续 Profile 增补 |
+| `SpaceTimeDimension（原时空流；运行侧由场景流承接）` | 定位、调度、追踪、周期化 | `FlowRelations.flowType` 中的时空类流 | 当前最小示例未覆盖，后续 Profile 增补 |
+| `EnergyFlow` | 能源供应、消耗、转换和优化 | `FlowRelations.flowType` 中的能源类流 | 当前最小示例未覆盖，后续 Profile 增补 |
+| `ServiceFlow` | 报价、订单、合同、采购和服务交付 | `FlowRelations.flowType` 中的商业/服务类流 | 当前最小示例未覆盖，后续 SCaaS Profile 增补 |
+| `InformationFlow` | 知识创建、迁移、训练、推理和复用 | `FlowRelations.flowType` 中的知识类流 | 当前最小示例未覆盖，后续 Brain/KDS Profile 增补 |
+| `ControlFlow` | 规则执行、审批、阻断、审查和确认 | `FlowRelations.flowType` 中的治理类流 | 当前最小示例未覆盖，后续 WAME gate Profile 增补 |
+| `ValueFlow` | 价值创造、增值、分配、消耗与归因 | `FlowRelations.flowType = ValueFlow` | 后续 Profile 增补 |
+| `CreditFlow` | 信用、评分、担保、信任与履约声誉 | `FlowRelations.flowType = CreditFlow` | 后续 Profile 增补 |
+| `ScenarioFlow` | 主体在特定情景（时点、区位、场景）中的变化与迁移 | `FlowRelations.flowType = ScenarioFlow` | warehouse-basic 已有正例（2026-10-16） |
 
 ## 6. Ontology 到 XWAIL 回指规则
 
@@ -107,7 +110,7 @@ machine_status: `accepted = false`、`integrated = false`、`production_ready = 
 |---|---|
 | `WAS -> Ontology -> XWAIL` | 从 `semantic_foundation_candidate` 推进到 `xwail_mapping_candidate` |
 | `WAME -> XWAIL -> AaaS` | 只提供语义映射前置，不解除 WAME repair_required/authorization_boundary |
-| `GFIS/GPC/PVAOS -> SCaaS` | 为后续 SCaaS Profile 提供八维八流映射依据，但不证明真实 source-of-record |
+| `GFIS/GPC/PVAOS -> SCaaS` | 为后续 SCaaS Profile 提供八维、流清单映射依据，但不证明真实 source-of-record |
 | `KDS -> Brain` | 为知识治理和推理回指提供语义基线，但不允许 Brain 直接写入业务事实 |
 
 ## 9. 回滚与降级

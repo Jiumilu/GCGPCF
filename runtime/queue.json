@@ -211,6 +211,17 @@
       "updated_at": "2026-10-14T02:21:05+00:00"
     },
     {
+      "id": "F-024",
+      "name": "panorama-engineering-convergence",
+      "project": "spaceai",
+      "priority": "P1",
+      "status": "queued",
+      "current_role": "Dispatcher",
+      "workspace": "features/active/F-024-panorama-engineering-convergence",
+      "created_at": "2026-10-16T09:01:12+00:00",
+      "updated_at": "2026-10-16T12:09:53+00:00"
+    },
+    {
       "id": "F-021",
       "name": "world-project-onboarding",
       "project": "gpcf",
@@ -220,6 +231,28 @@
       "workspace": "features/active/F-021-world-project-onboarding",
       "created_at": "2026-10-16T00:30:28+00:00",
       "updated_at": "2026-10-16T00:32:00+00:00"
+    },
+    {
+      "id": "F-022",
+      "name": "was-scenario-flow-extension",
+      "project": "gpcf",
+      "priority": "P2",
+      "status": "queued",
+      "current_role": "Dispatcher",
+      "workspace": "features/active/F-022-was-scenario-flow-extension",
+      "created_at": "2026-10-16T03:47:28+00:00",
+      "updated_at": "2026-10-16T03:54:14+00:00"
+    },
+    {
+      "id": "F-023",
+      "name": "was-flow-naming-migration",
+      "project": "was",
+      "priority": "P2",
+      "status": "queued",
+      "current_role": "Dispatcher",
+      "workspace": "features/active/F-023-was-flow-naming-migration",
+      "created_at": "2026-10-16T04:15:00+00:00",
+      "updated_at": "2026-10-16T12:09:53+00:00"
     }
   ]
 }

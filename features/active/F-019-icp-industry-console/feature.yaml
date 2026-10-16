@@ -37,3 +37,17 @@ registration_note: 编号 F-019（官方工具 gpcf_new_feature.py 分配·自�
 source_plan: 体系/ICP产业控制台_全量规划_v0.1.md（KDS）
 created_at: "2026-10-14T02:05:18+00:00"
 updated_at: "2026-10-14T02:06:34+00:00"
+ui_product_first_control:
+  version: v1.1
+  applicability: direct
+  user_groups: [产业运营人员, 产业治理人员, 复核与审计人员]
+  primary_human_task: 在产业控制台上看懂 24 节点/11 资源池/3 受控场景的当前状态与数据来源，不被技术细节淹没
+  machine_interface_boundary: 节点/资源池/场景的机器编码与接口进入契约材料；控制台只呈现业务名称、状态与来源标注
+  gates:
+    functional_completeness: pass
+    quality_baseline: pass
+    multi_user_usability: pending
+    task_flow_e2e_status: pass
+    accessibility_status: waived
+    evidence_overexposure_gate: pass
+  status_ceiling: partial

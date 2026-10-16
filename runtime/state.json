@@ -1,7 +1,7 @@
 {
   "schema_version": "2.0",
   "mode": "feature_delivery",
-  "current_feature": "F-021",
+  "current_feature": "F-024",
   "roles": [
     "Dispatcher",
     "Planner",
@@ -10,7 +10,7 @@
     "Repair",
     "Recorder"
   ],
-  "active_feature_count": 12,
-  "queue_length": 20,
-  "updated_at": "2026-10-16T00:32:00+00:00"
+  "active_feature_count": 15,
+  "queue_length": 23,
+  "updated_at": "2026-10-16T12:09:53+00:00"
 }

@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/90-跨项目架构/01-architecture/README.md
 source_path: 01-architecture/README.md
 sync_direction: bidirectional
-last_reviewed: 2026-10-12
+last_reviewed: 2026-10-16
 supersedes: []
 superseded_by: []
 ---
@@ -74,9 +74,9 @@ KDS 路径前缀：`开发/12-GPCF/01-architecture/`
 | GPCF-DOC-75A25DFFB1 | 架构方案 | 01-architecture/README.md | GPCF | controlled |
 | GPCF-DOC-WAME-UNIFIED-REQUEST-MECHANISM-20261011 | GlobalCloud 项目群 · WAME 统一审核请求机制 v0.1 | 01-architecture/WAME统一审核请求机制_v0.1.md | GPCF | controlled |
 | GPCF-DOC-WAME-REQUEST-PACK-GUIDE-20261011 | WAME 请求包制作指南 v0.1（S3 接入工具包） | 01-architecture/WAME请求包制作指南_v0.1.md | GPCF | controlled |
-| GPCF-DOC-WAS-ONTOLOGY-XWAIL-MAPPING-20260623 | WAS／Ontology-XWAIL 语义契约与映射机制 | 01-architecture/WAS／Ontology-XWAIL语义契约与映射机制.md | GPCF | controlled |
 | GPCF-DOC-WAS-XWAIL-AAAS-PLAN-ALIGNMENT-20260624 | WAS-XWAIL-AaaS 三主项目方案协同矩阵与门禁 | 01-architecture/WAS-XWAIL-AaaS三主项目方案协同矩阵与门禁.md | GPCF | controlled |
 | GPCF-DOC-WAS-MASTER-PLAN-20260624 | WAS世界资产体系总体方案 | 01-architecture/WAS世界资产体系总体方案.md | GPCF | controlled |
+| GPCF-DOC-WAS-ONTOLOGY-XWAIL-MAPPING-20260623 | WAS／Ontology-XWAIL 语义契约与映射机制 | 01-architecture/WAS／Ontology-XWAIL语义契约与映射机制.md | GPCF | controlled |
 | GPCF-DOC-XAP-RECEIPT-EXECUTION-REPORT-DRAFT-20261011 | XAP 回执与执行报告规格草案 v0.1（含错误码与幂等规则） | 01-architecture/XAP回执与执行报告规格草案_v0.1.md | GPCF | controlled |
 | GPCF-DOC-XAP-CODEX-PROPOSAL-ADOPTION-20261011 | XAP 统一治理交换协议 · Codex 提案采纳意见 v0.1 | 01-architecture/XAP统一治理交换协议_Codex提案采纳意见_v0.1.md | GPCF | controlled |
 | GPCF-DOC-XWAIL-V12-VALIDATOR-RULES-20260623 | XWAIL-V1.2-Validator规则清单 | 01-architecture/XWAIL-V1.2-Validator规则清单.md | GPCF | controlled |

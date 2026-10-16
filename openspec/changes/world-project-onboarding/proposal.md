@@ -1,17 +1,16 @@
 ---
 doc_id: GPCF-WORLD-OPENSPEC-CHANGES-WORLD-PROJECT-ONBOARDING-PROPOSAL-MD-20261016
-title: World 纳管变更提案
-project: GPCF
-related_projects:
-- GPCF
-domain: governance
-status: controlled
+title: proposal
+project: KDS
+related_projects: [GPC, WAME, KDS, GPCF, Studio]
+domain: openspec
+status: draft
 version: v1.0
-owner: World
+owner: KDS
 kds_space: 开发
-kds_path: 开发/World/openspec/changes/world-project-onboarding/proposal.md
+kds_path: 开发/05-KDS/openspec/changes/world-project-onboarding/proposal.md
 source_path: openspec/changes/world-project-onboarding/proposal.md
-sync_direction: local_only
+sync_direction: bidirectional
 last_reviewed: '2026-10-16'
 supersedes: []
 superseded_by: []

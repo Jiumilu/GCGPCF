@@ -1,3 +1,21 @@
+---
+doc_id: GPCF-F-018-ARTIFACTS-GPCF-GOVERNANCE-CONSOLE
+title: F-018 artifacts（指针说明）
+project: GPCF
+related_projects: [AAAS, Brain, WAS, XiaoC, WAME, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP]
+domain: governance
+status: controlled
+version: v1.0
+owner: GPCF
+kds_space: 开发
+kds_path: 开发/91-治理与验收/features/done/F-018-gpcf-governance-console/artifacts/README.md
+source_path: features/done/F-018-gpcf-governance-console/artifacts/README.md
+sync_direction: bidirectional
+last_reviewed: 2026-10-16
+supersedes: []
+superseded_by: []
+---
+
 # F-018 artifacts（指针说明）
 
 本 Feature 的交付工件不在本目录（保持工作区轻量），实际工件位置：

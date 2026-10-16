@@ -1,6 +1,6 @@
 # GPCF 开发文档空间
 
-生成日期：2026-10-12
+生成日期：2026-10-16
 
 用途：KDS `开发` 空间中 `GPCF` 项目的受控文档入口。
 
@@ -1510,6 +1510,7 @@
 | GPCF-DOC-LOOP-MULTI-AGENT-EXECUTION-SMOKE-001 | LOOP Multi-Agent Execution Smoke Round 001 | docs/harness/loops/loop-round-GPCF-LOOP-MULTI-AGENT-EXECUTION-SMOKE-001.md | controlled |
 | GPCF-LOOP-OPERATIONAL-GATE-TRIAGE-001 | Loop Round GPCF-LOOP-OPERATIONAL-GATE-TRIAGE-001 | docs/harness/loops/loop-round-GPCF-LOOP-OPERATIONAL-GATE-TRIAGE-001.md | controlled |
 | GPCF-LOOP-V11-GOVERNANCE-RECOVERY-001 | LOOP v1.1 Governance Recovery | docs/harness/loops/loop-round-GPCF-LOOP-V11-GOVERNANCE-RECOVERY-001.md | controlled |
+| GPCF-DOC-MMC-INTAKE-REG-LOOP-20261014 | Loop Round GPCF MMC Intake Registration 001 | docs/harness/loops/loop-round-GPCF-MMC-INTAKE-REG-001.md | controlled |
 | GPCF-DOC-55A6B73433 | Loop Round GPCF-OKF-GOVERNANCE-CLOSURE-RECOVERY-001 | docs/harness/loops/loop-round-GPCF-OKF-GOVERNANCE-CLOSURE-RECOVERY-001.md | controlled |
 | GPCF-DOC-AC4F4B6A2E | Loop Round GPCF-OKF-SUMMARY-ADMISSION-PRECHECK-002 | docs/harness/loops/loop-round-GPCF-OKF-SUMMARY-ADMISSION-PRECHECK-002.md | controlled |
 | GPCF-DOC-E1CC4F445E | Loop Round GPCF-OKF-SUMMARY-HUMAN-CONFIRMATION-PACK-003 | docs/harness/loops/loop-round-GPCF-OKF-SUMMARY-HUMAN-CONFIRMATION-PACK-003.md | controlled |
@@ -1726,7 +1727,17 @@
 | GPCF-DOC-18A2F48E80 | spec | openspec/changes/kds-production-hardening/specs/session-auth/spec.md | draft |
 | GPCF-DOC-D067D700F1 | spec | openspec/changes/kds-production-hardening/specs/unified-permission-middleware/spec.md | draft |
 | GPCF-OS-ICP-REGISTRATION-TASKS-20260712 | tasks | openspec/changes/register-globalcloud-icp/tasks.md | draft |
+| GPCF-SPACEAI-PANORAMA-DESIGN-20261016 | design | openspec/changes/spaceai-platform-panorama-convergence/design.md | draft |
+| GPCF-OS-PANORAMA-STRUCTURE-SPEC-20261016 | 全景态势模块化结构与行为基线 | openspec/changes/spaceai-platform-panorama-convergence/specs/spaceai-platform-panorama-structure/spec.md | draft |
+| GPCF-SPACEAI-PANORAMA-TASKS-20261016 | tasks | openspec/changes/spaceai-platform-panorama-convergence/tasks.md | draft |
 | GPCF-OS-SPACEAI-STUDIO-MULTIPLATFORM-REFACTOR-SPEC-20261010 | spec | openspec/changes/spaceai-studio-multiplatform-refactor/specs/spaceai-studio-multiplatform-platform/spec.md | draft |
+| GPCF-SPACEAI-FLOOD-DESIGN-20261016 | design | openspec/changes/spaceai-was-city-flood-replay/design.md | draft |
+| GPCF-SPACEAI-FLOOD-SPEC-20261016 | spec | openspec/changes/spaceai-was-city-flood-replay/specs/spaceai-city-slice-replay/spec.md | draft |
+| GPCF-SPACEAI-FLOOD-TASKS-20261016 | tasks | openspec/changes/spaceai-was-city-flood-replay/tasks.md | draft |
+| GPCF-DOC-B7F7C251FF | spec | openspec/changes/was-flow-naming-migration/specs/was-flow-naming-migration/spec.md | draft |
+| GPCF-DOC-2FF258337C | XWAIL `flowType` 影响评估说明（场景流扩展·候选） | openspec/changes/was-scenario-flow-extension/artifacts/XWAIL-flowType影响评估说明_20261016.md | draft |
+| GPCF-DOC-5C02110A55 | spec | openspec/changes/was-scenario-flow-extension/specs/was-scenario-flow-extension/spec.md | draft |
+| GPCF-WORLD-OPENSPEC-CHANGES-WORLD-PROJECT-ONBOARDING-SPECS-WORLD-PROJECT-REGISTRATION-SPEC-MD-20261016 | spec | openspec/changes/world-project-onboarding/specs/world-project-registration/spec.md | draft |
 | GPCF-DOC-4C34AF960B | Loop CodeGraph Goal Optimization Record Template | templates/LOOP_CODEGRAPH_GOAL_OPTIMIZATION_RECORD_TEMPLATE.md | controlled |
 | GPCF-DOC-0F4B8E6C2A | LOOP 跨会话交接模板 | templates/LOOP_CROSS_SESSION_HANDOFF_TEMPLATE.md | controlled |
 | GPCF-DOC-LOOP-DELIVERY-ROUND-TEMPLATE | LOOP Delivery Round Template | templates/LOOP_DELIVERY_ROUND_TEMPLATE.md | controlled |

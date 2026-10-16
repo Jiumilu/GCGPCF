@@ -20,11 +20,11 @@ superseded_by: []
 
 目录：`openspec/changes/was-scenario-flow-extension/specs/was-scenario-flow-extension`
 
-用途：保存能力 `was-scenario-flow-extension` 的规格与说明。
+用途：保存本目录下的受控文档、证据或规格材料。
 
 KDS 空间：`开发`
 
-关联项目：WAS, XWAIL, WAME, KDS, GPCF
+关联项目：KDS, GPCF
 
 受控规则：
 
@@ -36,5 +36,5 @@ KDS 空间：`开发`
 
 | doc_id | title | source_path | project | status |
 | --- | --- | --- | --- | --- |
-| GPCF-DOC-063FEE0F10 | was-scenario-flow-extension | openspec/changes/was-scenario-flow-extension/specs/was-scenario-flow-extension/README.md | WAS | draft |
-| GPCF-DOC-5C02110A55 | spec | openspec/changes/was-scenario-flow-extension/specs/was-scenario-flow-extension/spec.md | WAS | draft |
+| GPCF-DOC-063FEE0F10 | was-scenario-flow-extension | openspec/changes/was-scenario-flow-extension/specs/was-scenario-flow-extension/README.md | KDS | draft |
+| GPCF-DOC-5C02110A55 | spec | openspec/changes/was-scenario-flow-extension/specs/was-scenario-flow-extension/spec.md | GPCF | draft |

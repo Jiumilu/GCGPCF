@@ -41,6 +41,7 @@ PROJECTS = {
     "xgd",
     "icp",
     "pqc",
+    "spaceai",
     "spaceai-studio",
     "world",
 }

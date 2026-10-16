@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/11-MMC/docs/harness/MMC/evidence/README.md
 source_path: docs/harness/MMC/evidence/README.md
 sync_direction: bidirectional
-last_reviewed: 2026-10-12
+last_reviewed: 2026-10-16
 supersedes: []
 superseded_by: []
 ---
@@ -39,3 +39,4 @@ KDS 空间：`开发`
 | GPCF-DOC-523635A3FD | evidence | docs/harness/MMC/evidence/README.md | MMC | controlled |
 | GPCF-DOC-AD7000100E | Evidence Index — MMC | docs/harness/MMC/evidence/evidence-index.md | MMC | controlled |
 | GPCF-DOC-MMC-GOVERNANCE-TEMPLATE-SMOKE-20260625 | MMC 治理模板 Smoke 证据 2026-06-25 | docs/harness/MMC/evidence/mmc-governance-template-smoke-20260625.md | MMC | controlled |
+| GPCF-DOC-MMC-INTAKE-REG-REQUEST-20261014 | MMC 受理器只读能力登记请求 2026-10-14 | docs/harness/MMC/evidence/mmc-intake-readonly-capability-registration-request-20261014.md | MMC | controlled |

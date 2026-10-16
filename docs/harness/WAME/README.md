@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/04-WAME/docs/harness/WAME/README.md
 source_path: docs/harness/WAME/README.md
 sync_direction: bidirectional
-last_reviewed: 2026-10-12
+last_reviewed: 2026-10-16
 supersedes: []
 superseded_by: []
 ---

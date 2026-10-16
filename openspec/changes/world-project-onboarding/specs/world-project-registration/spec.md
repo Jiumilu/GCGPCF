@@ -1,17 +1,16 @@
 ---
 doc_id: GPCF-WORLD-OPENSPEC-CHANGES-WORLD-PROJECT-ONBOARDING-SPECS-WORLD-PROJECT-REGISTRATION-SPEC-MD-20261016
-title: World 纳管规格
+title: spec
 project: GPCF
-related_projects:
-- GPCF
-domain: governance
-status: controlled
+related_projects: [WAME, GPCF]
+domain: openspec
+status: draft
 version: v1.0
-owner: World
+owner: GPCF
 kds_space: 开发
-kds_path: 开发/World/openspec/changes/world-project-onboarding/specs/world-project-registration/spec.md
+kds_path: 开发/12-GPCF/openspec/changes/world-project-onboarding/specs/world-project-registration/spec.md
 source_path: openspec/changes/world-project-onboarding/specs/world-project-registration/spec.md
-sync_direction: local_only
+sync_direction: bidirectional
 last_reviewed: '2026-10-16'
 supersedes: []
 superseded_by: []

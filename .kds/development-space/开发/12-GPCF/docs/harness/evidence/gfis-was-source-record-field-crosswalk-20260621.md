@@ -47,7 +47,7 @@ GPCF 已建立 GFIS 原生 source-record 字段与 WAS/Ontology 字段的提交 
 | `objectFamily` | 必须等于 GFIS `object_family`，且为 `CustomerRequirementOrPlatformOrder` |
 | `sourceRecordId` | 必须显式填写，并绑定 `source_record_hash` |
 | `assetDimension` | 固定为 WAS S01 的 `data_asset` |
-| `flowType` | 固定为 WAS S01 的 `commerce_flow` |
+| `flowType` | 固定为 WAS S01 的 `ServiceFlow` |
 | `lifecycle` | 人工核验前固定为 `pending_business_verification` |
 | `trustLevel` | WAME review 前固定为 `T4` |
 | `sourceRefs` | 必须包含 WAS S01 source ref |

@@ -2,16 +2,15 @@
 doc_id: GPCF-WORLD-PROJECTS-WORLD-STATUS-MD-20261016
 title: World 状态
 project: GPCF
-related_projects:
-- GPCF
+related_projects: [GPCF]
 domain: governance
 status: controlled
 version: v1.0
-owner: World
+owner: GPCF
 kds_space: 开发
-kds_path: 开发/World/projects/world/STATUS.md
+kds_path: 开发/91-治理与验收/projects/world/STATUS.md
 source_path: projects/world/STATUS.md
-sync_direction: local_only
+sync_direction: bidirectional
 last_reviewed: '2026-10-16'
 supersedes: []
 superseded_by: []

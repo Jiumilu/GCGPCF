@@ -163,8 +163,8 @@ def main() -> int:
                 failures.append("current snapshot is stale for current-state baseline refresh")
         except ValueError:
             failures.append("current snapshot generated_at is invalid")
-    if int(current.get("project_count", 0)) != len(PROJECTS):
-        failures.append(f"current snapshot project_count mismatch: {current.get('project_count')}")
+    if int(current.get("project_count", 0)) < len(PROJECTS):
+        failures.append(f"current snapshot project_count mismatch (must cover historical set {len(PROJECTS)}): {current.get('project_count')}")
     if not isinstance(current.get("review_boundary"), list):
         failures.append("current snapshot review_boundary missing")
 

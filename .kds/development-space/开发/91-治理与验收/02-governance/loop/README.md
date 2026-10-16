@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/91-治理与验收/02-governance/loop/README.md
 source_path: 02-governance/loop/README.md
 sync_direction: bidirectional
-last_reviewed: 2026-10-12
+last_reviewed: 2026-10-16
 supersedes: []
 superseded_by: []
 ---
@@ -54,8 +54,8 @@ KDS 空间：`开发`
 | GPCF-DOC-744D083B96 | LOOP_ENGINEERING_SELF_CORRECTION | 02-governance/loop/LOOP_ENGINEERING_SELF_CORRECTION.md | WAME | controlled |
 | GPCF-DOC-04BF76145B | LOOP Execution Rules | 02-governance/loop/LOOP_EXECUTION_RULES.md | WAME | controlled |
 | GPCF-DOC-LOOP-GATE-CLASSIFICATION-V11 | LOOP Gate Classification | 02-governance/loop/LOOP_GATE_CLASSIFICATION.md | WAME | controlled |
-| GPCF-DOC-FE20CDD358 | Loop Governance Dashboard | 02-governance/loop/LOOP_GOVERNANCE_DASHBOARD.md | WAME | controlled |
-| GPCF-DOC-07906C7E54 | Loop Governance Efficiency Debt Backlog | 02-governance/loop/LOOP_GOVERNANCE_EFFICIENCY_DEBT_BACKLOG.md | GPCF | controlled |
+| GPCF-DOC-FE20CDD358 | Loop Governance Dashboard（Loop 治理看板） | 02-governance/loop/LOOP_GOVERNANCE_DASHBOARD.md | WAME | controlled |
+| GPCF-DOC-07906C7E54 | Loop Governance Efficiency Debt Backlog（Loop 治理效率债积压清单） | 02-governance/loop/LOOP_GOVERNANCE_EFFICIENCY_DEBT_BACKLOG.md | WAME | controlled |
 | GPCF-DOC-D63AEEB17D | Loop 治理运行边界 | 02-governance/loop/LOOP_GOVERNANCE_OPERATING_BOUNDARY.md | WAME | controlled |
 | GPCF-DOC-48F5DD5538 | Loop Governance Phase Goal | 02-governance/loop/LOOP_GOVERNANCE_PHASE_GOAL.md | WAME | controlled |
 | GPCF-DOC-8A21A00749 | Loop 治理轮次复核计划 | 02-governance/loop/LOOP_GOVERNANCE_ROUND_REVIEW_PLAN.md | WAME | controlled |

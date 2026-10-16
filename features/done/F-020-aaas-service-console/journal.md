@@ -1,3 +1,21 @@
+---
+doc_id: GPCF-F-020-JOURNAL-AAAS-SERVICE-CONSOLE
+title: F-020 aaas-service-console
+project: GPCF
+related_projects: [AAAS, Brain, WAS, XiaoC, WAME, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP]
+domain: governance
+status: controlled
+version: v1.0
+owner: GPCF
+kds_space: 开发
+kds_path: 开发/91-治理与验收/features/done/F-020-aaas-service-console/journal.md
+source_path: features/done/F-020-aaas-service-console/journal.md
+sync_direction: bidirectional
+last_reviewed: 2026-10-16
+supersedes: []
+superseded_by: []
+---
+
 # F-020 aaas-service-console
 
 ## LOOP 日志

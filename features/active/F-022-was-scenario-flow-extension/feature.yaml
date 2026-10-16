@@ -32,3 +32,17 @@ blockers:
   - XWAIL flowType 影响评估待进行
 created_at: "2026-10-16T03:47:28+00:00"
 updated_at: "2026-10-16T03:47:28+00:00"
+ui_product_first_control:
+  version: v1.1
+  applicability: indirect
+  user_groups: [WAS 治理人员, 文档维护者, 审计人员]
+  primary_human_task: 看懂场景流承接的版本化路径、验证证据与未确认边界
+  machine_interface_boundary: change 包与登记镜像保留机器字段；人类入口呈现承接范围、证据与确认状态
+  gates:
+    functional_completeness: pass
+    quality_baseline: pass
+    multi_user_usability: pending
+    task_flow_e2e_status: pending
+    accessibility_status: waived
+    evidence_overexposure_gate: pass
+  status_ceiling: partial

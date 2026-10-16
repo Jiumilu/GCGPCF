@@ -20,11 +20,11 @@ superseded_by: []
 
 目录：`openspec/changes/was-scenario-flow-extension/artifacts`
 
-用途：保存本变更的登记件与验证产物。
+用途：保存本目录下的受控文档、证据或规格材料。
 
 KDS 空间：`开发`
 
-关联项目：WAS, XWAIL, WAME, KDS, GPCF
+关联项目：KDS, GPCF
 
 受控规则：
 
@@ -36,6 +36,6 @@ KDS 空间：`开发`
 
 | doc_id | title | source_path | project | status |
 | --- | --- | --- | --- | --- |
-| GPCF-DOC-2E6C9AAD6C | artifacts | openspec/changes/was-scenario-flow-extension/artifacts/README.md | WAS | draft |
-| GPCF-DOC-8952BBCF0B | 场景流扩展登记草案 | openspec/changes/was-scenario-flow-extension/artifacts/场景流扩展登记草案_20261016.md | WAS | draft |
-| GPCF-DOC-2FF258337C | XWAIL-flowType影响评估说明 | openspec/changes/was-scenario-flow-extension/artifacts/XWAIL-flowType影响评估说明_20261016.md | WAS | draft |
+| GPCF-DOC-2E6C9AAD6C | artifacts | openspec/changes/was-scenario-flow-extension/artifacts/README.md | KDS | draft |
+| GPCF-DOC-2FF258337C | XWAIL `flowType` 影响评估说明（场景流扩展·候选） | openspec/changes/was-scenario-flow-extension/artifacts/XWAIL-flowType影响评估说明_20261016.md | GPCF | draft |
+| GPCF-DOC-8952BBCF0B | 场景流扩展登记草案（WAS 流集合·候选扩展） | openspec/changes/was-scenario-flow-extension/artifacts/场景流扩展登记草案_20261016.md | KDS | draft |

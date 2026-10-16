@@ -68,6 +68,10 @@ def classify(round_id: str) -> str | None:
         return "UI governance and validation"
     if round_id.startswith("GPCF-SESSION"):
         return "Session declaration and mainline"
+    if round_id.startswith(("GPCF-CWME", "GPCF-DOMAIN-SLICE", "GPCF-IGL")):
+        return "GPC domain registry and graph extension"
+    if round_id.startswith(("GPCF-XWAIL", "GPCF-MMC")):
+        return "XWAIL / MMC intake governance"
     return None
 
 
@@ -127,6 +131,8 @@ def main() -> int:
         "LOOP localization/governance",
         "UI governance and validation",
         "Session declaration and mainline",
+        "GPC domain registry and graph extension",
+        "XWAIL / MMC intake governance",
     ]
     for family in families:
         require(family in registry, f"missing session family: {family}")

@@ -1,6 +1,6 @@
 # KDS 开发文档空间
 
-生成日期：2026-10-12
+生成日期：2026-10-16
 
 用途：KDS `开发` 空间中 `KDS` 项目的受控文档入口。
 
@@ -978,10 +978,37 @@
 | GPCF-OS-ICP-REGISTRATION-SPEC-20260712 | spec | openspec/changes/register-globalcloud-icp/specs/project-group-icp-registration/spec.md | draft |
 | GPCF-DOC-DA59B18707 | sop-bind-matrix-to-icp-foundation | openspec/changes/sop-bind-matrix-to-icp-foundation/README.md | draft |
 | GPCF-OS-ICP-SOP-COUPLING-PROPOSAL-20260713 | proposal | openspec/changes/sop-bind-matrix-to-icp-foundation/proposal.md | draft |
+| GPCF-DOC-2007BED0D1 | spaceai-platform-panorama-convergence | openspec/changes/spaceai-platform-panorama-convergence/README.md | draft |
+| GPCF-SPACEAI-PANORAMA-PROPOSAL-20261016 | proposal | openspec/changes/spaceai-platform-panorama-convergence/proposal.md | draft |
+| GPCF-DOC-A29F69DAAF | specs | openspec/changes/spaceai-platform-panorama-convergence/specs/README.md | draft |
+| GPCF-DOC-DDBDFB20B3 | spaceai-platform-panorama-structure | openspec/changes/spaceai-platform-panorama-convergence/specs/spaceai-platform-panorama-structure/README.md | draft |
 | GPCF-DOC-477C45A148 | spaceai-studio-multiplatform-refactor | openspec/changes/spaceai-studio-multiplatform-refactor/README.md | draft |
 | GPCF-OS-SPACEAI-STUDIO-MULTIPLATFORM-REFACTOR-DESIGN-20261010 | design | openspec/changes/spaceai-studio-multiplatform-refactor/design.md | draft |
 | GPCF-OS-SPACEAI-STUDIO-MULTIPLATFORM-REFACTOR-PROPOSAL-20261010 | proposal | openspec/changes/spaceai-studio-multiplatform-refactor/proposal.md | draft |
 | GPCF-DOC-8B83B1A79A | specs | openspec/changes/spaceai-studio-multiplatform-refactor/specs/README.md | draft |
 | GPCF-DOC-D53A9468CA | spaceai-studio-multiplatform-platform | openspec/changes/spaceai-studio-multiplatform-refactor/specs/spaceai-studio-multiplatform-platform/README.md | draft |
 | GPCF-OS-SPACEAI-STUDIO-MULTIPLATFORM-REFACTOR-TASKS-20261010 | tasks | openspec/changes/spaceai-studio-multiplatform-refactor/tasks.md | draft |
+| GPCF-DOC-5D99E8D484 | spaceai-was-city-flood-replay | openspec/changes/spaceai-was-city-flood-replay/README.md | draft |
+| GPCF-SPACEAI-FLOOD-PROPOSAL-20261016 | proposal | openspec/changes/spaceai-was-city-flood-replay/proposal.md | draft |
+| GPCF-DOC-FECC2A4859 | specs | openspec/changes/spaceai-was-city-flood-replay/specs/README.md | draft |
+| GPCF-DOC-307EB657D0 | spaceai-city-slice-replay | openspec/changes/spaceai-was-city-flood-replay/specs/spaceai-city-slice-replay/README.md | draft |
+| GPCF-DOC-4C32519F10 | was-flow-naming-migration | openspec/changes/was-flow-naming-migration/README.md | draft |
+| GPCF-DOC-3EBD68D2C6 | artifacts | openspec/changes/was-flow-naming-migration/artifacts/README.md | draft |
+| GPCF-DOC-FCAE31EF6C | Design — was-flow-naming-migration | openspec/changes/was-flow-naming-migration/design.md | draft |
+| GPCF-DOC-09F1A04495 | Proposal — was-flow-naming-migration | openspec/changes/was-flow-naming-migration/proposal.md | draft |
+| GPCF-DOC-61B63346D3 | specs | openspec/changes/was-flow-naming-migration/specs/README.md | draft |
+| GPCF-DOC-5424192D97 | was-flow-naming-migration | openspec/changes/was-flow-naming-migration/specs/was-flow-naming-migration/README.md | draft |
+| GPCF-DOC-1DFD8B740C | Tasks — was-flow-naming-migration | openspec/changes/was-flow-naming-migration/tasks.md | draft |
+| GPCF-DOC-829B6B4A48 | was-scenario-flow-extension | openspec/changes/was-scenario-flow-extension/README.md | draft |
+| GPCF-DOC-2E6C9AAD6C | artifacts | openspec/changes/was-scenario-flow-extension/artifacts/README.md | draft |
+| GPCF-DOC-8952BBCF0B | 场景流扩展登记草案（WAS 流集合·候选扩展） | openspec/changes/was-scenario-flow-extension/artifacts/场景流扩展登记草案_20261016.md | draft |
+| GPCF-DOC-FC299296D9 | 设计：场景流的版本化承接 | openspec/changes/was-scenario-flow-extension/design.md | draft |
+| GPCF-DOC-25EB2F876F | proposal | openspec/changes/was-scenario-flow-extension/proposal.md | draft |
+| GPCF-DOC-FEDAEF19FA | specs | openspec/changes/was-scenario-flow-extension/specs/README.md | draft |
+| GPCF-DOC-063FEE0F10 | was-scenario-flow-extension | openspec/changes/was-scenario-flow-extension/specs/was-scenario-flow-extension/README.md | draft |
+| GPCF-DOC-EE3E7D649C | tasks | openspec/changes/was-scenario-flow-extension/tasks.md | draft |
+| GPCF-DOC-F8CE55AC60 | world-project-onboarding | openspec/changes/world-project-onboarding/README.md | draft |
+| GPCF-WORLD-OPENSPEC-CHANGES-WORLD-PROJECT-ONBOARDING-PROPOSAL-MD-20261016 | proposal | openspec/changes/world-project-onboarding/proposal.md | draft |
+| GPCF-DOC-AE04C4B5F5 | specs | openspec/changes/world-project-onboarding/specs/README.md | draft |
+| GPCF-DOC-410F29E347 | world-project-registration | openspec/changes/world-project-onboarding/specs/world-project-registration/README.md | draft |
 | GPCF-DOC-89FBFF25D3 | OpenSpec 主规格 | openspec/specs/README.md | controlled |

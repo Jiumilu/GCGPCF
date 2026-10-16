@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/05-KDS/docs/harness/README.md
 source_path: docs/harness/README.md
 sync_direction: bidirectional
-last_reviewed: 2026-10-12
+last_reviewed: 2026-10-16
 supersedes: []
 superseded_by: []
 ---
@@ -78,6 +78,7 @@ KDS 空间：`开发`
 | GPCF-DOC-523635A3FD | evidence | docs/harness/MMC/evidence/README.md | MMC | controlled |
 | GPCF-DOC-AD7000100E | Evidence Index — MMC | docs/harness/MMC/evidence/evidence-index.md | MMC | controlled |
 | GPCF-DOC-MMC-GOVERNANCE-TEMPLATE-SMOKE-20260625 | MMC 治理模板 Smoke 证据 2026-06-25 | docs/harness/MMC/evidence/mmc-governance-template-smoke-20260625.md | MMC | controlled |
+| GPCF-DOC-MMC-INTAKE-REG-REQUEST-20261014 | MMC 受理器只读能力登记请求 2026-10-14 | docs/harness/MMC/evidence/mmc-intake-readonly-capability-registration-request-20261014.md | MMC | controlled |
 | GPCF-DOC-F350ADEC6B | GlobalCloud MMC Loop State | docs/harness/MMC/loop-state.md | MMC | controlled |
 | GPCF-DOC-72EF36F3B2 | loops | docs/harness/MMC/loops/README.md | MMC | controlled |
 | GPCF-DOC-923334C992 | Loop Round GPCF-MM-LR-001 | docs/harness/MMC/loops/loop-round-GPCF-MM-LR-001.md | MMC | controlled |
@@ -1945,6 +1946,7 @@ KDS 空间：`开发`
 | GPCF-DOC-LOOP-MULTI-AGENT-EXECUTION-SMOKE-001 | LOOP Multi-Agent Execution Smoke Round 001 | docs/harness/loops/loop-round-GPCF-LOOP-MULTI-AGENT-EXECUTION-SMOKE-001.md | GPCF | controlled |
 | GPCF-LOOP-OPERATIONAL-GATE-TRIAGE-001 | Loop Round GPCF-LOOP-OPERATIONAL-GATE-TRIAGE-001 | docs/harness/loops/loop-round-GPCF-LOOP-OPERATIONAL-GATE-TRIAGE-001.md | GPCF | controlled |
 | GPCF-LOOP-V11-GOVERNANCE-RECOVERY-001 | LOOP v1.1 Governance Recovery | docs/harness/loops/loop-round-GPCF-LOOP-V11-GOVERNANCE-RECOVERY-001.md | GPCF | controlled |
+| GPCF-DOC-MMC-INTAKE-REG-LOOP-20261014 | Loop Round GPCF MMC Intake Registration 001 | docs/harness/loops/loop-round-GPCF-MMC-INTAKE-REG-001.md | GPCF | controlled |
 | GPCF-DOC-55A6B73433 | Loop Round GPCF-OKF-GOVERNANCE-CLOSURE-RECOVERY-001 | docs/harness/loops/loop-round-GPCF-OKF-GOVERNANCE-CLOSURE-RECOVERY-001.md | GPCF | controlled |
 | GPCF-DOC-AC4F4B6A2E | Loop Round GPCF-OKF-SUMMARY-ADMISSION-PRECHECK-002 | docs/harness/loops/loop-round-GPCF-OKF-SUMMARY-ADMISSION-PRECHECK-002.md | GPCF | controlled |
 | GPCF-DOC-E1CC4F445E | Loop Round GPCF-OKF-SUMMARY-HUMAN-CONFIRMATION-PACK-003 | docs/harness/loops/loop-round-GPCF-OKF-SUMMARY-HUMAN-CONFIRMATION-PACK-003.md | GPCF | controlled |

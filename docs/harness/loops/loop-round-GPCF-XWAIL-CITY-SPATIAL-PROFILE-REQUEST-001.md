@@ -47,3 +47,14 @@ superseded_by: []
 ## 下一轮
 
 XWAIL 治理裁定；如获准，建立 profile 候选草稿与 validator 扩展清单（仍不改 XWAIL 仓，走治理交换）。
+
+## 连续运行真实性记录
+
+| 字段 | 值 |
+| --- | --- |
+| declared_rounds | 1/15 |
+| substantive_rounds | 1/15 |
+| generated_items | 2 |
+| batch_generated | false |
+| substance_gate | pass |
+| stop_type | authorization_boundary |

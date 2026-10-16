@@ -24,7 +24,7 @@ loop:
   current_step: verification
   iteration: 1
 evidence:
-  tests: "validate_all 13/13 PASS；pipeline 契约校验 PASS（2026-10-16）"
+  tests: pass   # validate_all 13/13 PASS；pipeline 契约校验 PASS（2026-10-16）——细节见 journal
   build: waived
   screenshots: waived
   api: waived

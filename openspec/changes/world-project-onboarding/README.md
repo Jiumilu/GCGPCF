@@ -1,22 +1,43 @@
 ---
-doc_id: GPCF-WORLD-OPENSPEC-CHANGES-WORLD-PROJECT-ONBOARDING-README-MD
-title: World 纳管变更目录
-project: GPCF
-related_projects:
-- GPCF
-domain: governance
-status: controlled
+doc_id: GPCF-DOC-F8CE55AC60
+title: world-project-onboarding
+project: KDS
+related_projects: [GPC, WAME, KDS, GPCF]
+domain: openspec
+status: draft
 version: v1.0
-owner: World
+owner: KDS
 kds_space: 开发
-kds_path: 开发/91-治理与验收/openspec/changes/world-project-onboarding/README.md
+kds_path: 开发/05-KDS/openspec/changes/world-project-onboarding/README.md
 source_path: openspec/changes/world-project-onboarding/README.md
-sync_direction: local_only
-last_reviewed: '2026-10-16'
+sync_direction: bidirectional
+last_reviewed: 2026-10-16
 supersedes: []
 superseded_by: []
 ---
 
-# World 纳管变更
+# world-project-onboarding
 
-本目录记录 F-021 的独立纳管范围与规格，状态 partial；证据见 `features/active/F-021-world-project-onboarding/evidence/`。
+目录：`openspec/changes/world-project-onboarding`
+
+用途：保存本目录下的受控文档、证据或规格材料。
+
+KDS 空间：`开发`
+
+关联项目：KDS, GPCF
+
+受控规则：
+
+- 本目录新增 Markdown 文档必须重新运行 `python3 tools/kds-sync/document_control.py`。
+- 当前有效文档使用 `controlled`；草案使用 `draft`；历史证据使用 `archive`。
+- 过期或被替代文档不得删除，必须进入归档台账或保留替代关系。
+
+## 文档清单
+
+| doc_id | title | source_path | project | status |
+| --- | --- | --- | --- | --- |
+| GPCF-DOC-F8CE55AC60 | world-project-onboarding | openspec/changes/world-project-onboarding/README.md | KDS | draft |
+| GPCF-WORLD-OPENSPEC-CHANGES-WORLD-PROJECT-ONBOARDING-PROPOSAL-MD-20261016 | proposal | openspec/changes/world-project-onboarding/proposal.md | KDS | draft |
+| GPCF-DOC-AE04C4B5F5 | specs | openspec/changes/world-project-onboarding/specs/README.md | KDS | draft |
+| GPCF-DOC-410F29E347 | world-project-registration | openspec/changes/world-project-onboarding/specs/world-project-registration/README.md | KDS | draft |
+| GPCF-WORLD-OPENSPEC-CHANGES-WORLD-PROJECT-ONBOARDING-SPECS-WORLD-PROJECT-REGISTRATION-SPEC-MD-20261016 | spec | openspec/changes/world-project-onboarding/specs/world-project-registration/spec.md | GPCF | draft |

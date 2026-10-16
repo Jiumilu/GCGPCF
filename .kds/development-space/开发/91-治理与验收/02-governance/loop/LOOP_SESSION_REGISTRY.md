@@ -68,6 +68,8 @@ superseded_by: []
 | Studio workflow boundary / permissions | `GPCF-STUDIO*` | GPCF/Studio | workflow boundary and permissions evidence only | handoff_required_for_release_boundary | read_only_registry_or_user_confirmed_handoff |
 | UI governance and validation | `GPCF-UI*`, `GPCF-IMPLEMENTATION*` | GPCF/Studio | UI gate evidence only, no acceptance promotion | handoff_required_for_page_refactor | read_only_registry_or_user_confirmed_handoff |
 | Session declaration and mainline | `GPCF-SESSION*` | GPCF | declaration boundary and mainline control | active_controlled | continue_current_mainline_only |
+| GPC domain registry and graph extension | `GPCF-CWME*`, `GPCF-DOMAIN-SLICE*`, `GPCF-IGL*` | GPC/GPCF | domain/slice/graph registration requests only (read-only, no execution) | handoff_required_for_execution | read_only_registry_or_user_confirmed_handoff |
+| XWAIL / MMC intake governance | `GPCF-XWAIL*`, `GPCF-MMC*` | WAME/GPCF | profile schema review and intake registration only | handoff_required_for_execution | read_only_registry_or_user_confirmed_handoff |
 
 ## 3.1 GKE-001 授权真实线程登记
 

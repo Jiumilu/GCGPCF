@@ -2,14 +2,14 @@
 doc_id: GPCF-F-018-JOURNAL-GPCF-GOVERNANCE-CONSOLE
 title: journal
 project: GPCF
-related_projects: [GPCF, WAE, KDS, MMC]
+related_projects: [AAAS, Brain, WAS, XiaoC, WAME, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP]
 domain: governance
 status: controlled
 version: v1.0
 owner: GPCF
 kds_space: 开发
-kds_path: 开发/91-治理与验收/features/active/F-018-gpcf-governance-console/journal.md
-source_path: features/active/F-018-gpcf-governance-console/journal.md
+kds_path: 开发/91-治理与验收/features/done/F-018-gpcf-governance-console/journal.md
+source_path: features/done/F-018-gpcf-governance-console/journal.md
 sync_direction: bidirectional
 last_reviewed: 2026-10-14
 supersedes: []

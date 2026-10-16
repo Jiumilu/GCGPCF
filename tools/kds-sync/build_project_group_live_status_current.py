@@ -21,7 +21,6 @@ EXPECTED_REPOS = [
     "GlobalCloud Brain",
     "WAS世界资产体系",
     "GlobalCloud XiaoC",
-    "GlobalCloud WAES",
     "GlobalCloud GPC",
     "GlobalCloud Studio",
     "GlobalCloud WAE",

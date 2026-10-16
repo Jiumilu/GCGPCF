@@ -16,4 +16,4 @@ supersedes: []
 superseded_by: []
 ---
 
-accepted / integrated 状态边界：本仓不声明 accepted 或 integrated（accepted=false、integrated=false）
+已受理／已集成状态边界：本仓不声明已受理或已集成（accepted=false、integrated=false）

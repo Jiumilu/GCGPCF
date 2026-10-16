@@ -12,7 +12,7 @@ kds_path: 开发/91-治理与验收/projects/wae/MASTER-DESIGN_v0.3.md
 source_path: projects/wae/MASTER-DESIGN_v0.3.md
 sync_direction: bidirectional
 last_reviewed: 2026-10-12
-supersedes: [GPCF-DOC-WAE-MASTER-DESIGN-V02]
+supersedes: []
 superseded_by: []
 ---
 

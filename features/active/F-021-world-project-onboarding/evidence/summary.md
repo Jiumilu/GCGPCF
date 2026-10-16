@@ -1,17 +1,16 @@
 ---
 doc_id: GPCF-WORLD-FEATURES-ACTIVE-F-021-WORLD-PROJECT-ONBOARDING-EVIDENCE-SUMMARY-MD
-title: World 纳管执行记录
+title: summary
 project: GPCF
-related_projects:
-- GPCF
+related_projects: [AAAS, Brain, WAS, XiaoC, WAME, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP]
 domain: governance
 status: controlled
 version: v1.0
-owner: World
+owner: GPCF
 kds_space: 开发
 kds_path: 开发/91-治理与验收/features/active/F-021-world-project-onboarding/evidence/summary.md
 source_path: features/active/F-021-world-project-onboarding/evidence/summary.md
-sync_direction: local_only
+sync_direction: bidirectional
 last_reviewed: '2026-10-16'
 supersedes: []
 superseded_by: []

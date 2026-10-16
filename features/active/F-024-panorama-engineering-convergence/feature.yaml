@@ -1,0 +1,37 @@
+id: F-024
+name: panorama-engineering-convergence
+project: spaceai
+status: active
+goal: 全景态势工程收敛：PanoramaDeep 3351 行单文件、410 函数、0 专项测试；按域拆分 composable 并建立行为基线测试，界面功能零变化；交付结构须支撑后续无 GPU 环境性能优化
+owner: agent-dev-01
+priority: P1
+scope:
+  in:
+  out:
+acceptance:
+loop:
+  current_step: plan
+  iteration: 0
+evidence:
+  tests: pending
+  build: pending
+  screenshots: pending
+  api: pending
+  summary: pending
+blockers:
+created_at: "2026-10-16T09:01:12+00:00"
+updated_at: "2026-10-16T09:01:12+00:00"
+ui_product_first_control:
+  version: v1.1
+  applicability: indirect
+  user_groups: [Feature 开发者, Loop 编排者, 治理审计者]
+  primary_human_task: 看懂全景态势工程收敛的域拆分进度、行为基线测试与功能零变化保证
+  machine_interface_boundary: 域拆分与测试证据保留机器字段；默认工作区只呈现目标、进度、证据与风险
+  gates:
+    functional_completeness: pass
+    quality_baseline: pass
+    multi_user_usability: pending
+    task_flow_e2e_status: pass
+    accessibility_status: waived
+    evidence_overexposure_gate: pass
+  status_ceiling: partial

@@ -70,3 +70,21 @@ superseded_by: []
    - 两段式语句顺序缺陷（已修）；生成↔落库差异 10 条（语义正确）；GPU 环境与光谷/黄梅数据场地待排期；域包登记 decision 待治理方。
 5. 是否可以提交？
    - 是（首月件阶段；不触发布/接受声明）。
+
+## 2026-10-16 · WAS 城市内涝合成切片回放样板
+
+- 关联 OpenSpec `spaceai-was-city-flood-replay`；仅在 SpaceAI 隔离样板目录实现，无 Platform、设备、生产服务或业务数据库写入。
+- 单一 JSON 样例：13 切片、14 关系、6 资产；复用已批准 XWAIL Schema，校验零错误零警告。
+- 时间投影支持当时已知/最新修正、迟到勘误、过期未知、回执与观测分离；19 项测试通过，独立审查修正 5 个边界缺陷。
+- 中文动态网络已用真实浏览器验证 32 组时点/口径/宽度组合；全部数据为 synthetic，不能据此声明真实城市效果、神经网络训练或 Platform 集成。
+- authorization：用户“下一步”授权本地建模、实现、验证与必要治理追踪。confirmation：业务验收与生产发布未确认；保持 partial，Feature/runtime 状态不提升。
+- 证据入口：SpaceAI `.harness/runs/20261016-074857-spaceai-was-city-flood-replay/`；本轮中央摘要 `evidence/was-city-flood-replay-20261016.json`。文档门禁与 readiness 已执行仍失败，最终日志由证据索引追踪。
+
+## 2026-10-16 · CWME 城市模型本地应用
+
+- 用户要求将切片回放形成应用，并明确当前目录已是 CWME 项目；SpaceAI 仅保留目录及中央注册别名。根 README、AGENTS、Harness Manifest 已纠正当前定位，历史 Windows 源码保持原状。
+- 应用入口：SpaceAI `apps/city-model/index.html`；模型和投影仍来自 `prototypes/was-city-flood/`。完整页面可直接用浏览器打开，无业务服务依赖；未修改 Platform。
+- 本轮实测：原19项模型测试通过；独立file://浏览器32组通过，外部请求0、pageerror0，刷新选择恢复与复制单文件后打开均通过。隔离双构建一致，坏模型校验失败保留已有成品。
+- 修复了导出器附带的3个CDN脚本依赖；当前成品为完全本地资源。数据均为合成，未接真实城市、未训练神经网络、未部署。
+- authorization：用户已授权本地应用形成及CWME定位纠正；confirmation：业务验收与生产发布未确认。中央门禁仍失败，保持partial，不提升Feature或runtime状态。
+- 证据：`evidence/cwme-city-model-app-20261016.json` 及其本地 Harness 索引；最终审计与交接在本轮run留存。

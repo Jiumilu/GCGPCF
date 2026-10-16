@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/05-KDS/openspec/README.md
 source_path: openspec/README.md
 sync_direction: bidirectional
-last_reviewed: 2026-10-12
+last_reviewed: 2026-10-16
 supersedes: []
 superseded_by: []
 ---
@@ -146,6 +146,13 @@ KDS 路径前缀：`开发/12-GPCF/openspec/`
 | GPCF-OS-ICP-REGISTRATION-TASKS-20260712 | tasks | openspec/changes/register-globalcloud-icp/tasks.md | GPCF | draft |
 | GPCF-DOC-DA59B18707 | sop-bind-matrix-to-icp-foundation | openspec/changes/sop-bind-matrix-to-icp-foundation/README.md | KDS | draft |
 | GPCF-OS-ICP-SOP-COUPLING-PROPOSAL-20260713 | proposal | openspec/changes/sop-bind-matrix-to-icp-foundation/proposal.md | KDS | draft |
+| GPCF-DOC-2007BED0D1 | spaceai-platform-panorama-convergence | openspec/changes/spaceai-platform-panorama-convergence/README.md | KDS | draft |
+| GPCF-SPACEAI-PANORAMA-DESIGN-20261016 | design | openspec/changes/spaceai-platform-panorama-convergence/design.md | GPCF | draft |
+| GPCF-SPACEAI-PANORAMA-PROPOSAL-20261016 | proposal | openspec/changes/spaceai-platform-panorama-convergence/proposal.md | KDS | draft |
+| GPCF-DOC-A29F69DAAF | specs | openspec/changes/spaceai-platform-panorama-convergence/specs/README.md | KDS | draft |
+| GPCF-DOC-DDBDFB20B3 | spaceai-platform-panorama-structure | openspec/changes/spaceai-platform-panorama-convergence/specs/spaceai-platform-panorama-structure/README.md | KDS | draft |
+| GPCF-OS-PANORAMA-STRUCTURE-SPEC-20261016 | 全景态势模块化结构与行为基线 | openspec/changes/spaceai-platform-panorama-convergence/specs/spaceai-platform-panorama-structure/spec.md | GPCF | draft |
+| GPCF-SPACEAI-PANORAMA-TASKS-20261016 | tasks | openspec/changes/spaceai-platform-panorama-convergence/tasks.md | GPCF | draft |
 | GPCF-DOC-477C45A148 | spaceai-studio-multiplatform-refactor | openspec/changes/spaceai-studio-multiplatform-refactor/README.md | KDS | draft |
 | GPCF-OS-SPACEAI-STUDIO-MULTIPLATFORM-REFACTOR-DESIGN-20261010 | design | openspec/changes/spaceai-studio-multiplatform-refactor/design.md | KDS | draft |
 | GPCF-OS-SPACEAI-STUDIO-MULTIPLATFORM-REFACTOR-PROPOSAL-20261010 | proposal | openspec/changes/spaceai-studio-multiplatform-refactor/proposal.md | KDS | draft |
@@ -153,4 +160,34 @@ KDS 路径前缀：`开发/12-GPCF/openspec/`
 | GPCF-DOC-D53A9468CA | spaceai-studio-multiplatform-platform | openspec/changes/spaceai-studio-multiplatform-refactor/specs/spaceai-studio-multiplatform-platform/README.md | KDS | draft |
 | GPCF-OS-SPACEAI-STUDIO-MULTIPLATFORM-REFACTOR-SPEC-20261010 | spec | openspec/changes/spaceai-studio-multiplatform-refactor/specs/spaceai-studio-multiplatform-platform/spec.md | GPCF | draft |
 | GPCF-OS-SPACEAI-STUDIO-MULTIPLATFORM-REFACTOR-TASKS-20261010 | tasks | openspec/changes/spaceai-studio-multiplatform-refactor/tasks.md | KDS | draft |
+| GPCF-DOC-5D99E8D484 | spaceai-was-city-flood-replay | openspec/changes/spaceai-was-city-flood-replay/README.md | KDS | draft |
+| GPCF-SPACEAI-FLOOD-DESIGN-20261016 | design | openspec/changes/spaceai-was-city-flood-replay/design.md | GPCF | draft |
+| GPCF-SPACEAI-FLOOD-PROPOSAL-20261016 | proposal | openspec/changes/spaceai-was-city-flood-replay/proposal.md | KDS | draft |
+| GPCF-DOC-FECC2A4859 | specs | openspec/changes/spaceai-was-city-flood-replay/specs/README.md | KDS | draft |
+| GPCF-DOC-307EB657D0 | spaceai-city-slice-replay | openspec/changes/spaceai-was-city-flood-replay/specs/spaceai-city-slice-replay/README.md | KDS | draft |
+| GPCF-SPACEAI-FLOOD-SPEC-20261016 | spec | openspec/changes/spaceai-was-city-flood-replay/specs/spaceai-city-slice-replay/spec.md | GPCF | draft |
+| GPCF-SPACEAI-FLOOD-TASKS-20261016 | tasks | openspec/changes/spaceai-was-city-flood-replay/tasks.md | GPCF | draft |
+| GPCF-DOC-4C32519F10 | was-flow-naming-migration | openspec/changes/was-flow-naming-migration/README.md | KDS | draft |
+| GPCF-DOC-3EBD68D2C6 | artifacts | openspec/changes/was-flow-naming-migration/artifacts/README.md | KDS | draft |
+| GPCF-DOC-FCAE31EF6C | Design — was-flow-naming-migration | openspec/changes/was-flow-naming-migration/design.md | KDS | draft |
+| GPCF-DOC-09F1A04495 | Proposal — was-flow-naming-migration | openspec/changes/was-flow-naming-migration/proposal.md | KDS | draft |
+| GPCF-DOC-61B63346D3 | specs | openspec/changes/was-flow-naming-migration/specs/README.md | KDS | draft |
+| GPCF-DOC-5424192D97 | was-flow-naming-migration | openspec/changes/was-flow-naming-migration/specs/was-flow-naming-migration/README.md | KDS | draft |
+| GPCF-DOC-B7F7C251FF | spec | openspec/changes/was-flow-naming-migration/specs/was-flow-naming-migration/spec.md | GPCF | draft |
+| GPCF-DOC-1DFD8B740C | Tasks — was-flow-naming-migration | openspec/changes/was-flow-naming-migration/tasks.md | KDS | draft |
+| GPCF-DOC-829B6B4A48 | was-scenario-flow-extension | openspec/changes/was-scenario-flow-extension/README.md | KDS | draft |
+| GPCF-DOC-2E6C9AAD6C | artifacts | openspec/changes/was-scenario-flow-extension/artifacts/README.md | KDS | draft |
+| GPCF-DOC-2FF258337C | XWAIL `flowType` 影响评估说明（场景流扩展·候选） | openspec/changes/was-scenario-flow-extension/artifacts/XWAIL-flowType影响评估说明_20261016.md | GPCF | draft |
+| GPCF-DOC-8952BBCF0B | 场景流扩展登记草案（WAS 流集合·候选扩展） | openspec/changes/was-scenario-flow-extension/artifacts/场景流扩展登记草案_20261016.md | KDS | draft |
+| GPCF-DOC-FC299296D9 | 设计：场景流的版本化承接 | openspec/changes/was-scenario-flow-extension/design.md | KDS | draft |
+| GPCF-DOC-25EB2F876F | proposal | openspec/changes/was-scenario-flow-extension/proposal.md | KDS | draft |
+| GPCF-DOC-FEDAEF19FA | specs | openspec/changes/was-scenario-flow-extension/specs/README.md | KDS | draft |
+| GPCF-DOC-063FEE0F10 | was-scenario-flow-extension | openspec/changes/was-scenario-flow-extension/specs/was-scenario-flow-extension/README.md | KDS | draft |
+| GPCF-DOC-5C02110A55 | spec | openspec/changes/was-scenario-flow-extension/specs/was-scenario-flow-extension/spec.md | GPCF | draft |
+| GPCF-DOC-EE3E7D649C | tasks | openspec/changes/was-scenario-flow-extension/tasks.md | KDS | draft |
+| GPCF-DOC-F8CE55AC60 | world-project-onboarding | openspec/changes/world-project-onboarding/README.md | KDS | draft |
+| GPCF-WORLD-OPENSPEC-CHANGES-WORLD-PROJECT-ONBOARDING-PROPOSAL-MD-20261016 | proposal | openspec/changes/world-project-onboarding/proposal.md | KDS | draft |
+| GPCF-DOC-AE04C4B5F5 | specs | openspec/changes/world-project-onboarding/specs/README.md | KDS | draft |
+| GPCF-DOC-410F29E347 | world-project-registration | openspec/changes/world-project-onboarding/specs/world-project-registration/README.md | KDS | draft |
+| GPCF-WORLD-OPENSPEC-CHANGES-WORLD-PROJECT-ONBOARDING-SPECS-WORLD-PROJECT-REGISTRATION-SPEC-MD-20261016 | spec | openspec/changes/world-project-onboarding/specs/world-project-registration/spec.md | GPCF | draft |
 | GPCF-DOC-89FBFF25D3 | OpenSpec 主规格 | openspec/specs/README.md | KDS | controlled |

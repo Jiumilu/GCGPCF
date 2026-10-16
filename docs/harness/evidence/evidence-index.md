@@ -21,6 +21,8 @@ superseded_by: []
 ## LOOP Governance Efficiency
 
 - LOOP-GOV-EFF-DEBT-LOCATOR-20260617: `docs/harness/evidence/loop-governance-efficiency-debt-locator-20260617.md`
+- LOOP-GOV-DASHBOARD-20260617: `docs/harness/evidence/loop-governance-dashboard-20260617.md`（＋`.json`）
+- LOOP-GOV-EFF-DEBT-20260617: `docs/harness/evidence/loop-governance-efficiency-debt-backlog-20260617.md`
 - LOOP-GOV-TRUTH-FIELD-REVIEW-20260617: `docs/harness/evidence/loop-governance-truth-field-review-20260617.md`
 - LOOP-GOV-FIVE-SEGMENT-REVIEW-20260617: `docs/harness/evidence/loop-governance-five-segment-review-20260617.md`
 - LOOP-GOV-SEQUENCE-CHECKPOINT-20260619: `docs/harness/evidence/loop-governance-sequence-checkpoint-20260619.md`

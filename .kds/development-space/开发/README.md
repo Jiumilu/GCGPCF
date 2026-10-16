@@ -1,6 +1,6 @@
 # KDS 开发空间本地镜像
 
-生成日期：2026-10-12
+生成日期：2026-10-16
 
 用途：作为 KDS `开发` 空间的本地可审计镜像，并与真实 KDS API 同步工具链共同构成开发空间双向同步基础。
 
@@ -10,14 +10,14 @@
 | GPC | 02-GPC | 53 |
 | PVAOS | 03-PVAOS | 10 |
 | WAME | 04-WAME | 26 |
-| KDS | 05-KDS | 979 |
+| KDS | 05-KDS | 1006 |
 | Brain | 06-Brain | 11 |
 | PKC | 07-PKC | 7 |
 | XiaoC | 08-XiaoC | 65 |
 | XGD | 09-XGD | 7 |
 | XiaoG | 10-XiaoG | 8 |
-| MMC | 11-MMC | 9 |
-| GPCF | 12-GPCF | 1739 |
+| MMC | 11-MMC | 10 |
+| GPCF | 12-GPCF | 1750 |
 | Studio | 13-Studio | 2 |
 | ICP | 14-ICP | 0 |
 | SpaceAIStudio | 15-SpaceAIStudio | 0 |

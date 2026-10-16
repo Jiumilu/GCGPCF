@@ -76,6 +76,9 @@ GPCF:01-architecture/GlobalCloud 项目群总体方案.md
 19. GlobalCloud PQC
 20. GlobalCloud SpaceAI
 21. GlobalCloud SpaceAI Studio
+22. GlobalCloud World
+
+`GlobalCloud World` 于 2026-10-16 授权独立纳管与本地/私有远端 Git 建立。入口 `projects/world/STATUS.md`，Feature F-021；角色 external；不迁移 Studio F-015 或 KDS 主账。authorization=纳管与Git初始同步已授权；confirmation=业务验收与生产发布未确认；overall_status=partial。中央门禁 rework_required，历史覆盖证据保持原范围。
 
 `GlobalCloud SpaceAI Studio` 于 2026-10-10 授权纳管，独立私有仓库 GCSpaceAIStudio；状态入口 `projects/spaceai-studio/STATUS.md`。authorization=用户授权纳管与Git建立，且确认敏感文件仅保留本地；confirmation=业务验收与生产发布未确认；overall_status=partial。Windows 构建、设备运行和外部依赖尚未验证，远端受限源码不可独立构建，不提升业务状态。
 

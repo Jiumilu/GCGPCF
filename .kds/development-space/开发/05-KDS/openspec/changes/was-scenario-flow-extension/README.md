@@ -20,11 +20,11 @@ superseded_by: []
 
 目录：`openspec/changes/was-scenario-flow-extension`
 
-用途：把「场景流 ScenarioFlow」（2026-10-16 老卢裁定；GCWORLD V1.0.1 第九流）按《WAS 总体方案 v1.3.0》U16 版本化路径受控承接进 WAS 体系——候选扩展登记 → 治理复核 → 版本发布纳入。不改变八流基线与既有术语。
+用途：保存本目录下的受控文档、证据或规格材料。
 
 KDS 空间：`开发`
 
-关联项目：WAS, XWAIL, WAME, KDS, GPCF
+关联项目：KDS, GPCF
 
 受控规则：
 
@@ -36,13 +36,13 @@ KDS 空间：`开发`
 
 | doc_id | title | source_path | project | status |
 | --- | --- | --- | --- | --- |
-| GPCF-DOC-829B6B4A48 | was-scenario-flow-extension | openspec/changes/was-scenario-flow-extension/README.md | WAS | draft |
-| GPCF-DOC-FC299296D9 | design | openspec/changes/was-scenario-flow-extension/design.md | WAS | draft |
-| GPCF-DOC-25EB2F876F | proposal | openspec/changes/was-scenario-flow-extension/proposal.md | WAS | draft |
-| GPCF-DOC-EE3E7D649C | tasks | openspec/changes/was-scenario-flow-extension/tasks.md | WAS | draft |
-| GPCF-DOC-FEDAEF19FA | specs | openspec/changes/was-scenario-flow-extension/specs/README.md | WAS | draft |
-| GPCF-DOC-063FEE0F10 | was-scenario-flow-extension | openspec/changes/was-scenario-flow-extension/specs/was-scenario-flow-extension/README.md | WAS | draft |
-| GPCF-DOC-5C02110A55 | spec | openspec/changes/was-scenario-flow-extension/specs/was-scenario-flow-extension/spec.md | WAS | draft |
-| GPCF-DOC-2E6C9AAD6C | artifacts | openspec/changes/was-scenario-flow-extension/artifacts/README.md | WAS | draft |
-| GPCF-DOC-8952BBCF0B | 场景流扩展登记草案 | openspec/changes/was-scenario-flow-extension/artifacts/场景流扩展登记草案_20261016.md | WAS | draft |
-| GPCF-DOC-2FF258337C | XWAIL-flowType影响评估说明 | openspec/changes/was-scenario-flow-extension/artifacts/XWAIL-flowType影响评估说明_20261016.md | WAS | draft |
+| GPCF-DOC-829B6B4A48 | was-scenario-flow-extension | openspec/changes/was-scenario-flow-extension/README.md | KDS | draft |
+| GPCF-DOC-2E6C9AAD6C | artifacts | openspec/changes/was-scenario-flow-extension/artifacts/README.md | KDS | draft |
+| GPCF-DOC-2FF258337C | XWAIL `flowType` 影响评估说明（场景流扩展·候选） | openspec/changes/was-scenario-flow-extension/artifacts/XWAIL-flowType影响评估说明_20261016.md | GPCF | draft |
+| GPCF-DOC-8952BBCF0B | 场景流扩展登记草案（WAS 流集合·候选扩展） | openspec/changes/was-scenario-flow-extension/artifacts/场景流扩展登记草案_20261016.md | KDS | draft |
+| GPCF-DOC-FC299296D9 | 设计：场景流的版本化承接 | openspec/changes/was-scenario-flow-extension/design.md | KDS | draft |
+| GPCF-DOC-25EB2F876F | proposal | openspec/changes/was-scenario-flow-extension/proposal.md | KDS | draft |
+| GPCF-DOC-FEDAEF19FA | specs | openspec/changes/was-scenario-flow-extension/specs/README.md | KDS | draft |
+| GPCF-DOC-063FEE0F10 | was-scenario-flow-extension | openspec/changes/was-scenario-flow-extension/specs/was-scenario-flow-extension/README.md | KDS | draft |
+| GPCF-DOC-5C02110A55 | spec | openspec/changes/was-scenario-flow-extension/specs/was-scenario-flow-extension/spec.md | GPCF | draft |
+| GPCF-DOC-EE3E7D649C | tasks | openspec/changes/was-scenario-flow-extension/tasks.md | KDS | draft |

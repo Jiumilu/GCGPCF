@@ -31,3 +31,17 @@ blockers:
 - 技能链总检查：既有 projects/wae 目录未登记
 created_at: '2026-10-16T00:30:28+00:00'
 updated_at: '2026-10-16T00:32:00+00:00'
+ui_product_first_control:
+  version: v1.1
+  applicability: indirect
+  user_groups: [治理负责人, 项目群管理员, 审计人员]
+  primary_human_task: 看懂 World 项目纳管边界、当前状态与下一步治理动作
+  machine_interface_boundary: 纳管登记与证据链保留机器字段；人类入口呈现项目、边界、状态与下一步
+  gates:
+    functional_completeness: pass
+    quality_baseline: pass
+    multi_user_usability: pending
+    task_flow_e2e_status: pending
+    accessibility_status: waived
+    evidence_overexposure_gate: pass
+  status_ceiling: partial

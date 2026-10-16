@@ -1,0 +1,27 @@
+{
+  "change_id": "spaceai-was-city-flood-replay",
+  "feature": "F-017",
+  "project": "SpaceAI",
+  "run_id": "20261016-074857-spaceai-was-city-flood-replay",
+  "status": "partial",
+  "data_origin": "synthetic",
+  "scope": "isolated_local_replay",
+  "counts": {
+    "slices": 13,
+    "edges": 14,
+    "assets": 6
+  },
+  "validation": {
+    "schema_errors": 0,
+    "schema_warnings": 0,
+    "unit_tests": 19,
+    "browser_cases": 32
+  },
+  "evidence_index": "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud SpaceAI/.harness/runs/20261016-074857-spaceai-was-city-flood-replay/evidence-index.yaml",
+  "authorization": "user_next_step_local_implementation_and_validation",
+  "confirmation": "business_acceptance_and_production_release_unconfirmed",
+  "accepted": false,
+  "integrated": false,
+  "production_ready": false,
+  "central_state_promoted": false
+}

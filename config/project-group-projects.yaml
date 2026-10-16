@@ -1,5 +1,5 @@
 schema_version: 1
-current_project_count: 22
+current_project_count: 23
 historical_baselines:
   - count: 17
     through: 2026-06-27
@@ -27,3 +27,4 @@ projects:
   - {id: SpaceAI, slug: spaceai}
   - {id: SpaceAIStudio, slug: spaceai-studio}
   - {id: World, slug: world}
+  - {id: GCMEM, slug: gcmem}

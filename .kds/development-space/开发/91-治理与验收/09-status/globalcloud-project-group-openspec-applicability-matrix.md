@@ -46,9 +46,11 @@ superseded_by: []
 
 | SpaceAI | spaceai | required | `openspec/changes/spaceai-<change>/` | `gpcf_new_feature --project spaceai` | Governance | required | required |
 
+| World | world | required | `openspec/changes/world-<change>/` | `gpcf_new_feature --project world` | Governance | required | required |
+
 ## 状态边界
 
-- 当前 21 项目均有中央入口，`waived=0`；因此无豁免债务。
+- 当前 22 项目均有中央入口，`waived=0`；因此无豁免债务。
 - 中央入口不表示已向各独立项目仓安装 OpenSpec。
 - apply 前必须创建或绑定 Feature；归档前必须通过 Evidence 与文档门禁。
 - Harness 保留最终裁决权；未经人工确认不得提升验收或生产状态。
