@@ -45,3 +45,4 @@ KDS 空间：`开发`
 | GPCF-DOC-5C02110A55 | spec | openspec/changes/was-scenario-flow-extension/specs/was-scenario-flow-extension/spec.md | WAS | draft |
 | GPCF-DOC-2E6C9AAD6C | artifacts | openspec/changes/was-scenario-flow-extension/artifacts/README.md | WAS | draft |
 | GPCF-DOC-8952BBCF0B | 场景流扩展登记草案 | openspec/changes/was-scenario-flow-extension/artifacts/场景流扩展登记草案_20261016.md | WAS | draft |
+| GPCF-DOC-2FF258337C | XWAIL-flowType影响评估说明 | openspec/changes/was-scenario-flow-extension/artifacts/XWAIL-flowType影响评估说明_20261016.md | WAS | draft |

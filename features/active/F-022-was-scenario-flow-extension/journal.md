@@ -18,11 +18,27 @@ superseded_by: []
 
 # F-022 was-scenario-flow-extension
 
-## 2026-10-16 · 场景流扩展承接（change 建立）
+## 2026-10-16 · 场景流扩展承接（change 建立）· LOOP 五问
 
-- 背景：承接 GCWORLD V1.0.1 第九流「场景流 ScenarioFlow」（老卢 2026-10-16 裁定），按 WAS v1.3.0 U16 版本化路径正式承接，闭合「文档已用、体系未承接」未闭合项。
-- 本轮产出：OpenSpec change `was-scenario-flow-extension`（proposal / design / tasks / spec / 登记草案）；定义单源＝裁定文本＋GCWORLD V1.0.1 九流表；六项兼容性声明（迁移决定 compatible）。
-- 验证：术语逐字一致性通过（草案定义＝裁定文本＝GCWORLD V1.0.1，归一化比对全 True）；document_control 增量 scope 完成登记与镜像（05-KDS/12-GPCF/91-治理三域，10 文档）。
-- 门禁实情：loop_document_gate 运行＝rework_required（7 项既有全仓失败，与本次无关；本次相关指标 missing_metadata=0/missing_readme_dirs=0/fixed_doc_id_drift=false）；check_frontmatter_gate 默认报 3 个生成物 register 的 last_reviewed drift、经 --allowed-frontmatter-write 允许机制＝pass。保持 draft/candidate，不声明完成。
+### 这轮做什么？
+- 承接 GCWORLD V1.0.1 第九流「场景流 ScenarioFlow」（老卢 2026-10-16 裁定），按 WAS v1.3.0 U16 版本化路径正式承接，闭合「文档已用、体系未承接」未闭合项。
+
+### 改了什么？
+- 建立 OpenSpec change `was-scenario-flow-extension`（proposal / design / tasks / spec / 登记草案）；定义单源＝裁定文本＋GCWORLD V1.0.1 九流表；六项兼容性声明（迁移决定 compatible）。
+
+### 怎么验证？
+- 术语逐字一致性通过（草案定义＝裁定文本＝GCWORLD V1.0.1，归一化比对全 True）；document_control 增量 scope 完成登记与镜像（05-KDS/12-GPCF/91-治理三域，10 文档）。
+
+### 发现什么问题？
+- 门禁实情：loop_document_gate 运行＝rework_required（7 项既有全仓失败，与本次无关；本次相关指标 missing_metadata=0/missing_readme_dirs=0/fixed_doc_id_drift=false）；check_frontmatter_gate 默认报 3 个生成物 register 的 last_reviewed drift、经 --allowed-frontmatter-write 允许机制＝pass。
+
+### 是否可以提交？
 - authorization：老卢 2026-10-16「开」（本地建 change、登记、验证与提交）。
-- confirmation：WAS 治理复核、业务验收与生产发布未确认；状态不提升。
+- confirmation：WAS 治理复核、业务验收与生产发布未确认；状态不提升（保持 draft/candidate）。
+
+## 2026-10-16 · T3 推进（版本化纳入准备）
+
+- 裁定/请求两件套落定：`GPCF:docs/harness/evidence/vocab-extension-request-was-scenario-flow-20261016.json` ＋ `GPCF:docs/harness/evidence/vocab-extension-admission-was-scenario-flow-20261016.json`（round 003，承接 -001/-002 先例；口径 admitted as candidate）。
+- 影响评估：`artifacts/XWAIL-flowType影响评估说明_20261016.md`——现状定位（XWAIL ALLOWED_FLOWS 为新名封闭集合 L22；was-flows.yaml 仍 OKF P0 旧命名，迁移为独立在案专项）；建议联动清单 5 项，均待 XWAIL 侧随版本发布执行。
+- WAS 主方案：加「场景流扩展登记记录（候选）」（头部）与 §7 扩展登记注；last_reviewed 更新。**不升版本、不并入流清单**。
+- authorization：老卢 2026-10-16『继续』（推进 T3 与复核授权）。confirmation：正式纳入与契约落位未确认；状态保持 candidate，不声明完成。

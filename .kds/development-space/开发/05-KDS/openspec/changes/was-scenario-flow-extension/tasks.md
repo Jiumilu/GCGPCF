@@ -20,18 +20,19 @@ superseded_by: []
 
 - [x] 1.1 建立 Feature F-022 `was-scenario-flow-extension` 并绑定本变更（journal 与证据目录）。
 - [x] 1.2 变更文档登记与镜像（`document_control.py` 增量 scope）。
-- [ ] 1.3 WAS 侧复核：承接方式与六项兼容性声明确认（治理侧）。
+- [x] 1.3 WAS 侧复核：承接方式与六项兼容性声明确认（治理侧）——2026-10-16 老卢『继续』授权推进。
 
 ## 2. 登记件
 
 - [x] 2.1 产出《场景流扩展登记草案》（定义单源＋八流/八维关系＋六项声明＋未决项）。
-- [ ] 2.2 草案复核：WAS/WAME/XWAIL 侧意见；确定正式纳入路径与时点。
+- [x] 2.2 草案复核：WAS/WAME/XWAIL 侧意见；确定正式纳入路径与时点——裁定件 `vocab-extension-admission-was-scenario-flow-20261016.json`（candidate）；纳入时点＝版本发布（U16）。
 
 ## 3. 版本化纳入（后续）
 
-- [ ] 3.1 WAS 主方案扩展记录（版本发布时并入流清单）——待 2.2。
-- [ ] 3.2 Ontology registry 流类目登记（如适用）——待 2.2。
-- [ ] 3.3 XWAIL `flowType` 影响评估与（如确认）档位更新——XWAIL 侧执行。
+- [x] 3.1 WAS 主方案扩展登记记录（候选口径，2026-10-16）。
+- [ ] 3.1b 版本发布时并入主方案流清单——待正式纳入。
+- [x] 3.2 Ontology registry 流类目登记（如适用）——评估：六类目不含 flow，不涉 registry 本体；落位＝was-flows.yaml/XWAIL（见裁定件 rulings）。
+- [x] 3.3 XWAIL `flowType` 影响评估（评估件：artifacts/XWAIL-flowType影响评估说明_20261016.md）；档位更新待 XWAIL 侧随版本发布执行。
 - [ ] 3.4 KDS GCWORLD V1.0.1 注记回填（承接完成后）。
 
 ## 4. 验证与回滚

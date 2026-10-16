@@ -31,7 +31,7 @@ superseded_by: []
 | GFIS | 01-GFIS | 121 | 118 | 已建空间 |
 | GPC | 02-GPC | 61 | 53 | 已建空间 |
 | PVAOS | 03-PVAOS | 13 | 10 | 已建空间 |
-| WAME | 04-WAME | 194 | 26 | 已建空间 |
+| WAME | 04-WAME | 195 | 26 | 已建空间 |
 | KDS | 05-KDS | 992 | 989 | 已建空间 |
 | Brain | 06-Brain | 14 | 11 | 已建空间 |
 | PKC | 07-PKC | 10 | 7 | 已建空间 |
@@ -39,7 +39,7 @@ superseded_by: []
 | XGD | 09-XGD | 10 | 7 | 已建空间 |
 | XiaoG | 10-XiaoG | 11 | 8 | 已建空间 |
 | MMC | 11-MMC | 13 | 10 | 已建空间 |
-| GPCF | 12-GPCF | 1979 | 1749 | 已建空间 |
+| GPCF | 12-GPCF | 1979 | 1750 | 已建空间 |
 | Studio | 13-Studio | 5 | 2 | 已建空间 |
 | ICP | 14-ICP | 0 | 0 | 已建空间，暂无直接镜像文档 |
 | SpaceAIStudio | 15-SpaceAIStudio | 0 | 0 | 已建空间，暂无直接镜像文档 |
@@ -424,8 +424,8 @@ superseded_by: []
 | GPCF-DOC-744D083B96 | LOOP_ENGINEERING_SELF_CORRECTION | 02-governance/loop/LOOP_ENGINEERING_SELF_CORRECTION.md | WAME | GFIS, GPC, WAME, KDS, GPCF | governance | controlled | 开发/91-治理与验收/02-governance/loop/LOOP_ENGINEERING_SELF_CORRECTION.md |
 | GPCF-DOC-04BF76145B | LOOP Execution Rules | 02-governance/loop/LOOP_EXECUTION_RULES.md | WAME | GPC, WAME, KDS, GPCF, Studio | governance | controlled | 开发/91-治理与验收/02-governance/loop/LOOP_EXECUTION_RULES.md |
 | GPCF-DOC-LOOP-GATE-CLASSIFICATION-V11 | LOOP Gate Classification | 02-governance/loop/LOOP_GATE_CLASSIFICATION.md | WAME | GFIS, WAME | governance | controlled | 开发/91-治理与验收/02-governance/loop/LOOP_GATE_CLASSIFICATION.md |
-| GPCF-DOC-FE20CDD358 | Loop Governance Dashboard | 02-governance/loop/LOOP_GOVERNANCE_DASHBOARD.md | WAME | GFIS, GPC, WAME, KDS, GPCF | governance | controlled | 开发/91-治理与验收/02-governance/loop/LOOP_GOVERNANCE_DASHBOARD.md |
-| GPCF-DOC-07906C7E54 | Loop Governance Efficiency Debt Backlog | 02-governance/loop/LOOP_GOVERNANCE_EFFICIENCY_DEBT_BACKLOG.md | GPCF | GFIS, GPC, GPCF | governance | controlled | 开发/91-治理与验收/02-governance/loop/LOOP_GOVERNANCE_EFFICIENCY_DEBT_BACKLOG.md |
+| GPCF-DOC-FE20CDD358 | Loop Governance Dashboard（Loop 治理看板） | 02-governance/loop/LOOP_GOVERNANCE_DASHBOARD.md | WAME | GFIS, GPC, WAME, KDS, GPCF | governance | controlled | 开发/91-治理与验收/02-governance/loop/LOOP_GOVERNANCE_DASHBOARD.md |
+| GPCF-DOC-07906C7E54 | Loop Governance Efficiency Debt Backlog（Loop 治理效率债积压清单） | 02-governance/loop/LOOP_GOVERNANCE_EFFICIENCY_DEBT_BACKLOG.md | WAME | GFIS, GPC, WAME, GPCF | governance | controlled | 开发/91-治理与验收/02-governance/loop/LOOP_GOVERNANCE_EFFICIENCY_DEBT_BACKLOG.md |
 | GPCF-DOC-D63AEEB17D | Loop 治理运行边界 | 02-governance/loop/LOOP_GOVERNANCE_OPERATING_BOUNDARY.md | WAME | GFIS, WAME, KDS | governance | controlled | 开发/91-治理与验收/02-governance/loop/LOOP_GOVERNANCE_OPERATING_BOUNDARY.md |
 | GPCF-DOC-48F5DD5538 | Loop Governance Phase Goal | 02-governance/loop/LOOP_GOVERNANCE_PHASE_GOAL.md | WAME | GFIS, GPC, WAME, KDS, GPCF | governance | controlled | 开发/91-治理与验收/02-governance/loop/LOOP_GOVERNANCE_PHASE_GOAL.md |
 | GPCF-DOC-8A21A00749 | Loop 治理轮次复核计划 | 02-governance/loop/LOOP_GOVERNANCE_ROUND_REVIEW_PLAN.md | WAME | GFIS, GPC, WAME, KDS, GPCF | governance | controlled | 开发/91-治理与验收/02-governance/loop/LOOP_GOVERNANCE_ROUND_REVIEW_PLAN.md |
@@ -438,7 +438,7 @@ superseded_by: []
 | GPCF-DOC-8D5147AC17 | Loop Risk Gate | 02-governance/loop/LOOP_RISK_GATE.md | WAME | WAME | governance | controlled | 开发/91-治理与验收/02-governance/loop/LOOP_RISK_GATE.md |
 | GPCF-DOC-6C7A1E9D2B | LOOP 会话主线控制包 | 02-governance/loop/LOOP_SESSION_MAINLINE_CONTROL_PACK.md | WAME | GPC, WAME, KDS, GPCF | governance | controlled | 开发/91-治理与验收/02-governance/loop/LOOP_SESSION_MAINLINE_CONTROL_PACK.md |
 | GPCF-DOC-4E83A9C210 | LOOP 会话总账 | 02-governance/loop/LOOP_SESSION_REGISTRY.md | WAME | GFIS, GPC, WAME, KDS, Brain, XiaoG, MMC, GPCF, Studio | governance | controlled | 开发/91-治理与验收/02-governance/loop/LOOP_SESSION_REGISTRY.md |
-| GPCF-DOC-LOOP-UI-PRODUCT-FIRST-CONTROL | LOOP UI Product First Control | 02-governance/loop/LOOP_UI_PRODUCT_FIRST_CONTROL.md | WAME | GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio, ICP | governance | controlled | 开发/91-治理与验收/02-governance/loop/LOOP_UI_PRODUCT_FIRST_CONTROL.md |
+| GPCF-DOC-LOOP-UI-PRODUCT-FIRST-CONTROL | LOOP UI Product First Control | 02-governance/loop/LOOP_UI_PRODUCT_FIRST_CONTROL.md | WAME | GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio, ICP, SpaceAIStudio | governance | controlled | 开发/91-治理与验收/02-governance/loop/LOOP_UI_PRODUCT_FIRST_CONTROL.md |
 | GPCF-DOC-0AD0A529B5 | loop | 02-governance/loop/README.md | WAME | GPC, WAME, KDS, GPCF, Studio | governance | controlled | 开发/91-治理与验收/02-governance/loop/README.md |
 | GPCF-DOC-31D8E9632A | GlobalCloud Studio LOOP Initialization | 02-governance/loop/studio/LOOP-STUDIO-INITIALIZATION.md | WAME | GFIS, GPC, WAME, KDS, PKC, XiaoG, MMC, GPCF, Studio | governance | controlled | 开发/91-治理与验收/02-governance/loop/studio/LOOP-STUDIO-INITIALIZATION.md |
 | GPCF-DOC-FA5685423F | studio | 02-governance/loop/studio/README.md | WAME | GPC, WAME, KDS, GPCF, Studio | governance | controlled | 开发/91-治理与验收/02-governance/loop/studio/README.md |
@@ -3460,6 +3460,7 @@ superseded_by: []
 | GPCF-SPACEAI-FLOOD-TASKS-20261016 | tasks | openspec/changes/spaceai-was-city-flood-replay/tasks.md | GPCF | WAME, GPCF | openspec | draft | 开发/12-GPCF/openspec/changes/spaceai-was-city-flood-replay/tasks.md |
 | GPCF-DOC-829B6B4A48 | was-scenario-flow-extension | openspec/changes/was-scenario-flow-extension/README.md | KDS | GPC, WAME, KDS, GPCF | openspec | draft | 开发/05-KDS/openspec/changes/was-scenario-flow-extension/README.md |
 | GPCF-DOC-2E6C9AAD6C | artifacts | openspec/changes/was-scenario-flow-extension/artifacts/README.md | KDS | GPC, WAME, KDS, GPCF | openspec | draft | 开发/05-KDS/openspec/changes/was-scenario-flow-extension/artifacts/README.md |
+| GPCF-DOC-2FF258337C | XWAIL `flowType` 影响评估说明（场景流扩展·候选） | openspec/changes/was-scenario-flow-extension/artifacts/XWAIL-flowType影响评估说明_20261016.md | GPCF | GPC, WAME, GPCF | openspec | draft | 开发/12-GPCF/openspec/changes/was-scenario-flow-extension/artifacts/XWAIL-flowType影响评估说明_20261016.md |
 | GPCF-DOC-8952BBCF0B | 场景流扩展登记草案（WAS 流集合·候选扩展） | openspec/changes/was-scenario-flow-extension/artifacts/场景流扩展登记草案_20261016.md | KDS | WAME, KDS | openspec | draft | 开发/05-KDS/openspec/changes/was-scenario-flow-extension/artifacts/场景流扩展登记草案_20261016.md |
 | GPCF-DOC-FC299296D9 | 设计：场景流的版本化承接 | openspec/changes/was-scenario-flow-extension/design.md | KDS | WAME, KDS | openspec | draft | 开发/05-KDS/openspec/changes/was-scenario-flow-extension/design.md |
 | GPCF-DOC-25EB2F876F | proposal | openspec/changes/was-scenario-flow-extension/proposal.md | KDS | GPC, WAME, KDS, GPCF | openspec | draft | 开发/05-KDS/openspec/changes/was-scenario-flow-extension/proposal.md |

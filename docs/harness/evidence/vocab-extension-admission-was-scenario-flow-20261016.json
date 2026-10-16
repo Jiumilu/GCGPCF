@@ -1,0 +1,46 @@
+{
+  "evidence_id": "GPCF-VOCAB-EXTENSION-ADMISSION-WAS-SCENARIO-FLOW-20261016",
+  "status": "vocab_extension_admitted_as_candidates",
+  "date": "2026-10-16",
+  "round_id": "GPCF-VOCAB-EXTENSION-ADMISSION-003",
+  "purpose": "将「场景流 ScenarioFlow」扩展请求（1 条：流集合新成员／GCWORLD V1.0.1 第九流）裁定为候选（admit as candidate）——承接前两批（-001 九条、-002 三十二条）先例；依据老卢 2026-10-16 裁定与授权。",
+  "registry_base": {
+    "source_registry": "docs/harness/evidence/was-project-group-ontology-registry-20260621.json",
+    "existing_entries_untouched": 43,
+    "policy": "future_project_policy",
+    "flow_contract_file": "WAS:okf/was/was-flows.yaml（现状为 OKF P0 旧命名 8 条；其 V1.2 命名迁移为独立在案专项；本裁定不修改该文件）"
+  },
+  "source_request": "docs/harness/evidence/vocab-extension-request-was-scenario-flow-20261016.json",
+  "source_material": "KDS:世界资产/引擎/WAME/GCWORLD总体架构与实施方案_v1.0.md（v1.0.1 九流表）",
+  "request_decision": "accepted（口径：admitted as candidate，候选登记）",
+  "decision_record": {
+    "date": "2026-10-16",
+    "authority": "老卢（治理方；授权来源：2026-10-16「维度+上下文就是谁在什么情景下的变化。就定义为场景流吧」；『开』『继续』＝按建议推进）",
+    "decision": "accepted",
+    "note": "裁定口径：admit as candidate（候选登记；非运行授权、非版本发布）"
+  },
+  "admitted": {
+    "count": 1,
+    "flow": ["ScenarioFlow"],
+    "definition": "主体在特定情景（时点、区位、场景）中的变化与迁移（逐字同 GCWORLD V1.0.1 九流表）"
+  },
+  "rulings": {
+    "流类目说明": "registry 六类目不含 flow；本扩展以「流集合候选」登记，契约层落位＝was-flows.yaml 扩展（随其 V1.2 迁移/版本发布执行）与 XWAIL ALLOWED_FLOWS 联动",
+    "承接路径": "候选登记（本件）→ 版本发布时并入主方案流清单与 okf 契约文件（U16 版本化路径）；OpenSpec 载体＝openspec/changes/was-scenario-flow-extension",
+    "复核授权": "承接方式复核：老卢 2026-10-16『开』『继续』授权推进（见 GPCF:features/active/F-022-was-scenario-flow-extension/journal.md）"
+  },
+  "boundary": {
+    "registry_body_modified": false,
+    "was_flows_yaml_modified": false,
+    "xwail_contract_modified": false,
+    "candidate_status_only": true,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false
+  },
+  "non_claims": [
+    "本裁定为候选登记（candidate），不是运行授权、不修改 20260621 registry 既有 43 条、不修改 was-flows.yaml 与 XWAIL 契约",
+    "正式纳入与契约层落位（was-flows.yaml / XWAIL ALLOWED_FLOWS）随版本化流程执行",
+    "零写回、零运行状态提升"
+  ]
+}

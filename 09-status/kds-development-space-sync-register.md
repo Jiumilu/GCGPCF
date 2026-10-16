@@ -35,7 +35,7 @@ superseded_by: []
 | GFIS | 01-GFIS | 121 | 118 | 已建空间 |
 | GPC | 02-GPC | 61 | 53 | 已建空间 |
 | PVAOS | 03-PVAOS | 13 | 10 | 已建空间 |
-| WAME | 04-WAME | 194 | 26 | 已建空间 |
+| WAME | 04-WAME | 195 | 26 | 已建空间 |
 | KDS | 05-KDS | 992 | 989 | 已建空间 |
 | Brain | 06-Brain | 14 | 11 | 已建空间 |
 | PKC | 07-PKC | 10 | 7 | 已建空间 |
@@ -43,7 +43,7 @@ superseded_by: []
 | XGD | 09-XGD | 10 | 7 | 已建空间 |
 | XiaoG | 10-XiaoG | 11 | 8 | 已建空间 |
 | MMC | 11-MMC | 13 | 10 | 已建空间 |
-| GPCF | 12-GPCF | 1979 | 1749 | 已建空间 |
+| GPCF | 12-GPCF | 1979 | 1750 | 已建空间 |
 | Studio | 13-Studio | 5 | 2 | 已建空间 |
 | ICP | 14-ICP | 0 | 0 | 已建空间，暂无直接镜像文档 |
 | SpaceAIStudio | 15-SpaceAIStudio | 0 | 0 | 已建空间，暂无直接镜像文档 |
@@ -3464,6 +3464,7 @@ superseded_by: []
 | GPCF-SPACEAI-FLOOD-TASKS-20261016 | openspec/changes/spaceai-was-city-flood-replay/tasks.md | 开发/12-GPCF/openspec/changes/spaceai-was-city-flood-replay/tasks.md | bidirectional | pending_api |
 | GPCF-DOC-829B6B4A48 | openspec/changes/was-scenario-flow-extension/README.md | 开发/05-KDS/openspec/changes/was-scenario-flow-extension/README.md | bidirectional | pending_api |
 | GPCF-DOC-2E6C9AAD6C | openspec/changes/was-scenario-flow-extension/artifacts/README.md | 开发/05-KDS/openspec/changes/was-scenario-flow-extension/artifacts/README.md | bidirectional | pending_api |
+| GPCF-DOC-2FF258337C | openspec/changes/was-scenario-flow-extension/artifacts/XWAIL-flowType影响评估说明_20261016.md | 开发/12-GPCF/openspec/changes/was-scenario-flow-extension/artifacts/XWAIL-flowType影响评估说明_20261016.md | bidirectional | pending_api |
 | GPCF-DOC-8952BBCF0B | openspec/changes/was-scenario-flow-extension/artifacts/场景流扩展登记草案_20261016.md | 开发/05-KDS/openspec/changes/was-scenario-flow-extension/artifacts/场景流扩展登记草案_20261016.md | bidirectional | pending_api |
 | GPCF-DOC-FC299296D9 | openspec/changes/was-scenario-flow-extension/design.md | 开发/05-KDS/openspec/changes/was-scenario-flow-extension/design.md | bidirectional | pending_api |
 | GPCF-DOC-25EB2F876F | openspec/changes/was-scenario-flow-extension/proposal.md | 开发/05-KDS/openspec/changes/was-scenario-flow-extension/proposal.md | bidirectional | pending_api |

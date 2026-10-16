@@ -1,0 +1,36 @@
+{
+  "packageId": "xap.request.vocab-extension.was-scenario-flow-20261016",
+  "packageKind": "request",
+  "requestType": "term_request",
+  "from": "was",
+  "to": "wame",
+  "subject": {
+    "ref": "was-scenario-flow-extension-v0.1",
+    "title": "场景流 ScenarioFlow 扩展请求（GCWORLD V1.0.1 第九流；2026-10-16 老卢裁定）",
+    "terms_by_category": {
+      "flow": ["ScenarioFlow"]
+    },
+    "count": 1,
+    "category_mapping_note": "流（flow）不属于 registry 六类目（object/relationship/event/evidence/state/interface）；本扩展的契约层落位＝WAS okf/was/was-flows.yaml（流集合，随其 V1.2 迁移/版本发布执行）＋ XWAIL flowType 校验档位联动；registry 本体不涉、既有 43 条不动。"
+  },
+  "requestedDecision": "admit_vocab_extension_candidates",
+  "evidenceRefs": [
+    "KDS:世界资产/引擎/WAME/GCWORLD总体架构与实施方案_v1.0.md（v1.0.1 九流表）",
+    "GPCF:openspec/changes/was-scenario-flow-extension（OpenSpec 变更全件）",
+    "GPCF:openspec/changes/was-scenario-flow-extension/artifacts/场景流扩展登记草案_20261016.md"
+  ],
+  "constraints": {
+    "scope_binding": ["WAS(流集合)", "GCWORLD(KDS)", "XWAIL(flowType)"],
+    "non_claims": "不改 registry 既有条目、不改 was-flows.yaml、不改 XWAIL 契约；候选登记（非运行授权）；裁定权属治理方"
+  },
+  "currentDecision": "pending_governance_review",
+  "createdAt": "2026-10-16",
+  "traceability": {
+    "original": "老卢 2026-10-16 裁定：「维度+上下文就是谁在什么情景下的变化。就定义为场景流吧」",
+    "originalStatus": "已裁定（GCWORLD V1.0.1 已落文）；WAS 侧承接＝版本化路径（U16）",
+    "process_ref": "GPCF:docs/harness/evidence/vocab-extension-admission-20261012.json（首批 9 条先例）；GPCF:docs/harness/evidence/vocab-extension-admission-was-theory-20261012.json（32 条先例）",
+    "note": "本件为提交态标准形态（留白）；治理裁定记录以 GPCF evidence 为权威",
+    "subsequentDecision": "accepted（2026-10-16；口径：admitted as candidate 候选登记，1 条）",
+    "decisionRef": "GPCF:docs/harness/evidence/vocab-extension-admission-was-scenario-flow-20261016.json"
+  }
+}
