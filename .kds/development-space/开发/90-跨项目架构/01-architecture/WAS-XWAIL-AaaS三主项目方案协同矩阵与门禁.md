@@ -45,7 +45,7 @@ AaaS 负责服务包、订阅、计量、SLA 和商业运营。
 
 | 主项目 | 权威职责 | 核心交付物 | 不得承担 |
 |---|---|---|---|
-| WAS世界资产体系 | WAS 顶层语义、三层资产、八维、八流、生命周期、治理原则 | WAS 术语表、语义基线、Ontology 映射要求、WAME/WAE 边界、硬停止规则 | 不直接实现业务系统，不替代 GFIS/GPC/PVAOS 事实源，不替代 XWAIL Schema，不替代 AaaS 商业包 |
+| WAS世界资产体系 | WAS 顶层语义、三层资产、八维、流清单、生命周期、治理原则 | WAS 术语表、语义基线、Ontology 映射要求、WAME/WAE 边界、硬停止规则 | 不直接实现业务系统，不替代 GFIS/GPC/PVAOS 事实源，不替代 XWAIL Schema，不替代 AaaS 商业包 |
 | GlobalCloud XWAIL | WAS 的机器契约、Schema、Profile、Validator、模板、示例、迁移、一致性测试 | XWAIL Schema、JSON Schema、Parser、Validator、Profile、XAP、错误码、CI 门禁、迁移规则 | 不重定义 WAS 语义，不承担 WAME 浏览器和发布治理，不承担 AaaS 定价、计量和商业状态 |
 | GlobalCloud AaaS | 服务包、订阅、计量、SLA、商业交付、运营治理 | ServicePackage、服务目录、Metering、SLA、EvidenceRequirement、订阅状态、退出迁移条款 | 不私建资产模型，不绕过 XWAIL 契约，不绕过 WAME 发布，不把商业叙事替代事实和证据 |
 
@@ -53,7 +53,7 @@ AaaS 负责服务包、订阅、计量、SLA 和商业运营。
 
 | AaaS/SCaaS 交付物 | 必须依赖 WAS | 必须依赖 XWAIL | 必须依赖 WAME | 最低状态 |
 |---|---|---|---|---|
-| 资产模型服务 | WAS 术语、三层资产、八维八流 | AssetGroup、AssetUnit、Dimensions、Relations、Validator | 模型注册与授权 | `Registered` |
+| 资产模型服务 | WAS 术语、三层资产、八维、流清单 | AssetGroup、AssetUnit、Dimensions、Relations、Validator | 模型注册与授权 | `Registered` |
 | 行业 Profile 服务 | 行业对象和语义边界 | Industry Profile、Profile Migration、OntologyRef | Profile 审批 | `Authorized` |
 | 场景资产包服务 | 场景资产包边界和生命周期 | Scenario Instance Model、XAP、StateMachine | 发布与版本治理 | `Published` 才可对外 |
 | 数字孪生服务 | 资产生命周期和状态语义 | Runtime Binding、FlowEvent、Snapshot | 运行健康、审计、回滚 | `Authorized` |
@@ -84,7 +84,7 @@ AaaS 负责服务包、订阅、计量、SLA 和商业运营。
 
 | 冲突类型 | 判定 | 处理 |
 |---|---|---|
-| XWAIL 方案重定义 WAS 八维、八流、生命周期 | `blocked` | 回退到 WAS 语义基线 |
+| XWAIL 方案重定义 WAS 八维、流清单、生命周期 | `blocked` | 回退到 WAS 语义基线 |
 | AaaS 服务包自定义资产对象但无 XWAIL 模型 | `blocked` | 补 XWAIL 模型、Profile 和 Validator |
 | AaaS 声明可订阅但 WAME 未发布 | `blocked` | 降级为 `candidate` 或 `pilot` |
 | WAS 新增术语但无 XWAIL/Ontology 映射 | `repair_required` | 补映射表和兼容矩阵 |

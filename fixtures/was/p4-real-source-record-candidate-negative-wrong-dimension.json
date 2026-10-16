@@ -17,7 +17,7 @@
   "objectFamily": "CustomerRequirementOrPlatformOrder",
   "sourceRecordId": "LY-20260621-003",
   "assetDimension": "economic_asset",
-  "flowType": "capital_flow",
+  "flowType": "FinancialFlow",
   "lifecycle": "pending_business_verification",
   "trustLevel": "T4",
   "sourceRefs": [

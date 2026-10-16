@@ -9,7 +9,7 @@
       "projects": ["GFIS", "GPC", "WAME", "KDS", "Brain", "PKC", "GPCF", "Studio", "WAS"],
       "business_chain_links": ["customer_order", "supplier_procurement", "production_work_order", "quality_inspection", "logistics_delivery", "energy_consumption", "carbon_footprint", "settlement_profit", "knowledge_reference", "recycling_circular"],
       "required_asset_dimensions": ["physical_asset", "rule_asset", "intelligence_asset", "data_asset", "economic_asset", "energy_asset", "organization_asset", "spacetime_asset"],
-      "required_flows": ["material_flow", "information_flow", "capital_flow", "spacetime_flow", "energy_flow", "commerce_flow", "knowledge_flow", "rule_flow"],
+      "required_flows": ["LogisticsFlow", "InformationFlow", "FinancialFlow", "spacetime_flow", "EnergyFlow", "ServiceFlow", "InformationFlow", "ControlFlow"],
       "source_of_record": "KDS",
       "wame_gate": "wame://gate/fixture-review",
       "kds_backlink_policy": "required",

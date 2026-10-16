@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-FC299296D9
 title: 设计：场景流的版本化承接
 project: KDS
-related_projects: [WAME, KDS]
+related_projects: [GPC, WAME, KDS, GPCF]
 domain: openspec
 status: draft
 version: v1.0
@@ -56,3 +56,11 @@ superseded_by: []
 - 不把「登记完成」表述为「已纳入」。
 - 不改写 WAS 主方案正文（留 tasks §3，待复核）。
 - 定义文本一字不改（照录裁定与 GCWORLD V1.0.1 既定定义）。
+
+## 三层对齐表（契约→工具链→应用链）
+
+| 层 | 改动点 | 验证点 |
+| --- | --- | --- |
+| 契约层 | `was-flows.yaml` 第 9 条 `ScenarioFlow`；validator `FLOWS` 9；schemas×5 enum 17 项；gfis profile requiredFlows 9 | `validate_all` 13/13 PASS（9 流版） |
+| 工具链层 | 校验器覆盖断言精准化（核心六流）；`gen_flow_consts --check`；负例构造（非法 flowType） | 负例触发 XWAIL-9001（high）；pipeline 三项 PASS |
+| 应用链层 | XWAIL `ALLOWED_FLOWS` 9＋文案泛化＋warehouse-basic 正例；GPCF 规范草案/规则清单九流表述；KDS GCWORLD 注记回填（V1.0.2）；议题 v0.11 | `validate_xwail --all` pass；四仓提交（WAS 64e5ee1／XWAIL 459508b／GPCF edc037b87／KDS 4f879587） |

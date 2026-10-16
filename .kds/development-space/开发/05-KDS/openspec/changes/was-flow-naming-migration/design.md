@@ -54,3 +54,11 @@ superseded_by: []
 | 他方在途数据用旧名 | 兼容窗口（不阻断）；迁移表列存量清单 |
 | 迁移被误读为「V1.2 完成」 | 迁移表与 evidence 明示 §19 纪律：迁移执行 ≠ V1.2 发布/运行完成 |
 | 校验器更新被误读为放水 | 精准化理由（新增流无实例）如实入档；核心 6 流仍强制 |
+
+## 三层对齐表（契约→工具链→应用链）
+
+| 层 | 改动点 | 验证点 |
+| --- | --- | --- |
+| 契约层 | `was-flows.yaml`（V1.2 名）／`was_validation_lib.py`（FLOWS＋DEPRECATED 兼容窗口）／schemas×6 enum／examples×4 | `validate_all` 13/13 PASS；旧名残留 100% 落兼容/定义/说明类 |
+| 工具链层 | `gen_flow_consts.py` 单源一致性门（入 pipeline）；`alignment_scan.py` 变更扫描器 | pipeline `--check-only` 三项 PASS；残留复扫分类计数 |
+| 应用链层 | XWAIL（后续纳入批联动）／KDS 注记（后续）／GPCF 规范与规则清单（后续批次） | 纳入批：`validate_xwail --all`＋负例 XWAIL-9001；本批为迁移，应用链随引用批次跟进 |
