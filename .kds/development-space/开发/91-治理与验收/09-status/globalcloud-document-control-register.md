@@ -32,14 +32,14 @@ superseded_by: []
 | GPC | 02-GPC | 61 | 53 | 已建空间 |
 | PVAOS | 03-PVAOS | 13 | 10 | 已建空间 |
 | WAME | 04-WAME | 195 | 26 | 已建空间 |
-| KDS | 05-KDS | 996 | 993 | 已建空间 |
+| KDS | 05-KDS | 1009 | 1006 | 已建空间 |
 | Brain | 06-Brain | 14 | 11 | 已建空间 |
 | PKC | 07-PKC | 10 | 7 | 已建空间 |
 | XiaoC | 08-XiaoC | 68 | 65 | 已建空间 |
 | XGD | 09-XGD | 10 | 7 | 已建空间 |
 | XiaoG | 10-XiaoG | 11 | 8 | 已建空间 |
 | MMC | 11-MMC | 13 | 10 | 已建空间 |
-| GPCF | 12-GPCF | 1986 | 1754 | 已建空间 |
+| GPCF | 12-GPCF | 1983 | 1750 | 已建空间 |
 | Studio | 13-Studio | 5 | 2 | 已建空间 |
 | ICP | 14-ICP | 0 | 0 | 已建空间，暂无直接镜像文档 |
 | SpaceAIStudio | 15-SpaceAIStudio | 0 | 0 | 已建空间，暂无直接镜像文档 |
@@ -51,7 +51,7 @@ superseded_by: []
 | --- | --- | --- |
 | 00-项目群总控 | 项目群总入口与根 README | 1 |
 | 90-跨项目架构 | 跨项目架构、主线、数据/知识跨域文档 | 53 |
-| 91-治理与验收 | 治理、验收、状态、台账与门禁文档 | 302 |
+| 91-治理与验收 | 治理、验收、状态、台账与门禁文档 | 303 |
 | 92-证据与会话归档 | Harness、证据样本、历史会话与归档文档 | 95 |
 | 99-过期文档 | deprecated / superseded 文档 | 0 |
 
@@ -3302,6 +3302,7 @@ superseded_by: []
 | GPCF-WORLD-FEATURES-ACTIVE-F-021-WORLD-PROJECT-ONBOARDING-JOURNAL-MD | F-021 world-project-onboarding | features/active/F-021-world-project-onboarding/journal.md | GPCF | AAAS, Brain, WAS, XiaoC, WAME, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP | governance | controlled | 开发/91-治理与验收/features/active/F-021-world-project-onboarding/journal.md |
 | GPCF-DOC-2611C45131 | F-022 was-scenario-flow-extension | features/active/F-022-was-scenario-flow-extension/journal.md | GPCF | AAAS, Brain, WAS, XiaoC, WAME, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP | governance | controlled | 开发/91-治理与验收/features/active/F-022-was-scenario-flow-extension/journal.md |
 | GPCF-DOC-752234F1D9 | F-023 was-flow-naming-migration | features/active/F-023-was-flow-naming-migration/journal.md | GPCF | AAAS, Brain, WAS, XiaoC, WAME, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP | governance | controlled | 开发/91-治理与验收/features/active/F-023-was-flow-naming-migration/journal.md |
+| GPCF-DOC-70F58BB28D | F-024 panorama-engineering-convergence | features/active/F-024-panorama-engineering-convergence/journal.md | GPCF | AAAS, Brain, WAS, XiaoC, WAME, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP | governance | controlled | 开发/91-治理与验收/features/active/F-024-panorama-engineering-convergence/journal.md |
 | GPCF-DOC-01B2179D97 | 证据摘要 | features/done/F-001-supplier-onboarding/evidence/summary.md | GPCF | AAAS, Brain, WAS, XiaoC, WAME, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP | governance | controlled | 开发/91-治理与验收/features/done/F-001-supplier-onboarding/evidence/summary.md |
 | GPCF-DOC-1CB646B985 | F-001 supplier-onboarding | features/done/F-001-supplier-onboarding/journal.md | GPCF | AAAS, Brain, WAS, XiaoC, WAME, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP | governance | controlled | 开发/91-治理与验收/features/done/F-001-supplier-onboarding/journal.md |
 | GPCF-DOC-87C12A1121 | 证据摘要 | features/done/F-002-project-group-feature-queue/evidence/summary.md | GPCF | AAAS, Brain, WAS, XiaoC, WAME, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP | governance | controlled | 开发/91-治理与验收/features/done/F-002-project-group-feature-queue/evidence/summary.md |
@@ -3427,8 +3428,8 @@ superseded_by: []
 | GPCF-DOC-757C305686 | spec | openspec/changes/integrate-gke001-openspec-codegraph/specs/gke001-program-governance/spec.md | GPCF | AAAS, Brain, WAS, XiaoC, WAME, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP | openspec | draft | 开发/12-GPCF/openspec/changes/integrate-gke001-openspec-codegraph/specs/gke001-program-governance/spec.md |
 | GPCF-DOC-875CBA8392 | tasks | openspec/changes/integrate-gke001-openspec-codegraph/tasks.md | GPCF | AAAS, Brain, WAS, XiaoC, WAME, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP | openspec | draft | 开发/12-GPCF/openspec/changes/integrate-gke001-openspec-codegraph/tasks.md |
 | GPCF-DOC-87769A72B8 | kds-production-hardening | openspec/changes/kds-production-hardening/README.md | KDS | GPC, WAME, KDS, GPCF | openspec | draft | 开发/05-KDS/openspec/changes/kds-production-hardening/README.md |
-| GPCF-DOC-FFFA25C3EF | design | openspec/changes/kds-production-hardening/design.md | KDS | KDS | openspec | draft | 开发/05-KDS/openspec/changes/kds-production-hardening/design.md |
-| GPCF-DOC-9630ED7C78 | proposal | openspec/changes/kds-production-hardening/proposal.md | KDS | KDS | openspec | draft | 开发/05-KDS/openspec/changes/kds-production-hardening/proposal.md |
+| GPCF-DOC-FFFA25C3EF | design | openspec/changes/kds-production-hardening/design.md | KDS | PVAOS, WAME, KDS | openspec | draft | 开发/05-KDS/openspec/changes/kds-production-hardening/design.md |
+| GPCF-DOC-9630ED7C78 | proposal | openspec/changes/kds-production-hardening/proposal.md | KDS | PVAOS, WAME, KDS | openspec | draft | 开发/05-KDS/openspec/changes/kds-production-hardening/proposal.md |
 | GPCF-DOC-D17599C829 | specs | openspec/changes/kds-production-hardening/specs/README.md | KDS | GPC, WAME, KDS, GPCF | openspec | draft | 开发/05-KDS/openspec/changes/kds-production-hardening/specs/README.md |
 | GPCF-DOC-23E999A394 | agent-safety-matrix | openspec/changes/kds-production-hardening/specs/agent-safety-matrix/README.md | KDS | GPC, WAME, KDS, GPCF | openspec | draft | 开发/05-KDS/openspec/changes/kds-production-hardening/specs/agent-safety-matrix/README.md |
 | GPCF-DOC-8ECD9BA263 | 智能体安全矩阵 | openspec/changes/kds-production-hardening/specs/agent-safety-matrix/spec.md | GPCF | GPCF, WAME | openspec | draft | 开发/12-GPCF/openspec/changes/kds-production-hardening/specs/agent-safety-matrix/spec.md |
@@ -3446,6 +3447,13 @@ superseded_by: []
 | GPCF-OS-ICP-REGISTRATION-TASKS-20260712 | tasks | openspec/changes/register-globalcloud-icp/tasks.md | GPCF | WAME, GPCF, ICP | openspec | draft | 开发/12-GPCF/openspec/changes/register-globalcloud-icp/tasks.md |
 | GPCF-DOC-DA59B18707 | sop-bind-matrix-to-icp-foundation | openspec/changes/sop-bind-matrix-to-icp-foundation/README.md | KDS | GPC, WAME, KDS, GPCF, ICP | openspec | draft | 开发/05-KDS/openspec/changes/sop-bind-matrix-to-icp-foundation/README.md |
 | GPCF-OS-ICP-SOP-COUPLING-PROPOSAL-20260713 | proposal | openspec/changes/sop-bind-matrix-to-icp-foundation/proposal.md | KDS | GPC, WAME, KDS, GPCF, ICP | openspec | draft | 开发/05-KDS/openspec/changes/sop-bind-matrix-to-icp-foundation/proposal.md |
+| GPCF-DOC-2007BED0D1 | spaceai-platform-panorama-convergence | openspec/changes/spaceai-platform-panorama-convergence/README.md | KDS | GPC, WAME, KDS, GPCF | openspec | draft | 开发/05-KDS/openspec/changes/spaceai-platform-panorama-convergence/README.md |
+| GPCF-SPACEAI-PANORAMA-DESIGN-20261016 | design | openspec/changes/spaceai-platform-panorama-convergence/design.md | GPCF | GPCF, WAME | openspec | draft | 开发/12-GPCF/openspec/changes/spaceai-platform-panorama-convergence/design.md |
+| GPCF-SPACEAI-PANORAMA-PROPOSAL-20261016 | proposal | openspec/changes/spaceai-platform-panorama-convergence/proposal.md | KDS | KDS, GPC, WAME, Brain, GPCF | openspec | draft | 开发/05-KDS/openspec/changes/spaceai-platform-panorama-convergence/proposal.md |
+| GPCF-DOC-A29F69DAAF | specs | openspec/changes/spaceai-platform-panorama-convergence/specs/README.md | KDS | GPC, WAME, KDS, GPCF | openspec | draft | 开发/05-KDS/openspec/changes/spaceai-platform-panorama-convergence/specs/README.md |
+| GPCF-DOC-DDBDFB20B3 | spaceai-platform-panorama-structure | openspec/changes/spaceai-platform-panorama-convergence/specs/spaceai-platform-panorama-structure/README.md | KDS | GPC, WAME, KDS, GPCF | openspec | draft | 开发/05-KDS/openspec/changes/spaceai-platform-panorama-convergence/specs/spaceai-platform-panorama-structure/README.md |
+| GPCF-OS-PANORAMA-STRUCTURE-SPEC-20261016 | 全景态势模块化结构与行为基线 | openspec/changes/spaceai-platform-panorama-convergence/specs/spaceai-platform-panorama-structure/spec.md | GPCF | GPCF, WAME | openspec | draft | 开发/12-GPCF/openspec/changes/spaceai-platform-panorama-convergence/specs/spaceai-platform-panorama-structure/spec.md |
+| GPCF-SPACEAI-PANORAMA-TASKS-20261016 | tasks | openspec/changes/spaceai-platform-panorama-convergence/tasks.md | GPCF | GPCF, WAME | openspec | draft | 开发/12-GPCF/openspec/changes/spaceai-platform-panorama-convergence/tasks.md |
 | GPCF-DOC-477C45A148 | spaceai-studio-multiplatform-refactor | openspec/changes/spaceai-studio-multiplatform-refactor/README.md | KDS | GPC, WAME, KDS, GPCF | openspec | draft | 开发/05-KDS/openspec/changes/spaceai-studio-multiplatform-refactor/README.md |
 | GPCF-OS-SPACEAI-STUDIO-MULTIPLATFORM-REFACTOR-DESIGN-20261010 | design | openspec/changes/spaceai-studio-multiplatform-refactor/design.md | KDS | WAME, KDS, MMC, Studio, SpaceAIStudio, SpaceAI | openspec | draft | 开发/05-KDS/openspec/changes/spaceai-studio-multiplatform-refactor/design.md |
 | GPCF-OS-SPACEAI-STUDIO-MULTIPLATFORM-REFACTOR-PROPOSAL-20261010 | proposal | openspec/changes/spaceai-studio-multiplatform-refactor/proposal.md | KDS | GPC, WAME, KDS, GPCF, Studio, SpaceAIStudio, SpaceAI | openspec | draft | 开发/05-KDS/openspec/changes/spaceai-studio-multiplatform-refactor/proposal.md |
@@ -3453,33 +3461,35 @@ superseded_by: []
 | GPCF-DOC-D53A9468CA | spaceai-studio-multiplatform-platform | openspec/changes/spaceai-studio-multiplatform-refactor/specs/spaceai-studio-multiplatform-platform/README.md | KDS | GPC, WAME, KDS, GPCF | openspec | draft | 开发/05-KDS/openspec/changes/spaceai-studio-multiplatform-refactor/specs/spaceai-studio-multiplatform-platform/README.md |
 | GPCF-OS-SPACEAI-STUDIO-MULTIPLATFORM-REFACTOR-SPEC-20261010 | spec | openspec/changes/spaceai-studio-multiplatform-refactor/specs/spaceai-studio-multiplatform-platform/spec.md | GPCF | WAME, GPCF, Studio, SpaceAIStudio, SpaceAI | openspec | draft | 开发/12-GPCF/openspec/changes/spaceai-studio-multiplatform-refactor/specs/spaceai-studio-multiplatform-platform/spec.md |
 | GPCF-OS-SPACEAI-STUDIO-MULTIPLATFORM-REFACTOR-TASKS-20261010 | tasks | openspec/changes/spaceai-studio-multiplatform-refactor/tasks.md | KDS | WAME, KDS, GPCF, Studio, ICP, SpaceAIStudio, SpaceAI | openspec | draft | 开发/05-KDS/openspec/changes/spaceai-studio-multiplatform-refactor/tasks.md |
-| GPCF-SPACEAI-FLOOD-CHANGE-README-20261016 | SpaceAI 内涝回放变更导航 | openspec/changes/spaceai-was-city-flood-replay/README.md | GPCF | GPCF, WAME | openspec | draft | 开发/12-GPCF/openspec/changes/spaceai-was-city-flood-replay/README.md |
+| GPCF-DOC-5D99E8D484 | spaceai-was-city-flood-replay | openspec/changes/spaceai-was-city-flood-replay/README.md | KDS | GPC, WAME, KDS, GPCF | openspec | draft | 开发/05-KDS/openspec/changes/spaceai-was-city-flood-replay/README.md |
 | GPCF-SPACEAI-FLOOD-DESIGN-20261016 | design | openspec/changes/spaceai-was-city-flood-replay/design.md | GPCF | GPCF, PVAOS, WAME | openspec | draft | 开发/12-GPCF/openspec/changes/spaceai-was-city-flood-replay/design.md |
 | GPCF-SPACEAI-FLOOD-PROPOSAL-20261016 | proposal | openspec/changes/spaceai-was-city-flood-replay/proposal.md | KDS | PVAOS, WAME, KDS | openspec | draft | 开发/05-KDS/openspec/changes/spaceai-was-city-flood-replay/proposal.md |
-| GPCF-SPACEAI-FLOOD-SPEC-README-20261016 | SpaceAI 内涝回放规格导航 | openspec/changes/spaceai-was-city-flood-replay/specs/spaceai-city-slice-replay/README.md | GPCF | GPCF, WAME | openspec | draft | 开发/12-GPCF/openspec/changes/spaceai-was-city-flood-replay/specs/spaceai-city-slice-replay/README.md |
+| GPCF-DOC-FECC2A4859 | specs | openspec/changes/spaceai-was-city-flood-replay/specs/README.md | KDS | GPC, WAME, KDS, GPCF | openspec | draft | 开发/05-KDS/openspec/changes/spaceai-was-city-flood-replay/specs/README.md |
+| GPCF-DOC-307EB657D0 | spaceai-city-slice-replay | openspec/changes/spaceai-was-city-flood-replay/specs/spaceai-city-slice-replay/README.md | KDS | GPC, WAME, KDS, GPCF | openspec | draft | 开发/05-KDS/openspec/changes/spaceai-was-city-flood-replay/specs/spaceai-city-slice-replay/README.md |
 | GPCF-SPACEAI-FLOOD-SPEC-20261016 | spec | openspec/changes/spaceai-was-city-flood-replay/specs/spaceai-city-slice-replay/spec.md | GPCF | GPCF, WAME | openspec | draft | 开发/12-GPCF/openspec/changes/spaceai-was-city-flood-replay/specs/spaceai-city-slice-replay/spec.md |
 | GPCF-SPACEAI-FLOOD-TASKS-20261016 | tasks | openspec/changes/spaceai-was-city-flood-replay/tasks.md | GPCF | WAME, GPCF | openspec | draft | 开发/12-GPCF/openspec/changes/spaceai-was-city-flood-replay/tasks.md |
 | GPCF-DOC-4C32519F10 | was-flow-naming-migration | openspec/changes/was-flow-naming-migration/README.md | KDS | GPC, WAME, KDS, GPCF | openspec | draft | 开发/05-KDS/openspec/changes/was-flow-naming-migration/README.md |
-| GPCF-DOC-3EBD68D2C6 | artifacts — was-flow-naming-migration | openspec/changes/was-flow-naming-migration/artifacts/README.md | GPCF | GPC, GPCF | openspec | draft | 开发/12-GPCF/openspec/changes/was-flow-naming-migration/artifacts/README.md |
+| GPCF-DOC-3EBD68D2C6 | artifacts | openspec/changes/was-flow-naming-migration/artifacts/README.md | KDS | GPC, WAME, KDS, GPCF | openspec | draft | 开发/05-KDS/openspec/changes/was-flow-naming-migration/artifacts/README.md |
 | GPCF-DOC-FCAE31EF6C | Design — was-flow-naming-migration | openspec/changes/was-flow-naming-migration/design.md | KDS | GPC, WAME, KDS, GPCF | openspec | draft | 开发/05-KDS/openspec/changes/was-flow-naming-migration/design.md |
 | GPCF-DOC-09F1A04495 | Proposal — was-flow-naming-migration | openspec/changes/was-flow-naming-migration/proposal.md | KDS | GPC, WAME, KDS, GPCF | openspec | draft | 开发/05-KDS/openspec/changes/was-flow-naming-migration/proposal.md |
-| GPCF-DOC-61B63346D3 | specs — was-flow-naming-migration | openspec/changes/was-flow-naming-migration/specs/README.md | GPCF | GPCF | openspec | draft | 开发/12-GPCF/openspec/changes/was-flow-naming-migration/specs/README.md |
-| GPCF-DOC-5424192D97 | was-flow-naming-migration（spec） | openspec/changes/was-flow-naming-migration/specs/was-flow-naming-migration/README.md | GPCF | GPCF | openspec | draft | 开发/12-GPCF/openspec/changes/was-flow-naming-migration/specs/was-flow-naming-migration/README.md |
+| GPCF-DOC-61B63346D3 | specs | openspec/changes/was-flow-naming-migration/specs/README.md | KDS | GPC, WAME, KDS, GPCF | openspec | draft | 开发/05-KDS/openspec/changes/was-flow-naming-migration/specs/README.md |
+| GPCF-DOC-5424192D97 | was-flow-naming-migration | openspec/changes/was-flow-naming-migration/specs/was-flow-naming-migration/README.md | KDS | GPC, WAME, KDS, GPCF | openspec | draft | 开发/05-KDS/openspec/changes/was-flow-naming-migration/specs/was-flow-naming-migration/README.md |
 | GPCF-DOC-B7F7C251FF | spec | openspec/changes/was-flow-naming-migration/specs/was-flow-naming-migration/spec.md | GPCF | GPCF, WAME | openspec | draft | 开发/12-GPCF/openspec/changes/was-flow-naming-migration/specs/was-flow-naming-migration/spec.md |
 | GPCF-DOC-1DFD8B740C | Tasks — was-flow-naming-migration | openspec/changes/was-flow-naming-migration/tasks.md | KDS | GPC, WAME, KDS, GPCF | openspec | draft | 开发/05-KDS/openspec/changes/was-flow-naming-migration/tasks.md |
 | GPCF-DOC-829B6B4A48 | was-scenario-flow-extension | openspec/changes/was-scenario-flow-extension/README.md | KDS | GPC, WAME, KDS, GPCF | openspec | draft | 开发/05-KDS/openspec/changes/was-scenario-flow-extension/README.md |
 | GPCF-DOC-2E6C9AAD6C | artifacts | openspec/changes/was-scenario-flow-extension/artifacts/README.md | KDS | GPC, WAME, KDS, GPCF | openspec | draft | 开发/05-KDS/openspec/changes/was-scenario-flow-extension/artifacts/README.md |
 | GPCF-DOC-2FF258337C | XWAIL `flowType` 影响评估说明（场景流扩展·候选） | openspec/changes/was-scenario-flow-extension/artifacts/XWAIL-flowType影响评估说明_20261016.md | GPCF | GPC, WAME, GPCF | openspec | draft | 开发/12-GPCF/openspec/changes/was-scenario-flow-extension/artifacts/XWAIL-flowType影响评估说明_20261016.md |
 | GPCF-DOC-8952BBCF0B | 场景流扩展登记草案（WAS 流集合·候选扩展） | openspec/changes/was-scenario-flow-extension/artifacts/场景流扩展登记草案_20261016.md | KDS | WAME, KDS | openspec | draft | 开发/05-KDS/openspec/changes/was-scenario-flow-extension/artifacts/场景流扩展登记草案_20261016.md |
-| GPCF-DOC-FC299296D9 | 设计：场景流的版本化承接 | openspec/changes/was-scenario-flow-extension/design.md | KDS | WAME, KDS | openspec | draft | 开发/05-KDS/openspec/changes/was-scenario-flow-extension/design.md |
+| GPCF-DOC-FC299296D9 | 设计：场景流的版本化承接 | openspec/changes/was-scenario-flow-extension/design.md | KDS | GPC, WAME, KDS, GPCF | openspec | draft | 开发/05-KDS/openspec/changes/was-scenario-flow-extension/design.md |
 | GPCF-DOC-25EB2F876F | proposal | openspec/changes/was-scenario-flow-extension/proposal.md | KDS | GPC, WAME, KDS, GPCF | openspec | draft | 开发/05-KDS/openspec/changes/was-scenario-flow-extension/proposal.md |
 | GPCF-DOC-FEDAEF19FA | specs | openspec/changes/was-scenario-flow-extension/specs/README.md | KDS | GPC, WAME, KDS, GPCF | openspec | draft | 开发/05-KDS/openspec/changes/was-scenario-flow-extension/specs/README.md |
 | GPCF-DOC-063FEE0F10 | was-scenario-flow-extension | openspec/changes/was-scenario-flow-extension/specs/was-scenario-flow-extension/README.md | KDS | GPC, WAME, KDS, GPCF | openspec | draft | 开发/05-KDS/openspec/changes/was-scenario-flow-extension/specs/was-scenario-flow-extension/README.md |
 | GPCF-DOC-5C02110A55 | spec | openspec/changes/was-scenario-flow-extension/specs/was-scenario-flow-extension/spec.md | GPCF | GPCF, WAME | openspec | draft | 开发/12-GPCF/openspec/changes/was-scenario-flow-extension/specs/was-scenario-flow-extension/spec.md |
 | GPCF-DOC-EE3E7D649C | tasks | openspec/changes/was-scenario-flow-extension/tasks.md | KDS | WAME, KDS | openspec | draft | 开发/05-KDS/openspec/changes/was-scenario-flow-extension/tasks.md |
-| GPCF-WORLD-OPENSPEC-CHANGES-WORLD-PROJECT-ONBOARDING-README-MD | World 纳管变更 | openspec/changes/world-project-onboarding/README.md | GPCF | GPCF, WAME | openspec | draft | 开发/12-GPCF/openspec/changes/world-project-onboarding/README.md |
+| GPCF-DOC-F8CE55AC60 | world-project-onboarding | openspec/changes/world-project-onboarding/README.md | KDS | GPC, WAME, KDS, GPCF | openspec | draft | 开发/05-KDS/openspec/changes/world-project-onboarding/README.md |
 | GPCF-WORLD-OPENSPEC-CHANGES-WORLD-PROJECT-ONBOARDING-PROPOSAL-MD-20261016 | proposal | openspec/changes/world-project-onboarding/proposal.md | KDS | GPC, WAME, KDS, GPCF, Studio | openspec | draft | 开发/05-KDS/openspec/changes/world-project-onboarding/proposal.md |
-| GPCF-WORLD-OPENSPEC-CHANGES-WORLD-PROJECT-ONBOARDING-SPECS-WORLD-PROJECT-REGISTRATION-README-MD | World 纳管变更 | openspec/changes/world-project-onboarding/specs/world-project-registration/README.md | GPCF | GPCF, WAME | openspec | draft | 开发/12-GPCF/openspec/changes/world-project-onboarding/specs/world-project-registration/README.md |
+| GPCF-DOC-AE04C4B5F5 | specs | openspec/changes/world-project-onboarding/specs/README.md | KDS | GPC, WAME, KDS, GPCF | openspec | draft | 开发/05-KDS/openspec/changes/world-project-onboarding/specs/README.md |
+| GPCF-DOC-410F29E347 | world-project-registration | openspec/changes/world-project-onboarding/specs/world-project-registration/README.md | KDS | GPC, WAME, KDS, GPCF | openspec | draft | 开发/05-KDS/openspec/changes/world-project-onboarding/specs/world-project-registration/README.md |
 | GPCF-WORLD-OPENSPEC-CHANGES-WORLD-PROJECT-ONBOARDING-SPECS-WORLD-PROJECT-REGISTRATION-SPEC-MD-20261016 | spec | openspec/changes/world-project-onboarding/specs/world-project-registration/spec.md | GPCF | WAME, GPCF | openspec | draft | 开发/12-GPCF/openspec/changes/world-project-onboarding/specs/world-project-registration/spec.md |
 | GPCF-DOC-89FBFF25D3 | OpenSpec 主规格 | openspec/specs/README.md | KDS | GPC, WAME, KDS, GPCF | openspec | controlled | 开发/05-KDS/openspec/specs/README.md |
 | GPCF-DOC-60B2E3BD94 | AAAS 风险 | projects/aaas/RISK.md | AAAS | AAAS | governance | controlled | 开发/91-治理与验收/projects/aaas/RISK.md |

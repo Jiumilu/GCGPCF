@@ -20,7 +20,7 @@ superseded_by: []
 
 日期：2026-06-07
 状态：四流优化专项模型 v1
-适用范围：API Gateway、Connector Registry、Outbox/Inbox、Event Bus、Evidence Ledger、Metric、Trace、Data Platform、Edge、知识主存层、LLM Wiki、Brain。
+适用范围：API 网关、连接器注册表、出入站消息（Outbox/Inbox）、事件总线、证据账本、指标、链路追踪、数据平台、边缘节点、知识主存层、LLM Wiki、Brain。
 
 ## 1. 模型定位
 

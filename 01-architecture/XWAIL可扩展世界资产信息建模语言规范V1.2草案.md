@@ -98,7 +98,7 @@ XAP＝可扩展资产包——XWAIL 契约的**打包/发布单位**（构建、
 
 4.1 必填字段（24）：`pilotScopeId / name / wasLayer / assetDimension / flowType / lifecycle / admissionStatus / projectRef / meetingPolicy / dataScope / evidencePolicy / approvalPolicy / receivingLedger / authorizedActorRefs / allowedActions / startAt / endAt / exitCriteria / sourceRefs / evidenceRefs / wameGateRefs / promotionBlockers / nextAction / staleSourceHash`。
 
-4.2 受控位：`assetDimension = rule_asset`；`flowType = rule_flow`；`admissionStatus` 枚举 7 值；`allowedActions` 白名单 7 项（admit_meeting_asset / derive_minutes_candidate / derive_project_control_candidate / review_minutes_candidate / confirm_project_control_item / submit_write_intent / receive_ledger_receipt）。
+4.2 受控位：`assetDimension = rule_asset`；`flowType = ControlFlow`；`admissionStatus` 枚举 7 值；`allowedActions` 白名单 7 项（`admit_meeting_asset` / `derive_minutes_candidate` / `derive_project_control_candidate` / `review_minutes_candidate` / `confirm_project_control_item` / `submit_write_intent` / `receive_ledger_receipt`）。
 
 4.3 Active 前置条件（校验强制）：`wameStatus ∈ {Authorized, Published}`；`promotionBlockers` 清零；`projectRef` / `receivingLedgerRef` 不得使用 candidate 占位。
 
