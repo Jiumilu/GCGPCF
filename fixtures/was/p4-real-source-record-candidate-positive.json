@@ -17,7 +17,7 @@
   "objectFamily": "CustomerRequirementOrPlatformOrder",
   "sourceRecordId": "LY-20260621-001",
   "assetDimension": "data_asset",
-  "flowType": "ServiceFlow",
+  "flowType": "commerce_flow",
   "lifecycle": "pending_business_verification",
   "trustLevel": "T4",
   "sourceRefs": [
