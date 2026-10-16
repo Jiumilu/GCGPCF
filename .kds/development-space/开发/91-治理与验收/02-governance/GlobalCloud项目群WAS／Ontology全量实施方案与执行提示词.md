@@ -1,6 +1,6 @@
 ---
 doc_id: GPCF-DOC-785AEA3125
-title: GlobalCloud项目群WAS-Ontology全量实施方案与执行提示词
+title: GlobalCloud项目群WAS／Ontology全量实施方案与执行提示词
 project: WAME
 related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, GPCF]
 domain: governance
@@ -8,15 +8,15 @@ status: controlled
 version: v1.0
 owner: WAME
 kds_space: 开发
-kds_path: 开发/91-治理与验收/02-governance/GlobalCloud项目群WAS-Ontology全量实施方案与执行提示词.md
-source_path: 02-governance/GlobalCloud项目群WAS-Ontology全量实施方案与执行提示词.md
+kds_path: 开发/91-治理与验收/02-governance/GlobalCloud项目群WAS／Ontology全量实施方案与执行提示词.md
+source_path: 02-governance/GlobalCloud项目群WAS／Ontology全量实施方案与执行提示词.md
 sync_direction: bidirectional
 last_reviewed: 2026-06-24
 supersedes: []
 superseded_by: []
 ---
 
-# GlobalCloud项目群WAS-Ontology全量实施方案与执行提示词
+# GlobalCloud项目群WAS／Ontology全量实施方案与执行提示词
 
 ## 1. 方案定位
 
@@ -29,7 +29,7 @@ superseded_by: []
 ```text
 WAS世界资产体系总体方案
   -> GlobalCloud 项目群实施方案
-  -> GlobalCloud项目群WAS-Ontology全量实施方案与执行提示词
+  -> GlobalCloud项目群WAS／Ontology全量实施方案与执行提示词
   -> WAS / XWAIL / WAME / GFIS / GPC / PVAOS / KDS / Brain 项目实施方案
   -> LOOP round / Harness evidence / validator
 ```

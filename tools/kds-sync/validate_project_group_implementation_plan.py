@@ -12,7 +12,7 @@ PLAN = ROOT / "GlobalCloud 项目群实施方案.md"
 TEMPLATE = ROOT / "templates/project-implementation-plan-template.md"
 REGISTER = ROOT / "09-status/globalcloud-project-implementation-control-register.md"
 PROPAGATION = ROOT / "02-governance/project-implementation-plan-change-propagation-template.md"
-WAS_ONTOLOGY_PROMPT = ROOT / "02-governance/GlobalCloud项目群WAS-Ontology全量实施方案与执行提示词.md"
+WAS_ONTOLOGY_PROMPT = ROOT / "02-governance/GlobalCloud项目群WAS／Ontology全量实施方案与执行提示词.md"
 
 REQUIRED_PLAN_TOKENS = [
     "GlobalCloud 项目群实施方案",
@@ -39,7 +39,7 @@ REQUIRED_PLAN_TOKENS = [
     "UI/LOOP 实施链路",
     "ui_toolchain_governance = controlled",
     "WAS/LOOP 实施链路",
-    "GlobalCloud项目群WAS-Ontology全量实施方案与执行提示词.md",
+    "GlobalCloud项目群WAS／Ontology全量实施方案与执行提示词.md",
     "GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-101",
     "不声明任何业务项目已经真实研发完成",
 ]
@@ -60,7 +60,7 @@ REQUIRED_SUPPORT_TOKENS = [
 ]
 
 REQUIRED_WAS_ONTOLOGY_TOKENS = [
-    "GlobalCloud项目群WAS-Ontology全量实施方案与执行提示词",
+    "GlobalCloud项目群WAS／Ontology全量实施方案与执行提示词",
     "latest_monitor_round | `GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-100`",
     "next_monitor_round | `GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-101`",
     "hold_required=1",

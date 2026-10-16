@@ -18,7 +18,7 @@ superseded_by: []
 
 ## 背景
 
-GCWORLD 是建立在 GlobalCloud 组织与项目现实基础上的世界运行工作台。KDS 是知识事实主存；WAS-Ontology 定义世界对象类型与语义；GCWORLD 维护派生的世界实例；XWAIL 提供智能体认知与协同；WAME 提供权限和风险门禁；MMC 提供能力连接；GFIS、ERP、CRM 等业务系统执行现实动作；LOOP/Harness 记录并验证结果。世界模型必须显式表达身份不确定性、关系有效期、模拟假设和智能体授权边界。
+GCWORLD 是建立在 GlobalCloud 组织与项目现实基础上的世界运行工作台。KDS 是知识事实主存；WAS/Ontology 定义世界对象类型与语义；GCWORLD 维护派生的世界实例；XWAIL 提供机器契约，智能体据此完成认知与协同；WAME 提供权限和风险门禁；MMC 提供能力连接；GFIS、ERP、CRM 等业务系统执行现实动作；LOOP/Harness 记录并验证结果。世界模型必须显式表达身份不确定性、关系有效期、模拟假设和智能体授权边界。
 
 本设计绑定 GKE-001 `release_0` 和 F-013。当前授权仅允许 GPCF 本地规划和确定性本地只读评估，不允许真实 KDS/MMC 写入、运行时集成或产品仓库修改。OpenSpec 产物属于规划证据，不代表生产世界模型。
 

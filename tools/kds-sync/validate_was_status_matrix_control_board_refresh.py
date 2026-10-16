@@ -116,7 +116,7 @@ def main() -> int:
     require("当前轮次 | `GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-100`" in control_board, "control board current round not refreshed to monitor 100")
     require(f"状态：{CURRENT_STATUS_MATRIX_VERSION}" in status_matrix, "status matrix version not refreshed")
     require("项目群状态矩阵补齐为 17 项目口径" in status_matrix, "status matrix current 17-project scope missing")
-    require("WAS-Ontology monitor 100 仍保持 hold" in status_matrix, "status matrix summary not refreshed")
+    require("WAS/Ontology monitor 100 仍保持 hold" in status_matrix, "status matrix summary not refreshed")
     require("was_real_source_record_monitor_100=pass" in control_board, "control board summary not refreshed")
     require("GPCF-PROJECT-STATUS-MATRIX-17-SCOPE-001" in control_board, "control board current 17-project scope missing")
     require("下一轮应进入 `GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-101`" in control_board, "control board next round missing")

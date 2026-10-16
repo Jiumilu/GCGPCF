@@ -37,7 +37,7 @@ GPCF:01-architecture/WAS世界资产体系总体方案.md
 - `09-status/globalcloud-project-master-plan-control-register.md`
 - `09-status/globalcloud-project-implementation-control-register.md`
 - `09-status/globalcloud-core-chain-real-evidence-register.md`
-- `02-governance/GlobalCloud项目群WAS-Ontology全量实施方案与执行提示词.md`
+- `02-governance/GlobalCloud项目群WAS／Ontology全量实施方案与执行提示词.md`
 - `templates/project-implementation-plan-template.md`
 - `templates/real-evidence-record-template.md`
 - `02-governance/project-implementation-plan-change-propagation-template.md`
@@ -194,7 +194,7 @@ WAS/LOOP 实施链路是本实施方案体系的默认主链之一，用于把 W
 
 受控入口：
 
-- `02-governance/GlobalCloud项目群WAS-Ontology全量实施方案与执行提示词.md`
+- `02-governance/GlobalCloud项目群WAS／Ontology全量实施方案与执行提示词.md`
 - `docs/harness/loops/loop-round-GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-100.md`
 - `docs/harness/evidence/was-real-source-record-monitor-100-20260623.md`
 - `tools/kds-sync/validate_was_real_source_record_monitor_100.py`

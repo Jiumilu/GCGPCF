@@ -368,7 +368,7 @@ superseded_by: []
 | GPCF-DOC-75A25DFFB1 | 01-architecture/README.md | 开发/90-跨项目架构/01-architecture/README.md | bidirectional | pending_api |
 | GPCF-DOC-WAME-UNIFIED-REQUEST-MECHANISM-20261011 | 01-architecture/WAME统一审核请求机制_v0.1.md | 开发/90-跨项目架构/01-architecture/WAME统一审核请求机制_v0.1.md | bidirectional | pending_api |
 | GPCF-DOC-WAME-REQUEST-PACK-GUIDE-20261011 | 01-architecture/WAME请求包制作指南_v0.1.md | 开发/90-跨项目架构/01-architecture/WAME请求包制作指南_v0.1.md | bidirectional | pending_api |
-| GPCF-DOC-WAS-ONTOLOGY-XWAIL-MAPPING-20260623 | 01-architecture/WAS-Ontology-XWAIL语义契约与映射机制.md | 开发/90-跨项目架构/01-architecture/WAS-Ontology-XWAIL语义契约与映射机制.md | bidirectional | pending_api |
+| GPCF-DOC-WAS-ONTOLOGY-XWAIL-MAPPING-20260623 | 01-architecture/WAS／Ontology-XWAIL语义契约与映射机制.md | 开发/90-跨项目架构/01-architecture/WAS／Ontology-XWAIL语义契约与映射机制.md | bidirectional | pending_api |
 | GPCF-DOC-WAS-XWAIL-AAAS-PLAN-ALIGNMENT-20260624 | 01-architecture/WAS-XWAIL-AaaS三主项目方案协同矩阵与门禁.md | 开发/90-跨项目架构/01-architecture/WAS-XWAIL-AaaS三主项目方案协同矩阵与门禁.md | bidirectional | pending_api |
 | GPCF-DOC-WAS-MASTER-PLAN-20260624 | 01-architecture/WAS世界资产体系总体方案.md | 开发/90-跨项目架构/01-architecture/WAS世界资产体系总体方案.md | bidirectional | pending_api |
 | GPCF-DOC-XAP-RECEIPT-EXECUTION-REPORT-DRAFT-20261011 | 01-architecture/XAP回执与执行报告规格草案_v0.1.md | 开发/90-跨项目架构/01-architecture/XAP回执与执行报告规格草案_v0.1.md | bidirectional | pending_api |
@@ -397,7 +397,7 @@ superseded_by: []
 | GPCF-DOC-5E60043D38 | 02-governance/GlobalCloud项目群Headroom-LCX全量实施方案与执行提示词.md | 开发/91-治理与验收/02-governance/GlobalCloud项目群Headroom-LCX全量实施方案与执行提示词.md | bidirectional | pending_api |
 | GPCF-DOC-2BBAE6E546 | 02-governance/GlobalCloud项目群Headroom接入应用与成本评估模型.md | 开发/91-治理与验收/02-governance/GlobalCloud项目群Headroom接入应用与成本评估模型.md | bidirectional | pending_api |
 | GPCF-DOC-AC66DE8415 | 02-governance/GlobalCloud项目群KDS开发空间安全规范.md | 开发/91-治理与验收/02-governance/GlobalCloud项目群KDS开发空间安全规范.md | bidirectional | pending_api |
-| GPCF-DOC-785AEA3125 | 02-governance/GlobalCloud项目群WAS-Ontology全量实施方案与执行提示词.md | 开发/91-治理与验收/02-governance/GlobalCloud项目群WAS-Ontology全量实施方案与执行提示词.md | bidirectional | pending_api |
+| GPCF-DOC-785AEA3125 | 02-governance/GlobalCloud项目群WAS／Ontology全量实施方案与执行提示词.md | 开发/91-治理与验收/02-governance/GlobalCloud项目群WAS／Ontology全量实施方案与执行提示词.md | bidirectional | pending_api |
 | GPCF-DOC-D2373AEE37 | 02-governance/GlobalCloud项目群在Codex中的模型分工与成本控制方案.md | 开发/91-治理与验收/02-governance/GlobalCloud项目群在Codex中的模型分工与成本控制方案.md | bidirectional | pending_api |
 | GPCF-DOC-PROJECT-GROUP-MASTER-PLAN-GOVERNANCE-20260624 | 02-governance/GlobalCloud项目群总体方案治理专项目标与路线图.md | 开发/91-治理与验收/02-governance/GlobalCloud项目群总体方案治理专项目标与路线图.md | bidirectional | pending_api |
 | GPCF-DOC-F150434D98 | 02-governance/GlobalCloud项目群文档与软件中文化治理规范.md | 开发/91-治理与验收/02-governance/GlobalCloud项目群文档与软件中文化治理规范.md | bidirectional | pending_api |

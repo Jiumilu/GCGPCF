@@ -1,6 +1,6 @@
 ---
 doc_id: GPCF-DOC-WAS-ONTOLOGY-XWAIL-MAPPING-20260623
-title: WAS-Ontology-XWAIL 语义契约与映射机制
+title: WAS／Ontology-XWAIL 语义契约与映射机制
 project: GPCF
 related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, GPCF, Studio]
 domain: architecture
@@ -8,15 +8,15 @@ status: controlled
 version: v1.0
 owner: GPCF
 kds_space: 开发
-kds_path: 开发/90-跨项目架构/01-architecture/WAS-Ontology-XWAIL语义契约与映射机制.md
-source_path: 01-architecture/WAS-Ontology-XWAIL语义契约与映射机制.md
+kds_path: 开发/90-跨项目架构/01-architecture/WAS／Ontology-XWAIL语义契约与映射机制.md
+source_path: 01-architecture/WAS／Ontology-XWAIL语义契约与映射机制.md
 sync_direction: bidirectional
 last_reviewed: 2026-10-11
 supersedes: []
 superseded_by: []
 ---
 
-# WAS-Ontology-XWAIL 语义契约与映射机制
+# WAS／Ontology-XWAIL 语义契约与映射机制
 
 ## 1. 定位
 

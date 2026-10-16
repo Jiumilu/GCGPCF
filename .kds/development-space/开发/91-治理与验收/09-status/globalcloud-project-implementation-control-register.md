@@ -110,7 +110,7 @@ reason = all 17 projects have one authoritative implementation plan and current 
 
 | 项 | 当前值 |
 |---|---|
-| 专项入口 | `02-governance/GlobalCloud项目群WAS-Ontology全量实施方案与执行提示词.md` |
+| 专项入口 | `02-governance/GlobalCloud项目群WAS／Ontology全量实施方案与执行提示词.md` |
 | 当前 monitor | `GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-100` |
 | 下一 monitor | `GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-101` |
 | 当前门禁 | `hold_required=1` |

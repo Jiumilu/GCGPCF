@@ -72,7 +72,7 @@ count: 1244
 - `01-architecture/GlobalCloud世界资产体系候选范围与门禁边界.md` -> `开发/90-跨项目架构/01-architecture/GlobalCloud世界资产体系候选范围与门禁边界.md`
 - `02-governance/GlobalCloud项目群Headroom-LCX全量实施方案与执行提示词.md` -> `开发/91-治理与验收/02-governance/GlobalCloud项目群Headroom-LCX全量实施方案与执行提示词.md`
 - `02-governance/GlobalCloud项目群Headroom接入应用与成本评估模型.md` -> `开发/91-治理与验收/02-governance/GlobalCloud项目群Headroom接入应用与成本评估模型.md`
-- `02-governance/GlobalCloud项目群WAS-Ontology全量实施方案与执行提示词.md` -> `开发/91-治理与验收/02-governance/GlobalCloud项目群WAS-Ontology全量实施方案与执行提示词.md`
+- `02-governance/GlobalCloud项目群WAS／Ontology全量实施方案与执行提示词.md` -> `开发/91-治理与验收/02-governance/GlobalCloud项目群WAS／Ontology全量实施方案与执行提示词.md`
 - `02-governance/GlobalCloud项目群文档与软件中文化治理规范.md` -> `开发/91-治理与验收/02-governance/GlobalCloud项目群文档与软件中文化治理规范.md`
 - `02-governance/loop/LOOP_AGENT_REACH_EXA_AUTH_PACK.md` -> `开发/91-治理与验收/02-governance/loop/LOOP_AGENT_REACH_EXA_AUTH_PACK.md`
 - `02-governance/loop/LOOP_AGENT_REACH_L3_CANDIDATE_PIPELINE.md` -> `开发/91-治理与验收/02-governance/loop/LOOP_AGENT_REACH_L3_CANDIDATE_PIPELINE.md`

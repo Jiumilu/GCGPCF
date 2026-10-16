@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate project-group WAS-Ontology registry coverage."""
+"""Validate project-group WAS/Ontology registry coverage."""
 
 from __future__ import annotations
 

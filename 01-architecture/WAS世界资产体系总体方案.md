@@ -41,7 +41,7 @@ superseded_by: []
 |---|---|
 | `GlobalCloud 世界资产体系正式命名与产品系统架构总纲` | 命名、产品系统架构和项目映射支撑文档 |
 | `WAS-XWAIL-AaaS 三主项目方案协同矩阵与门禁` | 三主项目方案协同专项门禁文档 |
-| `WAS-Ontology-XWAIL 语义契约与映射机制` | 语义契约和映射机制支撑文档 |
+| `WAS／Ontology-XWAIL 语义契约与映射机制` | 语义契约和映射机制支撑文档 |
 | `XWAIL 可扩展世界资产信息建模语言规范 V1.2 草案` | XWAIL 契约层规范草案 |
 | `XWAIL V1.2 Validator 规则清单` | XWAIL 验证器规则支撑文档 |
 

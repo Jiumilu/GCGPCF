@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate WAS-Ontology completion audit evidence."""
+"""Validate WAS/Ontology completion audit evidence."""
 
 from __future__ import annotations
 
