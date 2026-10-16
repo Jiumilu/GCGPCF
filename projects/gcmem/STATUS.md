@@ -29,8 +29,11 @@ superseded_by: []
   - 服务接口：`~/.hermes/scripts/gcmem.py`（add / search / sync / stats / candidates / import-candidates）；
   - 自动迭代接入：夜间对话挖掘（每晚 23:00）提炼候选并自动入账；
   - 周报指标切换：体系进化周报由「Mem0 记忆数」改为「KDS 记忆条目数」。
-- **进行中**：小G 记忆栈（容器侧 mem0_local / cognee 旧栈）迁移评估。
-- **候选待办**：gbrain 版本升级评估；账本自动去重策略迭代。
+- **已完成（2026-10-16 第二批）**：
+  - 小G 记忆栈迁移·本机侧：后端 `primary=gcmem`（mem0_local / cognee 退役）＋控制台文案更新＋add / search 全链实测通过；
+  - gbrain 升级 0.60.139 → 0.60.257：驻留进程全量重启、writer 门闸通过、回归完成；缺嵌块补嵌处理中。
+- **进行中**：小G 记忆栈容器侧随下次部署切换；gbrain 补嵌收尾（3 个大页面待批）。
+- **候选待办**：账本自动去重策略迭代。
 
 ## 关联
 
