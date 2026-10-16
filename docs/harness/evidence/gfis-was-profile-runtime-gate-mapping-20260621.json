@@ -35,7 +35,7 @@
       "gfis_runtime_object_id": "TEST-GFIS-RO-CPO-001",
       "gfis_runtime_object_type": "CustomerRequirementOrPlatformOrder",
       "asset_dimension": "data_asset",
-      "flow_type": "commerce_flow"
+      "flow_type": "ServiceFlow"
     },
     {
       "was_stage_id": "S02-pending-business-verification",
@@ -43,7 +43,7 @@
       "gfis_runtime_object_id": "TEST-GFIS-RO-SAMPLE-001",
       "gfis_runtime_object_type": "SampleRequest",
       "asset_dimension": "rule_asset",
-      "flow_type": "rule_flow"
+      "flow_type": "ControlFlow"
     },
     {
       "was_stage_id": "S03-runtime-primary-key",
@@ -51,7 +51,7 @@
       "gfis_runtime_object_id": "TEST-GFIS-RO-MPR-001",
       "gfis_runtime_object_type": "MassProductionGate",
       "asset_dimension": "data_asset",
-      "flow_type": "information_flow"
+      "flow_type": "InformationFlow"
     },
     {
       "was_stage_id": "S04-review-queue",
@@ -59,7 +59,7 @@
       "gfis_runtime_object_id": "TEST-GFIS-RO-FO-001",
       "gfis_runtime_object_type": "FactoryOrder",
       "asset_dimension": "organization_asset",
-      "flow_type": "rule_flow"
+      "flow_type": "ControlFlow"
     },
     {
       "was_stage_id": "S05-runtime-intake",
@@ -67,7 +67,7 @@
       "gfis_runtime_object_id": "TEST-GFIS-RO-MAT-001",
       "gfis_runtime_object_type": "MaterialInventoryReadiness",
       "asset_dimension": "physical_asset",
-      "flow_type": "material_flow"
+      "flow_type": "LogisticsFlow"
     },
     {
       "was_stage_id": "S06-wame-review",
@@ -75,7 +75,7 @@
       "gfis_runtime_object_id": "TEST-GFIS-RO-WO-001",
       "gfis_runtime_object_type": "WorkOrder",
       "asset_dimension": "rule_asset",
-      "flow_type": "rule_flow"
+      "flow_type": "ControlFlow"
     },
     {
       "was_stage_id": "S07-verified-artifact",
@@ -83,7 +83,7 @@
       "gfis_runtime_object_id": "TEST-GFIS-RO-QC-001",
       "gfis_runtime_object_type": "QualityInspection",
       "asset_dimension": "data_asset",
-      "flow_type": "information_flow"
+      "flow_type": "InformationFlow"
     },
     {
       "was_stage_id": "S08-production-execution",
@@ -91,7 +91,7 @@
       "gfis_runtime_object_id": "TEST-GFIS-RO-FGI-001",
       "gfis_runtime_object_type": "FinishedGoodsInventory",
       "asset_dimension": "physical_asset",
-      "flow_type": "material_flow"
+      "flow_type": "LogisticsFlow"
     },
     {
       "was_stage_id": "S09-quality-inspection",
@@ -99,7 +99,7 @@
       "gfis_runtime_object_id": "TEST-GFIS-RO-DN-001",
       "gfis_runtime_object_type": "DeliveryNote",
       "asset_dimension": "intelligence_asset",
-      "flow_type": "knowledge_flow"
+      "flow_type": "InformationFlow"
     },
     {
       "was_stage_id": "S10-inventory-and-energy",
@@ -107,7 +107,7 @@
       "gfis_runtime_object_id": "TEST-GFIS-RO-POD-001",
       "gfis_runtime_object_type": "PODReference",
       "asset_dimension": "energy_asset",
-      "flow_type": "energy_flow"
+      "flow_type": "EnergyFlow"
     },
     {
       "was_stage_id": "S11-delivery-and-pod",
@@ -115,7 +115,7 @@
       "gfis_runtime_object_id": "TEST-GFIS-RO-FIN-001",
       "gfis_runtime_object_type": "OperatingLedgerFinanceBoundary",
       "asset_dimension": "spacetime_asset",
-      "flow_type": "spacetime_flow"
+      "flow_type": "LogisticsFlow"
     },
     {
       "was_stage_id": "S12-settlement-and-carbon",
@@ -123,7 +123,7 @@
       "gfis_runtime_object_id": "TEST-GFIS-RO-EKB-001",
       "gfis_runtime_object_type": "EvidenceKnowledgeBacklink",
       "asset_dimension": "economic_asset",
-      "flow_type": "capital_flow"
+      "flow_type": "FinancialFlow"
     }
   ],
   "blocked_real_business_counts": {

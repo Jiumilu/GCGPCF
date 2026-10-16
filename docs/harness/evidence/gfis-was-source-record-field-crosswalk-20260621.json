@@ -79,7 +79,7 @@
       "was_field": "flowType",
       "rule": "fixed_was_stage_value",
       "gfis_source": "WAS S01",
-      "required_value": "commerce_flow"
+      "required_value": "ServiceFlow"
     },
     {
       "was_field": "lifecycle",

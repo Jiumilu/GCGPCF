@@ -57,7 +57,7 @@
   "required_was_values": {
     "objectFamily": "CustomerRequirementOrPlatformOrder",
     "assetDimension": "data_asset",
-    "flowType": "commerce_flow",
+    "flowType": "ServiceFlow",
     "lifecycle": "pending_business_verification",
     "trustLevel": "T4"
   },

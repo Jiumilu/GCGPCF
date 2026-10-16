@@ -44,14 +44,15 @@ XWAIL_DIMENSIONS = [
 ]
 
 FLOWS = [
-    "material_flow",
-    "information_flow",
-    "capital_flow",
-    "spacetime_flow",
-    "energy_flow",
-    "commerce_flow",
-    "knowledge_flow",
-    "rule_flow",
+    "LogisticsFlow",
+    "InformationFlow",
+    "FinancialFlow",
+    "EnergyFlow",
+    "ServiceFlow",
+    "ControlFlow",
+    "ValueFlow",
+    "CreditFlow",
+    "ScenarioFlow",
 ]
 
 REQUIRED_DOC_TOKENS = [

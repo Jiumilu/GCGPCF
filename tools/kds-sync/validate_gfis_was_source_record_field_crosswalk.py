@@ -148,7 +148,7 @@ def main() -> int:
     require(by_field["kdsBacklink"].get("rule") == "must_equal_gfis_source_of_record_backlink", "kdsBacklink rule mismatch")
     require(by_field["kdsBacklink"].get("required_prefix") == "开发/", "kdsBacklink prefix mismatch")
     require(by_field["assetDimension"].get("required_value") == s01.get("assetDimension") == "data_asset", "assetDimension fixed value mismatch")
-    require(by_field["flowType"].get("required_value") == s01.get("flowType") == "commerce_flow", "flowType fixed value mismatch")
+    require(by_field["flowType"].get("required_value") == s01.get("flowType") == "ServiceFlow", "flowType fixed value mismatch")
     require(by_field["lifecycle"].get("required_value") == s01.get("lifecycle") == "pending_business_verification", "lifecycle fixed value mismatch")
     require(by_field["trustLevel"].get("required_value") == s01.get("trustLevel") == "T4", "trustLevel fixed value mismatch")
     require(by_field["nextAction"].get("required_value") == s01.get("nextAction"), "nextAction fixed value mismatch")

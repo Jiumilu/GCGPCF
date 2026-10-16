@@ -18,7 +18,7 @@
     "was_stage_id": "S01-customer-requirement-or-platform-order",
     "gfis_object_family": "CustomerRequirementOrPlatformOrder",
     "asset_dimension": "data_asset",
-    "flow_type": "commerce_flow",
+    "flow_type": "ServiceFlow",
     "lifecycle": "pending_business_verification",
     "trust_level": "T4",
     "source_refs": [

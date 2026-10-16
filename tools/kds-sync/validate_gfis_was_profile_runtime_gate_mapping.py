@@ -35,15 +35,14 @@ DIMENSIONS = {
     "organization_asset",
     "spacetime_asset",
 }
-FLOWS = {
-    "material_flow",
-    "information_flow",
-    "capital_flow",
-    "spacetime_flow",
-    "energy_flow",
-    "commerce_flow",
-    "knowledge_flow",
-    "rule_flow",
+# 2026-10-16 迁移：stage 覆盖断言精准化——核心业务六流（Value/Credit/Scenario 为新增流，本 profile 无实例，不编造）
+CORE_FLOWS = {
+    "LogisticsFlow",
+    "InformationFlow",
+    "FinancialFlow",
+    "EnergyFlow",
+    "ServiceFlow",
+    "ControlFlow",
 }
 ZERO_COUNT_KEYS = [
     "real_source_records",
@@ -127,7 +126,7 @@ def main() -> int:
     stages = profile.get("stages")
     require(isinstance(stages, list) and len(stages) == 12, "WAS profile stages mismatch")
     require({stage["assetDimension"] for stage in stages} == DIMENSIONS, "WAS stage dimensions must cover 8 dimensions")
-    require({stage["flowType"] for stage in stages} == FLOWS, "WAS stage flows must cover 8 flows")
+    require(CORE_FLOWS <= {stage["flowType"] for stage in stages}, "WAS stage flows must cover core flows")
 
     replay_sequence = gfis_replay.get("replay_sequence")
     require(isinstance(replay_sequence, list) and len(replay_sequence) == 12, "GFIS replay must have 12 stages")
