@@ -38,7 +38,7 @@ superseded_by: []
 | XWAIL-5001 | high | `Authorized/Published` 缺 WAME 门证据（`wameEvidenceRef`）；pilotScope：授权对象/动作缺失或越权、promotionBlockers 规则、Active 前置条件（WAME 状态 / blockers 清零 / 非 candidate 引用） |
 | XWAIL-6002 | high | `wameStatus` 非 WAME 生命周期枚举；pilotScope `admissionStatus` 非法 |
 | XWAIL-7001 | high | `wasBaseline` / `ontologyVersion` 缺失；资产 `ontologyRef` 缺失；八维缺失；`lifecycle.states` 缺失；pilotScope 必填字段缺失 / `ontologyRef` 非 `was:` 前缀 |
-| XWAIL-9001 | high | `flowType` 非八流枚举；`flowRelations` 结构非法 |
+| XWAIL-9001 | high | `flowType` 非流清单枚举（九流）；`flowRelations` 结构非法 |
 | XAP-1001 | high | manifest 必填字段（packageId / version / wasBaseline / ontologyVersion / xwailVersion / wameStatus / decision） |
 | XAP-1002 | high | manifest `wameStatus` 非枚举 |
 | XAP-1003 | high | manifest `decision` 非枚举（compatible / migration_required / deprecated / blocked） |

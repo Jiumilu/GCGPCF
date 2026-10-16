@@ -42,3 +42,24 @@ superseded_by: []
 - 影响评估：`artifacts/XWAIL-flowType影响评估说明_20261016.md`——现状定位（XWAIL ALLOWED_FLOWS 为新名封闭集合 L22；was-flows.yaml 仍 OKF P0 旧命名，迁移为独立在案专项）；建议联动清单 5 项，均待 XWAIL 侧随版本发布执行。
 - WAS 主方案：加「场景流扩展登记记录（候选）」（头部）与 §7 扩展登记注；last_reviewed 更新。**不升版本、不并入流清单**。
 - authorization：老卢 2026-10-16『继续』（推进 T3 与复核授权）。confirmation：正式纳入与契约落位未确认；状态保持 candidate，不声明完成。
+
+## 2026-10-16 · 正式纳入（第九流落位）· LOOP 五问
+
+### 这轮做什么？
+- 按老卢 2026-10-16「正式纳入」决定，将场景流 ScenarioFlow 从候选扩展推进为**已纳入**（第九流落位，四仓联动）。
+
+### 改了什么？
+- WAS：`was-flows.yaml` 第 9 条；validator `FLOWS` 9 流；schemas×5 enum；gfis profile requiredFlows；迁移表 v1.1；主方案 v1.3.1（流清单＋纳入记录）。
+- XWAIL：`ALLOWED_FLOWS` 九流、文案泛化为 "one of the WAS flows"；warehouse-basic 正例；议题文档 v0.11。
+- GPCF：规范草案／规则清单流清单表述更新（九流）；tasks 3.1b/3.3/3.4 闭合。
+- KDS：GCWORLD 注记回填（V1.0.2 修订记录）。
+- 纳入记录：`docs/harness/evidence/scenario-flow-inclusion-record-20261016.json`。
+
+### 怎么验证？
+- WAS `validate_all` 13/13 PASS（9 流版）；XWAIL `validate_xwail --all` 通过＋负例触发 XWAIL-9001。
+
+### 发现什么问题？
+- 无阻塞；gfis profile 无场景流业务实例（不编造），覆盖断言维持「核心六流」。
+
+### 是否可以提交？
+- 是；四仓（WAS/XWAIL/GPCF/KDS）提交推送。

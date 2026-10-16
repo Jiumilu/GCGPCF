@@ -43,7 +43,7 @@ superseded_by: []
 | XGD | 09-XGD | 10 | 7 | 已建空间 |
 | XiaoG | 10-XiaoG | 11 | 8 | 已建空间 |
 | MMC | 11-MMC | 13 | 10 | 已建空间 |
-| GPCF | 12-GPCF | 1984 | 1754 | 已建空间 |
+| GPCF | 12-GPCF | 1986 | 1754 | 已建空间 |
 | Studio | 13-Studio | 5 | 2 | 已建空间 |
 | ICP | 14-ICP | 0 | 0 | 已建空间，暂无直接镜像文档 |
 | SpaceAIStudio | 15-SpaceAIStudio | 0 | 0 | 已建空间，暂无直接镜像文档 |
@@ -55,7 +55,7 @@ superseded_by: []
 | --- | --- | --- |
 | 00-项目群总控 | 项目群总入口与根 README | 1 |
 | 90-跨项目架构 | 跨项目架构、主线、数据/知识跨域文档 | 53 |
-| 91-治理与验收 | 治理、验收、状态、台账与门禁文档 | 300 |
+| 91-治理与验收 | 治理、验收、状态、台账与门禁文档 | 302 |
 | 92-证据与会话归档 | Harness、证据样本、历史会话与归档文档 | 95 |
 | 99-过期文档 | deprecated / superseded 文档 | 0 |
 
@@ -3492,6 +3492,8 @@ superseded_by: []
 | GPCF-DOC-A233ABB969 | projects/brain/RISK.md | 开发/91-治理与验收/projects/brain/RISK.md | bidirectional | pending_api |
 | GPCF-DOC-D40C9F208D | projects/brain/ROADMAP.md | 开发/91-治理与验收/projects/brain/ROADMAP.md | bidirectional | pending_api |
 | GPCF-DOC-70E004C4E1 | projects/brain/STATUS.md | 开发/91-治理与验收/projects/brain/STATUS.md | bidirectional | pending_api |
+| GPCF-DOC-2252D3D171 | projects/gcmem/MASTER-DESIGN.md | 开发/91-治理与验收/projects/gcmem/MASTER-DESIGN.md | bidirectional | pending_api |
+| GPCF-DOC-EAF988D469 | projects/gcmem/STATUS.md | 开发/91-治理与验收/projects/gcmem/STATUS.md | bidirectional | pending_api |
 | GPCF-DOC-2D5F274D6B | projects/gfis/RISK.md | 开发/91-治理与验收/projects/gfis/RISK.md | bidirectional | pending_api |
 | GPCF-DOC-31E1D4AB3F | projects/gfis/ROADMAP.md | 开发/91-治理与验收/projects/gfis/ROADMAP.md | bidirectional | pending_api |
 | GPCF-DOC-CCEE8B7E4A | projects/gfis/STATUS.md | 开发/91-治理与验收/projects/gfis/STATUS.md | bidirectional | pending_api |

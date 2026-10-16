@@ -39,12 +39,11 @@ superseded_by: []
 | XGD | 09-XGD | 10 | 7 | 已建空间 |
 | XiaoG | 10-XiaoG | 11 | 8 | 已建空间 |
 | MMC | 11-MMC | 13 | 10 | 已建空间 |
-| GPCF | 12-GPCF | 1984 | 1754 | 已建空间 |
+| GPCF | 12-GPCF | 1986 | 1754 | 已建空间 |
 | Studio | 13-Studio | 5 | 2 | 已建空间 |
 | ICP | 14-ICP | 0 | 0 | 已建空间，暂无直接镜像文档 |
 | SpaceAIStudio | 15-SpaceAIStudio | 0 | 0 | 已建空间，暂无直接镜像文档 |
 | SpaceAI | 16-SpaceAI | 0 | 0 | 已建空间，暂无直接镜像文档 |
-| GCMEM | 17-GCMEM | 0 | 0 | 已建空间，暂无直接镜像文档 |
 
 ## KDS 公共空间文档统计
 
@@ -52,7 +51,7 @@ superseded_by: []
 | --- | --- | --- |
 | 00-项目群总控 | 项目群总入口与根 README | 1 |
 | 90-跨项目架构 | 跨项目架构、主线、数据/知识跨域文档 | 53 |
-| 91-治理与验收 | 治理、验收、状态、台账与门禁文档 | 300 |
+| 91-治理与验收 | 治理、验收、状态、台账与门禁文档 | 302 |
 | 92-证据与会话归档 | Harness、证据样本、历史会话与归档文档 | 95 |
 | 99-过期文档 | deprecated / superseded 文档 | 0 |
 
@@ -60,8 +59,6 @@ superseded_by: []
 
 | doc_id | title | source_path | project | related_projects | domain | status | kds_path |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| GPCF-DOC-EAF988D469 | GCMEM 状态 | projects/gcmem/STATUS.md | GCMEM | GCMEM | governance | controlled | 开发/91-治理与验收/projects/gcmem/STATUS.md |
-| GPCF-DOC-2252D3D171 | GCMEM 总体设计 | projects/gcmem/MASTER-DESIGN.md | GCMEM | GCMEM | architecture | controlled | 开发/91-治理与验收/projects/gcmem/MASTER-DESIGN.md |
 | GPCF-DOC-285E77EC87 | globalcloud-17 | $CODEX_HOME/automations/globalcloud-17/README.md | GPC | GPC, WAME, KDS, GPCF | general | controlled | 开发/02-GPC/$CODEX_HOME/automations/globalcloud-17/README.md |
 | GPCF-DOC-9BC6636D29 | globalcloud-17 运行记忆 | $CODEX_HOME/automations/globalcloud-17/memory.md | GPC | GPC, KDS, MMC, GPCF, Studio | general | controlled | 开发/02-GPC/$CODEX_HOME/automations/globalcloud-17/memory.md |
 | GPCF-DOC-C1D2E3F4A5 | impeccable | .agents/skills/impeccable/README.md | GPC | GPC, WAME, KDS, GPCF | general | controlled | 开发/02-GPC/.agents/skills/impeccable/README.md |
@@ -3491,6 +3488,8 @@ superseded_by: []
 | GPCF-DOC-A233ABB969 | Brain 风险 | projects/brain/RISK.md | Brain | Brain | governance | controlled | 开发/91-治理与验收/projects/brain/RISK.md |
 | GPCF-DOC-D40C9F208D | Brain 路线图 | projects/brain/ROADMAP.md | Brain | Brain | governance | controlled | 开发/91-治理与验收/projects/brain/ROADMAP.md |
 | GPCF-DOC-70E004C4E1 | Brain 状态 | projects/brain/STATUS.md | Brain | Brain | governance | controlled | 开发/91-治理与验收/projects/brain/STATUS.md |
+| GPCF-DOC-2252D3D171 | GCMEM 总体设计（v1.0 · 2026-10-16） | projects/gcmem/MASTER-DESIGN.md | GPCF | GPCF | governance | controlled | 开发/91-治理与验收/projects/gcmem/MASTER-DESIGN.md |
+| GPCF-DOC-EAF988D469 | GCMEM 状态 | projects/gcmem/STATUS.md | GPCF | GPCF | governance | controlled | 开发/91-治理与验收/projects/gcmem/STATUS.md |
 | GPCF-DOC-2D5F274D6B | GFIS 风险 | projects/gfis/RISK.md | GFIS | GFIS | governance | controlled | 开发/91-治理与验收/projects/gfis/RISK.md |
 | GPCF-DOC-31E1D4AB3F | GFIS 路线图 | projects/gfis/ROADMAP.md | GFIS | GFIS | governance | controlled | 开发/91-治理与验收/projects/gfis/ROADMAP.md |
 | GPCF-DOC-CCEE8B7E4A | GFIS 状态 | projects/gfis/STATUS.md | GFIS | GFIS | governance | controlled | 开发/91-治理与验收/projects/gfis/STATUS.md |

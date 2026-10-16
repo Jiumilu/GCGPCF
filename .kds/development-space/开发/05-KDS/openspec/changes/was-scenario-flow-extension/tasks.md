@@ -30,10 +30,10 @@ superseded_by: []
 ## 3. 版本化纳入（后续）
 
 - [x] 3.1 WAS 主方案扩展登记记录（候选口径，2026-10-16）。
-- [ ] 3.1b 版本发布时并入主方案流清单——待正式纳入。
+- [x] 3.1b 主方案流清单并入——已正式纳入（2026-10-16，老卢『正式纳入』；主方案升 v1.3.1，§7 第九流）。
 - [x] 3.2 Ontology registry 流类目登记（如适用）——评估：六类目不含 flow，不涉 registry 本体；落位＝was-flows.yaml/XWAIL（见裁定件 rulings）。
-- [x] 3.3 XWAIL `flowType` 影响评估（评估件：artifacts/XWAIL-flowType影响评估说明_20261016.md）；档位更新待 XWAIL 侧随版本发布执行。
-- [ ] 3.4 KDS GCWORLD V1.0.1 注记回填（承接完成后）。
+- [x] 3.3 XWAIL `flowType` 联动——评估件在案；**档位更新已执行**（2026-10-16：`ALLOWED_FLOWS` 九流、文案泛化、warehouse-basic 正例、议题 v0.11）。
+- [x] 3.4 KDS GCWORLD 注记回填——已执行（2026-10-16，V1.0.2 修订记录；承接注记更新为已纳入）。
 
 ## 4. 验证与回滚
 

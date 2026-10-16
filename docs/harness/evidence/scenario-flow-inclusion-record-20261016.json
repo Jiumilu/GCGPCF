@@ -1,0 +1,33 @@
+{
+  "evidence_id": "GPCF-WAS-SCENARIO-FLOW-INCLUSION-20261016",
+  "status": "included",
+  "date": "2026-10-16",
+  "round_id": "WAS-SCENARIO-FLOW-INCLUSION-001",
+  "purpose": "场景流 ScenarioFlow 正式纳入（第九流落位）——老卢 2026-10-16「正式纳入」决定；候选登记（round 003）之后的纳入执行记录。",
+  "authority": {
+    "date": "2026-10-16",
+    "by": "老卢（治理方；2026-10-16「正式纳入」）",
+    "prior": "GPCF:docs/harness/evidence/vocab-extension-admission-was-scenario-flow-20261016.json（admitted as candidate；round 003）"
+  },
+  "execution": [
+    "WAS:okf/was/was-flows.yaml 第 9 条 ScenarioFlow（9 流）",
+    "WAS:okf/validators/was_validation_lib.py FLOWS=9",
+    "WAS:okf/schemas/*.json ×5（flow enum 17 项）",
+    "WAS:okf/examples/gfis-runtime-sop-e2e-was-profile.yaml requiredFlows=9",
+    "WAS:docs/WAS-V1.2术语迁移表.md v1.1；WAS 主方案 v1.3.1（§7 第九流＋正式纳入记录）",
+    "XWAIL:scripts/xwail_common.py ALLOWED_FLOWS=9＋文案泛化；models/examples/warehouse-basic.xwail.json 正例；docs/议题 v0.11",
+    "GPCF:01-architecture 规范草案／Validator 规则清单（九流表述）；F-022 tasks 3.1b/3.3/3.4 闭合",
+    "KDS:世界资产/引擎/WAME/GCWORLD总体架构与实施方案_v1.0.md（注记回填＋V1.0.2 修订记录）"
+  ],
+  "evidence": [
+    "WAS validate_all 13/13 PASS（9 流版）",
+    "XWAIL validate_xwail --all 通过；负例（非法 flowType）触发 XWAIL-9001",
+    "四仓提交（WAS/XWAIL/GPCF/KDS）"
+  ],
+  "non_claims": [
+    "纳入＝契约层落位（第九流），不等于运行层/生产完成",
+    "gfis profile 无场景流业务实例（不编造；覆盖断言维持核心六流）",
+    "场景流正式定义仍以裁定文本与 GCWORLD V1.0.1 九流表为单源"
+  ],
+  "rollback": "各件文本 diff 可反向恢复；四仓提交留痕"
+}
