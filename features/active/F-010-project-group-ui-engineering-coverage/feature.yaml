@@ -19,6 +19,8 @@ evidence:
   api: waived
   summary: pass
 blockers:
+  - acceptance 和 scope.in 为空，Feature 专属 tests/build 命令未声明，api 豁免缺少本 Feature 的理由；现行 Evidence Gate 不可关闭
+  - 多用户可用性、任务流端到端、无障碍和证据展示门禁仍为 pending
 ui_product_first_control:
   version: v1.1
   applicability: direct
