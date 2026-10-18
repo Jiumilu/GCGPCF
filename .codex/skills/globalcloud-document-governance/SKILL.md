@@ -14,7 +14,7 @@ description: GlobalCloud 项目群文档综合治理技能。用于文档治理�
    - `09-status/globalcloud-document-control-register.md`
    - `09-status/kds-development-space-sync-register.md`
    - `09-status/document-deprecation-register.md`
-2. 执行或更新 `tools/kds-sync/document_control.py`，保证新增/修改文档进入受控台账和 KDS 本地镜像。
+2. 先运行 `tools/kds-sync/document_control.py --check`；按修改的源文档设置 `DOCUMENT_CONTROL_SCOPE` 后写入本地镜像与台账。全量重建须显式使用 `--apply-full`，先审查改动与删除范围。
 3. 执行污染检查：`python3 tools/kds-sync/check_document_pollution.py`。
 4. 执行 KDS TOKEN 检查：`python3 tools/kds-sync/validate_kds_token.py`。
 5. 执行 Loop 文档门禁：`python3 tools/kds-sync/loop_document_gate.py`。
@@ -39,7 +39,8 @@ description: GlobalCloud 项目群文档综合治理技能。用于文档治理�
 ## 常用命令
 
 ```bash
-python3 tools/kds-sync/document_control.py
+python3 tools/kds-sync/document_control.py --check
+DOCUMENT_CONTROL_SCOPE='path/to/document.md' python3 tools/kds-sync/document_control.py
 python3 tools/kds-sync/check_document_pollution.py
 python3 tools/kds-sync/validate_kds_token.py
 python3 tools/kds-sync/loop_document_gate.py
