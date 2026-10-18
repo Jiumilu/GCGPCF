@@ -68,6 +68,8 @@ def main() -> int:
 
     feature_dir = find_feature(feature_id)
     data = read_feature(feature_file(feature_dir))
+    if feature_dir.parent == ACTIVE and data.get("blockers"):
+        raise SystemExit(f"FAIL: unresolved blockers for Feature: {feature_id}")
     if feature_dir.parent != ACTIVE:
         next_role = "Recorder"
         next_status = "closed" if str(data.get("status")) == "done" else str(data.get("status"))

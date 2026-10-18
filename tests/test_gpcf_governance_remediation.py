@@ -8,6 +8,7 @@ import sys
 from pathlib import Path
 
 import yaml
+import pytest
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -159,6 +160,27 @@ def test_dispatch_dry_run_keeps_runtime_and_feature_unchanged():
     assert result.returncode == 0, result.stderr
     assert "gpcf_dispatch_dry_run" in result.stdout
     assert before == [digest(path) for path in paths]
+
+
+def test_dispatch_does_not_advance_feature_with_unresolved_blockers(tmp_path, monkeypatch):
+    monkeypatch.syspath_prepend(str(ROOT / "scripts"))
+    import gpcf_dispatch
+
+    active = tmp_path / "active"
+    feature_dir = active / "F-010-sample"
+    feature_dir.mkdir(parents=True)
+    monkeypatch.setattr(gpcf_dispatch, "ACTIVE", active)
+    monkeypatch.setattr(gpcf_dispatch, "select_feature", lambda _: "F-010")
+    monkeypatch.setattr(gpcf_dispatch, "queue_entry", lambda _: {"current_role": "Planner", "status": "implement"})
+    monkeypatch.setattr(gpcf_dispatch, "find_feature", lambda _: feature_dir)
+    monkeypatch.setattr(gpcf_dispatch, "feature_file", lambda _: feature_dir / "feature.yaml")
+    monkeypatch.setattr(gpcf_dispatch, "read_feature", lambda _: {"status": "active", "blockers": ["验收未完成"], "loop": {"iteration": 1}})
+    for name in ("write_feature", "update_queue_entry", "append_runtime_log", "append_journal"):
+        monkeypatch.setattr(gpcf_dispatch, name, lambda *args, **kwargs: pytest.fail("blocked dispatch wrote state"))
+    monkeypatch.setattr(sys, "argv", ["gpcf_dispatch.py", "F-010"])
+
+    with pytest.raises(SystemExit, match="unresolved blockers"):
+        gpcf_dispatch.main()
 
 
 def test_project_registry_matches_current_project_scope():
