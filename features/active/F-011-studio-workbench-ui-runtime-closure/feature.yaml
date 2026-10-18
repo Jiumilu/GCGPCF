@@ -19,6 +19,7 @@ evidence:
   api: waived
   summary: pass
 blockers:
+  - "交付范围与验收条目为空；Feature 专属测试和构建命令未声明，API waived 无专属理由。2026-10-18 只读证据门禁：close_candidate=false。"
 ui_product_first_control:
   version: v1.1
   applicability: direct
@@ -34,4 +35,4 @@ ui_product_first_control:
     evidence_overexposure_gate: pending
   status_ceiling: partial
 created_at: "2026-07-12T09:57:45+00:00"
-updated_at: "2026-07-16T00:00:00+08:00"
+updated_at: "2026-10-18T11:54:02+00:00"

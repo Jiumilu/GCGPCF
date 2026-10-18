@@ -250,6 +250,25 @@ def test_feature_workspace_rejects_blocker_queue_drift():
     module.validate_blocker_queue_status("F-022", ["待复核"], "blocked")
 
 
+def test_feature_workspace_rejects_unplanned_evaluated_feature():
+    path = ROOT / "tools/kds-sync/validate_gpcf_2_feature_workspace.py"
+    spec = importlib.util.spec_from_file_location("feature_workspace_planning_status", path)
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+
+    unplanned = {"scope": {"in": None}, "acceptance": None}
+    with pytest.raises(SystemExit, match="beyond planning lacks scope.in or acceptance"):
+        module.validate_planning_queue_status(
+            "F-011", unplanned, {"current_role": "Evaluator", "status": "evaluated"}
+        )
+    module.validate_planning_queue_status(
+        "F-011", unplanned, {"current_role": "Evaluator", "status": "blocked"}
+    )
+    module.validate_planning_queue_status(
+        "F-012", unplanned, {"current_role": "Planner", "status": "plan"}
+    )
+
+
 def test_project_registry_matches_current_project_scope():
     registry = yaml.safe_load((ROOT / "config/project-group-projects.yaml").read_text(encoding="utf-8"))
     projects = registry["projects"]
