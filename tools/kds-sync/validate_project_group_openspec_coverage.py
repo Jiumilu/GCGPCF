@@ -30,8 +30,11 @@ def main() -> int:
         if not line.startswith("|") or "---" in line or "项目 | slug" in line:
             continue
         cells = [cell.strip() for cell in line.strip("|").split("|")]
-        if len(cells) == 8 and cells[0] in expected:
-            rows[cells[0]] = cells
+        if len(cells) == 8:
+            if cells[0] in rows:
+                failures.append(f"duplicate project row: {cells[0]}")
+            else:
+                rows[cells[0]] = cells
 
     missing = sorted(set(expected) - set(rows))
     extra = sorted(set(rows) - set(expected))
