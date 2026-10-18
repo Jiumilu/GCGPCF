@@ -1,8 +1,8 @@
 schema_version: 1
-current_project_count: 24
+current_project_count: 25
 scope_decision:
   confirmed_on: 2026-10-18
-  decision: WAE is included in the current 24-project scope.
+  decision: WAE and Project are included in the current 25-project scope.
   source: Explicit user confirmation in the governance remediation session.
 historical_baselines:
   - count: 17
@@ -33,3 +33,4 @@ projects:
   - {id: World, slug: world, repo: "GlobalCloud World"}
   - {id: GCMEM, slug: gcmem, repo: "GlobalCloud Mem"}
   - {id: WAE, slug: wae, repo: "GlobalCloud WAE"}
+  - {id: Project, slug: project, repo: "GlobalCloud Project"}

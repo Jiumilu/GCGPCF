@@ -79,8 +79,9 @@ GPCF:01-architecture/GlobalCloud 项目群总体方案.md
 22. GlobalCloud World
 23. GlobalCloud GCMEM
 24. GlobalCloud WAE
+25. GlobalCloud Project
 
-当前范围以 `config/project-group-projects.yaml` 为准；2026-10-18 用户明确确认 WAE 纳入当前 24 项目范围。历史 17/18/22 项目快照只代表其生成时的适用范围，不作为当前覆盖结论。新增项目在总体方案、实施方案、台账与验收证据补齐前保持 `partial/rework`，不得据目录或登记直接提升状态。
+当前范围以 `config/project-group-projects.yaml` 为准；2026-10-18 用户明确确认 WAE 与 GlobalCloud Project 纳入当前 25 项目范围。历史 17/18/22 项目快照只代表其生成时的适用范围，不作为当前覆盖结论。新增项目在总体方案、实施方案、台账与验收证据补齐前保持 `partial/rework`，不得据目录或登记直接提升状态。
 
 `GlobalCloud World` 于 2026-10-16 授权独立纳管与本地/私有远端 Git 建立。入口 `projects/world/STATUS.md`，Feature F-021；角色 external；不迁移 Studio F-015 或 KDS 主账。authorization=纳管与Git初始同步已授权；confirmation=业务验收与生产发布未确认；overall_status=partial。中央门禁 rework_required，历史覆盖证据保持原范围。
 
