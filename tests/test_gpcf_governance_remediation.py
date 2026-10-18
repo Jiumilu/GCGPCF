@@ -215,6 +215,60 @@ def test_dispatch_requires_planning_before_implementation(tmp_path, monkeypatch,
         gpcf_dispatch.main()
 
 
+def test_auto_dispatch_skips_blocked_and_unready_features(monkeypatch):
+    monkeypatch.syspath_prepend(str(ROOT / "scripts"))
+    import gpcf_dispatch
+
+    entries = [
+        {"id": "F-005", "status": "commit", "current_role": "Recorder"},
+        {"id": "F-022", "status": "blocked", "current_role": "Dispatcher"},
+        {"id": "F-011", "status": "evaluated", "current_role": "Evaluator"},
+        {"id": "F-012", "status": "queued", "current_role": "Dispatcher"},
+    ]
+    features = {
+        "F-011": {"blockers": [], "scope": {"in": []}, "acceptance": []},
+        "F-012": {"blockers": [], "scope": {"in": []}, "acceptance": []},
+    }
+    monkeypatch.setattr(gpcf_dispatch, "queue_entries", lambda: entries)
+    monkeypatch.setattr(gpcf_dispatch, "find_feature", lambda feature_id: Path(feature_id))
+    monkeypatch.setattr(gpcf_dispatch, "feature_file", lambda path: path)
+    monkeypatch.setattr(gpcf_dispatch, "read_feature", lambda path: features[path.name])
+
+    assert gpcf_dispatch.select_feature(None) == "F-012"
+
+
+def test_feature_workspace_rejects_blocker_queue_drift():
+    path = ROOT / "tools/kds-sync/validate_gpcf_2_feature_workspace.py"
+    spec = importlib.util.spec_from_file_location("feature_workspace_blocker_status", path)
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+
+    with pytest.raises(SystemExit, match="still schedulable"):
+        module.validate_blocker_queue_status("F-022", ["待复核"], "queued")
+    with pytest.raises(SystemExit, match="no blocker reason"):
+        module.validate_blocker_queue_status("F-022", [], "blocked")
+    module.validate_blocker_queue_status("F-022", ["待复核"], "blocked")
+
+
+def test_feature_workspace_rejects_unplanned_evaluated_feature():
+    path = ROOT / "tools/kds-sync/validate_gpcf_2_feature_workspace.py"
+    spec = importlib.util.spec_from_file_location("feature_workspace_planning_status", path)
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+
+    unplanned = {"scope": {"in": None}, "acceptance": None}
+    with pytest.raises(SystemExit, match="beyond planning lacks scope.in or acceptance"):
+        module.validate_planning_queue_status(
+            "F-011", unplanned, {"current_role": "Evaluator", "status": "evaluated"}
+        )
+    module.validate_planning_queue_status(
+        "F-011", unplanned, {"current_role": "Evaluator", "status": "blocked"}
+    )
+    module.validate_planning_queue_status(
+        "F-012", unplanned, {"current_role": "Planner", "status": "plan"}
+    )
+
+
 def test_project_registry_matches_current_project_scope():
     registry = yaml.safe_load((ROOT / "config/project-group-projects.yaml").read_text(encoding="utf-8"))
     projects = registry["projects"]

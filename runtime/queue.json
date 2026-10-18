@@ -72,11 +72,11 @@
       "name": "studio-workbench-ui-runtime-closure",
       "project": "studio",
       "priority": "P0",
-      "status": "evaluated",
+      "status": "blocked",
       "current_role": "Evaluator",
       "workspace": "features/active/F-011-studio-workbench-ui-runtime-closure",
       "created_at": "2026-07-12T09:57:45+00:00",
-      "updated_at": "2026-07-12T10:01:53+00:00"
+      "updated_at": "2026-10-18T11:54:02+00:00"
     },
     {
       "id": "F-012",
@@ -105,11 +105,11 @@
       "name": "project-group-arch-iteration",
       "project": "gpcf",
       "priority": "P0",
-      "status": "queued",
+      "status": "blocked",
       "current_role": "Dispatcher",
       "workspace": "features/active/F-025-project-group-arch-iteration",
       "created_at": "2026-10-17T08:55:27+00:00",
-      "updated_at": "2026-10-17T08:55:27+00:00"
+      "updated_at": "2026-10-18T11:33:54+00:00"
     },
     {
       "id": "F-027",
@@ -182,22 +182,22 @@
       "name": "industrial-green-chain-graph-readonly-pilot",
       "project": "gpcf",
       "priority": "P1",
-      "status": "evaluated",
+      "status": "blocked",
       "current_role": "Evaluator",
       "workspace": "features/active/F-016-industrial-green-chain-graph-readonly-pilot",
       "created_at": "2026-10-11T10:36:10+08:00",
-      "updated_at": "2026-10-11T07:20:58+00:00"
+      "updated_at": "2026-10-18T11:33:54+00:00"
     },
     {
       "id": "F-017",
       "name": "cwme-city-world-model-engine",
       "project": "kds",
       "priority": "P1",
-      "status": "evaluated",
+      "status": "blocked",
       "current_role": "Evaluator",
       "workspace": "features/active/F-017-cwme-city-world-model-engine",
       "created_at": "2026-10-11T05:41:00+00:00",
-      "updated_at": "2026-10-11T07:20:58+00:00"
+      "updated_at": "2026-10-18T11:33:54+00:00"
     },
     {
       "id": "F-018",
@@ -257,24 +257,24 @@
     {
       "id": "F-022",
       "name": "was-scenario-flow-extension",
-      "project": "gpcf",
+      "project": "was",
       "priority": "P2",
-      "status": "queued",
+      "status": "blocked",
       "current_role": "Dispatcher",
       "workspace": "features/active/F-022-was-scenario-flow-extension",
       "created_at": "2026-10-16T03:47:28+00:00",
-      "updated_at": "2026-10-16T03:54:14+00:00"
+      "updated_at": "2026-10-18T11:33:54+00:00"
     },
     {
       "id": "F-023",
       "name": "was-flow-naming-migration",
       "project": "was",
       "priority": "P2",
-      "status": "queued",
+      "status": "blocked",
       "current_role": "Dispatcher",
       "workspace": "features/active/F-023-was-flow-naming-migration",
       "created_at": "2026-10-16T04:15:00+00:00",
-      "updated_at": "2026-10-16T12:09:53+00:00"
+      "updated_at": "2026-10-18T11:33:54+00:00"
     },
     {
       "id": "F-026",
