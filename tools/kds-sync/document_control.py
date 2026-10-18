@@ -836,7 +836,7 @@ def write_registers(records: list[dict[str, object]]) -> None:
     content = "# GlobalCloud 文档控制总台账\n\n"
     content += f"日期：{TODAY}\n\n"
     content += "用途：登记 GPCF 仓库内所有 Markdown 文档的受控身份、项目归属、状态、源路径与 KDS 开发空间路径。\n\n"
-    content += "## 12 项目文档总量统计\n\n"
+    content += "## GPCF 仓库项目文档统计\n\n"
     content += "说明：`project 字段文档数` 表示当前 GPCF 文档体系中直接归属到该项目的文档数；`KDS 项目空间文档数` 表示镜像落在 KDS `开发/{项目空间}` 下的文档数。跨项目架构、治理验收、证据归档等公共文档会进入公共空间，不一定落在单项目空间。\n\n"
     content += markdown_table(["project", "kds_project_folder", "project 字段文档数", "KDS 项目空间文档数", "说明"], project_summary_rows(records))
     content += "\n\n"
@@ -863,7 +863,7 @@ def write_registers(records: list[dict[str, object]]) -> None:
     sync += "## 范围说明\n\n"
     sync += "当前台账覆盖的是 **GPCF 仓库中已经纳入 KDS `开发` 空间的文档镜像**。其它项目的真实项目仓库文档，只有在后续从对应项目仓导入或同步到本仓/KDS 后，才会出现在本台账中。\n\n"
     sync += "其它项目当前在 KDS 中的位置如下：`开发/01-GFIS`、`开发/02-GPC`、`开发/03-PVAOS`、`开发/04-WAME`、`开发/05-KDS`、`开发/06-Brain`、`开发/07-PKC`、`开发/08-XiaoC`、`开发/09-XGD`、`开发/10-XiaoG`、`开发/11-MMC`、`开发/12-GPCF`。跨项目文档主要在 `开发/90-跨项目架构`、`开发/91-治理与验收`、`开发/92-证据与会话归档`。\n\n"
-    sync += "## 12 项目文档总量统计\n\n"
+    sync += "## GPCF 仓库项目文档统计\n\n"
     sync += markdown_table(["project", "kds_project_folder", "project 字段文档数", "KDS 项目空间文档数", "说明"], project_summary_rows(records))
     sync += "\n\n"
     sync += "## KDS 公共空间文档统计\n\n"

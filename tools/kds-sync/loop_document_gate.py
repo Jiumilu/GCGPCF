@@ -142,6 +142,7 @@ def build_gate_reasons(
 def write_report(summary: dict[str, object], command_results: dict[str, str]) -> None:
     status_counts = summary["status_counts"]
     project_counts = summary["project_counts"]
+    reviewed = read_frontmatter(REPORT).get("last_reviewed", "unreviewed") if REPORT.exists() else "unreviewed"
     registry = yaml.safe_load((ROOT / "config/project-group-projects.yaml").read_text(encoding="utf-8"))
     related_projects = ", ".join(str(item["id"]) for item in registry["projects"])
     lines = [
@@ -158,7 +159,7 @@ def write_report(summary: dict[str, object], command_results: dict[str, str]) ->
         "kds_path: 开发/91-治理与验收/09-status/globalcloud-document-health-report.md",
         "source_path: 09-status/globalcloud-document-health-report.md",
         "sync_direction: bidirectional",
-        "last_reviewed: 2026-06-12",
+        f"last_reviewed: {reviewed}",
         "supersedes: []",
         "superseded_by: []",
         "---",
