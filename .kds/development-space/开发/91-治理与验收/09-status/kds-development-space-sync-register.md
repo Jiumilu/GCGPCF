@@ -44,7 +44,7 @@ superseded_by: []
 | XGD | 09-XGD | 10 | 7 | 已建空间 |
 | XiaoG | 10-XiaoG | 11 | 8 | 已建空间 |
 | MMC | 11-MMC | 13 | 10 | 已建空间 |
-| GPCF | 12-GPCF | 1915 | 1658 | 已建空间 |
+| GPCF | 12-GPCF | 1919 | 1658 | 已建空间 |
 | Studio | 13-Studio | 5 | 2 | 已建空间 |
 | ICP | 14-ICP | 0 | 0 | 已建空间，暂无直接镜像文档 |
 | SpaceAIStudio | 15-SpaceAIStudio | 0 | 0 | 已建空间，暂无直接镜像文档 |
@@ -56,7 +56,7 @@ superseded_by: []
 | --- | --- | --- |
 | 00-项目群总控 | 项目群总入口与根 README | 1 |
 | 90-跨项目架构 | 跨项目架构、主线、数据/知识跨域文档 | 56 |
-| 91-治理与验收 | 治理、验收、状态、台账与门禁文档 | 325 |
+| 91-治理与验收 | 治理、验收、状态、台账与门禁文档 | 329 |
 | 92-证据与会话归档 | Harness、证据样本、历史会话与归档文档 | 95 |
 | 99-过期文档 | deprecated / superseded 文档 | 0 |
 
@@ -3514,3 +3514,7 @@ superseded_by: []
 | GPCF-DOC-016DDA517E | tools/README.md | 开发/12-GPCF/tools/README.md | bidirectional | pending_api |
 | GPCF-DOC-C9A7E8D2B1 | tools/kds-sync/FRONTMATTER_OWNERSHIP.md | 开发/12-GPCF/tools/kds-sync/FRONTMATTER_OWNERSHIP.md | bidirectional | pending_api |
 | GPCF-DOC-C039431381 | tools/kds-sync/README.md | 开发/12-GPCF/tools/kds-sync/README.md | bidirectional | pending_api |
+| GPCF-PROJECT-25-README-20261018 | projects/project/README.md | 开发/91-治理与验收/projects/project/README.md | bidirectional | pending_api |
+| GPCF-PROJECT-25-RISK-20261018 | projects/project/RISK.md | 开发/91-治理与验收/projects/project/RISK.md | bidirectional | pending_api |
+| GPCF-PROJECT-25-ROADMAP-20261018 | projects/project/ROADMAP.md | 开发/91-治理与验收/projects/project/ROADMAP.md | bidirectional | pending_api |
+| GPCF-PROJECT-25-STATUS-20261018 | projects/project/STATUS.md | 开发/91-治理与验收/projects/project/STATUS.md | bidirectional | pending_api |

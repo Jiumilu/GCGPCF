@@ -82,23 +82,24 @@ superseded_by: []
 | GlobalCloud World | `GlobalCloud World 总体方案.md` | `GlobalCloud World 实施方案.md` | `planned` | `authorization_and_baseline_boundary` | 方案已建立；迁移授权、WAME 引擎落点和 Ontology 基线冲突仍待裁定 | 独立仓双方案均受控；P1 授权未完成，不代表工程或交付完成 | 先裁定 P1 授权与版本基线，再执行迁移和验收命令 |
 | GlobalCloud GCMEM | `GlobalCloud GCMEM 总体方案.md` | `GlobalCloud GCMEM 实施方案.md` | `in_progress` | `memory_runtime_boundary` | 长期记忆服务纳管 | 独立仓双方案均受控，本地回归与 doctor 已记录；小G容器侧迁移及连续三日夜挖仍待验证 | 保持 partial，复验跨端证据后再评估实施状态 |
 | GlobalCloud WAE | 待核验 | 待建立 | `planned` | `ui_runtime_boundary` | 世界资产浏览器设计阶段 | `projects/wae/STATUS.md` 记录设计与分步路线；首批项目界面未纳入 | 核验唯一总体设计并建立实施方案 |
+| GlobalCloud Project | `GlobalCloud Project 总体方案.md` | `GlobalCloud Project 实施方案.md` | `planned` | `local_dev_dryrun_boundary` | 纳入项目群实施盘点 | 独立仓方案文件存在；本次未核验运行、接口或交付证据 | 复核双总控继承和本地证据后再调整状态 |
 | shared/python_utils | 不适用 | 不适用 | `not_project` | `not_project_boundary` | 共享工具目录治理 | 导入可用性待验证 | 纳入依赖检查 |
 
 ## 5. 当前结论
 
 ```text
 implementation_plan_previous_governance_baseline = phase_3_all_project_plans_controlled
-implementation_plan_governance = repair_required_for_current_24_project_scope
+implementation_plan_governance = repair_required_for_current_25_project_scope
 current_live_project_group_git_gate = partial_due_to_gpcf_brain_sop_dirty
 current_live_dirty_repos = GlobalCoud GPCF, GlobalCloud Brain, GlobalCloud SOP
 current_live_sensitive_repos = none
 current_live_kds_blocker = resolved_not_in_git_status
 current_state_baseline_refresh_controlled = true
 development_queue_ready = true
-reason = 历史 17 项目方案证据保留；当前 24 项目尚有新增项目的实施方案待核验或建立
+reason = 历史 17 项目方案证据保留；当前 25 项目尚有新增项目的实施方案待核验或建立
 ```
 
-可以声明当前 24 项目均已进入实施方案盘点；不得声明全部项目唯一实施方案已建立。新增项目保持 planned/in_progress 与 partial 边界，真实研发、运行、集成、交付和客户验收仍需逐项证据。
+可以声明当前 25 项目均已进入实施方案盘点；不得声明全部项目唯一实施方案已建立。新增项目保持 planned/in_progress 与 partial 边界，真实研发、运行、集成、交付和客户验收仍需逐项证据。
 2026-10-18 用户确认 WAE 纳入项目群当前范围；WAE 实施方案仍待建立，交付状态保持 `planned`。
 
 ## 6. 传导确认清单
