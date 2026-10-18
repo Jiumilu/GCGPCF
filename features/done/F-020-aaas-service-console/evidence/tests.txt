@@ -1,5 +1,7 @@
 # Tests Evidence
 
+2026-10-18 追溯复核：本文件下方的 pass 是历史 GPCF 工作区检查，不是 AaaS 服务台六视图的专属测试；当前产品测试未回放，Feature tests=fail。
+
 ## validate_gpcf_2_feature_workspace
 
 status: pass

@@ -23,12 +23,19 @@ loop:
   current_step: commit
   iteration: 4
 evidence:
-  tests: pass
-  build: pass
-  screenshots: pass
-  api: waived
+  tests: fail
+  build: fail
+  screenshots: fail
+  api: fail
   summary: pass
 blockers:
+  - 原 tests.txt 仅校验 GPCF Feature 工作区，不能证明 AaaS 服务台六视图与 WAE 装配。
+  - 原 build.txt 仅编译 GPCF 脚本；当前 WAE 工作区无 apps/wae-console，无法回放产品构建和浏览器验收。
+  - AaaS 数据面工作区仍有未提交改动；历史截图和接口豁免不能代替当前可回放验收。
+evidence_review:
+  reviewed_at: "2026-10-18"
+  result: partial
+  boundary: 历史 done 仅保留关闭记录；当前产品测试、构建、浏览器及数据接口均未复验，不代表集成或业务验收。
 registration_note: 编号 F-020（官方工具 gpcf_new_feature.py 分配·自动入队）；老卢拍板序列（2026-10-14：规划→「继续」×2=M1/M2）；交付方式=本线（Hermes）。
 source_plan: 体系/AaaS服务商业控制台_全量规划_v0.1.md（KDS）
 created_at: "2026-10-14T02:17:58+00:00"

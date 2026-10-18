@@ -11,12 +11,18 @@ kds_space: 开发
 kds_path: 开发/91-治理与验收/features/done/F-020-aaas-service-console/evidence/summary.md
 source_path: features/done/F-020-aaas-service-console/evidence/summary.md
 sync_direction: bidirectional
-last_reviewed: 2026-10-16
+last_reviewed: 2026-10-18
 supersedes: []
 superseded_by: []
 ---
 
 # F-020 证据索引（evidence summary）
+
+## 2026-10-18 追溯复核
+
+原 `tests.txt` 只校验 GPCF Feature 工作区，原 `build.txt` 只编译 GPCF 脚本；两者都不能证明 AaaS 服务台六视图、WAE 装配或 AaaS 服务数据面。历史截图保留，但当前 WAE 工作区有未提交改动，且 `apps/wae-console` 不存在；AaaS 工作区亦有未提交改动。本次未能回放浏览器流程、产品构建和数据接口，以下历史记录不作为当前验收。
+
+复核结果为 `partial`：`python3 scripts/gpcf_check_evidence.py F-020 --check-only` 返回 1、`close_candidate=false`，指出证据未齐、阻塞项未清及缺少专属测试/构建命令。当前 `tests/build/screenshots/api=fail`，`summary=pass` 只表示本追溯记录已写入。历史 `done` 仅保留原关闭事实，不声明 `integrated`、`accepted` 或 `production_ready`。待可构建入口和稳定数据基线具备后，按六视图、只读边界和服务包数据契约逐项重跑。
 
 > 交付方式：本线（Hermes）实施 M1-M2；本目录为**如实**证据索引（每条可溯源）。
 

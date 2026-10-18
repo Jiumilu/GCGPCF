@@ -1,1 +1,2 @@
+2026-10-18 追溯复核：只读代理属于本 Feature 数据契约，当前未回放；Feature api=fail。原始豁免记录如下：
 waived: Feature scope has no API evidence requirement and no real external or KDS API call is authorized.
