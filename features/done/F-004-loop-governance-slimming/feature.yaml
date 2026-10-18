@@ -1,7 +1,7 @@
 id: F-004
 name: loop-governance-slimming
 project: gpcf
-status: active
+status: done
 goal: 将历史 LOOP 治理结果降级归档为参考，不再主导 Feature 开发节奏
 owner: agent-dev-01
 priority: P1
@@ -20,7 +20,7 @@ acceptance:
   - 文档门禁仍可回放历史治理证据但不要求新增过程文档
 loop:
   current_step: commit
-  iteration: 6
+  iteration: 9
 evidence:
   tests: pass
   build: pass
@@ -28,10 +28,22 @@ evidence:
   api: waived
   summary: pass
 blockers:
+verification:
+  tests:
+  - python3 tools/kds-sync/loop_document_gate.py --check-only --repository-only
+  build:
+  - python3 -X pycache_prefix=/private/tmp/gpcf-f004-pycache -m py_compile scripts/gpcf_new_feature.py
+    scripts/gpcf_close_feature.py
+  waivers:
+    screenshots: 本 Feature 只收敛治理清单与命令行入口，没有产品界面交付。
+    api: 本 Feature 不调用外部或 KDS API，只验证本仓文档和脚本。
 ui_product_first_control:
   version: v1.1
   applicability: indirect
-  user_groups: [Feature 开发者, Loop 编排者, 治理审计者]
+  user_groups:
+  - Feature 开发者
+  - Loop 编排者
+  - 治理审计者
   primary_human_task: 快速理解 Feature 当前状态、下一动作和证据入口，不被历史治理材料淹没
   machine_interface_boundary: validator 与运行日志保留机器字段；默认 Feature 工作区只呈现目标、状态、风险和下一步
   gates:
@@ -43,4 +55,4 @@ ui_product_first_control:
     evidence_overexposure_gate: pass
   status_ceiling: partial
 created_at: "2026-07-07T23:24:58+00:00"
-updated_at: "2026-07-16T00:00:00+08:00"
+updated_at: "2026-10-18T08:06:23+00:00"

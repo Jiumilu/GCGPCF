@@ -1,0 +1,25 @@
+# Build And Lint Evidence
+
+## py_compile_gpcf_scripts
+
+status: pass
+
+```text
+(no output)
+```
+
+## git_diff_check
+
+status: pass
+
+```text
+(no output)
+```
+
+## python3 -X pycache_prefix=/private/tmp/gpcf-f004-pycache -m py_compile scripts/gpcf_new_feature.py scripts/gpcf_close_feature.py
+
+status: pass
+
+```text
+(no output)
+```

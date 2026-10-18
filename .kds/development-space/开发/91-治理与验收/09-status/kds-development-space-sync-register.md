@@ -3107,8 +3107,8 @@ superseded_by: []
 | GPCF-DOC-5FE5ED4E8B | docs/harness/tasks/README.md | 开发/05-KDS/docs/harness/tasks/README.md | bidirectional | pending_api |
 | GPCF-DOC-AE29585A23 | docs/standards/README.md | 开发/05-KDS/docs/standards/README.md | bidirectional | pending_api |
 | GPCF-DOC-E6A5B97688 | docs/standards/feature-workspace.md | 开发/12-GPCF/docs/standards/feature-workspace.md | bidirectional | pending_api |
-| GPCF-DOC-4B430A4564 | features/active/F-004-loop-governance-slimming/evidence/summary.md | 开发/91-治理与验收/features/active/F-004-loop-governance-slimming/evidence/summary.md | bidirectional | pending_api |
-| GPCF-DOC-818D26D88F | features/active/F-004-loop-governance-slimming/journal.md | 开发/91-治理与验收/features/active/F-004-loop-governance-slimming/journal.md | bidirectional | pending_api |
+| GPCF-DOC-4B430A4564 | features/done/F-004-loop-governance-slimming/evidence/summary.md | 开发/91-治理与验收/features/done/F-004-loop-governance-slimming/evidence/summary.md | bidirectional | pending_api |
+| GPCF-DOC-818D26D88F | features/done/F-004-loop-governance-slimming/journal.md | 开发/91-治理与验收/features/done/F-004-loop-governance-slimming/journal.md | bidirectional | pending_api |
 | GPCF-DOC-C853A45195 | features/active/F-005-factory-exception-intake-dry-run/evidence/summary.md | 开发/91-治理与验收/features/active/F-005-factory-exception-intake-dry-run/evidence/summary.md | bidirectional | pending_api |
 | GPCF-DOC-D84CBF8493 | features/active/F-005-factory-exception-intake-dry-run/journal.md | 开发/91-治理与验收/features/active/F-005-factory-exception-intake-dry-run/journal.md | bidirectional | pending_api |
 | GPCF-DOC-F010-UI-ENGINEERING-COVERAGE-SUMMARY-20260712 | features/active/F-010-project-group-ui-engineering-coverage/evidence/summary.md | 开发/91-治理与验收/features/active/F-010-project-group-ui-engineering-coverage/evidence/summary.md | bidirectional | pending_api |

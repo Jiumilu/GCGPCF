@@ -127,11 +127,11 @@
       "name": "loop-governance-slimming",
       "project": "gpcf",
       "priority": "P1",
-      "status": "commit",
+      "status": "closed",
       "current_role": "Recorder",
-      "workspace": "features/active/F-004-loop-governance-slimming",
+      "workspace": "features/done/F-004-loop-governance-slimming",
       "created_at": "2026-07-07T23:24:58+00:00",
-      "updated_at": "2026-07-08T00:02:28+00:00"
+      "updated_at": "2026-10-18T08:06:23+00:00"
     },
     {
       "id": "F-006",
