@@ -27,5 +27,18 @@ evidence:
   api: waived
   summary: pass
 blockers:
+verification:
+  tests:
+    - python3 -m pytest tests/test_gpcf_feature_queue.py -q -p no:cacheprovider
+    - python3 tools/kds-sync/validate_gpcf_2_feature_workspace.py
+  build:
+    - python3 -m py_compile scripts/gpcf_new_feature.py scripts/gpcf_feature_lib.py
+  waivers:
+    screenshots: 本 Feature 只验证命令行创建、队列和运行态，没有产品界面。
+    api: 本 Feature 不调用外部 API，队列与日志均为本地文件。
+evidence_review:
+  reviewed_at: "2026-10-18"
+  result: replayed_local
+  limitation: 历史 tests.txt 中的 17 项目口径已过时；本次以 24 项目注册表和隔离创建测试为准。
 created_at: "2026-07-07T23:24:58+00:00"
-updated_at: "2026-07-08T00:02:28+00:00"
+updated_at: "2026-10-18T08:28:58+00:00"
