@@ -21,6 +21,30 @@ def load_document_control():
     return module
 
 
+def test_health_report_generation_preserves_review_date(tmp_path, monkeypatch):
+    path = ROOT / "tools/kds-sync/loop_document_gate.py"
+    spec = importlib.util.spec_from_file_location("loop_document_gate_review_date", path)
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    report = tmp_path / "health.md"
+    mirror = tmp_path / "mirror.md"
+    report.write_text("---\nlast_reviewed: 2026-10-01\n---\n\n# Previous\n", encoding="utf-8")
+    monkeypatch.setattr(module, "REPORT", report)
+    monkeypatch.setattr(module, "MIRROR_REPORT", mirror)
+    summary = {
+        "gate": "pass", "status_ceiling": "partial", "gate_reasons": [],
+        "status_counts": {}, "project_counts": {},
+        "repo_md": 0, "kds_md": 0, "local_mirror_ledger_lines": 0,
+        "local_mirror_unique_docs": 0, "api_sync_ledger_lines": 0,
+        "missing_metadata": 0, "missing_readme_dirs": 0,
+        "localization_debt": False, "fixed_doc_id_drift": False,
+        "review_overdue_90d": 0, "review_date_unverified": 0,
+    }
+    module.write_report(summary, {})
+    assert "last_reviewed: 2026-10-01" in report.read_text(encoding="utf-8")
+    assert mirror.read_text(encoding="utf-8") == report.read_text(encoding="utf-8")
+
+
 def test_live_snapshot_ignores_only_local_worktree_churn():
     path = ROOT / "tools/kds-sync/build_project_group_live_status_current.py"
     spec = importlib.util.spec_from_file_location("live_status_safety", path)
@@ -137,13 +161,15 @@ def test_dispatch_dry_run_keeps_runtime_and_feature_unchanged():
     assert before == [digest(path) for path in paths]
 
 
-def test_project_registry_matches_current_24_project_scope():
+def test_project_registry_matches_current_project_scope():
     registry = yaml.safe_load((ROOT / "config/project-group-projects.yaml").read_text(encoding="utf-8"))
-    assert registry["current_project_count"] == len(registry["projects"]) == 24
-    assert {project["slug"] for project in registry["projects"]} == {
+    projects = registry["projects"]
+    assert registry["current_project_count"] == len(projects)
+    assert "wae" in {project["slug"] for project in projects}
+    assert {project["slug"] for project in projects} == {
         path.name for path in (ROOT / "projects").iterdir() if path.is_dir()
     }
-    assert len({project["repo"] for project in registry["projects"]}) == 24
+    assert len({project["repo"] for project in projects}) == len(projects)
 
 
 def test_bytecode_check_handles_long_names_and_reports_syntax_errors(tmp_path):
