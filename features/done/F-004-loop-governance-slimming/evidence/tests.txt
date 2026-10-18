@@ -1,0 +1,33 @@
+# Tests Evidence
+
+## validate_gpcf_2_feature_workspace
+
+status: pass
+
+```text
+gpcf_2_feature_workspace=pass feature_delivery_center=true project_scope=24 new_feature_entry=enabled close_feature_exit=enabled status_promotion_allowed=false
+```
+
+## python3 tools/kds-sync/loop_document_gate.py --check-only --repository-only
+
+status: pass
+
+```text
+{
+  "scope": "repository_only",
+  "gate": "pass",
+  "status_ceiling": "partial",
+  "gate_reasons": [],
+  "not_evaluated": [
+    "project_group_live_status",
+    "delegated_projects",
+    "sibling_project_master_plans",
+    "kds_token"
+  ],
+  "check_failures": {},
+  "repo_md": 3541,
+  "kds_md": 3562,
+  "review_overdue_90d": 2824,
+  "review_date_unverified": 1
+}
+```

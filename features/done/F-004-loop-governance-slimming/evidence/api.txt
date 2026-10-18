@@ -1,0 +1,1 @@
+waived: 本 Feature 不调用外部或 KDS API，只验证本仓文档和脚本。
