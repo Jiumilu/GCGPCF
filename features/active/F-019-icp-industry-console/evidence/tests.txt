@@ -1,5 +1,7 @@
 # Tests Evidence
 
+2026-10-18 追溯复核：在 ICP 仓运行 `PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src python3 -m pytest tests/ -q -p no:cacheprovider`，33 passed in 1.02s，仅证明服务侧测试。WAE 模块与装配测试未回放，Feature tests=fail。下方 pass 仅为历史 GPCF 工作区检查。
+
 ## validate_gpcf_2_feature_workspace
 
 status: pass

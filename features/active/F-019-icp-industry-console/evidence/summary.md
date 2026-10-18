@@ -49,6 +49,8 @@ superseded_by: []
 
 ## 4. 诚实记录（不作为验收声明）
 
+2026-10-18 当前复核：ICP 服务侧 33 项测试通过；WAE 产品测试、构建、浏览器六视图及 5 个 GET 当前接口未回放。下方 2026-10-14 结果为历史记录，不能据此关闭 F-019。
+
 - 只读边界：模块零写路径（grep）；CORS 仅 GET/OPTIONS；POST（评估/回放/修订候选）一期不接（分级见规划 §一）。
 - 候选态：全域 candidate/partial/human_required 如实标注；`productionReady=false`。
 - 生产就绪声明：`production_ready=false`（无生产/发布/接受声明）。
@@ -58,9 +60,9 @@ superseded_by: []
 
 本文件记录当前 Feature 的本地可回放证据结果，仅用于关闭候选判断，不代表提交、推送、部署、真实接口调用或项目状态提升。
 
-- tests: pass
-- build: pass
-- screenshots: pass
+- tests: fail
+- build: fail
+- screenshots: fail
 - api: fail
 - lint: 已通过 build 证据中的 git diff --check 覆盖。
 - risk: 未授权 commit、push、deploy、真实 API、状态提升。
