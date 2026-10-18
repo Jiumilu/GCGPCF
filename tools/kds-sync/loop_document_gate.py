@@ -234,9 +234,16 @@ def main() -> int:
         action="store_true",
         help="explicitly write the health report and KDS mirror after evaluation",
     )
+    parser.add_argument(
+        "--repository-only",
+        action="store_true",
+        help="run only repository-local checks when sibling repositories are unavailable",
+    )
     args = parser.parse_args()
     if args.check_only and args.write_report:
         parser.error("--check-only and --write-report cannot be used together")
+    if args.repository_only and not args.check_only:
+        parser.error("--repository-only requires --check-only")
     docs = iter_repo_md()
     missing_metadata = 0
     review_overdue_90d = 0
@@ -283,6 +290,43 @@ def main() -> int:
     local_mirror_unique_docs = count_unique_mirror_docs(local_mirror_ledger)
     api_sync_ledger = ROOT / ".kds/sync-ledger.jsonl"
     api_sync_ledger_lines = len(api_sync_ledger.read_text(encoding="utf-8").splitlines()) if api_sync_ledger.exists() else 0
+    if args.repository_only:
+        checks = {
+            "document_control": run([sys.executable, "tools/kds-sync/document_control.py", "--check"]),
+            "document_pollution": run([sys.executable, "tools/kds-sync/check_document_pollution.py"]),
+            "chinese_localization": run([sys.executable, "tools/kds-sync/check_chinese_localization_gate.py"]),
+            "feature_workspace": run([sys.executable, "tools/kds-sync/validate_gpcf_2_feature_workspace.py"]),
+            "fixed_doc_id": run([sys.executable, "scripts/api/validate_gckf_p0_document_control_preserves_fixed_doc_id.py"]),
+        }
+        hard_failures = [name for name, (code, _) in checks.items() if code != 0]
+        mirror_gap = kds_md < local_mirror_unique_docs
+        if missing_metadata or missing_readme_dirs or hard_failures:
+            gate = "rework_required"
+        else:
+            gate = "partial" if mirror_gap else "pass"
+        summary = {
+            "scope": "repository_only",
+            "gate": gate,
+            "status_ceiling": "partial",
+            "gate_reasons": build_gate_reasons(
+                missing_metadata=missing_metadata,
+                missing_readme_dirs=missing_readme_dirs,
+                hard_failures=hard_failures,
+                localization_debt=False,
+                token_blocked=False,
+                fixed_doc_id_drift=False,
+                kds_md=kds_md,
+                local_mirror_unique_docs=local_mirror_unique_docs,
+            ),
+            "not_evaluated": ["project_group_live_status", "delegated_projects", "kds_token"],
+            "check_failures": {name: checks[name][1] for name in hard_failures},
+            "repo_md": len(docs),
+            "kds_md": kds_md,
+            "review_overdue_90d": review_overdue_90d,
+            "review_date_unverified": review_date_unverified,
+        }
+        print(json.dumps(summary, ensure_ascii=False, indent=2))
+        return 0 if gate == "pass" else 1
     global GFIS_REAL_FACT_ENTRY_GATE_CACHE
     gfis_real_fact_entry_gate = run([sys.executable, "tools/kds-sync/validate_gfis_real_fact_entry_gate.py"])
     if gfis_real_fact_entry_gate[0] == 0:
