@@ -1,5 +1,7 @@
 # Build And Lint Evidence
 
+2026-10-18 追溯复核：下方编译仅覆盖 GPCF 脚本；WAE 控制台当前无可构建入口，本次 Feature build=fail。
+
 ## py_compile_gpcf_scripts
 
 status: pass

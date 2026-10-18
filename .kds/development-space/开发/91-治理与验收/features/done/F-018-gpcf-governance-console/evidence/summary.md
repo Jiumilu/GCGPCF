@@ -11,12 +11,18 @@ kds_space: 开发
 kds_path: 开发/91-治理与验收/features/done/F-018-gpcf-governance-console/evidence/summary.md
 source_path: features/done/F-018-gpcf-governance-console/evidence/summary.md
 sync_direction: bidirectional
-last_reviewed: 2026-10-16
+last_reviewed: 2026-10-18
 supersedes: []
 superseded_by: []
 ---
 
 # F-018 证据索引（evidence summary）
+
+## 2026-10-18 追溯复核
+
+原 `tests.txt` 只校验 GPCF Feature 工作区，原 `build.txt` 只编译 GPCF 脚本；两者都不能证明治理台八视图及 WAE 装配。历史截图保留，但当前 WAE 工作区有未提交改动，且 `apps/wae-console` 不存在，未能回放浏览器流程、产品构建或只读代理接口。下列 M1–M3 与浏览器记录是历史证据，不能视为本次复验结果。
+
+复核结果为 `partial`：`python3 scripts/gpcf_check_evidence.py F-018 --check-only` 返回 1、`close_candidate=false`，指出证据未齐、阻塞项未清及缺少专属测试/构建命令。当前 `tests/build/screenshots/api=fail`，`summary=pass` 只表示本追溯记录已写入。历史 `done` 仅保留原关闭事实，不声明 `integrated`、`accepted` 或 `production_ready`。待 WAE 控制台恢复可构建入口后，按本 Feature 的八视图、只读代理和数据卡契约逐项重跑。
 
 > 交付方式：本线（Hermes）实施 M1-M3；本目录为**如实**证据索引（每条可溯源）。
 

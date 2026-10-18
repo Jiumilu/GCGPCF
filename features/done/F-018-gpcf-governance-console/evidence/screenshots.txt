@@ -1,3 +1,4 @@
+2026-10-18 追溯复核：以下图片仅保留历史截图；当前浏览器流程未回放，Feature screenshots=fail。
 UI evidence detected from Feature artifacts.
 assets:
 - evidence/ui-browser-e2e-masterplan.png

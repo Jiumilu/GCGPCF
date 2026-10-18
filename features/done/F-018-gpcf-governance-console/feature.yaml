@@ -23,12 +23,19 @@ loop:
   current_step: commit
   iteration: 6
 evidence:
-  tests: pass
-  build: pass
-  screenshots: pass
-  api: waived
+  tests: fail
+  build: fail
+  screenshots: fail
+  api: fail
   summary: pass
 blockers:
+  - 原 tests.txt 仅校验 GPCF Feature 工作区，不能证明治理台八视图与 WAE 装配。
+  - 原 build.txt 仅编译 GPCF 脚本；当前 WAE 工作区无 apps/wae-console，无法回放产品构建和浏览器验收。
+  - 历史截图和只读代理记录已保留，但缺少当前可回放的浏览器与接口检查。
+evidence_review:
+  reviewed_at: "2026-10-18"
+  result: partial
+  boundary: 历史 done 仅保留关闭记录；当前产品测试、构建、浏览器及代理接口均未复验，不代表集成或业务验收。
 ui_product_first_control:
   version: v1.1
   applicability: direct
