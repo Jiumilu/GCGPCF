@@ -15,3 +15,11 @@ status: pass
 ```text
 (no output)
 ```
+
+## 2026-10-18 追溯复核：Evidence Gate 脚本编译
+
+命令：`python3 -m py_compile scripts/gpcf_check_evidence.py scripts/gpcf_feature_lib.py`
+
+```text
+exit 0；无标准输出。
+```
