@@ -59,6 +59,24 @@ def read(path: str) -> str:
     return full.read_text(encoding="utf-8", errors="ignore")
 
 
+def validate_feature_document_paths(path: Path) -> None:
+    for document in path.rglob("*.md"):
+        text = document.read_text(encoding="utf-8", errors="ignore")
+        if not text.startswith("---\n"):
+            continue
+        header, separator, _ = text[4:].partition("\n---\n")
+        if not separator:
+            continue
+        metadata = yaml.safe_load(header) or {}
+        relative = document.relative_to(ROOT).as_posix()
+        source = str(metadata.get("source_path", ""))
+        if source:
+            require(source == relative, f"feature document source_path is stale: {relative}")
+        kds = str(metadata.get("kds_path", ""))
+        if any(f"/features/{stage}/" in kds for stage in ("active", "done", "archived")):
+            require(kds.endswith("/" + relative), f"feature document kds_path is stale: {relative}")
+
+
 def validate_feature_dir(path: Path) -> None:
     required = ["feature.yaml", "journal.md", "evidence", "artifacts"]
     for item in required:
@@ -77,6 +95,7 @@ def validate_feature_dir(path: Path) -> None:
     journal = (path / "journal.md").read_text(encoding="utf-8", errors="ignore")
     for phrase in ["这轮做什么", "改了什么", "怎么验证", "发现什么问题", "是否可以提交"]:
         require(phrase in journal, f"journal missing five-question loop phrase: {phrase}")
+    validate_feature_document_paths(path)
 
 
 def main() -> int:
