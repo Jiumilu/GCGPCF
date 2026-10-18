@@ -36,7 +36,7 @@ FEATURE_FIELDS = [
 ]
 
 EVIDENCE_FIELDS = ["tests", "build", "screenshots", "api", "summary"]
-EVIDENCE_STATUS = {"pending", "pass", "fail", "waived", "not_required"}
+EVIDENCE_STATUS = {"pending", "pass", "fail", "waived"}
 SCRIPTS = [
     "scripts/gpcf_new_feature.py",
     "scripts/gpcf_dispatch.py",
