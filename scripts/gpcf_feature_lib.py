@@ -470,4 +470,19 @@ def move_feature_to_done(feature_dir: Path) -> Path:
     if target.exists():
         raise SystemExit(f"FAIL: done feature already exists: {target.relative_to(ROOT)}")
     shutil.move(str(feature_dir), str(target))
+    old_prefix = f"features/active/{feature_dir.name}/"
+    new_prefix = f"features/done/{feature_dir.name}/"
+    for path in target.rglob("*.md"):
+        text = path.read_text(encoding="utf-8")
+        end = text.find("\n---\n", 4) if text.startswith("---\n") else -1
+        if end == -1:
+            continue
+        header = text[:end]
+        updated = "".join(
+            line.replace(old_prefix, new_prefix)
+            if line.startswith(("source_path:", "kds_path:")) else line
+            for line in header.splitlines(keepends=True)
+        )
+        if updated != header:
+            path.write_text(updated + text[end:], encoding="utf-8")
     return target
