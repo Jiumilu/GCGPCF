@@ -214,3 +214,55 @@ superseded_by: []
    - 人类异常处置任务流和证据降噪仍待验证，状态上限保持 `partial`。
 5. 是否可以提交？
    - 否，commit/push 仍需明确授权。
+
+### Iteration 14
+
+1. 这轮做什么？
+   - 采集本地可回放证据。
+2. 改了什么？
+   - 更新 evidence 文件和 feature.yaml 证据状态。
+3. 怎么验证？
+   - 运行工作区 validator、py_compile、git diff --check 和范围证据门禁。
+4. 发现什么问题？
+   - 未发现阻塞项。
+5. 是否可以提交？
+   - 证据可提交；Feature 按验收保持 active，不进入关闭出口。
+
+### Iteration 15
+
+1. 这轮做什么？
+   - 采集本地可回放证据。
+2. 改了什么？
+   - 更新 evidence 文件和 feature.yaml 证据状态。
+3. 怎么验证？
+   - 运行工作区 validator、py_compile、git diff --check 和范围证据门禁。
+4. 发现什么问题？
+   - tests evidence failed；summary evidence failed
+5. 是否可以提交？
+   - 否。
+
+### Iteration 16
+
+1. 这轮做什么？
+   - 采集本地可回放证据。
+2. 改了什么？
+   - 更新 evidence 文件和 feature.yaml 证据状态。
+3. 怎么验证？
+   - 运行工作区 validator、py_compile、git diff --check 和范围证据门禁。
+4. 发现什么问题？
+   - 未发现阻塞项。
+5. 是否可以提交？
+   - 证据可提交；Feature 按验收保持 active，不进入关闭出口。
+
+### Iteration 17
+
+1. 这轮做什么？
+   - 采集本地可回放证据。
+2. 改了什么？
+   - 更新 evidence 文件和 feature.yaml 证据状态。
+3. 怎么验证？
+   - 运行工作区 validator、py_compile、git diff --check 和范围证据门禁。
+4. 发现什么问题？
+   - 未发现阻塞项。
+5. 是否可以提交？
+   - 证据可提交；Feature 按验收保持 active，不进入关闭出口。
