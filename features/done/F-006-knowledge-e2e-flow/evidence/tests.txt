@@ -7,3 +7,17 @@ status: pass
 ```text
 gpcf_2_feature_workspace=pass feature_delivery_center=true project_scope=17 new_feature_entry=enabled close_feature_exit=enabled status_promotion_allowed=false
 ```
+
+## 2026-10-18 Brain 代码复核（原记录保留）
+
+Brain commit: 2b4ba4e86053b2bb118875de221f4ac6f32d831e
+在项目群兄弟仓 `GlobalCloud Brain` 执行：
+
+```text
+./node_modules/.bin/vitest run src/app/components/WikiPreview.test.tsx src/app/components/ReviewPanel.test.tsx src/app/components/ReportsPanel.test.tsx src/app/components/WikiPreviewTaskFlowStatus.test.tsx --no-file-parallelism
+4 test files passed; 72 tests passed; exit 0
+./node_modules/.bin/vitest run src/app/App.test.tsx src/app/components/SearchPanel.test.tsx --no-file-parallelism
+2 test files passed; 83 tests passed; exit 0
+```
+
+上述为当前组件与应用代码测试，不是浏览器端到端或真实 KDS/API 回放。

@@ -13,11 +13,19 @@ loop:
   current_step: commit
   iteration: 4
 evidence:
-  tests: pass
-  build: pass
-  screenshots: waived
-  api: waived
+  tests: fail
+  build: fail
+  screenshots: fail
+  api: fail
   summary: pass
 blockers:
+  - 现行 Evidence Gate 缺少验收条目、范围和 Feature 专属测试/构建命令，close_candidate=false。
+  - 缺少浏览器端到端回放与截图，不能证明 Search→WikiPreview→Review/Tasks→Reports 产品流程已闭环。
+  - 缺少真实 KDS/API 数据读回证据，不能证明跨组件数据流已集成。
+evidence_review:
+  reviewed_at: "2026-10-18"
+  result: partial
+  brain_commit: 2b4ba4e86053b2bb118875de221f4ac6f32d831e
+  boundary: 当前 Brain 组件测试、构建和类型检查通过，但 Feature 级门禁未通过；浏览器与真实接口未验收，历史 done 仅保留关闭记录。
 created_at: "2026-07-09T13:19:16+00:00"
-updated_at: "2026-07-09T16:28:16+00:00"
+updated_at: "2026-10-18T16:59:20+08:00"
