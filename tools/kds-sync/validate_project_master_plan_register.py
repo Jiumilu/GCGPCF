@@ -12,6 +12,7 @@ import yaml
 ROOT = Path(__file__).resolve().parents[2]
 REGISTER = ROOT / "09-status/globalcloud-project-master-plan-control-register.md"
 MASTER_PLAN = ROOT / "01-architecture/WAS世界资产体系总体方案.md"
+GROUP_MASTER = ROOT / "01-architecture/GlobalCloud 项目群总体方案.md"
 
 REGISTRY = yaml.safe_load((ROOT / "config/project-group-projects.yaml").read_text(encoding="utf-8"))
 DISPLAY_NAMES = {"WAS": "WAS世界资产体系", "AAAS": "GlobalCloud AAAS / AaaS", "SpaceAIStudio": "GlobalCloud SpaceAI Studio"}
@@ -69,6 +70,12 @@ def main() -> int:
     else:
         master_text = MASTER_PLAN.read_text(encoding="utf-8")
 
+    if not GROUP_MASTER.exists():
+        failures.append(f"missing project-group master plan: {GROUP_MASTER}")
+        group_master_text = ""
+    else:
+        group_master_text = GROUP_MASTER.read_text(encoding="utf-8")
+
     for token in REQUIRED_TOKENS:
         if token not in text:
             failures.append(f"missing required token in register: {token}")
@@ -80,6 +87,19 @@ def main() -> int:
             failures.append(f"expected exactly one project row in register: {project}")
     for project in sorted(set(rows) - set(REQUIRED_PROJECTS) - {"project"}):
         failures.append(f"unexpected project row in register: {project}")
+
+    scope_parts = group_master_text.split("## 2. 项目群范围", 1)
+    if len(scope_parts) != 2:
+        failures.append("project-group master plan missing scope section")
+    else:
+        scope_table = scope_parts[1].split("\n## 2.", 1)[0]
+        scope_rows = [line.split("|")[1].strip() for line in scope_table.splitlines() if line.startswith("| ")]
+        expected_scope = ["AaaS" if item["id"] == "AAAS" else str(item["id"]) for item in REGISTRY["projects"]]
+        for project in expected_scope:
+            if scope_rows.count(project) != 1:
+                failures.append(f"expected exactly one project responsibility row: {project}")
+        for project in sorted(set(scope_rows) - set(expected_scope) - {"项目"}):
+            failures.append(f"unexpected project responsibility row: {project}")
 
     for status in REQUIRED_STATUSES:
         if f"`{status}`" not in text:

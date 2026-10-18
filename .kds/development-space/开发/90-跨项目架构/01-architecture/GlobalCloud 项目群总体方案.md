@@ -60,6 +60,7 @@ superseded_by: []
 
 | SpaceAIStudio | 独立 Windows 安防监控桌面客户端；保留与 Studio、SpaceAI 的项目边界；敏感文件仅留本地，overall_status=partial |
 | SpaceAI | CWME 城市世界模型引擎归档与本地应用区；安防监控平台唯一开发主目录为 GlobalCloud SpaceAI Platform。两个目录沿用同一私有远端历史；本地样板只用合成数据，业务验收和生产发布未确认 |
+| World | 独立的 WAS 世界运行时：世界状态、投影、授权上下文与模拟推演；消费 WAME 引擎能力，不持 WAME 资产主账 |
 
 | GCMEM | 基于 KDS 的长期记忆服务：记忆账本＋语义检索＋夜间挖掘迭代；承接 mem0 退役后的跨会话长期记忆（2026-10-16 立项；WAS-GCMEM） |
 | Project | 团队研发协作项目；项目级方案及只读对接边界待验证，不承担 GPCF 交付或验收状态裁决 |
