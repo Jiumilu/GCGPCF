@@ -4,8 +4,10 @@
 from __future__ import annotations
 
 import argparse
+import subprocess
+import sys
 
-from gpcf_feature_lib import ACTIVE, append_journal, append_runtime_log, evidence_complete, feature_file, find_feature, move_feature_to_done, read_feature, update_queue_entry, write_feature
+from gpcf_feature_lib import ACTIVE, ROOT, append_journal, append_runtime_log, evidence_complete, feature_file, find_feature, move_feature_to_done, read_feature, update_queue_entry, write_feature
 
 
 def main() -> int:
@@ -28,6 +30,13 @@ def main() -> int:
     for kind in ("screenshots", "api"):
         if data.get("evidence", {}).get(kind) == "waived" and not str(waivers.get(kind, "")).strip():
             raise SystemExit(f"FAIL: {kind} waiver requires a Feature-specific reason")
+    gate = subprocess.run(
+        [sys.executable, "scripts/gpcf_check_evidence.py", data["id"]],
+        cwd=ROOT, text=True, capture_output=True, check=False,
+    )
+    if gate.returncode:
+        raise SystemExit(f"FAIL: fresh Evidence Gate failed: {(gate.stdout + gate.stderr).strip()}")
+    data = read_feature(feature_file(feature_dir))
     if not evidence_complete(data):
         pending = ", ".join(f"{key}={value}" for key, value in data["evidence"].items())
         raise SystemExit(f"FAIL: evidence gate not complete: {pending}")
