@@ -7,3 +7,17 @@ status: pass
 ```text
 gpcf_2_feature_workspace=pass feature_delivery_center=true project_scope=17 new_feature_entry=enabled close_feature_exit=enabled status_promotion_allowed=false
 ```
+
+## 2026-10-18 追溯复核：Feature 专属队列测试
+
+命令：`python3 -m pytest tests/test_gpcf_feature_queue.py -q -p no:cacheprovider`
+
+```text
+1 passed in 0.02s
+```
+
+命令：`python3 tools/kds-sync/validate_gpcf_2_feature_workspace.py`
+
+```text
+gpcf_2_feature_workspace=pass feature_delivery_center=true project_scope=24 new_feature_entry=enabled close_feature_exit=enabled status_promotion_allowed=false
+```
