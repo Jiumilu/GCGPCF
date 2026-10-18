@@ -90,3 +90,9 @@ superseded_by: []
    - API evidence required；summary evidence failed
 5. 是否可以提交？
    - 否。
+
+### 2026-10-18 证据复核
+
+- 当前 ICP 仓只读重跑 33 项测试，全部通过；这只覆盖 M1 服务侧。
+- 原 tests/build 证据是 GPCF 工作区校验，不覆盖 WAE 模块；当前 WAE 工作区处于界面迁移中，产品构建与浏览器六视图未回放。
+- 历史截图与 API 记录保留，当前 5 个 GET 未复验。证据状态降为 fail，Feature 保持 active/blocked，不提升业务状态。

@@ -23,16 +23,20 @@ loop:
   current_step: evaluate
   iteration: 3
 evidence:
-  tests: pass
-  build: pass
-  screenshots: pass
+  tests: fail
+  build: fail
+  screenshots: fail
   api: fail
   summary: fail
 blockers:
-  - 全仓 typecheck 曾现他线红点（后由其修复；我方文件全绿）
-  - queue.json/state.json 经官方函数刷新（enqueue 自动）
-  - API evidence required
-  - summary evidence failed
+  - ICP 当前测试 33/33 通过，但没有覆盖 WAE 模块与装配的当前产品测试，也未声明完整 Feature 专属验收命令。
+  - WAE 工作区处于界面迁移中，原 apps/wae-console 已移除；当前产品构建和浏览器六视图未回放。
+  - 5 个 GET 的当前接口结果未回放；历史截图和 2026-10-14 记录只作历史证据。
+  - M4 的工作区与 KDS 闭环仍待复核，Evidence Gate 不满足关闭条件。
+evidence_review:
+  reviewed_at: "2026-10-18"
+  result: partial
+  boundary: ICP 本地测试通过仅覆盖服务侧；WAE 产品、浏览器和接口证据未复验，不代表集成或业务验收。
 registration_note: 编号 F-019（官方工具 gpcf_new_feature.py 分配·自动入队）；老卢拍板序列（2026-10-14：规划→「继续」×2=M1/M2）；交付方式=本线（Hermes）。
 source_plan: 体系/ICP产业控制台_全量规划_v0.1.md（KDS）
 created_at: "2026-10-14T02:05:18+00:00"

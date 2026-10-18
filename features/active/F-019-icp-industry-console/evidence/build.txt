@@ -1,5 +1,7 @@
 # Build And Lint Evidence
 
+2026-10-18 追溯复核：下方 pass 仅编译 GPCF 脚本并检查差异，不能证明 ICP 控制台产品构建。当前 WAE 工作区界面迁移中，产品构建未回放，Feature build=fail。
+
 ## py_compile_gpcf_scripts
 
 status: pass

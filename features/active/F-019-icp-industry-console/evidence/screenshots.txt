@@ -1,3 +1,5 @@
+2026-10-18 追溯复核：保留历史截图资产，但当前 WAE 浏览器六视图未回放，Feature screenshots=fail。
+
 UI evidence detected from Feature artifacts.
 assets:
 - evidence/ui-browser-e2e-overview.png
