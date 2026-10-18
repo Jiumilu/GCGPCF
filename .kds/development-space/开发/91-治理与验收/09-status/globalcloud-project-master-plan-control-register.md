@@ -22,7 +22,7 @@ superseded_by: []
 
 ## 1. 台账定位
 
-本文是 `WAS世界资产体系总体方案` 的项目群主方案落地台账，用于登记项目群内每个项目的唯一当前有效总体方案、候选方案、缺口、冲突、继承状态和下一步动作。
+本文是 `01-architecture/GlobalCloud 项目群总体方案.md` 的项目级方案传导台账；`WAS世界资产体系总体方案` 是世界资产专项语义基线。本文登记项目群内每个项目的唯一当前有效总体方案、候选方案、缺口、冲突、继承状态和下一步动作。
 
 本文不替代任何项目总体方案，也不把候选方案声明为已完成方案。本文只做控制、盘点、传导和门禁输入。
 
@@ -33,7 +33,7 @@ superseded_by: []
 
 ## 2. 控制原则
 
-1. 项目群唯一总控方案是 `01-architecture/WAS世界资产体系总体方案.md`。
+1. 项目群总体架构主文件是 `01-architecture/GlobalCloud 项目群总体方案.md`，实施控制主文件是根目录 `GlobalCloud 项目群实施方案.md`；WAS 总体方案只控制世界资产专项语义。
 2. 每个项目只能有一个当前有效总体方案。
 3. 项目总体方案必须继承主方案的结构、术语、版本基线、传导机制、测试交付和 LOOP 门禁。
 4. 历史总体方案、实施方案、专项方案、README 和 AGENTS 不能自动等同于项目总体方案。
@@ -58,7 +58,7 @@ superseded_by: []
 
 | project | repo_path | 当前有效总体方案 | 候选/相关文档 | status | 主要问题 | 下一步 |
 |---|---|---|---|---|---|---|
-| 项目群总控 | `GlobalCoud GPCF` | `01-architecture/WAS世界资产体系总体方案.md` | `AGENTS.md`, `README.md` | `authoritative` | 项目群唯一总体控制性文档 | 持续维护主方案、台账、术语、版本、传导和门禁 |
+| 项目群总控 | `GlobalCoud GPCF` | `01-architecture/GlobalCloud 项目群总体方案.md` | `01-architecture/WAS世界资产体系总体方案.md`（专项） | `authoritative` | 项目群双总控中的总体架构主文件；当前 25 项目范围已登记 | 持续维护主方案、台账、术语、版本、传导和门禁 |
 | GlobalCloud GPCF | `GlobalCoud GPCF` | `GlobalCloud GPCF 总体方案.md` | `01-architecture/WAS世界资产体系总体方案.md`, `AGENTS.md`, `README.md` | `authoritative` | 已建立 GPCF 作为治理项目的独立总体方案；当前真实执行推进以 `project_group_current_state_baseline_refresh_20260626 = controlled`、`development_queue_ready = true`、`dirty_repo_count = 7` 为当前事实控制面 | 后续补齐 GPCF 运行控制、文档治理和 LOOP evidence，并保持与当前状态刷新证据和开发态任务队列一致 |
 | WAS世界资产体系 | `WAS世界资产体系` | `docs/GlobalCloud WAS 总体方案.md` | `docs/GlobalCloud-WAS总体方案V1.2-GPCF统一重构版.md` | `authoritative` | 已建立仓内唯一当前有效总体方案，旧 V1.2 文档作为来源底稿 | 后续补充语义变更回流记录和验证证据 |
 | GlobalCloud XWAIL | `GlobalCloud XWAIL` | `GlobalCloud XWAIL 总体方案.md` | `XWAIL实施方案.md` | `authoritative` | 已建立总体方案，实施方案降级为工程实施底稿 | 后续补齐 Schema/Validator/XAP 实现证据 |
@@ -83,6 +83,7 @@ superseded_by: []
 | GlobalCloud World | `GlobalCloud World` | `GlobalCloud World 总体方案.md` | `docs/architecture/GCWORLD总体架构与实施方案_v1.1.md` | `candidate` | 独立仓已有受控唯一方案声明；Ontology 基线 0.2.x 与实发 0.2.0 的继承冲突待 WAS 裁定 | 复核版本基线冲突后再判定 authoritative |
 | GlobalCloud GCMEM | `GlobalCloud Mem` | `GlobalCloud GCMEM 总体方案.md` | `docs/MASTER-DESIGN.md` | `authoritative` | 独立仓已声明项目群继承、唯一方案与 KDS 主存边界；业务运行仍保持 partial | 项目级结构变化继续回传 GPCF，并按影响范围传导 KDS |
 | GlobalCloud WAE | `GlobalCloud WAE` | 待核验 | `projects/wae/MASTER-DESIGN_v0.3.md` | `candidate` | 浏览器总体设计已有迭代，唯一当前版本和继承链待复核 | 核验 v0.3 与 WAME 职责分界 |
+| GlobalCloud Project | `GlobalCloud Project` | `GlobalCloud Project 总体方案.md` | `GlobalCloud Project 实施方案.md` | `candidate` | 项目方案文件已发现，唯一性与双总控继承链尚待核验；运行和集成状态未验证 | 保持 partial，复核方案继承与证据 |
 | shared/python_utils | `shared` | 不适用 | `shared/python_utils/` | `not_project` | 共享工具目录，不是业务项目 | 保留为共享库，受导入可用性和依赖治理控制 |
 
 ## 5. 当前结论
@@ -93,10 +94,10 @@ superseded_by: []
 project_master_plan_alignment = repair_required
 project_group_current_state_baseline_refresh_20260626 = controlled
 development_queue_ready = true
-reason = 当前 24 项目均已登记；其中新增项目的唯一总体方案与继承链尚未全部核验
+reason = 当前 25 项目均已登记；其中新增项目的唯一总体方案与继承链尚未全部核验
 ```
 
-可以声明“项目群主方案控制机制已建立，当前 24 项目均已纳入盘点”；不得声明全部项目已具备唯一有效总体方案。缺口按上表保持 candidate/missing 与 repair_required，不等于业务实现完成、客户交付完成或 production_ready。
+可以声明“项目群主方案控制机制已建立，当前 25 项目均已纳入盘点”；不得声明全部项目已具备唯一有效总体方案。缺口按上表保持 candidate/missing 与 repair_required，不等于业务实现完成、客户交付完成或 production_ready。
 2026-10-18 用户确认 WAE 纳入项目群当前范围；WAE 总体方案仍保持 `candidate`，唯一版本和继承链仍待核验。
 
 ## 6. 传导确认清单
