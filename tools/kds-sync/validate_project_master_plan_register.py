@@ -3,6 +3,7 @@
 
 from __future__ import annotations
 
+import argparse
 import json
 from pathlib import Path
 import yaml
@@ -50,6 +51,9 @@ REQUIRED_STATUSES = [
 
 
 def main() -> int:
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--repository-only", action="store_true", help="check register coverage without sibling repositories")
+    args = parser.parse_args()
     failures: list[str] = []
     warnings: list[str] = []
 
@@ -74,6 +78,8 @@ def main() -> int:
     for project in REQUIRED_PROJECTS:
         if rows.count(project) != 1:
             failures.append(f"expected exactly one project row in register: {project}")
+    for project in sorted(set(rows) - set(REQUIRED_PROJECTS) - {"project"}):
+        failures.append(f"unexpected project row in register: {project}")
 
     for status in REQUIRED_STATUSES:
         if f"`{status}`" not in text:
@@ -119,7 +125,8 @@ def main() -> int:
         "LOOP 接入",
         "风险、依赖、回滚和非声明边界",
     ]
-    for plan_path in authoritative_paths:
+    plans_to_check = [] if args.repository_only else authoritative_paths
+    for plan_path in plans_to_check:
         if not plan_path.exists():
             failures.append(f"missing authoritative project plan: {plan_path}")
             continue
@@ -130,10 +137,12 @@ def main() -> int:
 
     result = {
         "gate": "project_master_plan_register",
+        "scope": "repository_only" if args.repository_only else "project_group",
         "status": "pass" if not failures else "fail",
         "register": str(REGISTER),
         "failures": failures,
         "warnings": warnings,
+        "not_evaluated": ["sibling_project_master_plans"] if args.repository_only else [],
     }
     print(json.dumps(result, ensure_ascii=False, indent=2))
     return 0 if not failures else 1

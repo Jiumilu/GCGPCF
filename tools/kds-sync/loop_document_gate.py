@@ -297,6 +297,8 @@ def main() -> int:
             "document_pollution": run([sys.executable, "tools/kds-sync/check_document_pollution.py"]),
             "chinese_localization": run([sys.executable, "tools/kds-sync/check_chinese_localization_gate.py"]),
             "feature_workspace": run([sys.executable, "tools/kds-sync/validate_gpcf_2_feature_workspace.py"]),
+            "project_master_plan_register": run([sys.executable, "tools/kds-sync/validate_project_master_plan_register.py", "--repository-only"]),
+            "project_implementation_register": run([sys.executable, "tools/kds-sync/validate_project_implementation_register.py"]),
             "fixed_doc_id": run([sys.executable, "scripts/api/validate_gckf_p0_document_control_preserves_fixed_doc_id.py"]),
         }
         hard_failures = [name for name, (code, _) in checks.items() if code != 0]
@@ -319,7 +321,7 @@ def main() -> int:
                 kds_md=kds_md,
                 local_mirror_unique_docs=local_mirror_unique_docs,
             ),
-            "not_evaluated": ["project_group_live_status", "delegated_projects", "kds_token"],
+            "not_evaluated": ["project_group_live_status", "delegated_projects", "sibling_project_master_plans", "kds_token"],
             "check_failures": {name: checks[name][1] for name in hard_failures},
             "repo_md": len(docs),
             "kds_md": kds_md,

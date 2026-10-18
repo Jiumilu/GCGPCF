@@ -74,6 +74,8 @@ def main() -> int:
     for project in REQUIRED_PROJECTS:
         if rows.count(project) != 1:
             failures.append(f"expected exactly one project row in implementation register: {project}")
+    for project in sorted(set(rows) - set(REQUIRED_PROJECTS) - {"project"}):
+        failures.append(f"unexpected project row in implementation register: {project}")
 
     if "project_master_plan_alignment = repair_required" in master_text:
         warnings.append("current project scope has unresolved master-plan candidates")
