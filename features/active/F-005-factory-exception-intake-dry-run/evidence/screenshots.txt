@@ -1,1 +1,1 @@
-waived: Feature scope has no UI/browser evidence requirement.
+waived: 本 Feature 仅验证 GFIS 异常接入的本地 Runtime dry-run 角色链，没有产品界面交付。

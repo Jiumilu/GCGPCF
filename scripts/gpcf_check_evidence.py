@@ -87,11 +87,15 @@ def waiver_reason(data: dict[str, object], kind: str) -> str:
     return str(waivers.get(kind, "")).strip() if isinstance(waivers, dict) else ""
 
 
+def acceptance_requires_active(data: dict[str, object]) -> bool:
+    return any("保持 active" in str(item) for item in data.get("acceptance", []))
+
+
 def inspect_existing(data: dict[str, object], feature_dir: Path) -> int:
     reasons = []
     if not data.get("acceptance"):
         reasons.append("acceptance is empty")
-    elif any("保持 active" in str(item) for item in data["acceptance"]):
+    elif acceptance_requires_active(data):
         reasons.append("acceptance requires this Feature to remain active")
     if not data.get("scope", {}).get("in"):
         reasons.append("scope.in is empty")
@@ -274,12 +278,16 @@ def main() -> int:
     ]
     all_blockers = governance_blockers + blockers
     data["blockers"] = all_blockers
-    data["loop"]["current_step"] = "evaluate"
+    keep_active_position = acceptance_requires_active(data)
+    if not keep_active_position:
+        data["loop"]["current_step"] = "evaluate"
     data["loop"]["iteration"] = int(data["loop"].get("iteration", 0)) + 1
     write_feature(feature_file(feature_dir), data)
-    update_queue_entry(data["id"], status="evaluated" if not all_blockers else "blocked", role="Evaluator")
+    if not keep_active_position:
+        update_queue_entry(data["id"], status="evaluated" if not all_blockers else "blocked", role="Evaluator")
+    event_status = str(data["loop"]["current_step"]) if keep_active_position else ("evaluated" if not all_blockers else "blocked")
     append_runtime_log(
-        data["id"], role="Evaluator", status="evaluated" if not all_blockers else "blocked",
+        data["id"], role="Evaluator", status=event_status,
         input_summary="运行 Feature 专属验收命令与公共结构校验。",
         output_summary=f"tests={tests_status}, build={build_status}, summary={summary_status}",
         evidence=f"features/active/{feature_dir.name}/evidence/summary.md",
@@ -300,7 +308,11 @@ def main() -> int:
                     else "未发现阻塞项。"
                 )
             ),
-            "是，前提是 close gate 通过。" if not all_blockers else "否。",
+            (
+                "证据可提交；Feature 按验收保持 active，不进入关闭出口。"
+                if keep_active_position and not all_blockers
+                else "是，前提是 close gate 通过。" if not all_blockers else "否。"
+            ),
         ],
     )
 
@@ -308,7 +320,7 @@ def main() -> int:
         "gpcf_feature_evidence "
         f"feature={data['id']} tests={tests_status} build={build_status} "
         f"screenshots={screenshots_status} api={api_status} summary={summary_status} "
-        f"governance_blockers={len(governance_blockers)} close_candidate={str(not all_blockers).lower()}"
+        f"governance_blockers={len(governance_blockers)} close_candidate={str(not all_blockers and not acceptance_requires_active(data)).lower()}"
     )
     return 0 if not all_blockers else 1
 

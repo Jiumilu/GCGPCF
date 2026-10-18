@@ -20,7 +20,7 @@ acceptance:
   - Feature 保持 active，作为业务样本候选，不做状态提升
 loop:
   current_step: commit
-  iteration: 13
+  iteration: 17
 evidence:
   tests: pass
   build: pass
@@ -28,10 +28,22 @@ evidence:
   api: waived
   summary: pass
 blockers:
+verification:
+  tests:
+  - python3 -m pytest tests/test_f005_runtime_roles.py -q
+  build:
+  - python3 -X pycache_prefix=/private/tmp/gpcf-f005-pycache -m py_compile scripts/gpcf_dispatch.py
+    scripts/gpcf_check_evidence.py
+  waivers:
+    screenshots: 本 Feature 仅验证 GFIS 异常接入的本地 Runtime dry-run 角色链，没有产品界面交付。
+    api: 本 Feature 明确排除真实工厂系统和外部服务调用，仅使用仓库内样本与运行日志。
 ui_product_first_control:
   version: v1.1
   applicability: indirect
-  user_groups: [工厂异常上报人员, 处置人员, 复核与审计人员]
+  user_groups:
+  - 工厂异常上报人员
+  - 处置人员
+  - 复核与审计人员
   primary_human_task: 看懂异常来源、责任、当前状态和下一处置动作，并能识别 dry-run 与真实业务的边界
   machine_interface_boundary: Runtime 角色链与原始载荷进入调试证据；人类入口使用业务字段、明确状态和恢复指引
   gates:
@@ -43,4 +55,4 @@ ui_product_first_control:
     evidence_overexposure_gate: pending
   status_ceiling: partial
 created_at: "2026-07-08T02:41:12+00:00"
-updated_at: "2026-07-16T00:00:00+08:00"
+updated_at: "2026-10-18T10:56:31+00:00"

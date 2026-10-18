@@ -1,1 +1,1 @@
-waived: Feature scope has no API evidence requirement and no real external or KDS API call is authorized.
+waived: 本 Feature 明确排除真实工厂系统和外部服务调用，仅使用仓库内样本与运行日志。
