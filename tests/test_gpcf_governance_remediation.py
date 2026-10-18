@@ -65,6 +65,18 @@ def test_live_snapshot_ignores_only_local_worktree_churn():
     assert not module.semantically_same(previous, current)
 
 
+def test_live_snapshot_check_only_does_not_advance_stability():
+    path = ROOT / "tools/kds-sync/build_project_group_live_status_current.py"
+    spec = importlib.util.spec_from_file_location("live_status_stability", path)
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+
+    current = ["GlobalCloud PVAOS", "GlobalCloud GPC"]
+    assert module.stable_for_snapshot(current, ["GlobalCloud GPC"], ["GlobalCloud GPC"], False, False) == ["GlobalCloud GPC"]
+    assert module.stable_for_snapshot(current, current, ["GlobalCloud GPC"], False, True) == ["GlobalCloud GPC"]
+    assert module.stable_for_snapshot(current, current, ["GlobalCloud GPC"], False, False) == ["GlobalCloud GPC", "GlobalCloud PVAOS"]
+
+
 def digest(path):
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
