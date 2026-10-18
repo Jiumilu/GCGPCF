@@ -149,7 +149,10 @@ def detect_ui_evidence(feature_dir: Path, evidence_dir: Path) -> tuple[str, str]
             if path.suffix.lower() in UI_EVIDENCE_IMAGE_SUFFIXES:
                 asset_refs.append(rel)
                 continue
-            if path.suffix.lower() in UI_EVIDENCE_TEXT_SUFFIXES and any(hint in lower_name for hint in UI_EVIDENCE_NAME_HINTS):
+            ui_token = re.search(r"(^|[-_.])ui($|[-_.])", lower_name)
+            if path.suffix.lower() in UI_EVIDENCE_TEXT_SUFFIXES and (
+                ui_token or any(hint in lower_name for hint in UI_EVIDENCE_NAME_HINTS if hint != "ui")
+            ):
                 note_refs.append(rel)
 
     if asset_refs or note_refs:
