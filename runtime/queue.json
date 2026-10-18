@@ -101,6 +101,28 @@
       "updated_at": "2026-09-05T11:38:51+00:00"
     },
     {
+      "id": "F-025",
+      "name": "project-group-arch-iteration",
+      "project": "gpcf",
+      "priority": "P0",
+      "status": "queued",
+      "current_role": "Dispatcher",
+      "workspace": "features/active/F-025-project-group-arch-iteration",
+      "created_at": "2026-10-17T08:55:27+00:00",
+      "updated_at": "2026-10-17T08:55:27+00:00"
+    },
+    {
+      "id": "F-027",
+      "name": "governance-remediation",
+      "project": "gpcf",
+      "priority": "P0",
+      "status": "blocked",
+      "current_role": "Evaluator",
+      "workspace": "features/active/F-027-governance-remediation",
+      "created_at": "2026-10-18T00:26:03+00:00",
+      "updated_at": "2026-10-18T02:11:29+00:00"
+    },
+    {
       "id": "F-004",
       "name": "loop-governance-slimming",
       "project": "gpcf",
@@ -253,6 +275,17 @@
       "workspace": "features/active/F-023-was-flow-naming-migration",
       "created_at": "2026-10-16T04:15:00+00:00",
       "updated_at": "2026-10-16T12:09:53+00:00"
+    },
+    {
+      "id": "F-026",
+      "name": "gcmem-governance-onboarding",
+      "project": "gcmem",
+      "priority": "P2",
+      "status": "blocked",
+      "current_role": "Evaluator",
+      "workspace": "features/active/F-026-gcmem-governance-onboarding",
+      "created_at": "2026-10-17T22:49:44+00:00",
+      "updated_at": "2026-10-17T22:51:44+00:00"
     }
   ]
 }

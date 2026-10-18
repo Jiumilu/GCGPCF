@@ -1,0 +1,62 @@
+{
+  "generated_at": "2026-10-18T02:07:16.461713+00:00",
+  "method": "gpcf_check_evidence.py <FEATURE_ID> --check-only; read-only legacy closure audit",
+  "closed_features": 9,
+  "replayable_close_candidates": 0,
+  "records": [
+    {
+      "feature_id": "F-001",
+      "returncode": 1,
+      "result": "gpcf_feature_evidence_check feature=F-001 close_candidate=false reasons=acceptance is empty; scope.in is empty; evidence is incomplete; Feature-specific tests command is not declared; Feature-specific build command is not declared",
+      "error": ""
+    },
+    {
+      "feature_id": "F-002",
+      "returncode": 1,
+      "result": "gpcf_feature_evidence_check feature=F-002 close_candidate=false reasons=Feature-specific tests command is not declared; Feature-specific build command is not declared; screenshots waiver has no Feature-specific reason; api waiver has no Feature-specific reason",
+      "error": ""
+    },
+    {
+      "feature_id": "F-003",
+      "returncode": 1,
+      "result": "gpcf_feature_evidence_check feature=F-003 close_candidate=false reasons=Feature-specific tests command is not declared; Feature-specific build command is not declared; screenshots waiver has no Feature-specific reason; api waiver has no Feature-specific reason",
+      "error": ""
+    },
+    {
+      "feature_id": "F-006",
+      "returncode": 1,
+      "result": "gpcf_feature_evidence_check feature=F-006 close_candidate=false reasons=acceptance is empty; scope.in is empty; Feature-specific tests command is not declared; Feature-specific build command is not declared; screenshots waiver has no Feature-specific reason; api waiver has no Feature-specific reason",
+      "error": ""
+    },
+    {
+      "feature_id": "F-007",
+      "returncode": 1,
+      "result": "gpcf_feature_evidence_check feature=F-007 close_candidate=false reasons=acceptance is empty; scope.in is empty; Feature-specific tests command is not declared; Feature-specific build command is not declared; screenshots waiver has no Feature-specific reason; api waiver has no Feature-specific reason",
+      "error": ""
+    },
+    {
+      "feature_id": "F-008",
+      "returncode": 1,
+      "result": "gpcf_feature_evidence_check feature=F-008 close_candidate=false reasons=acceptance requires this Feature to remain active; Feature-specific tests command is not declared; Feature-specific build command is not declared; screenshots waiver has no Feature-specific reason; api waiver has no Feature-specific reason",
+      "error": ""
+    },
+    {
+      "feature_id": "F-009",
+      "returncode": 1,
+      "result": "gpcf_feature_evidence_check feature=F-009 close_candidate=false reasons=Feature-specific tests command is not declared; Feature-specific build command is not declared; screenshots waiver has no Feature-specific reason; api waiver has no Feature-specific reason",
+      "error": ""
+    },
+    {
+      "feature_id": "F-018",
+      "returncode": 1,
+      "result": "gpcf_feature_evidence_check feature=F-018 close_candidate=false reasons=Feature-specific tests command is not declared; Feature-specific build command is not declared; api waiver has no Feature-specific reason",
+      "error": ""
+    },
+    {
+      "feature_id": "F-020",
+      "returncode": 1,
+      "result": "gpcf_feature_evidence_check feature=F-020 close_candidate=false reasons=Feature-specific tests command is not declared; Feature-specific build command is not declared; api waiver has no Feature-specific reason",
+      "error": ""
+    }
+  ]
+}

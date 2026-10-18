@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-PROJECT-IMPLEMENTATION-CONTROL-REGISTER-20260624
 title: GlobalCloud 项目群实施方案控制台账
 project: GPCF
-related_projects: [AAAS, Brain, WAS, XiaoC, WAME, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP]
+related_projects: [AAAS, Brain, WAS, XiaoC, WAME, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP, PQC, SpaceAI, SpaceAIStudio, World, GCMEM, WAE]
 domain: status
 status: controlled
 version: v1.0
@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/91-治理与验收/09-status/globalcloud-project-implementation-control-register.md
 source_path: 09-status/globalcloud-project-implementation-control-register.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-27
+last_reviewed: 2026-10-18
 supersedes: []
 superseded_by: []
 ---
@@ -76,24 +76,30 @@ superseded_by: []
 | GlobalCloud XiaoG | `GlobalCloud XiaoG 总体方案.md` | `GlobalCloud XiaoG 实施方案.md` | `ready_for_review` | `authorization_pack_boundary` | 轻量执行入口 | L4 只读审计 mock 已通过；live API/设备验证需专项授权 | 等待 GFIS 真实 source-of-record；XiaoG live API/设备验证另行授权 |
 | GlobalCloud ICP | `GlobalCloud ICP 总体方案.md` | `GlobalCloud ICP 实施方案.md` | `candidate` | `candidate_registration_boundary` | 产业控制平面首期骨架 | 24节点、11池、3场景、10项测试、契约门禁和本地 HTTP smoke 已通过；仅证明 fixture/development 闭环 | 等待人工确认和 GPCF/WAME 治理审查；真实 KDS/GPC/GFIS 连接器另行立项 |
 | GlobalCloud GPCF | `GlobalCloud GPCF 总体方案.md` | `GlobalCloud GPCF 实施方案.md` | `repair_required` | `authorization_to_pre_execution_total_bridge` | 实施治理控制 | 真实执行治理已受控，但 2026-06-27 live Git gate 已因 `GlobalCloud KDS/.env.production.example` sensitive_path 和当前 7 仓 total dirty 事实收紧为 blocked；其中 `GlobalCloud AAAS` / `GlobalCoud GPCF` / `GlobalCloud XWAIL` / `GlobalCloud GFIS` / `GlobalCloud KDS` / `GlobalCloud SOP` 构成当前 6 仓 review 边界，`WAS世界资产体系/.DS_Store` 继续沿 noise cleanup 单独治理，dependency 仍 blocked、customer_satisfaction 仍为 rework；`docs/harness/evidence/globalcloud-project-group-current-state-baseline-refresh-20260626.md` 当前保持 `project_group_current_state_baseline_refresh_20260626 = controlled`、`dirty_repo_count = 7`，`docs/harness/evidence/globalcloud-project-group-dev-task-queue-20260626.md` 当前保持 `development_queue_ready = true`、`trigger_layer_binding_count = 17`、`dependency_edge_binding_count = 17`；当前人工确认链已补齐到 `authorization-layer -> human-confirmation -> authorization-routing -> pre-wave1 -> human fill -> chain consistency -> authorization package -> chain loop-round -> target ledger`，但仍保持 `authorization_granted=0`、`action_executed=0` | 先完成 `GPCF-PRE-WAVE1-REVIEW-AUTHORIZATION-REQUEST-20260627-001`，再按 `GPCF-NEXT-STAGE-AUTHORIZATION-HUMAN-FILL-REQUEST-20260627-001`、`GPCF-NEXT-STAGE-AUTHORIZATION-CHAIN-CONSISTENCY-AUDIT-20260627-001`、`GPCF-NEXT-STAGE-AUTHORIZATION-PACKAGE-20260627-001`、`GPCF-NEXT-STAGE-AUTHORIZATION-CHAIN-LOOP-ROUND-20260627-001` 继续收敛 KDS sensitive_path review、授权回执、依赖阻塞和客户验收证据 |
+| GlobalCloud PQC | 待核验 | 待核验 | `planned` | `project_plan_boundary` | 报价审批与回款纳管 | `projects/pqc/STATUS.md` 记录本地基线，真实业务与权限验收未执行 | 核验项目双方案并建立 Feature 验收 |
+| GlobalCloud SpaceAI | 待核验 | 待核验 | `in_progress` | `synthetic_data_boundary` | Platform 全景态势与 CWME 本地应用 | `projects/spaceai/STATUS.md` 区分 Platform 主仓、CWME 本地应用与合成数据 | 分线核验项目实施方案及运行证据 |
+| GlobalCloud SpaceAI Studio | 待核验 | 待核验 | `planned` | `multiplatform_runtime_boundary` | 多平台桌面交付 | `projects/spaceai-studio/STATUS.md` 记录 macOS 包和测试；Windows/Linux 与实际启动缺证据 | 核验三平台产物和独立构建边界 |
+| GlobalCloud World | `GlobalCloud World 总体方案.md` | `GlobalCloud World 实施方案.md` | `planned` | `authorization_and_baseline_boundary` | 方案已建立；迁移授权、WAME 引擎落点和 Ontology 基线冲突仍待裁定 | 独立仓双方案均受控；P1 授权未完成，不代表工程或交付完成 | 先裁定 P1 授权与版本基线，再执行迁移和验收命令 |
+| GlobalCloud GCMEM | `GlobalCloud GCMEM 总体方案.md` | `GlobalCloud GCMEM 实施方案.md` | `in_progress` | `memory_runtime_boundary` | 长期记忆服务纳管 | 独立仓双方案均受控，本地回归与 doctor 已记录；小G容器侧迁移及连续三日夜挖仍待验证 | 保持 partial，复验跨端证据后再评估实施状态 |
+| GlobalCloud WAE | 待核验 | 待建立 | `planned` | `ui_runtime_boundary` | 世界资产浏览器设计阶段 | `projects/wae/STATUS.md` 记录设计与分步路线；首批项目界面未纳入 | 核验唯一总体设计并建立实施方案 |
 | shared/python_utils | 不适用 | 不适用 | `not_project` | `not_project_boundary` | 共享工具目录治理 | 导入可用性待验证 | 纳入依赖检查 |
 
 ## 5. 当前结论
 
 ```text
 implementation_plan_previous_governance_baseline = phase_3_all_project_plans_controlled
-implementation_plan_governance = phase_3_all_project_plans_controlled
-implementation_plan_governance = phase_4_real_execution_governance_controlled
+implementation_plan_governance = repair_required_for_current_24_project_scope
 current_live_project_group_git_gate = partial_due_to_gpcf_brain_sop_dirty
 current_live_dirty_repos = GlobalCoud GPCF, GlobalCloud Brain, GlobalCloud SOP
 current_live_sensitive_repos = none
 current_live_kds_blocker = resolved_not_in_git_status
 current_state_baseline_refresh_controlled = true
 development_queue_ready = true
-reason = all 17 projects have one authoritative implementation plan and current statuses are aligned to the project status matrix and real execution governance board
+reason = 历史 17 项目方案证据保留；当前 24 项目尚有新增项目的实施方案待核验或建立
 ```
 
-可以声明所有登记业务项目的唯一实施方案已建立并受控。真实研发、真实运行、真实集成、真实交付和客户验收仍需后续证据。
+可以声明当前 24 项目均已进入实施方案盘点；不得声明全部项目唯一实施方案已建立。新增项目保持 planned/in_progress 与 partial 边界，真实研发、运行、集成、交付和客户验收仍需逐项证据。
+2026-10-18 用户确认 WAE 纳入项目群当前范围；WAE 实施方案仍待建立，交付状态保持 `planned`。
 
 ## 6. 传导确认清单
 

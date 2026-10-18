@@ -522,7 +522,7 @@ KDS 空间：`开发`
 | GPCF-DOC-42588776FF | Loop 治理当前窗口处置证据 | docs/harness/evidence/loop-governance-current-window-disposition-20260619.md | GPCF | controlled |
 | GPCF-DOC-1DB6E9CF48 | Loop 治理当前窗口审查证据 | docs/harness/evidence/loop-governance-current-window-review-20260619.md | GPCF | controlled |
 | GPCF-DOC-21CF5F6F10 | Loop Governance Dashboard Evidence | docs/harness/evidence/loop-governance-dashboard-20260617.md | KDS | controlled |
-| GPCF-DOC-FF3BC7037F | Loop 治理效率债务积压证据 | docs/harness/evidence/loop-governance-efficiency-debt-backlog-20260617.md | GPCF | controlled |
+| GPCF-DOC-FF3BC7037F | Loop Governance Efficiency Debt Backlog Evidence | docs/harness/evidence/loop-governance-efficiency-debt-backlog-20260617.md | GPCF | controlled |
 | GPCF-DOC-7FB5D5F117 | Loop 治理效率债务定位器证据 | docs/harness/evidence/loop-governance-efficiency-debt-locator-20260617.md | GPCF | controlled |
 | GPCF-DOC-2EEC93C354 | Loop 治理五段式审查证据 | docs/harness/evidence/loop-governance-five-segment-review-20260617.md | GPCF | controlled |
 | GPCF-DOC-28A638C09E | Loop 治理阶段目标证据 | docs/harness/evidence/loop-governance-phase-goal-20260617.md | KDS | controlled |

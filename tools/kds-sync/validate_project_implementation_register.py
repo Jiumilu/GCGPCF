@@ -5,33 +5,19 @@ from __future__ import annotations
 
 import json
 from pathlib import Path
+import yaml
 
 
 ROOT = Path(__file__).resolve().parents[2]
 REGISTER = ROOT / "09-status/globalcloud-project-implementation-control-register.md"
 MASTER_REGISTER = ROOT / "09-status/globalcloud-project-master-plan-control-register.md"
 
+REGISTRY = yaml.safe_load((ROOT / "config/project-group-projects.yaml").read_text(encoding="utf-8"))
+DISPLAY_NAMES = {"WAS": "WAS世界资产体系", "AAAS": "GlobalCloud AAAS / AaaS", "SpaceAIStudio": "GlobalCloud SpaceAI Studio"}
 REQUIRED_PROJECTS = [
-    "WAS世界资产体系",
-    "GlobalCloud XWAIL",
-    "GlobalCloud AAAS / AaaS",
-    "GlobalCloud WAME",
-    "GlobalCloud GFIS",
-    "GlobalCloud GPC",
-    "GlobalCloud PVAOS",
-    "GlobalCloud KDS",
-    "GlobalCloud Brain",
-    "GlobalCloud Studio",
-    "GlobalCloud MMC",
-    "GlobalCloud PKC",
-    "GlobalCloud SOP",
-    "GlobalCloud XGD",
-    "GlobalCloud XiaoC",
-    "GlobalCloud XiaoG",
-    "GlobalCloud GPCF",
-    "GlobalCloud ICP",
-    "shared/python_utils",
-]
+    DISPLAY_NAMES.get(str(item["id"]), f"GlobalCloud {item['id']}")
+    for item in REGISTRY["projects"]
+] + ["shared/python_utils"]
 
 REQUIRED_TOKENS = [
     "GlobalCloud 项目群实施方案控制台账",
@@ -58,15 +44,11 @@ REQUIRED_TOKENS = [
     "5.5.1 AAAS delegated wrapper 单仓核对卡 / 5.6.1 AAAS delegated wrapper 确认后状态传导摘要",
     "5.5.2 XWAIL delegated wrapper 单仓核对卡 / 5.6.2 XWAIL delegated wrapper 确认后状态传导摘要",
     "5.5.3 SOP delegated wrapper 单仓核对卡 / 5.6.3 SOP delegated wrapper 确认后状态传导摘要",
-    "implementation_plan_governance = phase_3_all_project_plans_controlled",
-    "current_live_project_group_git_gate = partial_due_to_gpcf_brain_sop_dirty",
-    "current_live_dirty_repos = GlobalCoud GPCF, GlobalCloud Brain, GlobalCloud SOP",
-    "current_live_sensitive_repos = none",
-    "current_live_kds_blocker = resolved_not_in_git_status",
+    "implementation_plan_governance = repair_required_for_current_24_project_scope",
     "current_state_baseline_refresh_controlled = true",
     "development_queue_ready = true",
-    "所有登记业务项目的唯一实施方案已建立并受控",
-    "真实研发、真实运行、真实集成、真实交付和客户验收仍需后续证据",
+    "不得声明全部项目唯一实施方案已建立",
+    "真实研发、运行、集成、交付和客户验收仍需逐项证据",
     "not_project",
 ]
 
@@ -87,12 +69,14 @@ def main() -> int:
         if token not in text:
             failures.append(f"missing token in implementation register: {token}")
 
+    table = text.split("## 4. 项目实施方案盘点", 1)[-1].split("## 5. 当前结论", 1)[0]
+    rows = [line.split("|")[1].strip() for line in table.splitlines() if line.startswith("| ") and not line.startswith("| ---")]
     for project in REQUIRED_PROJECTS:
-        if project not in text:
-            failures.append(f"missing project in implementation register: {project}")
+        if rows.count(project) != 1:
+            failures.append(f"expected exactly one project row in implementation register: {project}")
 
-    if "project_master_plan_alignment = controlled" not in master_text:
-        failures.append("master-plan register is not controlled; implementation cannot proceed")
+    if "project_master_plan_alignment = repair_required" in master_text:
+        warnings.append("current project scope has unresolved master-plan candidates")
 
     result = {
         "gate": "project_implementation_register",

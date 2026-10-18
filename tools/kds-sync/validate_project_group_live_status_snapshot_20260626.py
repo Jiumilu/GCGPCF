@@ -8,6 +8,7 @@ import json
 import os
 import subprocess
 from pathlib import Path
+import yaml
 
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -21,25 +22,8 @@ CURRENT_JSON = ROOT / "docs/harness/evidence/project_group_live_status_current.j
 FRESHNESS_HOURS = 12
 TZ = timezone(timedelta(hours=8))
 
-EXPECTED_REPOS = [
-    "GlobalCloud AAAS",
-    "GlobalCloud Brain",
-    "WAS世界资产体系",
-    "GlobalCloud XiaoC",
-        "GlobalCloud GPC",
-    "GlobalCloud Studio",
-    "GlobalCloud WAE",
-    "GlobalCoud GPCF",
-    "GlobalCloud XWAIL",
-    "GlobalCloud GFIS",
-    "GlobalCloud MMC",
-    "GlobalCloud KDS",
-    "GlobalCloud XiaoG",
-    "GlobalCloud PVAOS",
-    "GlobalCloud SOP",
-    "GlobalCloud PKC",
-    "GlobalCloud XGD",
-]
+REGISTRY = yaml.safe_load((ROOT / "config/project-group-projects.yaml").read_text(encoding="utf-8"))
+EXPECTED_REPOS = [str(project["repo"]) for project in REGISTRY["projects"]]
 
 VOLATILE_DIRTY_ALLOWLIST = ["GlobalCoud GPCF"]
 SELF_GENERATED_STATUS_PATHS = {
@@ -163,11 +147,13 @@ def git_ahead_behind(repo: Path) -> tuple[int, int]:
     result = subprocess.run(
         ["git", "rev-list", "--left-right", "--count", "@{upstream}...HEAD"],
         cwd=repo,
-        check=True,
+        check=False,
         text=True,
         stdout=subprocess.PIPE,
         stderr=subprocess.PIPE,
     )
+    if result.returncode != 0:
+        return 0, 0
     left, right = result.stdout.strip().split()
     return int(right), int(left)
 

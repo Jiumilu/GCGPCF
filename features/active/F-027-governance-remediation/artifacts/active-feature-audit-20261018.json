@@ -1,0 +1,224 @@
+{
+  "generated_at": "2026-10-18T02:10:51.152573+00:00",
+  "method": "read-only current Feature inspection",
+  "active_features": 18,
+  "close_candidates": 0,
+  "runtime_logs_present": 8,
+  "records": [
+    {
+      "feature_id": "F-004",
+      "project": "gpcf",
+      "queue_status": "active",
+      "blockers": [],
+      "runtime_log": true,
+      "close_candidate": false,
+      "inspection": "gpcf_feature_evidence_check feature=F-004 close_candidate=false reasons=Feature-specific tests command is not declared; Feature-specific build command is not declared; screenshots waiver has no Feature-specific reason; api waiver has no Feature-specific reason"
+    },
+    {
+      "feature_id": "F-005",
+      "project": "gfis",
+      "queue_status": "active",
+      "blockers": [],
+      "runtime_log": true,
+      "close_candidate": false,
+      "inspection": "gpcf_feature_evidence_check feature=F-005 close_candidate=false reasons=acceptance requires this Feature to remain active; Feature-specific tests command is not declared; Feature-specific build command is not declared; screenshots waiver has no Feature-specific reason; api waiver has no Feature-specific reason"
+    },
+    {
+      "feature_id": "F-010",
+      "project": "gpcf",
+      "queue_status": "active",
+      "blockers": [],
+      "runtime_log": false,
+      "close_candidate": false,
+      "inspection": "gpcf_feature_evidence_check feature=F-010 close_candidate=false reasons=acceptance is empty; scope.in is empty; Feature-specific tests command is not declared; Feature-specific build command is not declared; api waiver has no Feature-specific reason"
+    },
+    {
+      "feature_id": "F-011",
+      "project": "studio",
+      "queue_status": "active",
+      "blockers": [],
+      "runtime_log": true,
+      "close_candidate": false,
+      "inspection": "gpcf_feature_evidence_check feature=F-011 close_candidate=false reasons=acceptance is empty; scope.in is empty; Feature-specific tests command is not declared; Feature-specific build command is not declared; api waiver has no Feature-specific reason"
+    },
+    {
+      "feature_id": "F-012",
+      "project": "sop",
+      "queue_status": "active",
+      "blockers": [],
+      "runtime_log": false,
+      "close_candidate": false,
+      "inspection": "gpcf_feature_evidence_check feature=F-012 close_candidate=false reasons=acceptance is empty; scope.in is empty; evidence is incomplete; Feature-specific tests command is not declared; Feature-specific build command is not declared"
+    },
+    {
+      "feature_id": "F-013",
+      "project": "gpcf",
+      "queue_status": "active",
+      "blockers": [
+        "kds_p1_apply_blocked_by_dirty_worktree",
+        "gpcf_a10r27_current_truth_4file_delta_pending_independent_review_and_separate_commit_push_disposition",
+        "kds_green_supply_chain_role_view_local_commit_pending_separate_human_authorization",
+        "brain_browser_r2_postpush_revalidated_chat_send_not_executed_mobile_ui_rework_required",
+        "brain_authenticated_readonly_e2e_deferred_pending_a10_control",
+        "studio_release0_external_daily_sync_post_sync_governance_disposition_pending",
+        "kds_release0_runtime_activation_independently_verified_local_gbrain_missing_knowledge_intake_audit_relation",
+        "kds_local_gbrain_schema_inventory_and_separate_migration_fixture_authorization_required",
+        "studio_gehua_authoritative_project_session_target_fixture_lifecycle_not_executed",
+        "kds_stage_b_read_admission_technical_verified_governance_blocked",
+        "studio_intake_phase1_authorized_phase2_blocked_by_mmc_prepare_retry_policy_review",
+        "studio_a6_external_daily_sync_commit_push_requires_governance_disposition",
+        "unexpected_external_kds_local_mirror_write_requires_review",
+        "mmc_a9_bounded_read_subset_technical_verified_global_policy_not_narrowed",
+        "mmc_delegation_and_human_confirmation_pending"
+      ],
+      "runtime_log": false,
+      "close_candidate": false,
+      "inspection": "gpcf_feature_evidence_check feature=F-013 close_candidate=false reasons=governance blockers remain; Feature-specific tests command is not declared; Feature-specific build command is not declared; api waiver has no Feature-specific reason"
+    },
+    {
+      "feature_id": "F-014",
+      "project": "gpcf",
+      "queue_status": "active",
+      "blockers": [
+        "real-data pilot, authoritative receiving ledger owner, retention policy, and KDS/MMC runtime configuration boundary remain outside the local fixture authorization"
+      ],
+      "runtime_log": true,
+      "close_candidate": false,
+      "inspection": "gpcf_feature_evidence_check feature=F-014 close_candidate=false reasons=governance blockers remain; Feature-specific tests command is not declared; Feature-specific build command is not declared; api waiver has no Feature-specific reason"
+    },
+    {
+      "feature_id": "F-015",
+      "project": "studio",
+      "queue_status": "blocked",
+      "blockers": [
+        "admin现有快照24小时本机隔离试用已获准并验证；不等于生产身份联动、长期开放或生产旧构建核验，原身份库撤权联动与正式发布仍受限制",
+        "候选关系消费契约和明确标识导航已本地验证；真实人员组织项目关系资料、逐条权威依据及第二真实版本仍缺，不以隔离测试冒充真实试点，不阻断独立开发",
+        "真实业务接口、完整无障碍和多用户可用性尚未验证；不阻断当前本地只读流程，不允许据此发布或提升状态",
+        "stage-2 前置：API evidence（真实接入就绪后采集；原 fail 记录见 journal iteration 34/35）",
+        "stage-2 前置：summary evidence（随 stage-2 收口重采；原 fail 记录见 journal iteration 34/35）"
+      ],
+      "runtime_log": true,
+      "close_candidate": false,
+      "inspection": "gpcf_feature_evidence_check feature=F-015 close_candidate=false reasons=evidence is incomplete; governance blockers remain; Feature-specific tests command is not declared; Feature-specific build command is not declared"
+    },
+    {
+      "feature_id": "F-016",
+      "project": "gpcf",
+      "queue_status": "active",
+      "blockers": [
+        "业务确认人、来源读取权限、正式 SOP 版本、试点验收人待落实（不虚构任命）",
+        "B2—B5 放行依赖 B1 完成与各自授权流程"
+      ],
+      "runtime_log": false,
+      "close_candidate": false,
+      "inspection": "gpcf_feature_evidence_check feature=F-016 close_candidate=false reasons=governance blockers remain; Feature-specific tests command is not declared; Feature-specific build command is not declared; screenshots waiver has no Feature-specific reason; api waiver has no Feature-specific reason"
+    },
+    {
+      "feature_id": "F-017",
+      "project": "kds",
+      "queue_status": "active",
+      "blockers": [
+        "D1 命名已确认「万象引擎」；D6 首个演示对象＝光谷（2026-10-11 按建议；如调整请指出）",
+        "GPU 验证环境与光谷/黄梅数据场地接触待排期",
+        "B4-1—B4-5 首月件已完成（2026-10-11；见 evidence/summary.md）；申请一（域包登记）已提交，decision 待治理方"
+      ],
+      "runtime_log": false,
+      "close_candidate": false,
+      "inspection": "gpcf_feature_evidence_check feature=F-017 close_candidate=false reasons=governance blockers remain; Feature-specific tests command is not declared; Feature-specific build command is not declared; screenshots waiver has no Feature-specific reason; api waiver has no Feature-specific reason"
+    },
+    {
+      "feature_id": "F-019",
+      "project": "icp",
+      "queue_status": "active",
+      "blockers": [
+        "全仓 typecheck 曾现他线红点（后由其修复；我方文件全绿）",
+        "queue.json/state.json 经官方函数刷新（enqueue 自动）",
+        "API evidence required",
+        "summary evidence failed"
+      ],
+      "runtime_log": false,
+      "close_candidate": false,
+      "inspection": "gpcf_feature_evidence_check feature=F-019 close_candidate=false reasons=evidence is incomplete; governance blockers remain; Feature-specific tests command is not declared; Feature-specific build command is not declared"
+    },
+    {
+      "feature_id": "F-021",
+      "project": "gpcf",
+      "queue_status": "blocked",
+      "blockers": [
+        "中央文档门禁 rework_required（已有元数据、历史状态与本地化问题）",
+        "技能链总检查：既有 projects/wae 目录未登记"
+      ],
+      "runtime_log": true,
+      "close_candidate": false,
+      "inspection": "gpcf_feature_evidence_check feature=F-021 close_candidate=false reasons=governance blockers remain; Feature-specific tests command is not declared; Feature-specific build command is not declared; screenshots waiver has no Feature-specific reason; api waiver has no Feature-specific reason"
+    },
+    {
+      "feature_id": "F-022",
+      "project": "was",
+      "queue_status": "active",
+      "blockers": [
+        "WAS 侧治理复核（承接方式与六项声明）待进行",
+        "XWAIL flowType 影响评估待进行"
+      ],
+      "runtime_log": false,
+      "close_candidate": false,
+      "inspection": "gpcf_feature_evidence_check feature=F-022 close_candidate=false reasons=evidence is incomplete; governance blockers remain; Feature-specific tests command is not declared; Feature-specific build command is not declared; screenshots waiver has no Feature-specific reason; api waiver has no Feature-specific reason"
+    },
+    {
+      "feature_id": "F-023",
+      "project": "was",
+      "queue_status": "active",
+      "blockers": [
+        "兼容窗口关闭时点（另行版本发布）待定",
+        "存量引用（GPCF fixtures／KDS WAME 文档）切换批次待排"
+      ],
+      "runtime_log": false,
+      "close_candidate": false,
+      "inspection": "gpcf_feature_evidence_check feature=F-023 close_candidate=false reasons=evidence is incomplete; governance blockers remain; Feature-specific tests command is not declared; Feature-specific build command is not declared; screenshots waiver has no Feature-specific reason; api waiver has no Feature-specific reason"
+    },
+    {
+      "feature_id": "F-024",
+      "project": "spaceai",
+      "queue_status": "active",
+      "blockers": [],
+      "runtime_log": false,
+      "close_candidate": false,
+      "inspection": "gpcf_feature_evidence_check feature=F-024 close_candidate=false reasons=acceptance is empty; scope.in is empty; evidence is incomplete; Feature-specific tests command is not declared; Feature-specific build command is not declared"
+    },
+    {
+      "feature_id": "F-025",
+      "project": "gpcf",
+      "queue_status": "active",
+      "blockers": [
+        "架构迭代分析与分期规划尚需逐项复核；本 Feature 不代表真实开发完成"
+      ],
+      "runtime_log": false,
+      "close_candidate": false,
+      "inspection": "gpcf_feature_evidence_check feature=F-025 close_candidate=false reasons=acceptance is empty; scope.in is empty; evidence is incomplete; governance blockers remain; Feature-specific tests command is not declared; Feature-specific build command is not declared"
+    },
+    {
+      "feature_id": "F-026",
+      "project": "gcmem",
+      "queue_status": "active",
+      "blockers": [
+        "GPCF 中央文档门禁 rework_required：既有 missing_metadata、UI control 与 document_pollution",
+        "技能链总检查：既有 wae 目录未列入 23 项目登记"
+      ],
+      "runtime_log": true,
+      "close_candidate": false,
+      "inspection": "gpcf_feature_evidence_check feature=F-026 close_candidate=false reasons=governance blockers remain; Feature-specific tests command is not declared; Feature-specific build command is not declared; screenshots waiver has no Feature-specific reason; api waiver has no Feature-specific reason"
+    },
+    {
+      "feature_id": "F-027",
+      "project": "gpcf",
+      "queue_status": "active",
+      "blockers": [
+        "当前 24 项项目方案候选尚未全部核验；远端强制门禁尚未配置",
+        "9 个历史 done Feature 均未满足现行关闭证据规则，需逐项补验或保留历史例外记录"
+      ],
+      "runtime_log": true,
+      "close_candidate": false,
+      "inspection": "gpcf_feature_evidence_check feature=F-027 close_candidate=false reasons=governance blockers remain"
+    }
+  ]
+}

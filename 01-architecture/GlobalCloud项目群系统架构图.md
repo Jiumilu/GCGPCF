@@ -378,7 +378,7 @@ flowchart TB
 | 4 | WAME | L2 平台面 + 横切 B 引擎面 | 资产主账、运行引擎、治理执行、授权发布 | 受理器 xap-intake·主账·模型注册状态机·事件·关系·策略·证据·计量·Agent Desktop | 读 WAS/XWAIL/各业务只读；发布签名制品 → PVAOS | 引擎面 not_implemented；平台面 partial（受理器参考实现可用） |
 | 5 | WAE | L1·统一入口 | 项目群统一界面框架与入口 | ui-tokens·ui-kit·app-registry·app-shell·host-kit 写门禁/idp/装配态 | 界面承载各项目；写门禁默认关闭 | in_progress；框架实施中 |
 | 6 | GFIS | L4·工厂事实源 | 单厂生产/质量/仓储/设备/台账第一执行主体 | ERP 闭环·MES·QMS·WMS·EAM·云端 SaaS 汇总层 | → GPC 产能/库存/发货/签收；→ WAME 事实证据；→ KDS 回读建议 | ready_for_human_acceptance（96/100） |
-| 7 | GPC | L3·平台主线 | 绿色供应链公共服务与协同 | 七池·虚拟工厂·流规则包消费·GPC-Native（PlatformOrder/Shipment/POD/ExceptionCase）·工厂适配器 | ↔ GFIS 订单/事件；→ PVAOS；→ WAME 事件证据 | ready_for_review；Native Phase 0/1 |
+| 7 | GPC | L3·平台主线 | 绿色供应链公共服务与协同 | 七池·虚拟工厂·流规则包消费·GPC 平台对象模型（PlatformOrder/Shipment/POD/ExceptionCase）·工厂适配器 | ↔ GFIS 订单/事件；→ PVAOS；→ WAME 事件证据 | ready_for_review；平台对象模型 Phase 0/1 |
 | 8 | PVAOS | L3·生态入口 | 价值联盟门户与运营底座 | 门户·租户/组织/权限·伙伴·项目空间·工作流·PVAAI | ← GPC/GFIS/WAME 展示；→ AaaS 订阅计量 | ready_for_review；跨项目接口 implementation_pending |
 | 9 | PQC | L3·包装运营 | 报价成本、采购、订单回款 | 统一口径表·成本引擎·参数审批·报价快照·三级审批·9 表 | ← KDS 案例只读；→ PVA 运营侧 | partial；工程验证通过，业务验收未确认 |
 | 10 | KDS | L5·知识主存 | 知识事实主存与证据镜像（canonical） | OKF·四空间·十一池·SPACE_REGISTRY·可信治理内核 | ← GPCF 文档镜像；→ Brain/XiaoC RAG；← GCMEM 账本；← MMC Gateway（PKC/Brain 授权写回） | ready_for_human_acceptance（95/100） |

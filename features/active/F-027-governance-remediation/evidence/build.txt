@@ -1,0 +1,33 @@
+# Build And Lint Evidence
+
+## py_compile_gpcf_scripts
+
+status: pass
+
+```text
+(no output)
+```
+
+## git_diff_check
+
+status: pass
+
+```text
+(no output)
+```
+
+## python3 -X pycache_prefix=/tmp/gpcf-remediation-pycache -m py_compile scripts/gpcf_check_evidence.py scripts/gpcf_close_feature.py tools/kds-sync/document_control.py
+
+status: pass
+
+```text
+(no output)
+```
+
+## python3 tools/kds-sync/check_python_bytecode.py
+
+status: pass
+
+```text
+python_bytecode=pass files=1214 failures=0
+```

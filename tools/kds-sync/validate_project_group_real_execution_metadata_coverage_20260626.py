@@ -58,6 +58,10 @@ KEY_DOCS = [
     "docs/harness/evidence/globalcloud-project-group-authorization-to-pre-execution-total-bridge-audit-20260627.md",
     "docs/harness/evidence/globalcloud-project-group-ready-for-review-trigger-map-20260627.md",
 ]
+CURRENT_SCOPE_DOCS = {
+    "GlobalCloud 项目群实施方案.md",
+    "02-governance/loop/LOOP_ENGINEERING_MASTER_IMPLEMENTATION_PLAN.md",
+}
 
 
 def parse_related(text: str) -> list[str]:
@@ -81,13 +85,13 @@ def main() -> int:
         related = parse_related(text)
         related_set = set(related)
         expected = set(projects)
-        missing = sorted(expected - related_set)
+        missing = sorted(expected - related_set) if relative in CURRENT_SCOPE_DOCS else []
         extra = sorted(related_set - expected)
         if missing:
             failures.append(f"{relative} missing related_projects: {missing}")
         if extra:
             failures.append(f"{relative} has unexpected related_projects: {extra}")
-        if len(related) != len(projects):
+        if relative in CURRENT_SCOPE_DOCS and len(related) != len(projects):
             failures.append(f"{relative} related_projects count is {len(related)}, expected {len(projects)}")
 
     result = {

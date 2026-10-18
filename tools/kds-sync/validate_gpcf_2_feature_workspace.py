@@ -6,6 +6,7 @@ from __future__ import annotations
 import json
 import sys
 from pathlib import Path
+import yaml
 
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -14,26 +15,8 @@ sys.path.insert(0, str(ROOT / "scripts"))
 from gpcf_feature_lib import read_feature  # noqa: E402
 
 
-PROJECTS = [
-    "aaas",
-    "brain",
-    "was",
-    "xiaoc",
-    "wame",
-    "gpc",
-    "studio",
-    "gpcf",
-    "xwail",
-    "gfis",
-    "mmc",
-    "kds",
-    "xiaog",
-    "pvaos",
-    "sop",
-    "pkc",
-    "xgd",
-    "icp",
-]
+REGISTRY = yaml.safe_load((ROOT / "config/project-group-projects.yaml").read_text(encoding="utf-8"))
+PROJECTS = [str(project["slug"]) for project in REGISTRY["projects"]]
 
 FEATURE_FIELDS = [
     "id",
@@ -222,7 +205,7 @@ def main() -> int:
     print(
         "gpcf_2_feature_workspace=pass "
         "feature_delivery_center=true "
-        "project_scope=18 "
+        f"project_scope={len(PROJECTS)} "
         "new_feature_entry=enabled "
         "close_feature_exit=enabled "
         "status_promotion_allowed=false"

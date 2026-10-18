@@ -7,7 +7,7 @@ import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
-EXCLUDE_PARTS = {".git", ".kds"}
+EXCLUDE_PARTS = {".git", ".kds", "tmp", ".pytest_cache"}
 
 PATTERNS = [
     ("old_gpc_native", re.compile(r"GPC-Native|gpc-native|GPC Native|GPC\\-Native|\bNative\b")),
@@ -47,7 +47,7 @@ def main() -> int:
                 if pattern.search(line):
                     findings.append(f"{rel}:{line_no}: {name}: {line.strip()[:160]}")
     for path in ROOT.rglob("*"):
-        if path.is_file() and set(path.relative_to(ROOT).parts) & EXCLUDE_PARTS:
+        if set(path.relative_to(ROOT).parts) & EXCLUDE_PARTS:
             continue
         name = path.name
         rel = path.relative_to(ROOT).as_posix()

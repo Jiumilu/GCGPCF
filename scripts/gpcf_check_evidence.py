@@ -5,9 +5,10 @@ from __future__ import annotations
 
 import argparse
 import re
+import shlex
 from pathlib import Path
 
-from gpcf_feature_lib import append_journal, feature_file, find_feature, read_feature, run_command, update_queue_entry, write_feature
+from gpcf_feature_lib import ACTIVE, append_journal, append_runtime_log, evidence_complete, feature_file, find_feature, read_feature, run_command, update_queue_entry, write_feature
 
 
 SCRIPT_CHECKS = [
@@ -63,6 +64,49 @@ def write_result(path: Path, title: str, results: list[tuple[str, str, str]]) ->
             status = "fail"
     path.write_text("\n".join(lines), encoding="utf-8")
     return status
+
+
+def run_declared_commands(data: dict[str, object], kind: str) -> list[tuple[str, str, str]]:
+    verification = data.get("verification") or {}
+    commands = verification.get(kind, []) if isinstance(verification, dict) else []
+    if not isinstance(commands, list) or not commands:
+        return [(f"feature_{kind}", "fail", f"Feature-specific {kind} command is not declared")]
+    results = []
+    for command in commands:
+        argv = shlex.split(command) if isinstance(command, str) else command
+        if not isinstance(argv, list) or not argv or argv[0] not in {"python3", "git"}:
+            results.append((str(command), "fail", "Only explicit local python3/git commands are supported"))
+            continue
+        results.append((" ".join(argv), *run_command(argv)))
+    return results
+
+
+def waiver_reason(data: dict[str, object], kind: str) -> str:
+    verification = data.get("verification") or {}
+    waivers = verification.get("waivers", {}) if isinstance(verification, dict) else {}
+    return str(waivers.get(kind, "")).strip() if isinstance(waivers, dict) else ""
+
+
+def inspect_existing(data: dict[str, object], feature_dir: Path) -> int:
+    reasons = []
+    if not data.get("acceptance"):
+        reasons.append("acceptance is empty")
+    elif any("保持 active" in str(item) for item in data["acceptance"]):
+        reasons.append("acceptance requires this Feature to remain active")
+    if not data.get("scope", {}).get("in"):
+        reasons.append("scope.in is empty")
+    if not evidence_complete(data):
+        reasons.append("evidence is incomplete")
+    if data.get("blockers"):
+        reasons.append("governance blockers remain")
+    for kind in ("tests", "build"):
+        if not (data.get("verification") or {}).get(kind):
+            reasons.append(f"Feature-specific {kind} command is not declared")
+    for kind in ("screenshots", "api"):
+        if data.get("evidence", {}).get(kind) == "waived" and not waiver_reason(data, kind):
+            reasons.append(f"{kind} waiver has no Feature-specific reason")
+    print(f"gpcf_feature_evidence_check feature={data['id']} close_candidate={str(not reasons).lower()} reasons={'; '.join(reasons) or 'none'}")
+    return 0 if not reasons else 1
 
 
 def write_markdown_managed_section(path: Path, body: str) -> None:
@@ -124,10 +168,13 @@ def detect_ui_evidence(feature_dir: Path, evidence_dir: Path) -> tuple[str, str]
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("feature_id")
+    parser.add_argument("--check-only", action="store_true", help="inspect existing evidence without writes")
     args = parser.parse_args()
 
     feature_dir = find_feature(args.feature_id)
     data = read_feature(feature_file(feature_dir))
+    if args.check_only or feature_dir.parent != ACTIVE:
+        return inspect_existing(data, feature_dir)
     evidence_dir = feature_dir / "evidence"
     evidence_dir.mkdir(exist_ok=True)
 
@@ -137,6 +184,7 @@ def main() -> int:
             *run_command(["python3", "tools/kds-sync/validate_gpcf_2_feature_workspace.py"]),
         )
     ]
+    test_results.extend(run_declared_commands(data, "tests"))
     tests_status = write_result(evidence_dir / "tests.txt", "Tests Evidence", test_results)
 
     compile_status, compile_output = run_command(["python3", "-X", "pycache_prefix=/private/tmp/gpcf-pycache", "-m", "py_compile", *SCRIPT_CHECKS])
@@ -147,7 +195,7 @@ def main() -> int:
         [
             ("py_compile_gpcf_scripts", compile_status, compile_output),
             ("git_diff_check", diff_status, diff_output),
-        ],
+        ] + run_declared_commands(data, "build"),
     )
 
     ui_required = feature_requires(data, {"ui", "界面", "前端", "浏览器", "screenshot", "studio"})
@@ -155,17 +203,29 @@ def main() -> int:
     if ui_required:
         screenshots_status, screenshots_text = detect_ui_evidence(feature_dir, evidence_dir)
     else:
-        screenshots_status = "waived"
-        screenshots_text = "waived: Feature scope has no UI/browser evidence requirement."
+        reason = waiver_reason(data, "screenshots")
+        screenshots_status = "waived" if reason else "fail"
+        screenshots_text = f"waived: {reason}" if reason else "UI evidence waiver requires an explicit Feature-specific reason."
     if api_required:
-        api_status = "fail"
-        api_text = "API evidence required by Feature scope; provide API/dry-run output before close. Real external or KDS API calls still require explicit authorization."
+        api_commands = (data.get("verification") or {}).get("api", [])
+        if api_commands and all(
+            isinstance(command, str) and any(flag in shlex.split(command) for flag in ("--dry-run", "--check", "--check-only", "--read-only"))
+            for command in api_commands
+        ):
+            api_results = run_declared_commands(data, "api")
+            api_status = "pass" if all(status == "pass" for _, status, _ in api_results) else "fail"
+            api_text = "\n".join(f"command: {name}\nstatus: {status}\n{output}" for name, status, output in api_results)
+        else:
+            api_status = "fail"
+            api_text = "API scope requires declared local check/dry-run commands; no real API call is inferred or run."
     else:
-        api_status = "waived"
-        api_text = "waived: Feature scope has no API evidence requirement and no real external or KDS API call is authorized."
+        reason = waiver_reason(data, "api")
+        api_status = "waived" if reason else "fail"
+        api_text = f"waived: {reason}" if reason else "API evidence waiver requires an explicit Feature-specific reason."
     (evidence_dir / "screenshots.txt").write_text(screenshots_text + "\n", encoding="utf-8")
     (evidence_dir / "api.txt").write_text(api_text + "\n", encoding="utf-8")
-    summary_status = "pass" if all(status in {"pass", "waived"} for status in [tests_status, build_status, screenshots_status, api_status]) else "fail"
+    acceptance_complete = bool(data.get("acceptance")) and bool(data.get("scope", {}).get("in"))
+    summary_status = "pass" if acceptance_complete and all(status in {"pass", "waived"} for status in [tests_status, build_status, screenshots_status, api_status]) else "fail"
     write_markdown_managed_section(
         evidence_dir / "summary.md",
         "\n".join(
@@ -178,6 +238,7 @@ def main() -> int:
                 f"- build: {build_status}",
                 f"- screenshots: {screenshots_status}",
                 f"- api: {api_status}",
+                f"- acceptance_declared: {str(acceptance_complete).lower()}",
                 "- lint: 已通过 build 证据中的 git diff --check 覆盖。",
                 "- risk: 未授权 commit、push、deploy、真实 API、状态提升。",
                 "",
@@ -214,6 +275,12 @@ def main() -> int:
     data["loop"]["iteration"] = int(data["loop"].get("iteration", 0)) + 1
     write_feature(feature_file(feature_dir), data)
     update_queue_entry(data["id"], status="evaluated" if not all_blockers else "blocked", role="Evaluator")
+    append_runtime_log(
+        data["id"], role="Evaluator", status="evaluated" if not all_blockers else "blocked",
+        input_summary="运行 Feature 专属验收命令与公共结构校验。",
+        output_summary=f"tests={tests_status}, build={build_status}, summary={summary_status}",
+        evidence=f"features/active/{feature_dir.name}/evidence/summary.md",
+    )
     append_journal(
         feature_dir,
         iteration=data["loop"]["iteration"],
@@ -240,7 +307,7 @@ def main() -> int:
         f"screenshots={screenshots_status} api={api_status} summary={summary_status} "
         f"governance_blockers={len(governance_blockers)} close_candidate={str(not all_blockers).lower()}"
     )
-    return 0 if not blockers else 1
+    return 0 if not all_blockers else 1
 
 
 if __name__ == "__main__":

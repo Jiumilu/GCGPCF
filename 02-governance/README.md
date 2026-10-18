@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-F949595C37
 title: 治理规范
 project: WAME
-related_projects: [GPC, WAME, KDS, GPCF]
+related_projects: [GPC, WAME, KDS, XGD, GPCF, Studio]
 domain: governance
 status: controlled
 version: v1.0
@@ -60,6 +60,7 @@ KDS 路径前缀：`开发/12-GPCF/02-governance/`
 | GPCF-DOC-5E60043D38 | GlobalCloud 项目群 Headroom LCX 全量实施方案与执行提示词 | 02-governance/GlobalCloud项目群Headroom-LCX全量实施方案与执行提示词.md | WAME | controlled |
 | GPCF-DOC-2BBAE6E546 | GlobalCloud 项目群 Headroom 接入应用与成本评估模型 | 02-governance/GlobalCloud项目群Headroom接入应用与成本评估模型.md | WAME | controlled |
 | GPCF-DOC-AC66DE8415 | GlobalCloud 项目群 KDS 开发空间安全规范 | 02-governance/GlobalCloud项目群KDS开发空间安全规范.md | WAME | controlled |
+| GPCF-DOC-C60B81A4D2 | GlobalCloud 项目群 Codex-DSH-Hermes 协同开发与运行方案 | 02-governance/GlobalCloud项目群Codex-DSH-Hermes协同开发与运行方案.md | WAME | controlled |
 | GPCF-DOC-785AEA3125 | GlobalCloud项目群WAS／Ontology全量实施方案与执行提示词 | 02-governance/GlobalCloud项目群WAS／Ontology全量实施方案与执行提示词.md | WAME | controlled |
 | GPCF-DOC-D2373AEE37 | GlobalCloud 项目群在 Codex 中的模型分工与成本控制方案 | 02-governance/GlobalCloud项目群在Codex中的模型分工与成本控制方案.md | WAME | controlled |
 | GPCF-DOC-PROJECT-GROUP-MASTER-PLAN-GOVERNANCE-20260624 | GlobalCloud 项目群总体方案治理专项目标与路线图 | 02-governance/GlobalCloud项目群总体方案治理专项目标与路线图.md | WAME | controlled |

@@ -51,7 +51,7 @@ KDS 路径前缀：`开发/12-GPCF/01-architecture/`
 | GPCF-DOC-3DBC8DC5C3 | GlobalCloud 智慧工厂专项架构图集 | 01-architecture/GlobalCloud智慧工厂专项架构图集.md | GPCF | controlled |
 | GPCF-DOC-1DCB795545 | GlobalCloud 绿色供应链体系进一步梳理与提示词库 | 01-architecture/GlobalCloud智慧工厂进一步梳理与提示词库.md | GPCF | controlled |
 | GPCF-DOC-B2A5E41836 | GlobalCloud 绿色供应链体系项目群控制表 | 01-architecture/GlobalCloud智慧工厂项目群控制表.md | GPCF | controlled |
-| GPCF-DOC-475051A08A | GlobalCloud 绿色供应链体系项目群架构图 | 01-architecture/GlobalCloud智慧工厂项目群架构图.md | GPCF | controlled |
+| GPCF-DOC-475051A08A | GlobalCloud 绿色供应链体系项目群架构图 | 01-architecture/GlobalCloud智慧工厂项目群架构图.md | GPCF | archive |
 | GPCF-DOC-18B774FB34 | GlobalCloud绿色供应链体系-WIKI宪法体系与葛化项目映射分析 | 01-architecture/GlobalCloud绿色供应链体系-WIKI宪法体系与葛化项目映射分析.md | GPCF | controlled |
 | GPCF-DOC-0CCC5F2950 | GlobalCloud绿色供应链体系WAME控制塔与治理门禁图 | 01-architecture/GlobalCloud绿色供应链体系WAME控制塔与治理门禁图.md | GPCF | controlled |
 | GPCF-DOC-31CB143A7C | GlobalCloud绿色供应链体系WAME控制塔治理架构图 | 01-architecture/GlobalCloud绿色供应链体系WAME控制塔治理架构图.md | GPCF | controlled |
@@ -63,7 +63,7 @@ KDS 路径前缀：`开发/12-GPCF/01-architecture/`
 | GPCF-DOC-2656290CFC | GlobalCloud 绿色供应链体系总体实施路线与交付保障方案 | 01-architecture/GlobalCloud绿色供应链体系总体实施路线与交付保障方案.md | GPCF | controlled |
 | GPCF-DOC-6ADEF5F42F | GlobalCloud 绿色供应链体系总架构 | 01-architecture/GlobalCloud绿色供应链体系总架构.md | GPCF | controlled |
 | GPCF-DOC-6B386000D3 | GlobalCloud 绿色供应链体系整体评估模型与100分优化方案 | 01-architecture/GlobalCloud绿色供应链体系整体评估模型与100分优化方案.md | GPCF | controlled |
-| GPCF-DOC-4DF13CF33D | GlobalCloud 绿色供应链体系最新架构图 | 01-architecture/GlobalCloud绿色供应链体系最新架构图.md | GPCF | controlled |
+| GPCF-DOC-4DF13CF33D | GlobalCloud 绿色供应链体系最新架构图 | 01-architecture/GlobalCloud绿色供应链体系最新架构图.md | GPCF | archive |
 | GPCF-DOC-5BF9469733 | GlobalCloud 绿色供应链体系真实层次架构图 | 01-architecture/GlobalCloud绿色供应链体系真实层次架构图.md | GPCF | controlled |
 | GPCF-DOC-3DB47E5509 | GlobalCloud 绿色供应链平台业务流架构图 | 01-architecture/GlobalCloud绿色供应链平台业务流架构图.md | GPCF | controlled |
 | GPCF-DOC-AA2468EDC8 | GlobalCloud 绿色供应链平台主架构与宪法约束融合建议 | 01-architecture/GlobalCloud绿色供应链平台主架构与宪法约束融合建议.md | GPCF | controlled |
@@ -82,3 +82,6 @@ KDS 路径前缀：`开发/12-GPCF/01-architecture/`
 | GPCF-DOC-XWAIL-V12-VALIDATOR-RULES-20260623 | XWAIL-V1.2-Validator规则清单 | 01-architecture/XWAIL-V1.2-Validator规则清单.md | GPCF | controlled |
 | GPCF-DOC-XWAIL-V12-DRAFT-20260623 | XWAIL可扩展世界资产信息建模语言规范V1.2草案 | 01-architecture/XWAIL可扩展世界资产信息建模语言规范V1.2草案.md | GPCF | controlled |
 | GPCF-DOC-1D47877518 | 基于 GlobalCloud 项目群的 GlobalCloud 绿色供应链体系架构设计方案 | 01-architecture/基于GlobalCloud项目群的智慧工厂架构设计方案.md | GPCF | controlled |
+| GPCF-DOC-GROUP-SYSTEM-ARCHITECTURE-20261017 | GlobalCloud 项目群系统架构图 | 01-architecture/GlobalCloud项目群系统架构图.md | GPCF | controlled |
+| GPCF-DOC-GROUP-ARCH-ITERATION-20261017 | GlobalCloud 项目群总体架构迭代分析（合理性与可行性 + 优化方案 + 系统逻辑架构） | 01-architecture/GlobalCloud项目群总体架构迭代分析_v1.0.md | GPCF | controlled |
+| GPCF-DOC-GROUP-ARCH-DEEPEN-20261017 | GlobalCloud 项目群架构深化分析（ADR 决策集 · 依赖网络 · 质量属性 · 场景走查 · 风险矩阵） | 01-architecture/GlobalCloud项目群架构深化分析_v1.0.md | GPCF | controlled |

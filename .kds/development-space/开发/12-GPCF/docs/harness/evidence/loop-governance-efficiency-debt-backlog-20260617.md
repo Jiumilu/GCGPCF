@@ -41,7 +41,7 @@ loop_round_efficiency_audit=pass total_rounds=335 audit_checked=30 hard_checked=
 
 该积压项用于持续暴露历史效率债，同时保护最新硬窗口。它不批量重写历史轮次记录，也不改变 GFIS 业务状态。
 
-## 审查处置模板
+## Review Disposition Template（审查处置模板）
 
 | Field | Required Meaning |
 |---|---|
@@ -97,6 +97,9 @@ Shell 记录保持受控例外，除非另行授权历史迁移计划。
 
 ## 非声明事项
 
-- 本积压记录不证明 GFIS runtime SOP E2E 已通过。
-- 本积压记录不创建 source-of-record、runtime primary key、review queue、runtime intake、WAME review、verified artifact、accepted 或 integrated 状态。
+- This backlog does not rewrite historical round records in bulk.
+- This backlog does not prove GFIS runtime SOP E2E passed.
+- This backlog does not create source-of-record, runtime primary key, review queue, runtime intake, WAME review, verified artifact, accepted, or integrated status.
+- 本积压记录不证明 GFIS runtime SOP E2E 已通过（同义中文表述，绑定短语见上）。
+- 本积压记录不创建 source-of-record、runtime primary key、review queue、runtime intake、WAME review、verified artifact、accepted 或 integrated 状态（同义中文表述，绑定短语见上）。
 - 本积压记录不授权生产写入、外部 API 写入、schema sync、bench migrate、部署、权限变更、commit 或 push。
