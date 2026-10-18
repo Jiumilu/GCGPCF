@@ -13,11 +13,22 @@ loop:
   current_step: commit
   iteration: 2
 evidence:
-  tests: pass
-  build: not_required
-  screenshots: not_required
-  api: not_required
+  tests: fail
+  build: waived
+  screenshots: waived
+  api: waived
   summary: pass
 blockers:
+  - 历史 tests.txt 只有 (no output)，缺少可回放测试；原记录不证明真实供应商入驻功能已交付。
+delivery_kind: documentation_only
+verification:
+  waivers:
+    build: 本 Feature 的实际产物仅为工作区流程样本，没有可构建的业务应用。
+    screenshots: 本 Feature 没有交付产品界面。
+    api: 本 Feature 没有调用或交付业务 API。
+evidence_review:
+  reviewed_at: "2026-10-18"
+  result: not_replayable
+  boundary: 历史 done 只表示流程样本曾被关闭，不代表 supplier-onboarding 业务功能验收。
 created_at: "2026-07-07T22:40:10+00:00"
-updated_at: "2026-07-07T22:40:31+00:00"
+updated_at: "2026-10-18T08:21:54+00:00"
