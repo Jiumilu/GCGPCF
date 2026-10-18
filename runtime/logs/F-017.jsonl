@@ -1,0 +1,1 @@
+{"timestamp": "2026-10-18T11:33:54+00:00", "feature_id": "F-017", "role": "Evaluator", "status": "blocked", "input": "治理状态校正：Feature 已记录未解除阻塞项。", "output": "队列状态 evaluated -> blocked；角色不变，未进行验收。", "evidence": "features/active/F-017-cwme-city-world-model-engine/feature.yaml blockers"}

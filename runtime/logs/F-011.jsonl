@@ -1,1 +1,2 @@
 {"timestamp": "2026-07-12T09:57:45+00:00", "feature_id": "F-011", "role": "Dispatcher", "status": "plan", "input": "进入 Studio 真实工作台页面闭环，优先使用既有 WAME->Studio 主线和现有证据锚点", "output": "Dispatcher -> Planner；status=plan", "evidence": "runtime/queue.json 与 runtime/state.json。"}
+{"timestamp": "2026-10-18T11:54:02+00:00", "feature_id": "F-011", "role": "Evaluator", "status": "blocked", "input": "治理状态校正：F-011 仍缺交付范围、验收条目及专属证据命令。", "output": "队列状态 evaluated -> blocked；角色不变，未进行验收。", "evidence": "python3 scripts/gpcf_check_evidence.py F-011 --check-only: close_candidate=false"}

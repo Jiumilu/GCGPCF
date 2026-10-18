@@ -39,8 +39,19 @@ def select_feature(feature_id: str | None) -> str:
             raise SystemExit(f"FAIL: feature not in runtime queue: {feature_id}")
         return feature_id
     for entry in entries:
-        if entry.get("status") not in {"closed", "archived"}:
-            return str(entry["id"])
+        if entry.get("status") in {"closed", "archived", "blocked"}:
+            continue
+        if entry.get("status") == "commit" and entry.get("current_role") == "Recorder":
+            continue
+        feature_id = str(entry["id"])
+        data = read_feature(feature_file(find_feature(feature_id)))
+        if data.get("blockers"):
+            continue
+        if entry.get("current_role") != "Dispatcher" and (
+            not data.get("scope", {}).get("in") or not data.get("acceptance")
+        ):
+            continue
+        return feature_id
     raise SystemExit("FAIL: no dispatchable feature in runtime queue")
 
 

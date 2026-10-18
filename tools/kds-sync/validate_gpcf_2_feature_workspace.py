@@ -98,6 +98,28 @@ def validate_feature_dir(path: Path) -> None:
     validate_feature_document_paths(path)
 
 
+def validate_blocker_queue_status(feature_id: str, blockers: list[str], queue_status: str) -> None:
+    require(
+        not blockers or queue_status in {"blocked", "repair"},
+        f"active feature with blockers is still schedulable: {feature_id}",
+    )
+    require(
+        queue_status != "blocked" or bool(blockers),
+        f"blocked feature has no blocker reason: {feature_id}",
+    )
+
+
+def validate_planning_queue_status(feature_id: str, data: dict, entry: dict) -> None:
+    if entry.get("current_role") in {"Dispatcher", "Planner"}:
+        return
+    scope = data.get("scope") or {}
+    if not scope.get("in") or not data.get("acceptance"):
+        require(
+            entry.get("status") == "blocked",
+            f"active feature beyond planning lacks scope.in or acceptance and is not blocked: {feature_id}",
+        )
+
+
 def main() -> int:
     for directory in [
         "docs/architecture",
@@ -220,6 +242,12 @@ def main() -> int:
         data = read_feature(path / "feature.yaml")
         if path.parent.name == "active":
             require(data["id"] in queued_ids, f"active feature missing runtime queue entry: {data['id']}")
+            require(
+                entries_by_id[data["id"]].get("project") == data["project"],
+                f"active feature queue project mismatch: {data['id']}",
+            )
+            validate_blocker_queue_status(data["id"], data.get("blockers") or [], entries_by_id[data["id"]].get("status"))
+            validate_planning_queue_status(data["id"], data, entries_by_id[data["id"]])
 
     print(
         "gpcf_2_feature_workspace=pass "
