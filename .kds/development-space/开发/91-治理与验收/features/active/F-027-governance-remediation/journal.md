@@ -113,3 +113,9 @@ superseded_by: []
 - GitHub Actions 的 `repository-checks` 在 push 与 pull_request 两次运行中均为 success；PR 当前可合并。
 - main 分支已要求 GitHub Actions 提供的 `repository-checks` 通过，启用严格更新检查和管理员强制执行；禁止强制推送与删除。
 - 本轮仅确认工程门禁，未合并 PR，未提升 Feature 或业务验收状态。
+
+### 2026-10-18 合并后核验
+
+- 用户授权后，PR #1 已合并到 main；合并提交 `29f6f09da` 的 `repository-checks` 为 success。
+- main 仍强制要求 GitHub Actions 提供该检查，严格更新和管理员强制执行已核对。
+- F-027 继续为 active：项目方案候选、历史 Feature 证据和文档人工复核债均未关闭。
