@@ -29,5 +29,18 @@ evidence:
   api: waived
   summary: pass
 blockers:
+verification:
+  tests:
+    - python3 -m pytest tests/test_gpcf_evidence_gate_profile.py -q -p no:cacheprovider
+    - python3 tools/kds-sync/validate_gpcf_2_feature_workspace.py
+  build:
+    - python3 -m py_compile scripts/gpcf_check_evidence.py scripts/gpcf_feature_lib.py
+  waivers:
+    screenshots: 本 Feature 改进的是证据采集门禁，没有产品界面交付。
+    api: 本 Feature 不执行真实外部 API；测试验证缺少 API 范围证据时会阻断。
+evidence_review:
+  reviewed_at: "2026-10-18"
+  result: replayed_local
+  finding: 修复 build.txt 被文件名中的 ui 子串误识别为界面证据的缺陷。
 created_at: "2026-07-07T23:24:58+00:00"
-updated_at: "2026-07-08T02:42:07+00:00"
+updated_at: "2026-10-18T08:36:21+00:00"
