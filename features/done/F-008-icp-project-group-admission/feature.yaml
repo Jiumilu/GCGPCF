@@ -25,11 +25,21 @@ loop:
   current_step: commit
   iteration: 9
 evidence:
-  tests: pass
-  build: pass
+  tests: fail
+  build: fail
   screenshots: waived
   api: waived
   summary: pass
 blockers:
+  - 历史 tests.txt 未运行 ICP 登记校验，build.txt 仅编译 GPCF 脚本；缺少 Feature 专属测试/构建命令。
+  - 历史验收要求保持 active candidate，但当前 Feature 记录为 done；关闭边界未经现行门禁回放。
+verification:
+  waivers:
+    screenshots: 本 Feature 只登记 ICP 项目和状态边界，没有交付产品界面。
+    api: 本 Feature 不调用真实外部或 KDS API，只检查本地项目群登记。
+evidence_review:
+  reviewed_at: "2026-10-18"
+  result: not_replayable
+  boundary: 历史 done 仅保留关闭记录；ICP 项目状态仍为 candidate/partial/human_required，不表示业务验收。
 created_at: "2026-07-12T02:06:05+00:00"
-updated_at: "2026-07-12T06:08:37+00:00"
+updated_at: "2026-10-18T17:10:42+08:00"
