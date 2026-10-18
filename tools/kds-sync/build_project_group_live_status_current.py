@@ -157,6 +157,12 @@ def stable_from_previous(current: list[str], previous: list[str], bootstrap: boo
     return sorted(current_set & set(previous))
 
 
+def stable_for_snapshot(current: list[str], previous_observed: list[str], previous_stable: list[str], bootstrap: bool, check_only: bool) -> list[str]:
+    if check_only and not bootstrap:
+        return previous_stable
+    return stable_from_previous(current, previous_observed, bootstrap)
+
+
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--json-out", default=str(DEFAULT_JSON))
@@ -205,8 +211,8 @@ def main() -> int:
         }
 
     volatile_dirty = sorted(set(observed_dirty) & set(VOLATILE_DIRTY_ALLOWLIST))
-    stable_dirty = stable_from_previous(observed_dirty, previous_observed_dirty, bootstrap)
-    stable_ahead = stable_from_previous(observed_ahead, previous_observed_ahead, bootstrap)
+    stable_dirty = stable_for_snapshot(observed_dirty, previous_observed_dirty, previous.get("stable_dirty", []), bootstrap, args.check_only)
+    stable_ahead = stable_for_snapshot(observed_ahead, previous_observed_ahead, previous.get("stable_ahead", []), bootstrap, args.check_only)
     review_boundary = sorted(set(stable_dirty) | set(volatile_dirty) | set(sensitive_repos))
 
     generated_at = datetime.now(TZ)
