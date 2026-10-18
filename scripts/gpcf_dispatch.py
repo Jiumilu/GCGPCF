@@ -70,6 +70,14 @@ def main() -> int:
     data = read_feature(feature_file(feature_dir))
     if feature_dir.parent == ACTIVE and data.get("blockers"):
         raise SystemExit(f"FAIL: unresolved blockers for Feature: {feature_id}")
+    if feature_dir.parent == ACTIVE and (current_role != "Dispatcher" or entry.get("current_role") != "Dispatcher"):
+        missing = []
+        if not data.get("scope", {}).get("in"):
+            missing.append("scope.in")
+        if not data.get("acceptance"):
+            missing.append("acceptance")
+        if missing:
+            raise SystemExit(f"FAIL: Feature planning is incomplete ({', '.join(missing)}): {feature_id}")
     if feature_dir.parent != ACTIVE:
         next_role = "Recorder"
         next_status = "closed" if str(data.get("status")) == "done" else str(data.get("status"))

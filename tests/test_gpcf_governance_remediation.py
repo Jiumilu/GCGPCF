@@ -183,6 +183,38 @@ def test_dispatch_does_not_advance_feature_with_unresolved_blockers(tmp_path, mo
         gpcf_dispatch.main()
 
 
+@pytest.mark.parametrize(
+    "scope_in,acceptance,role,missing",
+    [
+        ([], ["验收完成"], [], "scope.in"),
+        (["交付范围"], [], [], "acceptance"),
+        ([], [], ["--role", "Dispatcher"], "scope.in, acceptance"),
+    ],
+)
+def test_dispatch_requires_planning_before_implementation(tmp_path, monkeypatch, scope_in, acceptance, role, missing):
+    monkeypatch.syspath_prepend(str(ROOT / "scripts"))
+    import gpcf_dispatch
+
+    active = tmp_path / "active"
+    feature_dir = active / "F-012-sample"
+    feature_dir.mkdir(parents=True)
+    monkeypatch.setattr(gpcf_dispatch, "ACTIVE", active)
+    monkeypatch.setattr(gpcf_dispatch, "select_feature", lambda _: "F-012")
+    monkeypatch.setattr(gpcf_dispatch, "queue_entry", lambda _: {"current_role": "Planner", "status": "plan"})
+    monkeypatch.setattr(gpcf_dispatch, "find_feature", lambda _: feature_dir)
+    monkeypatch.setattr(gpcf_dispatch, "feature_file", lambda _: feature_dir / "feature.yaml")
+    monkeypatch.setattr(gpcf_dispatch, "read_feature", lambda _: {
+        "status": "active", "blockers": [], "scope": {"in": scope_in},
+        "acceptance": acceptance, "loop": {"iteration": 1},
+    })
+    for name in ("write_feature", "update_queue_entry", "append_runtime_log", "append_journal"):
+        monkeypatch.setattr(gpcf_dispatch, name, lambda *args, **kwargs: pytest.fail("incomplete planning wrote state"))
+    monkeypatch.setattr(sys, "argv", ["gpcf_dispatch.py", "F-012", *role, "--dry-run"])
+
+    with pytest.raises(SystemExit, match=missing):
+        gpcf_dispatch.main()
+
+
 def test_project_registry_matches_current_project_scope():
     registry = yaml.safe_load((ROOT / "config/project-group-projects.yaml").read_text(encoding="utf-8"))
     projects = registry["projects"]
