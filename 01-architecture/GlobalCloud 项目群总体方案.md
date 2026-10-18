@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-GLOBALCLOUD-PROJECT-GROUP-MASTER-PLAN-20260626
 title: GlobalCloud 项目群总体方案
 project: GPCF
-related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio, ICP, SpaceAIStudio, AAAS, WAS, XWAIL, SOP, PQC, SpaceAI, World, GCMEM, WAE]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio, ICP, SpaceAIStudio, AAAS, WAS, XWAIL, SOP, PQC, SpaceAI, World, GCMEM, WAE, Project]
 domain: architecture
 status: controlled
 version: v1.0
@@ -31,7 +31,7 @@ superseded_by: []
 
 ## 2. 项目群范围
 
-项目群当前纳入 24 个项目，以 `config/project-group-projects.yaml` 为当前范围事实源（2026-10-10 新增 PQC、SpaceAI、SpaceAIStudio；2026-10-12 新增 WAE 世界资产浏览器；2026-10-16 新增 GCMEM 长期记忆服务）。2026-10-18 用户明确确认 WAE 纳入当前项目群范围；此项仅确认项目范围，不提升 WAE 方案、运行或交付状态。18 项目及更早证据保持历史范围，不因纳管重算。2026-06-28 以前形成的17项目证据继续作为历史基线，不因新增 ICP 回写或重算：
+项目群当前纳入 25 个项目，以 `config/project-group-projects.yaml` 为当前范围事实源（2026-10-10 新增 PQC、SpaceAI、SpaceAIStudio；2026-10-12 新增 WAE 世界资产浏览器；2026-10-16 新增 GCMEM 长期记忆服务）。2026-10-18 用户明确确认 WAE 与 GlobalCloud Project 纳入当前项目群范围；此项仅确认项目范围，不提升方案、运行或交付状态。18 项目及更早证据保持历史范围，不因纳管重算。2026-06-28 以前形成的17项目证据继续作为历史基线，不因新增 ICP 回写或重算：
 
 | 项目 | 主职责 |
 |---|---|
@@ -62,6 +62,7 @@ superseded_by: []
 | SpaceAI | CWME 城市世界模型引擎归档与本地应用区；安防监控平台唯一开发主目录为 GlobalCloud SpaceAI Platform。两个目录沿用同一私有远端历史；本地样板只用合成数据，业务验收和生产发布未确认 |
 
 | GCMEM | 基于 KDS 的长期记忆服务：记忆账本＋语义检索＋夜间挖掘迭代；承接 mem0 退役后的跨会话长期记忆（2026-10-16 立项；WAS-GCMEM） |
+| Project | 团队研发协作项目；项目级方案及只读对接边界待验证，不承担 GPCF 交付或验收状态裁决 |
 
 ## 2.2 GC-ICP 产业控制平面边界
 
