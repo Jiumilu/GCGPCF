@@ -27,5 +27,5 @@ superseded_by: []
 - api: waived
 - acceptance_declared: true
 - lint: 已通过 build 证据中的 git diff --check 覆盖。
-- risk: 整改 PR #1 已通过远端强制检查但尚未合并；项目方案、历史 Feature 证据与文档复核仍有未关闭项。
+- risk: 整改 PR #1 已合并且 main 工作流通过；项目方案、历史 Feature 证据与文档复核仍有未关闭项。
 <!-- GPCF_EVIDENCE_GATE_END -->
