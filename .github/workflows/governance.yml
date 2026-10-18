@@ -15,4 +15,5 @@ jobs:
       - run: python -m pip install -r requirements-dev.txt
       - run: python -m pytest tests/ -q
       - run: python tools/kds-sync/loop_document_gate.py --check-only --repository-only
+      - run: python tools/kds-sync/validate_project_group_openspec_coverage.py
       - run: python tools/kds-sync/check_python_bytecode.py

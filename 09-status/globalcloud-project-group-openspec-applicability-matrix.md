@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-OPEN-SPEC-18-PROJECT-MATRIX-20260712
 title: GlobalCloud 项目群 OpenSpec 适用性矩阵
 project: GPCF
-related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio, ICP, SpaceAIStudio, GCMEM]
+related_projects: [GFIS, GPC, PVAOS, WAME, WAE, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio, ICP, SpaceAIStudio, GCMEM]
 domain: status
 status: controlled
 version: v1.0
@@ -27,6 +27,7 @@ superseded_by: []
 | WAS | was | conditional | `openspec/changes/was-<change>/` | `gpcf_new_feature --project was` | Governance | required | required |
 | XiaoC | xiaoc | conditional | `openspec/changes/xiaoc-<change>/` | `gpcf_new_feature --project xiaoc` | Delivery | required | required |
 | WAME | wame | required | `openspec/changes/wame-<change>/` | `gpcf_new_feature --project wame` | Governance | required | required |
+| WAE | wae | conditional | `openspec/changes/wae-<change>/` | `gpcf_new_feature --project wae` | Governance | required | required |
 | GPC | gpc | required | `openspec/changes/gpc-<change>/` | `gpcf_new_feature --project gpc` | Governance | required | required |
 | Studio | studio | conditional | `openspec/changes/studio-<change>/` | `gpcf_new_feature --project studio` | Delivery | required | required |
 | GPCF | gpcf | required | `openspec/changes/gpcf-<change>/` | `gpcf_new_feature --project gpcf` | Governance | required | required |
@@ -51,7 +52,7 @@ superseded_by: []
 
 ## 状态边界
 
-- 当前 23 项目均有中央入口，`waived=0`；因此无豁免债务。
+- 当前 24 项目均有中央入口，`waived=0`；因此无豁免债务。
 - 中央入口不表示已向各独立项目仓安装 OpenSpec。
 - apply 前必须创建或绑定 Feature；归档前必须通过 Evidence 与文档门禁。
 - Harness 保留最终裁决权；未经人工确认不得提升验收或生产状态。
