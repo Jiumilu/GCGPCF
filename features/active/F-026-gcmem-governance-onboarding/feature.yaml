@@ -29,8 +29,7 @@ evidence:
   api: waived
   summary: pass
 blockers:
-  - GPCF 中央文档门禁 rework_required：既有 missing_metadata、UI control 与 document_pollution
-  - 技能链总检查：既有 wae 目录未列入 23 项目登记
+  - Feature 专属 tests/build 验收命令未声明，screenshots/api 豁免缺少本 Feature 的理由；现行 Evidence Gate 不可关闭
 ui_product_first_control:
   version: v1.1
   applicability: indirect
