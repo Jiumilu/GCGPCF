@@ -24,11 +24,21 @@ loop:
   current_step: commit
   iteration: 11
 evidence:
-  tests: pass
-  build: pass
+  tests: fail
+  build: fail
   screenshots: waived
   api: waived
   summary: pass
 blockers:
+  - 历史 tests.txt 只验证 18 项目工作区，没有运行 OpenSpec 覆盖校验；缺少 Feature 专属测试/构建命令。
+  - 历史验收基线为 18 项目，不能直接证明当前 24 项目口径。
+verification:
+  waivers:
+    screenshots: 本 Feature 只交付 OpenSpec 治理矩阵和项目入口，没有产品界面。
+    api: 本 Feature 不调用真实外部或 KDS API，只检查本地治理文件。
+evidence_review:
+  reviewed_at: "2026-10-18"
+  result: not_replayable
+  boundary: 历史 done 仅保留 18 项目治理工作记录，不表示当前 24 项目覆盖已由原证据验证。
 created_at: "2026-07-12T05:45:26+00:00"
-updated_at: "2026-07-12T06:07:06+00:00"
+updated_at: "2026-10-18T17:10:42+08:00"
