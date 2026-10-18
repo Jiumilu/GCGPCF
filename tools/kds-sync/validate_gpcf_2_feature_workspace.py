@@ -109,6 +109,17 @@ def validate_blocker_queue_status(feature_id: str, blockers: list[str], queue_st
     )
 
 
+def validate_planning_queue_status(feature_id: str, data: dict, entry: dict) -> None:
+    if entry.get("current_role") in {"Dispatcher", "Planner"}:
+        return
+    scope = data.get("scope") or {}
+    if not scope.get("in") or not data.get("acceptance"):
+        require(
+            entry.get("status") == "blocked",
+            f"active feature beyond planning lacks scope.in or acceptance and is not blocked: {feature_id}",
+        )
+
+
 def main() -> int:
     for directory in [
         "docs/architecture",
@@ -236,6 +247,7 @@ def main() -> int:
                 f"active feature queue project mismatch: {data['id']}",
             )
             validate_blocker_queue_status(data["id"], data.get("blockers") or [], entries_by_id[data["id"]].get("status"))
+            validate_planning_queue_status(data["id"], data, entries_by_id[data["id"]])
 
     print(
         "gpcf_2_feature_workspace=pass "
