@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/12-GPCF/tools/kds-sync/README.md
 source_path: tools/kds-sync/README.md
 sync_direction: bidirectional
-last_reviewed: 2026-10-16
+last_reviewed: 2026-10-18
 supersedes: []
 superseded_by: []
 ---
@@ -20,10 +20,11 @@ superseded_by: []
 
 用途：维护 GlobalCloud GPCF 文档控制体系、目录 README、KDS `开发` 空间本地镜像和同步台账。
 
-运行：
+运行：先只读检查，再按源文件限定写入。全量重建须显式使用 `--apply-full` 并先审查影响范围。
 
 ```bash
-python3 tools/kds-sync/document_control.py
+python3 tools/kds-sync/document_control.py --check
+DOCUMENT_CONTROL_SCOPE='path/to/document.md' python3 tools/kds-sync/document_control.py
 ```
 
 输出：

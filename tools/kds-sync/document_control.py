@@ -820,7 +820,7 @@ def public_space_summary_rows(records: list[dict[str, object]]) -> list[list[str
     return rows
 
 
-def write_registers(records: list[dict[str, object]]) -> None:
+def render_registers(records: list[dict[str, object]]) -> dict[str, str]:
     rows = []
     for r in records:
         rows.append([
@@ -846,7 +846,6 @@ def write_registers(records: list[dict[str, object]]) -> None:
     content += "## 全量文档清单\n\n"
     content += markdown_table(["doc_id", "title", "source_path", "project", "related_projects", "domain", "status", "kds_path"], rows)
     content += "\n"
-    write_text(ROOT / "09-status/globalcloud-document-control-register.md", content)
 
     sync_rows = []
     for r in records:
@@ -872,7 +871,6 @@ def write_registers(records: list[dict[str, object]]) -> None:
     sync += "## 全量同步清单\n\n"
     sync += markdown_table(["doc_id", "git_source", "kds_path", "sync_direction", "kds_api_status"], sync_rows)
     sync += "\n"
-    write_text(ROOT / "09-status/kds-development-space-sync-register.md", sync)
 
     dep_rows = []
     for r in records:
@@ -889,7 +887,54 @@ def write_registers(records: list[dict[str, object]]) -> None:
     dep += "用途：登记历史、过期、被替代和运行类文档，避免误用为当前项目完成状态或当前业务口径。\n\n"
     dep += markdown_table(["doc_id", "title", "source_path", "status", "kds_path"], dep_rows)
     dep += "\n"
-    write_text(ROOT / "09-status/document-deprecation-register.md", dep)
+    return {
+        "09-status/globalcloud-document-control-register.md": content,
+        "09-status/kds-development-space-sync-register.md": sync,
+        "09-status/document-deprecation-register.md": dep,
+    }
+
+
+def write_registers(records: list[dict[str, object]]) -> None:
+    for source_path, content in render_registers(records).items():
+        write_text(ROOT / source_path, content)
+
+
+def merge_scoped_register(previous: str, generated: str, scope_paths: set[str]) -> str:
+    lines = previous.splitlines(keepends=True)
+    generated_lines = generated.splitlines(keepends=True)
+    for source_path in sorted(scope_paths):
+        marker = f"| {source_path} |"
+        old_rows = [i for i, line in enumerate(lines) if line.startswith("| ") and marker in line]
+        new_rows = [line for line in generated_lines if line.startswith("| ") and marker in line]
+        if len(old_rows) != len(new_rows) or len(old_rows) > 1:
+            raise ValueError(f"scoped register membership changed for {source_path}; review full reconciliation")
+        if not old_rows:
+            continue
+        old_cells = [cell.strip() for cell in re.split(r"(?<!\\)\|", lines[old_rows[0]].strip("|\n"))]
+        new_cells = [cell.strip() for cell in re.split(r"(?<!\\)\|", new_rows[0].strip("|\n"))]
+        if len(old_cells) == len(new_cells) == 8 and (
+            old_cells[0] != new_cells[0]
+            or old_cells[3] != new_cells[3]
+            or old_cells[6] != new_cells[6]
+            or old_cells[7].split("/")[1:2] != new_cells[7].split("/")[1:2]
+        ):
+            raise ValueError(f"scoped register totals may change for {source_path}; review full reconciliation")
+        lines[old_rows[0]] = new_rows[0]
+    return "".join(lines)
+
+
+def prepare_scoped_registers(records: list[dict[str, object]], scope_paths: set[str]) -> dict[Path, str]:
+    updates: dict[Path, str] = {}
+    for source_path, generated in render_registers(records).items():
+        path = ROOT / source_path
+        updates[path] = merge_scoped_register(read_text(path), generated, scope_paths)
+    return updates
+
+
+def write_scoped_registers(records: list[dict[str, object]], scope_paths: set[str]) -> None:
+    updates = prepare_scoped_registers(records, scope_paths)
+    for path, content in updates.items():
+        write_text(path, content)
 
 
 def readme_records_for(prefix: str, records: list[dict[str, object]]) -> list[dict[str, object]]:
@@ -978,40 +1023,7 @@ def write_generic_readmes(records: list[dict[str, object]]) -> None:
 
 
 def mirror_to_kds(records: list[dict[str, object]]) -> None:
-    kds_root = ROOT / ".kds/development-space"
-    if kds_root.exists():
-        try:
-            shutil.rmtree(kds_root, ignore_errors=True)
-        except OSError:
-            for child in sorted(kds_root.rglob("*"), key=lambda p: len(p.parts), reverse=True):
-                try:
-                    if child.is_dir():
-                        child.rmdir()
-                    else:
-                        child.unlink()
-                except FileNotFoundError:
-                    continue
-            try:
-                kds_root.rmdir()
-            except FileNotFoundError:
-                pass
-    ledger_path = ROOT / ".kds/local-mirror-ledger.jsonl"
-    ledger_path.parent.mkdir(parents=True, exist_ok=True)
-    entries = []
-    for r in records:
-        source = ROOT / str(r["source_path"])
-        target = kds_root / str(r["kds_path"])
-        target.parent.mkdir(parents=True, exist_ok=True)
-        shutil.copy2(source, target)
-        entries.append({
-            "timestamp": datetime.now(timezone.utc).isoformat(),
-            "action": "git_to_kds_local_mirror",
-            "doc_id": r["doc_id"],
-            "source_path": r["source_path"],
-            "kds_path": r["kds_path"],
-            "status": "mirrored",
-        })
-    write_text(ledger_path, "".join(json.dumps(e, ensure_ascii=False) + "\n" for e in entries))
+    mirror_scope_to_kds(records, action="git_to_kds_local_mirror")
 
 
 def parse_scope_paths() -> set[str]:
@@ -1021,12 +1033,11 @@ def parse_scope_paths() -> set[str]:
     return {item.strip() for item in raw.split(",") if item.strip()}
 
 
-def mirror_scope_to_kds(records: list[dict[str, object]]) -> None:
+def mirror_scope_to_kds(records: list[dict[str, object]], *, action: str = "git_to_kds_local_mirror_scoped") -> None:
     kds_root = ROOT / ".kds/development-space"
     ledger_path = ROOT / ".kds/local-mirror-ledger.jsonl"
     ledger_path.parent.mkdir(parents=True, exist_ok=True)
     scoped_sources = {str(r["source_path"]) for r in records}
-    eligible_sources = {rel(path) for path in iter_markdown()}
     existing_entries: list[dict[str, object]] = []
     if ledger_path.exists():
         for line in ledger_path.read_text(encoding="utf-8").splitlines():
@@ -1037,7 +1048,7 @@ def mirror_scope_to_kds(records: list[dict[str, object]]) -> None:
             except json.JSONDecodeError:
                 continue
             source_path = str(entry.get("source_path", ""))
-            if source_path not in scoped_sources and source_path in eligible_sources:
+            if source_path not in scoped_sources:
                 existing_entries.append(entry)
     entries = []
     for r in records:
@@ -1047,7 +1058,7 @@ def mirror_scope_to_kds(records: list[dict[str, object]]) -> None:
         shutil.copy2(source, target)
         entries.append({
             "timestamp": datetime.now(timezone.utc).isoformat(),
-            "action": "git_to_kds_local_mirror_scoped",
+            "action": action,
             "doc_id": r["doc_id"],
             "source_path": r["source_path"],
             "kds_path": r["kds_path"],
@@ -1088,7 +1099,9 @@ def write_kds_readme(records: list[dict[str, object]]) -> None:
 def write_tool_readme() -> None:
     content = "# KDS Sync Tools\n\n"
     content += "用途：维护 GlobalCloud GPCF 文档控制体系、目录 README、KDS `开发` 空间本地镜像和同步台账。\n\n"
-    content += "运行：\n\n```bash\npython3 tools/kds-sync/document_control.py\n```\n\n"
+    content += "运行：先只读检查，再按源文件限定写入。全量重建须显式使用 `--apply-full` 并先审查影响范围。\n\n"
+    content += "```bash\npython3 tools/kds-sync/document_control.py --check\n"
+    content += "DOCUMENT_CONTROL_SCOPE='path/to/document.md' python3 tools/kds-sync/document_control.py\n```\n\n"
     content += "输出：\n\n"
     content += "- `09-status/globalcloud-document-control-register.md`\n"
     content += "- `09-status/kds-development-space-sync-register.md`\n"
@@ -1104,12 +1117,17 @@ def main() -> int:
     mode = parser.add_mutually_exclusive_group()
     mode.add_argument("--check", action="store_true", help="read-only check; exit 1 when source metadata needs rewriting")
     mode.add_argument("--dry-run", action="store_true", help="read-only preview of source metadata rewrites")
+    mode.add_argument("--apply-full", action="store_true", help="explicitly regenerate every document, register, and mirror")
     args = parser.parse_args()
     if args.check or args.dry_run:
         result = inspect_changes()
         print(json.dumps(result, ensure_ascii=False, indent=2))
         return 1 if args.check and result["changed_count"] else 0
     scope_paths = parse_scope_paths()
+    if args.apply_full and scope_paths:
+        parser.error("--apply-full cannot be combined with DOCUMENT_CONTROL_SCOPE")
+    if not scope_paths and not args.apply_full:
+        parser.error("set DOCUMENT_CONTROL_SCOPE for a scoped update or use --apply-full after reviewing the full write impact")
     if scope_paths:
         paths = iter_markdown()
         records = build_records(paths)
@@ -1117,10 +1135,11 @@ def main() -> int:
         missing = sorted(scope_paths - {str(r["source_path"]) for r in scoped_records})
         if missing:
             raise SystemExit(f"{SCOPE_ENV} contains unknown source paths: {', '.join(missing)}")
+        prepare_scoped_registers(records, scope_paths)
         apply_frontmatter(scoped_records)
         paths = iter_markdown()
         records = build_records(paths)
-        write_registers(records)
+        write_scoped_registers(records, scope_paths)
         paths = iter_markdown()
         records = build_records(paths)
         register_records = [r for r in records if str(r["source_path"]) in GENERATED_REGISTERS]
