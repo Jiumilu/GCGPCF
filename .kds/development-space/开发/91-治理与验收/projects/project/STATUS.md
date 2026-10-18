@@ -23,3 +23,11 @@ superseded_by: []
 - 项目节奏状态：`planned`；治理结论上限：`partial/rework`。
 - 边界：团队研发协作项目；不得代替 GPCF 判定 Feature 交付、客户验收或生产状态。
 - 下一步：复核双总控继承、项目级证据和只读接口；确认前不提升状态。
+
+## OpenSpec 入口
+
+- 策略：`required`
+- 中央入口：`openspec/changes/project-<change>/`
+- Feature：`python scripts/gpcf_new_feature.py --project project`
+- 默认 Loop：`Governance`
+- Evidence/Harness：`required/required`
