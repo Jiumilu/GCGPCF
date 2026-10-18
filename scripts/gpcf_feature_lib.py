@@ -22,28 +22,8 @@ RUNTIME = ROOT / "runtime"
 QUEUE_FILE = RUNTIME / "queue.json"
 STATE_FILE = RUNTIME / "state.json"
 PROJECTS = {
-    "aaas",
-    "brain",
-    "was",
-    "xiaoc",
-    "wame",
-    "gpc",
-    "studio",
-    "gpcf",
-    "xwail",
-    "gfis",
-    "mmc",
-    "kds",
-    "xiaog",
-    "pvaos",
-    "sop",
-    "pkc",
-    "xgd",
-    "icp",
-    "pqc",
-    "spaceai",
-    "spaceai-studio",
-    "world",
+    str(item["slug"])
+    for item in yaml.safe_load((ROOT / "config/project-group-projects.yaml").read_text(encoding="utf-8"))["projects"]
 }
 PRIORITIES = {"P0", "P1", "P2", "P3"}
 STEPS = ["plan", "implement", "evaluate", "repair", "commit"]
@@ -128,6 +108,12 @@ def enqueue_feature(data: dict[str, Any], feature_dir: Path) -> None:
     queue["queue"] = entries
     write_json(QUEUE_FILE, queue)
     refresh_runtime_state()
+    append_runtime_log(
+        data["id"], role="Dispatcher", status="queued",
+        input_summary="创建 Feature Workspace。",
+        output_summary=f"已加入运行队列：{feature_dir.relative_to(ROOT).as_posix()}。",
+        evidence=f"{feature_dir.relative_to(ROOT).as_posix()}/feature.yaml",
+    )
 
 
 def update_queue_entry(
@@ -288,6 +274,22 @@ def default_feature(
             "summary": "pending",
         },
         "blockers": [],
+        "ui_product_first_control": {
+            "version": "v1.1",
+            "applicability": "indirect",
+            "user_groups": ["Feature 负责人"],
+            "primary_human_task": goal,
+            "machine_interface_boundary": "机器字段留在证据中；人类入口展示任务、风险和下一步",
+            "gates": {
+                "functional_completeness": "pending",
+                "quality_baseline": "pending",
+                "multi_user_usability": "waived",
+                "task_flow_e2e_status": "pending",
+                "accessibility_status": "waived",
+                "evidence_overexposure_gate": "pending",
+            },
+            "status_ceiling": "partial",
+        },
         "created_at": timestamp,
         "updated_at": timestamp,
     }
@@ -376,10 +378,10 @@ def read_feature(path: Path) -> dict[str, Any]:
     if not isinstance(loaded, dict):
         raise SystemExit(f"FAIL: invalid feature.yaml mapping: {path.relative_to(ROOT)}")
     data: dict[str, Any] = loaded
-    data.setdefault("scope", {"in": [], "out": []})
-    data["scope"].setdefault("in", [])
-    data["scope"].setdefault("out", [])
-    data.setdefault("acceptance", [])
+    data["scope"] = data.get("scope") or {}
+    data["scope"]["in"] = data["scope"].get("in") or []
+    data["scope"]["out"] = data["scope"].get("out") or []
+    data["acceptance"] = data.get("acceptance") or []
     data.setdefault("loop", {})
     data.setdefault("evidence", {})
     data.setdefault("blockers", [])
@@ -395,6 +397,24 @@ def write_feature(path: Path, data: dict[str, Any]) -> None:
 def render_journal(feature_id: str, name: str) -> str:
     return "\n".join(
         [
+            "---",
+            f"doc_id: GPCF-DOC-{feature_id.replace('-', '')}-JOURNAL",
+            f"title: {feature_id} {name}",
+            "project: GPCF",
+            "related_projects: [GPCF]",
+            "domain: governance",
+            "status: controlled",
+            "version: v1.0",
+            "owner: GPCF",
+            "kds_space: 开发",
+            f"kds_path: 开发/91-治理与验收/features/active/{feature_id}-{name}/journal.md",
+            f"source_path: features/active/{feature_id}-{name}/journal.md",
+            "sync_direction: bidirectional",
+            f"last_reviewed: {datetime.now(timezone.utc).date().isoformat()}",
+            "supersedes: []",
+            "superseded_by: []",
+            "---",
+            "",
             f"# {feature_id} {name}",
             "",
             "## LOOP 日志",

@@ -1,0 +1,3 @@
+{"timestamp": "2026-10-17T22:51:27+00:00", "feature_id": "F-026", "role": "Dispatcher", "status": "plan", "input": "确认 GCMEM 私有 Git 仓与纳管范围", "output": "Dispatcher -> Planner；status=plan", "evidence": "GCMEM main/origin/main 与 GPCF 项目登记"}
+{"timestamp": "2026-10-17T22:51:30+00:00", "feature_id": "F-026", "role": "Planner", "status": "implement", "input": "落地项目级方案和中央映射", "output": "Planner -> Builder；status=implement", "evidence": "GCMEM Harness 清单及 GPCF OpenSpec/技能链配置"}
+{"timestamp": "2026-10-17T22:51:35+00:00", "feature_id": "F-026", "role": "Builder", "status": "evaluate", "input": "核验纳管证据及未闭合门禁", "output": "Builder -> Evaluator；status=evaluate", "evidence": "GCMEM 回归、OpenSpec 覆盖与中央文档门禁"}

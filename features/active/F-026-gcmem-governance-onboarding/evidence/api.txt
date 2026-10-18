@@ -1,0 +1,1 @@
+waived: 本 Feature 仅核对治理配置；GCMEM 本机 API 已由项目仓单独实调核验。

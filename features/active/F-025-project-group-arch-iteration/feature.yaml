@@ -1,0 +1,40 @@
+id: F-025
+name: project-group-arch-iteration
+project: gpcf
+status: active
+goal: 总体架构迭代排期执行（老卢 2026-10-17 批准）：P0 落实 O1 WAME 引擎 E1 分期规划（资产主账+模型注册最小集，World 线 A 共建）与 O7 CWME 归位逻辑层口径统一传导；O8 图面重叠修复已完成。P1/P2 项由《GlobalCloud项目群总体架构迭代分析》v1.0 §3 排期表跟踪。
+owner: agent-dev-01
+priority: P0
+scope:
+  in:
+  out:
+acceptance:
+loop:
+  current_step: plan
+  iteration: 0
+evidence:
+  tests: pending
+  build: pending
+  screenshots: pending
+  api: pending
+  summary: pending
+blockers:
+  - 架构迭代分析与分期规划尚需逐项复核；本 Feature 不代表真实开发完成
+ui_product_first_control:
+  version: v1.1
+  applicability: indirect
+  user_groups:
+    - 项目群架构负责人
+    - WAME 与 World 线维护者
+  primary_human_task: 核对架构迭代排期、依赖与未完成事项
+  machine_interface_boundary: 机器字段保留在证据中；人类入口展示排期、依赖和风险
+  gates:
+    functional_completeness: pending
+    quality_baseline: pending
+    multi_user_usability: waived
+    task_flow_e2e_status: pending
+    accessibility_status: waived
+    evidence_overexposure_gate: pending
+  status_ceiling: partial
+created_at: "2026-10-17T08:55:27+00:00"
+updated_at: "2026-10-17T08:55:27+00:00"

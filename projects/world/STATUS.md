@@ -18,7 +18,7 @@ superseded_by: []
 
 # World 状态
 
-- 路径：`../GlobalCloud World`；角色 external；工程初始化，技术栈和业务边界待定。
+- 路径：`../GlobalCloud World`；角色 external；独立仓已有受控总体方案和实施方案，P1 迁移授权、WAME 引擎落点及 Ontology 基线冲突仍待裁定；工程交付状态保持 partial。
 - 私有远端目标：`https://github.com/Jiumilu/GCWorld`，main。
 - project_status: registered；overall_status: partial。
 - authorization：用户于 2026-10-16 授权纳管、本地建仓和私有远端初始同步。

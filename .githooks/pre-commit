@@ -1,0 +1,6 @@
+#!/bin/sh
+set -eu
+python3 tools/kds-sync/loop_document_gate.py --check-only
+python3 tools/kds-sync/document_control.py --check
+python3 tools/kds-sync/check_python_bytecode.py
+python3 -m pytest tests/ -q

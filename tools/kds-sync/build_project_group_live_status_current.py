@@ -10,31 +10,17 @@ import json
 import re
 import subprocess
 import sys
+import yaml
 
 
 ROOT = Path(__file__).resolve().parents[2]
 PROJECT_ROOT = ROOT.parent
 TZ = timezone(timedelta(hours=8))
 
-EXPECTED_REPOS = [
-    "GlobalCloud AAAS",
-    "GlobalCloud Brain",
-    "WAS世界资产体系",
-    "GlobalCloud XiaoC",
-    "GlobalCloud GPC",
-    "GlobalCloud Studio",
-    "GlobalCloud WAE",
-    "GlobalCoud GPCF",
-    "GlobalCloud XWAIL",
-    "GlobalCloud GFIS",
-    "GlobalCloud MMC",
-    "GlobalCloud KDS",
-    "GlobalCloud XiaoG",
-    "GlobalCloud PVAOS",
-    "GlobalCloud SOP",
-    "GlobalCloud PKC",
-    "GlobalCloud XGD",
-]
+REGISTRY = yaml.safe_load((ROOT / "config/project-group-projects.yaml").read_text(encoding="utf-8"))
+EXPECTED_REPOS = [str(project["repo"]) for project in REGISTRY["projects"]]
+if len(EXPECTED_REPOS) != int(REGISTRY["current_project_count"]):
+    raise SystemExit("FAIL: project registry count does not match entries")
 
 VOLATILE_DIRTY_ALLOWLIST = ["GlobalCoud GPCF"]
 FRESHNESS_HOURS = 12
@@ -161,12 +147,14 @@ def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--json-out", default=str(DEFAULT_JSON))
     parser.add_argument("--md-out", default=str(DEFAULT_MD))
+    parser.add_argument("--check-only", action="store_true", help="compare the current snapshot without writing")
     args = parser.parse_args()
 
     json_out = Path(args.json_out)
     md_out = Path(args.md_out)
-    json_out.parent.mkdir(parents=True, exist_ok=True)
-    md_out.parent.mkdir(parents=True, exist_ok=True)
+    if not args.check_only:
+        json_out.parent.mkdir(parents=True, exist_ok=True)
+        md_out.parent.mkdir(parents=True, exist_ok=True)
 
     previous = load_previous(json_out)
     previous_observed_dirty = [str(item) for item in previous.get("observed_dirty", [])]
@@ -231,6 +219,11 @@ def main() -> int:
         snapshot["previous_generated_at"] = previous.get("previous_generated_at")
         generated_at = datetime.fromisoformat(str(snapshot["generated_at"]))
 
+    if args.check_only:
+        same = bool(previous) and previous_snapshot_is_fresh(previous) and semantically_same(previous, snapshot)
+        print(json.dumps({"status": "pass" if same else "fail", "project_count": len(EXPECTED_REPOS), "snapshot_fresh": previous_snapshot_is_fresh(previous), "snapshot_matches": bool(previous) and semantically_same(previous, snapshot)}, ensure_ascii=False))
+        return 0 if same else 1
+
     json_out.write_text(json.dumps(snapshot, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
     md_lines = [
@@ -238,7 +231,7 @@ def main() -> int:
         "doc_id: GPCF-DOC-PROJECTGROUPLIVESTATUSCURRENT20260701",
         "title: GlobalCloud 项目群当前 Live 状态快照",
         "project: GPCF",
-        "related_projects: [AAAS, Brain, WAS, XiaoC, WAME, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD]",
+        "related_projects: [" + ", ".join(str(project["id"]) for project in REGISTRY["projects"]) + "]",
         "domain: harness",
         "type: project_group_live_status_current",
         "status: controlled",
@@ -292,8 +285,8 @@ def main() -> int:
 
     print(json.dumps({
         "status": "pass",
-        "json_out": str(json_out.relative_to(ROOT)),
-        "md_out": str(md_out.relative_to(ROOT)),
+        "json_out": str(json_out),
+        "md_out": str(md_out),
         "observed_dirty": observed_dirty,
         "observed_ahead": observed_ahead,
         "stable_dirty": stable_dirty,

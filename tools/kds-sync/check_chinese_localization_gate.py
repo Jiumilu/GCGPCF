@@ -19,6 +19,7 @@ EXCLUDE_PARTS = {
     ".pytest_cache",
     "__pycache__",
     "node_modules",
+    "tmp",
 }
 
 DOC_SKIP_PREFIXES = {

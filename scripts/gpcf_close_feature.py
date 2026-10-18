@@ -17,6 +17,17 @@ def main() -> int:
     if feature_dir.parent != ACTIVE:
         raise SystemExit(f"FAIL: feature is not active: {feature_dir}")
     data = read_feature(feature_file(feature_dir))
+    if not data.get("acceptance") or not data.get("scope", {}).get("in"):
+        raise SystemExit("FAIL: acceptance and in-scope work must be declared before close")
+    if any("保持 active" in str(item) for item in data["acceptance"]):
+        raise SystemExit("FAIL: acceptance explicitly requires this Feature to remain active")
+    verification = data.get("verification") or {}
+    if not verification.get("tests") or not verification.get("build"):
+        raise SystemExit("FAIL: Feature-specific tests and build commands must be declared before close")
+    waivers = verification.get("waivers") or {}
+    for kind in ("screenshots", "api"):
+        if data.get("evidence", {}).get(kind) == "waived" and not str(waivers.get(kind, "")).strip():
+            raise SystemExit(f"FAIL: {kind} waiver requires a Feature-specific reason")
     if not evidence_complete(data):
         pending = ", ".join(f"{key}={value}" for key, value in data["evidence"].items())
         raise SystemExit(f"FAIL: evidence gate not complete: {pending}")

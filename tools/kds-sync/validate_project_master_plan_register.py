@@ -5,34 +5,19 @@ from __future__ import annotations
 
 import json
 from pathlib import Path
+import yaml
 
 
 ROOT = Path(__file__).resolve().parents[2]
 REGISTER = ROOT / "09-status/globalcloud-project-master-plan-control-register.md"
 MASTER_PLAN = ROOT / "01-architecture/WAS世界资产体系总体方案.md"
 
-REQUIRED_PROJECTS = [
-    "项目群总控",
-    "GlobalCloud GPCF",
-    "WAS世界资产体系",
-    "GlobalCloud XWAIL",
-    "GlobalCloud AAAS / AaaS",
-    "GlobalCloud WAME",
-    "GlobalCloud GFIS",
-    "GlobalCloud GPC",
-    "GlobalCloud PVAOS",
-    "GlobalCloud KDS",
-    "GlobalCloud Brain",
-    "GlobalCloud Studio",
-    "GlobalCloud MMC",
-    "GlobalCloud PKC",
-    "GlobalCloud SOP",
-    "GlobalCloud XGD",
-    "GlobalCloud XiaoC",
-    "GlobalCloud XiaoG",
-    "GlobalCloud ICP",
-    "shared/python_utils",
-]
+REGISTRY = yaml.safe_load((ROOT / "config/project-group-projects.yaml").read_text(encoding="utf-8"))
+DISPLAY_NAMES = {"WAS": "WAS世界资产体系", "AAAS": "GlobalCloud AAAS / AaaS", "SpaceAIStudio": "GlobalCloud SpaceAI Studio"}
+REQUIRED_PROJECTS = ["项目群总控"] + [
+    DISPLAY_NAMES.get(str(item["id"]), f"GlobalCloud {item['id']}")
+    for item in REGISTRY["projects"]
+] + ["shared/python_utils"]
 
 REQUIRED_TOKENS = [
     "GlobalCloud 项目群主方案控制台账",
@@ -43,10 +28,9 @@ REQUIRED_TOKENS = [
     "globalcloud-project-group-current-state-baseline-refresh-20260626.md",
     "globalcloud-project-group-dev-task-queue-20260626.md",
     "用户确认",
-    "project_master_plan_alignment = controlled",
+    "project_master_plan_alignment = repair_required",
     "project_group_current_state_baseline_refresh_20260626 = controlled",
     "development_queue_ready = true",
-    "all registered business projects have one authoritative project master plan",
     "docs/GlobalCloud WAS 总体方案.md",
     "GlobalCloud XWAIL 总体方案.md",
     "docs/GlobalCloud AaaS 总体方案.md",
@@ -85,9 +69,11 @@ def main() -> int:
         if token not in text:
             failures.append(f"missing required token in register: {token}")
 
+    table = text.split("## 4. 项目主方案盘点", 1)[-1].split("## 5. 当前结论", 1)[0]
+    rows = [line.split("|")[1].strip() for line in table.splitlines() if line.startswith("| ") and not line.startswith("| ---")]
     for project in REQUIRED_PROJECTS:
-        if project not in text:
-            failures.append(f"missing project row in register: {project}")
+        if rows.count(project) != 1:
+            failures.append(f"expected exactly one project row in register: {project}")
 
     for status in REQUIRED_STATUSES:
         if f"`{status}`" not in text:
@@ -103,23 +89,23 @@ def main() -> int:
         failures.append("legacy token GPC-Native must not appear in the register")
 
     authoritative_paths = [
-        Path("/Users/lujunxiang/Projects/GlobalCloud V0.0.1/WAS世界资产体系/docs/GlobalCloud WAS 总体方案.md"),
-        Path("/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud XWAIL/GlobalCloud XWAIL 总体方案.md"),
-        Path("/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud AAAS/docs/GlobalCloud AaaS 总体方案.md"),
-        Path("/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GPC/GlobalCloud GPC 总体方案.md"),
-        Path("/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud WAES/GlobalCloud WAME 总体方案.md"),
-        Path("/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GFIS/GlobalCloud GFIS 总体方案.md"),
-        Path("/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud PVAOS/GlobalCloud PVAOS 总体方案.md"),
-        Path("/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud KDS/GlobalCloud KDS 总体方案.md"),
-        Path("/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud Brain/GlobalCloud Brain 总体方案.md"),
-        Path("/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud Studio/GlobalCloud Studio 总体方案.md"),
-        Path("/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud MMC/GlobalCloud MMC 总体方案.md"),
-        Path("/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud PKC/GlobalCloud PKC 总体方案.md"),
-        Path("/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud SOP/GlobalCloud SOP 总体方案.md"),
-        Path("/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud XGD/GlobalCloud XGD 总体方案.md"),
-        Path("/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud XiaoC/GlobalCloud XiaoC 总体方案.md"),
-        Path("/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud XiaoG/GlobalCloud XiaoG 总体方案.md"),
-        Path("/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCoud GPCF/GlobalCloud GPCF 总体方案.md"),
+        ROOT.parent / "WAS世界资产体系/docs/GlobalCloud WAS 总体方案.md",
+        ROOT.parent / "GlobalCloud XWAIL/GlobalCloud XWAIL 总体方案.md",
+        ROOT.parent / "GlobalCloud AAAS/docs/GlobalCloud AaaS 总体方案.md",
+        ROOT.parent / "GlobalCloud GPC/GlobalCloud GPC 总体方案.md",
+        ROOT.parent / "GlobalCloud WAME/GlobalCloud WAME 总体方案.md",
+        ROOT.parent / "GlobalCloud GFIS/GlobalCloud GFIS 总体方案.md",
+        ROOT.parent / "GlobalCloud PVAOS/GlobalCloud PVAOS 总体方案.md",
+        ROOT.parent / "GlobalCloud KDS/GlobalCloud KDS 总体方案.md",
+        ROOT.parent / "GlobalCloud Brain/GlobalCloud Brain 总体方案.md",
+        ROOT.parent / "GlobalCloud Studio/GlobalCloud Studio 总体方案.md",
+        ROOT.parent / "GlobalCloud MMC/GlobalCloud MMC 总体方案.md",
+        ROOT.parent / "GlobalCloud PKC/GlobalCloud PKC 总体方案.md",
+        ROOT.parent / "GlobalCloud SOP/GlobalCloud SOP 总体方案.md",
+        ROOT.parent / "GlobalCloud XGD/GlobalCloud XGD 总体方案.md",
+        ROOT.parent / "GlobalCloud XiaoC/GlobalCloud XiaoC 总体方案.md",
+        ROOT.parent / "GlobalCloud XiaoG/GlobalCloud XiaoG 总体方案.md",
+        ROOT.parent / "GlobalCoud GPCF/GlobalCloud GPCF 总体方案.md",
     ]
     required_plan_tokens = [
         "与项目群主方案的继承关系",

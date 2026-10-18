@@ -11,19 +11,50 @@ kds_space: 开发
 kds_path: 开发/91-治理与验收/09-status/document-deprecation-register.md
 source_path: 09-status/document-deprecation-register.md
 sync_direction: bidirectional
-last_reviewed: 2026-10-16
+last_reviewed: 2026-10-18
 supersedes: []
 superseded_by: []
 ---
 
+
 # 文档过期与归档台账
 
-日期：2026-10-16
+日期：2026-10-18
 
 用途：登记历史、过期、被替代和运行类文档，避免误用为当前项目完成状态或当前业务口径。
 
 | doc_id | title | source_path | status | kds_path |
 | --- | --- | --- | --- | --- |
+| GPCF-DOC-C1D2E3F4A5 | impeccable | .agents/skills/impeccable/README.md | operational_controlled | 开发/12-GPCF/.agents/skills/impeccable/README.md |
+| GPCF-DOC-D4E5F6A7B8 | reference | .agents/skills/impeccable/reference/README.md | operational_controlled | 开发/12-GPCF/.agents/skills/impeccable/reference/README.md |
+| GPCF-DOC-A001000001 | adapt | .agents/skills/impeccable/reference/adapt.md | operational_controlled | 开发/12-GPCF/.agents/skills/impeccable/reference/adapt.md |
+| GPCF-DOC-A001000002 | animate | .agents/skills/impeccable/reference/animate.md | operational_controlled | 开发/12-GPCF/.agents/skills/impeccable/reference/animate.md |
+| GPCF-DOC-A001000003 | audit | .agents/skills/impeccable/reference/audit.md | operational_controlled | 开发/12-GPCF/.agents/skills/impeccable/reference/audit.md |
+| GPCF-DOC-A001000005 | bolder | .agents/skills/impeccable/reference/bolder.md | operational_controlled | 开发/12-GPCF/.agents/skills/impeccable/reference/bolder.md |
+| GPCF-DOC-A001000004 | brand | .agents/skills/impeccable/reference/brand.md | operational_controlled | 开发/12-GPCF/.agents/skills/impeccable/reference/brand.md |
+| GPCF-DOC-A001000006 | clarify | .agents/skills/impeccable/reference/clarify.md | operational_controlled | 开发/12-GPCF/.agents/skills/impeccable/reference/clarify.md |
+| GPCF-DOC-A001000025 | codex | .agents/skills/impeccable/reference/codex.md | operational_controlled | 开发/12-GPCF/.agents/skills/impeccable/reference/codex.md |
+| GPCF-DOC-A001000007 | colorize | .agents/skills/impeccable/reference/colorize.md | operational_controlled | 开发/12-GPCF/.agents/skills/impeccable/reference/colorize.md |
+| GPCF-DOC-A001000008 | craft | .agents/skills/impeccable/reference/craft.md | operational_controlled | 开发/12-GPCF/.agents/skills/impeccable/reference/craft.md |
+| GPCF-DOC-A001000026 | critique | .agents/skills/impeccable/reference/critique.md | operational_controlled | 开发/12-GPCF/.agents/skills/impeccable/reference/critique.md |
+| GPCF-DOC-A001000009 | delight | .agents/skills/impeccable/reference/delight.md | operational_controlled | 开发/12-GPCF/.agents/skills/impeccable/reference/delight.md |
+| GPCF-DOC-A001000010 | distill | .agents/skills/impeccable/reference/distill.md | operational_controlled | 开发/12-GPCF/.agents/skills/impeccable/reference/distill.md |
+| GPCF-DOC-A001000027 | document | .agents/skills/impeccable/reference/document.md | operational_controlled | 开发/12-GPCF/.agents/skills/impeccable/reference/document.md |
+| GPCF-DOC-A001000011 | extract | .agents/skills/impeccable/reference/extract.md | operational_controlled | 开发/12-GPCF/.agents/skills/impeccable/reference/extract.md |
+| GPCF-DOC-A001000012 | harden | .agents/skills/impeccable/reference/harden.md | operational_controlled | 开发/12-GPCF/.agents/skills/impeccable/reference/harden.md |
+| GPCF-DOC-A001000013 | hooks | .agents/skills/impeccable/reference/hooks.md | operational_controlled | 开发/12-GPCF/.agents/skills/impeccable/reference/hooks.md |
+| GPCF-DOC-A001000014 | init | .agents/skills/impeccable/reference/init.md | operational_controlled | 开发/12-GPCF/.agents/skills/impeccable/reference/init.md |
+| GPCF-DOC-A001000015 | interaction-design | .agents/skills/impeccable/reference/interaction-design.md | operational_controlled | 开发/12-GPCF/.agents/skills/impeccable/reference/interaction-design.md |
+| GPCF-DOC-A001000016 | layout | .agents/skills/impeccable/reference/layout.md | operational_controlled | 开发/12-GPCF/.agents/skills/impeccable/reference/layout.md |
+| GPCF-DOC-A001000028 | live | .agents/skills/impeccable/reference/live.md | operational_controlled | 开发/12-GPCF/.agents/skills/impeccable/reference/live.md |
+| GPCF-DOC-A001000017 | onboard | .agents/skills/impeccable/reference/onboard.md | operational_controlled | 开发/12-GPCF/.agents/skills/impeccable/reference/onboard.md |
+| GPCF-DOC-A001000018 | optimize | .agents/skills/impeccable/reference/optimize.md | operational_controlled | 开发/12-GPCF/.agents/skills/impeccable/reference/optimize.md |
+| GPCF-DOC-A001000019 | overdrive | .agents/skills/impeccable/reference/overdrive.md | operational_controlled | 开发/12-GPCF/.agents/skills/impeccable/reference/overdrive.md |
+| GPCF-DOC-A001000021 | polish | .agents/skills/impeccable/reference/polish.md | operational_controlled | 开发/12-GPCF/.agents/skills/impeccable/reference/polish.md |
+| GPCF-DOC-A001000020 | product | .agents/skills/impeccable/reference/product.md | operational_controlled | 开发/12-GPCF/.agents/skills/impeccable/reference/product.md |
+| GPCF-DOC-A001000022 | quieter | .agents/skills/impeccable/reference/quieter.md | operational_controlled | 开发/12-GPCF/.agents/skills/impeccable/reference/quieter.md |
+| GPCF-DOC-A001000023 | shape | .agents/skills/impeccable/reference/shape.md | operational_controlled | 开发/12-GPCF/.agents/skills/impeccable/reference/shape.md |
+| GPCF-DOC-A001000024 | typeset | .agents/skills/impeccable/reference/typeset.md | operational_controlled | 开发/12-GPCF/.agents/skills/impeccable/reference/typeset.md |
 | GPCF-DOC-56E7A7A3B5 | Codex 本地配置 | .codex/README.md | operational_controlled | 开发/12-GPCF/.codex/README.md |
 | GPCF-DOC-424C591653 | Codex 本地技能 | .codex/skills/README.md | operational_controlled | 开发/12-GPCF/.codex/skills/README.md |
 | GPCF-DOC-B053B83539 | globalcloud-document-governance | .codex/skills/globalcloud-document-governance/README.md | operational_controlled | 开发/12-GPCF/.codex/skills/globalcloud-document-governance/README.md |
@@ -51,9 +82,9 @@ superseded_by: []
 | GPCF-DOC-A1B2C3D4E5 | globalcloud-ui-quality-gate | .codex/skills/globalcloud-ui-quality-gate/README.md | operational_controlled | 开发/12-GPCF/.codex/skills/globalcloud-ui-quality-gate/README.md |
 | GPCF-DOC-3E7F2A1B9C | GlobalCloud UI Quality Gate | .codex/skills/globalcloud-ui-quality-gate/SKILL.md | operational_controlled | 开发/12-GPCF/.codex/skills/globalcloud-ui-quality-gate/SKILL.md |
 | GPCF-DOC-F6E5D4C3B2 | references | .codex/skills/globalcloud-ui-quality-gate/references/README.md | operational_controlled | 开发/12-GPCF/.codex/skills/globalcloud-ui-quality-gate/references/README.md |
-| GPCF-DOC-9A8B7C6D5E | Evidence Output | .codex/skills/globalcloud-ui-quality-gate/references/evidence-output.md | operational_controlled | 开发/12-GPCF/.codex/skills/globalcloud-ui-quality-gate/references/evidence-output.md |
-| GPCF-DOC-1F2E3D4C5B | Quality Checklist | .codex/skills/globalcloud-ui-quality-gate/references/quality-checklist.md | operational_controlled | 开发/12-GPCF/.codex/skills/globalcloud-ui-quality-gate/references/quality-checklist.md |
-| GPCF-DOC-6A7B8C9D0E | Tool Routing | .codex/skills/globalcloud-ui-quality-gate/references/tool-routing.md | operational_controlled | 开发/12-GPCF/.codex/skills/globalcloud-ui-quality-gate/references/tool-routing.md |
+| GPCF-DOC-9A8B7C6D5E | evidence-output | .codex/skills/globalcloud-ui-quality-gate/references/evidence-output.md | operational_controlled | 开发/12-GPCF/.codex/skills/globalcloud-ui-quality-gate/references/evidence-output.md |
+| GPCF-DOC-1F2E3D4C5B | quality-checklist | .codex/skills/globalcloud-ui-quality-gate/references/quality-checklist.md | operational_controlled | 开发/12-GPCF/.codex/skills/globalcloud-ui-quality-gate/references/quality-checklist.md |
+| GPCF-DOC-6A7B8C9D0E | tool-routing | .codex/skills/globalcloud-ui-quality-gate/references/tool-routing.md | operational_controlled | 开发/12-GPCF/.codex/skills/globalcloud-ui-quality-gate/references/tool-routing.md |
 | GPCF-DOC-268058F0F6 | UI/UX 技能 | .codex/skills/ui-ux-pro-max/README.md | operational_controlled | 开发/12-GPCF/.codex/skills/ui-ux-pro-max/README.md |
 | GPCF-DOC-8025BD5C10 | ui-ux-pro-max | .codex/skills/ui-ux-pro-max/SKILL.md | operational_controlled | 开发/12-GPCF/.codex/skills/ui-ux-pro-max/SKILL.md |
 | GPCF-DOC-D1E79591EA | Harness 运行证据 | .harness/README.md | archive | 开发/92-证据与会话归档/.harness/README.md |
@@ -144,6 +175,8 @@ superseded_by: []
 | GPCF-DOC-D5957ABBD9 | patches | .harness/runs/kds-real-token-sync-20260613-062146/patches/README.md | archive | 开发/92-证据与会话归档/.harness/runs/kds-real-token-sync-20260613-062146/patches/README.md |
 | GPCF-DOC-0498FF3BEF | Harness Status Audit: KDS Real Token Sync | .harness/runs/kds-real-token-sync-20260613-062146/status-audit.md | archive | 开发/92-证据与会话归档/.harness/runs/kds-real-token-sync-20260613-062146/status-audit.md |
 | GPCF-DOC-44F8F11A42 | workspaces | .harness/runs/kds-real-token-sync-20260613-062146/workspaces/README.md | archive | 开发/92-证据与会话归档/.harness/runs/kds-real-token-sync-20260613-062146/workspaces/README.md |
+| GPCF-DOC-475051A08A | GlobalCloud 绿色供应链体系项目群架构图 | 01-architecture/GlobalCloud智慧工厂项目群架构图.md | archive | 开发/90-跨项目架构/01-architecture/GlobalCloud智慧工厂项目群架构图.md |
+| GPCF-DOC-4DF13CF33D | GlobalCloud 绿色供应链体系最新架构图 | 01-architecture/GlobalCloud绿色供应链体系最新架构图.md | archive | 开发/90-跨项目架构/01-architecture/GlobalCloud绿色供应链体系最新架构图.md |
 | GPCF-DOC-71BD3638A9 | session-archives | 08-evidence-samples/session-archives/README.md | archive | 开发/92-证据与会话归档/08-evidence-samples/session-archives/README.md |
 | GPCF-DOC-6ACBFCD6E4 | 会话归档：019eafc0-ee61-7900-b137-5cf2252bd82f | 08-evidence-samples/session-archives/session-019eafc0-ee61-7900-b137-5cf2252bd82f.md | archive | 开发/92-证据与会话归档/08-evidence-samples/session-archives/session-019eafc0-ee61-7900-b137-5cf2252bd82f.md |
 | GPCF-DOC-A55E6422C8 | 过期与历史归档 | 10-archive/README.md | archive | 开发/92-证据与会话归档/10-archive/README.md |

@@ -1,0 +1,51 @@
+id: F-026
+name: gcmem-governance-onboarding
+project: gcmem
+status: active
+goal: 核验 GCMEM 独立私有仓并补齐项目群 OpenSpec、技能链与 Harness 纳管证据
+owner: GCMEM
+priority: P2
+scope:
+  in:
+    - 核验 GCMEM 本地 main、GitHub 私有远端与提交一致性
+    - 补齐 GCMEM 项目级方案、Harness 清单和 GPCF OpenSpec/技能链/Feature 映射
+    - 记录回归、文档门禁与未闭合阻塞
+  out:
+    - KDS 账本或共享生产配置写入
+    - 业务验收、跨项目集成、生产发布及状态提升
+    - 清理 GPCF 既有无关门禁问题
+acceptance:
+  - GCMEM main 与私有 origin/main 一致
+  - GCMEM 回归 82/82、doctor healthy
+  - GPCF 23 项目 OpenSpec 覆盖通过
+  - 中央门禁失败保留 partial/rework 并列明原因
+loop:
+  current_step: evaluate
+  iteration: 4
+evidence:
+  tests: pass
+  build: pass
+  screenshots: waived
+  api: waived
+  summary: pass
+blockers:
+  - GPCF 中央文档门禁 rework_required：既有 missing_metadata、UI control 与 document_pollution
+  - 技能链总检查：既有 wae 目录未列入 23 项目登记
+ui_product_first_control:
+  version: v1.1
+  applicability: indirect
+  user_groups:
+  - GCMEM 维护者
+  - 项目群治理负责人
+  primary_human_task: 核对 GCMEM 纳管状态、证据和待处理门禁
+  machine_interface_boundary: 仓库与门禁机器字段留在证据中；人类入口只展示当前状态、风险与下一步
+  gates:
+    functional_completeness: pass
+    quality_baseline: pass
+    multi_user_usability: waived
+    task_flow_e2e_status: pending
+    accessibility_status: waived
+    evidence_overexposure_gate: pass
+  status_ceiling: partial
+created_at: "2026-10-17T22:49:44+00:00"
+updated_at: "2026-10-17T22:51:44+00:00"

@@ -8,6 +8,7 @@ repository path under a controlled project/domain folder.
 
 from __future__ import annotations
 
+import argparse
 import hashlib
 import json
 import os
@@ -15,6 +16,8 @@ import re
 import shutil
 from datetime import date, datetime, timezone
 from pathlib import Path
+
+import yaml
 
 ROOT = Path(__file__).resolve().parents[2]
 TODAY = date.today().isoformat()
@@ -182,7 +185,7 @@ GENERIC_DIR_PURPOSE = {
     ".harness/runs": ("Harness 运行记录", "保存 Harness 每次运行的审计、验收、任务和提案记录。"),
 }
 
-EXCLUDE_DIRS = {".git", ".kds"}
+EXCLUDE_DIRS = {".git", ".kds", "tmp", ".pytest_cache"}
 NO_FRONTMATTER_FILES = {".codex/skills/ui-ux-pro-max/SKILL.md"}
 GENERATED_REGISTERS = {
     "09-status/globalcloud-document-control-register.md",
@@ -197,6 +200,13 @@ GKE001_PROJECT_SCOPE = [
 ]
 
 DOCUMENT_METADATA_OVERRIDES = {
+    "02-governance/GlobalCloud项目群Codex-DSH-Hermes协同开发与运行方案.md": {
+        "related_projects": [
+            "GPC", "PVAOS", "WAME", "KDS", "Brain", "XiaoC", "XGD",
+            "XiaoG", "MMC", "GPCF", "Studio", "SpaceAI", "GCMEM",
+        ],
+        "version": "v1.3",
+    },
     "02-governance/loop/GKE-001长期实施调度提示词.md": {
         "project": "GPCF",
         "related_projects": [
@@ -425,7 +435,7 @@ def iter_markdown() -> list[Path]:
     docs: list[Path] = []
     for path in ROOT.rglob("*.md"):
         parts = set(path.relative_to(ROOT).parts)
-        if parts & EXCLUDE_DIRS:
+        if parts & EXCLUDE_DIRS or rel(path).startswith(".okf/bundles/"):
             continue
         docs.append(path)
     return sorted(docs, key=rel)
@@ -448,8 +458,15 @@ def read_text(path: Path) -> str:
 
 
 def write_text(path: Path, text: str) -> None:
+    if path.suffix == ".md" and not text.startswith("---\n") and path.exists():
+        previous = path.read_text(encoding="utf-8")
+        if previous.startswith("---\n"):
+            end = previous.find("\n---\n", 4)
+            if end != -1:
+                text = previous[: end + 5] + "\n\n" + text
     path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(text, encoding="utf-8")
+    if not path.exists() or path.read_text(encoding="utf-8") != text:
+        path.write_text(text, encoding="utf-8")
 
 
 def title_for(path: Path, text: str) -> str:
@@ -625,7 +642,7 @@ def kds_path_for(source_path: str, project: str, status: str, domain: str) -> st
     return f"开发/{base}/{source_path}"
 
 
-def metadata_block(record: dict[str, object]) -> str:
+def metadata_block(record: dict[str, object], original: str = "") -> str:
     keys = [
         "doc_id",
         "title",
@@ -652,6 +669,15 @@ def metadata_block(record: dict[str, object]) -> str:
             rendered = str(value).replace('"', '\\"')
             rendered = f'"{rendered}"' if any(ch in rendered for ch in [":", "#", "[", "]"]) else rendered
         lines.append(f"{key}: {rendered}")
+    if original.startswith("---\n"):
+        end = original.find("\n---\n", 4)
+        if end != -1:
+            keep = False
+            for line in original[4:end].splitlines():
+                if line and not line[0].isspace() and ":" in line:
+                    keep = line.split(":", 1)[0] not in keys
+                if keep:
+                    lines.append(line)
     lines.append("---")
     return "\n".join(lines) + "\n\n"
 
@@ -678,10 +704,14 @@ def build_records(paths: list[Path]) -> list[dict[str, object]]:
         source_path = rel(path)
         text = read_text(path)
         existing, body = strip_existing_frontmatter(text)
-        title = title_for(path, body)
+        title = existing.get("title") or title_for(path, body)
         project, related = project_for(source_path, title, body)
-        domain = domain_for(source_path)
-        status = status_for(source_path)
+        project = existing.get("project") or project
+        existing_related = yaml.safe_load(existing.get("related_projects", "[]")) or []
+        if isinstance(existing_related, list):
+            related = existing_related or related
+        domain = existing.get("domain") or domain_for(source_path)
+        status = existing.get("status") or status_for(source_path)
         record = {
             "doc_id": controlled_doc_id(source_path, existing),
             "title": title,
@@ -689,15 +719,15 @@ def build_records(paths: list[Path]) -> list[dict[str, object]]:
             "related_projects": related,
             "domain": domain,
             "status": status,
-            "version": "v1.0",
-            "owner": project,
-            "kds_space": "开发",
-            "kds_path": kds_path_for(source_path, project, status, domain),
+            "version": existing.get("version") or "v1.0",
+            "owner": existing.get("owner") or project,
+            "kds_space": existing.get("kds_space") or "开发",
+            "kds_path": existing.get("kds_path") or kds_path_for(source_path, project, status, domain),
             "source_path": source_path,
-            "sync_direction": "bidirectional" if status != "operational_controlled" else "register_and_mirror",
-            "last_reviewed": existing.get("last_reviewed", TODAY),
-            "supersedes": [],
-            "superseded_by": [],
+            "sync_direction": existing.get("sync_direction") or ("bidirectional" if status != "operational_controlled" else "register_and_mirror"),
+            "last_reviewed": existing.get("last_reviewed") or "unreviewed",
+            "supersedes": yaml.safe_load(existing.get("supersedes", "[]")) or [],
+            "superseded_by": yaml.safe_load(existing.get("superseded_by", "[]")) or [],
             "frontmatter_managed": frontmatter_managed_for(source_path),
         }
         record.update(DOCUMENT_METADATA_OVERRIDES.get(source_path, {}))
@@ -719,9 +749,39 @@ def apply_frontmatter(records: list[dict[str, object]]) -> None:
             continue
         stripped_body = body.rstrip()
         if stripped_body:
-            write_text(path, metadata_block(record) + stripped_body + "\n")
+            expected = metadata_block(record, text) + stripped_body + "\n"
         else:
-            write_text(path, metadata_block(record).rstrip() + "\n")
+            expected = metadata_block(record, text).rstrip() + "\n"
+        if not semantically_same_frontmatter(text, expected):
+            write_text(path, expected)
+
+
+def semantically_same_frontmatter(text: str, expected: str) -> bool:
+    current_end = text.find("\n---\n", 4) if text.startswith("---\n") else -1
+    expected_end = expected.find("\n---\n", 4)
+    try:
+        current_metadata = yaml.safe_load(text[4:current_end]) if current_end != -1 else None
+        expected_metadata = yaml.safe_load(expected[4:expected_end])
+    except yaml.YAMLError:
+        current_metadata = strip_existing_frontmatter(text)[0]
+        expected_metadata = strip_existing_frontmatter(expected)[0]
+    return current_metadata == expected_metadata and strip_existing_frontmatter(text)[1].rstrip() == strip_existing_frontmatter(expected)[1].rstrip()
+
+
+def inspect_changes() -> dict[str, object]:
+    changed: list[str] = []
+    for record in build_records(iter_markdown()):
+        if not record["frontmatter_managed"]:
+            continue
+        path = ROOT / str(record["source_path"])
+        text = read_text(path)
+        existing, body = strip_existing_frontmatter(text)
+        if existing.get("doc_control") == "external":
+            continue
+        expected = metadata_block(record, text) + body.rstrip() + "\n" if body.rstrip() else metadata_block(record, text).rstrip() + "\n"
+        if not semantically_same_frontmatter(text, expected):
+            changed.append(str(record["source_path"]))
+    return {"changed_count": len(changed), "changed_paths": changed}
 
 
 def markdown_table(headers: list[str], rows: list[list[str]]) -> str:
@@ -966,6 +1026,7 @@ def mirror_scope_to_kds(records: list[dict[str, object]]) -> None:
     ledger_path = ROOT / ".kds/local-mirror-ledger.jsonl"
     ledger_path.parent.mkdir(parents=True, exist_ok=True)
     scoped_sources = {str(r["source_path"]) for r in records}
+    eligible_sources = {rel(path) for path in iter_markdown()}
     existing_entries: list[dict[str, object]] = []
     if ledger_path.exists():
         for line in ledger_path.read_text(encoding="utf-8").splitlines():
@@ -976,7 +1037,7 @@ def mirror_scope_to_kds(records: list[dict[str, object]]) -> None:
             except json.JSONDecodeError:
                 continue
             source_path = str(entry.get("source_path", ""))
-            if source_path not in scoped_sources and (ROOT / source_path).exists():
+            if source_path not in scoped_sources and source_path in eligible_sources:
                 existing_entries.append(entry)
     entries = []
     for r in records:
@@ -1038,7 +1099,16 @@ def write_tool_readme() -> None:
     write_text(ROOT / "tools/kds-sync/README.md", content)
 
 
-def main() -> None:
+def main() -> int:
+    parser = argparse.ArgumentParser(description="Maintain GPCF document control and local KDS mirror")
+    mode = parser.add_mutually_exclusive_group()
+    mode.add_argument("--check", action="store_true", help="read-only check; exit 1 when source metadata needs rewriting")
+    mode.add_argument("--dry-run", action="store_true", help="read-only preview of source metadata rewrites")
+    args = parser.parse_args()
+    if args.check or args.dry_run:
+        result = inspect_changes()
+        print(json.dumps(result, ensure_ascii=False, indent=2))
+        return 1 if args.check and result["changed_count"] else 0
     scope_paths = parse_scope_paths()
     if scope_paths:
         paths = iter_markdown()
@@ -1060,7 +1130,7 @@ def main() -> None:
         scoped_records = [r for r in records if str(r["source_path"]) in scope_paths]
         register_records = [r for r in records if str(r["source_path"]) in GENERATED_REGISTERS]
         mirror_scope_to_kds(scoped_records + register_records)
-        return
+        return 0
 
     paths = iter_markdown()
     records = build_records(paths)
@@ -1084,7 +1154,8 @@ def main() -> None:
     records = build_records(paths)
     mirror_to_kds(records)
     write_kds_readme(records)
+    return 0
 
 
 if __name__ == "__main__":
-    main()
+    raise SystemExit(main())

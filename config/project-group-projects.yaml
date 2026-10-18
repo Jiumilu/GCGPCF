@@ -1,30 +1,35 @@
 schema_version: 1
-current_project_count: 23
+current_project_count: 24
+scope_decision:
+  confirmed_on: 2026-10-18
+  decision: WAE is included in the current 24-project scope.
+  source: Explicit user confirmation in the governance remediation session.
 historical_baselines:
   - count: 17
     through: 2026-06-27
     note: Historical evidence retains its recorded scope and is not rewritten.
 projects:
-  - {id: AAAS, slug: aaas}
-  - {id: Brain, slug: brain}
-  - {id: WAS, slug: was}
-  - {id: XiaoC, slug: xiaoc}
-  - {id: WAME, slug: wame}
-  - {id: GPC, slug: gpc}
-  - {id: Studio, slug: studio}
-  - {id: GPCF, slug: gpcf}
-  - {id: XWAIL, slug: xwail}
-  - {id: GFIS, slug: gfis}
-  - {id: MMC, slug: mmc}
-  - {id: KDS, slug: kds}
-  - {id: XiaoG, slug: xiaog}
-  - {id: PVAOS, slug: pvaos}
-  - {id: SOP, slug: sop}
-  - {id: PKC, slug: pkc}
-  - {id: XGD, slug: xgd}
-  - {id: ICP, slug: icp}
-  - {id: PQC, slug: pqc}
-  - {id: SpaceAI, slug: spaceai}
-  - {id: SpaceAIStudio, slug: spaceai-studio}
-  - {id: World, slug: world}
-  - {id: GCMEM, slug: gcmem}
+  - {id: AAAS, slug: aaas, repo: "GlobalCloud AAAS"}
+  - {id: Brain, slug: brain, repo: "GlobalCloud Brain"}
+  - {id: WAS, slug: was, repo: "WAS世界资产体系"}
+  - {id: XiaoC, slug: xiaoc, repo: "GlobalCloud XiaoC"}
+  - {id: WAME, slug: wame, repo: "GlobalCloud WAME"}
+  - {id: GPC, slug: gpc, repo: "GlobalCloud GPC"}
+  - {id: Studio, slug: studio, repo: "GlobalCloud Studio"}
+  - {id: GPCF, slug: gpcf, repo: "GlobalCoud GPCF"}
+  - {id: XWAIL, slug: xwail, repo: "GlobalCloud XWAIL"}
+  - {id: GFIS, slug: gfis, repo: "GlobalCloud GFIS"}
+  - {id: MMC, slug: mmc, repo: "GlobalCloud MMC"}
+  - {id: KDS, slug: kds, repo: "GlobalCloud KDS"}
+  - {id: XiaoG, slug: xiaog, repo: "GlobalCloud XiaoG"}
+  - {id: PVAOS, slug: pvaos, repo: "GlobalCloud PVAOS"}
+  - {id: SOP, slug: sop, repo: "GlobalCloud SOP"}
+  - {id: PKC, slug: pkc, repo: "GlobalCloud PKC"}
+  - {id: XGD, slug: xgd, repo: "GlobalCloud XGD"}
+  - {id: ICP, slug: icp, repo: "GlobalCloud ICP"}
+  - {id: PQC, slug: pqc, repo: "GlobalCloud PQC"}
+  - {id: SpaceAI, slug: spaceai, repo: "GlobalCloud SpaceAI Platform"}
+  - {id: SpaceAIStudio, slug: spaceai-studio, repo: "GlobalCloud SpaceAI Studio"}
+  - {id: World, slug: world, repo: "GlobalCloud World"}
+  - {id: GCMEM, slug: gcmem, repo: "GlobalCloud Mem"}
+  - {id: WAE, slug: wae, repo: "GlobalCloud WAE"}

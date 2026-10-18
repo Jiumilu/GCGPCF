@@ -7,3 +7,8 @@ fixtures/agent-reach/*authorization.local.json
 .codegraph/
 .zcode/
 runtime/evidence/
+__pycache__/
+*.pyc
+.pytest_cache/
+.DS_Store
+tmp/

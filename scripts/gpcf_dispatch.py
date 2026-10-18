@@ -57,6 +57,7 @@ def main() -> int:
     parser.add_argument("--role", choices=ROLES)
     parser.add_argument("--input", default="运行 Feature Runtime 调度。")
     parser.add_argument("--evidence", default="runtime/queue.json 与 runtime/state.json。")
+    parser.add_argument("--dry-run", action="store_true", help="preview the next role without changing runtime or Feature files")
     args = parser.parse_args()
 
     feature_id = select_feature(args.feature_id)
@@ -78,12 +79,18 @@ def main() -> int:
         next_role = NEXT_ROLE[current_role]
         next_status = STEP_BY_ROLE[next_role]
 
+    output = f"{current_role} -> {next_role}；status={next_status}"
+    if args.dry_run:
+        print(f"gpcf_dispatch_dry_run feature={feature_id} {output}")
+        return 0
+    if next_role == current_role and next_status == entry.get("status"):
+        raise SystemExit(f"FAIL: dispatch would not advance Feature state: {feature_id}")
+
     data["loop"]["current_step"] = next_status if next_status in ROLE_BY_STEP else "commit"
     data["loop"]["iteration"] = int(data["loop"].get("iteration", 0)) + 1
     write_feature(feature_file(feature_dir), data)
     update_queue_entry(feature_id, status=next_status, role=next_role)
 
-    output = f"{current_role} -> {next_role}；status={next_status}"
     append_runtime_log(
         feature_id,
         role=current_role,

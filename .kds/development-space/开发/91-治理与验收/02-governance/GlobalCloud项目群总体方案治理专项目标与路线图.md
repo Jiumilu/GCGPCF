@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-PROJECT-GROUP-MASTER-PLAN-GOVERNANCE-20260624
 title: GlobalCloud 项目群总体方案治理专项目标与路线图
 project: WAME
-related_projects: [AAAS, Brain, WAS, XiaoC, WAME, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP]
+related_projects: [AAAS, Brain, WAS, XiaoC, WAME, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP, PQC, SpaceAI, SpaceAIStudio, World, GCMEM]
 domain: governance
 status: controlled
 version: v1.0

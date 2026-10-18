@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-WAS-PROJECT-MASTER-PLAN-REGISTER-20260624
 title: GlobalCloud 项目群主方案控制台账
 project: GPCF
-related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio, ICP]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio, ICP, PQC, SpaceAI, SpaceAIStudio, World, GCMEM, WAE]
 domain: status
 status: controlled
 version: v1.0
@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/91-治理与验收/09-status/globalcloud-project-master-plan-control-register.md
 source_path: 09-status/globalcloud-project-master-plan-control-register.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-24
+last_reviewed: 2026-10-18
 supersedes: []
 superseded_by: []
 ---
@@ -77,6 +77,12 @@ superseded_by: []
 | GlobalCloud XiaoC | `GlobalCloud XiaoC` | `GlobalCloud XiaoC 总体方案.md` | `README.md`, `AGENTS.md` | `authoritative` | 已建立当前唯一总体方案 | 后续补齐提示资产注册和 MCP 服务治理证据 |
 | GlobalCloud XiaoG | `GlobalCloud XiaoG` | `GlobalCloud XiaoG 总体方案.md` | `README.md`, `AGENTS.md` | `authoritative` | 已建立当前唯一总体方案 | 后续补齐本地智能体运行和 Harness 证据 |
 | GlobalCloud ICP | `GlobalCloud ICP` | `GlobalCloud ICP 总体方案.md` | `README.md`, `AGENTS.md`, `PROJECT_HARNESS_MANIFEST.md` | `candidate` | 已建立独立总体方案、24×11契约和产业控制平面边界；尚未完成人工确认和项目群集成 | 保持 candidate/partial，补 WAME/GPCF 人工确认及后续只读连接器变更 |
+| GlobalCloud PQC | `GlobalCloud PQC` | 待核验 | `projects/pqc/STATUS.md` | `missing` | 当前台账无可验证的项目总体方案继承链 | 核验项目方案并补双总控继承证据 |
+| GlobalCloud SpaceAI | `GlobalCloud SpaceAI Platform` | 待核验 | `projects/spaceai/STATUS.md` | `candidate` | Platform 与 CWME 本地应用边界已记录，项目总体方案继承链未复核 | 核验当前主仓方案与 CWME 边界 |
+| GlobalCloud SpaceAI Studio | `GlobalCloud SpaceAI Studio` | 待核验 | `projects/spaceai-studio/STATUS.md` | `candidate` | 重构方案存在，尚不能据此声明唯一当前总体方案 | 核验继承链及三平台交付边界 |
+| GlobalCloud World | `GlobalCloud World` | `GlobalCloud World 总体方案.md` | `docs/architecture/GCWORLD总体架构与实施方案_v1.1.md` | `candidate` | 独立仓已有受控唯一方案声明；Ontology 基线 0.2.x 与实发 0.2.0 的继承冲突待 WAS 裁定 | 复核版本基线冲突后再判定 authoritative |
+| GlobalCloud GCMEM | `GlobalCloud Mem` | `GlobalCloud GCMEM 总体方案.md` | `docs/MASTER-DESIGN.md` | `authoritative` | 独立仓已声明项目群继承、唯一方案与 KDS 主存边界；业务运行仍保持 partial | 项目级结构变化继续回传 GPCF，并按影响范围传导 KDS |
+| GlobalCloud WAE | `GlobalCloud WAE` | 待核验 | `projects/wae/MASTER-DESIGN_v0.3.md` | `candidate` | 浏览器总体设计已有迭代，唯一当前版本和继承链待复核 | 核验 v0.3 与 WAME 职责分界 |
 | shared/python_utils | `shared` | 不适用 | `shared/python_utils/` | `not_project` | 共享工具目录，不是业务项目 | 保留为共享库，受导入可用性和依赖治理控制 |
 
 ## 5. 当前结论
@@ -84,13 +90,14 @@ superseded_by: []
 当前项目群已具备项目群主方案，第一批和第二批项目总体方案已建立，且 `GlobalCoud GPCF` 已从项目群总控方案中拆分出独立 `GlobalCloud GPCF 总体方案`。因此当前主方案对齐状态可判定为：
 
 ```text
-project_master_plan_alignment = controlled
+project_master_plan_alignment = repair_required
 project_group_current_state_baseline_refresh_20260626 = controlled
 development_queue_ready = true
-reason = all registered business projects have one authoritative project master plan
+reason = 当前 24 项目均已登记；其中新增项目的唯一总体方案与继承链尚未全部核验
 ```
 
-可以声明“项目群主方案控制机制已建立，全部登记业务项目均已具备唯一当前有效项目总体方案，并进入持续验证队列”。该结论不等于业务实现完成、客户交付完成或 production_ready。
+可以声明“项目群主方案控制机制已建立，当前 24 项目均已纳入盘点”；不得声明全部项目已具备唯一有效总体方案。缺口按上表保持 candidate/missing 与 repair_required，不等于业务实现完成、客户交付完成或 production_ready。
+2026-10-18 用户确认 WAE 纳入项目群当前范围；WAE 总体方案仍保持 `candidate`，唯一版本和继承链仍待核验。
 
 ## 6. 传导确认清单
 

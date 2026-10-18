@@ -9,8 +9,9 @@ import os
 import subprocess
 import sys
 from collections import Counter
-from datetime import datetime, timezone
+from datetime import date, datetime, timezone
 from pathlib import Path
+import yaml
 
 ROOT = Path(__file__).resolve().parents[2]
 REPORT = ROOT / "09-status/globalcloud-document-health-report.md"
@@ -21,22 +22,10 @@ DELEGATED_PROJECT_ROOT = os.environ.get("GPCF_DELEGATED_PROJECT_ROOT", "")
 
 def run(command: list[str]) -> tuple[int, str]:
     env = os.environ.copy()
-    env["GPCF_LOOP_DOCUMENT_GATE_ACTIVE"] = "1"
     if GFIS_REAL_FACT_ENTRY_GATE_CACHE:
         env["GPCF_GFIS_REAL_FACT_ENTRY_GATE_OUTPUT"] = GFIS_REAL_FACT_ENTRY_GATE_CACHE
     result = subprocess.run(command, cwd=ROOT, text=True, capture_output=True, env=env)
     return result.returncode, (result.stdout + result.stderr).strip()
-
-
-def run_with_retry(command: list[str], retries: int = 1) -> tuple[int, str]:
-    code, output = run(command)
-    attempts = [f"attempt=1 code={code} output={output}"]
-    for attempt in range(2, retries + 2):
-        if code == 0:
-            break
-        code, output = run(command)
-        attempts.append(f"attempt={attempt} code={code} output={output}")
-    return code, "\n".join(attempts)
 
 
 def run_delegated_project_localization() -> tuple[int, str]:
@@ -61,7 +50,7 @@ def run_delegated_project_localization() -> tuple[int, str]:
 def iter_repo_md() -> list[Path]:
     paths = []
     for path in ROOT.rglob("*.md"):
-        if ".git" in path.parts or ".kds" in path.parts or ".zcode" in path.parts or ".pytest_cache" in path.parts:
+        if ".git" in path.parts or ".kds" in path.parts or ".zcode" in path.parts or ".pytest_cache" in path.parts or "tmp" in path.parts:
             continue
         paths.append(path)
     return sorted(paths)
@@ -89,7 +78,7 @@ def read_frontmatter(path: Path) -> dict[str, str]:
     for line in text[4:end].splitlines():
         if ":" in line:
             key, value = line.split(":", 1)
-            data[key.strip()] = value.strip().strip('"')
+            data[key.strip()] = value.strip().strip("\"'")
     return data
 
 
@@ -153,12 +142,14 @@ def build_gate_reasons(
 def write_report(summary: dict[str, object], command_results: dict[str, str]) -> None:
     status_counts = summary["status_counts"]
     project_counts = summary["project_counts"]
+    registry = yaml.safe_load((ROOT / "config/project-group-projects.yaml").read_text(encoding="utf-8"))
+    related_projects = ", ".join(str(item["id"]) for item in registry["projects"])
     lines = [
         "---",
         "doc_id: GPCF-DOC-C436DDB0F6",
         "title: GlobalCloud 文档健康报告",
         "project: GPCF",
-        "related_projects: [AAAS, Brain, WAS, XiaoC, WAME, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD]",
+        f"related_projects: [{related_projects}]",
         "domain: status",
         "status: controlled",
         "version: v1.0",
@@ -197,6 +188,9 @@ def write_report(summary: dict[str, object], command_results: dict[str, str]) ->
         f"- README 缺失目录：{summary['missing_readme_dirs']}",
         f"- 中文本地化债务：{summary['localization_debt']}",
         f"- 固定 doc_id 漂移：{summary['fixed_doc_id_drift']}",
+        f"- 受控文档复核逾期（>90 天）：{summary['review_overdue_90d']}",
+        f"- 受控文档复核日期缺失或无效：{summary['review_date_unverified']}",
+        f"- 治理状态上限：{summary['status_ceiling']}",
         f"- 门禁原因：{', '.join(summary['gate_reasons']) if summary['gate_reasons'] else '无'}",
         "",
         "## 状态分布",
@@ -243,22 +237,11 @@ def main() -> int:
     args = parser.parse_args()
     if args.check_only and args.write_report:
         parser.error("--check-only and --write-report cannot be used together")
-    if args.check_only and os.environ.get("GPCF_LOOP_DOCUMENT_GATE_ACTIVE") == "1":
-        print(
-            json.dumps(
-                {
-                    "gate": "pass",
-                    "gate_reasons": [],
-                    "delegated_nested_loop_document_gate": True,
-                },
-                ensure_ascii=False,
-                indent=2,
-            )
-        )
-        return 0
-
     docs = iter_repo_md()
     missing_metadata = 0
+    review_overdue_90d = 0
+    review_date_unverified = 0
+    today = datetime.now(timezone.utc).date()
     status_counts: Counter[str] = Counter()
     project_counts: Counter[str] = Counter()
     for path in docs:
@@ -276,6 +259,14 @@ def main() -> int:
             missing_metadata += 1
         status_counts[fm.get("status", "missing")] += 1
         project_counts[fm.get("project", "missing")] += 1
+        if fm.get("status") == "controlled":
+            try:
+                reviewed = date.fromisoformat(fm.get("last_reviewed", ""))
+            except ValueError:
+                review_date_unverified += 1
+            else:
+                if (today - reviewed).days > 90:
+                    review_overdue_90d += 1
     missing_readme_dirs = 0
     for directory in {path.parent for path in docs}:
         if directory == ROOT:
@@ -292,13 +283,12 @@ def main() -> int:
     local_mirror_unique_docs = count_unique_mirror_docs(local_mirror_ledger)
     api_sync_ledger = ROOT / ".kds/sync-ledger.jsonl"
     api_sync_ledger_lines = len(api_sync_ledger.read_text(encoding="utf-8").splitlines()) if api_sync_ledger.exists() else 0
-    delegated = os.environ.get("GPCF_PROJECT_GROUP_GATE_DELEGATED") == "1"
     global GFIS_REAL_FACT_ENTRY_GATE_CACHE
     gfis_real_fact_entry_gate = run([sys.executable, "tools/kds-sync/validate_gfis_real_fact_entry_gate.py"])
     if gfis_real_fact_entry_gate[0] == 0:
         GFIS_REAL_FACT_ENTRY_GATE_CACHE = gfis_real_fact_entry_gate[1]
 
-    project_group_live_status_current = run([sys.executable, "tools/kds-sync/build_project_group_live_status_current.py"])
+    project_group_live_status_current = run([sys.executable, "tools/kds-sync/build_project_group_live_status_current.py", "--check-only"])
 
     delegated_project_localization = run_delegated_project_localization()
     checks = {
@@ -349,11 +339,8 @@ def main() -> int:
         "delegated_project_chinese_localization": delegated_project_localization,
         "kds_token": run([sys.executable, "tools/kds-sync/validate_kds_token.py"]),
     }
-    if not delegated:
-        checks["project_group_gate_readiness"] = run_with_retry(
-            [sys.executable, "tools/kds-sync/validate_loop_project_group_gate_readiness.py"],
-            retries=1,
-        )
+    # Project-group readiness runs separately: calling it from this gate would
+    # recurse through delegated sibling gates back into this same process.
     hard_failures = [
         name
         for name, (code, _) in checks.items()
@@ -385,6 +372,7 @@ def main() -> int:
     )
     summary = {
         "gate": gate,
+        "status_ceiling": "partial" if review_overdue_90d or review_date_unverified or gate != "pass" else "controlled",
         "gate_reasons": gate_reasons,
         "repo_md": len(docs),
         "kds_md": kds_md,
@@ -395,6 +383,8 @@ def main() -> int:
         "missing_readme_dirs": missing_readme_dirs,
         "localization_debt": localization_debt,
         "fixed_doc_id_drift": fixed_doc_id_drift,
+        "review_overdue_90d": review_overdue_90d,
+        "review_date_unverified": review_date_unverified,
         "status_counts": dict(status_counts),
         "project_counts": dict(project_counts),
     }

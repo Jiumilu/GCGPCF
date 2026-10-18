@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-OPEN-SPEC-18-PROJECT-MATRIX-20260712
 title: GlobalCloud 项目群 OpenSpec 适用性矩阵
 project: GPCF
-related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio, ICP, SpaceAIStudio]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio, ICP, SpaceAIStudio, GCMEM]
 domain: status
 status: controlled
 version: v1.0
@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/91-治理与验收/09-status/globalcloud-project-group-openspec-applicability-matrix.md
 source_path: 09-status/globalcloud-project-group-openspec-applicability-matrix.md
 sync_direction: bidirectional
-last_reviewed: 2026-07-12
+last_reviewed: 2026-10-18
 supersedes: []
 superseded_by: []
 ---
@@ -47,10 +47,11 @@ superseded_by: []
 | SpaceAI | spaceai | required | `openspec/changes/spaceai-<change>/` | `gpcf_new_feature --project spaceai` | Governance | required | required |
 
 | World | world | required | `openspec/changes/world-<change>/` | `gpcf_new_feature --project world` | Governance | required | required |
+| GCMEM | gcmem | conditional | `openspec/changes/gcmem-<change>/` | `gpcf_new_feature --project gcmem` | Governance | required | required |
 
 ## 状态边界
 
-- 当前 22 项目均有中央入口，`waived=0`；因此无豁免债务。
+- 当前 23 项目均有中央入口，`waived=0`；因此无豁免债务。
 - 中央入口不表示已向各独立项目仓安装 OpenSpec。
 - apply 前必须创建或绑定 Feature；归档前必须通过 Evidence 与文档门禁。
 - Harness 保留最终裁决权；未经人工确认不得提升验收或生产状态。

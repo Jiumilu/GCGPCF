@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-GLOBALCLOUD-PROJECT-GROUP-IMPLEMENTATION-PLAN-20260624
 title: GlobalCloud 项目群实施方案
 project: GPCF
-related_projects: [AAAS, Brain, WAS, XiaoC, WAME, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP, PQC, SpaceAI, SpaceAIStudio, World, GCMEM]
+related_projects: [AAAS, Brain, WAS, XiaoC, WAME, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP, PQC, SpaceAI, SpaceAIStudio, World, GCMEM, WAE]
 domain: architecture
 status: controlled
 version: v1.0
@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/12-GPCF/GlobalCloud 项目群实施方案.md
 source_path: GlobalCloud 项目群实施方案.md
 sync_direction: bidirectional
-last_reviewed: 2026-10-10
+last_reviewed: 2026-10-18
 supersedes: []
 superseded_by: []
 ---
@@ -77,12 +77,16 @@ GPCF:01-architecture/GlobalCloud 项目群总体方案.md
 20. GlobalCloud SpaceAI
 21. GlobalCloud SpaceAI Studio
 22. GlobalCloud World
+23. GlobalCloud GCMEM
+24. GlobalCloud WAE
+
+当前范围以 `config/project-group-projects.yaml` 为准；2026-10-18 用户明确确认 WAE 纳入当前 24 项目范围。历史 17/18/22 项目快照只代表其生成时的适用范围，不作为当前覆盖结论。新增项目在总体方案、实施方案、台账与验收证据补齐前保持 `partial/rework`，不得据目录或登记直接提升状态。
 
 `GlobalCloud World` 于 2026-10-16 授权独立纳管与本地/私有远端 Git 建立。入口 `projects/world/STATUS.md`，Feature F-021；角色 external；不迁移 Studio F-015 或 KDS 主账。authorization=纳管与Git初始同步已授权；confirmation=业务验收与生产发布未确认；overall_status=partial。中央门禁 rework_required，历史覆盖证据保持原范围。
 
 `GlobalCloud SpaceAI Studio` 于 2026-10-10 授权纳管，独立私有仓库 GCSpaceAIStudio；状态入口 `projects/spaceai-studio/STATUS.md`。authorization=用户授权纳管与Git建立，且确认敏感文件仅保留本地；confirmation=业务验收与生产发布未确认；overall_status=partial。Windows 构建、设备运行和外部依赖尚未验证，远端受限源码不可独立构建，不提升业务状态。
 
-`GlobalCloud SpaceAI` 于 2026-10-10 经用户授权纳管与建立独立私有 Git。状态入口 `projects/spaceai/STATUS.md`；authorization=已授权纳管及 Git，confirmation=业务验收和生产发布未确认，overall_status=partial。Git 初始基线仅纳管文件；历史源码凭据清理及 Windows 构建待完成，历史项目群证据不重算。
+GlobalCloud SpaceAI 于 2026-10-10 经用户授权纳入项目群管控，中央状态入口为 projects/spaceai/STATUS.md。2026-10-16 起，本目录定位为 CWME 归档与本地应用区；安防监控平台唯一开发主目录为同级 GlobalCloud SpaceAI Platform，两目录共享私有远端 GCSpaceAI 的历史。历史 Windows/.NET 原始源码已从本地移除，含疑似明文凭据的备份不得外发。CWME 本地应用和切片样板仅使用合成数据；authorization=已授权纳管与既有单仓合并，confirmation=业务验收和生产发布未确认，overall_status=partial。历史项目群证据不重算。
 
 `GlobalCloud PQC` 于 2026-10-10 经用户授权纳入项目群管控及独立私有 Git 仓库。状态入口 `projects/pqc/STATUS.md`；authorization=用户授权纳管与 Git 建立，confirmation=业务验收与生产发布未确认，overall_status=partial。历史 17/18 项目证据不重写，本次不声明真实集成或生产就绪。
 

@@ -11,14 +11,15 @@ kds_space: 开发
 kds_path: 开发/91-治理与验收/09-status/kds-development-space-sync-register.md
 source_path: 09-status/kds-development-space-sync-register.md
 sync_direction: bidirectional
-last_reviewed: 2026-10-16
+last_reviewed: 2026-10-18
 supersedes: []
 superseded_by: []
 ---
 
+
 # KDS 开发空间同步台账
 
-日期：2026-10-16
+日期：2026-10-18
 
 用途：登记 Git 文档与 KDS `开发` 空间的双向同步映射。当前实现包含仓库内 `.kds/development-space/开发` 本地镜像与真实 KDS API 同步工具链；单文档 API 状态以 `kds_api_status` 和真实同步审计流水为准。
 
@@ -32,18 +33,18 @@ superseded_by: []
 
 | project | kds_project_folder | project 字段文档数 | KDS 项目空间文档数 | 说明 |
 | --- | --- | --- | --- | --- |
-| GFIS | 01-GFIS | 121 | 118 | 已建空间 |
-| GPC | 02-GPC | 61 | 53 | 已建空间 |
+| GFIS | 01-GFIS | 117 | 114 | 已建空间 |
+| GPC | 02-GPC | 58 | 50 | 已建空间 |
 | PVAOS | 03-PVAOS | 13 | 10 | 已建空间 |
-| WAME | 04-WAME | 195 | 26 | 已建空间 |
-| KDS | 05-KDS | 1009 | 1006 | 已建空间 |
+| WAME | 04-WAME | 196 | 26 | 已建空间 |
+| KDS | 05-KDS | 1008 | 1005 | 已建空间 |
 | Brain | 06-Brain | 14 | 11 | 已建空间 |
 | PKC | 07-PKC | 10 | 7 | 已建空间 |
 | XiaoC | 08-XiaoC | 68 | 65 | 已建空间 |
 | XGD | 09-XGD | 10 | 7 | 已建空间 |
 | XiaoG | 10-XiaoG | 11 | 8 | 已建空间 |
 | MMC | 11-MMC | 13 | 10 | 已建空间 |
-| GPCF | 12-GPCF | 1983 | 1750 | 已建空间 |
+| GPCF | 12-GPCF | 1915 | 1658 | 已建空间 |
 | Studio | 13-Studio | 5 | 2 | 已建空间 |
 | ICP | 14-ICP | 0 | 0 | 已建空间，暂无直接镜像文档 |
 | SpaceAIStudio | 15-SpaceAIStudio | 0 | 0 | 已建空间，暂无直接镜像文档 |
@@ -54,8 +55,8 @@ superseded_by: []
 | kds_public_folder | meaning | document_count |
 | --- | --- | --- |
 | 00-项目群总控 | 项目群总入口与根 README | 1 |
-| 90-跨项目架构 | 跨项目架构、主线、数据/知识跨域文档 | 53 |
-| 91-治理与验收 | 治理、验收、状态、台账与门禁文档 | 303 |
+| 90-跨项目架构 | 跨项目架构、主线、数据/知识跨域文档 | 56 |
+| 91-治理与验收 | 治理、验收、状态、台账与门禁文档 | 325 |
 | 92-证据与会话归档 | Harness、证据样本、历史会话与归档文档 | 95 |
 | 99-过期文档 | deprecated / superseded 文档 | 0 |
 
@@ -65,37 +66,37 @@ superseded_by: []
 | --- | --- | --- | --- | --- |
 | GPCF-DOC-285E77EC87 | $CODEX_HOME/automations/globalcloud-17/README.md | 开发/02-GPC/$CODEX_HOME/automations/globalcloud-17/README.md | bidirectional | pending_api |
 | GPCF-DOC-9BC6636D29 | $CODEX_HOME/automations/globalcloud-17/memory.md | 开发/02-GPC/$CODEX_HOME/automations/globalcloud-17/memory.md | bidirectional | pending_api |
-| GPCF-DOC-C1D2E3F4A5 | .agents/skills/impeccable/README.md | 开发/02-GPC/.agents/skills/impeccable/README.md | bidirectional | pending_api |
+| GPCF-DOC-C1D2E3F4A5 | .agents/skills/impeccable/README.md | 开发/12-GPCF/.agents/skills/impeccable/README.md | register_and_mirror | pending_api |
 | GPCF-DOC-B6A5C4D3E2 | .agents/skills/impeccable/SKILL.md | 开发/12-GPCF/.agents/skills/impeccable/SKILL.md | bidirectional | pending_api |
-| GPCF-DOC-D4E5F6A7B8 | .agents/skills/impeccable/reference/README.md | 开发/02-GPC/.agents/skills/impeccable/reference/README.md | bidirectional | pending_api |
-| GPCF-DOC-A001000001 | .agents/skills/impeccable/reference/adapt.md | 开发/12-GPCF/.agents/skills/impeccable/reference/adapt.md | bidirectional | pending_api |
-| GPCF-DOC-A001000002 | .agents/skills/impeccable/reference/animate.md | 开发/12-GPCF/.agents/skills/impeccable/reference/animate.md | bidirectional | pending_api |
-| GPCF-DOC-A001000003 | .agents/skills/impeccable/reference/audit.md | 开发/12-GPCF/.agents/skills/impeccable/reference/audit.md | bidirectional | pending_api |
-| GPCF-DOC-A001000005 | .agents/skills/impeccable/reference/bolder.md | 开发/12-GPCF/.agents/skills/impeccable/reference/bolder.md | bidirectional | pending_api |
-| GPCF-DOC-A001000004 | .agents/skills/impeccable/reference/brand.md | 开发/12-GPCF/.agents/skills/impeccable/reference/brand.md | bidirectional | pending_api |
-| GPCF-DOC-A001000006 | .agents/skills/impeccable/reference/clarify.md | 开发/12-GPCF/.agents/skills/impeccable/reference/clarify.md | bidirectional | pending_api |
-| GPCF-DOC-A001000025 | .agents/skills/impeccable/reference/codex.md | 开发/12-GPCF/.agents/skills/impeccable/reference/codex.md | bidirectional | pending_api |
-| GPCF-DOC-A001000007 | .agents/skills/impeccable/reference/colorize.md | 开发/12-GPCF/.agents/skills/impeccable/reference/colorize.md | bidirectional | pending_api |
-| GPCF-DOC-A001000008 | .agents/skills/impeccable/reference/craft.md | 开发/12-GPCF/.agents/skills/impeccable/reference/craft.md | bidirectional | pending_api |
-| GPCF-DOC-A001000026 | .agents/skills/impeccable/reference/critique.md | 开发/12-GPCF/.agents/skills/impeccable/reference/critique.md | bidirectional | pending_api |
-| GPCF-DOC-A001000009 | .agents/skills/impeccable/reference/delight.md | 开发/12-GPCF/.agents/skills/impeccable/reference/delight.md | bidirectional | pending_api |
-| GPCF-DOC-A001000010 | .agents/skills/impeccable/reference/distill.md | 开发/12-GPCF/.agents/skills/impeccable/reference/distill.md | bidirectional | pending_api |
-| GPCF-DOC-A001000027 | .agents/skills/impeccable/reference/document.md | 开发/12-GPCF/.agents/skills/impeccable/reference/document.md | bidirectional | pending_api |
-| GPCF-DOC-A001000011 | .agents/skills/impeccable/reference/extract.md | 开发/12-GPCF/.agents/skills/impeccable/reference/extract.md | bidirectional | pending_api |
-| GPCF-DOC-A001000012 | .agents/skills/impeccable/reference/harden.md | 开发/01-GFIS/.agents/skills/impeccable/reference/harden.md | bidirectional | pending_api |
-| GPCF-DOC-A001000013 | .agents/skills/impeccable/reference/hooks.md | 开发/12-GPCF/.agents/skills/impeccable/reference/hooks.md | bidirectional | pending_api |
-| GPCF-DOC-A001000014 | .agents/skills/impeccable/reference/init.md | 开发/12-GPCF/.agents/skills/impeccable/reference/init.md | bidirectional | pending_api |
-| GPCF-DOC-A001000015 | .agents/skills/impeccable/reference/interaction-design.md | 开发/01-GFIS/.agents/skills/impeccable/reference/interaction-design.md | bidirectional | pending_api |
-| GPCF-DOC-A001000016 | .agents/skills/impeccable/reference/layout.md | 开发/12-GPCF/.agents/skills/impeccable/reference/layout.md | bidirectional | pending_api |
-| GPCF-DOC-A001000028 | .agents/skills/impeccable/reference/live.md | 开发/12-GPCF/.agents/skills/impeccable/reference/live.md | bidirectional | pending_api |
-| GPCF-DOC-A001000017 | .agents/skills/impeccable/reference/onboard.md | 开发/12-GPCF/.agents/skills/impeccable/reference/onboard.md | bidirectional | pending_api |
-| GPCF-DOC-A001000018 | .agents/skills/impeccable/reference/optimize.md | 开发/12-GPCF/.agents/skills/impeccable/reference/optimize.md | bidirectional | pending_api |
-| GPCF-DOC-A001000019 | .agents/skills/impeccable/reference/overdrive.md | 开发/01-GFIS/.agents/skills/impeccable/reference/overdrive.md | bidirectional | pending_api |
-| GPCF-DOC-A001000021 | .agents/skills/impeccable/reference/polish.md | 开发/01-GFIS/.agents/skills/impeccable/reference/polish.md | bidirectional | pending_api |
-| GPCF-DOC-A001000020 | .agents/skills/impeccable/reference/product.md | 开发/12-GPCF/.agents/skills/impeccable/reference/product.md | bidirectional | pending_api |
-| GPCF-DOC-A001000022 | .agents/skills/impeccable/reference/quieter.md | 开发/12-GPCF/.agents/skills/impeccable/reference/quieter.md | bidirectional | pending_api |
-| GPCF-DOC-A001000023 | .agents/skills/impeccable/reference/shape.md | 开发/12-GPCF/.agents/skills/impeccable/reference/shape.md | bidirectional | pending_api |
-| GPCF-DOC-A001000024 | .agents/skills/impeccable/reference/typeset.md | 开发/12-GPCF/.agents/skills/impeccable/reference/typeset.md | bidirectional | pending_api |
+| GPCF-DOC-D4E5F6A7B8 | .agents/skills/impeccable/reference/README.md | 开发/12-GPCF/.agents/skills/impeccable/reference/README.md | register_and_mirror | pending_api |
+| GPCF-DOC-A001000001 | .agents/skills/impeccable/reference/adapt.md | 开发/12-GPCF/.agents/skills/impeccable/reference/adapt.md | register_and_mirror | pending_api |
+| GPCF-DOC-A001000002 | .agents/skills/impeccable/reference/animate.md | 开发/12-GPCF/.agents/skills/impeccable/reference/animate.md | register_and_mirror | pending_api |
+| GPCF-DOC-A001000003 | .agents/skills/impeccable/reference/audit.md | 开发/12-GPCF/.agents/skills/impeccable/reference/audit.md | register_and_mirror | pending_api |
+| GPCF-DOC-A001000005 | .agents/skills/impeccable/reference/bolder.md | 开发/12-GPCF/.agents/skills/impeccable/reference/bolder.md | register_and_mirror | pending_api |
+| GPCF-DOC-A001000004 | .agents/skills/impeccable/reference/brand.md | 开发/12-GPCF/.agents/skills/impeccable/reference/brand.md | register_and_mirror | pending_api |
+| GPCF-DOC-A001000006 | .agents/skills/impeccable/reference/clarify.md | 开发/12-GPCF/.agents/skills/impeccable/reference/clarify.md | register_and_mirror | pending_api |
+| GPCF-DOC-A001000025 | .agents/skills/impeccable/reference/codex.md | 开发/12-GPCF/.agents/skills/impeccable/reference/codex.md | register_and_mirror | pending_api |
+| GPCF-DOC-A001000007 | .agents/skills/impeccable/reference/colorize.md | 开发/12-GPCF/.agents/skills/impeccable/reference/colorize.md | register_and_mirror | pending_api |
+| GPCF-DOC-A001000008 | .agents/skills/impeccable/reference/craft.md | 开发/12-GPCF/.agents/skills/impeccable/reference/craft.md | register_and_mirror | pending_api |
+| GPCF-DOC-A001000026 | .agents/skills/impeccable/reference/critique.md | 开发/12-GPCF/.agents/skills/impeccable/reference/critique.md | register_and_mirror | pending_api |
+| GPCF-DOC-A001000009 | .agents/skills/impeccable/reference/delight.md | 开发/12-GPCF/.agents/skills/impeccable/reference/delight.md | register_and_mirror | pending_api |
+| GPCF-DOC-A001000010 | .agents/skills/impeccable/reference/distill.md | 开发/12-GPCF/.agents/skills/impeccable/reference/distill.md | register_and_mirror | pending_api |
+| GPCF-DOC-A001000027 | .agents/skills/impeccable/reference/document.md | 开发/12-GPCF/.agents/skills/impeccable/reference/document.md | register_and_mirror | pending_api |
+| GPCF-DOC-A001000011 | .agents/skills/impeccable/reference/extract.md | 开发/12-GPCF/.agents/skills/impeccable/reference/extract.md | register_and_mirror | pending_api |
+| GPCF-DOC-A001000012 | .agents/skills/impeccable/reference/harden.md | 开发/12-GPCF/.agents/skills/impeccable/reference/harden.md | register_and_mirror | pending_api |
+| GPCF-DOC-A001000013 | .agents/skills/impeccable/reference/hooks.md | 开发/12-GPCF/.agents/skills/impeccable/reference/hooks.md | register_and_mirror | pending_api |
+| GPCF-DOC-A001000014 | .agents/skills/impeccable/reference/init.md | 开发/12-GPCF/.agents/skills/impeccable/reference/init.md | register_and_mirror | pending_api |
+| GPCF-DOC-A001000015 | .agents/skills/impeccable/reference/interaction-design.md | 开发/12-GPCF/.agents/skills/impeccable/reference/interaction-design.md | register_and_mirror | pending_api |
+| GPCF-DOC-A001000016 | .agents/skills/impeccable/reference/layout.md | 开发/12-GPCF/.agents/skills/impeccable/reference/layout.md | register_and_mirror | pending_api |
+| GPCF-DOC-A001000028 | .agents/skills/impeccable/reference/live.md | 开发/12-GPCF/.agents/skills/impeccable/reference/live.md | register_and_mirror | pending_api |
+| GPCF-DOC-A001000017 | .agents/skills/impeccable/reference/onboard.md | 开发/12-GPCF/.agents/skills/impeccable/reference/onboard.md | register_and_mirror | pending_api |
+| GPCF-DOC-A001000018 | .agents/skills/impeccable/reference/optimize.md | 开发/12-GPCF/.agents/skills/impeccable/reference/optimize.md | register_and_mirror | pending_api |
+| GPCF-DOC-A001000019 | .agents/skills/impeccable/reference/overdrive.md | 开发/12-GPCF/.agents/skills/impeccable/reference/overdrive.md | register_and_mirror | pending_api |
+| GPCF-DOC-A001000021 | .agents/skills/impeccable/reference/polish.md | 开发/12-GPCF/.agents/skills/impeccable/reference/polish.md | register_and_mirror | pending_api |
+| GPCF-DOC-A001000020 | .agents/skills/impeccable/reference/product.md | 开发/12-GPCF/.agents/skills/impeccable/reference/product.md | register_and_mirror | pending_api |
+| GPCF-DOC-A001000022 | .agents/skills/impeccable/reference/quieter.md | 开发/12-GPCF/.agents/skills/impeccable/reference/quieter.md | register_and_mirror | pending_api |
+| GPCF-DOC-A001000023 | .agents/skills/impeccable/reference/shape.md | 开发/12-GPCF/.agents/skills/impeccable/reference/shape.md | register_and_mirror | pending_api |
+| GPCF-DOC-A001000024 | .agents/skills/impeccable/reference/typeset.md | 开发/12-GPCF/.agents/skills/impeccable/reference/typeset.md | register_and_mirror | pending_api |
 | GPCF-DOC-56E7A7A3B5 | .codex/README.md | 开发/12-GPCF/.codex/README.md | register_and_mirror | pending_api |
 | GPCF-DOC-424C591653 | .codex/skills/README.md | 开发/12-GPCF/.codex/skills/README.md | register_and_mirror | pending_api |
 | GPCF-DOC-B053B83539 | .codex/skills/globalcloud-document-governance/README.md | 开发/12-GPCF/.codex/skills/globalcloud-document-governance/README.md | register_and_mirror | pending_api |
@@ -221,111 +222,11 @@ superseded_by: []
 | GPCF-DOC-8DB9DCE902 | .okf/README.md | 开发/12-GPCF/.okf/README.md | bidirectional | pending_api |
 | GPCF-DOC-C1EE643433 | .okf/architecture/README.md | 开发/12-GPCF/.okf/architecture/README.md | bidirectional | pending_api |
 | GPCF-DOC-E3A50CA31F | .okf/architecture/index.md | 开发/12-GPCF/.okf/architecture/index.md | bidirectional | pending_api |
-| GPCF-DOC-F0799E0052 | .okf/bundles/architecture-v0.1/concepts/01-architecture/AI驱动GFIS与GlobalCloud体系结合分析.md | 开发/12-GPCF/.okf/bundles/architecture-v0.1/concepts/01-architecture/AI驱动GFIS与GlobalCloud体系结合分析.md | bidirectional | pending_api |
-| GPCF-DOC-6333B7AEA2 | .okf/bundles/architecture-v0.1/concepts/01-architecture/GlobalCloud体系最小闭环与三阶段激活深度总表.md | 开发/12-GPCF/.okf/bundles/architecture-v0.1/concepts/01-architecture/GlobalCloud体系最小闭环与三阶段激活深度总表.md | bidirectional | pending_api |
-| GPCF-DOC-BD939AD888 | .okf/bundles/architecture-v0.1/concepts/01-architecture/GlobalCloud绿色供应链体系WAME控制塔治理架构图.md | 开发/12-GPCF/.okf/bundles/architecture-v0.1/concepts/01-architecture/GlobalCloud绿色供应链体系WAME控制塔治理架构图.md | bidirectional | pending_api |
-| GPCF-DOC-D278ACC161 | .okf/bundles/architecture-v0.1/concepts/01-architecture/GlobalCloud绿色供应链体系总架构.md | 开发/12-GPCF/.okf/bundles/architecture-v0.1/concepts/01-architecture/GlobalCloud绿色供应链体系总架构.md | bidirectional | pending_api |
-| GPCF-DOC-6F7F2D47CD | .okf/bundles/architecture-v0.1/concepts/01-architecture/GlobalCloud项目群交叉分析报告.md | 开发/12-GPCF/.okf/bundles/architecture-v0.1/concepts/01-architecture/GlobalCloud项目群交叉分析报告.md | bidirectional | pending_api |
-| GPCF-DOC-0C6ABE0306 | .okf/bundles/architecture-v0.1/concepts/01-architecture/GlobalCloud项目群最小闭环L4实施方案.md | 开发/12-GPCF/.okf/bundles/architecture-v0.1/concepts/01-architecture/GlobalCloud项目群最小闭环L4实施方案.md | bidirectional | pending_api |
-| GPCF-DOC-6BD7D5C192 | .okf/bundles/architecture-v0.1/concepts/01-architecture/index.md | 开发/12-GPCF/.okf/bundles/architecture-v0.1/concepts/01-architecture/index.md | bidirectional | pending_api |
-| GPCF-DOC-09A91E6519 | .okf/bundles/architecture-v0.1/index.md | 开发/12-GPCF/.okf/bundles/architecture-v0.1/index.md | bidirectional | pending_api |
-| GPCF-DOC-FE4EDCD536 | .okf/bundles/architecture-v0.1/log.md | 开发/12-GPCF/.okf/bundles/architecture-v0.1/log.md | bidirectional | pending_api |
-| GPCF-DOC-0DF6AA8647 | .okf/bundles/governance-v0.1/02-governance/loop/LOOP_CONTROL_BOARD.md | 开发/12-GPCF/.okf/bundles/governance-v0.1/02-governance/loop/LOOP_CONTROL_BOARD.md | bidirectional | pending_api |
-| GPCF-DOC-21CE43CD83 | .okf/bundles/governance-v0.1/concepts/02-governance/GlobalCloud项目群文档综合治理规范.md | 开发/12-GPCF/.okf/bundles/governance-v0.1/concepts/02-governance/GlobalCloud项目群文档综合治理规范.md | bidirectional | pending_api |
-| GPCF-DOC-345F0D5736 | .okf/bundles/governance-v0.1/concepts/02-governance/GlobalCloud项目群文档防污染规则.md | 开发/12-GPCF/.okf/bundles/governance-v0.1/concepts/02-governance/GlobalCloud项目群文档防污染规则.md | bidirectional | pending_api |
-| GPCF-DOC-21FDE53020 | .okf/bundles/governance-v0.1/concepts/02-governance/index.md | 开发/12-GPCF/.okf/bundles/governance-v0.1/concepts/02-governance/index.md | bidirectional | pending_api |
-| GPCF-DOC-0DF6AA8647 | .okf/bundles/governance-v0.1/concepts/02-governance/loop/LOOP_CONTROL_BOARD.md | 开发/12-GPCF/.okf/bundles/governance-v0.1/concepts/02-governance/loop/LOOP_CONTROL_BOARD.md | bidirectional | pending_api |
-| GPCF-DOC-FB949D38ED | .okf/bundles/governance-v0.1/concepts/02-governance/loop/LOOP_EXECUTION_RULES.md | 开发/12-GPCF/.okf/bundles/governance-v0.1/concepts/02-governance/loop/LOOP_EXECUTION_RULES.md | bidirectional | pending_api |
-| GPCF-DOC-FCF123A7BF | .okf/bundles/governance-v0.1/concepts/02-governance/loop/LOOP_GOVERNANCE_OPERATING_BOUNDARY.md | 开发/12-GPCF/.okf/bundles/governance-v0.1/concepts/02-governance/loop/LOOP_GOVERNANCE_OPERATING_BOUNDARY.md | bidirectional | pending_api |
-| GPCF-DOC-C274284D13 | .okf/bundles/governance-v0.1/concepts/02-governance/loop/LOOP_GOVERNANCE_PHASE_GOAL.md | 开发/12-GPCF/.okf/bundles/governance-v0.1/concepts/02-governance/loop/LOOP_GOVERNANCE_PHASE_GOAL.md | bidirectional | pending_api |
-| GPCF-DOC-C2F75FBFAD | .okf/bundles/governance-v0.1/concepts/02-governance/loop/index.md | 开发/12-GPCF/.okf/bundles/governance-v0.1/concepts/02-governance/loop/index.md | bidirectional | pending_api |
-| GPCF-DOC-C01E7DEF4F | .okf/bundles/governance-v0.1/concepts/09-status/index.md | 开发/12-GPCF/.okf/bundles/governance-v0.1/concepts/09-status/index.md | bidirectional | pending_api |
-| GPCF-DOC-8FDD7830FD | .okf/bundles/governance-v0.1/concepts/09-status/kds-phase10-governance-sustainment-plan.md | 开发/12-GPCF/.okf/bundles/governance-v0.1/concepts/09-status/kds-phase10-governance-sustainment-plan.md | bidirectional | pending_api |
-| GPCF-DOC-3DAE5A0577 | .okf/bundles/governance-v0.1/concepts/09-status/odf-introduction-governance-plan.md | 开发/12-GPCF/.okf/bundles/governance-v0.1/concepts/09-status/odf-introduction-governance-plan.md | bidirectional | pending_api |
-| GPCF-DOC-6264664560 | .okf/bundles/governance-v0.1/concepts/09-status/odf-phase2-expansion-plan.md | 开发/12-GPCF/.okf/bundles/governance-v0.1/concepts/09-status/odf-phase2-expansion-plan.md | bidirectional | pending_api |
-| GPCF-DOC-2DD4AF218A | .okf/bundles/governance-v0.1/concepts/09-status/odf-phase3-schema-gate-plan.md | 开发/12-GPCF/.okf/bundles/governance-v0.1/concepts/09-status/odf-phase3-schema-gate-plan.md | bidirectional | pending_api |
-| GPCF-DOC-C280B3F27B | .okf/bundles/governance-v0.1/concepts/09-status/odf-phase4-small-batch-admission-plan.md | 开发/12-GPCF/.okf/bundles/governance-v0.1/concepts/09-status/odf-phase4-small-batch-admission-plan.md | bidirectional | pending_api |
-| GPCF-DOC-79F8A3590E | .okf/bundles/governance-v0.1/concepts/09-status/odf-phase5-change-request-governance-plan.md | 开发/12-GPCF/.okf/bundles/governance-v0.1/concepts/09-status/odf-phase5-change-request-governance-plan.md | bidirectional | pending_api |
-| GPCF-DOC-57C53F95BF | .okf/bundles/governance-v0.1/concepts/09-status/odf-phase6-manual-confirmation-workbench-plan.md | 开发/12-GPCF/.okf/bundles/governance-v0.1/concepts/09-status/odf-phase6-manual-confirmation-workbench-plan.md | bidirectional | pending_api |
-| GPCF-DOC-174262B774 | .okf/bundles/governance-v0.1/concepts/09-status/odf-phase7-small-batch-execution-plan.md | 开发/12-GPCF/.okf/bundles/governance-v0.1/concepts/09-status/odf-phase7-small-batch-execution-plan.md | bidirectional | pending_api |
-| GPCF-DOC-FB6DF83F3F | .okf/bundles/governance-v0.1/concepts/09-status/odf-phase8-drift-monitoring-plan.md | 开发/12-GPCF/.okf/bundles/governance-v0.1/concepts/09-status/odf-phase8-drift-monitoring-plan.md | bidirectional | pending_api |
-| GPCF-DOC-63E9CF69F2 | .okf/bundles/governance-v0.1/concepts/09-status/odf-phase9-dynamic-source-stabilization-plan.md | 开发/12-GPCF/.okf/bundles/governance-v0.1/concepts/09-status/odf-phase9-dynamic-source-stabilization-plan.md | bidirectional | pending_api |
-| GPCF-DOC-69165151F9 | .okf/bundles/governance-v0.1/concepts/docs/harness/evidence/evidence-index.md | 开发/12-GPCF/.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/evidence-index.md | bidirectional | pending_api |
-| GPCF-DOC-8E954D5507 | .okf/bundles/governance-v0.1/concepts/docs/harness/evidence/index.md | 开发/12-GPCF/.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/index.md | bidirectional | pending_api |
-| GPCF-DOC-CA66D495EF | .okf/bundles/governance-v0.1/concepts/docs/harness/evidence/kds-md-okf-odf-full-closure-report-20260619.md | 开发/12-GPCF/.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/kds-md-okf-odf-full-closure-report-20260619.md | bidirectional | pending_api |
-| GPCF-DOC-108F9D6848 | .okf/bundles/governance-v0.1/concepts/docs/harness/evidence/kds-phase10-backlog-triage-20260619.md | 开发/12-GPCF/.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/kds-phase10-backlog-triage-20260619.md | bidirectional | pending_api |
-| GPCF-DOC-0BFEDBE7F0 | .okf/bundles/governance-v0.1/concepts/docs/harness/evidence/kds-phase10-self-refresh-stabilization-workpack-20260619.md | 开发/12-GPCF/.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/kds-phase10-self-refresh-stabilization-workpack-20260619.md | bidirectional | pending_api |
-| GPCF-DOC-887C0CD0ED | .okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase2-closure-report-20260617.md | 开发/12-GPCF/.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase2-closure-report-20260617.md | bidirectional | pending_api |
-| GPCF-DOC-A6C9041EA2 | .okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase2-sample-ledger-20260617.md | 开发/12-GPCF/.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase2-sample-ledger-20260617.md | bidirectional | pending_api |
-| GPCF-DOC-CA626B997E | .okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase3-schema-gate-20260617.md | 开发/12-GPCF/.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase3-schema-gate-20260617.md | bidirectional | pending_api |
-| GPCF-DOC-AB520AAA0B | .okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase4-small-batch-closure-20260617.md | 开发/12-GPCF/.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase4-small-batch-closure-20260617.md | bidirectional | pending_api |
-| GPCF-DOC-0CA23DBC73 | .okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase4-small-batch-ledger-20260617.md | 开发/12-GPCF/.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase4-small-batch-ledger-20260617.md | bidirectional | pending_api |
-| GPCF-DOC-1388761D60 | .okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase5-change-request-closure-20260617.md | 开发/12-GPCF/.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase5-change-request-closure-20260617.md | bidirectional | pending_api |
-| GPCF-DOC-C2F7987EC8 | .okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase5-change-request-ledger-20260617.md | 开发/12-GPCF/.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase5-change-request-ledger-20260617.md | bidirectional | pending_api |
-| GPCF-DOC-0318A0180C | .okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase6-manual-confirmation-workbench-20260618.md | 开发/12-GPCF/.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase6-manual-confirmation-workbench-20260618.md | bidirectional | pending_api |
-| GPCF-DOC-4F09F98867 | .okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase6-manual-confirmation-workbench-closure-20260618.md | 开发/12-GPCF/.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase6-manual-confirmation-workbench-closure-20260618.md | bidirectional | pending_api |
-| GPCF-DOC-5989E81F31 | .okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase7-small-batch-closure-20260619.md | 开发/12-GPCF/.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase7-small-batch-closure-20260619.md | bidirectional | pending_api |
-| GPCF-DOC-97BF84B81C | .okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase7-small-batch-ledger-20260619.md | 开发/12-GPCF/.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase7-small-batch-ledger-20260619.md | bidirectional | pending_api |
-| GPCF-DOC-8C94BDB1C5 | .okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase8-drift-monitoring-closure-20260619.md | 开发/12-GPCF/.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase8-drift-monitoring-closure-20260619.md | bidirectional | pending_api |
-| GPCF-DOC-FAE0036971 | .okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase8-drift-monitoring-report-20260619.md | 开发/12-GPCF/.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase8-drift-monitoring-report-20260619.md | bidirectional | pending_api |
-| GPCF-DOC-0429206766 | .okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase9-dynamic-source-stabilization-closure-20260619.md | 开发/12-GPCF/.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase9-dynamic-source-stabilization-closure-20260619.md | bidirectional | pending_api |
-| GPCF-DOC-799B8D87A3 | .okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase9-dynamic-source-stabilization-report-20260619.md | 开发/12-GPCF/.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase9-dynamic-source-stabilization-report-20260619.md | bidirectional | pending_api |
-| GPCF-DOC-4AFA9E99EC | .okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-pilot-closure-report-20260617.md | 开发/12-GPCF/.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-pilot-closure-report-20260617.md | bidirectional | pending_api |
-| GPCF-DOC-440AE2CDD3 | .okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-pilot-sample-ledger-20260617.md | 开发/12-GPCF/.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-pilot-sample-ledger-20260617.md | bidirectional | pending_api |
-| GPCF-DOC-E461B1E6E8 | .okf/bundles/governance-v0.1/concepts/docs/harness/index.md | 开发/12-GPCF/.okf/bundles/governance-v0.1/concepts/docs/harness/index.md | bidirectional | pending_api |
-| GPCF-DOC-91F568C078 | .okf/bundles/governance-v0.1/concepts/docs/harness/loop-state.md | 开发/12-GPCF/.okf/bundles/governance-v0.1/concepts/docs/harness/loop-state.md | bidirectional | pending_api |
-| GPCF-DOC-75D783BDBF | .okf/bundles/governance-v0.1/concepts/docs/harness/loops/README.md | 开发/12-GPCF/.okf/bundles/governance-v0.1/concepts/docs/harness/loops/README.md | bidirectional | pending_api |
-| GPCF-DOC-587456F3B9 | .okf/bundles/governance-v0.1/concepts/docs/harness/loops/index.md | 开发/12-GPCF/.okf/bundles/governance-v0.1/concepts/docs/harness/loops/index.md | bidirectional | pending_api |
-| GPCF-DOC-FA1C93B6F4 | .okf/bundles/governance-v0.1/index.md | 开发/12-GPCF/.okf/bundles/governance-v0.1/index.md | bidirectional | pending_api |
-| GPCF-DOC-6D7659F2B3 | .okf/bundles/governance-v0.1/log.md | 开发/12-GPCF/.okf/bundles/governance-v0.1/log.md | bidirectional | pending_api |
-| GPCF-DOC-AEE014F023 | .okf/bundles/kds-v0.1/concepts/02-governance/GlobalCloud项目群KDS开发空间安全规范.md | 开发/12-GPCF/.okf/bundles/kds-v0.1/concepts/02-governance/GlobalCloud项目群KDS开发空间安全规范.md | bidirectional | pending_api |
-| GPCF-DOC-C897BF0FF4 | .okf/bundles/kds-v0.1/concepts/02-governance/index.md | 开发/12-GPCF/.okf/bundles/kds-v0.1/concepts/02-governance/index.md | bidirectional | pending_api |
-| GPCF-DOC-2302CD4424 | .okf/bundles/kds-v0.1/concepts/03-data-ai-knowledge/GlobalCloud Loop开发KDS关联数据检索机制.md | 开发/12-GPCF/.okf/bundles/kds-v0.1/concepts/03-data-ai-knowledge/GlobalCloud Loop开发KDS关联数据检索机制.md | bidirectional | pending_api |
-| GPCF-DOC-9F55BE3115 | .okf/bundles/kds-v0.1/concepts/03-data-ai-knowledge/GlobalCloudBrain-KDS知识编制与知识UI边界清单.md | 开发/12-GPCF/.okf/bundles/kds-v0.1/concepts/03-data-ai-knowledge/GlobalCloudBrain-KDS知识编制与知识UI边界清单.md | bidirectional | pending_api |
-| GPCF-DOC-F9BA4A0DA2 | .okf/bundles/kds-v0.1/concepts/03-data-ai-knowledge/index.md | 开发/12-GPCF/.okf/bundles/kds-v0.1/concepts/03-data-ai-knowledge/index.md | bidirectional | pending_api |
-| GPCF-DOC-D00A2D2D97 | .okf/bundles/kds-v0.1/concepts/09-status/index.md | 开发/12-GPCF/.okf/bundles/kds-v0.1/concepts/09-status/index.md | bidirectional | pending_api |
-| GPCF-DOC-A28AE2375D | .okf/bundles/kds-v0.1/concepts/09-status/kds-md-okf-implementation-closure-plan.md | 开发/12-GPCF/.okf/bundles/kds-v0.1/concepts/09-status/kds-md-okf-implementation-closure-plan.md | bidirectional | pending_api |
-| GPCF-DOC-5DEB82217B | .okf/bundles/kds-v0.1/concepts/09-status/kds-okf-v01-full-implementation-plan.md | 开发/12-GPCF/.okf/bundles/kds-v0.1/concepts/09-status/kds-okf-v01-full-implementation-plan.md | bidirectional | pending_api |
-| GPCF-DOC-1ABFDD161D | .okf/bundles/kds-v0.1/concepts/09-status/kds-phase10-governance-sustainment-plan.md | 开发/12-GPCF/.okf/bundles/kds-v0.1/concepts/09-status/kds-phase10-governance-sustainment-plan.md | bidirectional | pending_api |
-| GPCF-DOC-EACEA29CA9 | .okf/bundles/kds-v0.1/concepts/09-status/kds-readonly-probe-report.md | 开发/12-GPCF/.okf/bundles/kds-v0.1/concepts/09-status/kds-readonly-probe-report.md | bidirectional | pending_api |
-| GPCF-DOC-6A0BBD4A2C | .okf/bundles/kds-v0.1/concepts/09-status/odf-introduction-governance-plan.md | 开发/12-GPCF/.okf/bundles/kds-v0.1/concepts/09-status/odf-introduction-governance-plan.md | bidirectional | pending_api |
-| GPCF-DOC-52445C063B | .okf/bundles/kds-v0.1/concepts/09-status/odf-phase2-expansion-plan.md | 开发/12-GPCF/.okf/bundles/kds-v0.1/concepts/09-status/odf-phase2-expansion-plan.md | bidirectional | pending_api |
-| GPCF-DOC-07D7CF1059 | .okf/bundles/kds-v0.1/concepts/09-status/odf-phase3-schema-gate-plan.md | 开发/12-GPCF/.okf/bundles/kds-v0.1/concepts/09-status/odf-phase3-schema-gate-plan.md | bidirectional | pending_api |
-| GPCF-DOC-9F2832976D | .okf/bundles/kds-v0.1/concepts/09-status/odf-phase4-small-batch-admission-plan.md | 开发/12-GPCF/.okf/bundles/kds-v0.1/concepts/09-status/odf-phase4-small-batch-admission-plan.md | bidirectional | pending_api |
-| GPCF-DOC-CDD9BF692D | .okf/bundles/kds-v0.1/concepts/09-status/odf-phase5-change-request-governance-plan.md | 开发/12-GPCF/.okf/bundles/kds-v0.1/concepts/09-status/odf-phase5-change-request-governance-plan.md | bidirectional | pending_api |
-| GPCF-DOC-CCB29577A2 | .okf/bundles/kds-v0.1/concepts/09-status/odf-phase6-manual-confirmation-workbench-plan.md | 开发/12-GPCF/.okf/bundles/kds-v0.1/concepts/09-status/odf-phase6-manual-confirmation-workbench-plan.md | bidirectional | pending_api |
-| GPCF-DOC-F5F31084E9 | .okf/bundles/kds-v0.1/concepts/09-status/odf-phase7-small-batch-execution-plan.md | 开发/12-GPCF/.okf/bundles/kds-v0.1/concepts/09-status/odf-phase7-small-batch-execution-plan.md | bidirectional | pending_api |
-| GPCF-DOC-D8529C03DA | .okf/bundles/kds-v0.1/concepts/09-status/odf-phase8-drift-monitoring-plan.md | 开发/12-GPCF/.okf/bundles/kds-v0.1/concepts/09-status/odf-phase8-drift-monitoring-plan.md | bidirectional | pending_api |
-| GPCF-DOC-614D612418 | .okf/bundles/kds-v0.1/concepts/09-status/odf-phase9-dynamic-source-stabilization-plan.md | 开发/12-GPCF/.okf/bundles/kds-v0.1/concepts/09-status/odf-phase9-dynamic-source-stabilization-plan.md | bidirectional | pending_api |
-| GPCF-DOC-B6346DF31E | .okf/bundles/kds-v0.1/concepts/docs/harness/evidence/index.md | 开发/12-GPCF/.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/index.md | bidirectional | pending_api |
-| GPCF-DOC-47D372B358 | .okf/bundles/kds-v0.1/concepts/docs/harness/evidence/kds-md-okf-odf-full-closure-report-20260619.md | 开发/12-GPCF/.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/kds-md-okf-odf-full-closure-report-20260619.md | bidirectional | pending_api |
-| GPCF-DOC-49EF1B720D | .okf/bundles/kds-v0.1/concepts/docs/harness/evidence/kds-phase10-backlog-triage-20260619.md | 开发/12-GPCF/.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/kds-phase10-backlog-triage-20260619.md | bidirectional | pending_api |
-| GPCF-DOC-9072FD81C8 | .okf/bundles/kds-v0.1/concepts/docs/harness/evidence/kds-phase10-self-refresh-stabilization-workpack-20260619.md | 开发/12-GPCF/.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/kds-phase10-self-refresh-stabilization-workpack-20260619.md | bidirectional | pending_api |
-| GPCF-DOC-DA8E9D0BA0 | .okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase2-closure-report-20260617.md | 开发/12-GPCF/.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase2-closure-report-20260617.md | bidirectional | pending_api |
-| GPCF-DOC-705119F127 | .okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase2-sample-ledger-20260617.md | 开发/12-GPCF/.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase2-sample-ledger-20260617.md | bidirectional | pending_api |
-| GPCF-DOC-D8FC4ACE9A | .okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase3-schema-gate-20260617.md | 开发/12-GPCF/.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase3-schema-gate-20260617.md | bidirectional | pending_api |
-| GPCF-DOC-312A652CF0 | .okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase4-small-batch-closure-20260617.md | 开发/12-GPCF/.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase4-small-batch-closure-20260617.md | bidirectional | pending_api |
-| GPCF-DOC-7806FFFF4C | .okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase4-small-batch-ledger-20260617.md | 开发/12-GPCF/.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase4-small-batch-ledger-20260617.md | bidirectional | pending_api |
-| GPCF-DOC-7FF5DE4F5C | .okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase5-change-request-closure-20260617.md | 开发/12-GPCF/.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase5-change-request-closure-20260617.md | bidirectional | pending_api |
-| GPCF-DOC-09C99A5CD9 | .okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase5-change-request-ledger-20260617.md | 开发/12-GPCF/.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase5-change-request-ledger-20260617.md | bidirectional | pending_api |
-| GPCF-DOC-6BB95F1D48 | .okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase6-manual-confirmation-workbench-20260618.md | 开发/12-GPCF/.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase6-manual-confirmation-workbench-20260618.md | bidirectional | pending_api |
-| GPCF-DOC-BD5BCB3156 | .okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase6-manual-confirmation-workbench-closure-20260618.md | 开发/12-GPCF/.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase6-manual-confirmation-workbench-closure-20260618.md | bidirectional | pending_api |
-| GPCF-DOC-9F92895BFB | .okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase7-small-batch-closure-20260619.md | 开发/12-GPCF/.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase7-small-batch-closure-20260619.md | bidirectional | pending_api |
-| GPCF-DOC-118B84520F | .okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase7-small-batch-ledger-20260619.md | 开发/12-GPCF/.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase7-small-batch-ledger-20260619.md | bidirectional | pending_api |
-| GPCF-DOC-695B04432A | .okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase8-drift-monitoring-closure-20260619.md | 开发/12-GPCF/.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase8-drift-monitoring-closure-20260619.md | bidirectional | pending_api |
-| GPCF-DOC-2B943D89D1 | .okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase8-drift-monitoring-report-20260619.md | 开发/12-GPCF/.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase8-drift-monitoring-report-20260619.md | bidirectional | pending_api |
-| GPCF-DOC-00BAD98FD4 | .okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase9-dynamic-source-stabilization-closure-20260619.md | 开发/12-GPCF/.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase9-dynamic-source-stabilization-closure-20260619.md | bidirectional | pending_api |
-| GPCF-DOC-322FA63FD9 | .okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase9-dynamic-source-stabilization-report-20260619.md | 开发/12-GPCF/.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase9-dynamic-source-stabilization-report-20260619.md | bidirectional | pending_api |
-| GPCF-DOC-446BC2D70C | .okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-pilot-closure-report-20260617.md | 开发/12-GPCF/.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-pilot-closure-report-20260617.md | bidirectional | pending_api |
-| GPCF-DOC-04AF207E76 | .okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-pilot-sample-ledger-20260617.md | 开发/12-GPCF/.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-pilot-sample-ledger-20260617.md | bidirectional | pending_api |
-| GPCF-DOC-1670E0BDC4 | .okf/bundles/kds-v0.1/index.md | 开发/12-GPCF/.okf/bundles/kds-v0.1/index.md | bidirectional | pending_api |
-| GPCF-DOC-9ED3705272 | .okf/bundles/kds-v0.1/log.md | 开发/12-GPCF/.okf/bundles/kds-v0.1/log.md | bidirectional | pending_api |
 | GPCF-DOC-B5A4AF3B25 | .okf/governance/README.md | 开发/12-GPCF/.okf/governance/README.md | bidirectional | pending_api |
 | GPCF-DOC-37BA319CB6 | .okf/governance/index.md | 开发/12-GPCF/.okf/governance/index.md | bidirectional | pending_api |
 | GPCF-DOC-323D4F2AA4 | .okf/index.md | 开发/12-GPCF/.okf/index.md | bidirectional | pending_api |
 | GPCF-DOC-73009C52E2 | .okf/kds/README.md | 开发/12-GPCF/.okf/kds/README.md | bidirectional | pending_api |
 | GPCF-DOC-40F2D45CE1 | .okf/kds/index.md | 开发/12-GPCF/.okf/kds/index.md | bidirectional | pending_api |
-| GPCF-DOC-4B5717387C | .pytest_cache/README.md | 开发/02-GPC/.pytest_cache/README.md | bidirectional | pending_api |
 | GPCF-DOC-FAD086E548 | .zcode/commands/README.md | 开发/02-GPC/.zcode/commands/README.md | bidirectional | pending_api |
 | GPCF-ZCODE-COMMAND-EVIDENCE-20260712 | .zcode/commands/evidence.md | 开发/02-GPC/.zcode/commands/evidence.md | bidirectional | pending_api |
 | GPCF-ZCODE-COMMAND-LOOP-20260712 | .zcode/commands/loop.md | 开发/02-GPC/.zcode/commands/loop.md | bidirectional | pending_api |
@@ -363,7 +264,10 @@ superseded_by: []
 | GPCF-DOC-AA2468EDC8 | 01-architecture/GlobalCloud绿色供应链平台主架构与宪法约束融合建议.md | 开发/90-跨项目架构/01-architecture/GlobalCloud绿色供应链平台主架构与宪法约束融合建议.md | bidirectional | pending_api |
 | GPCF-DOC-535BF5C0CA | 01-architecture/GlobalCloud项目群交叉分析报告.md | 开发/90-跨项目架构/01-architecture/GlobalCloud项目群交叉分析报告.md | bidirectional | pending_api |
 | GPCF-DOC-GLOBALCLOUD-PROJECT-GROUP-IMPLEMENTATION-PLAN-20260624 | 01-architecture/GlobalCloud项目群实施方案.md | 开发/90-跨项目架构/01-architecture/GlobalCloud项目群实施方案.md | bidirectional | pending_api |
+| GPCF-DOC-GROUP-ARCH-ITERATION-20261017 | 01-architecture/GlobalCloud项目群总体架构迭代分析_v1.0.md | 开发/90-跨项目架构/01-architecture/GlobalCloud项目群总体架构迭代分析_v1.0.md | bidirectional | pending_api |
 | GPCF-DOC-7B5E3B05D7 | 01-architecture/GlobalCloud项目群最小闭环L4实施方案.md | 开发/90-跨项目架构/01-architecture/GlobalCloud项目群最小闭环L4实施方案.md | bidirectional | pending_api |
+| GPCF-DOC-GROUP-ARCH-DEEPEN-20261017 | 01-architecture/GlobalCloud项目群架构深化分析_v1.0.md | 开发/90-跨项目架构/01-architecture/GlobalCloud项目群架构深化分析_v1.0.md | bidirectional | pending_api |
+| GPCF-DOC-GROUP-SYSTEM-ARCHITECTURE-20261017 | 01-architecture/GlobalCloud项目群系统架构图.md | 开发/90-跨项目架构/01-architecture/GlobalCloud项目群系统架构图.md | bidirectional | pending_api |
 | GPCF-DOC-XAP-P1-ACCEPTANCE-CASES-DRAFT-20261011 | 01-architecture/P1最小受理闭环_验收用例草案_v0.1.md | 开发/90-跨项目架构/01-architecture/P1最小受理闭环_验收用例草案_v0.1.md | bidirectional | pending_api |
 | GPCF-DOC-75A25DFFB1 | 01-architecture/README.md | 开发/90-跨项目架构/01-architecture/README.md | bidirectional | pending_api |
 | GPCF-DOC-WAME-UNIFIED-REQUEST-MECHANISM-20261011 | 01-architecture/WAME统一审核请求机制_v0.1.md | 开发/90-跨项目架构/01-architecture/WAME统一审核请求机制_v0.1.md | bidirectional | pending_api |
@@ -393,6 +297,7 @@ superseded_by: []
 | GPCF-DOC-FD6BA2EC78 | 02-governance/GlobalCloud绿色供应链体系设计-实现追踪矩阵规范.md | 开发/91-治理与验收/02-governance/GlobalCloud绿色供应链体系设计-实现追踪矩阵规范.md | bidirectional | pending_api |
 | GPCF-DOC-94AA31880F | 02-governance/GlobalCloud绿色供应链体系项目仓库实施准入规范.md | 开发/91-治理与验收/02-governance/GlobalCloud绿色供应链体系项目仓库实施准入规范.md | bidirectional | pending_api |
 | GPCF-DOC-AGENT-REACH-FULL-IMPLEMENTATION-20260622 | 02-governance/GlobalCloud项目群Agent-Reach全量实施方案与执行提示词.md | 开发/91-治理与验收/02-governance/GlobalCloud项目群Agent-Reach全量实施方案与执行提示词.md | bidirectional | pending_api |
+| GPCF-DOC-C60B81A4D2 | 02-governance/GlobalCloud项目群Codex-DSH-Hermes协同开发与运行方案.md | 开发/91-治理与验收/02-governance/GlobalCloud项目群Codex-DSH-Hermes协同开发与运行方案.md | bidirectional | pending_api |
 | GPCF-DOC-3A9B7F4E12 | 02-governance/GlobalCloud项目群Cognee纳入项目群及LOOP工程体系评估与POC方案.md | 开发/91-治理与验收/02-governance/GlobalCloud项目群Cognee纳入项目群及LOOP工程体系评估与POC方案.md | bidirectional | pending_api |
 | GPCF-DOC-5E60043D38 | 02-governance/GlobalCloud项目群Headroom-LCX全量实施方案与执行提示词.md | 开发/91-治理与验收/02-governance/GlobalCloud项目群Headroom-LCX全量实施方案与执行提示词.md | bidirectional | pending_api |
 | GPCF-DOC-2BBAE6E546 | 02-governance/GlobalCloud项目群Headroom接入应用与成本评估模型.md | 开发/91-治理与验收/02-governance/GlobalCloud项目群Headroom接入应用与成本评估模型.md | bidirectional | pending_api |
@@ -1730,7 +1635,7 @@ superseded_by: []
 | GPCF-DOC-8DC131D430 | docs/harness/evidence/ontology-was-3h-p2-gate-replay-20260621.md | 开发/12-GPCF/docs/harness/evidence/ontology-was-3h-p2-gate-replay-20260621.md | bidirectional | pending_api |
 | GPCF-DOC-20DAB7011D | docs/harness/evidence/ontology-was-3h-p3-closure-20260621.md | 开发/12-GPCF/docs/harness/evidence/ontology-was-3h-p3-closure-20260621.md | bidirectional | pending_api |
 | GPCF-DOC-C21E66324C | docs/harness/evidence/ontology-was-real-source-record-intake-pack-20260621.md | 开发/05-KDS/docs/harness/evidence/ontology-was-real-source-record-intake-pack-20260621.md | bidirectional | pending_api |
-| GPCF-DOC-PROJECTGROUPLIVESTATUSCURRENT20260701 | docs/harness/evidence/project_group_live_status_current.md | 开发/05-KDS/docs/harness/evidence/project_group_live_status_current.md | bidirectional | pending_api |
+| GPCF-DOC-PROJECTGROUPLIVESTATUSCURRENT20260701 | docs/harness/evidence/project_group_live_status_current.md | 开发/12-GPCF/docs/harness/evidence/project_group_live_status_current.md | bidirectional | pending_api |
 | GPCF-DOC-FACA370CCA | docs/harness/evidence/session-main-task-summary-declaration-boundary-20260622.md | 开发/05-KDS/docs/harness/evidence/session-main-task-summary-declaration-boundary-20260622.md | bidirectional | pending_api |
 | GPCF-DOC-3A9B82D614 | docs/harness/evidence/session-mainline-drift-watch-20260622.md | 开发/05-KDS/docs/harness/evidence/session-mainline-drift-watch-20260622.md | bidirectional | pending_api |
 | GPCF-DOC-SESSION-HANDOFF-REQUEST-GATE-20260622 | docs/harness/evidence/session-mainline-handoff-request-gate-20260622.md | 开发/05-KDS/docs/harness/evidence/session-mainline-handoff-request-gate-20260622.md | bidirectional | pending_api |
@@ -3305,8 +3210,15 @@ superseded_by: []
 | GPCF-WORLD-FEATURES-ACTIVE-F-021-WORLD-PROJECT-ONBOARDING-EVIDENCE-SUMMARY-MD | features/active/F-021-world-project-onboarding/evidence/summary.md | 开发/91-治理与验收/features/active/F-021-world-project-onboarding/evidence/summary.md | bidirectional | pending_api |
 | GPCF-WORLD-FEATURES-ACTIVE-F-021-WORLD-PROJECT-ONBOARDING-JOURNAL-MD | features/active/F-021-world-project-onboarding/journal.md | 开发/91-治理与验收/features/active/F-021-world-project-onboarding/journal.md | bidirectional | pending_api |
 | GPCF-DOC-2611C45131 | features/active/F-022-was-scenario-flow-extension/journal.md | 开发/91-治理与验收/features/active/F-022-was-scenario-flow-extension/journal.md | bidirectional | pending_api |
+| GPCF-DOC-F023-ARTIFACTS-README | features/active/F-023-was-flow-naming-migration/artifacts/README.md | 开发/91-治理与验收/features/active/F-023-was-flow-naming-migration/artifacts/README.md | bidirectional | pending_api |
+| GPCF-DOC-F023-EVIDENCE-README | features/active/F-023-was-flow-naming-migration/evidence/README.md | 开发/91-治理与验收/features/active/F-023-was-flow-naming-migration/evidence/README.md | bidirectional | pending_api |
 | GPCF-DOC-752234F1D9 | features/active/F-023-was-flow-naming-migration/journal.md | 开发/91-治理与验收/features/active/F-023-was-flow-naming-migration/journal.md | bidirectional | pending_api |
 | GPCF-DOC-70F58BB28D | features/active/F-024-panorama-engineering-convergence/journal.md | 开发/91-治理与验收/features/active/F-024-panorama-engineering-convergence/journal.md | bidirectional | pending_api |
+| GPCF-DOC-F025-JOURNAL | features/active/F-025-project-group-arch-iteration/journal.md | 开发/91-治理与验收/features/active/F-025-project-group-arch-iteration/journal.md | bidirectional | pending_api |
+| GPCF-DOC-F026-GCMEM-EVIDENCE-20261018 | features/active/F-026-gcmem-governance-onboarding/evidence/summary.md | 开发/91-治理与验收/features/active/F-026-gcmem-governance-onboarding/evidence/summary.md | local_only | pending_api |
+| GPCF-DOC-F026-GCMEM-JOURNAL-20261018 | features/active/F-026-gcmem-governance-onboarding/journal.md | 开发/91-治理与验收/features/active/F-026-gcmem-governance-onboarding/journal.md | bidirectional | pending_api |
+| GPCF-DOC-5D91F1910A | features/active/F-027-governance-remediation/evidence/summary.md | 开发/91-治理与验收/features/active/F-027-governance-remediation/evidence/summary.md | bidirectional | pending_api |
+| GPCF-DOC-F027-JOURNAL | features/active/F-027-governance-remediation/journal.md | 开发/91-治理与验收/features/active/F-027-governance-remediation/journal.md | bidirectional | pending_api |
 | GPCF-DOC-01B2179D97 | features/done/F-001-supplier-onboarding/evidence/summary.md | 开发/91-治理与验收/features/done/F-001-supplier-onboarding/evidence/summary.md | bidirectional | pending_api |
 | GPCF-DOC-1CB646B985 | features/done/F-001-supplier-onboarding/journal.md | 开发/91-治理与验收/features/done/F-001-supplier-onboarding/journal.md | bidirectional | pending_api |
 | GPCF-DOC-87C12A1121 | features/done/F-002-project-group-feature-queue/evidence/summary.md | 开发/91-治理与验收/features/done/F-002-project-group-feature-queue/evidence/summary.md | bidirectional | pending_api |
@@ -3502,7 +3414,11 @@ superseded_by: []
 | GPCF-DOC-A233ABB969 | projects/brain/RISK.md | 开发/91-治理与验收/projects/brain/RISK.md | bidirectional | pending_api |
 | GPCF-DOC-D40C9F208D | projects/brain/ROADMAP.md | 开发/91-治理与验收/projects/brain/ROADMAP.md | bidirectional | pending_api |
 | GPCF-DOC-70E004C4E1 | projects/brain/STATUS.md | 开发/91-治理与验收/projects/brain/STATUS.md | bidirectional | pending_api |
+| GPCF-DOC-GCMEM-MEM0-CMP | projects/gcmem/GCMEM-vs-mem0-对比.md | 开发/91-治理与验收/projects/gcmem/GCMEM-vs-mem0-对比.md | bidirectional | pending_api |
+| GPCF-DOC-GCMEM-MEM0-METRICS | projects/gcmem/GCMEM-vs-mem0-指标分析.md | 开发/91-治理与验收/projects/gcmem/GCMEM-vs-mem0-指标分析.md | bidirectional | pending_api |
 | GPCF-DOC-2252D3D171 | projects/gcmem/MASTER-DESIGN.md | 开发/91-治理与验收/projects/gcmem/MASTER-DESIGN.md | bidirectional | pending_api |
+| GPCF-DOC-CEE8C03181 | projects/gcmem/RISK.md | 开发/91-治理与验收/projects/gcmem/RISK.md | bidirectional | pending_api |
+| GPCF-DOC-6C2740A26F | projects/gcmem/ROADMAP.md | 开发/91-治理与验收/projects/gcmem/ROADMAP.md | bidirectional | pending_api |
 | GPCF-DOC-EAF988D469 | projects/gcmem/STATUS.md | 开发/91-治理与验收/projects/gcmem/STATUS.md | bidirectional | pending_api |
 | GPCF-DOC-2D5F274D6B | projects/gfis/RISK.md | 开发/91-治理与验收/projects/gfis/RISK.md | bidirectional | pending_api |
 | GPCF-DOC-31E1D4AB3F | projects/gfis/ROADMAP.md | 开发/91-治理与验收/projects/gfis/ROADMAP.md | bidirectional | pending_api |
@@ -3525,6 +3441,8 @@ superseded_by: []
 | GPCF-DOC-857E6A9307 | projects/pkc/RISK.md | 开发/91-治理与验收/projects/pkc/RISK.md | bidirectional | pending_api |
 | GPCF-DOC-950A22AC4D | projects/pkc/ROADMAP.md | 开发/91-治理与验收/projects/pkc/ROADMAP.md | bidirectional | pending_api |
 | GPCF-DOC-88EC26FE57 | projects/pkc/STATUS.md | 开发/91-治理与验收/projects/pkc/STATUS.md | bidirectional | pending_api |
+| GPCF-DOC-B0BEE2DA8F | projects/pqc/RISK.md | 开发/91-治理与验收/projects/pqc/RISK.md | bidirectional | pending_api |
+| GPCF-DOC-1986A54DEF | projects/pqc/ROADMAP.md | 开发/91-治理与验收/projects/pqc/ROADMAP.md | bidirectional | pending_api |
 | GPCF-PQC-STATUS-20261010 | projects/pqc/STATUS.md | 开发/91-治理与验收/projects/pqc/STATUS.md | bidirectional | pending_api |
 | GPCF-DOC-73296C1685 | projects/pvaos/RISK.md | 开发/91-治理与验收/projects/pvaos/RISK.md | bidirectional | pending_api |
 | GPCF-DOC-00153CD8B3 | projects/pvaos/ROADMAP.md | 开发/91-治理与验收/projects/pvaos/ROADMAP.md | bidirectional | pending_api |
@@ -3532,7 +3450,11 @@ superseded_by: []
 | GPCF-DOC-068AE09B46 | projects/sop/RISK.md | 开发/91-治理与验收/projects/sop/RISK.md | bidirectional | pending_api |
 | GPCF-DOC-86C94554EC | projects/sop/ROADMAP.md | 开发/91-治理与验收/projects/sop/ROADMAP.md | bidirectional | pending_api |
 | GPCF-DOC-5F3201F8C9 | projects/sop/STATUS.md | 开发/91-治理与验收/projects/sop/STATUS.md | bidirectional | pending_api |
+| GPCF-DOC-66AD1FE5A5 | projects/spaceai-studio/RISK.md | 开发/91-治理与验收/projects/spaceai-studio/RISK.md | bidirectional | pending_api |
+| GPCF-DOC-6DE05AE36A | projects/spaceai-studio/ROADMAP.md | 开发/91-治理与验收/projects/spaceai-studio/ROADMAP.md | bidirectional | pending_api |
 | GPCF-SpaceAIStudio-STATUS-20261010 | projects/spaceai-studio/STATUS.md | 开发/91-治理与验收/projects/spaceai-studio/STATUS.md | bidirectional | pending_api |
+| GPCF-DOC-40D3030FDC | projects/spaceai/RISK.md | 开发/91-治理与验收/projects/spaceai/RISK.md | bidirectional | pending_api |
+| GPCF-DOC-F23FD95D02 | projects/spaceai/ROADMAP.md | 开发/91-治理与验收/projects/spaceai/ROADMAP.md | bidirectional | pending_api |
 | GPCF-SPACEAI-STATUS-20261010 | projects/spaceai/STATUS.md | 开发/91-治理与验收/projects/spaceai/STATUS.md | bidirectional | pending_api |
 | GPCF-DOC-EBFFF7C374 | projects/studio/RISK.md | 开发/91-治理与验收/projects/studio/RISK.md | bidirectional | pending_api |
 | GPCF-DOC-46D1584AC5 | projects/studio/ROADMAP.md | 开发/91-治理与验收/projects/studio/ROADMAP.md | bidirectional | pending_api |
@@ -3540,6 +3462,8 @@ superseded_by: []
 | GPCF-DOC-455691886F | projects/wae/MASTER-DESIGN.md | 开发/91-治理与验收/projects/wae/MASTER-DESIGN.md | bidirectional | pending_api |
 | GPCF-DOC-WAE-MASTER-DESIGN-V02 | projects/wae/MASTER-DESIGN_v0.2.md | 开发/91-治理与验收/projects/wae/MASTER-DESIGN_v0.2.md | bidirectional | pending_api |
 | GPCF-DOC-WAE-MASTER-DESIGN-V03 | projects/wae/MASTER-DESIGN_v0.3.md | 开发/91-治理与验收/projects/wae/MASTER-DESIGN_v0.3.md | bidirectional | pending_api |
+| GPCF-DOC-C238D18002 | projects/wae/RISK.md | 开发/91-治理与验收/projects/wae/RISK.md | bidirectional | pending_api |
+| GPCF-DOC-9485C11E7E | projects/wae/ROADMAP.md | 开发/91-治理与验收/projects/wae/ROADMAP.md | bidirectional | pending_api |
 | GPCF-DOC-420E49DB6F | projects/wae/STATUS.md | 开发/91-治理与验收/projects/wae/STATUS.md | bidirectional | pending_api |
 | WAE-DOC-FORM-COMPARE-20261012 | projects/wae/技术形态对比分析_v0.1.md | 开发/91-治理与验收/projects/wae/技术形态对比分析_v0.1.md | bidirectional | pending_api |
 | GPCF-DOC-25E061C8E6 | projects/wame/RISK.md | 开发/91-治理与验收/projects/wame/RISK.md | bidirectional | pending_api |
@@ -3548,6 +3472,8 @@ superseded_by: []
 | GPCF-DOC-D4EC6E6167 | projects/was/RISK.md | 开发/91-治理与验收/projects/was/RISK.md | bidirectional | pending_api |
 | GPCF-DOC-20DCA6FD0E | projects/was/ROADMAP.md | 开发/91-治理与验收/projects/was/ROADMAP.md | bidirectional | pending_api |
 | GPCF-DOC-9406A78FC6 | projects/was/STATUS.md | 开发/91-治理与验收/projects/was/STATUS.md | bidirectional | pending_api |
+| GPCF-DOC-EBD30DF213 | projects/world/RISK.md | 开发/91-治理与验收/projects/world/RISK.md | bidirectional | pending_api |
+| GPCF-DOC-E5B99BC128 | projects/world/ROADMAP.md | 开发/91-治理与验收/projects/world/ROADMAP.md | bidirectional | pending_api |
 | GPCF-WORLD-PROJECTS-WORLD-STATUS-MD-20261016 | projects/world/STATUS.md | 开发/91-治理与验收/projects/world/STATUS.md | bidirectional | pending_api |
 | GPCF-DOC-F32278139B | projects/xgd/RISK.md | 开发/91-治理与验收/projects/xgd/RISK.md | bidirectional | pending_api |
 | GPCF-DOC-10B748AECE | projects/xgd/ROADMAP.md | 开发/91-治理与验收/projects/xgd/ROADMAP.md | bidirectional | pending_api |

@@ -1,0 +1,45 @@
+{
+  "generated_at": "2026-10-18T02:16:09.524572+00:00",
+  "mirror_extra_count": 125,
+  "categories": {
+    "derived_okf_bundle": {
+      "count": 99,
+      "samples": [
+        "开发/12-GPCF/.okf/bundles/architecture-v0.1/concepts/01-architecture/AI驱动GFIS与GlobalCloud体系结合分析.md",
+        "开发/12-GPCF/.okf/bundles/architecture-v0.1/concepts/01-architecture/GlobalCloud体系最小闭环与三阶段激活深度总表.md",
+        "开发/12-GPCF/.okf/bundles/architecture-v0.1/concepts/01-architecture/GlobalCloud绿色供应链体系WAME控制塔治理架构图.md"
+      ]
+    },
+    "external_skill_mirror": {
+      "count": 6,
+      "samples": [
+        "开发/01-GFIS/.agents/skills/impeccable/reference/harden.md",
+        "开发/01-GFIS/.agents/skills/impeccable/reference/interaction-design.md",
+        "开发/01-GFIS/.agents/skills/impeccable/reference/overdrive.md"
+      ]
+    },
+    "generated_readme": {
+      "count": 18,
+      "samples": [
+        "开发/01-GFIS/README.md",
+        "开发/02-GPC/.pytest_cache/README.md",
+        "开发/02-GPC/README.md"
+      ]
+    },
+    "legacy_snapshot_mirror": {
+      "count": 1,
+      "samples": [
+        "开发/05-KDS/docs/harness/evidence/project_group_live_status_current.md"
+      ]
+    },
+    "unmapped_other": {
+      "count": 1,
+      "samples": [
+        "开发/91-治理与验收/features/active/F-025-sop-flow-engine-center/journal.md"
+      ]
+    }
+  },
+  "unmapped_paths": [
+    "开发/91-治理与验收/features/active/F-025-sop-flow-engine-center/journal.md"
+  ]
+}
