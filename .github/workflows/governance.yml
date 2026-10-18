@@ -14,8 +14,5 @@ jobs:
           python-version: '3.11'
       - run: python -m pip install -r requirements-dev.txt
       - run: python -m pytest tests/ -q
-      - run: python tools/kds-sync/document_control.py --check
-      - run: python tools/kds-sync/check_document_pollution.py
-      - run: python tools/kds-sync/check_chinese_localization_gate.py
-      - run: python tools/kds-sync/validate_gpcf_2_feature_workspace.py
+      - run: python tools/kds-sync/loop_document_gate.py --check-only --repository-only
       - run: python tools/kds-sync/check_python_bytecode.py
