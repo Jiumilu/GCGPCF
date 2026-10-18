@@ -146,10 +146,15 @@ def refresh_runtime_state() -> None:
         for entry in queue.get("queue", [])
         if entry.get("status") not in {"closed", "archived"}
     ]
+    current_candidates = [
+        entry for entry in active_entries
+        if entry.get("status") != "blocked"
+        and not (entry.get("status") == "commit" and entry.get("current_role") == "Recorder")
+    ]
     current_feature = None
-    if active_entries:
+    if current_candidates:
         current_feature = max(
-            active_entries,
+            current_candidates,
             key=lambda entry: (str(entry.get("updated_at", "")), str(entry.get("id", ""))),
         )["id"]
     state = read_json(
