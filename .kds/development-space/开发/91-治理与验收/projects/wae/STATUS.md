@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/91-治理与验收/projects/wae/STATUS.md
 source_path: projects/wae/STATUS.md
 sync_direction: bidirectional
-last_reviewed: 2026-10-12
+last_reviewed: 2026-10-18
 supersedes: []
 superseded_by: []
 ---
@@ -41,6 +41,14 @@ superseded_by: []
 - [x] 命名已裁定：WAE=世界资产浏览器；原 WAE 引擎与原 WAES 合并为 WAME（WAES 缩写停用）
 - [ ] P0：外壳解耦 / 令牌收口 / 侧栏统一 / 状态语义层
 - [ ] 首批纳入（PKC / Brain / PVAOS）
+
+## OpenSpec 入口
+
+- 策略：`conditional`
+- 中央入口：`openspec/changes/wae-<change>/`
+- Feature：`python scripts/gpcf_new_feature.py --project wae`
+- 默认 Loop：`Governance`
+- Evidence/Harness：`required/required`
 
 ## 非声明边界
 
