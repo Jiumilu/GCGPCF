@@ -133,7 +133,21 @@ def previous_snapshot_is_fresh(previous: dict) -> bool:
 
 
 def semantically_same(previous: dict, snapshot: dict) -> bool:
-    return all(previous.get(key) == snapshot.get(key) for key in SEMANTIC_KEYS)
+    for key in SEMANTIC_KEYS:
+        if key == "dirty_details":
+            previous_details = {
+                name: value for name, value in previous.get(key, {}).items()
+                if name not in VOLATILE_DIRTY_ALLOWLIST
+            }
+            snapshot_details = {
+                name: value for name, value in snapshot.get(key, {}).items()
+                if name not in VOLATILE_DIRTY_ALLOWLIST
+            }
+            if previous_details != snapshot_details:
+                return False
+        elif previous.get(key) != snapshot.get(key):
+            return False
+    return True
 
 
 def stable_from_previous(current: list[str], previous: list[str], bootstrap: bool) -> list[str]:

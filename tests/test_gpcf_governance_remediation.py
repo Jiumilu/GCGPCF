@@ -21,6 +21,25 @@ def load_document_control():
     return module
 
 
+def test_live_snapshot_ignores_only_local_worktree_churn():
+    path = ROOT / "tools/kds-sync/build_project_group_live_status_current.py"
+    spec = importlib.util.spec_from_file_location("live_status_safety", path)
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    previous = {key: [] for key in module.SEMANTIC_KEYS}
+    previous["dirty_details"] = {
+        "GlobalCoud GPCF": {"dirty_count": 2},
+        "GlobalCloud WAE": {"dirty_count": 1},
+    }
+    current = {**previous, "dirty_details": {
+        "GlobalCoud GPCF": {"dirty_count": 3},
+        "GlobalCloud WAE": {"dirty_count": 1},
+    }}
+    assert module.semantically_same(previous, current)
+    current["dirty_details"]["GlobalCloud WAE"]["dirty_count"] = 2
+    assert not module.semantically_same(previous, current)
+
+
 def digest(path):
     return hashlib.sha256(path.read_bytes()).hexdigest()
 

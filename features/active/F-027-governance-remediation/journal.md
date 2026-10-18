@@ -106,3 +106,10 @@ superseded_by: []
    - Evidence checks passed；保留治理阻塞：当前 24 项项目方案候选尚未全部核验；远端强制门禁尚未配置；9 个历史 done Feature 均未满足现行关闭证据规则，需逐项补验或保留历史例外记录；当前 18 个 active Feature 均未满足现行关闭条件，其中 10 个缺少 runtime 角色日志
 5. 是否可以提交？
    - 否。
+
+### 2026-10-18 远端门禁实测
+
+- 整改分支 `codex/governance-remediation-20261018` 已提交并推送，PR #1 已建立。
+- GitHub Actions 的 `repository-checks` 在 push 与 pull_request 两次运行中均为 success；PR 当前可合并。
+- main 分支已要求 GitHub Actions 提供的 `repository-checks` 通过，启用严格更新检查和管理员强制执行；禁止强制推送与删除。
+- 本轮仅确认工程门禁，未合并 PR，未提升 Feature 或业务验收状态。

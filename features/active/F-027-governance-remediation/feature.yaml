@@ -30,7 +30,7 @@ evidence:
   api: waived
   summary: pass
 blockers:
-  - 当前 24 项项目方案候选尚未全部核验；远端强制门禁尚未配置
+  - 当前 24 项项目方案候选尚未全部核验；已通过远端检查的整改 PR 尚未合并 main
   - 9 个历史 done Feature 均未满足现行关闭证据规则，需逐项补验或保留历史例外记录
   - 当前 18 个 active Feature 均未满足现行关闭条件，其中 10 个缺少 runtime 角色日志
 ui_product_first_control:
