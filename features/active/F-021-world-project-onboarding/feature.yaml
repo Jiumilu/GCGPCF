@@ -27,8 +27,8 @@ evidence:
   api: waived
   summary: pass
 blockers:
-- 中央文档门禁 rework_required（已有元数据、历史状态与本地化问题）
-- 技能链总检查：既有 projects/wae 目录未登记
+- World 总体方案 Ontology 版本与现行基线冲突，项目方案仍为 candidate
+- 现行 Feature 专属 tests/build 验收命令未声明，screenshots/api 豁免缺少范围特定理由，需重采证据
 created_at: '2026-10-16T00:30:28+00:00'
 updated_at: '2026-10-16T00:32:00+00:00'
 ui_product_first_control:
