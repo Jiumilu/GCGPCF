@@ -4,7 +4,7 @@ title: spec
 project: GPCF
 related_projects: [WAME, GPCF, Studio, SpaceAIStudio, SpaceAI]
 domain: openspec
-status: draft
+status: in_progress
 version: v1.0
 owner: GPCF
 kds_space: 开发
