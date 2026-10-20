@@ -2,10 +2,10 @@
 doc_id: GPCF-DOC-GLOBALCLOUD-PROJECT-GROUP-MASTER-PLAN-20260626
 title: GlobalCloud 项目群总体方案
 project: GPCF
-related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio, ICP, SpaceAIStudio, AAAS, WAS, XWAIL, SOP, PQC, SpaceAI, World, GCMEM, WAE, Project]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio, ICP, SpaceAIStudio, AAAS, WAS, XWAIL, SOP, PQC, SpaceAI, World, GCMEM, WAE, Project, PDC, SLC]
 domain: architecture
 status: controlled
-version: v1.0
+version: v1.1
 owner: GPCF
 kds_space: 开发
 kds_path: 开发/90-跨项目架构/01-architecture/GlobalCloud 项目群总体方案.md
@@ -31,7 +31,7 @@ superseded_by: []
 
 ## 2. 项目群范围
 
-项目群当前纳入 25 个项目，以 `config/project-group-projects.yaml` 为当前范围事实源（2026-10-10 新增 PQC、SpaceAI、SpaceAIStudio；2026-10-12 新增 WAE 世界资产浏览器；2026-10-16 新增 GCMEM 长期记忆服务）。2026-10-18 用户明确确认 WAE 与 GlobalCloud Project 纳入当前项目群范围；此项仅确认项目范围，不提升方案、运行或交付状态。18 项目及更早证据保持历史范围，不因纳管重算。2026-06-28 以前形成的17项目证据继续作为历史基线，不因新增 ICP 回写或重算：
+项目群当前纳入 27 个项目，以 `config/project-group-projects.yaml` 为当前范围事实源。2026-10-18 纳入的 GlobalCloud PMC（原 GlobalCloud Project）、GlobalCloud PDC 和 GlobalCloud SLC 只增加项目治理范围，不提升方案、运行或交付状态。历史证据保持生成时的项目范围，不因新增项目重算：
 
 | 项目 | 主职责 |
 |---|---|
@@ -63,6 +63,8 @@ superseded_by: []
 
 | GCMEM | 基于 KDS 的长期记忆服务：记忆账本＋语义检索＋夜间挖掘迭代；承接 mem0 退役后的跨会话长期记忆（2026-10-16 立项；WAS-GCMEM） |
 | Project | 团队研发协作项目；项目级方案及只读对接边界待验证，不承担 GPCF 交付或验收状态裁决 |
+| PDC | 包装设计中心；独立 Web/Electron 应用，项目级方案继承与运行验收待核验 |
+| SLC | 运力测算应用；独立 Vite/Electron/Express 项目，项目级方案与关键任务验证待补 |
 
 ## 2.2 GC-ICP 产业控制平面边界
 
