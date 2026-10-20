@@ -4,6 +4,8 @@ import importlib.util
 import sys
 from pathlib import Path
 
+import pytest
+
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -43,11 +45,12 @@ def test_implementation_register_rejects_missing_wae(tmp_path, monkeypatch, caps
     assert "expected exactly one project row in implementation register: GlobalCloud WAE" in capsys.readouterr().out
 
 
-def test_project_group_master_rejects_missing_world_responsibility(tmp_path, monkeypatch, capsys):
+@pytest.mark.parametrize("project", ["World", "PDC", "SLC"])
+def test_project_group_master_rejects_missing_project_responsibility(project, tmp_path, monkeypatch, capsys):
     validator = load_validator("validate_project_master_plan_register")
     source = validator.GROUP_MASTER.read_text(encoding="utf-8")
     lines = source.splitlines(keepends=True)
-    removed = [line for line in lines if line.startswith("| World |")]
+    removed = [line for line in lines if line.startswith(f"| {project} |")]
     assert len(removed) == 1
     group_master = tmp_path / "group-master.md"
     group_master.write_text("".join(line for line in lines if line not in removed), encoding="utf-8")
@@ -55,4 +58,4 @@ def test_project_group_master_rejects_missing_world_responsibility(tmp_path, mon
     monkeypatch.setattr(sys, "argv", ["validate_project_master_plan_register.py", "--repository-only"])
 
     assert validator.main() == 1
-    assert "expected exactly one project responsibility row: World" in capsys.readouterr().out
+    assert f"expected exactly one project responsibility row: {project}" in capsys.readouterr().out
