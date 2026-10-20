@@ -88,3 +88,14 @@ def test_ui_evidence_rechecks_generated_snapshot(tmp_path, monkeypatch):
     assert status == "pass"
     assert "evidence/ui-browser.txt" in details
     assert "evidence/screenshots.txt" not in details
+
+
+def test_ui_evidence_does_not_promote_prior_waiver(tmp_path, monkeypatch):
+    monkeypatch.syspath_prepend(str(ROOT / "scripts"))
+    import gpcf_check_evidence as gate
+
+    feature_dir = tmp_path / "F-031-sample"
+    evidence_dir = feature_dir / "evidence"
+    evidence_dir.mkdir(parents=True)
+    (evidence_dir / "screenshots.txt").write_text("waived: no UI in earlier scope\n")
+    assert gate.detect_ui_evidence(feature_dir, evidence_dir)[0] == "fail"
