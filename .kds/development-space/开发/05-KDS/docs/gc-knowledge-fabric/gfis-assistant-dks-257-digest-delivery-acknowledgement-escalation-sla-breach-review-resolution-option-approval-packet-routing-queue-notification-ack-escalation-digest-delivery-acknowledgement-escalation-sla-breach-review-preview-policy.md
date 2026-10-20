@@ -32,6 +32,6 @@ DKS-257 不创建 breach record、dispute、committee case、freeze request、re
 
 ## 验证
 
-- Validator: `scripts/gfis/validate_gfis_assistant_dks_257_digest_delivery_acknowledgement_escalation_sla_breach_review_resolution_option_approval_packet_routing_queue_notification_ack_escalation_digest_delivery_acknowledgement_escalation_sla_breach_review_preview.py`
+- Validator: `scripts/gfis/validate_gfis_assistant_dks_257_ee435edacd3b.py`
 - Fixture: `fixtures/gfis/gfis-assistant-dks-257-digest-delivery-acknowledgement-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-ack-escalation-digest-delivery-acknowledgement-escalation-sla-breach-review-preview-dry-run.json`
 - OKF: `okf/gfis-assistant-dks-257-digest-delivery-acknowledgement-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-ack-escalation-digest-delivery-acknowledgement-escalation-sla-breach-review-preview-policy.yaml`

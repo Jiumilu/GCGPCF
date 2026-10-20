@@ -36,7 +36,7 @@ DKS-169 严格禁止：
 - OKF: `okf/gfis-assistant-approval-route-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-ack-escalation-sla-breach-notification-ack-escalation-digest-delivery-preview-policy.yaml`
 - Type: `packages/shared/src/knowledge/gfis-assistant-approval-route-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-ack-escalation-sla-breach-notification-ack-escalation-digest-delivery-preview.ts`
 - Fixture: `fixtures/gfis/gfis-assistant-approval-route-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-ack-escalation-sla-breach-notification-ack-escalation-digest-delivery-preview-dry-run.json`
-- Validator: `scripts/gfis/validate_gfis_assistant_approval_route_ack_escalation_digest_delivery_ack_escalation_sla_breach_review_resolution_option_approval_packet_routing_queue_notification_ack_escalation_sla_breach_notification_ack_escalation_digest_delivery_preview.py`
+- Validator: `scripts/gfis/validate_gfis_assistant_approval_route_771491b32865.py`
 
 ## LOOP
 
