@@ -67,8 +67,9 @@ superseded_by: []
 
 ## 终态证据（2026-10-20）
 
-- `pnpm gate`（typecheck + 全仓 build + 全量测试）**连续三轮 exit 0**，
-  各 96 文件 / 879 项（21.9s / 24.4s / 23.6s），基线提交 `03b82d3`。
+- `pnpm gate`（typecheck + 全仓 build + 全量测试）**连续三轮 exit 0**。
+  最终刷新至 HEAD `cfa0c4c`：各 **98 文件 / 898 项**（22.8s / 21.3s / 33.6s）；
+  首次通过时点 `03b82d3`：各 96 文件 / 879 项——两次记录均存档。
   证据：`../GlobalCloud SpaceAI Platform/harness/runs/20261020-final-gate/`
   （原始日志 ×3 + `gate-summary.json` + 迭代要点 README）。
 - 其余证据：全景态势收敛 `harness/runs/20261016-panorama-convergence/`、
