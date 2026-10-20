@@ -65,6 +65,17 @@ superseded_by: []
 | 前端 | SSE 收口 / PanoramaDeep 拆分 / 设计系统 | **SSE 收口 ✅**（全景态势 `sseOff` 从不退订 + click 监听未移除，新增静态生命周期守卫并变异验证）；**设计系统 ✅**（`tokens.css`/`base.css` 此前全仓 0 处 import 已落地到 desktop 入口；23 个 `--gc-*` 变量全部有定义；浏览器实测令牌生效、全景态势 DOM 1506/21 卡与基线一致、0 错误）；**PanoramaDeep 拆分·进行中**：第一批已外提卡片元数据（4 张字典 + 4 个纯函数 → `panorama/cardFaces.ts`，组件 3318→3257 行，模板零改动，12 项基线测试）；新增**旗舰队 e2e 冒烟**（进入全景态势断言卡片/画布/0 页面错误，已变异验证），并修正 `e2e/helpers.ts` 失效的登录选择器（e2e 长期冻结的原因之一）。已完成两批：①卡片元数据（4 字典 + 4 纯函数 → cardFaces.ts，12 项测试）；②态势快照纯逻辑（结构守卫/名称生成/组装/上限裁剪 → snapshot.ts，10 项测试）。组件 3351 → **3253 行**；剩余脚本约 2240 行，主体是「206 个小函数 + 152 个状态声明」的平铺结构，继续拆需 composable 级重构（按关注点连状态一起搬），按批推进 |
 | 性能 | 无 GPU 环境可用性（SwiftShader） | **✅ 完成**：实测有 GPU 75.2 FPS / SwiftShader **4.8 FPS**；诊断确认瓶颈是**逐帧重绘**而非填充率（隐藏画布 5.5→60 FPS；0.6 分辨率仍只 5.4 FPS）；新增渲染档位判定（软件渲染 → 关阴影/雾/光照/FXAA + 0.6 分辨率 + **按需渲染** + 心跳 requestRender），实测软件渲染 **4.8 → 56.4 FPS（11.75×）**，有 GPU 侧 70.5 FPS 无回归；画面经像素采样验证（16 采样点 16 色）非冻结，21 卡、0 错误 |
 
+## 终态证据（2026-10-20）
+
+- `pnpm gate`（typecheck + 全仓 build + 全量测试）**连续三轮 exit 0**，
+  各 96 文件 / 879 项（21.9s / 24.4s / 23.6s），基线提交 `03b82d3`。
+  证据：`../GlobalCloud SpaceAI Platform/harness/runs/20261020-final-gate/`
+  （原始日志 ×3 + `gate-summary.json` + 迭代要点 README）。
+- 其余证据：全景态势收敛 `harness/runs/20261016-panorama-convergence/`、
+  设计令牌 `.../20261020-frontend-convergence/evidence/`、
+  无 GPU 性能 `.../20261020-perf-nogpu/evidence/`；
+  e2e 旗舰队冒烟 `e2e/panorama-smoke.spec.ts`（断言 0 页面错误）。
+
 **已登记未执行的治理动作**：OpenSpec 物理归档（`changes/` → `changes/archive/`）未做——移动会同时改变 `.kds` 镜像路径与 frontmatter 的 `kds_path`/`source_path` 双向映射，需一次专门的镜像同步操作，不与其他改动混做。
 
 ## 状态与边界
