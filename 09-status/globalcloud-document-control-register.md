@@ -3416,7 +3416,7 @@ superseded_by: []
 | GPCF-DOC-B35947A669 | GPC 状态 | projects/gpc/STATUS.md | GPC | GPC | governance | controlled | 开发/91-治理与验收/projects/gpc/STATUS.md |
 | GPCF-DOC-EBBF586184 | GPCF 风险 | projects/gpcf/RISK.md | GPCF | GPCF | governance | controlled | 开发/91-治理与验收/projects/gpcf/RISK.md |
 | GPCF-DOC-1253D15498 | GPCF 路线图 | projects/gpcf/ROADMAP.md | GPCF | GPCF | governance | controlled | 开发/91-治理与验收/projects/gpcf/ROADMAP.md |
-| GPCF-DOC-3968FEF2EF | GPCF 状态 | projects/gpcf/STATUS.md | GPCF | GPCF | governance | controlled | 开发/91-治理与验收/projects/gpcf/STATUS.md |
+| GPCF-DOC-3968FEF2EF | GPCF 状态 | projects/gpcf/STATUS.md | GPCF | GPCF | governance | draft | 开发/91-治理与验收/projects/gpcf/STATUS.md |
 | GPCF-DOC-ICP-RISK-20260712 | ICP 风险 | projects/icp/RISK.md | GPCF | GPCF | governance | controlled | 开发/91-治理与验收/projects/icp/RISK.md |
 | GPCF-DOC-ICP-ROADMAP-20260712 | ICP 路线图 | projects/icp/ROADMAP.md | GPCF | GPCF | governance | controlled | 开发/91-治理与验收/projects/icp/ROADMAP.md |
 | GPCF-DOC-ICP-STATUS-20260712 | ICP 状态 | projects/icp/STATUS.md | GPCF | GPCF | governance | controlled | 开发/91-治理与验收/projects/icp/STATUS.md |
