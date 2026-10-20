@@ -62,7 +62,7 @@ superseded_by: []
 | T2 | 写可靠（117 处 run 调用仅 1 处判返回值；26 个多写函数 0 个事务） | **已完成**：改造 **10 个函数**（advanceOps / transitionLifecycle / ingestPush / saveRule / toggleRule / saveRelation / executePlan / fuseEvents / runObolRound / addLowAltitudeAssets）→ `tx` + `runStrict` + 失败如实返回；新增 **10 项触发器注入写失败测试**（含原子回滚断言），每批均做变异验证。全量 91 文件 / 829 项全过 |
 | T3 | 数据治理与保留策略 | **已完成**：CityLink 归档去重（原表改名保留 2196 万行，新表 61,289 + 唯一索引，零删除）→ `/City/Stats` 17,000ms→155ms、聚合 17,020ms→27ms；只读保留报告 + 可复现去重脚本 + 4 项完整性守卫 |
 | T4 | 测试基座 | **已完成**：定位城市数据幂等守卫 off-by-one（`> 50000` 而实际恰为 50,000）致每次 createApp 重建 2133 万行；修复后全量 771s→**~20–31s**、createApp 106s→0.3s、r09 143s→1s；`DB_PATH` 惰性可注入；18 个测试已隔离；**连续三轮全绿（87 文件/807 项）** |
-| 前端 | SSE 收口 / PanoramaDeep 拆分 / 设计系统 | **SSE 收口已完成**（全景态势 `sseOff` 从不退订 + click 监听未移除两处泄漏，新增静态守卫并变异验证）；拆分与设计系统待做 |
+| 前端 | SSE 收口 / PanoramaDeep 拆分 / 设计系统 | **SSE 收口 ✅**（全景态势 `sseOff` 从不退订 + click 监听未移除，新增静态生命周期守卫并变异验证）；**设计系统 ✅**（`tokens.css`/`base.css` 此前全仓 0 处 import 已落地到 desktop 入口；23 个 `--gc-*` 变量全部有定义；浏览器实测令牌生效、全景态势 DOM 1506/21 卡与基线一致、0 错误）；**PanoramaDeep 拆分待做**（脚本仍 2318 行） |
 | 性能 | 无 GPU 环境可用性（SwiftShader 3 FPS） | 待做 |
 
 **已登记未执行的治理动作**：OpenSpec 物理归档（`changes/` → `changes/archive/`）未做——移动会同时改变 `.kds` 镜像路径与 frontmatter 的 `kds_path`/`source_path` 双向映射，需一次专门的镜像同步操作，不与其他改动混做。
