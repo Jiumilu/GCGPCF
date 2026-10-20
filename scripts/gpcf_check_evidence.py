@@ -135,6 +135,7 @@ def detect_ui_evidence(feature_dir: Path, evidence_dir: Path) -> tuple[str, str]
     placeholder_prefixes = (
         "UI evidence required by Feature scope",
         "waived: Feature scope has no UI/browser evidence requirement.",
+        "UI evidence detected from Feature artifacts.",
     )
     if existing_text and not existing_text.startswith(placeholder_prefixes):
         return "pass", existing_text
@@ -146,7 +147,7 @@ def detect_ui_evidence(feature_dir: Path, evidence_dir: Path) -> tuple[str, str]
         if not base_dir.exists():
             continue
         for path in sorted(base_dir.rglob("*")):
-            if not path.is_file() or path.name == ".gitkeep":
+            if not path.is_file() or path.name == ".gitkeep" or path == screenshots_file:
                 continue
             rel = path.relative_to(feature_dir).as_posix()
             lower_name = path.name.lower()
