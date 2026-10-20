@@ -33,6 +33,6 @@ DKS-220 将 DKS-219 delivery acknowledgement escalation preview 推进为 SLA pr
 ## 验证
 
 ```bash
-python3 scripts/gfis/validate_gfis_assistant_dks_220_routing_queue_notification_ack_escalation_digest_delivery_ack_escalation_sla_breach_review_resolution_option_approval_packet_routing_queue_notification_ack_escalation_digest_delivery_ack_escalation_sla_preview.py
+python3 scripts/gfis/validate_gfis_assistant_dks_220_384d1ff15be3.py
 python3 scripts/coverage/validate_okf_types_api_validator_coverage.py
 ```

@@ -11,36 +11,38 @@ import time
 from hashlib import sha1
 from pathlib import Path
 
+import yaml
+
 from gfis_real_fact_entry_guard import require_gfis_real_fact_entry
 
 
 ROOT = Path(__file__).resolve().parents[2]
-PROJECT_GROUP_ROOT = ROOT.parent
+def project_group_root() -> Path:
+    result = subprocess.run(
+        ["git", "rev-parse", "--git-common-dir"], cwd=ROOT,
+        text=True, capture_output=True, check=False,
+    )
+    if result.returncode == 0:
+        common_dir = Path(result.stdout.strip())
+        if not common_dir.is_absolute():
+            common_dir = ROOT / common_dir
+        common_dir = common_dir.resolve()
+        if common_dir.name == ".git":
+            return common_dir.parent.parent
+    return ROOT.parent
+
+
+PROJECT_GROUP_ROOT = project_group_root()
 GATE_PATH = Path("tools/kds-sync/loop_document_gate.py")
 GATE_TIMEOUT_SECONDS = 180
 GATE_MAX_ATTEMPTS = 3
-REPOS = [
-    ("GlobalCloud AAAS", PROJECT_GROUP_ROOT / "GlobalCloud AAAS"),
-    ("GlobalCloud Brain", PROJECT_GROUP_ROOT / "GlobalCloud Brain"),
-    ("GlobalCloud GFIS", PROJECT_GROUP_ROOT / "GlobalCloud GFIS"),
-    ("GlobalCloud GPC", PROJECT_GROUP_ROOT / "GlobalCloud GPC"),
-    ("GlobalCloud KDS", PROJECT_GROUP_ROOT / "GlobalCloud KDS"),
-    ("GlobalCloud MMC", PROJECT_GROUP_ROOT / "GlobalCloud MMC"),
-    ("GlobalCloud PKC", PROJECT_GROUP_ROOT / "GlobalCloud PKC"),
-    ("GlobalCloud PQC", PROJECT_GROUP_ROOT / "GlobalCloud PQC"),
-    ("GlobalCloud SpaceAI Studio", PROJECT_GROUP_ROOT / "GlobalCloud SpaceAI Studio"),
-    ("GlobalCloud PVAOS", PROJECT_GROUP_ROOT / "GlobalCloud PVAOS"),
-    ("GlobalCloud SOP", PROJECT_GROUP_ROOT / "GlobalCloud SOP"),
-    ("GlobalCloud SpaceAI", PROJECT_GROUP_ROOT / "GlobalCloud SpaceAI"),
-    ("GlobalCloud Studio", PROJECT_GROUP_ROOT / "GlobalCloud Studio"),
-    ("GlobalCloud WAME", PROJECT_GROUP_ROOT / "GlobalCloud WAME"),
-    ("GlobalCloud XGD", PROJECT_GROUP_ROOT / "GlobalCloud XGD"),
-    ("GlobalCloud XWAIL", PROJECT_GROUP_ROOT / "GlobalCloud XWAIL"),
-    ("GlobalCloud XiaoC", PROJECT_GROUP_ROOT / "GlobalCloud XiaoC"),
-    ("GlobalCloud XiaoG", PROJECT_GROUP_ROOT / "GlobalCloud XiaoG"),
-    ("GlobalCoud GPCF", PROJECT_GROUP_ROOT / "GlobalCoud GPCF"),
-    ("WAS世界资产体系", PROJECT_GROUP_ROOT / "WAS世界资产体系"),
-]
+REGISTRY = yaml.safe_load((ROOT / "config/project-group-projects.yaml").read_text(encoding="utf-8"))
+PROJECTS = REGISTRY["projects"]
+if len(PROJECTS) != int(REGISTRY["current_project_count"]):
+    raise SystemExit("FAIL: project registry count does not match entries")
+REPOS = [(str(item["repo"]), PROJECT_GROUP_ROOT / str(item["repo"])) for item in PROJECTS]
+if len({label for label, _ in REPOS}) != len(REPOS):
+    raise SystemExit("FAIL: project registry has duplicate repository names")
 
 
 def require(condition: bool, message: str) -> None:
@@ -130,7 +132,7 @@ def gate_invocation_key(repo_path: Path) -> str:
 
 
 def main() -> int:
-    gfis_real_fact_entry = require_gfis_real_fact_entry(ROOT)
+    gfis_real_fact_entry = require_gfis_real_fact_entry(PROJECT_GROUP_ROOT / "GlobalCoud GPCF")
     failed: list[str] = []
     watch_only: list[str] = []
     checked_repos = 0

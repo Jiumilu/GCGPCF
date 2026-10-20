@@ -37,7 +37,7 @@ DKS-205 将 DKS-204 acknowledgement escalation digest preview 推进为 digest d
 ## 验证
 
 ```bash
-python3 scripts/gfis/validate_gfis_assistant_dks_205_routing_queue_notification_acknowledgement_escalation_digest_delivery_ack_escalation_sla_breach_review_resolution_option_approval_packet_routing_queue_notification_acknowledgement_escalation_digest_delivery_preview.py
+python3 scripts/gfis/validate_gfis_assistant_dks_205_8ab396bfdfc8.py
 python3 scripts/coverage/validate_okf_types_api_validator_coverage.py
 ```
 

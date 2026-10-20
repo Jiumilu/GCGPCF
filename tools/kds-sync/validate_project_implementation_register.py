@@ -13,7 +13,7 @@ REGISTER = ROOT / "09-status/globalcloud-project-implementation-control-register
 MASTER_REGISTER = ROOT / "09-status/globalcloud-project-master-plan-control-register.md"
 
 REGISTRY = yaml.safe_load((ROOT / "config/project-group-projects.yaml").read_text(encoding="utf-8"))
-DISPLAY_NAMES = {"WAS": "WAS世界资产体系", "AAAS": "GlobalCloud AAAS / AaaS", "SpaceAIStudio": "GlobalCloud SpaceAI Studio"}
+DISPLAY_NAMES = {"WAS": "WAS世界资产体系", "AAAS": "GlobalCloud AAAS / AaaS", "SpaceAIStudio": "GlobalCloud SpaceAI Studio", "Project": "GlobalCloud PMC"}
 REQUIRED_PROJECTS = [
     DISPLAY_NAMES.get(str(item["id"]), f"GlobalCloud {item['id']}")
     for item in REGISTRY["projects"]
@@ -44,7 +44,7 @@ REQUIRED_TOKENS = [
     "5.5.1 AAAS delegated wrapper 单仓核对卡 / 5.6.1 AAAS delegated wrapper 确认后状态传导摘要",
     "5.5.2 XWAIL delegated wrapper 单仓核对卡 / 5.6.2 XWAIL delegated wrapper 确认后状态传导摘要",
     "5.5.3 SOP delegated wrapper 单仓核对卡 / 5.6.3 SOP delegated wrapper 确认后状态传导摘要",
-    "implementation_plan_governance = repair_required_for_current_25_project_scope",
+    f"implementation_plan_governance = repair_required_for_current_{REGISTRY['current_project_count']}_project_scope",
     "current_state_baseline_refresh_controlled = true",
     "development_queue_ready = true",
     "不得声明全部项目唯一实施方案已建立",

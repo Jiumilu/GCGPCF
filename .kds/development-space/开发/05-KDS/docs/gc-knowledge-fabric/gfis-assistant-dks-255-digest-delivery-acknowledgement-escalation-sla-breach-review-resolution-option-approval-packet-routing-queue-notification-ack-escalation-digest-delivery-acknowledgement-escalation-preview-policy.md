@@ -32,6 +32,6 @@ DKS-255 不创建 escalation、escalation task、delivery acknowledgement、dige
 
 ## 验证
 
-- Validator: `scripts/gfis/validate_gfis_assistant_dks_255_digest_delivery_acknowledgement_escalation_sla_breach_review_resolution_option_approval_packet_routing_queue_notification_ack_escalation_digest_delivery_acknowledgement_escalation_preview.py`
+- Validator: `scripts/gfis/validate_gfis_assistant_dks_255_9631cd41d129.py`
 - Fixture: `fixtures/gfis/gfis-assistant-dks-255-digest-delivery-acknowledgement-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-ack-escalation-digest-delivery-acknowledgement-escalation-preview-dry-run.json`
 - OKF: `okf/gfis-assistant-dks-255-digest-delivery-acknowledgement-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-ack-escalation-digest-delivery-acknowledgement-escalation-preview-policy.yaml`

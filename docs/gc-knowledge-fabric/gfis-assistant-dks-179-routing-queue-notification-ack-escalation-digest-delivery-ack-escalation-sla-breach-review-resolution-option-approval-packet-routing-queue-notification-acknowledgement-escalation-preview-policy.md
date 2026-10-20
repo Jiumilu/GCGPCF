@@ -57,7 +57,7 @@ DKS-179 不允许执行以下动作：
 - `okf/gfis-assistant-dks-179-routing-queue-notification-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-acknowledgement-escalation-preview-policy.yaml`
 - `packages/shared/src/knowledge/gfis-assistant-dks-179-routing-queue-notification-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-acknowledgement-escalation-preview.ts`
 - `fixtures/gfis/gfis-assistant-dks-179-routing-queue-notification-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-acknowledgement-escalation-preview-dry-run.json`
-- `scripts/gfis/validate_gfis_assistant_dks_179_routing_queue_notification_ack_escalation_digest_delivery_ack_escalation_sla_breach_review_resolution_option_approval_packet_routing_queue_notification_acknowledgement_escalation_preview.py`
+- `scripts/gfis/validate_gfis_assistant_dks_179_b2e4829d5ea8.py`
 
 ## 下一轮
 

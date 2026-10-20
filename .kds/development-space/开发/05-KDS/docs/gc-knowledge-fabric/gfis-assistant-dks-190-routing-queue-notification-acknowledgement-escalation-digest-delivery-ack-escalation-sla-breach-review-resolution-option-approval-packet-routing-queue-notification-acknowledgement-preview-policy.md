@@ -35,5 +35,5 @@ superseded_by: []
 
 ## 验收
 
-- `scripts/gfis/validate_gfis_assistant_dks_190_routing_queue_notification_acknowledgement_escalation_digest_delivery_ack_escalation_sla_breach_review_resolution_option_approval_packet_routing_queue_notification_acknowledgement_preview.py` 必须通过。
+- `scripts/gfis/validate_gfis_assistant_dks_190_33b458a2c7da.py` 必须通过。
 - coverage 矩阵必须登记 OKF、类型、validator 与 fixture。

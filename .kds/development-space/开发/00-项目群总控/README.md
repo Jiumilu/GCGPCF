@@ -31,7 +31,7 @@ GlobalCoud GPCF 是 GlobalCloud 项目群的 Feature 交付中心与轻治理控
 | `09-status/globalcloud-document-health-report.md` | 文档健康报告 |
 | `tools/kds-sync/` | 文档控制、KDS 同步和 Loop 文档门禁脚本 |
 | `features/active/` | GPCF 2.0 Feature 交付入口 |
-| `projects/` | 当前 25 项目的节奏入口；当前范围见 `config/project-group-projects.yaml` |
+| `projects/` | 当前 27 项目的节奏入口；当前范围见 `config/project-group-projects.yaml` |
 | `loops/` | GPCF 2.0 执行、复核、修复闭环 |
 | `runtime/queue.json` | Feature 调度队列 |
 | `runtime/state.json` | Feature 交付运行状态 |
