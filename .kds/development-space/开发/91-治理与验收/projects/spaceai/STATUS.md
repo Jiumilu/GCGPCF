@@ -45,10 +45,27 @@ superseded_by: []
 
 - **F-017 cwme-city-world-model-engine**（active，partial）：CWME 城市模型与内涝切片回放；本地应用入口为 ../GlobalCloud SpaceAI/apps/city-model/index.html，证据索引在 ../GlobalCloud SpaceAI/.harness/runs/20261016-080823-spaceai-was-city-flood-replay/evidence-index.yaml。
 - 关联 OpenSpec：openspec/changes/spaceai-was-city-flood-replay；仅有合成样例和本地浏览器验证，不声明 Platform 集成或真实城市运行。
-- **F-024 panorama-engineering-convergence**（P1，active）：全景态势工程收敛。
-- OpenSpec 变更：`openspec/changes/spaceai-platform-panorama-convergence`（8/8 域完成，tasks 全勾选）。
-- 交付：组件 3351 → 3310 行、新增 8 个纯模块（约 1.1k 行）与 8 个测试文件（188 项）；模板零改动；修复 D-4（坏数据整屏崩溃）、D-3（B11 拼图未实现）、D-5（偏好跨机同步无效）。
-- 证据：`../GlobalCloud SpaceAI Platform/harness/runs/20261016-panorama-convergence/`（含 `iteration-summary.json`）。
+- **F-024 panorama-engineering-convergence**（P1，active，**iteration 1**）：全景态势工程收敛；证据已补齐（tests/build/api pass、screenshots waived 附理由），OpenSpec 变更状态 **implemented**（22/22）。
+- 交付：组件 3351 → 3310 行、新增 8 个纯模块与 8 个测试文件（188 项）；模板零改动；修复 D-4、D-3、D-5。
+- 证据：`../GlobalCloud SpaceAI Platform/harness/runs/20261016-panorama-convergence/`；Feature 证据在 `features/active/F-024-.../evidence/`。
+- 其余两个 spaceai OpenSpec 变更：`spaceai-was-city-flood-replay` **implemented**（12/12）；`spaceai-studio-multiplatform-refactor` **in_progress**（91/93，剩字段级适配与移动端适配）。
+
+## 本轮迭代（2026-10-20 起，三条主线）
+
+用户决策：三条主线全做、plaza 合入并默认关闭、T0–T4 全做。
+计划全文：`../GlobalCloud SpaceAI Platform/评估与下轮迭代计划_20261020.md`
+
+| 序 | 主题 | 状态 |
+|---|---|---|
+| T0 | 治理账实纠正 + plaza 收口 | **已完成**：F-024 证据/iteration 补齐；panorama 补 `.openspec.yaml`；三变更状态推进；plaza 按 WAE 规范 v1 补齐 Esc/resize/theme/版本降级/去 `'*'` 兜底，入口默认关闭，新增 16 项测试 |
+| T1 | 契约可信（263 登记 / 233 显式注册 / mock 恒 200） | **进行中**：已建契约审计测试（运行时拦截 router，实测 64 条登记但无显式实现、26 条已注册未登记）并设棘轮基线；mock 兜底已改为可控（demo 默认开、prod 默认关） |
+| T2 | 写可靠（117 处 run 调用仅 1 处判返回值；28 个多写函数仅 2 个事务） | 待做 |
+| T3 | 数据治理与保留策略 | **已完成**：CityLink 归档去重（原表改名保留 2196 万行，新表 61,289 + 唯一索引，零删除）→ `/City/Stats` 17,000ms→155ms、聚合 17,020ms→27ms；只读保留报告 + 可复现去重脚本 + 4 项完整性守卫 |
+| T4 | 测试基座 | **已完成**：定位城市数据幂等守卫 off-by-one（`> 50000` 而实际恰为 50,000）致每次 createApp 重建 2133 万行；修复后全量 771s→**~20–31s**、createApp 106s→0.3s、r09 143s→1s；`DB_PATH` 惰性可注入；18 个测试已隔离；**连续三轮全绿（87 文件/807 项）** |
+| 前端 | SSE 收口 / PanoramaDeep 拆分 / 设计系统 | **SSE 收口已完成**（全景态势 `sseOff` 从不退订 + click 监听未移除两处泄漏，新增静态守卫并变异验证）；拆分与设计系统待做 |
+| 性能 | 无 GPU 环境可用性（SwiftShader 3 FPS） | 待做 |
+
+**已登记未执行的治理动作**：OpenSpec 物理归档（`changes/` → `changes/archive/`）未做——移动会同时改变 `.kds` 镜像路径与 frontmatter 的 `kds_path`/`source_path` 双向映射，需一次专门的镜像同步操作，不与其他改动混做。
 
 ## 状态与边界
 
