@@ -5,6 +5,7 @@ import subprocess
 import sys
 from pathlib import Path
 
+import pytest
 import yaml
 
 
@@ -41,6 +42,45 @@ def test_readiness_uses_primary_checkout_for_linked_worktrees():
     if not common_path.is_absolute():
         common_path = ROOT / common_path
     assert module.PROJECT_GROUP_ROOT == common_path.resolve().parent.parent
+
+
+def test_shared_path_resolver_uses_primary_checkout_for_linked_worktrees():
+    module = load_validator()
+    assert module.project_group_root(ROOT) == module.PROJECT_GROUP_ROOT
+
+
+@pytest.mark.parametrize(
+    ("filename", "attribute", "repo_name"),
+    [
+        ("build_project_group_live_status_current.py", "PROJECT_ROOT", None),
+        ("validate_gfis_real_fact_entry_gate.py", "GFIS_ROOT", "GlobalCloud GFIS"),
+        ("validate_loop_v11_slimming_delivery_recovery.py", "PROJECT_ROOT", None),
+        ("validate_project_group_authorization_pre_execution_environment_readiness_20260626.py", "PROJECT_ROOT", None),
+        ("validate_project_group_live_status_snapshot_20260626.py", "PROJECT_ROOT", None),
+        ("validate_icp_project_registration.py", "ICP_ROOT", "GlobalCloud ICP"),
+        ("validate_constitution_inheritance_gate.py", "PROJECT_GROUP_ROOT", None),
+        ("validate_project_group_external_loop_gate_delegates.py", "PROJECT_GROUP_ROOT", None),
+        ("validate_project_group_dev_first_goal_and_kds_blocker_20260628.py", "PROJECT_ROOT", None),
+        ("validate_loop_v11_delivery_governance_summary_20260628.py", "PROJECT_ROOT", None),
+        ("validate_loop_v11_delivery_governance_summary_dev005_dev009_20260628.py", "PROJECT_ROOT", None),
+        ("validate_loop_v11_gfis_authorization_boundary.py", "PROJECT_ROOT", None),
+        ("build_gfis_dev_completion_controlled_sample.py", "PROJECT_ROOT", None),
+        ("run_gfis_runtime_sop_dev_completion_dry_run.py", "PROJECT_ROOT", None),
+    ],
+)
+def test_full_gate_cross_repo_paths_use_primary_checkout(filename, attribute, repo_name):
+    path = ROOT / "tools/kds-sync" / filename
+    spec = importlib.util.spec_from_file_location(f"path_check_{path.stem}", path)
+    module = importlib.util.module_from_spec(spec)
+    sys.path.insert(0, str(path.parent))
+    try:
+        spec.loader.exec_module(module)
+    finally:
+        sys.path.pop(0)
+    expected = load_validator().PROJECT_GROUP_ROOT
+    if repo_name:
+        expected /= repo_name
+    assert getattr(module, attribute) == expected
 
 
 def test_missing_project_gate_fails_instead_of_being_omitted(tmp_path):

@@ -8,9 +8,11 @@ import re
 import subprocess
 from pathlib import Path
 
+from gfis_real_fact_entry_guard import project_group_root
+
 
 ROOT = Path(__file__).resolve().parents[2]
-PROJECT_ROOT = ROOT.parent
+PROJECT_ROOT = project_group_root(ROOT)
 KDS_ROOT = PROJECT_ROOT / "GlobalCloud KDS"
 GOAL_PROMPT = ROOT / "docs/harness/evidence/globalcloud-project-group-dev-first-loop-goal-prompt-20260628.md"
 KDS_EVIDENCE = ROOT / "docs/harness/evidence/globalcloud-project-group-kds-sensitive-blocker-classification-20260628.md"

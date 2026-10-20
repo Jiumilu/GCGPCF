@@ -13,26 +13,11 @@ from pathlib import Path
 
 import yaml
 
-from gfis_real_fact_entry_guard import require_gfis_real_fact_entry
+from gfis_real_fact_entry_guard import project_group_root, require_gfis_real_fact_entry
 
 
 ROOT = Path(__file__).resolve().parents[2]
-def project_group_root() -> Path:
-    result = subprocess.run(
-        ["git", "rev-parse", "--git-common-dir"], cwd=ROOT,
-        text=True, capture_output=True, check=False,
-    )
-    if result.returncode == 0:
-        common_dir = Path(result.stdout.strip())
-        if not common_dir.is_absolute():
-            common_dir = ROOT / common_dir
-        common_dir = common_dir.resolve()
-        if common_dir.name == ".git":
-            return common_dir.parent.parent
-    return ROOT.parent
-
-
-PROJECT_GROUP_ROOT = project_group_root()
+PROJECT_GROUP_ROOT = project_group_root(ROOT)
 GATE_PATH = Path("tools/kds-sync/loop_document_gate.py")
 GATE_TIMEOUT_SECONDS = 180
 GATE_MAX_ATTEMPTS = 3

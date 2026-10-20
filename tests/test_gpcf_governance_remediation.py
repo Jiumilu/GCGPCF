@@ -50,7 +50,11 @@ def test_live_snapshot_ignores_only_local_worktree_churn():
     path = ROOT / "tools/kds-sync/build_project_group_live_status_current.py"
     spec = importlib.util.spec_from_file_location("live_status_safety", path)
     module = importlib.util.module_from_spec(spec)
-    spec.loader.exec_module(module)
+    sys.path.insert(0, str(path.parent))
+    try:
+        spec.loader.exec_module(module)
+    finally:
+        sys.path.pop(0)
     previous = {key: [] for key in module.SEMANTIC_KEYS}
     previous["dirty_details"] = {
         "GlobalCoud GPCF": {"dirty_count": 2},
@@ -69,7 +73,11 @@ def test_live_snapshot_check_only_does_not_advance_stability():
     path = ROOT / "tools/kds-sync/build_project_group_live_status_current.py"
     spec = importlib.util.spec_from_file_location("live_status_stability", path)
     module = importlib.util.module_from_spec(spec)
-    spec.loader.exec_module(module)
+    sys.path.insert(0, str(path.parent))
+    try:
+        spec.loader.exec_module(module)
+    finally:
+        sys.path.pop(0)
 
     current = ["GlobalCloud PVAOS", "GlobalCloud GPC"]
     assert module.stable_for_snapshot(current, ["GlobalCloud GPC"], ["GlobalCloud GPC"], False, False) == ["GlobalCloud GPC"]

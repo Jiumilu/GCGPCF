@@ -12,9 +12,11 @@ import subprocess
 import sys
 import yaml
 
+from gfis_real_fact_entry_guard import project_group_root
+
 
 ROOT = Path(__file__).resolve().parents[2]
-PROJECT_ROOT = ROOT.parent
+PROJECT_ROOT = project_group_root(ROOT)
 TZ = timezone(timedelta(hours=8))
 
 REGISTRY = yaml.safe_load((ROOT / "config/project-group-projects.yaml").read_text(encoding="utf-8"))

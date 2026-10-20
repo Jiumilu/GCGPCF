@@ -7,11 +7,11 @@ import json
 from pathlib import Path
 import subprocess
 
-from gfis_real_fact_entry_guard import require_gfis_real_fact_entry
+from gfis_real_fact_entry_guard import project_group_root, require_gfis_real_fact_entry
 
 
 ROOT = Path(__file__).resolve().parents[2]
-PROJECT_ROOT = ROOT.parent
+PROJECT_ROOT = project_group_root(ROOT)
 GFIS_ROOT = PROJECT_ROOT / "GlobalCloud GFIS"
 SLIMMING = ROOT / "02-governance/loop/LOOP_GOVERNANCE_SLIMMING_AND_DELIVERY_RECOVERY.md"
 GATE_CLASSIFICATION = ROOT / "02-governance/loop/LOOP_GATE_CLASSIFICATION.md"
