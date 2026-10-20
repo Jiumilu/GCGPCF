@@ -1,13 +1,16 @@
 schema_version: 1
-current_project_count: 25
+current_project_count: 27
 scope_decision:
   confirmed_on: 2026-10-18
-  decision: WAE and Project are included in the current 25-project scope.
-  source: Explicit user confirmation in the governance remediation session.
+  decision: WAE, Project, PDC and SLC are included in the current 27-project scope.
+  source: Prior WAE, Project and PDC decisions; SLC explicitly requested for project-group onboarding and Git remote on 2026-10-18.
 historical_baselines:
   - count: 17
     through: 2026-06-27
     note: Historical evidence retains its recorded scope and is not rewritten.
+  - count: 26
+    through: 2026-10-18
+    note: Scope immediately before SLC onboarding; earlier evidence is not rewritten.
 projects:
   - {id: AAAS, slug: aaas, repo: "GlobalCloud AAAS"}
   - {id: Brain, slug: brain, repo: "GlobalCloud Brain"}
@@ -33,4 +36,6 @@ projects:
   - {id: World, slug: world, repo: "GlobalCloud World"}
   - {id: GCMEM, slug: gcmem, repo: "GlobalCloud Mem"}
   - {id: WAE, slug: wae, repo: "GlobalCloud WAE"}
-  - {id: Project, slug: project, repo: "GlobalCloud Project"}
+  - {id: Project, slug: project, repo: "GlobalCloud PMC"}
+  - {id: PDC, slug: pdc, repo: "GlobalCloud PDC"}
+  - {id: SLC, slug: slc, repo: "GlobalCloud SLC"}

@@ -2,10 +2,10 @@
 doc_id: GPCF-DOC-GLOBALCLOUD-PROJECT-GROUP-IMPLEMENTATION-PLAN-20260624
 title: GlobalCloud 项目群实施方案
 project: GPCF
-related_projects: [AAAS, Brain, WAS, XiaoC, WAME, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP, PQC, SpaceAI, SpaceAIStudio, World, GCMEM, WAE]
+related_projects: [AAAS, Brain, WAS, XiaoC, WAME, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP, PQC, SpaceAI, SpaceAIStudio, World, GCMEM, WAE, Project, PDC, SLC]
 domain: architecture
 status: controlled
-version: v1.0
+version: v1.1
 owner: GPCF
 kds_space: 开发
 kds_path: 开发/12-GPCF/GlobalCloud 项目群实施方案.md
@@ -79,9 +79,17 @@ GPCF:01-architecture/GlobalCloud 项目群总体方案.md
 22. GlobalCloud World
 23. GlobalCloud GCMEM
 24. GlobalCloud WAE
-25. GlobalCloud Project
+25. GlobalCloud PMC
+26. GlobalCloud PDC
+27. GlobalCloud SLC
 
-当前范围以 `config/project-group-projects.yaml` 为准；2026-10-18 用户明确确认 WAE 与 GlobalCloud Project 纳入当前 25 项目范围。历史 17/18/22 项目快照只代表其生成时的适用范围，不作为当前覆盖结论。新增项目在总体方案、实施方案、台账与验收证据补齐前保持 `partial/rework`，不得据目录或登记直接提升状态。
+当前范围以 `config/project-group-projects.yaml` 为准；GlobalCloud PMC（原 GlobalCloud Project）、GlobalCloud PDC、GlobalCloud SLC 已纳入当前 27 项目范围。历史 17/18/22/24/25/26 项目快照只代表生成时的适用范围，不作为当前覆盖结论。新增项目在总体方案、实施方案、台账与验收证据补齐前保持 `partial/rework`，不得据目录或登记直接提升状态。
+
+`GlobalCloud PMC` 基于 Plane 社区版源码，首期 F-028 只读投影 GPCF Feature 与 Evidence 状态；共享或生产实例写入、项目群集成和客户验收未确认。GPCF 保持交付状态和证据裁决权。
+
+`GlobalCloud PDC` 的中央入口为 `projects/pdc/STATUS.md`，Feature 为 F-030。项目级双方案候选已形成、继承待核验；当前版本浏览器关键任务与 WAE 装配未验证，状态保持 `partial/rework`。
+
+`GlobalCloud SLC` 的中央入口为 `projects/slc/STATUS.md`。项目级双方案和当前版本关键任务验证待补，状态保持 `partial/rework`。
 
 `GlobalCloud World` 于 2026-10-16 授权独立纳管与本地/私有远端 Git 建立。入口 `projects/world/STATUS.md`，Feature F-021；角色 external；不迁移 Studio F-015 或 KDS 主账。authorization=纳管与Git初始同步已授权；confirmation=业务验收与生产发布未确认；overall_status=partial。中央门禁 rework_required，历史覆盖证据保持原范围。
 

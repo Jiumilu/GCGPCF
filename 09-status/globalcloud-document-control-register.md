@@ -19,7 +19,7 @@ superseded_by: []
 
 # GlobalCloud 文档控制总台账
 
-日期：2026-10-18
+日期：2026-10-20
 
 用途：登记 GPCF 仓库内所有 Markdown 文档的受控身份、项目归属、状态、源路径与 KDS 开发空间路径。
 
@@ -30,9 +30,9 @@ superseded_by: []
 | project | kds_project_folder | project 字段文档数 | KDS 项目空间文档数 | 说明 |
 | --- | --- | --- | --- | --- |
 | GFIS | 01-GFIS | 117 | 114 | 已建空间 |
-| GPC | 02-GPC | 58 | 50 | 已建空间 |
+| GPC | 02-GPC | 54 | 46 | 已建空间 |
 | PVAOS | 03-PVAOS | 13 | 10 | 已建空间 |
-| WAME | 04-WAME | 196 | 26 | 已建空间 |
+| WAME | 04-WAME | 194 | 24 | 已建空间 |
 | KDS | 05-KDS | 1008 | 1005 | 已建空间 |
 | Brain | 06-Brain | 14 | 11 | 已建空间 |
 | PKC | 07-PKC | 10 | 7 | 已建空间 |
@@ -40,7 +40,7 @@ superseded_by: []
 | XGD | 09-XGD | 10 | 7 | 已建空间 |
 | XiaoG | 10-XiaoG | 11 | 8 | 已建空间 |
 | MMC | 11-MMC | 13 | 10 | 已建空间 |
-| GPCF | 12-GPCF | 1919 | 1658 | 已建空间 |
+| GPCF | 12-GPCF | 1925 | 1658 | 已建空间 |
 | Studio | 13-Studio | 5 | 2 | 已建空间 |
 | ICP | 14-ICP | 0 | 0 | 已建空间，暂无直接镜像文档 |
 | SpaceAIStudio | 15-SpaceAIStudio | 0 | 0 | 已建空间，暂无直接镜像文档 |
@@ -52,7 +52,7 @@ superseded_by: []
 | --- | --- | --- |
 | 00-项目群总控 | 项目群总入口与根 README | 1 |
 | 90-跨项目架构 | 跨项目架构、主线、数据/知识跨域文档 | 56 |
-| 91-治理与验收 | 治理、验收、状态、台账与门禁文档 | 329 |
+| 91-治理与验收 | 治理、验收、状态、台账与门禁文档 | 335 |
 | 92-证据与会话归档 | Harness、证据样本、历史会话与归档文档 | 95 |
 | 99-过期文档 | deprecated / superseded 文档 | 0 |
 
@@ -223,19 +223,13 @@ superseded_by: []
 | GPCF-DOC-323D4F2AA4 | OKF 兼容层只读导航总索引 | .okf/index.md | GPCF | GPCF, GPC, WAME, KDS | governance | controlled | 开发/12-GPCF/.okf/index.md |
 | GPCF-DOC-73009C52E2 | kds | .okf/kds/README.md | GPCF | GPCF, GPC, WAME, KDS | governance | controlled | 开发/12-GPCF/.okf/kds/README.md |
 | GPCF-DOC-40F2D45CE1 | OKF KDS Bundle 只读索引 | .okf/kds/index.md | GPCF | GPCF, GPC, WAME, KDS | governance | controlled | 开发/12-GPCF/.okf/kds/index.md |
-| GPCF-DOC-FAD086E548 | commands | .zcode/commands/README.md | GPC | GPC, WAME, KDS, GPCF | general | controlled | 开发/02-GPC/.zcode/commands/README.md |
-| GPCF-ZCODE-COMMAND-EVIDENCE-20260712 | evidence | .zcode/commands/evidence.md | GPC | GPC, WAME, GPCF | general | controlled | 开发/02-GPC/.zcode/commands/evidence.md |
-| GPCF-ZCODE-COMMAND-LOOP-20260712 | loop | .zcode/commands/loop.md | GPC | GPC, WAME, GPCF | general | controlled | 开发/02-GPC/.zcode/commands/loop.md |
-| GPCF-ZCODE-COMMAND-PROPOSE-20260712 | propose | .zcode/commands/propose.md | WAME | WAME, GPCF | general | controlled | 开发/04-WAME/.zcode/commands/propose.md |
-| GPCF-ZCODE-COMMAND-STATUS-20260712 | status | .zcode/commands/status.md | WAME | WAME, GPCF | general | controlled | 开发/04-WAME/.zcode/commands/status.md |
-| GPCF-ZCODE-COMMAND-SYNC-KDS-20260712 | sync-kds | .zcode/commands/sync-kds.md | GPC | GPC, KDS, Brain, GPCF | general | controlled | 开发/02-GPC/.zcode/commands/sync-kds.md |
 | GPCF-DOC-D1608C81FA | 索引与入口 | 00-index/README.md | GPCF | GPC, WAME, KDS, GPCF | index | controlled | 开发/12-GPCF/00-index/README.md |
 | GPCF-DOC-09655E45C0 | ADR：GPC 从 Odoo 二开调整为原生公共服务平台 | 01-architecture/ADR-GPC从Odoo二开调整为原生公共服务平台.md | GPCF | GFIS, GPC, PVAOS, WAME, XiaoC, XGD, GPCF, Studio | architecture | controlled | 开发/90-跨项目架构/01-architecture/ADR-GPC从Odoo二开调整为原生公共服务平台.md |
 | GPCF-DOC-7FAF5AD2FB | AI 驱动 GFIS 三阶段演进构想 | 01-architecture/AI驱动GFIS三阶段演进构想.md | GPCF | GPCF, GFIS, WAME, KDS, Brain, PKC, XiaoC, XGD, Studio | architecture | controlled | 开发/90-跨项目架构/01-architecture/AI驱动GFIS三阶段演进构想.md |
 | GPCF-DOC-16D9DC63AA | AI 驱动 GFIS 与 GlobalCloud 绿色供应链体系结合分析 | 01-architecture/AI驱动GFIS与GlobalCloud体系结合分析.md | GPCF | GPCF, GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, Studio | architecture | controlled | 开发/90-跨项目架构/01-architecture/AI驱动GFIS与GlobalCloud体系结合分析.md |
 | GPCF-DOC-3F9E7988C6 | AI 驱动工厂信息化系统完整方案 V3.1 | 01-architecture/AI驱动工厂信息化系统完整方案V3.1.md | GPCF | GPCF, GFIS, GPC, WAME | architecture | controlled | 开发/90-跨项目架构/01-architecture/AI驱动工厂信息化系统完整方案V3.1.md |
 | GPCF-DOC-D54AF3DD5D | GlobalCloud 绿色供应链体系 — 全面分析报告 | 01-architecture/GPC方向全面分析报告.md | GPCF | GFIS, GPC, PVAOS, WAME, Brain, XiaoC, XGD, GPCF, Studio | architecture | controlled | 开发/90-跨项目架构/01-architecture/GPC方向全面分析报告.md |
-| GPCF-DOC-GLOBALCLOUD-PROJECT-GROUP-MASTER-PLAN-20260626 | GlobalCloud 项目群总体方案 | 01-architecture/GlobalCloud 项目群总体方案.md | GPCF | GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio, ICP, SpaceAIStudio, AAAS, WAS, XWAIL, SOP, PQC, SpaceAI, World, GCMEM, WAE, Project | architecture | controlled | 开发/90-跨项目架构/01-architecture/GlobalCloud 项目群总体方案.md |
+| GPCF-DOC-GLOBALCLOUD-PROJECT-GROUP-MASTER-PLAN-20260626 | GlobalCloud 项目群总体方案 | 01-architecture/GlobalCloud 项目群总体方案.md | GPCF | GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio, ICP, SpaceAIStudio, AAAS, WAS, XWAIL, SOP, PQC, SpaceAI, World, GCMEM, WAE, Project, PDC, SLC | architecture | controlled | 开发/90-跨项目架构/01-architecture/GlobalCloud 项目群总体方案.md |
 | GPCF-DOC-45A09FDDC2 | GlobalCloud世界资产体系 WAE-WAES 与 SCaaS 关系门禁边界 | 01-architecture/GlobalCloud世界资产体系候选范围与门禁边界.md | GPCF | GFIS, GPC, PVAOS, WAME, GPCF | architecture | controlled | 开发/90-跨项目架构/01-architecture/GlobalCloud世界资产体系候选范围与门禁边界.md |
 | GPCF-DOC-WAS-TOPLINE-20260623 | GlobalCloud世界资产体系正式命名与产品系统架构总纲 | 01-architecture/GlobalCloud世界资产体系正式命名与产品系统架构总纲.md | GPCF | GPC, WAME, KDS, GPCF | architecture | controlled | 开发/90-跨项目架构/01-architecture/GlobalCloud世界资产体系正式命名与产品系统架构总纲.md |
 | GPCF-DOC-0C519C97BD | GlobalCloud 体系最小闭环与三阶段激活深度总表 | 01-architecture/GlobalCloud体系最小闭环与三阶段激活深度总表.md | GPCF | GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio | architecture | controlled | 开发/90-跨项目架构/01-architecture/GlobalCloud体系最小闭环与三阶段激活深度总表.md |
@@ -647,7 +641,7 @@ superseded_by: []
 | GPCF-DOC-C436DDB0F6 | GlobalCloud 文档健康报告 | 09-status/globalcloud-document-health-report.md | GPCF | AAAS, Brain, WAS, XiaoC, WAME, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP, PQC, SpaceAI, SpaceAIStudio, World, GCMEM, WAE | status | controlled | 开发/91-治理与验收/09-status/globalcloud-document-health-report.md |
 | GPCF-DOC-C582EFCACE | GlobalCloud L3 Admission Matrix | 09-status/globalcloud-l3-admission-matrix.md | GPCF | GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF | status | controlled | 开发/91-治理与验收/09-status/globalcloud-l3-admission-matrix.md |
 | GPCF-DOC-C10C271958 | GlobalCloud 项目文档完整度与 Loop 成熟度量化矩阵 | 09-status/globalcloud-project-document-loop-maturity-matrix.md | GPCF | GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF | status | controlled | 开发/91-治理与验收/09-status/globalcloud-project-document-loop-maturity-matrix.md |
-| GPCF-DOC-OPEN-SPEC-18-PROJECT-MATRIX-20260712 | GlobalCloud 项目群 OpenSpec 适用性矩阵 | 09-status/globalcloud-project-group-openspec-applicability-matrix.md | GPCF | GFIS, GPC, PVAOS, WAME, WAE, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio, ICP, SpaceAIStudio, GCMEM, Project | status | controlled | 开发/91-治理与验收/09-status/globalcloud-project-group-openspec-applicability-matrix.md |
+| GPCF-DOC-OPEN-SPEC-18-PROJECT-MATRIX-20260712 | GlobalCloud 项目群 OpenSpec 适用性矩阵 | 09-status/globalcloud-project-group-openspec-applicability-matrix.md | GPCF | GFIS, GPC, PVAOS, WAME, WAE, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio, ICP, SpaceAIStudio, GCMEM, Project, PDC, SLC | status | controlled | 开发/91-治理与验收/09-status/globalcloud-project-group-openspec-applicability-matrix.md |
 | GPCF-DOC-PROJECT-GROUP-REAL-EXECUTION-GOVERNANCE-BOARD-20260625 | GlobalCloud 项目群真实执行治理总控板 | 09-status/globalcloud-project-group-real-execution-governance-board.md | GPCF | AAAS, Brain, WAS, XiaoC, WAME, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP, PQC, SpaceAI, SpaceAIStudio, World, GCMEM | status | controlled | 开发/91-治理与验收/09-status/globalcloud-project-group-real-execution-governance-board.md |
 | GPCF-DOC-PROJECT-IMPLEMENTATION-CONTROL-REGISTER-20260624 | GlobalCloud 项目群实施方案控制台账 | 09-status/globalcloud-project-implementation-control-register.md | GPCF | AAAS, Brain, WAS, XiaoC, WAME, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP, PQC, SpaceAI, SpaceAIStudio, World, GCMEM, WAE | status | controlled | 开发/91-治理与验收/09-status/globalcloud-project-implementation-control-register.md |
 | GPCF-DOC-6CE17269E9 | GlobalCloud 项目群项目主线对齐矩阵 | 09-status/globalcloud-project-mainline-alignment-matrix.md | GPCF | GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio | status | controlled | 开发/91-治理与验收/09-status/globalcloud-project-mainline-alignment-matrix.md |
@@ -679,7 +673,7 @@ superseded_by: []
 | GPCF-DOC-37DD68363F | AGENTS | AGENTS.md | WAME | WAME, GPCF | general | controlled | 开发/04-WAME/AGENTS.md |
 | GPCF-DOC-GLOBALCLOUD-GPCF-IMPLEMENTATION-PLAN-20260624 | GlobalCloud GPCF 实施方案 | GlobalCloud GPCF 实施方案.md | GPC | GPC, WAME, KDS, GPCF | general | controlled | 开发/02-GPC/GlobalCloud GPCF 实施方案.md |
 | GPCF-DOC-GLOBALCLOUD-GPCF-MASTER-PLAN-20260624 | GlobalCloud GPCF 总体方案 | GlobalCloud GPCF 总体方案.md | GFIS | GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio | general | controlled | 开发/01-GFIS/GlobalCloud GPCF 总体方案.md |
-| GPCF-DOC-GLOBALCLOUD-PROJECT-GROUP-IMPLEMENTATION-PLAN-20260624 | GlobalCloud 项目群实施方案 | GlobalCloud 项目群实施方案.md | GPCF | AAAS, Brain, WAS, XiaoC, WAME, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP, PQC, SpaceAI, SpaceAIStudio, World, GCMEM, WAE | architecture | controlled | 开发/12-GPCF/GlobalCloud 项目群实施方案.md |
+| GPCF-DOC-GLOBALCLOUD-PROJECT-GROUP-IMPLEMENTATION-PLAN-20260624 | GlobalCloud 项目群实施方案 | GlobalCloud 项目群实施方案.md | GPCF | AAAS, Brain, WAS, XiaoC, WAME, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP, PQC, SpaceAI, SpaceAIStudio, World, GCMEM, WAE, Project, PDC, SLC | architecture | controlled | 开发/12-GPCF/GlobalCloud 项目群实施方案.md |
 | GPCF-DOC-16DD6DC90F | GPCF 项目 Harness Manifest | PROJECT_HARNESS_MANIFEST.md | GFIS | GFIS, GPC, WAME, KDS, Brain, XiaoC, XGD, XiaoG, GPCF | general | controlled | 开发/01-GFIS/PROJECT_HARNESS_MANIFEST.md |
 | GPCF-DOC-8EC9A00BFD | GlobalCloud GPCF 项目群治理控制仓 | README.md | GPCF | GPC, WAME, KDS, GPCF | general | controlled | 开发/00-项目群总控/README.md |
 | GPCF-DOC-A2F5EC5E20 | GCBrain 专业版 v3.0 全量开发文档 | docs/GCBrain-Development-Manual.md | KDS | PVAOS, WAME, KDS, Brain | docs | controlled | 开发/05-KDS/docs/GCBrain-Development-Manual.md |
@@ -1631,7 +1625,7 @@ superseded_by: []
 | GPCF-DOC-8DC131D430 | Ontology/WAS 3 小时实施 P2 门禁执行与回放证据 | docs/harness/evidence/ontology-was-3h-p2-gate-replay-20260621.md | GPCF | GFIS, GPC, WAME, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/evidence/ontology-was-3h-p2-gate-replay-20260621.md |
 | GPCF-DOC-20DAB7011D | Ontology/WAS 3 小时实施 P3 收口与下一步决策证据 | docs/harness/evidence/ontology-was-3h-p3-closure-20260621.md | GPCF | GFIS, GPC, WAME, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/evidence/ontology-was-3h-p3-closure-20260621.md |
 | GPCF-DOC-C21E66324C | Ontology/WAS 真实 Source Record Intake Package | docs/harness/evidence/ontology-was-real-source-record-intake-pack-20260621.md | KDS | GFIS, GPC, WAME, KDS, GPCF | docs | controlled | 开发/05-KDS/docs/harness/evidence/ontology-was-real-source-record-intake-pack-20260621.md |
-| GPCF-DOC-PROJECTGROUPLIVESTATUSCURRENT20260701 | GlobalCloud 项目群当前 Live 状态快照 | docs/harness/evidence/project_group_live_status_current.md | GPCF | AAAS, Brain, WAS, XiaoC, WAME, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP, PQC, SpaceAI, SpaceAIStudio, World, GCMEM, WAE, Project | harness | controlled | 开发/12-GPCF/docs/harness/evidence/project_group_live_status_current.md |
+| GPCF-DOC-PROJECTGROUPLIVESTATUSCURRENT20260701 | GlobalCloud 项目群当前 Live 状态快照 | docs/harness/evidence/project_group_live_status_current.md | GPCF | AAAS, Brain, WAS, XiaoC, WAME, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP, PQC, SpaceAI, SpaceAIStudio, World, GCMEM, WAE, Project, PDC, SLC | harness | controlled | 开发/12-GPCF/docs/harness/evidence/project_group_live_status_current.md |
 | GPCF-DOC-FACA370CCA | 会话主任务总结与声明控制边界 | docs/harness/evidence/session-main-task-summary-declaration-boundary-20260622.md | KDS | GFIS, GPC, WAME, KDS, Brain, GPCF, Studio | docs | controlled | 开发/05-KDS/docs/harness/evidence/session-main-task-summary-declaration-boundary-20260622.md |
 | GPCF-DOC-3A9B82D614 | Session Mainline Drift Watch 20260622 | docs/harness/evidence/session-mainline-drift-watch-20260622.md | KDS | GFIS, GPC, WAME, KDS, GPCF | docs | controlled | 开发/05-KDS/docs/harness/evidence/session-mainline-drift-watch-20260622.md |
 | GPCF-DOC-SESSION-HANDOFF-REQUEST-GATE-20260622 | Session Mainline Handoff Request Gate 20260622 | docs/harness/evidence/session-mainline-handoff-request-gate-20260622.md | KDS | GFIS, GPC, WAME, KDS, GPCF | docs | controlled | 开发/05-KDS/docs/harness/evidence/session-mainline-handoff-request-gate-20260622.md |
@@ -3103,8 +3097,6 @@ superseded_by: []
 | GPCF-DOC-5FE5ED4E8B | tasks | docs/harness/tasks/README.md | KDS | GFIS, GPC, WAME, KDS, GPCF | docs | controlled | 开发/05-KDS/docs/harness/tasks/README.md |
 | GPCF-DOC-AE29585A23 | standards | docs/standards/README.md | KDS | GPC, WAME, KDS, GPCF | docs | controlled | 开发/05-KDS/docs/standards/README.md |
 | GPCF-DOC-E6A5B97688 | Feature Workspace 标准 | docs/standards/feature-workspace.md | GPCF | GPC, WAME, GPCF | docs | controlled | 开发/12-GPCF/docs/standards/feature-workspace.md |
-| GPCF-DOC-4B430A4564 | 证据摘要 | features/done/F-004-loop-governance-slimming/evidence/summary.md | GPCF | AAAS, Brain, WAS, XiaoC, WAME, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP | governance | controlled | 开发/91-治理与验收/features/done/F-004-loop-governance-slimming/evidence/summary.md |
-| GPCF-DOC-818D26D88F | F-004 loop-governance-slimming | features/done/F-004-loop-governance-slimming/journal.md | GPCF | AAAS, Brain, WAS, XiaoC, WAME, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP | governance | controlled | 开发/91-治理与验收/features/done/F-004-loop-governance-slimming/journal.md |
 | GPCF-DOC-C853A45195 | 证据摘要 | features/active/F-005-factory-exception-intake-dry-run/evidence/summary.md | GPCF | AAAS, Brain, WAS, XiaoC, WAME, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP | governance | controlled | 开发/91-治理与验收/features/active/F-005-factory-exception-intake-dry-run/evidence/summary.md |
 | GPCF-DOC-D84CBF8493 | F-005 factory-exception-intake-dry-run | features/active/F-005-factory-exception-intake-dry-run/journal.md | GPCF | AAAS, Brain, WAS, XiaoC, WAME, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP | governance | controlled | 开发/91-治理与验收/features/active/F-005-factory-exception-intake-dry-run/journal.md |
 | GPCF-DOC-F010-UI-ENGINEERING-COVERAGE-SUMMARY-20260712 | 证据摘要 | features/active/F-010-project-group-ui-engineering-coverage/evidence/summary.md | GPCF | AAAS, Brain, WAS, XiaoC, WAME, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP | governance | controlled | 开发/91-治理与验收/features/active/F-010-project-group-ui-engineering-coverage/evidence/summary.md |
@@ -3221,6 +3213,8 @@ superseded_by: []
 | GPCF-DOC-EA15CD5231 | F-002 project-group-feature-queue | features/done/F-002-project-group-feature-queue/journal.md | GPCF | AAAS, Brain, WAS, XiaoC, WAME, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP | governance | controlled | 开发/91-治理与验收/features/done/F-002-project-group-feature-queue/journal.md |
 | GPCF-DOC-CEC0E2AC3F | 证据摘要 | features/done/F-003-evidence-gate-profile/evidence/summary.md | GPCF | AAAS, Brain, WAS, XiaoC, WAME, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP | governance | controlled | 开发/91-治理与验收/features/done/F-003-evidence-gate-profile/evidence/summary.md |
 | GPCF-DOC-C38007BF35 | F-003 evidence-gate-profile | features/done/F-003-evidence-gate-profile/journal.md | GPCF | AAAS, Brain, WAS, XiaoC, WAME, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP | governance | controlled | 开发/91-治理与验收/features/done/F-003-evidence-gate-profile/journal.md |
+| GPCF-DOC-4B430A4564 | 证据摘要 | features/done/F-004-loop-governance-slimming/evidence/summary.md | GPCF | AAAS, Brain, WAS, XiaoC, WAME, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP | governance | controlled | 开发/91-治理与验收/features/done/F-004-loop-governance-slimming/evidence/summary.md |
+| GPCF-DOC-818D26D88F | F-004 loop-governance-slimming | features/done/F-004-loop-governance-slimming/journal.md | GPCF | AAAS, Brain, WAS, XiaoC, WAME, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP | governance | controlled | 开发/91-治理与验收/features/done/F-004-loop-governance-slimming/journal.md |
 | GPCF-FEATURE-F-006-EVIDENCE-SUMMARY-20260712 | 证据摘要 | features/done/F-006-knowledge-e2e-flow/evidence/summary.md | GPCF | AAAS, Brain, WAS, XiaoC, WAME, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP | governance | controlled | 开发/91-治理与验收/features/done/F-006-knowledge-e2e-flow/evidence/summary.md |
 | GPCF-DOC-BCB47EFAB6 | F-006 knowledge-e2e-flow | features/done/F-006-knowledge-e2e-flow/journal.md | GPCF | AAAS, Brain, WAS, XiaoC, WAME, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP | governance | controlled | 开发/91-治理与验收/features/done/F-006-knowledge-e2e-flow/journal.md |
 | GPCF-FEATURE-F-007-EVIDENCE-SUMMARY-20260712 | 证据摘要 | features/done/F-007-reports-data-flow/evidence/summary.md | GPCF | AAAS, Brain, WAS, XiaoC, WAME, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP | governance | controlled | 开发/91-治理与验收/features/done/F-007-reports-data-flow/evidence/summary.md |
@@ -3410,8 +3404,6 @@ superseded_by: []
 | GPCF-DOC-A233ABB969 | Brain 风险 | projects/brain/RISK.md | Brain | Brain | governance | controlled | 开发/91-治理与验收/projects/brain/RISK.md |
 | GPCF-DOC-D40C9F208D | Brain 路线图 | projects/brain/ROADMAP.md | Brain | Brain | governance | controlled | 开发/91-治理与验收/projects/brain/ROADMAP.md |
 | GPCF-DOC-70E004C4E1 | Brain 状态 | projects/brain/STATUS.md | Brain | Brain | governance | controlled | 开发/91-治理与验收/projects/brain/STATUS.md |
-| GPCF-DOC-GCMEM-MEM0-CMP | GCMEM 与 mem0 全量对比（v1.5 · 2026-10-17） | projects/gcmem/GCMEM-vs-mem0-对比.md | GPCF | GPCF | governance | controlled | 开发/91-治理与验收/projects/gcmem/GCMEM-vs-mem0-对比.md |
-| GPCF-DOC-GCMEM-MEM0-METRICS | GCMEM 与 mem0 多维度指标分析（2026-10-17） | projects/gcmem/GCMEM-vs-mem0-指标分析.md | GPCF | GPCF | governance | controlled | 开发/91-治理与验收/projects/gcmem/GCMEM-vs-mem0-指标分析.md |
 | GPCF-DOC-2252D3D171 | GCMEM 总体设计（v1.0 · 2026-10-16） | projects/gcmem/MASTER-DESIGN.md | GPCF | GPCF | governance | controlled | 开发/91-治理与验收/projects/gcmem/MASTER-DESIGN.md |
 | GPCF-DOC-CEE8C03181 | GCMEM 风险 | projects/gcmem/RISK.md | GPCF | GCMEM, GPCF | governance | controlled | 开发/91-治理与验收/projects/gcmem/RISK.md |
 | GPCF-DOC-6C2740A26F | GCMEM 路线图 | projects/gcmem/ROADMAP.md | GPCF | GCMEM, GPCF | governance | controlled | 开发/91-治理与验收/projects/gcmem/ROADMAP.md |
@@ -3434,15 +3426,27 @@ superseded_by: []
 | GPCF-DOC-6A4D355996 | MMC 风险 | projects/mmc/RISK.md | MMC | MMC | governance | controlled | 开发/91-治理与验收/projects/mmc/RISK.md |
 | GPCF-DOC-1C4498259E | MMC 路线图 | projects/mmc/ROADMAP.md | MMC | MMC | governance | controlled | 开发/91-治理与验收/projects/mmc/ROADMAP.md |
 | GPCF-DOC-0CD635B751 | MMC 状态 | projects/mmc/STATUS.md | MMC | MMC | governance | controlled | 开发/91-治理与验收/projects/mmc/STATUS.md |
+| GPCF-PDC-README-20261018 | GlobalCloud PDC 中央入口 | projects/pdc/README.md | GPCF | GPCF, PDC | governance | controlled | 开发/91-治理与验收/projects/pdc/README.md |
+| GPCF-PDC-RISK-20261018 | GlobalCloud PDC 风险 | projects/pdc/RISK.md | GPCF | GPCF, PDC | governance | controlled | 开发/91-治理与验收/projects/pdc/RISK.md |
+| GPCF-PDC-ROADMAP-20261018 | GlobalCloud PDC 路线图 | projects/pdc/ROADMAP.md | GPCF | GPCF, PDC | governance | controlled | 开发/91-治理与验收/projects/pdc/ROADMAP.md |
+| GPCF-PDC-STATUS-20261018 | GlobalCloud PDC 状态 | projects/pdc/STATUS.md | GPCF | GPCF, PDC | governance | controlled | 开发/91-治理与验收/projects/pdc/STATUS.md |
 | GPCF-DOC-857E6A9307 | PKC 风险 | projects/pkc/RISK.md | PKC | PKC | governance | controlled | 开发/91-治理与验收/projects/pkc/RISK.md |
 | GPCF-DOC-950A22AC4D | PKC 路线图 | projects/pkc/ROADMAP.md | PKC | PKC | governance | controlled | 开发/91-治理与验收/projects/pkc/ROADMAP.md |
 | GPCF-DOC-88EC26FE57 | PKC 状态 | projects/pkc/STATUS.md | PKC | PKC | governance | controlled | 开发/91-治理与验收/projects/pkc/STATUS.md |
 | GPCF-DOC-B0BEE2DA8F | PQC 风险 | projects/pqc/RISK.md | GPCF | PQC, GPCF | governance | controlled | 开发/91-治理与验收/projects/pqc/RISK.md |
 | GPCF-DOC-1986A54DEF | PQC 路线图 | projects/pqc/ROADMAP.md | GPCF | PQC, GPCF | governance | controlled | 开发/91-治理与验收/projects/pqc/ROADMAP.md |
 | GPCF-PQC-STATUS-20261010 | PQC 状态 | projects/pqc/STATUS.md | GPCF | GPCF | governance | controlled | 开发/91-治理与验收/projects/pqc/STATUS.md |
+| GPCF-PROJECT-README-20261018 | GlobalCloud PMC 中央入口 | projects/project/README.md | GPCF | GPCF, Project | governance | controlled | 开发/91-治理与验收/projects/project/README.md |
+| GPCF-PROJECT-RISK-20261018 | GlobalCloud PMC 风险 | projects/project/RISK.md | GPCF | GPCF, Project | governance | controlled | 开发/91-治理与验收/projects/project/RISK.md |
+| GPCF-PROJECT-ROADMAP-20261018 | GlobalCloud PMC 路线图 | projects/project/ROADMAP.md | GPCF | GPCF, Project | governance | controlled | 开发/91-治理与验收/projects/project/ROADMAP.md |
+| GPCF-PROJECT-STATUS-20261018 | GlobalCloud PMC 状态 | projects/project/STATUS.md | GPCF | GPCF, Project | governance | controlled | 开发/91-治理与验收/projects/project/STATUS.md |
 | GPCF-DOC-73296C1685 | PVAOS 风险 | projects/pvaos/RISK.md | PVAOS | PVAOS | governance | controlled | 开发/91-治理与验收/projects/pvaos/RISK.md |
 | GPCF-DOC-00153CD8B3 | PVAOS 路线图 | projects/pvaos/ROADMAP.md | PVAOS | PVAOS | governance | controlled | 开发/91-治理与验收/projects/pvaos/ROADMAP.md |
 | GPCF-DOC-FBDF40CE54 | PVAOS 状态 | projects/pvaos/STATUS.md | PVAOS | PVAOS | governance | controlled | 开发/91-治理与验收/projects/pvaos/STATUS.md |
+| GPCF-SLC-README-20261018 | GlobalCloud SLC 中央入口 | projects/slc/README.md | GPCF | GPCF, SLC | governance | controlled | 开发/91-治理与验收/projects/slc/README.md |
+| GPCF-SLC-RISK-20261018 | GlobalCloud SLC 风险 | projects/slc/RISK.md | GPCF | GPCF, SLC | governance | controlled | 开发/91-治理与验收/projects/slc/RISK.md |
+| GPCF-SLC-ROADMAP-20261018 | GlobalCloud SLC 路线图 | projects/slc/ROADMAP.md | GPCF | GPCF, SLC | governance | controlled | 开发/91-治理与验收/projects/slc/ROADMAP.md |
+| GPCF-SLC-STATUS-20261018 | GlobalCloud SLC 状态 | projects/slc/STATUS.md | GPCF | GPCF, SLC | governance | controlled | 开发/91-治理与验收/projects/slc/STATUS.md |
 | GPCF-DOC-068AE09B46 | SOP 风险 | projects/sop/RISK.md | SOP | SOP | governance | controlled | 开发/91-治理与验收/projects/sop/RISK.md |
 | GPCF-DOC-86C94554EC | SOP 路线图 | projects/sop/ROADMAP.md | SOP | SOP | governance | controlled | 开发/91-治理与验收/projects/sop/ROADMAP.md |
 | GPCF-DOC-5F3201F8C9 | SOP 状态 | projects/sop/STATUS.md | SOP | SOP | governance | controlled | 开发/91-治理与验收/projects/sop/STATUS.md |
@@ -3510,7 +3514,3 @@ superseded_by: []
 | GPCF-DOC-016DDA517E | 工具目录 | tools/README.md | GPCF | GPC, WAME, KDS, GPCF | tools | controlled | 开发/12-GPCF/tools/README.md |
 | GPCF-DOC-C9A7E8D2B1 | Frontmatter 写入权责清单（tools/kds-sync） | tools/kds-sync/FRONTMATTER_OWNERSHIP.md | GPCF | GPC, WAME, KDS, GPCF | tools | controlled | 开发/12-GPCF/tools/kds-sync/FRONTMATTER_OWNERSHIP.md |
 | GPCF-DOC-C039431381 | KDS Sync Tools | tools/kds-sync/README.md | GPCF | GPC, KDS, GPCF | tools | controlled | 开发/12-GPCF/tools/kds-sync/README.md |
-| GPCF-PROJECT-25-README-20261018 | GlobalCloud Project 节奏入口 | projects/project/README.md | GPCF | GPCF, Project | governance | controlled | 开发/91-治理与验收/projects/project/README.md |
-| GPCF-PROJECT-25-RISK-20261018 | GlobalCloud Project 风险 | projects/project/RISK.md | GPCF | GPCF, Project | governance | controlled | 开发/91-治理与验收/projects/project/RISK.md |
-| GPCF-PROJECT-25-ROADMAP-20261018 | GlobalCloud Project 路线图 | projects/project/ROADMAP.md | GPCF | GPCF, Project | governance | controlled | 开发/91-治理与验收/projects/project/ROADMAP.md |
-| GPCF-PROJECT-25-STATUS-20261018 | GlobalCloud Project 状态 | projects/project/STATUS.md | GPCF | GPCF, Project | governance | controlled | 开发/91-治理与验收/projects/project/STATUS.md |
