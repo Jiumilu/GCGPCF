@@ -1,0 +1,16 @@
+# F-024 视觉证据（waived：不复制二进制，指向真实产物）
+
+本 Feature 的界面对照截图保存在主项目仓库：
+../GlobalCloud SpaceAI Platform/harness/runs/20261016-panorama-convergence/evidence/
+  ├── before-1600x900.png    抽取前基线
+  ├── before-1600x1000.png   抽取前基线（第二视口）
+  ├── after-1600x900.png     抽取后对照
+  ├── after-1600x1000.png    抽取后对照
+  └── app-1280.png           应用运行态
+
+判定口径（已在变更 design.md 第 5 节修正）：全景态势为实时变化视图，
+像素 diff 不适用；零回归以结构指标为准——DOM 节点 1503、可见卡片 21、
+/RestFul 接口 27 个，在抽取前后与多轮对照中恒定，且无新增错误类型。
+
+waiver 理由：本轮为工程收敛，模板零改动；截图仅用于人工对照，
+不纳入版本库二进制，避免重复存储。真实 PNG 路径如上，可随时复核。
