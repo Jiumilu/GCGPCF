@@ -16,4 +16,5 @@ jobs:
       - run: python -m pytest tests/ -q
       - run: python tools/kds-sync/loop_document_gate.py --check-only --repository-only
       - run: python tools/kds-sync/validate_project_group_openspec_coverage.py
+      - run: PYTHONPYCACHEPREFIX=/tmp/gpcf-pycache python -m compileall -q scripts tools
       - run: python tools/kds-sync/check_python_bytecode.py

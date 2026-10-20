@@ -48,7 +48,7 @@ DKS-204 不写入 GFIS/GPC/ERP/MES，不提升 KDS lifecycle，不生成 accepte
 ## 验证
 
 ```bash
-python3 scripts/gfis/validate_gfis_assistant_dks_204_routing_queue_notification_acknowledgement_escalation_digest_delivery_ack_escalation_sla_breach_review_resolution_option_approval_packet_routing_queue_notification_acknowledgement_escalation_digest_preview.py
+python3 scripts/gfis/validate_gfis_assistant_dks_204_07eb0874798e.py
 ```
 
 验收口径：
