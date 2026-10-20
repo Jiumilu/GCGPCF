@@ -68,3 +68,34 @@ def test_ui_evidence_ignores_build_file_but_accepts_named_ui_note(tmp_path, monk
     assert gate.detect_ui_evidence(feature_dir, evidence_dir)[0] == "fail"
     (evidence_dir / "ui-browser.txt").write_text("browser trace\n")
     assert gate.detect_ui_evidence(feature_dir, evidence_dir)[0] == "pass"
+
+
+def test_ui_evidence_rechecks_generated_snapshot(tmp_path, monkeypatch):
+    monkeypatch.syspath_prepend(str(ROOT / "scripts"))
+    import gpcf_check_evidence as gate
+
+    feature_dir = tmp_path / "F-031-sample"
+    evidence_dir = feature_dir / "evidence"
+    evidence_dir.mkdir(parents=True)
+    (evidence_dir / "build.txt").write_text("build passed\n")
+    (evidence_dir / "screenshots.txt").write_text(
+        "UI evidence detected from Feature artifacts.\nnotes:\n- evidence/build.txt\n"
+    )
+    assert gate.detect_ui_evidence(feature_dir, evidence_dir)[0] == "fail"
+
+    (evidence_dir / "ui-browser.txt").write_text("browser trace\n")
+    status, details = gate.detect_ui_evidence(feature_dir, evidence_dir)
+    assert status == "pass"
+    assert "evidence/ui-browser.txt" in details
+    assert "evidence/screenshots.txt" not in details
+
+
+def test_ui_evidence_does_not_promote_prior_waiver(tmp_path, monkeypatch):
+    monkeypatch.syspath_prepend(str(ROOT / "scripts"))
+    import gpcf_check_evidence as gate
+
+    feature_dir = tmp_path / "F-031-sample"
+    evidence_dir = feature_dir / "evidence"
+    evidence_dir.mkdir(parents=True)
+    (evidence_dir / "screenshots.txt").write_text("waived: no UI in earlier scope\n")
+    assert gate.detect_ui_evidence(feature_dir, evidence_dir)[0] == "fail"

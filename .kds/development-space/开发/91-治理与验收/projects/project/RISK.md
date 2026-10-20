@@ -1,6 +1,6 @@
 ---
-doc_id: GPCF-PROJECT-25-RISK-20261018
-title: GlobalCloud Project 风险
+doc_id: GPCF-PROJECT-RISK-20261018
+title: GlobalCloud PMC 风险
 project: GPCF
 related_projects: [GPCF, Project]
 domain: governance
@@ -16,8 +16,11 @@ supersedes: []
 superseded_by: []
 ---
 
-# GlobalCloud Project 风险
+# GlobalCloud PMC 风险
 
-- 方案文件存在不等于唯一性、继承链或运行集成已验证。
-- 项目协作系统不得写回或提升 GPCF Feature、Evidence 与验收状态。
-- 后续接口验证须保留测试结果、权限边界和回滚路径；未确认前维持 `partial/rework`。
+| 风险 | 当前控制 |
+|---|---|
+| Plane 与 GPCF 状态分叉 | 单向投影，不回写 GPCF；来源状态在工作项正文中标明 |
+| 证据误读为验收 | 仅展示证据状态和路径；缺失记为 pending，人工确认边界保持独立 |
+| 上游版本与许可变化 | 固定源码提交及许可证，对外分发前复核文件级许可 |
+| 真实 Plane 实例未验证 | 当前记录为未验证，不提升 `integrated` 或 `production_ready` |

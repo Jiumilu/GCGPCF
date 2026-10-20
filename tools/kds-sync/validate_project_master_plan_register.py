@@ -15,7 +15,7 @@ MASTER_PLAN = ROOT / "01-architecture/WAS世界资产体系总体方案.md"
 GROUP_MASTER = ROOT / "01-architecture/GlobalCloud 项目群总体方案.md"
 
 REGISTRY = yaml.safe_load((ROOT / "config/project-group-projects.yaml").read_text(encoding="utf-8"))
-DISPLAY_NAMES = {"WAS": "WAS世界资产体系", "AAAS": "GlobalCloud AAAS / AaaS", "SpaceAIStudio": "GlobalCloud SpaceAI Studio"}
+DISPLAY_NAMES = {"WAS": "WAS世界资产体系", "AAAS": "GlobalCloud AAAS / AaaS", "SpaceAIStudio": "GlobalCloud SpaceAI Studio", "Project": "GlobalCloud PMC"}
 REQUIRED_PROJECTS = ["项目群总控"] + [
     DISPLAY_NAMES.get(str(item["id"]), f"GlobalCloud {item['id']}")
     for item in REGISTRY["projects"]

@@ -1,6 +1,6 @@
 ---
-doc_id: GPCF-PROJECT-25-ROADMAP-20261018
-title: GlobalCloud Project 路线图
+doc_id: GPCF-PROJECT-ROADMAP-20261018
+title: GlobalCloud PMC 路线图
 project: GPCF
 related_projects: [GPCF, Project]
 domain: governance
@@ -16,16 +16,6 @@ supersedes: []
 superseded_by: []
 ---
 
-# GlobalCloud Project 路线图
+# GlobalCloud PMC 路线图
 
-## 当前基线
-
-纳入 25 项目事实源，登记独立仓方案及项目群控制台账。
-
-## 下一阶段
-
-核验项目总体方案与实施方案的唯一性和双总控继承，再验证只读 Feature 与 Evidence 对接。
-
-## 完成判定
-
-以可回放的运行证据和人工确认边界为准；当前保持 `partial/rework`。
+当前 F-028：完成 Plane 社区版独立源码基线、GPCF Feature／Evidence 只读预览、开发实例幂等同步验证和项目群登记。后续是否建设统一界面、项目群排期与依赖，依本轮证据和独立 Feature 决定。完成判定以 Evidence Gate、文档门禁和人工确认为准；当前仅为 `partial`。
