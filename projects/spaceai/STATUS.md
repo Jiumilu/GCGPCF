@@ -62,13 +62,13 @@ superseded_by: []
 | T2 | 写可靠（117 处 run 调用仅 1 处判返回值；26 个多写函数 0 个事务） | **已完成**：改造 **10 个函数**（advanceOps / transitionLifecycle / ingestPush / saveRule / toggleRule / saveRelation / executePlan / fuseEvents / runObolRound / addLowAltitudeAssets）→ `tx` + `runStrict` + 失败如实返回；新增 **10 项触发器注入写失败测试**（含原子回滚断言），每批均做变异验证。全量 91 文件 / 829 项全过 |
 | T3 | 数据治理与保留策略 | **已完成**：CityLink 归档去重（原表改名保留 2196 万行，新表 61,289 + 唯一索引，零删除）→ `/City/Stats` 17,000ms→155ms、聚合 17,020ms→27ms；只读保留报告 + 可复现去重脚本 + 4 项完整性守卫 |
 | T4 | 测试基座 | **已完成**：定位城市数据幂等守卫 off-by-one（`> 50000` 而实际恰为 50,000）致每次 createApp 重建 2133 万行；修复后全量 771s→**~20–31s**、createApp 106s→0.3s、r09 143s→1s；`DB_PATH` 惰性可注入；18 个测试已隔离；**连续三轮全绿（87 文件/807 项）** |
-| 前端 | SSE 收口 / PanoramaDeep 拆分 / 设计系统 | **SSE 收口 ✅**（全景态势 `sseOff` 从不退订 + click 监听未移除，新增静态生命周期守卫并变异验证）；**设计系统 ✅**（`tokens.css`/`base.css` 此前全仓 0 处 import 已落地到 desktop 入口；23 个 `--gc-*` 变量全部有定义；浏览器实测令牌生效、全景态势 DOM 1506/21 卡与基线一致、0 错误）；**PanoramaDeep 拆分·进行中**：第一批已外提卡片元数据（4 张字典 + 4 个纯函数 → `panorama/cardFaces.ts`，组件 3318→3257 行，模板零改动，12 项基线测试）；新增**旗舰队 e2e 冒烟**（进入全景态势断言卡片/画布/0 页面错误，已变异验证），并修正 `e2e/helpers.ts` 失效的登录选择器（e2e 长期冻结的原因之一）。已完成两批：①卡片元数据（4 字典 + 4 纯函数 → cardFaces.ts，12 项测试）；②态势快照纯逻辑（结构守卫/名称生成/组装/上限裁剪 → snapshot.ts，10 项测试）。组件 3351 → **3211 行**；已外提 4 个模块：`cardFaces`（12 项）、`snapshot`（10 项）、`pullStack`（10 项，弹层 bottom 431px/243px 实交互验证）、`placeMatch`（9 项）；**已补 PanoramaDeep 组件级测试**（3 项，经变异验证：改坏声明即红，正是 tsc 与 845 项单测都漏掉的那类崩溃）；并继续外提 `useBaseMap`（6 项测试）；组件 3351 → **3211 行**、外提模块 **17 个**（新增 `useWatchOfficer` 值守轮询、`boxSelect` 框选计算，共 13 项测试）。另修复测试库克隆完整性校验（一次 citylink-integrity 三项同失败的偶发：副本内容不完整而 cp 不报错）；剩余脚本约 2240 行，主体是「206 个小函数 + 152 个状态声明」的平铺结构，继续拆需 composable 级重构（按关注点连状态一起搬），按批推进 |
+| 前端 | SSE 收口 / PanoramaDeep 拆分 / 设计系统 | **SSE 收口 ✅**、**设计系统 ✅**（令牌落地、23 个 `--gc-*` 全部有定义、浏览器实测生效）；**PanoramaDeep 拆分：部分达成**——组件 3351 → **3184 行**，外提 **20 个模块**（新增测试 100+ 项），并补了 **组件级测试**（3 项，经变异验证可捕获「类型与单测都过、运行时崩」的事故）。未达原计划「脚本 <800 行」（当前 2191 行，差 2.7×）；停止依据与建议见主项目 `harness/runs/20261020-final-gate/ASSESSMENT.md` 第六节 |
 | 性能 | 无 GPU 环境可用性（SwiftShader） | **✅ 完成**：实测有 GPU 75.2 FPS / SwiftShader **4.8 FPS**；诊断确认瓶颈是**逐帧重绘**而非填充率（隐藏画布 5.5→60 FPS；0.6 分辨率仍只 5.4 FPS）；新增渲染档位判定（软件渲染 → 关阴影/雾/光照/FXAA + 0.6 分辨率 + **按需渲染** + 心跳 requestRender），实测软件渲染 **4.8 → 56.4 FPS（11.75×）**，有 GPU 侧 70.5 FPS 无回归；画面经像素采样验证（16 采样点 16 色）非冻结，21 卡、0 错误 |
 
 ## 终态证据（2026-10-20）
 
 - `pnpm gate`（typecheck + 全仓 build + 全量测试）**连续三轮 exit 0**。
-  最终时点 HEAD `60d288b`：各 **99 文件 / 905 项**（16.8s / 18.3s / 18.2s）；
+  最终时点 HEAD `b54bd53`：各 **106 文件 / 964 项**（紧凑测试基库 135MB，D-8 根治后）；
   历史对照：`03b82d3` 96/879 → `cfa0c4c` 98/898 → `60d288b` 99/905，均存档。
 - **完成度评估**：`../GlobalCloud SpaceAI Platform/harness/runs/20261020-final-gate/ASSESSMENT.md`
   —— 11 项达成、1 项部分达成（PanoramaDeep 拆分 3351→3199 行，未达计划形态，
