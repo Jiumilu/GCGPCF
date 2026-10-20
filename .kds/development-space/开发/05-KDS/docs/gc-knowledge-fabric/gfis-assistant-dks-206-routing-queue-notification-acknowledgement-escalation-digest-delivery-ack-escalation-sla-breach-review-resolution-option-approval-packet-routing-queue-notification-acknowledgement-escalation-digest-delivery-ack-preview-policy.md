@@ -35,6 +35,6 @@ DKS-206 将 DKS-205 digest delivery preview 推进为 delivery acknowledgement p
 ## 验证
 
 ```bash
-python3 scripts/gfis/validate_gfis_assistant_dks_206_routing_queue_notification_acknowledgement_escalation_digest_delivery_ack_escalation_sla_breach_review_resolution_option_approval_packet_routing_queue_notification_acknowledgement_escalation_digest_delivery_ack_preview.py
+python3 scripts/gfis/validate_gfis_assistant_dks_206_ac898a62bb9d.py
 python3 scripts/coverage/validate_okf_types_api_validator_coverage.py
 ```

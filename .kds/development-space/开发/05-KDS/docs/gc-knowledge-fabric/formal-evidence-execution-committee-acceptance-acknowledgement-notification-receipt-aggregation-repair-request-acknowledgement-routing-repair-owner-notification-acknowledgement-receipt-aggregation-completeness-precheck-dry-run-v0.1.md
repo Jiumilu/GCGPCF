@@ -29,7 +29,7 @@ D82 承接 D81 acknowledgement receipt aggregation preview，只检查候选回�
 | 输入 | 路径 |
 |---|---|
 | D82 fixture | `fixtures/api/gckf-p0-formal-evidence-execution-committee-acceptance-acknowledgement-notification-receipt-aggregation-repair-request-acknowledgement-routing-repair-owner-notification-acknowledgement-receipt-aggregation-completeness-precheck-dry-run-v0.1.json` |
-| D82 validator | `scripts/api/validate_gckf_p0_formal_evidence_execution_committee_acceptance_acknowledgement_notification_receipt_aggregation_repair_request_acknowledgement_routing_repair_owner_notification_acknowledgement_receipt_aggregation_completeness_precheck_dry_run.py` |
+| D82 validator | `scripts/api/validate_gckf_p0_receipt_c3b5c71cb15b.py` |
 | D81 aggregation preview | `fixtures/api/gckf-p0-formal-evidence-execution-committee-acceptance-acknowledgement-notification-receipt-aggregation-repair-request-acknowledgement-routing-repair-owner-notification-acknowledgement-receipt-aggregation-preview-dry-run-v0.1.json` |
 | D81 Loop evidence | `docs/harness/loops/loop-round-GPCF-GCKF-P0-D81-001.md` |
 
@@ -55,7 +55,7 @@ D82 承接 D81 acknowledgement receipt aggregation preview，只检查候选回�
 ## 4. 验证命令
 
 ```bash
-python3 scripts/api/validate_gckf_p0_formal_evidence_execution_committee_acceptance_acknowledgement_notification_receipt_aggregation_repair_request_acknowledgement_routing_repair_owner_notification_acknowledgement_receipt_aggregation_completeness_precheck_dry_run.py
+python3 scripts/api/validate_gckf_p0_receipt_c3b5c71cb15b.py
 ```
 
 预期输出必须包含：

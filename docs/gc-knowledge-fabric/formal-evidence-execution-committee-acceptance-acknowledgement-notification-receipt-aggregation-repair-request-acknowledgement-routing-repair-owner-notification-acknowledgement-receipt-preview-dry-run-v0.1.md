@@ -29,7 +29,7 @@ D80 承接 D79 repair owner notification preview，只预览补正负责人通�
 | 输入 | 路径 |
 |---|---|
 | D80 fixture | `fixtures/api/gckf-p0-formal-evidence-execution-committee-acceptance-acknowledgement-notification-receipt-aggregation-repair-request-acknowledgement-routing-repair-owner-notification-acknowledgement-receipt-preview-dry-run-v0.1.json` |
-| D80 validator | `scripts/api/validate_gckf_p0_formal_evidence_execution_committee_acceptance_acknowledgement_notification_receipt_aggregation_repair_request_acknowledgement_routing_repair_owner_notification_acknowledgement_receipt_preview_dry_run.py` |
+| D80 validator | `scripts/api/validate_gckf_p0_receipt_4b423285a352.py` |
 | D79 repair owner notification preview | `fixtures/api/gckf-p0-formal-evidence-execution-committee-acceptance-acknowledgement-notification-receipt-aggregation-repair-request-acknowledgement-routing-repair-owner-notification-preview-dry-run-v0.1.json` |
 | D79 Loop evidence | `docs/harness/loops/loop-round-GPCF-GCKF-P0-D79-001.md` |
 
@@ -53,7 +53,7 @@ D80 承接 D79 repair owner notification preview，只预览补正负责人通�
 ## 4. 验证命令
 
 ```bash
-python3 scripts/api/validate_gckf_p0_formal_evidence_execution_committee_acceptance_acknowledgement_notification_receipt_aggregation_repair_request_acknowledgement_routing_repair_owner_notification_acknowledgement_receipt_preview_dry_run.py
+python3 scripts/api/validate_gckf_p0_receipt_4b423285a352.py
 ```
 
 预期输出必须包含：

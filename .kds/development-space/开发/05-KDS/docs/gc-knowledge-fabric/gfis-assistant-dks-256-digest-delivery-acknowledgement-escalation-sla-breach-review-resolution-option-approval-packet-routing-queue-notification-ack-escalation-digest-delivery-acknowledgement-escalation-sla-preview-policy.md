@@ -32,6 +32,6 @@ DKS-256 不创建 SLA timer、escalation、reminder、escalation task、delivery
 
 ## 验证
 
-- Validator: `scripts/gfis/validate_gfis_assistant_dks_256_digest_delivery_acknowledgement_escalation_sla_breach_review_resolution_option_approval_packet_routing_queue_notification_ack_escalation_digest_delivery_acknowledgement_escalation_sla_preview.py`
+- Validator: `scripts/gfis/validate_gfis_assistant_dks_256_f4f13a971aca.py`
 - Fixture: `fixtures/gfis/gfis-assistant-dks-256-digest-delivery-acknowledgement-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-ack-escalation-digest-delivery-acknowledgement-escalation-sla-preview-dry-run.json`
 - OKF: `okf/gfis-assistant-dks-256-digest-delivery-acknowledgement-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-ack-escalation-digest-delivery-acknowledgement-escalation-sla-preview-policy.yaml`
