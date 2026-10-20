@@ -35,7 +35,7 @@ superseded_by: []
 
 ## 验证
 
-专项验证脚本：`scripts/gfis/validate_gfis_assistant_dks_230_routing_queue_notification_ack_escalation_digest_delivery_ack_escalation_sla_breach_review_resolution_option_approval_packet_routing_queue_notification_ack_escalation_digest_delivery_ack_preview.py`。
+专项验证脚本：`scripts/gfis/validate_gfis_assistant_dks_230_71a9289f0a79.py`。
 
 验证必须证明：
 

@@ -32,6 +32,6 @@ DKS-270 不创建 resolution、dispute update、committee decision、freeze acti
 
 ## 验证
 
-- Validator: `scripts/gfis/validate_gfis_assistant_dks_270_ack_escalation_sla_breach_review_resolution_option_approval_packet_routing_queue_notification_ack_escalation_digest_delivery_acknowledgement_escalation_sla_breach_review_resolution_option_preview.py`
+- Validator: `scripts/gfis/validate_gfis_assistant_dks_270_6b64a92861ed.py`
 - Fixture: `fixtures/gfis/gfis-assistant-dks-270-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-ack-escalation-digest-delivery-acknowledgement-escalation-sla-breach-review-resolution-option-preview-dry-run.json`
 - OKF: `okf/gfis-assistant-dks-270-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-ack-escalation-digest-delivery-acknowledgement-escalation-sla-breach-review-resolution-option-preview-policy.yaml`
