@@ -16,8 +16,8 @@ scope:
     - 清理 GPCF 既有无关门禁问题
 acceptance:
   - GCMEM main 与私有 origin/main 一致
-  - GCMEM 回归 82/82、doctor healthy
-  - GPCF 23 项目 OpenSpec 覆盖通过
+  - GCMEM 当前回归测试与 doctor 巡检通过，保留本轮可回放输出
+  - GPCF 当前 27 项目 OpenSpec 覆盖通过
   - 中央门禁失败保留 partial/rework 并列明原因
 loop:
   current_step: evaluate
@@ -29,7 +29,8 @@ evidence:
   api: waived
   summary: pass
 blockers:
-  - Feature 专属 tests/build 验收命令未声明，screenshots/api 豁免缺少本 Feature 的理由；现行 Evidence Gate 不可关闭
+  - 2026-10-20 核验：GCMEM 本地 main 领先私有 origin/main 21 个提交，总体方案文件仍未提交；远端一致性验收未达成。
+  - 原 82 项测试与 23 项目口径已过期；须重跑现行 GCMEM 回归和 doctor，并声明 Feature 专属 tests/build 命令及 screenshots/api 豁免理由后复核。
 ui_product_first_control:
   version: v1.1
   applicability: indirect
@@ -47,4 +48,4 @@ ui_product_first_control:
     evidence_overexposure_gate: pass
   status_ceiling: partial
 created_at: "2026-10-17T22:49:44+00:00"
-updated_at: "2026-10-17T22:51:44+00:00"
+updated_at: "2026-10-20T09:29:54+00:00"
