@@ -3447,6 +3447,10 @@ superseded_by: []
 | GPCF-SLC-RISK-20261018 | GlobalCloud SLC 风险 | projects/slc/RISK.md | GPCF | GPCF, SLC | governance | controlled | 开发/91-治理与验收/projects/slc/RISK.md |
 | GPCF-SLC-ROADMAP-20261018 | GlobalCloud SLC 路线图 | projects/slc/ROADMAP.md | GPCF | GPCF, SLC | governance | controlled | 开发/91-治理与验收/projects/slc/ROADMAP.md |
 | GPCF-SLC-STATUS-20261018 | GlobalCloud SLC 状态 | projects/slc/STATUS.md | GPCF | GPCF, SLC | governance | controlled | 开发/91-治理与验收/projects/slc/STATUS.md |
+| GPCF-DRC-README-20261021 | GlobalCloud DRC 中央入口 | projects/drc/README.md | GPCF | GPCF, DRC | governance | controlled | 开发/91-治理与验收/projects/drc/README.md |
+| GPCF-DRC-STATUS-20261021 | GlobalCloud DRC 状态 | projects/drc/STATUS.md | GPCF | GPCF, DRC | governance | controlled | 开发/91-治理与验收/projects/drc/STATUS.md |
+| GPCF-DRC-ROADMAP-20261021 | GlobalCloud DRC 路线图 | projects/drc/ROADMAP.md | GPCF | GPCF, DRC | governance | controlled | 开发/91-治理与验收/projects/drc/ROADMAP.md |
+| GPCF-DRC-RISK-20261021 | GlobalCloud DRC 风险 | projects/drc/RISK.md | GPCF | GPCF, DRC | governance | controlled | 开发/91-治理与验收/projects/drc/RISK.md |
 | GPCF-DOC-068AE09B46 | SOP 风险 | projects/sop/RISK.md | SOP | SOP | governance | controlled | 开发/91-治理与验收/projects/sop/RISK.md |
 | GPCF-DOC-86C94554EC | SOP 路线图 | projects/sop/ROADMAP.md | SOP | SOP | governance | controlled | 开发/91-治理与验收/projects/sop/ROADMAP.md |
 | GPCF-DOC-5F3201F8C9 | SOP 状态 | projects/sop/STATUS.md | SOP | SOP | governance | controlled | 开发/91-治理与验收/projects/sop/STATUS.md |

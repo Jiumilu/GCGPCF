@@ -58,7 +58,7 @@ superseded_by: []
 
 | project | repo_path | 当前有效总体方案 | 候选/相关文档 | status | 主要问题 | 下一步 |
 |---|---|---|---|---|---|---|
-| 项目群总控 | `GlobalCoud GPCF` | `01-architecture/GlobalCloud 项目群总体方案.md` v1.1 | `01-architecture/WAS世界资产体系总体方案.md`（专项） | `authoritative` | 当前 27 项目已登记；新增项目的方案继承与运行验收仍待核验 | 按项目群主方案验证项目级传导，不提升运行或验收状态 |
+| 项目群总控 | `GlobalCoud GPCF` | `01-architecture/GlobalCloud 项目群总体方案.md` v1.1 | `01-architecture/WAS世界资产体系总体方案.md`（专项） | `authoritative` | 当前 28 项目已登记；新增项目的方案继承与运行验收仍待核验 | 按项目群主方案验证项目级传导，不提升运行或验收状态 |
 | GlobalCloud GPCF | `GlobalCoud GPCF` | `GlobalCloud GPCF 总体方案.md` v1.1 | `AGENTS.md`, `README.md` | `authoritative` | GPCF 项目定位已对齐双总控、WAME/World/WAE 与 Project 只读边界 | 按当前快照复核运行状态，并保持 Feature/Evidence 权威 |
 | WAS世界资产体系 | `WAS世界资产体系` | `docs/GlobalCloud WAS 总体方案.md` | `docs/GlobalCloud-WAS总体方案V1.2-GPCF统一重构版.md` | `authoritative` | 已建立仓内唯一当前有效总体方案，旧 V1.2 文档作为来源底稿 | 后续补充语义变更回流记录和验证证据 |
 | GlobalCloud XWAIL | `GlobalCloud XWAIL` | `GlobalCloud XWAIL 总体方案.md` | `XWAIL实施方案.md` | `authoritative` | 已建立总体方案，实施方案降级为工程实施底稿 | 后续补齐 Schema/Validator/XAP 实现证据 |
@@ -86,6 +86,7 @@ superseded_by: []
 | GlobalCloud PMC | `GlobalCloud PMC` | `GlobalCloud Project 总体方案.md` | `projects/project/STATUS.md` | `candidate` | Plane 社区版上游基线与双主控继承已登记；运行和集成仍未验证 | 完成 F-028 证据与开发实例验证后复核 |
 | GlobalCloud PDC | `GlobalCloud PDC` | `GlobalCloud PDC 总体方案.md` | `projects/pdc/STATUS.md` | `candidate` | 独立仓已形成项目级总体方案候选，职责与本地数据边界已写明，双主控继承尚待项目群裁定 | 核验继承、接口与版本基线后再判定权威方案 |
 | GlobalCloud SLC | `GlobalCloud SLC` | 待建立 | `projects/slc/STATUS.md` | `missing` | 独立源码与私有远端已建立；唯一总体方案及双主控继承待核验 | 建立项目总体方案并核对职责、接口与版本基线 |
+| GlobalCloud DRC | `GlobalCloud DRC` | `GlobalCloud DRC 总体方案.md` | `projects/drc/STATUS.md` | `candidate` | 项目级职责与主账边界已记录；双主控继承待裁定 | 核验资源模型、接口与版本基线后再判定权威方案 |
 | shared/python_utils | `shared` | 不适用 | `shared/python_utils/` | `not_project` | 共享工具目录，不是业务项目 | 保留为共享库，受导入可用性和依赖治理控制 |
 
 ## 5. 当前结论
@@ -96,17 +97,17 @@ superseded_by: []
 project_master_plan_alignment = repair_required
 project_group_current_state_baseline_refresh_20260626 = controlled
 development_queue_ready = true
-reason = 当前 27 项目均已登记；其中新增项目的唯一总体方案与继承链尚未全部核验
+reason = 当前 28 项目均已登记；其中新增项目的唯一总体方案与继承链尚未全部核验
 ```
 
-可以声明“项目群主方案控制机制已建立，当前 27 项目均已纳入盘点”；不得声明全部项目已具备唯一有效总体方案。缺口按上表保持 candidate/missing 与 repair_required，不等于业务实现完成、客户交付完成或 production_ready。
+可以声明“项目群主方案控制机制已建立，当前 28 项目均已纳入盘点”；不得声明全部项目已具备唯一有效总体方案。缺口按上表保持 candidate/missing 与 repair_required，不等于业务实现完成、客户交付完成或 production_ready。
 2026-10-18 用户确认 WAE 纳入项目群当前范围；WAE 总体方案仍保持 `candidate`，唯一版本和继承链仍待核验。
 
 ## 6. 传导确认清单
 
 ### 2026-10-18 项目群总体架构 v1.1 传导记录
 
-本轮以 `01-architecture/GlobalCloud 项目群总体方案.md` 为当前 27 项目的方案传导源。项目群文档门禁结果以实时检查为准；`patched` 只表示本地项目方案已有架构承接文字，尚未取得全部项目继承校验或真实接口验证。
+本轮以 `01-architecture/GlobalCloud 项目群总体方案.md` 为当前 28 项目的方案传导源。项目群文档门禁结果以实时检查为准；`patched` 只表示本地项目方案已有架构承接文字，尚未取得全部项目继承校验或真实接口验证。
 
 | 传导状态 | 项目 | 说明 |
 |---|---|---|

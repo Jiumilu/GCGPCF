@@ -85,23 +85,24 @@ superseded_by: []
 | GlobalCloud PMC | `GlobalCloud Project 总体方案.md` | `GlobalCloud Project 实施方案.md` | `in_progress` | `local_dev_dryrun_boundary` | F-028 GPCF Feature／Evidence 只读投影 | 本地代码测试和真实队列预览已执行；Plane 实例 API 与界面运行未验证 | 完成证据门禁，并在获授权开发实例中验证幂等同步 |
 | GlobalCloud PDC | `GlobalCloud PDC 总体方案.md`（候选） | `GlobalCloud PDC 实施方案.md`（候选） | `in_progress` | `project_plan_boundary` | 独立应用完成 Git 与私有远端核验，双方案候选已形成 | Node 22 类型检查、37/37 套件与 471/471 用例、Lint 0 error；浏览器关键任务和方案继承待核验 | 核验双方案继承并重跑当前版本关键任务 |
 | GlobalCloud SLC | 待建立 | 待建立 | `planned` | `project_plan_boundary` | 独立应用完成 Git 与私有远端建立，进入项目群治理清单 | `projects/slc/STATUS.md` 与独立仓纳管记录；本轮未重跑应用门禁 | 建立双方案继承并重跑当前版本关键任务验证 |
+| GlobalCloud DRC | `GlobalCloud DRC 总体方案.md`（候选） | `GlobalCloud DRC 实施方案.md`（候选） | `planned` | `project_plan_boundary` | 本地 Git 与私有远端 `main` 一致，双方案候选已建立 | `git ls-remote` 返回 `0fc24478`；数据库连接和用户任务未实现或验证 | 明确首批资源与权限契约后实施最小流程 |
 | shared/python_utils | 不适用 | 不适用 | `not_project` | `not_project_boundary` | 共享工具目录治理 | 导入可用性待验证 | 纳入依赖检查 |
 
 ## 5. 当前结论
 
 ```text
 implementation_plan_previous_governance_baseline = phase_3_all_project_plans_controlled
-implementation_plan_governance = repair_required_for_current_27_project_scope
+implementation_plan_governance = repair_required_for_current_28_project_scope
 current_live_project_group_git_gate = see_project_group_live_status_current_snapshot
 current_live_dirty_repos = see_project_group_live_status_current_snapshot
 current_live_sensitive_repos = see_project_group_live_status_current_snapshot
 current_live_kds_blocker = resolved_not_in_git_status
 current_state_baseline_refresh_controlled = true
 development_queue_ready = true
-reason = 历史 17 项目方案证据保留；当前 27 项目尚有新增项目的实施方案待核验或建立
+reason = 历史 17 项目方案证据保留；当前 28 项目尚有新增项目的实施方案待核验或建立
 ```
 
-可以声明当前 27 项目均已进入实施方案盘点；不得声明全部项目唯一实施方案已建立。新增项目保持 planned/in_progress 与 partial 边界，真实研发、运行、集成、交付和客户验收仍需逐项证据。
+可以声明当前 28 项目均已进入实施方案盘点；不得声明全部项目唯一实施方案已建立。新增项目保持 planned/in_progress 与 partial 边界，真实研发、运行、集成、交付和客户验收仍需逐项证据。
 2026-10-18 用户确认 WAE 纳入项目群当前范围；WAE 实施方案仍待建立，交付状态保持 `planned`。
 
 ## 6. 传导确认清单

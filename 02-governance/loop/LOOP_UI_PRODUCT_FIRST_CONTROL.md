@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-LOOP-UI-PRODUCT-FIRST-CONTROL
 title: LOOP UI Product First Control
 project: WAME
-related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio, ICP, SpaceAIStudio]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio, ICP, SpaceAIStudio, DRC]
 domain: governance
 status: controlled
 version: v1.0
