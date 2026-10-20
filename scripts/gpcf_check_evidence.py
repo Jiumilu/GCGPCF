@@ -233,8 +233,31 @@ def main() -> int:
     (evidence_dir / "api.txt").write_text(api_text + "\n", encoding="utf-8")
     acceptance_complete = bool(data.get("acceptance")) and bool(data.get("scope", {}).get("in"))
     summary_status = "pass" if acceptance_complete and all(status in {"pass", "waived"} for status in [tests_status, build_status, screenshots_status, api_status]) else "fail"
+    summary_path = evidence_dir / "summary.md"
+    if not summary_path.exists():
+        source_path = f"features/active/{feature_dir.name}/evidence/summary.md"
+        summary_path.write_text("\n".join([
+            "---",
+            f"doc_id: GPCF-DOC-{str(data['id']).replace('-', '')}-EVIDENCE-SUMMARY",
+            f"title: {data['id']} Evidence Gate 快照",
+            "project: GPCF",
+            "related_projects: [GPCF]",
+            "domain: governance",
+            "status: draft",
+            "version: v0.1",
+            "owner: GPCF",
+            "kds_space: 开发",
+            f"kds_path: 开发/91-治理与验收/{source_path}",
+            f"source_path: {source_path}",
+            "sync_direction: bidirectional",
+            "last_reviewed: unreviewed",
+            "supersedes: []",
+            "superseded_by: []",
+            "---",
+            "",
+        ]), encoding="utf-8")
     write_markdown_managed_section(
-        evidence_dir / "summary.md",
+        summary_path,
         "\n".join(
             [
                 "## Evidence Gate 快照",

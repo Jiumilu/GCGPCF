@@ -55,6 +55,11 @@ def test_scope_evidence_requires_proof_or_reason(tmp_path, monkeypatch, ui_api_s
     assert result["summary"] == ("pass" if expected_rc == 0 else "fail")
     assert "not_required" not in result.values()
     assert sum(command[:2] == ["python3", "-c"] for command in commands) == 2
+    summary = (feature_dir / "evidence/summary.md").read_text(encoding="utf-8")
+    assert summary.startswith("---\ndoc_id: GPCF-DOC-F003-EVIDENCE-SUMMARY\n")
+    assert "source_path: features/active/F-003-sample/evidence/summary.md" in summary
+    assert "status: draft\n" in summary
+    assert "last_reviewed: unreviewed\n" in summary
 
 
 def test_ui_evidence_ignores_build_file_but_accepts_named_ui_note(tmp_path, monkeypatch):
