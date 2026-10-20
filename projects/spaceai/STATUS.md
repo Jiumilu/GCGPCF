@@ -96,6 +96,30 @@ superseded_by: []
 | D-1 | 测试临时库不清理致磁盘两次写满；`db.test.ts` 偶发失败（DB_PATH 于 import 期冻结 + worker 模块缓存跨文件存活） | 磁盘部分已治理（运行级根目录 + 主进程 teardown，跨轮零累积）；但**每轮仍实拷贝 17×1.9GB≈32GB**、`db.test.ts` 仍偶发 → 列入 **T4** |
 | D-7 | 全量套件偶发单文件失败（2026-10-20 出现 2 次，重跑即绿） | **已定位并修复**：5 轮循环捕获现场，为 `world-axis.test.ts > W1-1 时空检索` **默认 5s 超时**（实测 5004ms），非此前的克隆内容猜测；已给该文件 20 个用例显式 30s 超时（与 ingest-bus 同法）。克隆完整性校验保留（解决另一类问题）。修复后连续三轮全量 99 文件 / 905 项全过 |
 
+## 前端持续重构（2026-10-20 晚，第 31–36 轮）
+
+**从纯函数外提推进到 composable 级重构**（此前后 13 批均为无 ref 依赖的纯逻辑）：
+
+| 批次 | 模块 | 内容 | 测试 |
+|---|---|---|---|
+| ③ | `useReplayPlayback` | 回放播放状态机（4 refs + 3 操作 + 定时器） | 8 |
+| ④ | `useFlyPath` | 快捷航线状态簇（5 状态 + 5 操作，持久化/导入/分享/轨迹） | 11 |
+| ⑤ | `useRealtimeIngest` | 实时警情摄入编排（计数/入流/上图/通知/审计注入） | 8 |
+| — | `measure` / `bubbleState` | 测距计算与文案、气泡默认状态契约 | 10 + 4 |
+
+**组件测试护栏两次生效**（这是本轮最有价值的产出）：
+- `replayTimer is not defined`（残留引用）
+- `Cannot access 'feed' before initialization`（TDZ，composable 实例化位置不当）
+两者 `tsc` 均无法发现，正是第 8 轮事故（tsc 与 845 项单测全绿、界面整屏崩）的同类；
+现由组件测试在提交前拦下。
+
+**D-9（测试基建）**：高负载下 `beforeAll` 超默认 10s 钩子超时 → 整文件收集失败，
+且清理阶段二次异常掩盖真因。已全局设 `hookTimeout: 30_000` 并为 3 个测试文件补 teardown 守卫。
+
+**权威 gate 证据**：连续三轮 `pnpm gate` 在**同一提交**（平台仓 `ccd08e5`）上全绿，
+各 **111 文件 / 1005 项**；工作树在三轮执行期间无改动。
+证据：`../GlobalCloud SpaceAI Platform/harness/runs/20261020-final-gate/gate-summary-authoritative.json`。
+
 ## D-8（2026-10-20 晚）— 已根治
 
 **曾**：`pnpm gate` 连续三轮偶发单文件级失败，失败点固定在 `useTestDb`
