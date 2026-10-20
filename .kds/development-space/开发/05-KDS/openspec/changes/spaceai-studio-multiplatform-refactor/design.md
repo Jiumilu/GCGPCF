@@ -4,7 +4,7 @@ title: design
 project: KDS
 related_projects: [WAME, KDS, MMC, Studio, SpaceAIStudio, SpaceAI]
 domain: openspec
-status: draft
+status: in_progress
 version: v1.0
 owner: KDS
 kds_space: 开发

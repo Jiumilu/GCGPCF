@@ -1,0 +1,13 @@
+{
+ "healthz": {
+  "status": "pass",
+  "http": 200,
+  "body_head": "{\"success\":true,\"time\":\"2026-10-20 11-26-51\",\"data\":{\"status\":\"ok\",\"mode\":\"demo\",\"endpoints\":263,\"database\":{\"available\":true,\"path\":\"/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud SpaceAI Platform/data/spaceai.db\",\"kind\":\"SIMULATED\",\"tables\":39,\"rows\":510},\"ai\":{\"provider\":\"hermes\",\"hermes\":{\"ok\":true,\"detail\":\"ok\"}}}}"
+ },
+ "contract": {
+  "status": "pass",
+  "http": 200,
+  "body_head": "{\"success\":true,\"time\":\"2026-10-20 11-26-52\",\"data\":{\"basePath\":\"/RestFul\",\"domains\":[{\"domain\":\"userPermission\",\"count\":12},{\"domain\":\"alarm\",\"count\":10},{\"domain\":\"assetDevice\",\"count\":9},{\"domain\":\"map3d\",\"count\":22},{\"domain\":\"vehicleGps\",\"count\":8},{\"domain\":\"dictMenu\",\"count\":7},{\"domain\":\"system\",\"count\":139},{\"domain\":\"linkage\",\"count\":7},{\"domain\":\"brain\",\"count\":15},{\"domain\":\"world\",\"co"
+ },
+ "captured_at": "2026-10-20T11:26:52+08:00"
+}
