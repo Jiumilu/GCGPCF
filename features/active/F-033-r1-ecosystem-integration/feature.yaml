@@ -1,0 +1,56 @@
+id: F-033
+name: r1-ecosystem-integration
+project: xiaoc
+status: active
+goal: R1 生态接入与治理联调：WAME 受理/裁定/发布、XWAIL 打包验包、AaaS 复核、消费方任务包与就绪检查、GPCF 回传
+owner: lead
+priority: P0
+scope:
+  in:
+  - PromptAsset XAP 信封与 WAME 受理/台账/回执联调（PoC）
+  - XWAIL XAP manifest 打包与完整性验包
+  - AaaS 服务包结构门禁复核
+  - 消费方接入任务包与只读就绪检查（XiaoG/XGD/PKC/飞书）
+  - 跨项目格式对齐（contentDigest、WAME 远端错误码）
+  out:
+  - 正式 WAME 注册/授权/发布（需正式治理）
+  - XWAIL 场景模型绑定（PromptAsset 非 XWAILModel）
+  - 消费方仓库业务改造与验收
+  - 计费/SLA/客户验收
+acceptance:
+- WAME 受理请求可查（req-b1579fe37e4e，已裁定/发布，PoC scope）
+- XWAIL 包完整性通过（无签名）
+- AaaS 结构校验 0 issues
+- 消费方任务包齐备且未改他人仓库
+- 证据：.harness/evidence/xiaoc-vision-r1-ecosystem-20261021/
+loop:
+  current_step: evidence
+  iteration: 1
+evidence:
+  tests: pass
+  build: pass
+  screenshots: waived
+  api: waived
+  summary: pending
+blockers:
+- WAME 正式治理裁定/发布（本轮为 PoC governor，scope 限定联调）
+- 消费方实际联调（XiaoG 会话验证、PKC 浏览器联调、XGD/飞书 工具范围）
+- GPCF 状态复核（本 feature 处于 evidence 步，未 done）
+ui_product_first_control:
+  version: v1.1
+  applicability: indirect
+  user_groups:
+  - Feature 负责人
+  primary_human_task: R1 生态接入与治理联调：WAME 受理/裁定/发布、XWAIL 打包验包、AaaS 复核、消费方任务包与就绪检查、GPCF
+    回传
+  machine_interface_boundary: 机器字段留在证据中；人类入口展示任务、风险和下一步
+  gates:
+    functional_completeness: pending
+    quality_baseline: pending
+    multi_user_usability: waived
+    task_flow_e2e_status: pending
+    accessibility_status: waived
+    evidence_overexposure_gate: pending
+  status_ceiling: partial
+created_at: "2026-10-21T05:00:33+00:00"
+updated_at: "2026-10-21T05:00:33+00:00"
