@@ -3514,3 +3514,8 @@ superseded_by: []
 | GPCF-DOC-016DDA517E | 工具目录 | tools/README.md | GPCF | GPC, WAME, KDS, GPCF | tools | controlled | 开发/12-GPCF/tools/README.md |
 | GPCF-DOC-C9A7E8D2B1 | Frontmatter 写入权责清单（tools/kds-sync） | tools/kds-sync/FRONTMATTER_OWNERSHIP.md | GPCF | GPC, WAME, KDS, GPCF | tools | controlled | 开发/12-GPCF/tools/kds-sync/FRONTMATTER_OWNERSHIP.md |
 | GPCF-DOC-C039431381 | KDS Sync Tools | tools/kds-sync/README.md | GPCF | GPC, KDS, GPCF | tools | controlled | 开发/12-GPCF/tools/kds-sync/README.md |
+| GPCF-DOC-09A691DC1E | gcmem-vision-r0 | openspec/changes/gcmem-vision-r0/README.md | KDS | GCMEM, GPCF, KDS | openspec | draft | 开发/05-KDS/openspec/changes/gcmem-vision-r0/README.md |
+| GPCF-GCMEM-VISION-R0-PROPOSAL-20261021 | GCMEM R0 可信基线变更提案（gcmem-vision-r0） | openspec/changes/gcmem-vision-r0/proposal.md | GPCF | GCMEM, GPCF, KDS | openspec | draft | 开发/91-治理与验收/openspec/changes/gcmem-vision-r0/proposal.md |
+| GPCF-GCMEM-VISION-R0-DESIGN-20261021 | GCMEM R0 变更设计（gcmem-vision-r0） | openspec/changes/gcmem-vision-r0/design.md | GPCF | GCMEM, GPCF, KDS | openspec | draft | 开发/91-治理与验收/openspec/changes/gcmem-vision-r0/design.md |
+| GPCF-GCMEM-VISION-R0-TASKS-20261021 | GCMEM R0 变更任务清单（gcmem-vision-r0） | openspec/changes/gcmem-vision-r0/tasks.md | GPCF | GCMEM, GPCF, KDS | openspec | draft | 开发/91-治理与验收/openspec/changes/gcmem-vision-r0/tasks.md |
+| GPCF-GCMEM-VISION-R0-SPEC-20261021 | GCMEM R0 能力规格（gcmem-vision-r0） | openspec/changes/gcmem-vision-r0/specs/gcmem-vision-r0/spec.md | GPCF | GCMEM, GPCF, KDS | openspec | draft | 开发/91-治理与验收/openspec/changes/gcmem-vision-r0/specs/gcmem-vision-r0/spec.md |
