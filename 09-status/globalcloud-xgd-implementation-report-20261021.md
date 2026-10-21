@@ -41,10 +41,10 @@ master_control: GPCF:01-architecture/GlobalCloud 项目群总体方案.md
 ## 3. 未完成与阻塞
 
 - D10 签名/公证：缺 Apple Developer ID/公证凭据，无法产出 dmg/zip 与签名内测包。
-- D11 XiaoG BFF/UI：XGD 侧 BFF 契约/客户端已完成；XiaoG 仓实现未排期。
-- 72h 观测：已启动 72h 后台观测（PID 50939，输出 `docs/harness/evidence/runtime-observation-72h.jsonl`），尚未完成。
-- 语音完整 E2E：ASR/TTS 组件 PASS，LLM 回答链未通过（live 运行时无响应）。
-- GPCF 五处登记：本回传仅覆盖状态入口；KDS 镜像/文档控制台账待补。
+- D11 XiaoG BFF/UI：已按 XiaoG 当前架构重做并合并 PR #6（`3fac5734`）；message/SSE/OpenAPI/UI 待接。
+- 72h 观测：后台观测运行中（PID 50939，30s 间隔，输出 `docs/harness/evidence/runtime-observation-72h.jsonl`），尚未完成。
+- 语音完整 E2E：已 PASS（live 3.5s；隔离 3 次；根因是 smoke 21s 窗口短于 provider 40–53s，已改 120s）。
+- GPCF 五处登记：本回传 PR #49 已合并（`c2330dc8`）；KDS 镜像/文档控制台账待补。
 
 ## 4. 声明边界
 

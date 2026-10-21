@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-10-21T12:18:41.989953+08:00",
+  "generated_at": "2026-10-21T12:24:48.655039+08:00",
   "freshness_hours": 12,
   "freshness_ok": true,
   "project_count": 27,
@@ -20,7 +20,6 @@
     "GlobalCloud PVAOS",
     "GlobalCloud SOP",
     "GlobalCloud PKC",
-    "GlobalCloud XGD",
     "GlobalCloud ICP",
     "GlobalCloud PQC",
     "GlobalCloud SpaceAI Platform",
@@ -55,8 +54,8 @@
     "GlobalCloud SOP",
     "GlobalCloud SpaceAI Platform",
     "GlobalCloud Studio",
+    "GlobalCloud WAE",
     "GlobalCloud World",
-    "GlobalCloud XGD",
     "GlobalCloud XWAIL",
     "GlobalCloud XiaoC",
     "GlobalCloud XiaoG",
@@ -65,6 +64,7 @@
   ],
   "stable_ahead": [
     "GlobalCloud AAAS",
+    "GlobalCloud SpaceAI Platform",
     "GlobalCloud Studio",
     "GlobalCloud WAE",
     "GlobalCloud World",
@@ -91,8 +91,8 @@
     "GlobalCloud SOP",
     "GlobalCloud SpaceAI Platform",
     "GlobalCloud Studio",
+    "GlobalCloud WAE",
     "GlobalCloud World",
-    "GlobalCloud XGD",
     "GlobalCloud XWAIL",
     "GlobalCloud XiaoC",
     "GlobalCloud XiaoG",
@@ -103,9 +103,9 @@
     "GlobalCloud XiaoC",
     "GlobalCoud GPCF"
   ],
-  "pass_repo_count": 4,
+  "pass_repo_count": 5,
   "bootstrap_window": false,
-  "previous_generated_at": "2026-10-20T15:52:19.583510+08:00",
+  "previous_generated_at": "2026-10-21T12:18:41.989953+08:00",
   "dirty_details": {
     "GlobalCloud AAAS": {
       "dirty_count": 14,
@@ -454,7 +454,7 @@
     "GlobalCoud GPCF": {
       "dirty_count": 242,
       "ahead": 10,
-      "behind": 126,
+      "behind": 128,
       "paths": [
         "$CODEX_HOME/automations/globalcloud-17/README.md",
         ".harness/README.md",
@@ -823,7 +823,7 @@
     "GlobalCloud XiaoG": {
       "dirty_count": 1,
       "ahead": 1063,
-      "behind": 0,
+      "behind": 2,
       "paths": [
         "\"GlobalCloud XiaoG \\346\\200\\273\\344\\275\\223\\346\\226\\271\\346\\241\\210.md\""
       ],
@@ -913,18 +913,10 @@
       "sensitive_paths": []
     },
     "GlobalCloud XGD": {
-      "dirty_count": 7,
+      "dirty_count": 0,
       "ahead": 0,
       "behind": 0,
-      "paths": [
-        "docs/mac-signing-local-setup.md",
-        "scripts/smoke-voice.mjs",
-        "docs/harness/evidence/voice-e2e-diagnosis-2026-10-21.json",
-        "docs/harness/evidence/xgd-d10-signing-2026-10-21.json",
-        "docs/harness/evidence/xgd-d10-signing-feasibility-2026-10-21.md",
-        "scripts/diagnose-voice-e2e.mjs",
-        "scripts/sign-local-adhoc.sh"
-      ],
+      "paths": [],
       "sensitive_paths": []
     },
     "GlobalCloud ICP": {
@@ -953,7 +945,7 @@
       "sensitive_paths": []
     },
     "GlobalCloud SpaceAI Platform": {
-      "dirty_count": 85,
+      "dirty_count": 93,
       "ahead": 13,
       "behind": 0,
       "paths": [
@@ -982,6 +974,7 @@
         "harness/runs/20261021-home-redesign/baseline.json",
         "harness/runs/20261021-home-redesign/capture.mjs",
         "harness/runs/20261021-home-redesign/data-inventory.md",
+        "harness/runs/20261021-home-redesign/dbg-layout.mjs",
         "harness/runs/20261021-home-redesign/endpoint-survey.json",
         "harness/runs/20261021-home-redesign/focus-check.mjs",
         "harness/runs/20261021-home-redesign/home-after-1024-full.png",
@@ -1027,17 +1020,24 @@
         "harness/runs/20261021-home-redesign/review-state.mjs",
         "harness/runs/20261021-home-redesign/review-stopcheck.mjs",
         "harness/runs/20261021-home-redesign/review-typo-retry.mjs",
+        "harness/runs/20261021-home-redesign/review-v2-detail.mjs",
         "harness/runs/20261021-home-redesign/review-v2-live.mjs",
+        "harness/runs/20261021-home-redesign/review-v2.md",
         "harness/runs/20261021-home-redesign/survey-endpoints.mjs",
         "harness/runs/20261021-home-redesign/v2-1024-full.png",
         "harness/runs/20261021-home-redesign/v2-1024.png",
         "harness/runs/20261021-home-redesign/v2-1280.png",
         "harness/runs/20261021-home-redesign/v2-1440.png",
+        "harness/runs/20261021-home-redesign/v2-hero-1280.png",
+        "harness/runs/20261021-home-redesign/v2-hero-1440.png",
+        "harness/runs/20261021-home-redesign/v2-todos-1280.png",
+        "harness/runs/20261021-home-redesign/v2-todos-1440.png",
         "harness/runs/20261021-home-redesign/verify.json",
         "harness/runs/20261021-home-redesign/verify.mjs",
         "harness/runs/20261021-home-redesign/visual-audit.md",
         "plugins/home-dashboard/src/components/HqDonut.vue",
         "plugins/home-dashboard/src/components/HqGauge.vue",
+        "plugins/home-dashboard/src/components/HqIcon.vue",
         "plugins/home-dashboard/src/components/HqTrend.vue",
         "plugins/home-dashboard/src/lib/overview.ts",
         "plugins/home-dashboard/tests/overview-model.test.ts",
