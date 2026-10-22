@@ -119,3 +119,25 @@ superseded_by: []
    - 并行会话在持续推进该线，本 Feature 只做账实同步，不重复实现。
 5. 是否可以提交？
    - 可提交（治理产物独立提交）；Feature 保持 active，状态 partial，不提升。
+
+
+### Iteration 4（2026-10-22 晚，B5h–B5j：五大块收口）
+
+1. 这轮做什么？
+   - 记录并行会话把 B5 剩余三大块一次性外提（飞翔 / CWME / 控制器），B5 五大块至此全部完成。
+2. 改了什么？
+   - `85b5c5c` B5h + B5i：飞翔面板与 CWME 面板外提（组件 + ctx 切片 + **11 例**测试）。
+   - `c1b45de` B5j：场景控制器外提（`PanoramaCtrl` + 123 项 ctx 切片 + **5 例**测试）。
+   - `PanoramaDeep.vue` 由 3711（B5f 后）→ 最终 **3590 行**（script 2956 行）。
+   - 本 iteration 只更新本 Feature 的 feature.yaml 与本 journal；产品代码由并行会话提交。
+3. 怎么验证？
+   - 全仓：`npx vitest run` → **141 文件 / 1279 例通过**（19:45，51.80s，exit 0）；`pnpm typecheck` → 0。
+   - 本 Feature 相关：**54 例**（新增 cwme-panel 6 / ctrl 5 等）。
+   - e2e：沿用 `panorama-operate.spec.ts` 5/5 记录（B5 外提未改该动线语义）。
+4. 发现什么问题？
+   - **B5 五大块全部外提完成**（气泡 / 卡片列 / 飞翔 / CWME / 控制器），原「剩余三大块」已清零。
+   - 仍未完成：i18n 约 600 行中文硬编码、人工验收（派单确认/失败保留、CWME 回投 30s 幂等）、
+     script <800 行目标（当前 2956 行）。
+   - 并行会话仍在推进，本 Feature 只做账实同步。
+5. 是否可以提交？
+   - 可提交（治理产物独立提交）；Feature 保持 active，状态 partial（主体完成、i18n 与人工验收未做），不提升。
