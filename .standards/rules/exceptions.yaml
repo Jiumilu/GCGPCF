@@ -11,12 +11,6 @@ exceptions:
     until: "2026-12-31"
     approved_by: "laolu"
 
-  - repo: "GlobalCloud Studio"
-    rule: "R03-worktree-location"
-    reason: "存量 worktree GlobalCloud Studio-release0 位于项目群根内（prunable），待清理归档后移除豁免"
-    until: "2026-12-31"
-    approved_by: "laolu"
-
   # WAES 退役仓：承载双决策模型策略文件（dual-policies.yaml），迁移前不可归档
   - repo: "GlobalCloud WAES"
     rule: "R02-registered"
