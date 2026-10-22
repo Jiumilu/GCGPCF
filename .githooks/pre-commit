@@ -1,6 +1,6 @@
 #!/bin/sh
-set -eu
-python3 tools/kds-sync/loop_document_gate.py --check-only
-python3 tools/kds-sync/document_control.py --check
-python3 tools/kds-sync/check_python_bytecode.py
-python3 -m pytest tests/ -q
+# 项目群标准检查（_governance）
+python3 "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/_governance/tools/gc_standard.py" check --repo "GlobalCloud GPCF" --staged-only --fail-on error || exit 1
+# 原有检查
+[ -x "$(dirname "$0")/pre-commit.local" ] && exec "$(dirname "$0")/pre-commit.local" "$@"
+exit 0
