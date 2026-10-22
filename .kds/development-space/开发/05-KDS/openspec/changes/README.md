@@ -16,6 +16,7 @@ supersedes: []
 superseded_by: []
 ---
 
+
 # OpenSpec 变更集
 
 目录：`openspec/changes`
@@ -45,6 +46,13 @@ KDS 空间：`开发`
 | GPCF-DOC-5419DA34A8 | project-group-openspec-coverage | openspec/changes/enable-project-group-openspec-coverage/specs/project-group-openspec-coverage/README.md | KDS | draft |
 | GPCF-OS-OPEN-SPEC-COVERAGE-SPEC-20260712 | spec | openspec/changes/enable-project-group-openspec-coverage/specs/project-group-openspec-coverage/spec.md | GPCF | draft |
 | GPCF-OS-OPEN-SPEC-COVERAGE-TASKS-20260712 | tasks | openspec/changes/enable-project-group-openspec-coverage/tasks.md | KDS | draft |
+| GPCF-DOC-09A691DC1E | GCMEM R0 变更包索引（gcmem-vision-r0） | openspec/changes/gcmem-vision-r0/README.md | KDS | draft |
+| GPCF-GCMEM-VISION-R0-DESIGN-20261021 | GCMEM R0 变更设计（gcmem-vision-r0） | openspec/changes/gcmem-vision-r0/design.md | GPCF | draft |
+| GPCF-GCMEM-VISION-R0-PROPOSAL-20261021 | GCMEM R0 可信基线变更提案（gcmem-vision-r0） | openspec/changes/gcmem-vision-r0/proposal.md | GPCF | draft |
+| GPCF-DOC-512AB6C9 | gcmem-vision-r0 规格索引 | openspec/changes/gcmem-vision-r0/specs/README.md | KDS | draft |
+| GPCF-DOC-266E4E965D | gcmem-vision-r0 | openspec/changes/gcmem-vision-r0/specs/gcmem-vision-r0/README.md | KDS | draft |
+| GPCF-GCMEM-VISION-R0-SPEC-20261021 | GCMEM R0 能力规格（gcmem-vision-r0） | openspec/changes/gcmem-vision-r0/specs/gcmem-vision-r0/spec.md | GPCF | draft |
+| GPCF-GCMEM-VISION-R0-TASKS-20261021 | GCMEM R0 变更任务清单（gcmem-vision-r0） | openspec/changes/gcmem-vision-r0/tasks.md | GPCF | draft |
 | GPCF-DOC-07DC110521 | gcworld-controlled-runtime-integration | openspec/changes/gcworld-controlled-runtime-integration/README.md | KDS | draft |
 | GPCF-DOC-GCWORLD-041 | design | openspec/changes/gcworld-controlled-runtime-integration/design.md | GPCF | draft |
 | GPCF-DOC-GCWORLD-040 | proposal | openspec/changes/gcworld-controlled-runtime-integration/proposal.md | KDS | draft |
@@ -142,27 +150,41 @@ KDS 空间：`开发`
 | GPCF-OS-ICP-REGISTRATION-TASKS-20260712 | tasks | openspec/changes/register-globalcloud-icp/tasks.md | GPCF | draft |
 | GPCF-DOC-DA59B18707 | sop-bind-matrix-to-icp-foundation | openspec/changes/sop-bind-matrix-to-icp-foundation/README.md | KDS | draft |
 | GPCF-OS-ICP-SOP-COUPLING-PROPOSAL-20260713 | proposal | openspec/changes/sop-bind-matrix-to-icp-foundation/proposal.md | KDS | draft |
-| GPCF-DOC-2007BED0D1 | spaceai-platform-panorama-convergence | openspec/changes/spaceai-platform-panorama-convergence/README.md | KDS | draft |
-| GPCF-SPACEAI-PANORAMA-DESIGN-20261016 | design | openspec/changes/spaceai-platform-panorama-convergence/design.md | GPCF | draft |
-| GPCF-SPACEAI-PANORAMA-PROPOSAL-20261016 | proposal | openspec/changes/spaceai-platform-panorama-convergence/proposal.md | KDS | draft |
-| GPCF-DOC-A29F69DAAF | specs | openspec/changes/spaceai-platform-panorama-convergence/specs/README.md | KDS | draft |
-| GPCF-DOC-DDBDFB20B3 | spaceai-platform-panorama-structure | openspec/changes/spaceai-platform-panorama-convergence/specs/spaceai-platform-panorama-structure/README.md | KDS | draft |
-| GPCF-OS-PANORAMA-STRUCTURE-SPEC-20261016 | 全景态势模块化结构与行为基线 | openspec/changes/spaceai-platform-panorama-convergence/specs/spaceai-platform-panorama-structure/spec.md | GPCF | draft |
-| GPCF-SPACEAI-PANORAMA-TASKS-20261016 | tasks | openspec/changes/spaceai-platform-panorama-convergence/tasks.md | GPCF | draft |
-| GPCF-DOC-477C45A148 | spaceai-studio-multiplatform-refactor | openspec/changes/spaceai-studio-multiplatform-refactor/README.md | KDS | draft |
-| GPCF-OS-SPACEAI-STUDIO-MULTIPLATFORM-REFACTOR-DESIGN-20261010 | design | openspec/changes/spaceai-studio-multiplatform-refactor/design.md | KDS | draft |
-| GPCF-OS-SPACEAI-STUDIO-MULTIPLATFORM-REFACTOR-PROPOSAL-20261010 | proposal | openspec/changes/spaceai-studio-multiplatform-refactor/proposal.md | KDS | draft |
-| GPCF-DOC-8B83B1A79A | specs | openspec/changes/spaceai-studio-multiplatform-refactor/specs/README.md | KDS | draft |
-| GPCF-DOC-D53A9468CA | spaceai-studio-multiplatform-platform | openspec/changes/spaceai-studio-multiplatform-refactor/specs/spaceai-studio-multiplatform-platform/README.md | KDS | draft |
-| GPCF-OS-SPACEAI-STUDIO-MULTIPLATFORM-REFACTOR-SPEC-20261010 | spec | openspec/changes/spaceai-studio-multiplatform-refactor/specs/spaceai-studio-multiplatform-platform/spec.md | GPCF | draft |
-| GPCF-OS-SPACEAI-STUDIO-MULTIPLATFORM-REFACTOR-TASKS-20261010 | tasks | openspec/changes/spaceai-studio-multiplatform-refactor/tasks.md | KDS | draft |
-| GPCF-DOC-5D99E8D484 | spaceai-was-city-flood-replay | openspec/changes/spaceai-was-city-flood-replay/README.md | KDS | draft |
-| GPCF-SPACEAI-FLOOD-DESIGN-20261016 | design | openspec/changes/spaceai-was-city-flood-replay/design.md | GPCF | draft |
-| GPCF-SPACEAI-FLOOD-PROPOSAL-20261016 | proposal | openspec/changes/spaceai-was-city-flood-replay/proposal.md | KDS | draft |
-| GPCF-DOC-FECC2A4859 | specs | openspec/changes/spaceai-was-city-flood-replay/specs/README.md | KDS | draft |
-| GPCF-DOC-307EB657D0 | spaceai-city-slice-replay | openspec/changes/spaceai-was-city-flood-replay/specs/spaceai-city-slice-replay/README.md | KDS | draft |
-| GPCF-SPACEAI-FLOOD-SPEC-20261016 | spec | openspec/changes/spaceai-was-city-flood-replay/specs/spaceai-city-slice-replay/spec.md | GPCF | draft |
-| GPCF-SPACEAI-FLOOD-TASKS-20261016 | tasks | openspec/changes/spaceai-was-city-flood-replay/tasks.md | GPCF | draft |
+| GPCF-DOC-C6440B6B | spaceai-l4-precision-model | openspec/changes/spaceai-l4-precision-model/README.md | KDS | implemented |
+| GPCF-DOC-40640A40 | design | openspec/changes/spaceai-l4-precision-model/design.md | GPCF | implemented |
+| GPCF-DOC-0C89CA9D | proposal | openspec/changes/spaceai-l4-precision-model/proposal.md | KDS | implemented |
+| GPCF-DOC-902F9E55 | specs | openspec/changes/spaceai-l4-precision-model/specs/README.md | GPCF | implemented |
+| GPCF-DOC-369A7797 | spaceai-l4-precision-model 规格索引 | openspec/changes/spaceai-l4-precision-model/specs/spaceai-l4-precision-model/README.md | KDS | draft |
+| GPCF-DOC-58D9EB15 | spec | openspec/changes/spaceai-l4-precision-model/specs/spaceai-l4-precision-model/spec.md | GPCF | implemented |
+| GPCF-DOC-E2F62413 | tasks | openspec/changes/spaceai-l4-precision-model/tasks.md | GPCF | implemented |
+| GPCF-DOC-93941CDB | spaceai-panorama-operation-normalization | openspec/changes/spaceai-panorama-operation-normalization/README.md | KDS | in_progress |
+| GPCF-DOC-1AB33594 | design | openspec/changes/spaceai-panorama-operation-normalization/design.md | GPCF | in_progress |
+| GPCF-DOC-353529D8 | proposal | openspec/changes/spaceai-panorama-operation-normalization/proposal.md | KDS | in_progress |
+| GPCF-DOC-FFD1991A | specs | openspec/changes/spaceai-panorama-operation-normalization/specs/README.md | GPCF | in_progress |
+| GPCF-DOC-2F02F9A8 | spaceai-panorama-operation-normalization 规格索引 | openspec/changes/spaceai-panorama-operation-normalization/specs/spaceai-panorama-operation-normalization/README.md | KDS | draft |
+| GPCF-DOC-5FDFC3B2 | spec | openspec/changes/spaceai-panorama-operation-normalization/specs/spaceai-panorama-operation-normalization/spec.md | GPCF | in_progress |
+| GPCF-DOC-2B1D05FA | tasks | openspec/changes/spaceai-panorama-operation-normalization/tasks.md | GPCF | in_progress |
+| GPCF-DOC-2007BED0D1 | spaceai-platform-panorama-convergence | openspec/changes/spaceai-platform-panorama-convergence/README.md | KDS | implemented |
+| GPCF-SPACEAI-PANORAMA-DESIGN-20261016 | design | openspec/changes/spaceai-platform-panorama-convergence/design.md | GPCF | implemented |
+| GPCF-SPACEAI-PANORAMA-PROPOSAL-20261016 | proposal | openspec/changes/spaceai-platform-panorama-convergence/proposal.md | KDS | implemented |
+| GPCF-DOC-A29F69DAAF | specs | openspec/changes/spaceai-platform-panorama-convergence/specs/README.md | KDS | implemented |
+| GPCF-DOC-DDBDFB20B3 | spaceai-platform-panorama-structure | openspec/changes/spaceai-platform-panorama-convergence/specs/spaceai-platform-panorama-structure/README.md | KDS | implemented |
+| GPCF-OS-PANORAMA-STRUCTURE-SPEC-20261016 | 全景态势模块化结构与行为基线 | openspec/changes/spaceai-platform-panorama-convergence/specs/spaceai-platform-panorama-structure/spec.md | GPCF | implemented |
+| GPCF-SPACEAI-PANORAMA-TASKS-20261016 | tasks | openspec/changes/spaceai-platform-panorama-convergence/tasks.md | GPCF | implemented |
+| GPCF-DOC-477C45A148 | spaceai-studio-multiplatform-refactor | openspec/changes/spaceai-studio-multiplatform-refactor/README.md | KDS | in_progress |
+| GPCF-OS-SPACEAI-STUDIO-MULTIPLATFORM-REFACTOR-DESIGN-20261010 | design | openspec/changes/spaceai-studio-multiplatform-refactor/design.md | KDS | in_progress |
+| GPCF-OS-SPACEAI-STUDIO-MULTIPLATFORM-REFACTOR-PROPOSAL-20261010 | proposal | openspec/changes/spaceai-studio-multiplatform-refactor/proposal.md | KDS | in_progress |
+| GPCF-DOC-8B83B1A79A | specs | openspec/changes/spaceai-studio-multiplatform-refactor/specs/README.md | KDS | in_progress |
+| GPCF-DOC-D53A9468CA | spaceai-studio-multiplatform-platform | openspec/changes/spaceai-studio-multiplatform-refactor/specs/spaceai-studio-multiplatform-platform/README.md | KDS | in_progress |
+| GPCF-OS-SPACEAI-STUDIO-MULTIPLATFORM-REFACTOR-SPEC-20261010 | spec | openspec/changes/spaceai-studio-multiplatform-refactor/specs/spaceai-studio-multiplatform-platform/spec.md | GPCF | in_progress |
+| GPCF-OS-SPACEAI-STUDIO-MULTIPLATFORM-REFACTOR-TASKS-20261010 | tasks | openspec/changes/spaceai-studio-multiplatform-refactor/tasks.md | KDS | in_progress |
+| GPCF-DOC-5D99E8D484 | spaceai-was-city-flood-replay | openspec/changes/spaceai-was-city-flood-replay/README.md | KDS | implemented |
+| GPCF-SPACEAI-FLOOD-DESIGN-20261016 | design | openspec/changes/spaceai-was-city-flood-replay/design.md | GPCF | implemented |
+| GPCF-SPACEAI-FLOOD-PROPOSAL-20261016 | proposal | openspec/changes/spaceai-was-city-flood-replay/proposal.md | KDS | implemented |
+| GPCF-DOC-FECC2A4859 | specs | openspec/changes/spaceai-was-city-flood-replay/specs/README.md | KDS | implemented |
+| GPCF-DOC-307EB657D0 | spaceai-city-slice-replay | openspec/changes/spaceai-was-city-flood-replay/specs/spaceai-city-slice-replay/README.md | KDS | implemented |
+| GPCF-SPACEAI-FLOOD-SPEC-20261016 | spec | openspec/changes/spaceai-was-city-flood-replay/specs/spaceai-city-slice-replay/spec.md | GPCF | implemented |
+| GPCF-SPACEAI-FLOOD-TASKS-20261016 | tasks | openspec/changes/spaceai-was-city-flood-replay/tasks.md | GPCF | implemented |
 | GPCF-DOC-4C32519F10 | was-flow-naming-migration | openspec/changes/was-flow-naming-migration/README.md | KDS | draft |
 | GPCF-DOC-3EBD68D2C6 | artifacts | openspec/changes/was-flow-naming-migration/artifacts/README.md | KDS | draft |
 | GPCF-DOC-FCAE31EF6C | Design — was-flow-naming-migration | openspec/changes/was-flow-naming-migration/design.md | KDS | draft |

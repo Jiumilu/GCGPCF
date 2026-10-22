@@ -16,6 +16,7 @@ supersedes: []
 superseded_by: []
 ---
 
+
 # spaceai-platform-panorama-structure
 
 目录：`openspec/changes/spaceai-platform-panorama-convergence/specs/spaceai-platform-panorama-structure`
@@ -36,5 +37,5 @@ KDS 空间：`开发`
 
 | doc_id | title | source_path | project | status |
 | --- | --- | --- | --- | --- |
-| GPCF-DOC-DDBDFB20B3 | spaceai-platform-panorama-structure | openspec/changes/spaceai-platform-panorama-convergence/specs/spaceai-platform-panorama-structure/README.md | KDS | draft |
-| GPCF-OS-PANORAMA-STRUCTURE-SPEC-20261016 | 全景态势模块化结构与行为基线 | openspec/changes/spaceai-platform-panorama-convergence/specs/spaceai-platform-panorama-structure/spec.md | GPCF | draft |
+| GPCF-DOC-DDBDFB20B3 | spaceai-platform-panorama-structure | openspec/changes/spaceai-platform-panorama-convergence/specs/spaceai-platform-panorama-structure/README.md | KDS | implemented |
+| GPCF-OS-PANORAMA-STRUCTURE-SPEC-20261016 | 全景态势模块化结构与行为基线 | openspec/changes/spaceai-platform-panorama-convergence/specs/spaceai-platform-panorama-structure/spec.md | GPCF | implemented |

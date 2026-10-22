@@ -16,6 +16,27 @@ supersedes: []
 superseded_by: []
 ---
 
+
 # specs
 
-- `spaceai-panorama-operation-normalization/spec.md`：操作契约、Esc 分层、演示态互斥、偏好键、组件拆分边界的 Requirement / Scenario。
+目录：`openspec/changes/spaceai-panorama-operation-normalization/specs`
+
+用途：保存本目录下的受控文档、证据或规格材料。
+
+KDS 空间：`开发`
+
+关联项目：KDS, GPCF
+
+受控规则：
+
+- 本目录新增 Markdown 文档必须重新运行 `python3 tools/kds-sync/document_control.py`。
+- 当前有效文档使用 `controlled`；草案使用 `draft`；历史证据使用 `archive`。
+- 过期或被替代文档不得删除，必须进入归档台账或保留替代关系。
+
+## 文档清单
+
+| doc_id | title | source_path | project | status |
+| --- | --- | --- | --- | --- |
+| GPCF-DOC-FFD1991A | specs | openspec/changes/spaceai-panorama-operation-normalization/specs/README.md | GPCF | in_progress |
+| GPCF-DOC-2F02F9A8 | spaceai-panorama-operation-normalization 规格索引 | openspec/changes/spaceai-panorama-operation-normalization/specs/spaceai-panorama-operation-normalization/README.md | KDS | draft |
+| GPCF-DOC-5FDFC3B2 | spec | openspec/changes/spaceai-panorama-operation-normalization/specs/spaceai-panorama-operation-normalization/spec.md | GPCF | in_progress |

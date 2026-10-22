@@ -16,6 +16,7 @@ supersedes: []
 superseded_by: []
 ---
 
+
 # world-project-registration
 
 目录：`openspec/changes/world-project-onboarding/specs/world-project-registration`

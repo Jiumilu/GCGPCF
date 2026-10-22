@@ -16,6 +16,7 @@ supersedes: []
 superseded_by: []
 ---
 
+
 # evidence
 
 目录：`.harness/runs/20260824-092905-gcworld-integration-proposals/evidence`

@@ -19,7 +19,7 @@ superseded_by: []
 
 # GlobalCloud 文档控制总台账
 
-日期：2026-10-20
+日期：2026-10-22
 
 用途：登记 GPCF 仓库内所有 Markdown 文档的受控身份、项目归属、状态、源路径与 KDS 开发空间路径。
 
@@ -33,14 +33,14 @@ superseded_by: []
 | GPC | 02-GPC | 54 | 46 | 已建空间 |
 | PVAOS | 03-PVAOS | 13 | 10 | 已建空间 |
 | WAME | 04-WAME | 194 | 24 | 已建空间 |
-| KDS | 05-KDS | 1008 | 1005 | 已建空间 |
+| KDS | 05-KDS | 1017 | 1014 | 已建空间 |
 | Brain | 06-Brain | 14 | 11 | 已建空间 |
 | PKC | 07-PKC | 10 | 7 | 已建空间 |
 | XiaoC | 08-XiaoC | 68 | 65 | 已建空间 |
 | XGD | 09-XGD | 10 | 7 | 已建空间 |
 | XiaoG | 10-XiaoG | 11 | 8 | 已建空间 |
 | MMC | 11-MMC | 13 | 10 | 已建空间 |
-| GPCF | 12-GPCF | 1925 | 1658 | 已建空间 |
+| GPCF | 12-GPCF | 1947 | 1666 | 已建空间 |
 | Studio | 13-Studio | 5 | 2 | 已建空间 |
 | ICP | 14-ICP | 0 | 0 | 已建空间，暂无直接镜像文档 |
 | SpaceAIStudio | 15-SpaceAIStudio | 0 | 0 | 已建空间，暂无直接镜像文档 |
@@ -52,7 +52,7 @@ superseded_by: []
 | --- | --- | --- |
 | 00-项目群总控 | 项目群总入口与根 README | 1 |
 | 90-跨项目架构 | 跨项目架构、主线、数据/知识跨域文档 | 56 |
-| 91-治理与验收 | 治理、验收、状态、台账与门禁文档 | 335 |
+| 91-治理与验收 | 治理、验收、状态、台账与门禁文档 | 352 |
 | 92-证据与会话归档 | Harness、证据样本、历史会话与归档文档 | 95 |
 | 99-过期文档 | deprecated / superseded 文档 | 0 |
 
@@ -646,6 +646,8 @@ superseded_by: []
 | GPCF-DOC-PROJECT-IMPLEMENTATION-CONTROL-REGISTER-20260624 | GlobalCloud 项目群实施方案控制台账 | 09-status/globalcloud-project-implementation-control-register.md | GPCF | AAAS, Brain, WAS, XiaoC, WAME, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP, PQC, SpaceAI, SpaceAIStudio, World, GCMEM, WAE | status | controlled | 开发/91-治理与验收/09-status/globalcloud-project-implementation-control-register.md |
 | GPCF-DOC-6CE17269E9 | GlobalCloud 项目群项目主线对齐矩阵 | 09-status/globalcloud-project-mainline-alignment-matrix.md | GPCF | GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio | status | controlled | 开发/91-治理与验收/09-status/globalcloud-project-mainline-alignment-matrix.md |
 | GPCF-DOC-WAS-PROJECT-MASTER-PLAN-REGISTER-20260624 | GlobalCloud 项目群主方案控制台账 | 09-status/globalcloud-project-master-plan-control-register.md | GPCF | GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio, ICP, PQC, SpaceAI, SpaceAIStudio, World, GCMEM, WAE | status | controlled | 开发/91-治理与验收/09-status/globalcloud-project-master-plan-control-register.md |
+| GPCF-DOC-XGD-IMPLEMENTATION-REPORT-20261021 | GlobalCloud XGD 实施回传（2026-10-21） | 09-status/globalcloud-xgd-implementation-report-20261021.md | GPCF | XGD, XiaoG, GCMEM, KDS | governance | draft | 开发/91-治理与验收/09-status/globalcloud-xgd-implementation-report-20261021.md |
+| GPCF-DOC-XGD-UPSTREAM-SYNC-FEEDBACK-20261021 | XGD 上游同步回传（2026-10-21） | 09-status/globalcloud-xgd-upstream-sync-feedback-20261021.md | GPCF | XGD, XiaoG, GPCF | status | draft | 开发/91-治理与验收/09-status/globalcloud-xgd-upstream-sync-feedback-20261021.md |
 | GPCF-DOC-C586488E67 | GPCF Project Status Matrix | 09-status/gpcf-project-status-matrix.md | GPCF | AAAS, Brain, WAS, XiaoC, WAME, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP, PQC, SpaceAI, SpaceAIStudio, World, GCMEM | status | controlled | 开发/91-治理与验收/09-status/gpcf-project-status-matrix.md |
 | GPCF-DOC-B1085FD000 | KDS API 同步流水覆盖事件记录 | 09-status/kds-api-sync-ledger-incident-20260617.md | GPCF | GPCF, WAME, KDS | status | controlled | 开发/91-治理与验收/09-status/kds-api-sync-ledger-incident-20260617.md |
 | GPCF-DOC-KDS-SYNC-PLAN | KDS Development Space Sync Plan | 09-status/kds-development-space-sync-plan.md | GPCF | GFIS, GPC, KDS, GPCF | status | controlled | 开发/91-治理与验收/09-status/kds-development-space-sync-plan.md |
@@ -3201,12 +3203,19 @@ superseded_by: []
 | GPCF-DOC-F023-ARTIFACTS-README | F-023 artifacts 指针说明 | features/active/F-023-was-flow-naming-migration/artifacts/README.md | GPCF | WAS, GPCF | governance | controlled | 开发/91-治理与验收/features/active/F-023-was-flow-naming-migration/artifacts/README.md |
 | GPCF-DOC-F023-EVIDENCE-README | F-023 evidence 索引 | features/active/F-023-was-flow-naming-migration/evidence/README.md | GPCF | WAS, GPCF | governance | controlled | 开发/91-治理与验收/features/active/F-023-was-flow-naming-migration/evidence/README.md |
 | GPCF-DOC-752234F1D9 | F-023 was-flow-naming-migration | features/active/F-023-was-flow-naming-migration/journal.md | GPCF | AAAS, Brain, WAS, XiaoC, WAME, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP | governance | controlled | 开发/91-治理与验收/features/active/F-023-was-flow-naming-migration/journal.md |
+| GPCF-DOC-F024EZ0C0F | summary | features/active/F-024-panorama-engineering-convergence/evidence/summary.md | spaceai | GPCF, SpaceAI | governance | controlled | 开发/91-治理与验收/features/active/F-024-panorama-engineering-convergence/evidence/summary.md |
 | GPCF-DOC-70F58BB28D | F-024 panorama-engineering-convergence | features/active/F-024-panorama-engineering-convergence/journal.md | GPCF | AAAS, Brain, WAS, XiaoC, WAME, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP | governance | controlled | 开发/91-治理与验收/features/active/F-024-panorama-engineering-convergence/journal.md |
 | GPCF-DOC-F025-JOURNAL | F-025 项目群架构迭代日志 | features/active/F-025-project-group-arch-iteration/journal.md | GPCF | GPCF, WAME, World, GPC | governance | controlled | 开发/91-治理与验收/features/active/F-025-project-group-arch-iteration/journal.md |
 | GPCF-DOC-F026-GCMEM-EVIDENCE-20261018 | F-026 GCMEM 纳管证据摘要 | features/active/F-026-gcmem-governance-onboarding/evidence/summary.md | GPCF | GCMEM, GPCF | governance | controlled | 开发/91-治理与验收/features/active/F-026-gcmem-governance-onboarding/evidence/summary.md |
 | GPCF-DOC-F026-GCMEM-JOURNAL-20261018 | F-026 GCMEM 纳管日志 | features/active/F-026-gcmem-governance-onboarding/journal.md | GPCF | GCMEM, GPCF, KDS | governance | controlled | 开发/91-治理与验收/features/active/F-026-gcmem-governance-onboarding/journal.md |
 | GPCF-DOC-5D91F1910A | summary | features/active/F-027-governance-remediation/evidence/summary.md | GPCF | AAAS, Brain, WAS, XiaoC, WAME, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP | governance | draft | 开发/91-治理与验收/features/active/F-027-governance-remediation/evidence/summary.md |
 | GPCF-DOC-F027-JOURNAL | F-027 governance-remediation | features/active/F-027-governance-remediation/journal.md | GPCF | GPCF | governance | controlled | 开发/91-治理与验收/features/active/F-027-governance-remediation/journal.md |
+| GPCF-DOC-F032-JOURNAL | F-032 pqc-external-service-via-pvaai | features/active/F-032-pqc-external-service-via-pvaai/journal.md | GPCF | GPCF | governance | controlled | 开发/91-治理与验收/features/active/F-032-pqc-external-service-via-pvaai/journal.md |
+| GPCF-DOC-F033-JOURNAL | F-033 r1-ecosystem-integration | features/active/F-033-r1-ecosystem-integration/journal.md | GPCF | GPCF | governance | controlled | 开发/91-治理与验收/features/active/F-033-r1-ecosystem-integration/journal.md |
+| GPCF-DOC-DD1E0F56 | F-037 map-3d-l4-precision-model 证据摘要 | features/active/F-037-map-3d-l4-precision-model/evidence/summary.md | spaceai | SpaceAI, GPCF | governance | controlled | 开发/91-治理与验收/features/active/F-037-map-3d-l4-precision-model/evidence/summary.md |
+| GPCF-DOC-2587592C | F-037 map-3d-l4-precision-model | features/active/F-037-map-3d-l4-precision-model/journal.md | GPCF | SpaceAI, GPCF | governance | controlled | 开发/91-治理与验收/features/active/F-037-map-3d-l4-precision-model/journal.md |
+| GPCF-DOC-790BC588 | F-038 panorama-operation-normalization 证据摘要 | features/active/F-038-panorama-operation-normalization/evidence/summary.md | spaceai | SpaceAI, GPCF | governance | controlled | 开发/91-治理与验收/features/active/F-038-panorama-operation-normalization/evidence/summary.md |
+| GPCF-DOC-316BCCD3 | F-038 panorama-operation-normalization | features/active/F-038-panorama-operation-normalization/journal.md | GPCF | SpaceAI, GPCF | governance | controlled | 开发/91-治理与验收/features/active/F-038-panorama-operation-normalization/journal.md |
 | GPCF-DOC-01B2179D97 | 证据摘要 | features/done/F-001-supplier-onboarding/evidence/summary.md | GPCF | AAAS, Brain, WAS, XiaoC, WAME, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP | governance | controlled | 开发/91-治理与验收/features/done/F-001-supplier-onboarding/evidence/summary.md |
 | GPCF-DOC-1CB646B985 | F-001 supplier-onboarding | features/done/F-001-supplier-onboarding/journal.md | GPCF | AAAS, Brain, WAS, XiaoC, WAME, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP | governance | controlled | 开发/91-治理与验收/features/done/F-001-supplier-onboarding/journal.md |
 | GPCF-DOC-87C12A1121 | 证据摘要 | features/done/F-002-project-group-feature-queue/evidence/summary.md | GPCF | AAAS, Brain, WAS, XiaoC, WAME, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP | governance | controlled | 开发/91-治理与验收/features/done/F-002-project-group-feature-queue/evidence/summary.md |
@@ -3256,6 +3265,13 @@ superseded_by: []
 | GPCF-DOC-5419DA34A8 | project-group-openspec-coverage | openspec/changes/enable-project-group-openspec-coverage/specs/project-group-openspec-coverage/README.md | KDS | GPC, WAME, KDS, GPCF | openspec | draft | 开发/05-KDS/openspec/changes/enable-project-group-openspec-coverage/specs/project-group-openspec-coverage/README.md |
 | GPCF-OS-OPEN-SPEC-COVERAGE-SPEC-20260712 | spec | openspec/changes/enable-project-group-openspec-coverage/specs/project-group-openspec-coverage/spec.md | GPCF | GPC, WAME, GPCF, ICP | openspec | draft | 开发/12-GPCF/openspec/changes/enable-project-group-openspec-coverage/specs/project-group-openspec-coverage/spec.md |
 | GPCF-OS-OPEN-SPEC-COVERAGE-TASKS-20260712 | tasks | openspec/changes/enable-project-group-openspec-coverage/tasks.md | KDS | WAME, KDS | openspec | draft | 开发/05-KDS/openspec/changes/enable-project-group-openspec-coverage/tasks.md |
+| GPCF-DOC-09A691DC1E | GCMEM R0 变更包索引（gcmem-vision-r0） | openspec/changes/gcmem-vision-r0/README.md | KDS | GCMEM, GPCF, KDS | openspec | draft | 开发/05-KDS/openspec/changes/gcmem-vision-r0/README.md |
+| GPCF-GCMEM-VISION-R0-DESIGN-20261021 | GCMEM R0 变更设计（gcmem-vision-r0） | openspec/changes/gcmem-vision-r0/design.md | GPCF | GCMEM, GPCF, KDS | openspec | draft | 开发/91-治理与验收/openspec/changes/gcmem-vision-r0/design.md |
+| GPCF-GCMEM-VISION-R0-PROPOSAL-20261021 | GCMEM R0 可信基线变更提案（gcmem-vision-r0） | openspec/changes/gcmem-vision-r0/proposal.md | GPCF | GCMEM, GPCF, KDS | openspec | draft | 开发/91-治理与验收/openspec/changes/gcmem-vision-r0/proposal.md |
+| GPCF-DOC-512AB6C9 | gcmem-vision-r0 规格索引 | openspec/changes/gcmem-vision-r0/specs/README.md | KDS | KDS, GPCF | openspec | draft | 开发/05-KDS/openspec/changes/gcmem-vision-r0/specs/README.md |
+| GPCF-DOC-266E4E965D | gcmem-vision-r0 | openspec/changes/gcmem-vision-r0/specs/gcmem-vision-r0/README.md | KDS | GPC, WAME, KDS, GPCF | openspec | draft | 开发/05-KDS/openspec/changes/gcmem-vision-r0/specs/gcmem-vision-r0/README.md |
+| GPCF-GCMEM-VISION-R0-SPEC-20261021 | GCMEM R0 能力规格（gcmem-vision-r0） | openspec/changes/gcmem-vision-r0/specs/gcmem-vision-r0/spec.md | GPCF | GCMEM, GPCF, KDS | openspec | draft | 开发/91-治理与验收/openspec/changes/gcmem-vision-r0/specs/gcmem-vision-r0/spec.md |
+| GPCF-GCMEM-VISION-R0-TASKS-20261021 | GCMEM R0 变更任务清单（gcmem-vision-r0） | openspec/changes/gcmem-vision-r0/tasks.md | GPCF | GCMEM, GPCF, KDS | openspec | draft | 开发/91-治理与验收/openspec/changes/gcmem-vision-r0/tasks.md |
 | GPCF-DOC-07DC110521 | gcworld-controlled-runtime-integration | openspec/changes/gcworld-controlled-runtime-integration/README.md | KDS | GPC, WAME, KDS, GPCF | openspec | draft | 开发/05-KDS/openspec/changes/gcworld-controlled-runtime-integration/README.md |
 | GPCF-DOC-GCWORLD-041 | design | openspec/changes/gcworld-controlled-runtime-integration/design.md | GPCF | GPCF, WAME, MMC | openspec | draft | 开发/12-GPCF/openspec/changes/gcworld-controlled-runtime-integration/design.md |
 | GPCF-DOC-GCWORLD-040 | proposal | openspec/changes/gcworld-controlled-runtime-integration/proposal.md | KDS | GFIS, GPC, WAME, KDS, MMC, GPCF | openspec | draft | 开发/05-KDS/openspec/changes/gcworld-controlled-runtime-integration/proposal.md |
@@ -3353,27 +3369,41 @@ superseded_by: []
 | GPCF-OS-ICP-REGISTRATION-TASKS-20260712 | tasks | openspec/changes/register-globalcloud-icp/tasks.md | GPCF | WAME, GPCF, ICP | openspec | draft | 开发/12-GPCF/openspec/changes/register-globalcloud-icp/tasks.md |
 | GPCF-DOC-DA59B18707 | sop-bind-matrix-to-icp-foundation | openspec/changes/sop-bind-matrix-to-icp-foundation/README.md | KDS | GPC, WAME, KDS, GPCF, ICP | openspec | draft | 开发/05-KDS/openspec/changes/sop-bind-matrix-to-icp-foundation/README.md |
 | GPCF-OS-ICP-SOP-COUPLING-PROPOSAL-20260713 | proposal | openspec/changes/sop-bind-matrix-to-icp-foundation/proposal.md | KDS | GPC, WAME, KDS, GPCF, ICP | openspec | draft | 开发/05-KDS/openspec/changes/sop-bind-matrix-to-icp-foundation/proposal.md |
-| GPCF-DOC-2007BED0D1 | spaceai-platform-panorama-convergence | openspec/changes/spaceai-platform-panorama-convergence/README.md | KDS | GPC, WAME, KDS, GPCF | openspec | draft | 开发/05-KDS/openspec/changes/spaceai-platform-panorama-convergence/README.md |
-| GPCF-SPACEAI-PANORAMA-DESIGN-20261016 | design | openspec/changes/spaceai-platform-panorama-convergence/design.md | GPCF | GPCF, WAME | openspec | draft | 开发/12-GPCF/openspec/changes/spaceai-platform-panorama-convergence/design.md |
-| GPCF-SPACEAI-PANORAMA-PROPOSAL-20261016 | proposal | openspec/changes/spaceai-platform-panorama-convergence/proposal.md | KDS | KDS, GPC, WAME, Brain, GPCF | openspec | draft | 开发/05-KDS/openspec/changes/spaceai-platform-panorama-convergence/proposal.md |
-| GPCF-DOC-A29F69DAAF | specs | openspec/changes/spaceai-platform-panorama-convergence/specs/README.md | KDS | GPC, WAME, KDS, GPCF | openspec | draft | 开发/05-KDS/openspec/changes/spaceai-platform-panorama-convergence/specs/README.md |
-| GPCF-DOC-DDBDFB20B3 | spaceai-platform-panorama-structure | openspec/changes/spaceai-platform-panorama-convergence/specs/spaceai-platform-panorama-structure/README.md | KDS | GPC, WAME, KDS, GPCF | openspec | draft | 开发/05-KDS/openspec/changes/spaceai-platform-panorama-convergence/specs/spaceai-platform-panorama-structure/README.md |
-| GPCF-OS-PANORAMA-STRUCTURE-SPEC-20261016 | 全景态势模块化结构与行为基线 | openspec/changes/spaceai-platform-panorama-convergence/specs/spaceai-platform-panorama-structure/spec.md | GPCF | GPCF, WAME | openspec | draft | 开发/12-GPCF/openspec/changes/spaceai-platform-panorama-convergence/specs/spaceai-platform-panorama-structure/spec.md |
-| GPCF-SPACEAI-PANORAMA-TASKS-20261016 | tasks | openspec/changes/spaceai-platform-panorama-convergence/tasks.md | GPCF | GPCF, WAME | openspec | draft | 开发/12-GPCF/openspec/changes/spaceai-platform-panorama-convergence/tasks.md |
-| GPCF-DOC-477C45A148 | spaceai-studio-multiplatform-refactor | openspec/changes/spaceai-studio-multiplatform-refactor/README.md | KDS | GPC, WAME, KDS, GPCF | openspec | draft | 开发/05-KDS/openspec/changes/spaceai-studio-multiplatform-refactor/README.md |
-| GPCF-OS-SPACEAI-STUDIO-MULTIPLATFORM-REFACTOR-DESIGN-20261010 | design | openspec/changes/spaceai-studio-multiplatform-refactor/design.md | KDS | WAME, KDS, MMC, Studio, SpaceAIStudio, SpaceAI | openspec | draft | 开发/05-KDS/openspec/changes/spaceai-studio-multiplatform-refactor/design.md |
-| GPCF-OS-SPACEAI-STUDIO-MULTIPLATFORM-REFACTOR-PROPOSAL-20261010 | proposal | openspec/changes/spaceai-studio-multiplatform-refactor/proposal.md | KDS | GPC, WAME, KDS, GPCF, Studio, SpaceAIStudio, SpaceAI | openspec | draft | 开发/05-KDS/openspec/changes/spaceai-studio-multiplatform-refactor/proposal.md |
-| GPCF-DOC-8B83B1A79A | specs | openspec/changes/spaceai-studio-multiplatform-refactor/specs/README.md | KDS | GPC, WAME, KDS, GPCF | openspec | draft | 开发/05-KDS/openspec/changes/spaceai-studio-multiplatform-refactor/specs/README.md |
-| GPCF-DOC-D53A9468CA | spaceai-studio-multiplatform-platform | openspec/changes/spaceai-studio-multiplatform-refactor/specs/spaceai-studio-multiplatform-platform/README.md | KDS | GPC, WAME, KDS, GPCF | openspec | draft | 开发/05-KDS/openspec/changes/spaceai-studio-multiplatform-refactor/specs/spaceai-studio-multiplatform-platform/README.md |
-| GPCF-OS-SPACEAI-STUDIO-MULTIPLATFORM-REFACTOR-SPEC-20261010 | spec | openspec/changes/spaceai-studio-multiplatform-refactor/specs/spaceai-studio-multiplatform-platform/spec.md | GPCF | WAME, GPCF, Studio, SpaceAIStudio, SpaceAI | openspec | draft | 开发/12-GPCF/openspec/changes/spaceai-studio-multiplatform-refactor/specs/spaceai-studio-multiplatform-platform/spec.md |
-| GPCF-OS-SPACEAI-STUDIO-MULTIPLATFORM-REFACTOR-TASKS-20261010 | tasks | openspec/changes/spaceai-studio-multiplatform-refactor/tasks.md | KDS | WAME, KDS, GPCF, Studio, ICP, SpaceAIStudio, SpaceAI | openspec | draft | 开发/05-KDS/openspec/changes/spaceai-studio-multiplatform-refactor/tasks.md |
-| GPCF-DOC-5D99E8D484 | spaceai-was-city-flood-replay | openspec/changes/spaceai-was-city-flood-replay/README.md | KDS | GPC, WAME, KDS, GPCF | openspec | draft | 开发/05-KDS/openspec/changes/spaceai-was-city-flood-replay/README.md |
-| GPCF-SPACEAI-FLOOD-DESIGN-20261016 | design | openspec/changes/spaceai-was-city-flood-replay/design.md | GPCF | GPCF, PVAOS, WAME | openspec | draft | 开发/12-GPCF/openspec/changes/spaceai-was-city-flood-replay/design.md |
-| GPCF-SPACEAI-FLOOD-PROPOSAL-20261016 | proposal | openspec/changes/spaceai-was-city-flood-replay/proposal.md | KDS | PVAOS, WAME, KDS | openspec | draft | 开发/05-KDS/openspec/changes/spaceai-was-city-flood-replay/proposal.md |
-| GPCF-DOC-FECC2A4859 | specs | openspec/changes/spaceai-was-city-flood-replay/specs/README.md | KDS | GPC, WAME, KDS, GPCF | openspec | draft | 开发/05-KDS/openspec/changes/spaceai-was-city-flood-replay/specs/README.md |
-| GPCF-DOC-307EB657D0 | spaceai-city-slice-replay | openspec/changes/spaceai-was-city-flood-replay/specs/spaceai-city-slice-replay/README.md | KDS | GPC, WAME, KDS, GPCF | openspec | draft | 开发/05-KDS/openspec/changes/spaceai-was-city-flood-replay/specs/spaceai-city-slice-replay/README.md |
-| GPCF-SPACEAI-FLOOD-SPEC-20261016 | spec | openspec/changes/spaceai-was-city-flood-replay/specs/spaceai-city-slice-replay/spec.md | GPCF | GPCF, WAME | openspec | draft | 开发/12-GPCF/openspec/changes/spaceai-was-city-flood-replay/specs/spaceai-city-slice-replay/spec.md |
-| GPCF-SPACEAI-FLOOD-TASKS-20261016 | tasks | openspec/changes/spaceai-was-city-flood-replay/tasks.md | GPCF | WAME, GPCF | openspec | draft | 开发/12-GPCF/openspec/changes/spaceai-was-city-flood-replay/tasks.md |
+| GPCF-DOC-C6440B6B | spaceai-l4-precision-model | openspec/changes/spaceai-l4-precision-model/README.md | KDS | KDS, GPCF, SpaceAI | openspec | implemented | 开发/05-KDS/openspec/changes/spaceai-l4-precision-model/README.md |
+| GPCF-DOC-40640A40 | design | openspec/changes/spaceai-l4-precision-model/design.md | GPCF | GPCF, SpaceAI | openspec | implemented | 开发/12-GPCF/openspec/changes/spaceai-l4-precision-model/design.md |
+| GPCF-DOC-0C89CA9D | proposal | openspec/changes/spaceai-l4-precision-model/proposal.md | KDS | KDS, GPCF, SpaceAI | openspec | implemented | 开发/05-KDS/openspec/changes/spaceai-l4-precision-model/proposal.md |
+| GPCF-DOC-902F9E55 | specs | openspec/changes/spaceai-l4-precision-model/specs/README.md | GPCF | GPCF, SpaceAI | openspec | implemented | 开发/12-GPCF/openspec/changes/spaceai-l4-precision-model/specs/README.md |
+| GPCF-DOC-369A7797 | spaceai-l4-precision-model 规格索引 | openspec/changes/spaceai-l4-precision-model/specs/spaceai-l4-precision-model/README.md | KDS | KDS, GPCF | openspec | draft | 开发/05-KDS/openspec/changes/spaceai-l4-precision-model/specs/spaceai-l4-precision-model/README.md |
+| GPCF-DOC-58D9EB15 | spec | openspec/changes/spaceai-l4-precision-model/specs/spaceai-l4-precision-model/spec.md | GPCF | GPCF, SpaceAI | openspec | implemented | 开发/12-GPCF/openspec/changes/spaceai-l4-precision-model/specs/spaceai-l4-precision-model/spec.md |
+| GPCF-DOC-E2F62413 | tasks | openspec/changes/spaceai-l4-precision-model/tasks.md | GPCF | GPCF, SpaceAI | openspec | implemented | 开发/12-GPCF/openspec/changes/spaceai-l4-precision-model/tasks.md |
+| GPCF-DOC-93941CDB | spaceai-panorama-operation-normalization | openspec/changes/spaceai-panorama-operation-normalization/README.md | KDS | KDS, GPCF, SpaceAI | openspec | in_progress | 开发/05-KDS/openspec/changes/spaceai-panorama-operation-normalization/README.md |
+| GPCF-DOC-1AB33594 | design | openspec/changes/spaceai-panorama-operation-normalization/design.md | GPCF | GPCF, SpaceAI | openspec | in_progress | 开发/12-GPCF/openspec/changes/spaceai-panorama-operation-normalization/design.md |
+| GPCF-DOC-353529D8 | proposal | openspec/changes/spaceai-panorama-operation-normalization/proposal.md | KDS | KDS, GPCF, SpaceAI | openspec | in_progress | 开发/05-KDS/openspec/changes/spaceai-panorama-operation-normalization/proposal.md |
+| GPCF-DOC-FFD1991A | specs | openspec/changes/spaceai-panorama-operation-normalization/specs/README.md | GPCF | GPCF, SpaceAI | openspec | in_progress | 开发/12-GPCF/openspec/changes/spaceai-panorama-operation-normalization/specs/README.md |
+| GPCF-DOC-2F02F9A8 | spaceai-panorama-operation-normalization 规格索引 | openspec/changes/spaceai-panorama-operation-normalization/specs/spaceai-panorama-operation-normalization/README.md | KDS | KDS, GPCF | openspec | draft | 开发/05-KDS/openspec/changes/spaceai-panorama-operation-normalization/specs/spaceai-panorama-operation-normalization/README.md |
+| GPCF-DOC-5FDFC3B2 | spec | openspec/changes/spaceai-panorama-operation-normalization/specs/spaceai-panorama-operation-normalization/spec.md | GPCF | GPCF, SpaceAI | openspec | in_progress | 开发/12-GPCF/openspec/changes/spaceai-panorama-operation-normalization/specs/spaceai-panorama-operation-normalization/spec.md |
+| GPCF-DOC-2B1D05FA | tasks | openspec/changes/spaceai-panorama-operation-normalization/tasks.md | GPCF | GPCF, SpaceAI | openspec | in_progress | 开发/12-GPCF/openspec/changes/spaceai-panorama-operation-normalization/tasks.md |
+| GPCF-DOC-2007BED0D1 | spaceai-platform-panorama-convergence | openspec/changes/spaceai-platform-panorama-convergence/README.md | KDS | GPC, WAME, KDS, GPCF | openspec | implemented | 开发/05-KDS/openspec/changes/spaceai-platform-panorama-convergence/README.md |
+| GPCF-SPACEAI-PANORAMA-DESIGN-20261016 | design | openspec/changes/spaceai-platform-panorama-convergence/design.md | GPCF | GPCF, WAME | openspec | implemented | 开发/12-GPCF/openspec/changes/spaceai-platform-panorama-convergence/design.md |
+| GPCF-SPACEAI-PANORAMA-PROPOSAL-20261016 | proposal | openspec/changes/spaceai-platform-panorama-convergence/proposal.md | KDS | KDS, GPC, WAME, Brain, GPCF | openspec | implemented | 开发/05-KDS/openspec/changes/spaceai-platform-panorama-convergence/proposal.md |
+| GPCF-DOC-A29F69DAAF | specs | openspec/changes/spaceai-platform-panorama-convergence/specs/README.md | KDS | GPC, WAME, KDS, GPCF | openspec | implemented | 开发/05-KDS/openspec/changes/spaceai-platform-panorama-convergence/specs/README.md |
+| GPCF-DOC-DDBDFB20B3 | spaceai-platform-panorama-structure | openspec/changes/spaceai-platform-panorama-convergence/specs/spaceai-platform-panorama-structure/README.md | KDS | GPC, WAME, KDS, GPCF | openspec | implemented | 开发/05-KDS/openspec/changes/spaceai-platform-panorama-convergence/specs/spaceai-platform-panorama-structure/README.md |
+| GPCF-OS-PANORAMA-STRUCTURE-SPEC-20261016 | 全景态势模块化结构与行为基线 | openspec/changes/spaceai-platform-panorama-convergence/specs/spaceai-platform-panorama-structure/spec.md | GPCF | GPCF, WAME | openspec | implemented | 开发/12-GPCF/openspec/changes/spaceai-platform-panorama-convergence/specs/spaceai-platform-panorama-structure/spec.md |
+| GPCF-SPACEAI-PANORAMA-TASKS-20261016 | tasks | openspec/changes/spaceai-platform-panorama-convergence/tasks.md | GPCF | GPCF, WAME | openspec | implemented | 开发/12-GPCF/openspec/changes/spaceai-platform-panorama-convergence/tasks.md |
+| GPCF-DOC-477C45A148 | spaceai-studio-multiplatform-refactor | openspec/changes/spaceai-studio-multiplatform-refactor/README.md | KDS | GPC, WAME, KDS, GPCF | openspec | in_progress | 开发/05-KDS/openspec/changes/spaceai-studio-multiplatform-refactor/README.md |
+| GPCF-OS-SPACEAI-STUDIO-MULTIPLATFORM-REFACTOR-DESIGN-20261010 | design | openspec/changes/spaceai-studio-multiplatform-refactor/design.md | KDS | WAME, KDS, MMC, Studio, SpaceAIStudio, SpaceAI | openspec | in_progress | 开发/05-KDS/openspec/changes/spaceai-studio-multiplatform-refactor/design.md |
+| GPCF-OS-SPACEAI-STUDIO-MULTIPLATFORM-REFACTOR-PROPOSAL-20261010 | proposal | openspec/changes/spaceai-studio-multiplatform-refactor/proposal.md | KDS | GPC, WAME, KDS, GPCF, Studio, SpaceAIStudio, SpaceAI | openspec | in_progress | 开发/05-KDS/openspec/changes/spaceai-studio-multiplatform-refactor/proposal.md |
+| GPCF-DOC-8B83B1A79A | specs | openspec/changes/spaceai-studio-multiplatform-refactor/specs/README.md | KDS | GPC, WAME, KDS, GPCF | openspec | in_progress | 开发/05-KDS/openspec/changes/spaceai-studio-multiplatform-refactor/specs/README.md |
+| GPCF-DOC-D53A9468CA | spaceai-studio-multiplatform-platform | openspec/changes/spaceai-studio-multiplatform-refactor/specs/spaceai-studio-multiplatform-platform/README.md | KDS | GPC, WAME, KDS, GPCF | openspec | in_progress | 开发/05-KDS/openspec/changes/spaceai-studio-multiplatform-refactor/specs/spaceai-studio-multiplatform-platform/README.md |
+| GPCF-OS-SPACEAI-STUDIO-MULTIPLATFORM-REFACTOR-SPEC-20261010 | spec | openspec/changes/spaceai-studio-multiplatform-refactor/specs/spaceai-studio-multiplatform-platform/spec.md | GPCF | WAME, GPCF, Studio, SpaceAIStudio, SpaceAI | openspec | in_progress | 开发/12-GPCF/openspec/changes/spaceai-studio-multiplatform-refactor/specs/spaceai-studio-multiplatform-platform/spec.md |
+| GPCF-OS-SPACEAI-STUDIO-MULTIPLATFORM-REFACTOR-TASKS-20261010 | tasks | openspec/changes/spaceai-studio-multiplatform-refactor/tasks.md | KDS | WAME, KDS, GPCF, Studio, ICP, SpaceAIStudio, SpaceAI | openspec | in_progress | 开发/05-KDS/openspec/changes/spaceai-studio-multiplatform-refactor/tasks.md |
+| GPCF-DOC-5D99E8D484 | spaceai-was-city-flood-replay | openspec/changes/spaceai-was-city-flood-replay/README.md | KDS | GPC, WAME, KDS, GPCF | openspec | implemented | 开发/05-KDS/openspec/changes/spaceai-was-city-flood-replay/README.md |
+| GPCF-SPACEAI-FLOOD-DESIGN-20261016 | design | openspec/changes/spaceai-was-city-flood-replay/design.md | GPCF | GPCF, PVAOS, WAME | openspec | implemented | 开发/12-GPCF/openspec/changes/spaceai-was-city-flood-replay/design.md |
+| GPCF-SPACEAI-FLOOD-PROPOSAL-20261016 | proposal | openspec/changes/spaceai-was-city-flood-replay/proposal.md | KDS | PVAOS, WAME, KDS | openspec | implemented | 开发/05-KDS/openspec/changes/spaceai-was-city-flood-replay/proposal.md |
+| GPCF-DOC-FECC2A4859 | specs | openspec/changes/spaceai-was-city-flood-replay/specs/README.md | KDS | GPC, WAME, KDS, GPCF | openspec | implemented | 开发/05-KDS/openspec/changes/spaceai-was-city-flood-replay/specs/README.md |
+| GPCF-DOC-307EB657D0 | spaceai-city-slice-replay | openspec/changes/spaceai-was-city-flood-replay/specs/spaceai-city-slice-replay/README.md | KDS | GPC, WAME, KDS, GPCF | openspec | implemented | 开发/05-KDS/openspec/changes/spaceai-was-city-flood-replay/specs/spaceai-city-slice-replay/README.md |
+| GPCF-SPACEAI-FLOOD-SPEC-20261016 | spec | openspec/changes/spaceai-was-city-flood-replay/specs/spaceai-city-slice-replay/spec.md | GPCF | GPCF, WAME | openspec | implemented | 开发/12-GPCF/openspec/changes/spaceai-was-city-flood-replay/specs/spaceai-city-slice-replay/spec.md |
+| GPCF-SPACEAI-FLOOD-TASKS-20261016 | tasks | openspec/changes/spaceai-was-city-flood-replay/tasks.md | GPCF | WAME, GPCF | openspec | implemented | 开发/12-GPCF/openspec/changes/spaceai-was-city-flood-replay/tasks.md |
 | GPCF-DOC-4C32519F10 | was-flow-naming-migration | openspec/changes/was-flow-naming-migration/README.md | KDS | GPC, WAME, KDS, GPCF | openspec | draft | 开发/05-KDS/openspec/changes/was-flow-naming-migration/README.md |
 | GPCF-DOC-3EBD68D2C6 | artifacts | openspec/changes/was-flow-naming-migration/artifacts/README.md | KDS | GPC, WAME, KDS, GPCF | openspec | draft | 开发/05-KDS/openspec/changes/was-flow-naming-migration/artifacts/README.md |
 | GPCF-DOC-FCAE31EF6C | Design — was-flow-naming-migration | openspec/changes/was-flow-naming-migration/design.md | KDS | GPC, WAME, KDS, GPCF | openspec | draft | 开发/05-KDS/openspec/changes/was-flow-naming-migration/design.md |
@@ -3404,7 +3434,9 @@ superseded_by: []
 | GPCF-DOC-A233ABB969 | Brain 风险 | projects/brain/RISK.md | Brain | Brain | governance | controlled | 开发/91-治理与验收/projects/brain/RISK.md |
 | GPCF-DOC-D40C9F208D | Brain 路线图 | projects/brain/ROADMAP.md | Brain | Brain | governance | controlled | 开发/91-治理与验收/projects/brain/ROADMAP.md |
 | GPCF-DOC-70E004C4E1 | Brain 状态 | projects/brain/STATUS.md | Brain | Brain | governance | controlled | 开发/91-治理与验收/projects/brain/STATUS.md |
-| GPCF-DOC-2252D3D171 | GCMEM 总体设计（v1.0 · 2026-10-16） | projects/gcmem/MASTER-DESIGN.md | GPCF | GPCF | governance | controlled | 开发/91-治理与验收/projects/gcmem/MASTER-DESIGN.md |
+| GPCF-DOC-GCMEM-MEM0-CMP | GCMEM 与 mem0 全量对比（v2.0 · 2026-10-20） | projects/gcmem/GCMEM-vs-mem0-对比.md | GPCF | GPCF | governance | controlled | 开发/91-治理与验收/projects/gcmem/GCMEM-vs-mem0-对比.md |
+| GPCF-DOC-GCMEM-MEM0-METRICS | GCMEM 与 mem0 多维度指标分析（v2.0 · 2026-10-20） | projects/gcmem/GCMEM-vs-mem0-指标分析.md | GPCF | GPCF | governance | controlled | 开发/91-治理与验收/projects/gcmem/GCMEM-vs-mem0-指标分析.md |
+| GPCF-DOC-2252D3D171 | GCMEM 总体设计（v1.2 · 2026-10-20） | projects/gcmem/MASTER-DESIGN.md | GPCF | GPCF | governance | controlled | 开发/91-治理与验收/projects/gcmem/MASTER-DESIGN.md |
 | GPCF-DOC-CEE8C03181 | GCMEM 风险 | projects/gcmem/RISK.md | GPCF | GCMEM, GPCF | governance | controlled | 开发/91-治理与验收/projects/gcmem/RISK.md |
 | GPCF-DOC-6C2740A26F | GCMEM 路线图 | projects/gcmem/ROADMAP.md | GPCF | GCMEM, GPCF | governance | controlled | 开发/91-治理与验收/projects/gcmem/ROADMAP.md |
 | GPCF-DOC-EAF988D469 | GCMEM 状态 | projects/gcmem/STATUS.md | GPCF | GPCF | governance | controlled | 开发/91-治理与验收/projects/gcmem/STATUS.md |
@@ -3487,6 +3519,8 @@ superseded_by: []
 | GPCF-DOC-9956646696 | XWAIL 风险 | projects/xwail/RISK.md | XWAIL | XWAIL | governance | controlled | 开发/91-治理与验收/projects/xwail/RISK.md |
 | GPCF-DOC-9CF88778FF | XWAIL 路线图 | projects/xwail/ROADMAP.md | XWAIL | XWAIL | governance | controlled | 开发/91-治理与验收/projects/xwail/ROADMAP.md |
 | GPCF-DOC-0EB767BDC4 | XWAIL 状态 | projects/xwail/STATUS.md | XWAIL | XWAIL | governance | controlled | 开发/91-治理与验收/projects/xwail/STATUS.md |
+| GPCF-DOC-58FEF519AE | 项目群能力资产注册表（PG-09 起步） | runtime/asset-registry/README.md | GPCF | WAME, GPCF, KDS, GCMEM, Project, WAE | governance | controlled | 开发/91-治理与验收/runtime/asset-registry/README.md |
+| GPCF-DOC-ACD4E61A57 | 项目群决策台账与日巡检接入（PG-10 起步） | runtime/audit/README.md | GPCF | WAME, GPCF, KDS, GCMEM | governance | controlled | 开发/91-治理与验收/runtime/audit/README.md |
 | GPCF-DOC-4C34AF960B | Loop CodeGraph Goal Optimization Record Template | templates/LOOP_CODEGRAPH_GOAL_OPTIMIZATION_RECORD_TEMPLATE.md | GPCF | GPCF, WAME, KDS | templates | controlled | 开发/12-GPCF/templates/LOOP_CODEGRAPH_GOAL_OPTIMIZATION_RECORD_TEMPLATE.md |
 | GPCF-DOC-0F4B8E6C2A | LOOP 跨会话交接模板 | templates/LOOP_CROSS_SESSION_HANDOFF_TEMPLATE.md | GPCF | GPCF, WAME, KDS | templates | controlled | 开发/12-GPCF/templates/LOOP_CROSS_SESSION_HANDOFF_TEMPLATE.md |
 | GPCF-DOC-LOOP-DELIVERY-ROUND-TEMPLATE | LOOP Delivery Round Template | templates/LOOP_DELIVERY_ROUND_TEMPLATE.md | GPCF | GPCF, WAME, KDS | templates | controlled | 开发/12-GPCF/templates/LOOP_DELIVERY_ROUND_TEMPLATE.md |
@@ -3514,8 +3548,3 @@ superseded_by: []
 | GPCF-DOC-016DDA517E | 工具目录 | tools/README.md | GPCF | GPC, WAME, KDS, GPCF | tools | controlled | 开发/12-GPCF/tools/README.md |
 | GPCF-DOC-C9A7E8D2B1 | Frontmatter 写入权责清单（tools/kds-sync） | tools/kds-sync/FRONTMATTER_OWNERSHIP.md | GPCF | GPC, WAME, KDS, GPCF | tools | controlled | 开发/12-GPCF/tools/kds-sync/FRONTMATTER_OWNERSHIP.md |
 | GPCF-DOC-C039431381 | KDS Sync Tools | tools/kds-sync/README.md | GPCF | GPC, KDS, GPCF | tools | controlled | 开发/12-GPCF/tools/kds-sync/README.md |
-| GPCF-DOC-09A691DC1E | gcmem-vision-r0 | openspec/changes/gcmem-vision-r0/README.md | KDS | GCMEM, GPCF, KDS | openspec | draft | 开发/05-KDS/openspec/changes/gcmem-vision-r0/README.md |
-| GPCF-GCMEM-VISION-R0-PROPOSAL-20261021 | GCMEM R0 可信基线变更提案（gcmem-vision-r0） | openspec/changes/gcmem-vision-r0/proposal.md | GPCF | GCMEM, GPCF, KDS | openspec | draft | 开发/91-治理与验收/openspec/changes/gcmem-vision-r0/proposal.md |
-| GPCF-GCMEM-VISION-R0-DESIGN-20261021 | GCMEM R0 变更设计（gcmem-vision-r0） | openspec/changes/gcmem-vision-r0/design.md | GPCF | GCMEM, GPCF, KDS | openspec | draft | 开发/91-治理与验收/openspec/changes/gcmem-vision-r0/design.md |
-| GPCF-GCMEM-VISION-R0-TASKS-20261021 | GCMEM R0 变更任务清单（gcmem-vision-r0） | openspec/changes/gcmem-vision-r0/tasks.md | GPCF | GCMEM, GPCF, KDS | openspec | draft | 开发/91-治理与验收/openspec/changes/gcmem-vision-r0/tasks.md |
-| GPCF-GCMEM-VISION-R0-SPEC-20261021 | GCMEM R0 能力规格（gcmem-vision-r0） | openspec/changes/gcmem-vision-r0/specs/gcmem-vision-r0/spec.md | GPCF | GCMEM, GPCF, KDS | openspec | draft | 开发/91-治理与验收/openspec/changes/gcmem-vision-r0/specs/gcmem-vision-r0/spec.md |

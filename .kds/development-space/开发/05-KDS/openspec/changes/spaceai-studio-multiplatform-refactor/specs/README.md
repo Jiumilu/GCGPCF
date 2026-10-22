@@ -16,6 +16,7 @@ supersedes: []
 superseded_by: []
 ---
 
+
 # specs
 
 目录：`openspec/changes/spaceai-studio-multiplatform-refactor/specs`
@@ -36,6 +37,6 @@ KDS 空间：`开发`
 
 | doc_id | title | source_path | project | status |
 | --- | --- | --- | --- | --- |
-| GPCF-DOC-8B83B1A79A | specs | openspec/changes/spaceai-studio-multiplatform-refactor/specs/README.md | KDS | draft |
-| GPCF-DOC-D53A9468CA | spaceai-studio-multiplatform-platform | openspec/changes/spaceai-studio-multiplatform-refactor/specs/spaceai-studio-multiplatform-platform/README.md | KDS | draft |
-| GPCF-OS-SPACEAI-STUDIO-MULTIPLATFORM-REFACTOR-SPEC-20261010 | spec | openspec/changes/spaceai-studio-multiplatform-refactor/specs/spaceai-studio-multiplatform-platform/spec.md | GPCF | draft |
+| GPCF-DOC-8B83B1A79A | specs | openspec/changes/spaceai-studio-multiplatform-refactor/specs/README.md | KDS | in_progress |
+| GPCF-DOC-D53A9468CA | spaceai-studio-multiplatform-platform | openspec/changes/spaceai-studio-multiplatform-refactor/specs/spaceai-studio-multiplatform-platform/README.md | KDS | in_progress |
+| GPCF-OS-SPACEAI-STUDIO-MULTIPLATFORM-REFACTOR-SPEC-20261010 | spec | openspec/changes/spaceai-studio-multiplatform-refactor/specs/spaceai-studio-multiplatform-platform/spec.md | GPCF | in_progress |
