@@ -1,0 +1,25 @@
+{
+  "_说明": "PQC 真实客户试点回执模板（占位符必须替换后才能通过 S4 推进校验）",
+  "template": true,
+  "receipt_id": "<RECEIPT-ID>",
+  "feature": "F-032",
+  "customer_ref": "<客户代号，真实姓名不入库>",
+  "order_ref": "<单据编号或脱敏指纹>",
+  "run_date": "<YYYY-MM-DD>",
+  "data_class": "<real|fixture|dry_run|poc|synthetic>",
+  "authorization_granted": "<true|false>",
+  "auth_id": "AUTH-PG-PQC-REAL-PILOT-20261022",
+  "chain_steps": [
+    "S1 脱敏导入（最小必要字段）",
+    "S2 资料解析 + 定额匹配（人工确认候选）",
+    "S3 确定性测算（Decimal + 版本绑定 + 价格快照 provenance）",
+    "S4 偏差分解（量差/消耗差/价差，恒等式校验）",
+    "S5 三级审批（含复核人签认）",
+    "S6 出具真实业务回执"
+  ],
+  "reviewer": "<复核人角色/工号，姓名脱敏>",
+  "approval_chain": ["<一级审批>", "<二级审批>", "<三级审批>"],
+  "rollback": "<回滚演练记录：时间/命令/耗时/回滚前后断言>",
+  "evidence_paths": ["<回读路径>"],
+  "non_declaration": "不声明 accepted/integrated/production_ready/customer_accepted"
+}

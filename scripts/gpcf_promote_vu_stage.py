@@ -28,10 +28,16 @@ LEDGER = ROOT / "runtime" / "vu-ledger.yaml"
 RECEIPTS = ROOT / "runtime" / "authorization-receipts.yaml"
 ALLOWED_FROM = {"S0", "S1", "S2", "S3"}
 FORBIDDEN_DATA_CLASS = {"fixture", "dry_run", "poc", "synthetic"}
+# 反作弊：模板/占位符/TODO 一律拒绝（防止把模板当真实证据推进 S4）
+PLACEHOLDER_MARKERS = ("<", ">", "TODO", "TBD", "占位", '"template": true', "template: true")
 
 
 def validate_evidence(text: str) -> list[str]:
     problems = []
+    if any(marker in text for marker in PLACEHOLDER_MARKERS if marker not in ("<", ">")):
+        problems.append("evidence 含模板占位符/TODO，必须替换为真实内容")
+    if "<" in text or ">" in text:
+        problems.append("evidence 含尖括号占位符，必须替换为真实内容")
     if "data_class: real" not in text and '"data_class": "real"' not in text:
         problems.append("evidence 缺少 data_class: real（禁止用 fixture/dry_run/poc/synthetic 提升）")
     if "authorization_granted: true" not in text and '"authorization_granted": true' not in text:

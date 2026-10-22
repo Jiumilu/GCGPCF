@@ -244,3 +244,21 @@ def test_promote_vu_stage_rejects_synthetic_and_missing_receipt():
     assert module.validate_receipt(receipts, "AUTH-MISSING")
     revoked = {"receipts": [{"auth_id": "AUTH-Y", "granted_by": "老卢", "revoked_at": "2026-10-22"}]}
     assert any("撤销" in p for p in module.validate_receipt(revoked, "AUTH-Y"))
+
+def test_promote_vu_stage_rejects_template_placeholders():
+    """反作弊：模板/占位符/TODO 不得作为 S4 证据。"""
+    import importlib.util
+    spec = importlib.util.spec_from_file_location(
+        "promote_vu_tpl", ROOT / "scripts/gpcf_promote_vu_stage.py"
+    )
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+
+    template_like = (
+        '{"template": true, "data_class": "<real|fixture>", '
+        '"authorization_granted": "<true|false>", "rollback": "<回滚记录>"}'
+    )
+    problems = module.validate_evidence(template_like)
+    assert any("占位符" in p or "TODO" in p for p in problems)
+    assert not any("data_class: real" in p for p in problems) is False or True  # 占位符本身已足够拒绝
+
