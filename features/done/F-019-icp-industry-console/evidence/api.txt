@@ -1,0 +1,10 @@
+# F-019 API evidence（2026-10-23 复核）
+# 环境：GlobalCloud ICP，PYTHONPATH=src python3 -m uvicorn gc_icp.api:app --port 8091
+# 结果：5/5 GET 200
+health 200
+industry-model 200
+resource-pools 200
+scenarios 200
+constitution-governance 200
+# 测试：PYTHONPATH=src python3 -m pytest -q -> 33 passed
+# 服务已停止

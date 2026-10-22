@@ -91,3 +91,9 @@ superseded_by: []
 
 1. 未做：PKC/Brain 仓任何改动；GPCF 归档；M3 Studio 例外与 Brain/PVAOS 批次；视觉回归（他仓环境）；
 2. 非声明：不声明 PKC 已接入/已集成/生产就绪/客户验收；不声明 O2 完成；F-034 不提升状态。
+
+## 2026-10-23 闸门证据更新
+
+- `task_flow_e2e_status` → pass：`logs/05-e2e-dual-role.log`（admin 7 项可见、viewer 0/0、users 403、pageerror 0）。
+- `evidence_overexposure_gate` → pass：`logs/15-e2e-machine-fields.log`（5 页 0 命中 + 金丝雀自检）。
+- 注意：F-034 仍有 O1/O3/M3 与运行时阻塞，**不因闸门更新而关闭**。

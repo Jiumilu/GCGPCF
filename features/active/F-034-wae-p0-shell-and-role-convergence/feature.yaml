@@ -87,9 +87,9 @@ ui_product_first_control:
     functional_completeness: pass
     quality_baseline: pass
     multi_user_usability: waived
-    task_flow_e2e_status: pending
+    task_flow_e2e_status: pass
     accessibility_status: waived
-    evidence_overexposure_gate: pending
+    evidence_overexposure_gate: pass
   status_ceiling: partial
 created_at: "2026-10-22T10:02:42+00:00"
 updated_at: "2026-10-22T14:10:00+00:00"

@@ -1,0 +1,53 @@
+{
+  "username": "f010-e2e-admin",
+  "forcedChangeApplied": true,
+  "steps": [
+    {
+      "step": "login-page-loaded",
+      "at": "2026-10-22T09:01:18.599Z",
+      "url": "http://localhost:4300/"
+    },
+    {
+      "step": "empty-submit-recovery",
+      "at": "2026-10-22T09:01:18.757Z",
+      "message": "请填写账号与口令"
+    },
+    {
+      "step": "forced-password-change-page",
+      "at": "2026-10-22T09:01:21.401Z"
+    },
+    {
+      "step": "password-changed",
+      "at": "2026-10-22T09:01:22.256Z",
+      "forced": true
+    },
+    {
+      "step": "workbench-home",
+      "at": "2026-10-22T09:01:22.319Z",
+      "accountVisible": true
+    },
+    {
+      "step": "enter-workspace",
+      "at": "2026-10-22T09:01:24.022Z",
+      "dialogVisible": true,
+      "snippet": "项目管理器\nv2.6\n新建项目\n导入项目\n导出项目\n✕\n最近项目\n收藏项目\n所有项目\n归档项目\n回收站\n共享项目\n最近打开\n全部类型\n全部状态\n已选择 0 / 4 个项目\n全选当前页\n清空选择\n批量导出\n批量归档\n批量移入回收站\n移动银行应用\nrecent\n活跃\n\n现代化移动银行界面设计\n\n进度\n85%\nmobile\n"
+    },
+    {
+      "step": "close-workspace-dialog",
+      "at": "2026-10-22T09:01:24.708Z"
+    },
+    {
+      "step": "return-home",
+      "at": "2026-10-22T09:01:24.812Z"
+    },
+    {
+      "step": "logout-return-login",
+      "at": "2026-10-22T09:01:25.211Z",
+      "url": "http://localhost:4300/"
+    }
+  ],
+  "pageErrors": [],
+  "consoleErrors": [
+    "Failed to load resource: the server responded with a status of 401 (Unauthorized)"
+  ]
+}
