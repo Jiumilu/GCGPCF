@@ -28,6 +28,13 @@ evidence:
   screenshots: pass
   api: waived
   summary: pass
+verification:
+  tests:
+  - python3 tools/kds-sync/validate_gpcf_2_feature_workspace.py
+  build:
+  - python3 tools/kds-sync/check_python_bytecode.py
+  waivers:
+    api: 该 Feature 已于历史阶段关闭，api 证据不适用于其交付形态；按 P17 补验登记范围理由（历史 Feature，现行规则后置生效）。
 blockers:
 registration_note: 编号 F-020（官方工具 gpcf_new_feature.py 分配·自动入队）；老卢拍板序列（2026-10-14：规划→「继续」×2=M1/M2）；交付方式=本线（Hermes）。
 source_plan: 体系/AaaS服务商业控制台_全量规划_v0.1.md（KDS）

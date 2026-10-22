@@ -1,0 +1,38 @@
+# GlobalCloud GPCF · 受控例外台账（P17）
+# 规则：append-only；每条必须有 approved_by 与 until（到期自动失效转 warn，不得自动续期）。
+# 依据：老卢 2026-10-22 21:24 裁定「P17 现在做：能补的补验，不能补的登受控例外」。
+schema_version: 1
+generated_at: "2026-10-22T21:35:00+08:00"
+rule_ref: "09-status/globalcloud-evidence-rule-version-v1.0.md"
+policy:
+  expires_action: "到期后自动转为 warn，并在门禁报告列出；续期需重新登记与授权"
+  audit_doc: "09-status/globalcloud-done-feature-audit-20261022.md"
+exceptions:
+  - exemption_id: EXC-DONE-F-001
+    subject: F-001-supplier-onboarding
+    rule: done_feature_evidence_gate
+    reason: "历史 Feature：acceptance 与 scope.in 为空（立项规范早于现行规则），无法在不改写历史结论的前提下补验；保留原状并登记例外。"
+    approved_by: laolu
+    until: "2027-01-20"
+    evidence: "features/done/F-001-supplier-onboarding/feature.yaml"
+  - exemption_id: EXC-DONE-F-006
+    subject: F-006-knowledge-e2e-flow
+    rule: done_feature_evidence_gate
+    reason: "历史 Feature：acceptance 与 scope.in 为空；证据集在现行规则前形成，不追溯改写。"
+    approved_by: laolu
+    until: "2027-01-20"
+    evidence: "features/done/F-006-knowledge-e2e-flow/feature.yaml"
+  - exemption_id: EXC-DONE-F-007
+    subject: F-007-reports-data-flow
+    rule: done_feature_evidence_gate
+    reason: "历史 Feature：acceptance 与 scope.in 为空；补验需重构历史验收口径，超出 P17 受控范围。"
+    approved_by: laolu
+    until: "2027-01-20"
+    evidence: "features/done/F-007-reports-data-flow/feature.yaml"
+  - exemption_id: EXC-DONE-F-008
+    subject: F-008-icp-project-group-admission
+    rule: done_feature_evidence_gate
+    reason: "其 acceptance 明确要求该 Feature 保持 active 形态（常驻准入载体），与 done 关闭规则冲突；保留 active 语义，登记例外。"
+    approved_by: laolu
+    until: "2027-01-20"
+    evidence: "features/done/F-008-icp-project-group-admission/feature.yaml"

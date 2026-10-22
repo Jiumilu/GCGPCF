@@ -18,13 +18,16 @@ concurrency:
 jobs:
   standards:
     name: 统一规范检查（R01-R20）
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, macOS]
     timeout-minutes: 10
+    env:
+      GIT_LFS_SKIP_SMUDGE: "1"
     steps:
       - name: Checkout
         uses: actions/checkout@v4
         with:
           path: repo
+          lfs: false
 
       - name: 组装检查工作区（内嵌快照，无跨仓访问）
         run: |

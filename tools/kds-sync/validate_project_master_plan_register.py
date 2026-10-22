@@ -89,13 +89,13 @@ def main() -> int:
         failures.append("legacy token GPC-Native must not appear in the register")
 
     authoritative_paths = [
-        ROOT.parent / "WAS世界资产体系/docs/GlobalCloud WAS 总体方案.md",
+        ROOT.parent / "GlobalCloud WAS/docs/GlobalCloud WAS 总体方案.md",
         ROOT.parent / "GlobalCloud XWAIL/GlobalCloud XWAIL 总体方案.md",
         ROOT.parent / "GlobalCloud AAAS/docs/GlobalCloud AaaS 总体方案.md",
         ROOT.parent / "GlobalCloud GPC/GlobalCloud GPC 总体方案.md",
         ROOT.parent / "GlobalCloud WAME/GlobalCloud WAME 总体方案.md",
         ROOT.parent / "GlobalCloud GFIS/GlobalCloud GFIS 总体方案.md",
-        ROOT.parent / "GlobalCloud PVAOS/GlobalCloud PVAOS 总体方案.md",
+        ROOT.parent / "GlobalCloud PVA/GlobalCloud PVA 总体方案.md",
         ROOT.parent / "GlobalCloud KDS/GlobalCloud KDS 总体方案.md",
         ROOT.parent / "GlobalCloud Brain/GlobalCloud Brain 总体方案.md",
         ROOT.parent / "GlobalCloud Studio/GlobalCloud Studio 总体方案.md",
@@ -105,7 +105,7 @@ def main() -> int:
         ROOT.parent / "GlobalCloud XGD/GlobalCloud XGD 总体方案.md",
         ROOT.parent / "GlobalCloud XiaoC/GlobalCloud XiaoC 总体方案.md",
         ROOT.parent / "GlobalCloud XiaoG/GlobalCloud XiaoG 总体方案.md",
-        ROOT.parent / "GlobalCoud GPCF/GlobalCloud GPCF 总体方案.md",
+        ROOT.parent / "GlobalCloud GPCF/GlobalCloud GPCF 总体方案.md",
     ]
     required_plan_tokens = [
         "与项目群主方案的继承关系",
