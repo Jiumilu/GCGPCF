@@ -1,0 +1,37 @@
+schema_version: 1
+registry_status: bootstrap
+owner: GPCF
+domain: governance
+updated: 2026-10-22
+source_tasks:
+  - PG-09（能力复用中台：提示词/技能/模板/组件注册表，起步）
+  - PG-10（状态机日巡检 + 决策台账 + 周度瓶颈评审）
+entries:
+  - id: startlux-decision
+    title: StartLux-Decision v1.1 决策模型
+    version: 1.1.0
+    type: capability_service
+    owner: WAME
+    governor: GPCF
+    scope:
+      - 决策支持：闸口建议、四空间归类、紧急度与风险定级、结构化选项概率
+      - 消费方：DSH、Hermes、PMC、WAE、GCMEM
+    access: mcp+skill
+    license:
+      weights: CC BY-NC 4.0（禁止商用，仅内部使用）
+      code: Apache-2.0
+      commercial_use: 需 StartLux Labs 书面授权
+    evidence:
+      - GPCF 权责裁定 v1.1：02-governance/constitution-governance-responsibility.md（doc_id GPCF-DOC-CONSTITUTION-GOVERNANCE-RESPONSIBILITY-20260712）
+      - 决策台账：/Users/lujunxiang/logs/startlux/decisions.jsonl（5 条 review 采纳行）
+      - 老卢 2026-10-22 确认 A 两层归属
+    constraints:
+      - 不得作为授权、放行或状态提升依据
+      - 不替代人工裁决；gate(redline) 仅作建议
+      - 不复制权重或推理正文到其它项目
+      - 不对外承诺 SLA 或服务等级
+    approver:
+      confirmed_by: 老卢
+      confirmed_on: 2026-10-22
+      structure: two_layer
+    related: [WAME, GPCF, KDS, GCMEM, Project, WAE]

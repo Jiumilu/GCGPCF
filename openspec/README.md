@@ -191,3 +191,8 @@ KDS 路径前缀：`开发/12-GPCF/openspec/`
 | GPCF-DOC-410F29E347 | world-project-registration | openspec/changes/world-project-onboarding/specs/world-project-registration/README.md | KDS | draft |
 | GPCF-WORLD-OPENSPEC-CHANGES-WORLD-PROJECT-ONBOARDING-SPECS-WORLD-PROJECT-REGISTRATION-SPEC-MD-20261016 | spec | openspec/changes/world-project-onboarding/specs/world-project-registration/spec.md | GPCF | draft |
 | GPCF-DOC-89FBFF25D3 | OpenSpec 主规格 | openspec/specs/README.md | KDS | controlled |
+| GPCF-DOC-09A691DC1E | gcmem-vision-r0 | openspec/changes/gcmem-vision-r0/README.md | KDS | draft |
+| GPCF-GCMEM-VISION-R0-PROPOSAL-20261021 | GCMEM R0 可信基线变更提案（gcmem-vision-r0） | openspec/changes/gcmem-vision-r0/proposal.md | GPCF | draft |
+| GPCF-GCMEM-VISION-R0-DESIGN-20261021 | GCMEM R0 变更设计（gcmem-vision-r0） | openspec/changes/gcmem-vision-r0/design.md | GPCF | draft |
+| GPCF-GCMEM-VISION-R0-TASKS-20261021 | GCMEM R0 变更任务清单（gcmem-vision-r0） | openspec/changes/gcmem-vision-r0/tasks.md | GPCF | draft |
+| GPCF-GCMEM-VISION-R0-SPEC-20261021 | GCMEM R0 能力规格（gcmem-vision-r0） | openspec/changes/gcmem-vision-r0/specs/gcmem-vision-r0/spec.md | GPCF | draft |

@@ -5,13 +5,13 @@ project: GPCF
 related_projects: [GPCF]
 domain: governance
 status: controlled
-version: v1.3
+version: v1.10
 owner: GPCF
 kds_space: 开发
 kds_path: 开发/91-治理与验收/projects/spaceai/STATUS.md
 source_path: projects/spaceai/STATUS.md
 sync_direction: bidirectional
-last_reviewed: '2026-10-20'
+last_reviewed: '2026-10-22'
 supersedes: []
 superseded_by: []
 ---
@@ -20,8 +20,8 @@ superseded_by: []
 
 ## 项目定位（2026-10-16 更新）
 
-- **当前主项目：GlobalCloud SpaceAI Platform**（`../GlobalCloud SpaceAI Platform`，安防监控平台统一重构，独立 Git 仓）。
-- `../GlobalCloud SpaceAI` 为 **CWME 归档与本地应用区**（保留 `apps/city-model/`、`prototypes/was-city-flood/`、CWME 评审文档与 `.harness/` 证据）。
+- **当前唯一正本：GlobalCloud SpaceAI Platform**（`../GlobalCloud SpaceAI Platform`，安防监控平台统一重构，独立 Git 仓）。
+- 原 `../GlobalCloud SpaceAI`（SpaceAI-Legacy，CWME 归档与本地应用区）**已于 2026-10-22 归档**：与 Platform 同源双克隆分叉，Platform 为唯一正本；Legacy 46 个独有提交已打 tag `archive-spaceai-legacy-20261022`，目录移至 `_archive/2026-10-22-retired-assets/GlobalCloud SpaceAI`（可原路 `mv` 恢复，见其 `MANIFEST.md`）。CWME 资产（`apps/city-model/`、`apps/was-city-flood/`、CWME 评审文档与 `.harness/` 证据）随之归档，F-017 的证据路径以归档路径为准。
 - 历史 Windows/.NET 桌面工程（`MB3000.sln` 及各 C# 项目）于 **2026-10-16 按用户指示丢弃**，本地不再保留；可恢复副本在 `/tmp/gcspaceai-backup/legacy-windows-source-20261016.tar.gz`（含疑似明文凭据，外发前须脱敏）。
 - 角色：external；目录名与中央注册别名沿用 SpaceAI。
 
@@ -32,23 +32,31 @@ superseded_by: []
 - 为满足 GitHub 100MB 单文件限制，已用 `git filter-repo` 剔除历史中的 195MB 废弃备份库（`data/spaceai.db.prename.bak`）：433 提交保留、`.git` 74M→15M、**重写前后 HEAD 树哈希一致**（只改历史未动内容）。
 - 推送均为快进，未 force push，未覆盖远端既有历史。
 
-## 运行状态（2026-10-20 复测）
+## 运行状态（2026-10-22 复测）
 
-- 平台服务：BFF `127.0.0.1:39010`（`/healthz` status ok、263 端点、库 SIMULATED 39 表 510 行）；前端 `127.0.0.1:5273`（Vite 6.4.4）。
-- CWME 本地应用：`apps/city-model/index.html` 可浏览器直开；预览服务 `127.0.0.1:4173`。
-- 全量测试：**87 文件 / 807 项全过**（2026-10-20 T4 修复后实测，连续三轮：**31.2s / 22.1s / 19.2s**）。
-- 测试成本：修复前 771s（曾 12–20 分钟不结束）、临时占用约 28GB；修复后 **~20–31s、临时占用≈0**（APFS 写时复制）。
-- BFF 启动：修复后 **约 6 秒**就绪（此前 90 秒–6 分钟），且重启不再向运行库追加数据。
+- 平台服务：BFF `127.0.0.1:39010`（`/healthz` status ok、mode demo、**263 端点**、库摘要 SIMULATED 39 表 510 行）；前端 `127.0.0.1:5273`（Vite 6.4.4）。
+- 全量测试：**143 文件 / 1293 例全过**（2026-10-22 20:09 实测，exit 0；含新增时间索引守卫 4 例与并行会话用例）；`pnpm typecheck` **0 错误**。
+- 数据规模：`data/spaceai.db` **181.3MB**（190,074,880 B = 压缩后 160.5MB + 时间索引 20.8MB；压缩前 2069.5MB）——历史归档表 2196 万行已外置到 `data/archives/citylink-archive-20261020.db`（1984.3MB，manifest 登记），备份 `data/backups/spaceai.db.bak-20261022T114118`；`EXT_CityLink` 61,289、`EXT_SceneAsset` 50,179、`EXT_ObolObservation` 约 52.9 万、`IngestEvent` 约 14.2 万（随 BFF 正常增长）。
+- 测试成本：修复前 771s、临时占用约 28GB；T4 + D-8 后 ~20–26s；2026-10-22 再上**小种子库**：基库 160.3MB → **18.9MB**，构建 10.4–13.1s → **0.49–0.61s**，全量峰值临时占用 4.15GB → **0.38–0.51GB**。
+- BFF 启动：约 6 秒就绪（2026-10-20 口径；2026-10-22 只复测 `/healthz`，未复测冷启动耗时）。
+- CWME 本地应用：`apps/city-model/index.html` 已随 Legacy 归档移出根目录（2026-10-22），F-017 证据路径以归档路径为准。
+- e2e：`e2e/` 9 个 spec（含 `panorama-l4` 3 条、`panorama-operate` 5 条、`panorama-smoke`）；**已常态化**：`playwright.config.ts` 内置 `webServer`（BFF + dev，`reuseExistingServer`），`pnpm e2e:smoke` 一条命令跑通，不再手工起服务（D-12 已修复）。
+- L4 一键验收：`harness/l4-acceptance/` **PASS ×2**（smoke-sim 60 FPS / smoke-demo 56 FPS，0 fail；资产为 placeholder/SIMULATED）。
 - 数据性质：`data/spaceai.db` 为合成样例库（`_seed_info.data_kind = SIMULATED`），非真实业务数据。
 
 ## 当前 Feature
 
-- **F-017 cwme-city-world-model-engine**（active，partial）：CWME 城市模型与内涝切片回放；本地应用入口为 ../GlobalCloud SpaceAI/apps/city-model/index.html，证据索引在 ../GlobalCloud SpaceAI/.harness/runs/20261016-080823-spaceai-was-city-flood-replay/evidence-index.yaml。
+- **F-017 cwme-city-world-model-engine**（active，partial）：CWME 城市模型与内涝切片回放；本地应用入口为 `_archive/2026-10-22-retired-assets/GlobalCloud SpaceAI/apps/city-model/index.html`（原 `../GlobalCloud SpaceAI`，2026-10-22 归档），证据索引在同目录 `.harness/runs/20261016-080823-spaceai-was-city-flood-replay/evidence-index.yaml`。
 - 关联 OpenSpec：openspec/changes/spaceai-was-city-flood-replay；仅有合成样例和本地浏览器验证，不声明 Platform 集成或真实城市运行。
-- **F-024 panorama-engineering-convergence**（P1，active，**iteration 1**）：全景态势工程收敛；证据已补齐（tests/build/api pass、screenshots waived 附理由），OpenSpec 变更状态 **implemented**（22/22）。
-- 交付：组件 3351 → 3310 行、新增 8 个纯模块与 8 个测试文件（188 项）；模板零改动；修复 D-4、D-3、D-5。
+- **F-024 panorama-engineering-convergence**（P1，active，**iteration 2**）：全景态势工程收敛；iteration 1 证据保持有效（tests/build/api pass、screenshots waived 附理由），iteration 2 于 2026-10-22 补记 B5a–B5e 的拆分收益；B5f/B5g 外提（`441f55c` / `9f4fbcb`）归 F-038 记账。
+- 交付：iteration 1 组件 3351 → 3310 行、8 个纯模块 + 188 项测试、模板零改动、修复 D-4/D-3/D-5；iteration 2 再外提 5 个组合式（`useFeedback`/`useCardConfig`/`useCameraModes`/`useCardOrder`/`useDemoModes`，新增 9 例）；B5f/B5g 后组件 **3638 行**（气泡层与卡片列另拆组件：PanoramaBubbles / PanoramaCardColumn）。
 - 证据：`../GlobalCloud SpaceAI Platform/harness/runs/20261016-panorama-convergence/`；Feature 证据在 `features/active/F-024-.../evidence/`。
+- **F-037 map-3d-l4-precision-model**（P1，active，iteration 1，2026-10-22 追溯建账）：三维地图 L4 精模链路（口径/清单/BFF/引擎/切换回落/接入工具链/一键验收/演练/CI）全部落地并本地提交 6 个提交；**真实 L4 资产未接入**（采购与自采暂停，待授权）。
+- F-037 证据：`../GlobalCloud SpaceAI Platform/harness/l4-acceptance/`（PASS ×2）、`harness/l4-evidence/`、`docs/3d/l4-*.md`；Feature 证据在 `features/active/F-037-.../evidence/`。
+- **F-038 panorama-operation-normalization**（P1，active，**iteration 4**，2026-10-22 追溯建账）：全景态势操作流程规范化执行到 B5j（B0–B5j 共 16 个本地提交（含合并）；143 项操作 / 106 条问题审计 + N1–N12 方案）；**B5 五大块已全部外提完成**（气泡 B5f / 卡片列 B5g / 飞翔+CWME B5h、B5i / 控制器 B5j）；**剩余**：i18n 约 600 行、人工验收、script 行数目标未达（PanoramaDeep 总 3590 行 / script 2956 行）。
+- F-038 证据：`../GlobalCloud SpaceAI Platform/.harness/runs/20261022-panorama-ops/`（01–21）、`docs/全景态势_操作流程规范化与合理化方案_20261022.md`；Feature 证据在 `features/active/F-038-.../evidence/`。
 - 其余两个 spaceai OpenSpec 变更：`spaceai-was-city-flood-replay` **implemented**（12/12）；`spaceai-studio-multiplatform-refactor` **in_progress**（91/93，剩字段级适配与移动端适配）。
+- **治理欠账（2026-10-22 登记，同日关闭）**：F-037 / F-038 当时未建 `openspec/changes/spaceai-*` 变更；2026-10-22 晚已补建 `spaceai-l4-precision-model`（**implemented**，真实资产仍待授权）与 `spaceai-panorama-operation-normalization`（**in_progress**，B5 剩余四大块未完成），三层对齐表门禁通过。
 
 ## 本轮迭代（2026-10-20 起，三条主线）
 
@@ -64,6 +72,37 @@ superseded_by: []
 | T4 | 测试基座 | **已完成**：定位城市数据幂等守卫 off-by-one（`> 50000` 而实际恰为 50,000）致每次 createApp 重建 2133 万行；修复后全量 771s→**~20–31s**、createApp 106s→0.3s、r09 143s→1s；`DB_PATH` 惰性可注入；18 个测试已隔离；**连续三轮全绿（87 文件/807 项）** |
 | 前端 | SSE 收口 / PanoramaDeep 拆分 / 设计系统 | **SSE 收口 ✅**、**设计系统 ✅**（令牌落地、23 个 `--gc-*` 全部有定义、浏览器实测生效）；**PanoramaDeep 拆分：部分达成**——组件 3351 → **3184 行**，外提 **20 个模块**（新增测试 100+ 项），并补了 **组件级测试**（3 项，经变异验证可捕获「类型与单测都过、运行时崩」的事故）。未达原计划「脚本 <800 行」（当前 2191 行，差 2.7×）；停止依据与建议见主项目 `harness/runs/20261020-final-gate/ASSESSMENT.md` 第六节 |
 | 性能 | 无 GPU 环境可用性（SwiftShader） | **✅ 完成**：实测有 GPU 75.2 FPS / SwiftShader **4.8 FPS**；诊断确认瓶颈是**逐帧重绘**而非填充率（隐藏画布 5.5→60 FPS；0.6 分辨率仍只 5.4 FPS）；新增渲染档位判定（软件渲染 → 关阴影/雾/光照/FXAA + 0.6 分辨率 + **按需渲染** + 心跳 requestRender），实测软件渲染 **4.8 → 56.4 FPS（11.75×）**，有 GPU 侧 70.5 FPS 无回归；画面经像素采样验证（16 采样点 16 色）非冻结，21 卡、0 错误 |
+
+## 本轮迭代（2026-10-22，多线并行）
+
+老卢 2026-10-22 指令：三维地图模型升级为 L4 级精模、白盒模型保留可切换；随后同意**暂停 L4 自采**、转平台欠账。
+本轮四条线均本地提交、**0 推送**，验收状态一律保持 partial。
+
+| 线 | 主题 | 状态 | 证据 |
+|---|---|---|---|
+| A | 三维地图 L4 精模（F-037） | **链路完成，真实资产缺**：6 提交（管线 / 工具链 / 演练 / 验收 / CI / 采购包）；L4 相关 53 例、全仓 1242 例；一键验收 PASS ×2；占位与真实三处标注 | `harness/l4-acceptance/`、`docs/3d/l4-*.md` |
+| B | 全景态势操作规范化（F-038） | **主体完成（B0–B5j，16 提交含合并）**：143 项操作 / 106 条问题审计 → N1–N12；六组 P0、Esc 单一契约、⌘K 命令面板、偏好收口；**B5 五大块全部外提**（气泡 / 卡片列 / 飞翔 / CWME / 控制器），组件 3955 → 3590 行；e2e 5/5；余 i18n 约 600 行 / 人工验收 / script <800 目标 | `.harness/runs/20261022-panorama-ops/01–21` |
+| C | 平台欠账清理 | **完成**：`log-viewer` / `scene-hub` 零测试补齐 26 例（`063cc49`）；项目群规范四件套与 `.gitignore`（`6e7e227`）；README / AGENTS / Manifest 缺失章节（`1b7f4b1`） | 提交记录；全仓 1242 例 |
+| D | 治理账实（本轮） | **完成**：追溯建 F-037 / F-038 账、F-024 iteration 2、STATUS / RISK / ROADMAP 同步；**OpenSpec 变更补建与 KDS 镜像同步登记为欠账** | 本文件、`features/active/F-037-*`、`F-038-*` |
+
+**边界**：未 push（main 领先 `origin/main` 34 提交，随并行会话变动，以 `git rev-list --count origin/main..main` 为准）、未部署、未接真实设备或生产数据；L4 采购 / 自采 / 合规外部数据均待授权。
+
+## 本轮迭代（2026-10-22 晚，待办排序执行）
+
+按老卢指令「用决策模型确认所有待办排序执行」：以 `priority_rank` 逐轮淘汰得序列
+**A2 刷新账实 → D e2e → C 测试基座 → E L4 采购/合规 → F 治理收尾 → B 数据保留 → G 推送 / H 全景收尾**（末两位模型分歧且 G 属红线，后置）。
+
+| 序 | 待办 | 结果 | 提交 / 证据 |
+|---|---|---|---|
+| 1 | A2 刷新账实 | ✅ 完成：B5f、136/1251 例、提交数改为实查口径；queue 补 F-032/F-033 → repository-only 门禁 pass | GPCF `95383b013` |
+| 2 | D e2e 常态化 | ✅ 完成：webServer 自起 BFF+dev、`e2e:smoke`、修 `dev:web` PATH；pano-smoke 1 passed / 33.2s | 平台 `ca96bee` |
+| 3 | C 测试基座 | ✅ 完成：小种子库 18.9MB、峰值 0.4–0.5GB、138 文件/1263 例连绿；DB_PATH 注入 4 例证明 | 平台 `6d7fffc` |
+| 4 | E L4 采购/合规 | ✅ 完成（文档）：RFQ 执行包 7 件 + 合规外部数据源核验清单（未申请 key、未对外发送） | 平台 `6c8c9bc` |
+| 5 | F 治理收尾 | ✅ 完成：补建两个 OpenSpec 变更（三层对齐 `[OK]`），关闭治理欠账 | GPCF `4354c5baf` |
+| 6 | B 数据保留 | ✅ 完成：方案 + 工具 + 压缩（2069.5MB → 160.5MB）+ **时间索引**（近 1 天查询 5–9ms→0.05ms） | 平台 `e06c9da`、`23a1a4d`、`e239242` |
+| 7 | G 推送 / H 全景收尾 | G ✅ **已推送**（20:09，main → 私有远端，含合并远端 CI commit）；H ✅ 由并行会话完成 B5f–B5j（五大块全部外提） | 远端 `070a778` / F-038 |
+
+**边界**：已推送（远端 `070a778`，本地与远端 0/0）、未部署、未提升验收状态；数据压缩已于 19:41 执行（有备份，可回滚）。
 
 ## 终态证据（2026-10-20）
 
@@ -82,6 +121,21 @@ superseded_by: []
 
 **已登记未执行的治理动作**：OpenSpec 物理归档（`changes/` → `changes/archive/`）未做——移动会同时改变 `.kds` 镜像路径与 frontmatter 的 `kds_path`/`source_path` 双向映射，需一次专门的镜像同步操作，不与其他改动混做。
 
+## 终态证据（2026-10-22）
+
+- 全量测试：`npx vitest run` **143 文件 / 1293 例通过**（20:09，exit 0）；`pnpm typecheck` **0 错误**。
+- **追加表时间索引已补**（20:01）：`idx_ingest_createdat` / `idx_obol_at`；近 1 天查询 5–9ms→**0.05ms**、18–22ms→**0.5–1ms**；`retention-report` 索引体检由两表告警变为「所有 >10 万行表都有索引」；证据 `harness/data-retention/index-evidence-20261022.md`（平台 `e239242`）。
+- **数据压缩已执行**（19:41 维护窗口，老卢授权）：2069.5MB → **160.5MB**；外置 1984.3MB / 21,962,610 行；备份 2069.5MB；BFF 重启后 `/healthz` 200；压缩后全量测试通过。
+- 提交数说明：本地领先数随并行会话持续提交变化（19:04 = 30、19:11 = 33、19:22 = 34），本页数字为复测时点快照。
+- L4 一键验收：`harness/l4-acceptance/smoke-sim` 与 `smoke-demo` 的 `report.json` 均 **0 fail**（60 / 56 FPS；贴地 0m；画面差异 4.57% / 3.40%；错误 0）。
+- L4 工具链冒烟：`harness/l4-evidence/toolchain-smoke.md`（校验 / manifest / 导入 dry-run 全 exit 0）；SIMULATED 演练 `harness/l4-evidence/sim-drill/report.md` 含回滚后快照。
+- e2e：`panorama-l4.spec.ts` 3 条、`panorama-operate.spec.ts` 5/5（真实 Chrome）；`pnpm e2e:smoke` 5 passed（webServer 自起，12.6s）。
+- 接口：`/healthz` 200（263 端点）；`/RestFul/Rebuild/Tileset` 200（2 条资产：占位 1 条 published、SIMULATED 1 条未发布）。
+- 证据索引：`features/active/F-037-map-3d-l4-precision-model/evidence/`、`features/active/F-038-panorama-operation-normalization/evidence/`。
+- 测试与 e2e：小种子库（18.9MB / 构建 0.5s）+ `webServer` 常态化（`pnpm e2e:smoke`）；数据保留方案与压缩工具（dry-run）就绪。
+- **未执行**：远端 CI（未 push，工作流只在本地等价跑通）；时间窗归档（D-10 剩余，需数据变旧，当前 0 行到期）；KDS 镜像提交（镜像由自动同步写入，但镜像树与源码差异有上千条未提交，属独立操作，见 D-11）。
+- OpenSpec 变更账：`openspec/changes/spaceai-l4-precision-model`、`openspec/changes/spaceai-panorama-operation-normalization`（2026-10-22 补建，三层对齐 `[OK]`）。
+
 ## 状态与边界
 
 - project_status: registered；overall_status: partial。
@@ -93,8 +147,12 @@ superseded_by: []
 
 | ID | 问题 | 状态 |
 |---|---|---|
-| D-1 | 测试临时库不清理致磁盘两次写满；`db.test.ts` 偶发失败（DB_PATH 于 import 期冻结 + worker 模块缓存跨文件存活） | 磁盘部分已治理（运行级根目录 + 主进程 teardown，跨轮零累积）；但**每轮仍实拷贝 17×1.9GB≈32GB**、`db.test.ts` 仍偶发 → 列入 **T4** |
+| D-1 | 测试临时库不清理致磁盘两次写满；`db.test.ts` 偶发失败（DB_PATH 于 import 期冻结 + worker 模块缓存跨文件存活） | **已大幅收敛**：T4 + D-8 后实拷贝消除；2026-10-22 小种子库把基库 160.3MB → **18.9MB**、峰值临时占用 4.15GB → **0.4–0.5GB**、构建 ~11s → **0.5s**；`db.test.ts` 仍有意直读运行库（未改语义），偶发未复现 |
 | D-7 | 全量套件偶发单文件失败（2026-10-20 出现 2 次，重跑即绿） | **已定位并修复**：5 轮循环捕获现场，为 `world-axis.test.ts > W1-1 时空检索` **默认 5s 超时**（实测 5004ms），非此前的克隆内容猜测；已给该文件 20 个用例显式 30s 超时（与 ingest-bus 同法）。克隆完整性校验保留（解决另一类问题）。修复后连续三轮全量 99 文件 / 905 项全过 |
+| D-10 | 追加表无保留策略；库 2.17GB 中 1905.9MB 是历史归档表（2196 万行），追加表数据仅约 10 天 | **压缩 + 时间索引均已完成**（2026-10-22）：2069.5MB → 160.5MB（归档表外置 + 备份 + manifest）；新增 `idx_ingest_createdat` / `idx_obol_at`（库 181.3MB，近 1 天查询提升 100–180× / 20–40×，4 例查询计划守卫）；**剩余**：时间窗归档待数据变旧（当前 0 行到期）、`(Result, Id)` 查询型索引未做（不在本次范围） |
+| D-11 | KDS 镜像与源码差异：`.kds` 镜像树与 `local-mirror-ledger.jsonl` 有上千条未提交差异（含自动镜像同步产物与历史迁移/删除，非本轮产生；本轮新增文档已由自动同步写入镜像与 ledger） | **未执行**：镜像提交需单独操作 + 授权，不与其他改动混做 |
+| D-12 | e2e 基座缺 `webServer`：`playwright.config.ts` 无自启，9 个 spec 需手工先起 dev 5273 + BFF 39010 | **已修复（2026-10-22）**：`webServer` 自起 BFF+dev、`reuseExistingServer`、`e2e:smoke` 一条命令；Lead 复跑 panorama-smoke 1 passed 33.2s |
+| D-13 | 提交与远端同步 | **已关闭（2026-10-22 20:09）**：老卢「继续」授权推送；main 推送到私有远端（46 本地提交 + 远端 1 个 CI 提交合并，含冲突解决：`.github/workflows/standards.yml` 采用远端 self-hosted runner 方案）；远端 `070a778`，本地/远端 0/0。历史备注：推送前修正了 `b9236aa` 的提交信息错位（索引工作被冠以 pano 信息），改写为 `e239242`（仅本地未推送历史）；未 force push |
 
 ## 前端持续重构（第 37–43 轮续）
 
@@ -196,3 +254,59 @@ SpaceAI Platform 是安防统一重构主工作区，CWME 是城市/空间域实
 3. 运行状态一节改为 2026-10-20 复测数据：86 文件 / 802 项、单轮 12.8 分钟、临时占用约 28GB。
 4. 缺陷台账 D-1 更新：磁盘累积已治理，但每轮仍 32GB 实拷贝与 `db.test.ts` 偶发，明确列入 T4。
 5. 登记未执行动作：OpenSpec 物理归档需同步 `.kds` 镜像与 frontmatter 双向路径，单独操作。
+
+## 变更说明（v1.3 → v1.4，2026-10-22）
+
+1. **项目定位**：原 `../GlobalCloud SpaceAI`（SpaceAI-Legacy）于 2026-10-22 归档至 `_archive/2026-10-22-retired-assets/GlobalCloud SpaceAI`，Platform 为唯一正本；F-017 的应用入口与证据路径改为归档路径。
+2. **当前 Feature**：F-024 推进到 iteration 2（B5a–B5e 拆分补记）；**新增 F-037（L4 精模）与 F-038（全景态势操作规范化）** 两个追溯建账的 Feature，并登记「未建 OpenSpec 变更」的治理欠账。
+3. **新增「本轮迭代（2026-10-22，多线并行）」**：四条线（L4 / 全景操作规范化 / 平台欠账清理 / 治理账实）的状态、提交与证据，明确 0 推送与 partial 上限。
+4. **运行状态**改为 2026-10-22 复测：135 文件 / 1242 例、typecheck 0、库 2.17GB 与四张追加表行数、L4 一键验收 PASS ×2、e2e 需手工起服务。
+5. **新增「终态证据（2026-10-22）」**：测试/验收/接口/演练证据与未执行项（远端 CI、KDS 镜像同步）。
+6. **缺陷台账**：更正 D-1（32GB 实拷贝已由 T4 + D-8 根治，`db.test.ts` 偶发未复现）；新增 D-10（数据保留）、D-11（KDS 镜像不同步）、D-12（e2e 无 webServer）、D-13（30 提交未推送 + 并行 WIP）。
+7. 边界不变：overall_status 保持 **partial**，未 push、未部署、未接真实设备或生产数据，不提升任何验收状态。
+
+## 变更说明（v1.4 → v1.5，2026-10-22 晚）
+
+1. F-038 推进到 **iteration 2**：B5f 气泡层外提（`441f55c`，PanoramaBubbles + bubbleState + 9 例），组件 3955 → **3711 行**；B5 剩余由五大块降为四大块。
+2. 运行状态与终态证据刷新为 **136 文件 / 1251 例**（19:21 实测）。
+3. 逐处把「领先 30 提交」改为**复测时点快照 + 以 git 实查为准**（19:22 已 34，并行会话仍在提交），避免账实随提交漂移。
+4. 边界不变：partial、未 push、未部署。
+
+## 变更说明（v1.6 → v1.7，2026-10-22 晚）
+
+1. 新增「本轮迭代（2026-10-22 晚，待办排序执行）」：决策模型排序 + 7 项待办的执行结果与提交号。
+2. 运行状态：全量测试 139 文件 / 1268 例（19:36）；小种子库（160.3MB → 18.9MB，峰值 4.15GB → 0.4–0.5GB）；e2e 已常态化（webServer 自起）。
+3. 数据规模补实测：库 2.17GB 中历史归档表 1905.9MB（87.9%）。
+4. F-038 → iteration 3（B5g 卡片列外提，组件 3638 行，剩余三大块）；F-024 交付行同步。
+5. 缺陷台账：D-1 收敛、D-10 方案+工具就绪（待授权执行）、D-12 已修复、D-13 更新为 40 提交。
+6. 边界不变：partial、未 push、未部署。
+
+## 变更说明（v1.7 → v1.8，2026-10-22 晚）
+
+1. **数据压缩执行完毕**（老卢授权）：`data/spaceai.db` 2069.5MB → **160.5MB**；历史归档表 2196 万行外置 `data/archives/`（1984.3MB，manifest 登记）；备份 2069.5MB 保留；BFF 重启 `/healthz` 200；压缩后全量测试通过。
+2. 运行状态与终态证据刷新为 **141 文件 / 1279 例**（19:45）；数据规模改为压缩后实测并注明外置/备份路径。
+3. F-038 → **iteration 4**：B5h/B5i/B5j（飞翔 / CWME / 控制器）由并行会话提交，**B5 五大块全部外提完成**；剩余 i18n、人工验收与 script 行数目标（2956 行）。
+4. 待办排序执行第 6 项（B 数据保留）由「部分」改为「完成」；第 7 项（G 推送）老卢选择**暂缓**，等并行会话收口后一次性推送。
+5. D-10 台账改为已执行 + 剩余项（时间索引、窗口归档）；D-13 更新为 43 提交并记录暂缓决定。
+
+## 变更说明（v1.8 → v1.9，2026-10-22 晚）
+
+1. **D-10 时间索引补齐**：`IngestEvent.CreatedAt`、`EXT_ObolObservation.At` 建索引（幂等 DDL 在 `ensureIngestTable` / `ensureObolTables`），4 例查询计划守卫测试；库 160.5MB → 181.3MB（+20.8MB 索引，仍比压缩前 −91%）。
+2. 实测：近 1 天查询 Ingest 5–9ms→**0.05ms**、Obol 18–22ms→**0.5–1ms**；`retention-report` 索引体检转为全部通过。
+3. 运行状态/终态证据刷新为 **142 文件 / 1283 例**（20:01）；数据规模改为索引后实测。
+4. D-10 剩余仅「时间窗归档（待数据变旧）」；D-13 提交数不变（43→44，以 git 实查为准）。
+
+## 变更说明（v1.9 → v1.10，2026-10-22 晚）
+
+1. **推送完成**（老卢「继续」授权）：SpaceAI Platform `main` → 私有远端 `GCSpaceAI`；合并远端 CI 提交 `1bb1715`（self-hosted runner），冲突文件 `.github/workflows/standards.yml` 采用远端方案；远端 HEAD = `070a778`，本地/远端 0/0，未 force push。
+2. **提交信息错位修正**：`b9236aa`（内容为时间索引 6 文件，信息误为 pano 外提）在推送前改写为 `e239242`，信息如实描述索引工作；改用 `commit-tree` 改写，未触碰工作区（并行会话 WIP 未受影响）。
+3. 运行状态/终态证据刷新为 **143 文件 / 1293 例**（20:09）；D-13 关闭并记录冲突解决与改写过程。
+4. GPCF 本仓未推送：本地 `main` 与远端分叉（本地 22 / 远端 137），需专门治理同步，不在本轮范围。
+5. 边界：已推送但不部署、不提升验收状态；数据压缩与索引均有备份/证据。
+5. 边界不变：partial、未 push、未部署、无数据删除。
+
+## 变更说明（v1.5 → v1.6，2026-10-22 晚）
+
+1. 补建两个 OpenSpec 变更：`spaceai-l4-precision-model`（implemented；真实资产待授权）、`spaceai-panorama-operation-normalization`（in_progress）；均含「三层对齐」段并通过 `validate_change_alignment_sections.py`。
+2. 「F-037 / F-038 未建 OpenSpec 变更」治理欠账同日关闭；只补账，不重做工作、不提升验收状态。
+3. 终态证据新增 OpenSpec 变更账条目；其余数字与边界不变。
