@@ -1,0 +1,66 @@
+id: F-035
+name: wame-sidebar-unification
+project: wame
+status: active
+goal: 把 WAME 三套侧栏（layout/GlobalCloudSidebar 49 行、components/Sidebar 114 行、FunctionPanel 1557 行）归并到 @globalcloud/app-shell 唯一侧栏；跨仓改动由 WAME 属主执行，不声明状态提升。
+owner: agent-dev-01
+priority: P1
+scope:
+  in:
+    - "WAME 导航侧栏唯一化：layout/GlobalCloudSidebar 按 @globalcloud/app-shell 契约（items/subject/rootPath/getCurrentPath）重写，默认项与改造前等价"
+    - "旧 components/Sidebar（114 行、0 调用方）改为统一侧栏的兼容 re-export，不再保留第二套实现"
+    - "layout/GlobalCloudShell 显式注入导航 items；新增契约测试（默认项/注入/角色收敛/激活判定/别名同源）"
+    - "FunctionPanel 定性为内容区功能面板（非导航侧栏），仅加注释，不作为第三套导航合并"
+  out:
+    - "直接 import @globalcloud/app-shell（该包为 WAE 私有 workspace 包、未发布 npm；跨仓消费需发布或并入同一 workspace，属授权动作）"
+    - "FunctionPanel 并入侧栏（1557 行内容面板，合并属信息架构产品重构，需产品设计+验收授权）"
+    - "视觉回归截图、多用户/无障碍实测、任务流 E2E"
+    - "commit / push / deploy / 状态提升"
+acceptance:
+  - "WAME 仅存在一套导航侧栏实现（layout/GlobalCloudSidebar），components/Sidebar 为兼容别名且无独立实现"
+  - "无 props 渲染与改造前行为等价（原 4 项标签/路径/激活判定），由 DOM 测试守护"
+  - "items/subject 契约可用：注入生效、受限项按角色收敛（公开项恒显示）"
+  - "WAME typecheck / test / build 真实复跑通过；@globalcloud/app-shell 直接消费与 FunctionPanel 归并保留为阻塞"
+loop:
+  dispatched: false
+  current_step: evaluate
+  iteration: 1
+evidence:
+  tests: pass
+  build: pass
+  screenshots: waived
+  api: waived
+  summary: pass
+blockers:
+  - "@globalcloud/app-shell 未发布 npm（WAE 私有 workspace 包，private: true + exports 指向 TS 源码 + workspace:* 依赖），WAME 无法直接 import；需发布包或并入同一 workspace 的授权"
+  - "FunctionPanel（1557 行）是主内容区功能面板而非导航侧栏；并入侧栏属信息架构产品重构，需产品设计 + 验收授权后另行立项"
+  - "无视觉回归证据（screenshots=waived）；多用户/无障碍未实测（waived）、任务流 E2E 未跑（pending）"
+verification:
+  tests:
+    - "python3 -c \"import subprocess,sys; r=subprocess.run(['npx','tsc','--noEmit'],cwd='../GlobalCloud WAME',capture_output=True,text=True); print(r.stdout[-2000:]); print(r.stderr[-1000:]); sys.exit(r.returncode)\""
+    - "python3 -c \"import subprocess,sys; r=subprocess.run(['npx','vitest','run','tests/global-cloud-sidebar.test.tsx'],cwd='../GlobalCloud WAME',capture_output=True,text=True); print(r.stdout[-2000:]); print(r.stderr[-1000:]); sys.exit(r.returncode)\""
+    - "python3 -c \"import subprocess,sys; r=subprocess.run(['npx','vitest','run'],cwd='../GlobalCloud WAME',capture_output=True,text=True); print(r.stdout[-2000:]); print(r.stderr[-1000:]); sys.exit(r.returncode)\""
+    - "python3 -c \"import subprocess,sys; r=subprocess.run(['npx','eslint','src/app/layout/GlobalCloudSidebar.tsx','src/app/layout/GlobalCloudShell.tsx','src/app/components/Sidebar.tsx','tests/global-cloud-sidebar.test.tsx'],cwd='../GlobalCloud WAME',capture_output=True,text=True); print(r.stdout[-2000:]); print(r.stderr[-1000:]); sys.exit(r.returncode)\""
+  build:
+    - "python3 -c \"import subprocess,sys; r=subprocess.run(['npx','vite','build'],cwd='../GlobalCloud WAME',capture_output=True,text=True); print(r.stdout[-2000:]); print(r.stderr[-1000:]); sys.exit(r.returncode)\""
+  waivers:
+    screenshots: "本轮以 DOM/契约测试守护行为等价（39 files / 189 tests），未做截图比对；无真实视觉回归证据，screenshots 记 waived。"
+    api: "本 Feature 不涉及 API；WAME 侧栏仅前端呈现层，未调用任何后端接口。"
+ui_product_first_control:
+  version: v1.1
+  applicability: indirect
+  user_groups:
+  - Feature 负责人
+  primary_human_task: 把 WAME 三套侧栏（layout/GlobalCloudSidebar 49 行、components/Sidebar
+    114 行、FunctionPanel 1557 行）归并到 @globalcloud/app-shell 唯一侧栏；跨仓改动由 WAME 属主执行，不声明状态提升。
+  machine_interface_boundary: 机器字段留在证据中；人类入口展示任务、风险和下一步
+  gates:
+    functional_completeness: pass
+    quality_baseline: pass
+    multi_user_usability: waived
+    task_flow_e2e_status: pending
+    accessibility_status: waived
+    evidence_overexposure_gate: pass
+  status_ceiling: partial
+created_at: "2026-10-22T10:29:42+00:00"
+updated_at: "2026-10-22T19:58:00+00:00"

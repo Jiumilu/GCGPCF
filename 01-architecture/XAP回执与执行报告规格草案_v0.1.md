@@ -117,3 +117,43 @@ revoked               撤销/失效（对既有授权）
 
 - 本件为**提交侧规格草案**；不改 WAME/PVAOS/GCXWAIL；正式 Schema／错误码分配归相应流程；
 - 不声明任何回执/报告已可签发（受理器未实现，S4/P1）；签名（signature）位仅在 P2 启用。
+
+---
+
+## 九、字段命名与 casing（CONFLICT-03，2026-10-22 落仓）
+
+**规则（老卢裁决 A）：线上契约 camelCase、存储层 snake_case、转换点唯一。**
+
+- 同一层内不得混用两种 casing；不得在存储层新增 camelCase 列，也不得在线上 JSON 中新增 snake_case 字段。
+- casing 转换只发生在**声明边界**；边界之外的代码/文档一律使用本层命名。
+- 已知转换点（唯一实现，登记如下；新增转换点必须先登记再落代码）：
+
+| # | 边界 | 线上契约（camelCase） | 存储 / canonical（snake_case） | 唯一转换点 | 现状 |
+|---|---|---|---|---|---|
+| C1 | XWAIL 契约 ↔ canonical manifest | `packageId` / `version` / `contentHash` / `compatibilityDecision` / `signature` | `contract_id` / `contract_version` / `canonical_manifest_sha256` / `decision` | `GlobalCloud XWAIL/scripts/xwail_common.py`（加载/校验边界）；canonical manifest 文件本身保持 snake_case | 已存在；本规格约束 |
+| C2 | WAME 受理 API ↔ SQLite 台账 | `contentDigest` / `signatureStatus` / `packageId` / `version` | `content_digest` / `signature_status` / `package_id` / `version` | `GlobalCloud WAME/server/xap-intake/intake_core.py`（row→dict 边界） | 已存在；`signature_status` 为本次新增列 |
+| C3 | KDS canonical KnowledgeObject ↔ 消费方信封 | `tenantId` / `sourceRefs` / `evidenceRefs` / `lineageRefs` | `tenant_id` / `source_refs` / `evidence_refs` / `lineage_refs` | `GlobalCloud GPCF/tools/kds-sync/`（KDS 同步边界） | 已存在；本规格约束 |
+
+- 残留：转换点清单按已知边界登记（3 处），未做全量消费者的逐字段审计；新消费者接入时必须声明其使用的转换点。
+- 不改任何现有字段名（本轮零重命名）。
+
+## 十、版本语义（CONFLICT-04，2026-10-22 落仓）
+
+**规则（老卢裁决 A）：契约版本 semver + 内容哈希双标识；内容变则哈希变，破坏性变更升主版本。**
+
+- 线上字段：`version`（semver 字符串）+ `contentHash`（64 位小写十六进制 sha256，**可选但可判**；出现即校验格式）。
+- 存储/canonical：`contract_version`（semver）+ `canonical_manifest_sha256`（snake_case 内容哈希）。
+- 双标识同时校验：同一 `version` 下内容哈希变化 = 内容漂移（须升版本）；破坏性变更必须升主版本；新增/兼容性变更升次版本。
+- XWAIL 落仓：`xap-manifest.schema.json` 增 `contentHash`（contract v1.2），`xwail_common.validate_xap_manifest` 校验其格式；正例 `pos-contenthash`、负例 `neg-contenthash-format`。
+- canonical 落仓：`okf/knowledge-asset-contract-manifest.yaml` 增 `version_semantics`（semver=`contract_version`，content_hash=`canonical_manifest_sha256`）。
+- 残留：事件合同侧版本标识见事件合同补充节；工具未做"version 未变但哈希变"的自动漂移告警（后续接入）。
+
+## 十一、签名与无签名边界（CONFLICT-05，2026-10-22 落仓）
+
+**规则（老卢裁决 A）：manifest 显式 `signature`/`digest`（可选但可判）；正式治理要求签名；PoC 标 `no_signature` 且不得作为治理证据。**
+
+- manifest 显式结构（`xap-manifest.schema.json` v1.2）：`signature{algorithm=Ed25519, keyId, signature, scope=package-integrity-v1, digest?}`；`scope=package-integrity-v1` 时 `digest` 必填；schema 有 `neg-signature-algorithm`/`neg-signature-missing-digest` 负例。
+- 可判三态（受理/台账）：`formal`（签名结构完整）/ `no_signature`（无签名）/ `invalid_signature`（签名结构不完整）。
+- WAME 落仓：`publications.signature_status` 列（幂等迁移）+ `publish` 响应与 `get_publication` 返回 `signatureStatus`；同键不同内容仍 XAP-6001；无新增错误码。
+- **PoC 标注**：F-033 R1 包（`xap_verify.py` 输出"完整 + 无签名"）按 `no_signature` 记录，只作完整性/交付证据，**不得**作为正式治理/授权/发布证据；正式治理受理要求 `formal`。
+- 残留：受理侧未"强制拒绝 no_signature/formal 治理请求"（规则先以台账可判落地，强制策略待 WAME 属主评审）；无新增 XAP 错误码（CONFLICT-02 注册表仍 open）。

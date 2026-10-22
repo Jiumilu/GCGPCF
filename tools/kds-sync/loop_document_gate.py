@@ -64,6 +64,10 @@ def frontmatter_managed_for(path: Path) -> bool:
         return False
     if rel.startswith(".codex/skills/") and path.name == "SKILL.md":
         return False
+    # .standards/ 是由项目群治理仓 _governance/tools/sync_vendor.py 生成的
+    # 规范检查快照（README 明确「勿手改」），不承载本仓 doc_id 元数据。
+    if rel.startswith(".standards/"):
+        return False
     return True
 
 
@@ -330,12 +334,15 @@ def main() -> int:
         }
         print(json.dumps(summary, ensure_ascii=False, indent=2))
         return 0 if gate == "pass" else 1
+    # 实时快照校验比对 28 个兄弟仓的精确 dirty 明细，在多 agent 并发写入时
+    # 只要任意一仓变动即失效。因此把它放在所有子检查之前执行，把
+    # 「重建快照 → 校验」的窗口压到最小；判定语义不变（仍要求 snapshot_matches）。
+    project_group_live_status_current = run([sys.executable, "tools/kds-sync/build_project_group_live_status_current.py", "--check-only"])
+
     global GFIS_REAL_FACT_ENTRY_GATE_CACHE
     gfis_real_fact_entry_gate = run([sys.executable, "tools/kds-sync/validate_gfis_real_fact_entry_gate.py"])
     if gfis_real_fact_entry_gate[0] == 0:
         GFIS_REAL_FACT_ENTRY_GATE_CACHE = gfis_real_fact_entry_gate[1]
-
-    project_group_live_status_current = run([sys.executable, "tools/kds-sync/build_project_group_live_status_current.py", "--check-only"])
 
     delegated_project_localization = run_delegated_project_localization()
     checks = {

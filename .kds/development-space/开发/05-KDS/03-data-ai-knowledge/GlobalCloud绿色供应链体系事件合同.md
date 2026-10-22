@@ -455,3 +455,58 @@ gfis.kitting_check.shortage_detected
 4. `edge.*` 只能由 Edge 发起；Edge 事件不直接进入 GPC 公共服务事实流。
 5. `waes.*` 只能由 WAME 发起治理事实；不得发布业务主账事实。
 6. `ai.*` / `agent.*` 只能由 XiaoC / Hermes / XGD 发起建议和 Agent 运行事件；不得发布业务主账事实。
+
+---
+
+## 14. 契约补充（2026-10-22 落仓 · CONFLICT-04 / 06 / 08）
+
+> 本节为**契约补充条款**：不改变既有事件名、既有字段语义与既有历史证据中的 `waes.` 命名；新增均为可选字段/别名映射。不声明契约冻结。
+
+### 14.1 版本语义（CONFLICT-04：semver + 内容哈希双标识）
+
+- 事件合同版本 = semver（`contract_version`）+ 内容哈希（`contentHash`，线上 camelCase；存储侧 `content_hash` / KDS `canonical_manifest_sha256`）。
+- 内容变更即内容哈希变更；破坏性变更必须升主版本；新增事件/字段（可选）升次版本。
+- 事件信封可带 `contractVersion`（semver）与 `contentHash`（可选，出现即校验 64 位小写 hex）；二者与合同文档版本同时校验，防止"文档改了口径、版本号没动"。
+- 残留：事件运行时未自动计算/校验合同 contentHash（合同文本先行；运行时接入另案）。
+
+### 14.2 事件信封 `packageRef`（CONFLICT-06：跨链路幂等关联）
+
+事件信封增加**可选**字段（不破坏既有事件）：
+
+```json
+{
+  "packageRef": {
+    "packageId": "xap.<domain>.<name>",
+    "version": "1.2.0",
+    "contentHash": "<64-hex，可选；与 XAP manifest contentHash 同值>"
+  }
+}
+```
+
+- `packageRef` 只用于**关联**（事件 → 产生它的 XAP 包），不改变事件自身的必填字段与既有语义。
+- 缺失 `packageRef` 的既有事件仍合法（向后兼容）；新事件族建议必填（由事件属主按族约定）。
+
+### 14.3 幂等三段映射（CONFLICT-06）
+
+| 段 | 键 | 归属 | 规则 |
+|---|---|---|---|
+| ① 业务动作幂等键 | `businessActionKey`（业务系统定义，如工单号+动作） | 业务系统 | 同一业务动作重复提交 → 同一键 |
+| ② 事件幂等键 | Envelope `idempotencyKey`（必填，既有） | 事件合同 | 重复事件只标记 `duplicate`，不重复消费 |
+| ③ XAP 包幂等键 | `packageId + version + contentHash`（或显式 `idempotencyKey`） | XAP 规范 | 同键同内容返回原结果；同键不同内容拒收（XAP-6001） |
+
+- 映射不变量：同一业务动作的 ① 必须确定性映射到同一 ②；② 通过事件信封 `packageRef` 关联到 ③。
+- 事件侧与 XAP 侧幂等粒度不同（事件 vs 包），因此**不得**用事件 idempotencyKey 反推包键，也不得用包键替代事件键；对账通过 `packageRef` 完成。
+- 残留：WAE/WAME 事件运行时尚未消费 `packageRef` 做自动对账（合同先行，运行时接入另案）。
+
+### 14.4 命名对照（CONFLICT-08：WAES → WAME）
+
+**统一命名 = WAME；`waes.` 保留为历史别名一版（只读兼容，不再新增）。**
+
+| 类别 | 历史名（legacy alias） | 统一名（canonical） | 处置 |
+|---|---|---|---|
+| 事件域前缀 | `waes.` | `wame.` | 新事件只用 `wame.`；既有 `waes.*` 事件保留并标注 legacy |
+| 连接器编号 | `CON-GFIS-WAES-001` | `CON-GFIS-WAME-001` | 保留 legacy 编号（superseded），新合同/新连接器用新编号 |
+| 订阅方配置 | `waes.*` 订阅 | `wame.*` 订阅 | 订阅方按新名迁移；迁移期双订阅由订阅方自行去重 |
+
+- 历史证据（已冻结的 manifest/验收记录）中的 `waes` 字样**不改写**，按 legacy alias 读取。
+- 残留：WAE/WAME 运行时域名与连接器代码尚未改名（属主执行），本契约仅先落命名对照与迁移规则。

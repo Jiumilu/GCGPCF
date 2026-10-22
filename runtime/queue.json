@@ -32,7 +32,7 @@
       "current_role": "Recorder",
       "workspace": "features/active/F-005-factory-exception-intake-dry-run",
       "created_at": "2026-07-08T02:41:12+00:00",
-      "updated_at": "2026-07-08T02:44:08+00:00"
+      "updated_at": "2026-07-16T00:00:00+08:00"
     },
     {
       "id": "F-008",
@@ -62,10 +62,10 @@
       "project": "gpcf",
       "priority": "P0",
       "status": "blocked",
-      "current_role": "Evaluator",
-      "workspace": "features/active/F-010-project-group-ui-engineering-coverage",
+      "current_role": "Recorder",
+      "workspace": "features/done/F-010-project-group-ui-engineering-coverage",
       "created_at": "2026-07-12T09:47:45+00:00",
-      "updated_at": "2026-07-12T09:50:32+00:00"
+      "updated_at": "2026-10-22T09:16:24+00:00"
     },
     {
       "id": "F-011",
@@ -73,10 +73,10 @@
       "project": "studio",
       "priority": "P0",
       "status": "blocked",
-      "current_role": "Evaluator",
-      "workspace": "features/active/F-011-studio-workbench-ui-runtime-closure",
+      "current_role": "Recorder",
+      "workspace": "features/done/F-011-studio-workbench-ui-runtime-closure",
       "created_at": "2026-07-12T09:57:45+00:00",
-      "updated_at": "2026-10-18T11:54:02+00:00"
+      "updated_at": "2026-10-21T23:19:05+00:00"
     },
     {
       "id": "F-012",
@@ -87,18 +87,18 @@
       "current_role": "Dispatcher",
       "workspace": "features/active/F-012-icp-sop-foundation-coupling",
       "created_at": "2026-07-13T01:26:49+00:00",
-      "updated_at": "2026-07-13T01:26:49+00:00"
+      "updated_at": "2026-07-16T00:00:00+08:00"
     },
     {
       "id": "F-015",
       "name": "gcworld-organization-readonly-vertical-slice",
       "project": "studio",
       "priority": "P0",
-      "status": "blocked",
-      "current_role": "Evaluator",
-      "workspace": "features/active/F-015-gcworld-organization-readonly-vertical-slice",
+      "status": "closed",
+      "current_role": "Recorder",
+      "workspace": "features/done/F-015-gcworld-organization-readonly-vertical-slice",
       "created_at": "2026-09-04T04:13:45+00:00",
-      "updated_at": "2026-09-05T11:38:51+00:00"
+      "updated_at": "2026-10-22T13:17:52+00:00"
     },
     {
       "id": "F-025",
@@ -109,7 +109,7 @@
       "current_role": "Dispatcher",
       "workspace": "features/active/F-025-project-group-arch-iteration",
       "created_at": "2026-10-17T08:55:27+00:00",
-      "updated_at": "2026-10-18T11:33:54+00:00"
+      "updated_at": "2026-10-17T08:55:27+00:00"
     },
     {
       "id": "F-027",
@@ -123,6 +123,17 @@
       "updated_at": "2026-10-18T02:11:29+00:00"
     },
     {
+      "id": "F-029",
+      "name": "hermes-ai-runtime-admission",
+      "project": "gpcf",
+      "priority": "P0",
+      "status": "plan",
+      "current_role": "Planner",
+      "workspace": "features/active/F-029-hermes-ai-runtime-admission",
+      "created_at": "2026-10-18T02:52:37+00:00",
+      "updated_at": "2026-10-18T07:32:44+00:00"
+    },
+    {
       "id": "F-033",
       "name": "r1-ecosystem-integration",
       "project": "xiaoc",
@@ -131,18 +142,18 @@
       "current_role": "Dispatcher",
       "workspace": "features/active/F-033-r1-ecosystem-integration",
       "created_at": "2026-10-21T05:00:33+00:00",
-      "updated_at": "2026-10-22T00:21:50+00:00"
+      "updated_at": "2026-10-21T05:00:33+00:00"
     },
     {
       "id": "F-004",
       "name": "loop-governance-slimming",
       "project": "gpcf",
       "priority": "P1",
-      "status": "closed",
+      "status": "commit",
       "current_role": "Recorder",
-      "workspace": "features/done/F-004-loop-governance-slimming",
+      "workspace": "features/active/F-004-loop-governance-slimming",
       "created_at": "2026-07-07T23:24:58+00:00",
-      "updated_at": "2026-10-18T08:06:23+00:00"
+      "updated_at": "2026-07-16T00:00:00+08:00"
     },
     {
       "id": "F-006",
@@ -175,7 +186,7 @@
       "current_role": "Evaluator",
       "workspace": "features/active/F-013-knowledge-asset-model-system",
       "created_at": "2026-08-02T10:41:40+00:00",
-      "updated_at": "2026-08-22T16:01:43+00:00"
+      "updated_at": "2026-08-25T06:40:50+00:00"
     },
     {
       "id": "F-014",
@@ -194,21 +205,21 @@
       "project": "gpcf",
       "priority": "P1",
       "status": "blocked",
-      "current_role": "Evaluator",
+      "current_role": null,
       "workspace": "features/active/F-016-industrial-green-chain-graph-readonly-pilot",
       "created_at": "2026-10-11T10:36:10+08:00",
-      "updated_at": "2026-10-18T11:33:54+00:00"
+      "updated_at": "2026-10-11T07:20:58+00:00"
     },
     {
       "id": "F-017",
       "name": "cwme-city-world-model-engine",
-      "project": "kds",
+      "project": "spaceai",
       "priority": "P1",
       "status": "blocked",
       "current_role": "Evaluator",
       "workspace": "features/active/F-017-cwme-city-world-model-engine",
       "created_at": "2026-10-11T05:41:00+00:00",
-      "updated_at": "2026-10-18T11:33:54+00:00"
+      "updated_at": "2026-10-21T23:24:11+00:00"
     },
     {
       "id": "F-018",
@@ -227,10 +238,10 @@
       "project": "icp",
       "priority": "P1",
       "status": "blocked",
-      "current_role": "Evaluator",
-      "workspace": "features/active/F-019-icp-industry-console",
+      "current_role": "Recorder",
+      "workspace": "features/done/F-019-icp-industry-console",
       "created_at": "2026-10-14T02:05:18+00:00",
-      "updated_at": "2026-10-14T02:06:34+00:00"
+      "updated_at": "2026-10-21T23:19:05+00:00"
     },
     {
       "id": "F-020",
@@ -248,16 +259,104 @@
       "name": "panorama-engineering-convergence",
       "project": "spaceai",
       "priority": "P1",
-      "status": "queued",
-      "current_role": "Dispatcher",
+      "status": "commit",
+      "current_role": "Recorder",
       "workspace": "features/active/F-024-panorama-engineering-convergence",
       "created_at": "2026-10-16T09:01:12+00:00",
-      "updated_at": "2026-10-16T12:09:53+00:00"
+      "updated_at": "2026-10-22T11:30:00+00:00"
+    },
+    {
+      "id": "F-028",
+      "name": "plane-gpcf-feature-evidence-integration",
+      "project": "project",
+      "priority": "P1",
+      "status": "closed",
+      "current_role": "Recorder",
+      "workspace": "features/done/F-028-plane-gpcf-feature-evidence-integration",
+      "created_at": "2026-10-18T02:52:11+00:00",
+      "updated_at": "2026-10-18T03:23:13+00:00"
+    },
+    {
+      "id": "F-030",
+      "name": "pdc-project-group-onboarding",
+      "project": "pdc",
+      "priority": "P1",
+      "status": "blocked",
+      "current_role": "Evaluator",
+      "workspace": "features/active/F-030-pdc-project-group-onboarding",
+      "created_at": "2026-10-18T11:55:44+00:00",
+      "updated_at": "2026-10-18T12:05:59+00:00"
+    },
+    {
+      "id": "F-031",
+      "name": "xgd-dot-alignment",
+      "project": "xgd",
+      "priority": "P1",
+      "status": "closed",
+      "current_role": "Recorder",
+      "workspace": "features/done/F-031-xgd-dot-alignment",
+      "created_at": "2026-10-19T01:51:03+00:00",
+      "updated_at": "2026-10-22T13:06:10+00:00"
+    },
+    {
+      "id": "F-034",
+      "name": "wae-p0-shell-and-role-convergence",
+      "project": "wae",
+      "priority": "P1",
+      "status": "closed",
+      "current_role": "Recorder",
+      "workspace": "features/done/F-034-wae-p0-shell-and-role-convergence",
+      "created_at": "2026-10-22T10:02:42+00:00",
+      "updated_at": "2026-10-22T10:29:47+00:00"
+    },
+    {
+      "id": "F-035",
+      "name": "wame-sidebar-unification",
+      "project": "wame",
+      "priority": "P1",
+      "status": "blocked",
+      "current_role": "Dispatcher",
+      "workspace": "features/active/F-035-wame-sidebar-unification",
+      "created_at": "2026-10-22T10:29:42+00:00",
+      "updated_at": "2026-10-22T19:58:00+00:00"
+    },
+    {
+      "id": "F-036",
+      "name": "wae-pkc-intake-integration",
+      "project": "wae",
+      "priority": "P1",
+      "status": "blocked",
+      "current_role": "Dispatcher",
+      "workspace": "features/active/F-036-wae-pkc-intake-integration",
+      "created_at": "2026-10-22T10:29:42+00:00",
+      "updated_at": "2026-10-22T20:50:00+00:00"
+    },
+    {
+      "id": "F-037",
+      "name": "map-3d-l4-precision-model",
+      "project": "spaceai",
+      "priority": "P1",
+      "status": "blocked",
+      "current_role": "Dispatcher",
+      "workspace": "features/active/F-037-map-3d-l4-precision-model",
+      "created_at": "2026-10-22T11:04:30+00:00",
+      "updated_at": "2026-10-22T11:30:00+00:00"
+    },
+    {
+      "id": "F-038",
+      "name": "panorama-operation-normalization",
+      "project": "spaceai",
+      "priority": "P1",
+      "status": "blocked",
+      "current_role": "Dispatcher",
+      "workspace": "features/active/F-038-panorama-operation-normalization",
+      "created_at": "2026-10-22T11:04:30+00:00",
+      "updated_at": "2026-10-22T11:30:00+00:00"
     },
     {
       "id": "F-021",
       "name": "world-project-onboarding",
-      "project": "gpcf",
+      "project": "world",
       "priority": "P2",
       "status": "blocked",
       "current_role": "Evaluator",
@@ -274,7 +373,7 @@
       "current_role": "Dispatcher",
       "workspace": "features/active/F-022-was-scenario-flow-extension",
       "created_at": "2026-10-16T03:47:28+00:00",
-      "updated_at": "2026-10-18T11:33:54+00:00"
+      "updated_at": "2026-10-16T03:47:28+00:00"
     },
     {
       "id": "F-023",
@@ -285,18 +384,18 @@
       "current_role": "Dispatcher",
       "workspace": "features/active/F-023-was-flow-naming-migration",
       "created_at": "2026-10-16T04:15:00+00:00",
-      "updated_at": "2026-10-18T11:33:54+00:00"
+      "updated_at": "2026-10-16T04:15:00+00:00"
     },
     {
       "id": "F-026",
       "name": "gcmem-governance-onboarding",
       "project": "gcmem",
       "priority": "P2",
-      "status": "blocked",
+      "status": "evaluated",
       "current_role": "Evaluator",
       "workspace": "features/active/F-026-gcmem-governance-onboarding",
       "created_at": "2026-10-17T22:49:44+00:00",
-      "updated_at": "2026-10-17T22:51:44+00:00"
+      "updated_at": "2026-10-21T23:15:00+00:00"
     },
     {
       "id": "F-032",
@@ -308,28 +407,6 @@
       "workspace": "features/active/F-032-pqc-external-service-via-pvaai",
       "created_at": "2026-10-20T04:03:58+00:00",
       "updated_at": "2026-10-20T04:03:58+00:00"
-    },
-    {
-      "id": "F-037",
-      "name": "map-3d-l4-precision-model",
-      "project": "spaceai",
-      "priority": "P1",
-      "status": "blocked",
-      "current_role": "Dispatcher",
-      "workspace": "features/active/F-037-map-3d-l4-precision-model",
-      "created_at": "2026-10-22T11:04:30+00:00",
-      "updated_at": "2026-10-22T12:25:00+00:00"
-    },
-    {
-      "id": "F-038",
-      "name": "panorama-operation-normalization",
-      "project": "spaceai",
-      "priority": "P1",
-      "status": "blocked",
-      "current_role": "Dispatcher",
-      "workspace": "features/active/F-038-panorama-operation-normalization",
-      "created_at": "2026-10-22T11:04:30+00:00",
-      "updated_at": "2026-10-22T12:25:00+00:00"
     }
   ]
 }

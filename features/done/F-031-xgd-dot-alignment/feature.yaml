@@ -1,0 +1,81 @@
+id: F-031
+name: xgd-dot-alignment
+project: xgd
+status: done
+goal: 对齐 ChatGPT dots 常驻智能体能力模型，先以候选 Feature 落地 XGD dot 档案、常驻职责、Activity 与分层停止 P0 核心闭环，后续阶段保留 P1-P3 路线
+owner: GPCF
+priority: P1
+scope:
+  in:
+    - 在 GPCF 登记 XGD dot 对齐候选 Feature，建立可回放的治理台账与项目群回传记录
+    - 引用 XGD OpenSpec 变更 openspec/changes/xgd-dot-alignment/（proposal、gap-analysis、design、tasks、change-card）
+    - 以 audit-baseline.json 锁定 P0 六项能力：dot 档案、常驻职责、Activity 活动中心、周期计划、自定义规则与行动审查、分层停止
+    - P0 交付范围包含 /dot/* 接口与 Brain UI dot 视图，实现与验收在 XGD 仓进行，人工确认后另行执行
+    - 登记 P1-P3 后续阶段路线：多渠道与云端工作区、应用连接器、多 dot/工作区治理、移动端与语音
+    - 回传项目群运行态：runtime/queue.json、runtime/state.json、runtime/logs/F-031.jsonl
+  out:
+    - XGD 仓代码、数据库、接口与 Brain UI 实现（不属本仓写入范围）
+    - 修改 GPCF 项目群总体方案与实施方案控制正文
+    - 任何项目状态提升（accepted、integrated、production_ready、customer_accepted）
+    - commit、push、部署、发布与真实外部服务调用
+    - P1-P3 阶段实施与真实云端电脑、Slack/Teams、4000+ 连接器接入
+    - 复制 XGD 审计基线全文或替代 XGD 仓自身证据
+acceptance:
+  - GPCF 台账可回放：F-031 工作区 feature.yaml、journal.md、evidence 结构校验通过
+  - 登记来源可追溯：XGD OpenSpec 变更路径、change-card 状态与 audit-baseline.json 结论在台账中一致引用
+  - P0 六项能力范围与 audit-baseline.json 的 byPhase.P0 一致，P1-P3 仅作路线登记
+  - 分层停止三种语义（Pause 主任务、Stop responsibility、Disable schedule）在 XGD 侧分别可验证后方可评估
+  - XGD 侧 P0 本地可回放证据（单元测试、接口测试、Brain UI smoke）齐备并通过 Evidence Gate
+  - 未经人工确认不声明 accepted、integrated、production_ready 或 customer_accepted
+loop:
+  current_step: commit
+  iteration: 2
+evidence:
+  tests: pass
+  build: pass
+  screenshots: pass
+  api: pass
+  summary: pass
+blockers:
+ui_product_first_control:
+  version: v1.1
+  applicability: indirect
+  user_groups:
+  - Feature 负责人
+  primary_human_task: 对齐 ChatGPT dots 常驻智能体能力模型，先以候选 Feature 落地 XGD dot 档案、常驻职责、Activity
+    与分层停止 P0 核心闭环，后续阶段保留 P1-P3 路线
+  machine_interface_boundary: 机器字段留在证据中；人类入口展示任务、风险和下一步
+  gates:
+    functional_completeness: pending
+    quality_baseline: pending
+    multi_user_usability: waived
+    task_flow_e2e_status: pending
+    accessibility_status: waived
+    evidence_overexposure_gate: pending
+  status_ceiling: partial
+stage: candidate
+candidate_registration:
+  status: confirmed
+  confirmation: confirmed_by_laolu_20261022
+  registered_at: '2026-10-19'
+  registered_by: GPCF
+  source_repo: GlobalCloud XGD
+  source_change: openspec/changes/xgd-dot-alignment
+  audit_baseline: openspec/changes/xgd-dot-alignment/audit-baseline.json
+  audit_verdict: not_aligned
+  promotion_allowed: false
+verification:
+  tests:
+  - python3 tools/kds-sync/validate_gpcf_2_feature_workspace.py
+  build:
+  - git diff --check
+  api:
+  - python3 features/active/F-031-xgd-dot-alignment/evidence/probe_xgd_dot_api.py
+    --read-only
+resolved_blockers:
+  decided_at: '2026-10-22'
+  decision: P0 六项人工验收全部通过（老卢逐项签收），分层停止接受契约级；P1-P3 不属本 Feature
+  evidence: evidence/human-acceptance-20261022.md
+  receipt: AUTH-PG-F031-ACCEPTANCE-20261022
+created_at: "2026-10-19T01:51:03+00:00"
+updated_at: "2026-10-22T13:06:10+00:00"

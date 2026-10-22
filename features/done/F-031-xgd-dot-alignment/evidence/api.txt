@@ -1,0 +1,41 @@
+# API Evidence（真实 HTTP，只读）
+
+采集时点：2026-10-22T07:37–07:38+08:00（+0800）。
+服务：本机**已在运行**的 XGD 后端 `http://127.0.0.1:3721`（PID 97425，`node src/index.js`，启动于 2026-10-22 06:30:34）。
+处置：**未启动、未停止、未重启**该实例；只发 `GET`，未发任何 `POST/PUT/DELETE`；未改 XGD 数据与配置。
+（此前自查同端点也均为 HTTP 200：`/healthz`、`/runtime/info`、`/dot/state`、`/dot/profiles`。）
+
+## 可复跑命令（只读探针，`--read-only` 必填）
+
+```bash
+cd "GlobalCoud GPCF"
+python3 features/active/F-031-xgd-dot-alignment/evidence/probe_xgd_dot_api.py --read-only
+```
+
+## 实测输出（2026-10-22 07:37–07:38）
+
+```text
+xgd_dot_api_probe base_url=http://127.0.0.1:3721 method=GET read_only=true
+GET /healthz -> HTTP 200 137B 48ms pass {"db": "connected", "llm": "configured", "memory_count": 807, "running": true, "status": "ok"}
+GET /runtime/info -> HTTP 200 322B 1ms pass {"isolationMode": "shared", "mode": "standalone", "modeValid": true, "ok": true, "scopeValid": true, "service": "xgd", "version": "2.1.194"}
+GET /dot/state -> HTTP 200 9575B 3ms pass {"connectors_count": 7, "enabled": true, "ok": true, "paused": false, "profiles_count": 1}
+GET /dot/profiles -> HTTP 200 236B 2ms pass {"ok": true, "profiles_count": 1}
+GET /dot/responsibilities?limit=100 -> HTTP 200 2506B 1ms pass {"ok": true, "responsibilities_count": 5}
+GET /dot/schedules?limit=100 -> HTTP 200 26B 2ms pass {"ok": true, "schedules_count": 0}
+GET /dot/rules?limit=100 -> HTTP 200 22B 1ms pass {"ok": true, "rules_count": 0}
+GET /dot/activity?limit=5 -> HTTP 200 4339B 1ms pass {"activity_count": 5, "ok": true}
+GET /dot/approvals?status=pending&limit=5 -> HTTP 200 26B 1ms pass {"approvals_count": 0, "ok": true}
+GET /dot/connectors -> HTTP 200 2141B 1ms pass {"connectors_count": 7, "ok": true}
+xgd_dot_api_probe=pass endpoints=10/10
+exit_code: 0
+```
+
+## 覆盖与边界
+
+- `/healthz`：`status=ok`、`db=connected`、`llm=configured`、`memory_count=807`、`running=true`。
+- `/runtime/info`：`service=xgd`、`version=2.1.194`、`mode=standalone`、`modeValid=true`、`scopeValid=true`。
+- `/dot/*` 只读端点 8 个全部 200：state/profiles/responsibilities/schedules/rules/activity/approvals/connectors。
+- 读到的数据为本机运行态（本地/合成范围），不代表真实客户环境；**不声明**这些数据为业务验收证据。
+- 探针只输出状态码/耗时/字节数与白名单字段，不回显响应全文，避免把运行态数据或凭据写入仓库。
+- 探针失败语义已实测：服务不在时全部端点报错并以 exit 1 结束；未传 `--read-only` 时拒绝执行（exit 2）。
+- 本证据不替代 XGD 仓自身测试或人工验收；不声明 `accepted` / `integrated` / `production_ready` / `customer_accepted`。

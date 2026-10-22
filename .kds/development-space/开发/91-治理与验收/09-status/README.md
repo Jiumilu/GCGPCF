@@ -45,11 +45,14 @@ KDS 路径前缀：`开发/12-GPCF/09-status/`
 | GPCF-DOC-0295C05F40 | 文档过期与归档台账 | 09-status/document-deprecation-register.md | GPCF | controlled |
 | GPCF-DOC-6630DBEA9D | GlobalCloud 项目群中文化治理报告 | 09-status/globalcloud-chinese-localization-governance-report.md | GPCF | controlled |
 | GPCF-DOC-CORE-CHAIN-REAL-EVIDENCE-REGISTER-20260624 | GlobalCloud 核心链路真实证据台账 | 09-status/globalcloud-core-chain-real-evidence-register.md | GPCF | controlled |
+| GPCF-DOC-CROSS-PROJECT-CONTRACT-MATRIX-20261022 | 项目群跨项目契约矩阵 v1.0（PG-12 inventory） | 09-status/globalcloud-cross-project-contract-matrix-v1.0.md | GPCF | draft |
 | GPCF-DOC-5EF9F8EE5D | GlobalCloud 文档控制总台账 | 09-status/globalcloud-document-control-register.md | GPCF | controlled |
 | GPCF-DOC-71779DF3C3 | GlobalCloud 文档治理 Loop 门禁 | 09-status/globalcloud-document-governance-loop-gate.md | GPCF | controlled |
 | GPCF-DOC-C436DDB0F6 | GlobalCloud 文档健康报告 | 09-status/globalcloud-document-health-report.md | GPCF | controlled |
+| GPCF-DOC-DONE-FEATURE-AUDIT-20261022 | 项目群历史 done Feature 证据审计（2026-10-22） | 09-status/globalcloud-done-feature-audit-20261022.md | GPCF | draft |
 | GPCF-DOC-C582EFCACE | GlobalCloud L3 Admission Matrix | 09-status/globalcloud-l3-admission-matrix.md | GPCF | controlled |
 | GPCF-DOC-C10C271958 | GlobalCloud 项目文档完整度与 Loop 成熟度量化矩阵 | 09-status/globalcloud-project-document-loop-maturity-matrix.md | GPCF | controlled |
+| GPCF-DOC-PROJECT-GROUP-CALIBER-BASELINE-20261022 | GlobalCloud 项目群口径基准 v1.0 | 09-status/globalcloud-project-group-caliber-baseline-v1.0.md | GPCF | controlled |
 | GPCF-DOC-OPEN-SPEC-18-PROJECT-MATRIX-20260712 | GlobalCloud 项目群 OpenSpec 适用性矩阵 | 09-status/globalcloud-project-group-openspec-applicability-matrix.md | GPCF | controlled |
 | GPCF-DOC-PROJECT-GROUP-REAL-EXECUTION-GOVERNANCE-BOARD-20260625 | GlobalCloud 项目群真实执行治理总控板 | 09-status/globalcloud-project-group-real-execution-governance-board.md | GPCF | controlled |
 | GPCF-DOC-PROJECT-IMPLEMENTATION-CONTROL-REGISTER-20260624 | GlobalCloud 项目群实施方案控制台账 | 09-status/globalcloud-project-implementation-control-register.md | GPCF | controlled |

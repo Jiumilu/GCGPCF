@@ -245,6 +245,7 @@ KDS 空间：`开发`
 | GPCF-DOC-9C22552EEE | 基础知识人工确认模式 | docs/harness/evidence/base-knowledge-human-confirmation-schema-20260619.md | KDS | controlled |
 | GPCF-DOC-7797BB4F55 | 基础知识人工确认模板 | docs/harness/evidence/base-knowledge-human-confirmation-template-20260619.md | KDS | controlled |
 | GPCF-DOC-C13F879695 | 基础知识回写候选账本 | docs/harness/evidence/base-knowledge-writeback-candidate-ledger-20260618.md | KDS | controlled |
+| GPCF-DOC-BATCH2-FEASIBILITY-20261022 | 批次 2 可行性核查（2026-10-22） | docs/harness/evidence/batch2-feasibility-20261022.md | GPCF | draft |
 | GPCF-DOC-DOMAIN-SLICE-REGISTRY-GREENCHAIN-GRAPH-20261011 | 业务域切片登记（GreenChainGraphBusinessDomain）· 2026-10-11 | docs/harness/evidence/business-domain-slice-registry-greenchain-graph-20261011.md | KDS | controlled |
 | GPCF-DOC-4E29A86D95 | CodeGraph Brain/GFIS 授权边界复核 | docs/harness/evidence/codegraph-brain-gfis-authorization-boundary-20260623.md | KDS | controlled |
 | GPCF-DOC-A1E6C5C544 | CodeGraph 业务开发执行层准入证据 | docs/harness/evidence/codegraph-dev-execution-admission-20260621.md | GPCF | controlled |
@@ -331,6 +332,8 @@ KDS 空间：`开发`
 | GPCF-DOC-7914B4FB3D | Cognee 真实外部执行回执责任分配 2026-06-26 | docs/harness/evidence/cognee-real-external-execution-receipt-responsibility-assignment-20260626.md | GPCF | controlled |
 | GPCF-DOC-8F9F2F5A0D | Cognee 真实外部执行回执提交请求包 2026-06-26 | docs/harness/evidence/cognee-real-external-execution-receipt-submission-request-20260626.md | GPCF | controlled |
 | GPCF-DOC-9EBCF7DB43 | Cognee 真实外部执行回执更新补丁计划 2026-06-26 | docs/harness/evidence/cognee-real-external-execution-receipt-update-patch-plan-20260626.md | GPCF | controlled |
+| GPCF-DOC-CONFLICT-02-ERROR-CODE-PACK-20261022 | CONFLICT-02 XAP 错误码裁决包（2026-10-22） | docs/harness/evidence/conflict-02-error-code-pack-20261022.md | GPCF | draft |
+| GPCF-DOC-CONTRACTS-REMAINING-PACK-20261022 | 剩余契约冲突裁决包（2026-10-22） | docs/harness/evidence/contracts-remaining-adjudication-pack-20261022.md | GPCF | draft |
 | GPCF-DOC-7B2E61A9D4 | Current Session Mainline Declaration 20260622 | docs/harness/evidence/current-session-mainline-declaration-20260622.md | KDS | controlled |
 | GPCF-DOC-CWME-SPACE-DOMAIN-EXTENSION-REGISTRATION-REQUEST-20261011 | CWME 城市空间域扩展包登记请求 2026-10-11 | docs/harness/evidence/cwme-space-domain-extension-registration-request-20261011.md | KDS | controlled |
 | GPCF-DOC-DOMAIN-EXTENSION-PACK-REGISTRY-CWME-SPACE-20261012 | 域扩展包登记（CWME 城市空间域扩展包）· 2026-10-12 | docs/harness/evidence/domain-extension-pack-registry-cwme-space-20261012.md | KDS | controlled |
@@ -681,6 +684,8 @@ KDS 空间：`开发`
 | GPCF-DOC-8DC131D430 | Ontology/WAS 3 小时实施 P2 门禁执行与回放证据 | docs/harness/evidence/ontology-was-3h-p2-gate-replay-20260621.md | GPCF | controlled |
 | GPCF-DOC-20DAB7011D | Ontology/WAS 3 小时实施 P3 收口与下一步决策证据 | docs/harness/evidence/ontology-was-3h-p3-closure-20260621.md | GPCF | controlled |
 | GPCF-DOC-C21E66324C | Ontology/WAS 真实 Source Record Intake Package | docs/harness/evidence/ontology-was-real-source-record-intake-pack-20260621.md | KDS | controlled |
+| GPCF-DOC-PG12-IMPLEMENTATION-PLAN-20261022 | PG-12 实施准备：digest 命名空间化与三义分列（2026-10-22） | docs/harness/evidence/pg12-implementation-plan-20261022.md | GPCF | draft |
+| GPCF-DOC-PG12-IMPLEMENTATION-REPORT-20261022 | PG-12 落仓实施报告：A1+A2+A2b（digest 命名空间化 + 三义分列，2026-10-22） | docs/harness/evidence/pg12-implementation-report-20261022.md | GPCF | draft |
 | GPCF-DOC-PROJECTGROUPLIVESTATUSCURRENT20260701 | GlobalCloud 项目群当前 Live 状态快照 | docs/harness/evidence/project_group_live_status_current.md | GPCF | controlled |
 | GPCF-DOC-FACA370CCA | 会话主任务总结与声明控制边界 | docs/harness/evidence/session-main-task-summary-declaration-boundary-20260622.md | KDS | controlled |
 | GPCF-DOC-3A9B82D614 | Session Mainline Drift Watch 20260622 | docs/harness/evidence/session-mainline-drift-watch-20260622.md | KDS | controlled |

@@ -83,6 +83,8 @@ superseded_by: []
 | GlobalCloud GCMEM | `GlobalCloud GCMEM 总体方案.md` | `GlobalCloud GCMEM 实施方案.md` | `in_progress` | `memory_runtime_boundary` | 长期记忆服务纳管 | 独立仓双方案均受控，本地回归与 doctor 已记录；小G容器侧迁移及连续三日夜挖仍待验证 | 保持 partial，复验跨端证据后再评估实施状态 |
 | GlobalCloud WAE | 待核验 | 待建立 | `planned` | `ui_runtime_boundary` | 世界资产浏览器设计阶段 | `projects/wae/STATUS.md` 记录设计与分步路线；首批项目界面未纳入 | 核验唯一总体设计并建立实施方案 |
 | GlobalCloud PMC | `GlobalCloud Project 总体方案.md` | `GlobalCloud Project 实施方案.md` | `in_progress` | `local_dev_dryrun_boundary` | F-028 GPCF Feature／Evidence 只读投影 | 本地代码测试和真实队列预览已执行；Plane 实例 API 与界面运行未验证 | 完成证据门禁，并在获授权开发实例中验证幂等同步 |
+| GlobalCloud DRC | 待建立 | 待建立 | `planned` | `project_plan_boundary` | 项目群数据资源中心已纳管（2026-10-21）；bootstrap/partial | `projects/drc/STATUS.md` 已登记项目级职责与主账边界；资源模型与接口未核验 | 核验资源模型与接口（脱敏元数据/离线样例）；真实连接另授权 |
+| GlobalCloud FireQuote | 待建立 | 待建立 | `planned` | `project_plan_boundary` | 消防定额测算平台已纳管（2026-10-22 19:11，第 29 项） | 仓内已有后端 89 测试与前端构建证据；未见项目级总体方案与双总控继承声明 | 核验并补《GlobalCloud FireQuote 总体方案》与项目群继承链 |
 | GlobalCloud PDC | `GlobalCloud PDC 总体方案.md`（候选） | `GlobalCloud PDC 实施方案.md`（候选） | `in_progress` | `project_plan_boundary` | 独立应用完成 Git 与私有远端核验，双方案候选已形成 | Node 22 类型检查、37/37 套件与 471/471 用例、Lint 0 error；浏览器关键任务和方案继承待核验 | 核验双方案继承并重跑当前版本关键任务 |
 | GlobalCloud SLC | 待建立 | 待建立 | `planned` | `project_plan_boundary` | 独立应用完成 Git 与私有远端建立，进入项目群治理清单 | `projects/slc/STATUS.md` 与独立仓纳管记录；本轮未重跑应用门禁 | 建立双方案继承并重跑当前版本关键任务验证 |
 | shared/python_utils | 不适用 | 不适用 | `not_project` | `not_project_boundary` | 共享工具目录治理 | 导入可用性待验证 | 纳入依赖检查 |
@@ -91,7 +93,7 @@ superseded_by: []
 
 ```text
 implementation_plan_previous_governance_baseline = phase_3_all_project_plans_controlled
-implementation_plan_governance = repair_required_for_current_27_project_scope
+implementation_plan_governance = repair_required_for_current_29_project_scope
 current_live_project_group_git_gate = see_project_group_live_status_current_snapshot
 current_live_dirty_repos = see_project_group_live_status_current_snapshot
 current_live_sensitive_repos = see_project_group_live_status_current_snapshot

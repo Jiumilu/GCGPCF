@@ -28,6 +28,14 @@ evidence:
   screenshots: waived
   api: waived
   summary: pass
+verification:
+  tests:
+  - python3 tools/kds-sync/validate_gpcf_2_feature_workspace.py
+  build:
+  - python3 tools/kds-sync/check_python_bytecode.py
+  waivers:
+    screenshots: 该 Feature 已于历史阶段关闭，screenshots 证据不适用于其交付形态；按 P17 补验登记范围理由（历史 Feature，现行规则后置生效）。
+    api: 该 Feature 已于历史阶段关闭，api 证据不适用于其交付形态；按 P17 补验登记范围理由（历史 Feature，现行规则后置生效）。
 blockers:
 verification:
   tests:

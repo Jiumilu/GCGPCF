@@ -1,0 +1,1491 @@
+# GlobalCloud 项目群 · 价值单元（VU）台账 v1.0
+# 口径来源：runtime/plan-20261022/GlobalCloud项目群完成度与综合能力提升_任务优先级清单_v1.0.md §1.2
+# 纪律来源：GlobalCloud 项目群实施方案.md §4 状态机 / §4.1 开发完成与真实业务验证分离
+# 本台账为首版基线：全部条目 inferred: true，是估算，不是受控事实；未声明任何项目真实业务完成。
+# 生成：PG-02（2026-10-22），复算脚本：tools/kds-sync/render_project_group_completion.py
+schema_version: '1.0'
+generated_at: '2026-10-22T05:33:03+08:00'
+project_group_scope: 29
+model_ref:
+  document: runtime/plan-20261022/GlobalCloud项目群完成度与综合能力提升_任务优先级清单_v1.0.md
+  section: §1.2 完成度：把完成变成可计算的量
+  stage_state_machine: GlobalCloud 项目群实施方案.md §4 实施状态机 / §4.1 开发完成与真实业务验证分离原则
+  baseline_doc: 09-status/globalcloud-project-group-completion-baseline-v1.0.md
+  renderer: tools/kds-sync/render_project_group_completion.py
+  definition_of_done: 一个价值单元走完：真实输入 → 运行 → 证据 → 人工确认 → 归档
+stage_weights:
+  S0:
+    name: 未定义
+    raw: 0.0
+    dev: 0.0
+    real: 0.0
+  S1:
+    name: 开发候选
+    raw: 0.2
+    dev: 0.4
+    real: 0.0
+  S2:
+    name: 内部验证
+    raw: 0.35
+    dev: 0.7
+    real: 0.0
+  S3:
+    name: 复核就绪
+    raw: 0.5
+    dev: 1.0
+    real: 0.0
+  S4:
+    name: 真实业务验证
+    raw: 0.7
+    dev: 1.0
+    real: 0.7
+  S5:
+    name: 人工验收
+    raw: 0.9
+    dev: 1.0
+    real: 0.9
+  S6:
+    name: 闭环归档
+    raw: 1.0
+    dev: 1.0
+    real: 1.0
+calibers:
+  C_dev:
+    definition: 开发口径：只计 S0–S3，把 S3 视为该口径的 1.0；S4 及以上视为开发已饱和计 1.0
+    coefficient_field: stage_weights.*.dev
+  C_real:
+    definition: 真实口径：只计 S4–S6，S0–S3 计 0；S4/S5/S6 取 §1.2 原权重 0.70/0.90/1.00
+    coefficient_field: stage_weights.*.real
+  C_project: C = Σ(weight_i × coefficient(stage_i)) / Σ weight_i
+  C_group: C_group = Σ(PW_j × C_j) / Σ PW_j
+stage_evidence_discipline:
+- 无证据 = S0
+- 仅代码 / fixture / dry-run = S1
+- tests / build / validator pass = S2
+- evidence 包 + review 请求 = S3
+- 真实 source-of-record 通过 source validation + runtime intake + review queue = S4
+- 人工验收 = S5
+- 闭环归档 = S6
+- fixture / dry-run / mock / SIMULATED / PoC governor 最高 S2，不得进入 S4
+- '无事实依据的条目填 S0/S1 并标 inferred: true'
+project_scope:
+- id: AAAS
+  weight: 4
+  lane: core
+  current_form: 仅模板桩
+  main_gap: 无项目级状态与证据；ServiceRuntime/WAME binding 仅本地预检，无真实服务包运行
+- id: Brain
+  weight: 4
+  lane: base
+  current_form: 仅模板桩
+  main_gap: 无项目级 STATUS 实质内容；Brain↔KDS 写回契约未落地；lint/format 未清
+- id: WAS
+  weight: 5
+  lane: core
+  current_form: 有实质进展
+  main_gap: F-022 tests/build/summary 全 pending；真实 P4 source-of-record 连续 16 轮为 0
+- id: XiaoC
+  weight: 4
+  lane: base
+  current_form: 有实质进展
+  main_gap: F-033 summary 未收口；WAME 侧为 PoC governor；消费方未联调
+- id: WAME
+  weight: 5
+  lane: core
+  current_form: 仅模板桩
+  main_gap: 引擎面 not_implemented；lint 两处报错；正式治理裁定/发布未发生
+- id: GPC
+  weight: 4
+  lane: core
+  current_form: 仅模板桩
+  main_gap: 外部/运行证据缺；SCaaS 链路未复核；无项目级状态
+- id: Studio
+  weight: 4
+  lane: base
+  current_form: 阻塞
+  main_gap: F-011 缺专属验收命令与可用性/无障碍门禁；F-015 主动冻结
+- id: GPCF
+  weight: 5
+  lane: core
+  current_form: 有实质进展
+  main_gap: 9 个历史 done 不符现行关闭规则；双方案未全核验；授权链已建但未开闸
+- id: XWAIL
+  weight: 4
+  lane: core
+  current_form: 仅模板桩
+  main_gap: 无 Feature 载体；Validator/Profile 不完整；XAP 仅由 F-033 PoC 间接覆盖
+- id: GFIS
+  weight: 5
+  lane: core
+  current_form: 有实质进展
+  main_gap: F-005 为 dry-run 样本；真实工厂系统写入与运行层证据缺；停滞 98 天
+- id: MMC
+  weight: 3
+  lane: base
+  current_form: 仅模板桩
+  main_gap: 无项目级状态；委派/人工确认契约仍挂在 F-013 blockers
+- id: KDS
+  weight: 5
+  lane: core
+  current_form: 有实质进展
+  main_gap: F-017 归属与证据位置错位（证据在 SpaceAI 仓）；GPU/数据场地未排期；真实 API 同步未授权
+- id: XiaoG
+  weight: 3
+  lane: base
+  current_form: 仅模板桩
+  main_gap: 全栈暂停；live API/设备验证未做；BFF 契约未验证
+- id: PVAOS
+  weight: 4
+  lane: core
+  current_form: 仅模板桩
+  main_gap: 架构承接分支未检出；跨项目接口 implementation_pending
+- id: SOP
+  weight: 4
+  lane: core
+  current_form: 阻塞
+  main_gap: F-012 零证据、停滞 98 天；owner review 未裁定
+- id: PKC
+  weight: 3
+  lane: base
+  current_form: 仅模板桩
+  main_gap: 无项目级状态；KDS/Brain 依赖仅 dry-run
+- id: XGD
+  weight: 3
+  lane: base
+  current_form: 阻塞
+  main_gap: F-031 screenshots/api/summary 三项 fail；D10/D11/72h/语音未收口
+- id: ICP
+  weight: 4
+  lane: core
+  current_form: 阻塞
+  main_gap: F-019 api/summary fail；真实业务源未连接
+- id: PQC
+  weight: 3
+  lane: support
+  current_form: 有实质进展
+  main_gap: F-032 仅 plan；真实业务与权限验收未执行；项目总体方案 missing
+- id: SpaceAI
+  weight: 3
+  lane: support
+  current_form: 有实质进展
+  main_gap: 数据为 SIMULATED 合成库；真实设备未接入；queue 状态落后
+- id: SpaceAIStudio
+  weight: 2
+  lane: support
+  current_form: 有实质进展
+  main_gap: Windows/Linux 产物与 GUI 启动运行证据缺；不能独立构建
+- id: World
+  weight: 3
+  lane: base
+  current_form: 阻塞
+  main_gap: Ontology 版本冲突；中央门禁 rework_required（6 项 missing_metadata）
+- id: GCMEM
+  weight: 3
+  lane: base
+  current_form: 有实质进展
+  main_gap: F-026 Evidence Gate 不可关闭；三夜挖掘 1/3；容器迁移未验证
+- id: WAE
+  weight: 3
+  lane: base
+  current_form: 有实质进展
+  main_gap: P0 四项未开始；唯一方案未确认；首批界面未纳入
+- id: Project
+  weight: 3
+  lane: support
+  current_form: 有实质进展
+  main_gap: Plane UI 未验证；实例停机；共享/生产实例写入未授权
+- id: PDC
+  weight: 3
+  lane: support
+  current_form: 阻塞
+  main_gap: F-030 tests/summary 双 fail；浏览器关键任务与方案继承未核验
+- id: SLC
+  weight: 2
+  lane: support
+  current_form: 有实质进展
+  main_gap: 无 Feature；测试/构建/关键任务未重跑；跨仓门禁 20/20 未通过
+- id: DRC
+  weight: 3
+  lane: base
+  current_form: 有实质进展
+  main_gap: 数据库连接/资源目录/权限模型未实现；门禁 rework_required
+- id: FireQuote
+  weight: 4
+  lane: core
+  current_form: 有实质进展
+  main_gap: 真实客户图纸/清单与实绩回灌未验证；六层定额仅示范数据；未接 WAE 管理面；工作树 38 项脏未提交
+vu_units:
+- vu_id: WAS-VU-01
+  project: WAS
+  weight: 5
+  scene: 世界资产主数据注册
+  authority: WAS 语义治理组
+  object: 世界资产主数据记录（Asset Record）
+  source_of_record: WAS 生产资产库（未接入）
+  acceptor: WAS 治理 owner
+  stage: S1
+  stage_evidence: F-022 处 registration 步、tests/build/summary 全 pending；无任何真实资产入库记录
+  data_class: fixture
+  inferred: true
+  notes: 只有登记动作，没有写入证据
+- vu_id: WAS-VU-02
+  project: WAS
+  weight: 4
+  scene: 世界资产场景流扩展
+  authority: WAS 治理组 + 项目群架构组
+  object: 场景流定义（ScenarioFlow）
+  source_of_record: WAS 流定义仓
+  acceptor: WAS 治理 owner
+  stage: S1
+  stage_evidence: F-022 Feature 存在且 queued/iteration 1，tests/build 均未产生；无场景流运行记录
+  data_class: dry_run
+  inferred: true
+  notes: 仅 Feature 载体，无通过证据
+- vu_id: WAS-VU-03
+  project: WAS
+  weight: 4
+  scene: 流命名迁移（存量引用切换）
+  authority: WAS 架构组
+  object: 流命名映射表与引用清单
+  source_of_record: WAS 仓配置与 scripts
+  acceptor: WAS 治理 owner
+  stage: S2
+  stage_evidence: F-023 tests pass（validate_all 13/13 PASS、pipeline 契约校验 PASS，2026-10-16）；build waived、summary pending
+  data_class: dry_run
+  inferred: true
+  notes: tests pass 仅本地 validator，非真实业务验证
+- vu_id: WAS-VU-04
+  project: WAS
+  weight: 3
+  scene: 真实 P4 业务输入接入
+  authority: P4 场景 owner（待授权）
+  object: 真实 P4 source-of-record（业务单据）
+  source_of_record: 客户/现场 P4 单据（未获得）
+  acceptor: P4 owner + WAME
+  stage: S0
+  stage_evidence: MONITOR-085 至 MONITOR-100 连续 16 轮 real_source_records=0；236 份证据、32 轮 precheck 无一条真实单据
+  data_class: none
+  inferred: true
+  notes: 约束 C-D 直接体现：唯一不可工程解的出口
+- vu_id: XWAIL-VU-01
+  project: XWAIL
+  weight: 5
+  scene: XAP 信封与 manifest 打包验包
+  authority: XWAIL 契约治理组
+  object: XAP manifest 包（PromptAsset 信封）
+  source_of_record: XWAIL 契约仓
+  acceptor: WAME 发布门禁
+  stage: S2
+  stage_evidence: F-033 覆盖 XWAIL 打包验包（无签名），tests/build pass；无项目级验收与正式裁定
+  data_class: poc
+  inferred: true
+  notes: 经 F-033 PoC 间接覆盖，PoC governor 上限 S2
+- vu_id: XWAIL-VU-02
+  project: XWAIL
+  weight: 3
+  scene: 场景模型绑定（XWAILModel）
+  authority: XWAIL 建模组
+  object: 场景模型定义
+  source_of_record: 未建立
+  acceptor: 未指定
+  stage: S0
+  stage_evidence: 无 Feature 载体、无设计产物、无绑定记录；F-033 scope 明确排除场景模型绑定
+  data_class: none
+  inferred: true
+  notes: 无事实依据，按 S0 计
+- vu_id: XWAIL-VU-03
+  project: XWAIL
+  weight: 4
+  scene: Validator / Profile / 兼容矩阵
+  authority: XWAIL 治理组
+  object: Validator 与 Profile 资产
+  source_of_record: XWAIL 仓 scripts
+  acceptor: XWAIL owner
+  stage: S1
+  stage_evidence: XWAIL-WAME-AAAS-CONTRACT-PRECHECK-001 形成本地预检候选；delegated wrapper replay 边界未解
+  data_class: dry_run
+  inferred: true
+  notes: 预检候选，无 tests/build 通过结论
+- vu_id: AAAS-VU-01
+  project: AAAS
+  weight: 5
+  scene: 服务包结构门禁复核
+  authority: AAAS 服务治理组
+  object: AaaS 服务包（Service Package）
+  source_of_record: AAAS 仓 contract
+  acceptor: WAME binding 门禁
+  stage: S2
+  stage_evidence: F-033 AaaS 结构校验 0 issues；tests/build pass
+  data_class: poc
+  inferred: true
+  notes: 校验在 PoC scope 内完成，按纪律不得升 S4
+- vu_id: AAAS-VU-02
+  project: AAAS
+  weight: 4
+  scene: ServiceRuntime / WAME binding
+  authority: AAAS + WAME
+  object: 服务运行时绑定记录
+  source_of_record: 未接入生产运行时
+  acceptor: WAME
+  stage: S1
+  stage_evidence: AAAS-WAME-BINDING-PRECHECK-001 仅本地预检；无运行时绑定记录
+  data_class: dry_run
+  inferred: true
+  notes: 预检 ≠ 绑定
+- vu_id: AAAS-VU-03
+  project: AAAS
+  weight: 3
+  scene: 计量 / SLA / 订阅状态
+  authority: AAAS 商务组
+  object: 计量账与 SLA 单据
+  source_of_record: 无
+  acceptor: 客户/订阅方
+  stage: S0
+  stage_evidence: 无 Feature、无计量账、无 SLA 单据、无订阅状态记录
+  data_class: none
+  inferred: true
+  notes: 无事实依据，按 S0 计
+- vu_id: WAME-VU-01
+  project: WAME
+  weight: 5
+  scene: PromptAsset 受理
+  authority: WAME 治理引擎
+  object: XAP 受理请求（req-b1579fe37e4e）
+  source_of_record: WAME 治理台账
+  acceptor: WAME 治理 owner
+  stage: S2
+  stage_evidence: F-033 内 WAME 受理请求可查（已裁定/发布，PoC scope）；tests/build pass
+  data_class: poc
+  inferred: true
+  notes: PoC governor 受理，非正式治理注册
+- vu_id: WAME-VU-02
+  project: WAME
+  weight: 4
+  scene: 裁定与发布
+  authority: WAME 治理引擎
+  object: 裁定回执与发布记录
+  source_of_record: WAME 治理台账
+  acceptor: WAME 治理 owner
+  stage: S2
+  stage_evidence: F-033 req-b1579fe37e4e 已裁定/发布，但 scope 限定联调、非正式注册/授权/发布
+  data_class: poc
+  inferred: true
+  notes: 正式裁定/发布未发生，不得计 S4
+- vu_id: WAME-VU-03
+  project: WAME
+  weight: 5
+  scene: 世界资产模型引擎 E1 引擎面
+  authority: WAME 引擎组
+  object: 引擎实现与运行时
+  source_of_record: 未实现
+  acceptor: WAME owner
+  stage: S0
+  stage_evidence: 架构迭代分析 I1 记「引擎面 not_implemented」；lint 两处报错、runtime 未修复
+  data_class: none
+  inferred: true
+  notes: 引擎面缺失，是多链共同阻塞
+- vu_id: WAME-VU-04
+  project: WAME
+  weight: 3
+  scene: 治理台账与回执
+  authority: WAME 治理组
+  object: 受理台账与回执记录
+  source_of_record: 本地台账（非正式）
+  acceptor: WAME owner
+  stage: S1
+  stage_evidence: PoC 台账存在但为非正式治理产物，无正式台账编号与保留策略
+  data_class: fixture
+  inferred: true
+  notes: 台账存在但不可作为正式凭据
+- vu_id: GFIS-VU-01
+  project: GFIS
+  weight: 5
+  scene: 工厂异常受理
+  authority: GFIS 工厂事实组
+  object: 工厂异常单据
+  source_of_record: 工厂系统（dry-run 样本）
+  acceptor: GFIS owner
+  stage: S2
+  stage_evidence: F-005 tests/build/summary pass，系 dry-run 样本；STATUS 明示「不代表真实工厂系统写入」
+  data_class: dry_run
+  inferred: true
+  notes: dry-run 上限 S2
+- vu_id: GFIS-VU-02
+  project: GFIS
+  weight: 5
+  scene: 真实工厂系统写入（source-of-record）
+  authority: 工厂系统 owner
+  object: 真实工厂写入记录
+  source_of_record: 真实工厂系统（未接入）
+  acceptor: 工厂 owner + WAME
+  stage: S0
+  stage_evidence: real_source_records=0；pending_business_verification 未建立；无运行层主键
+  data_class: none
+  inferred: true
+  notes: 真实 SOR 缺席，约束 C-D
+- vu_id: GFIS-VU-03
+  project: GFIS
+  weight: 4
+  scene: 运行层主键与复核队列
+  authority: GFIS 运行组
+  object: 运行层主键与 review queue item
+  source_of_record: 仅 dry-run 生成
+  acceptor: GFIS owner
+  stage: S1
+  stage_evidence: 仅在 dry-run 内生成主键与队列条目，无 runtime intake 真实记录
+  data_class: dry_run
+  inferred: true
+  notes: 开发闭环候选，未进入真实运行
+- vu_id: GFIS-VU-04
+  project: GFIS
+  weight: 3
+  scene: 客户侧业务确认
+  authority: 客户/工厂业务 owner
+  object: pending_business_verification 记录
+  source_of_record: 无
+  acceptor: 客户
+  stage: S0
+  stage_evidence: 无客户确认记录、无业务验证回执
+  data_class: none
+  inferred: true
+  notes: 验收人明确但从未触发
+- vu_id: GPC-VU-01
+  project: GPC
+  weight: 5
+  scene: 绿色供应链场景执行
+  authority: GPC 平台组
+  object: 场景执行记录
+  source_of_record: GPC 本地库
+  acceptor: GPC owner
+  stage: S1
+  stage_evidence: README 索引与浏览器 E2E 已修复（B 级文档声明），外部运行证据缺；无项目级 Feature
+  data_class: fixture
+  inferred: true
+  notes: 仅本地 E2E，无外部运行
+- vu_id: GPC-VU-02
+  project: GPC
+  weight: 4
+  scene: 公共服务平台外部运行
+  authority: GPC 平台组
+  object: 对外运行日志与访问记录
+  source_of_record: 无
+  acceptor: GPC owner + WAME
+  stage: S0
+  stage_evidence: external/runtime evidence 缺失；control register 记 partial_verified 但证据未采集
+  data_class: none
+  inferred: true
+  notes: 无事实证据，按 S0 计
+- vu_id: GPC-VU-03
+  project: GPC
+  weight: 4
+  scene: SCaaS 链路（GFIS→GPC→PVAOS）
+  authority: 项目群架构组
+  object: 跨项目链路运行记录
+  source_of_record: 无
+  acceptor: 场景 owner
+  stage: S0
+  stage_evidence: 核心链 9 项目「真实集成」列全部 not_collected；12 条依赖边 0 条 integrated
+  data_class: none
+  inferred: true
+  notes: 跨项目链路从未真实运行
+- vu_id: PVAOS-VU-01
+  project: PVAOS
+  weight: 4
+  scene: 运营底座模块验证
+  authority: PVAOS 架构组
+  object: 模块 Manifest / validator 证据
+  source_of_record: PVAOS 仓
+  acceptor: PVAOS owner
+  stage: S1
+  stage_evidence: control register 声明 D4 分支最小 L3 harness、Manifest、module validation evidence 已具备（B 级，本次未复跑）；无项目级 Feature
+  data_class: dry_run
+  inferred: true
+  notes: 文档声明未复跑，不按 S2 计
+- vu_id: PVAOS-VU-02
+  project: PVAOS
+  weight: 4
+  scene: 门户/运营工作台可用性
+  authority: PVAOS 产品组
+  object: 可用性验收记录
+  source_of_record: 无
+  acceptor: PVAOS owner
+  stage: S0
+  stage_evidence: usability/customer evidence 未采集
+  data_class: none
+  inferred: true
+  notes: 无可用性证据
+- vu_id: PVAOS-VU-03
+  project: PVAOS
+  weight: 3
+  scene: 架构承接分支绑定
+  authority: 项目群架构组
+  object: 架构承接分支与传导记录
+  source_of_record: PVAOS 仓分支
+  acceptor: 项目群架构 owner
+  stage: S0
+  stage_evidence: pending_branch_binding：目标分支 pvaos/architecture-contracts 未检出，当前 main
+  data_class: none
+  inferred: true
+  notes: 承接未落地
+- vu_id: PVAOS-VU-04
+  project: PVAOS
+  weight: 5
+  scene: 跨项目接口承接（WAME/GPC 依赖）
+  authority: 项目群架构组
+  object: 跨项目接口契约实现
+  source_of_record: 无
+  acceptor: 下游项目 owner
+  stage: S0
+  stage_evidence: 跨项目接口大面积 implementation_pending；依赖 dry-run 未执行
+  data_class: none
+  inferred: true
+  notes: 接口承接全部 pending
+- vu_id: KDS-VU-01
+  project: KDS
+  weight: 5
+  scene: 企业知识主存检索
+  authority: KDS 知识主存组
+  object: 知识条目与检索索引
+  source_of_record: KDS 本地索引（GBrain）
+  acceptor: KDS owner
+  stage: S2
+  stage_evidence: RAG 导出、API smoke、GBrain search/query、wiki trust audit 在 local dev 通过（B 级）；tests pass
+  data_class: dry_run
+  inferred: true
+  notes: 本地 dev 通过，非真实 KDS API 同步
+- vu_id: KDS-VU-02
+  project: KDS
+  weight: 4
+  scene: CWME 城市世界模型引擎（F-017）
+  authority: KDS/城市世界模型组
+  object: 城市世界模型（CWME）产物
+  source_of_record: 证据位于 GlobalCloud SpaceAI 仓
+  acceptor: KDS owner
+  stage: S2
+  stage_evidence: F-017 tests/build pass；但登记在 kds 名下、证据在 SpaceAI 仓，账实不符；GPU/数据场地未排期
+  data_class: fixture
+  inferred: true
+  notes: 阶段计 S2，归属与证据位置待纠正
+- vu_id: KDS-VU-03
+  project: KDS
+  weight: 4
+  scene: KDS API 契约与只读 runtime index
+  authority: KDS 接口组
+  object: API 契约与索引只读检查记录
+  source_of_record: KDS 本地 API
+  acceptor: KDS owner
+  stage: S1
+  stage_evidence: API contract dry-run 未落地；runtime index read-only check 未执行
+  data_class: dry_run
+  inferred: true
+  notes: 契约未冻结
+- vu_id: KDS-VU-04
+  project: KDS
+  weight: 5
+  scene: 真实 KDS API 同步与 owner 确认
+  authority: KDS owner
+  object: 真实同步批次与接收/归档记录
+  source_of_record: KDS 真实 API（未授权）
+  acceptor: KDS owner + WAME
+  stage: S0
+  stage_evidence: 真实 KDS API 同步未授权；资金报告、sync-run 接收/归档仍待 owner 确认
+  data_class: none
+  inferred: true
+  notes: 授权未开，真实同步 0 批
+- vu_id: GPCF-VU-01
+  project: GPCF
+  weight: 5
+  scene: Feature Evidence Gate 门禁
+  authority: GPCF 治理门禁
+  object: Feature 证据包结论
+  source_of_record: GPCF runtime + features/active
+  acceptor: GPCF 治理 owner
+  stage: S2
+  stage_evidence: 23 个活跃 Feature 有 evidence 字段与 gpcf_check_evidence.py 可回放；10/23 blocked、api 仅 1 pass
+  data_class: fixture
+  inferred: true
+  notes: 门禁可跑，但结论不构成真实业务证据
+- vu_id: GPCF-VU-02
+  project: GPCF
+  weight: 4
+  scene: 完成度双账本（VU 台账）
+  authority: GPCF 治理组
+  object: VU 台账与 C_dev/C_real 输出
+  source_of_record: GPCF runtime/vu-ledger.yaml
+  acceptor: 老卢（人工确认）
+  stage: S1
+  stage_evidence: 本台账首版由 PG-02 生成，公式与渲染脚本已落地；尚无人工确认与受控基线发布
+  data_class: dry_run
+  inferred: true
+  notes: 首版基线，未受控
+- vu_id: GPCF-VU-03
+  project: GPCF
+  weight: 4
+  scene: 历史 done 补验与关闭规则
+  authority: GPCF 关账人
+  object: 9 个历史 done Feature 补验记录
+  source_of_record: features/done
+  acceptor: GPCF 治理 owner
+  stage: S1
+  stage_evidence: F-027 blockers 自述 9 个已关闭 Feature 不符现行关闭规则；补验未执行
+  data_class: dry_run
+  inferred: true
+  notes: 关闭规则被回溯改写，信用无法累计
+- vu_id: GPCF-VU-04
+  project: GPCF
+  weight: 2
+  scene: 授权链与回执台账
+  authority: 老卢（唯一授权主体）
+  object: 授权请求与回执记录
+  source_of_record: docs/harness/evidence 授权链
+  acceptor: 老卢
+  stage: S1
+  stage_evidence: 122 份授权链证据、115 个授权 validator 已建 7 层桥接；authorization_granted=0、action_executed=0
+  data_class: fixture
+  inferred: true
+  notes: 基础设施充足、收费站未开（约束 C-A）
+- vu_id: GPCF-VU-05
+  project: GPCF
+  weight: 3
+  scene: 项目群状态巡检与口径冻结
+  authority: GPCF 治理组
+  object: 单次实测口径快照
+  source_of_record: runtime/state.json、runtime/queue.json
+  acceptor: GPCF owner
+  stage: S1
+  stage_evidence: dirty 仓数并存 3/5/7/21/22 五套、项目群数并存 17/20/28 三套；PG-01 口径基准未落地
+  data_class: fixture
+  inferred: true
+  notes: 分母不稳（约束 C-C）
+- vu_id: SOP-VU-01
+  project: SOP
+  weight: 5
+  scene: 流引擎规则包执行
+  authority: SOP 流引擎组
+  object: 规则包实例
+  source_of_record: 无
+  acceptor: 场景 owner
+  stage: S0
+  stage_evidence: F-012 queued/iteration 0，tests/build/summary 全 pending，停滞 98 天、零证据
+  data_class: none
+  inferred: true
+  notes: 项目群唯一流引擎，但零运行证据
+- vu_id: SOP-VU-02
+  project: SOP
+  weight: 3
+  scene: 武汉城市圈场景 owner review
+  authority: 场景 owner
+  object: owner review 包
+  source_of_record: docs 受控包
+  acceptor: 场景 owner
+  stage: S1
+  stage_evidence: owner review 包已受控（B 级），保留/返工/归档/删除噪声/入 KDS 未裁定
+  data_class: fixture
+  inferred: true
+  notes: review 包存在，裁决未发生
+- vu_id: SOP-VU-03
+  project: SOP
+  weight: 4
+  scene: 真实流程运行
+  authority: SOP 流引擎组 + 场景 owner
+  object: 真实流程执行记录
+  source_of_record: 无
+  acceptor: 场景 owner + WAME
+  stage: S0
+  stage_evidence: 无真实流程执行记录；真实接入未就绪
+  data_class: none
+  inferred: true
+  notes: 无事实依据
+- vu_id: ICP-VU-01
+  project: ICP
+  weight: 5
+  scene: 产业控制台骨架（24 节点 / 11 池 / 3 场景）
+  authority: ICP 产业计算组
+  object: 节点/池/场景控制台记录
+  source_of_record: ICP 本地 HTTP 服务
+  acceptor: ICP owner
+  stage: S2
+  stage_evidence: 10 项测试 + 契约门禁 + 本地 HTTP smoke 通过；control register 记 candidate（仅 fixture/development 闭环）
+  data_class: fixture
+  inferred: true
+  notes: fixture 闭环，按纪律不升 S4
+- vu_id: ICP-VU-02
+  project: ICP
+  weight: 4
+  scene: 真实业务源连接
+  authority: ICP 业务组
+  object: 真实业务源接入记录
+  source_of_record: 真实业务源（未连接）
+  acceptor: ICP owner + WAME
+  stage: S0
+  stage_evidence: real_business_sources_connected=false；无连接器实现记录
+  data_class: none
+  inferred: true
+  notes: 真实业务源缺席
+- vu_id: ICP-VU-03
+  project: ICP
+  weight: 4
+  scene: 控制台 API 与 summary 证据
+  authority: ICP 接口组
+  object: API 响应与 summary 证据
+  source_of_record: ICP API
+  acceptor: ICP owner
+  stage: S1
+  stage_evidence: F-019 api evidence required、summary evidence failed；无 10-15 后更新
+  data_class: fixture
+  inferred: true
+  notes: 两类证据缺，Feature blocked
+- vu_id: Brain-VU-01
+  project: Brain
+  weight: 5
+  scene: 知识对象编译（A1/A2/A3 授权型闭包）
+  authority: Brain 知识治理组
+  object: 知识对象候选包
+  source_of_record: Brain 本地
+  acceptor: Brain owner
+  stage: S1
+  stage_evidence: 授权型闭包与 review handoff 已进入人工审查边界（B 级文档声明）；无项目级 STATUS 实质内容
+  data_class: dry_run
+  inferred: true
+  notes: 文档声明，无项目级证据链
+- vu_id: Brain-VU-02
+  project: Brain
+  weight: 4
+  scene: Brain↔KDS 写回契约
+  authority: Brain + KDS
+  object: 写回契约与同步记录
+  source_of_record: 未建立
+  acceptor: KDS owner
+  stage: S0
+  stage_evidence: 架构迭代分析 I5 记写回契约未落地
+  data_class: none
+  inferred: true
+  notes: 契约缺失
+- vu_id: Brain-VU-03
+  project: Brain
+  weight: 3
+  scene: lint/format 与 handoff 包
+  authority: Brain 工程组
+  object: lint 报告与 handoff 包
+  source_of_record: Brain 仓
+  acceptor: Brain owner
+  stage: S1
+  stage_evidence: lint/format 未清；handoff 包仅本地生成
+  data_class: fixture
+  inferred: true
+  notes: 工程卫生未达门禁
+- vu_id: Studio-VU-01
+  project: Studio
+  weight: 5
+  scene: 知识工作台 UI/runtime 闭环（F-011）
+  authority: Studio 工作台组
+  object: 工作台运行实例与页面
+  source_of_record: Studio 本地 runtime
+  acceptor: Studio owner
+  stage: S2
+  stage_evidence: F-011 tests/build/screenshots pass、api waived；current_step evaluate，未收口
+  data_class: fixture
+  inferred: true
+  notes: 证据三项 pass，缺收口与专属验收命令
+- vu_id: Studio-VU-02
+  project: Studio
+  weight: 3
+  scene: 多用户可用性/无障碍门禁
+  authority: Studio 产品组
+  object: 多用户与无障碍门禁记录
+  source_of_record: 无
+  acceptor: Studio owner
+  stage: S1
+  stage_evidence: F-011 缺专属 tests/build 命令与多用户可用性/无障碍门禁结论
+  data_class: fixture
+  inferred: true
+  notes: 门禁未建立
+- vu_id: Studio-VU-03
+  project: Studio
+  weight: 4
+  scene: GCWorld 组织只读垂直切片（F-015）
+  authority: Studio + GCWorld
+  object: 组织只读切片快照
+  source_of_record: Studio 隔离测试环境
+  acceptor: Studio owner
+  stage: S2
+  stage_evidence: F-015 tests/build/screenshots pass，api/summary pending；status blocked（stage-1 主动冻结）
+  data_class: fixture
+  inferred: true
+  notes: 隔离测试快照，不等于真实用户获准
+- vu_id: MMC-VU-01
+  project: MMC
+  weight: 4
+  scene: 治理模板复用 smoke
+  authority: MMC 治理模板组
+  object: 治理模板包
+  source_of_record: MMC 仓
+  acceptor: MMC owner
+  stage: S1
+  stage_evidence: L3 admission validator、dependency dry-run、runtime tests 已具备（B 级）；无项目级 STATUS 实质内容
+  data_class: fixture
+  inferred: true
+  notes: 仅文档声明
+- vu_id: MMC-VU-02
+  project: MMC
+  weight: 3
+  scene: 委派/人工确认契约
+  authority: MMC + GPCF
+  object: 委派契约与人工确认记录
+  source_of_record: 未独立立项
+  acceptor: MMC owner
+  stage: S0
+  stage_evidence: 仍挂在 F-013 blockers 内，未独立立项
+  data_class: none
+  inferred: true
+  notes: 契约未立
+- vu_id: MMC-VU-03
+  project: MMC
+  weight: 3
+  scene: 下游项目 contract dry-run
+  authority: MMC 模板组
+  object: contract dry-run 结果
+  source_of_record: MMC 仓
+  acceptor: 下游项目 owner
+  stage: S1
+  stage_evidence: dependency dry-run 已具备（B 级），无下游消费记录
+  data_class: dry_run
+  inferred: true
+  notes: dry-run ≠ 下游接入
+- vu_id: PKC-VU-01
+  project: PKC
+  weight: 4
+  scene: 个人知识工作台最小 Loop
+  authority: PKC 工作台组
+  object: 工作台条目与文档
+  source_of_record: PKC 本地
+  acceptor: PKC owner
+  stage: S1
+  stage_evidence: 最小 Loop 文档体系与 L3 Ready 证据（B 级文档声明）；无项目级特征
+  data_class: fixture
+  inferred: true
+  notes: 模板桩项目
+- vu_id: PKC-VU-02
+  project: PKC
+  weight: 3
+  scene: KDS/Brain 依赖验证
+  authority: PKC + KDS/Brain
+  object: 依赖验证记录
+  source_of_record: 未验证
+  acceptor: PKC owner
+  stage: S1
+  stage_evidence: 仅 dry-run，无通过结论
+  data_class: dry_run
+  inferred: true
+  notes: 依赖未验证
+- vu_id: PKC-VU-03
+  project: PKC
+  weight: 3
+  scene: 消费方联调（F-033）
+  authority: XiaoC + PKC
+  object: 消费方联调记录
+  source_of_record: 无
+  acceptor: PKC owner
+  stage: S1
+  stage_evidence: F-033 将 PKC 列为待联调消费方；浏览器联调未做
+  data_class: fixture
+  inferred: true
+  notes: 联调未开始
+- vu_id: XGD-VU-01
+  project: XGD
+  weight: 5
+  scene: 长程 Agent 任务承载
+  authority: XGD Agent 组
+  object: 任务队列记录
+  source_of_record: XGD 本地
+  acceptor: XGD owner
+  stage: S2
+  stage_evidence: F-031 tests/build pass；最小 Loop、结构化任务队列、harness validator 已具备
+  data_class: fixture
+  inferred: true
+  notes: 测试通过，UI/API 证据未过
+- vu_id: XGD-VU-02
+  project: XGD
+  weight: 4
+  scene: XGD/DoT 对齐（UI/API evidence）
+  authority: XGD 前端/接口组
+  object: UI 截图、API 响应与 summary
+  source_of_record: XGD 仓
+  acceptor: XGD owner
+  stage: S1
+  stage_evidence: F-031 screenshots/api/summary 三项 fail；人工确认未做
+  data_class: fixture
+  inferred: true
+  notes: 三项证据 fail，Feature blocked
+- vu_id: XGD-VU-03
+  project: XGD
+  weight: 4
+  scene: D10 签名 / D11 XiaoG BFF / 72h 观测
+  authority: XGD 运行组
+  object: 签名、BFF 契约、72h 观测记录
+  source_of_record: 无
+  acceptor: XGD owner
+  stage: S0
+  stage_evidence: 三项均未完成；无观测数据
+  data_class: none
+  inferred: true
+  notes: 无事实依据
+- vu_id: XiaoC-VU-01
+  project: XiaoC
+  weight: 5
+  scene: PromptAsset XAP 信封生产
+  authority: XiaoC 能力生产组
+  object: PromptAsset 信封
+  source_of_record: XiaoC 仓
+  acceptor: WAME 受理
+  stage: S2
+  stage_evidence: F-033 tests/build pass；XAP 信封与 WAME 台账/回执联调（PoC）；summary pending
+  data_class: poc
+  inferred: true
+  notes: PoC 联调，summary 未收口
+- vu_id: XiaoC-VU-02
+  project: XiaoC
+  weight: 4
+  scene: WAME 受理/裁定/发布联调
+  authority: XiaoC + WAME
+  object: 受理请求与裁定发布回执
+  source_of_record: WAME 治理台账（PoC）
+  acceptor: WAME 治理 owner
+  stage: S2
+  stage_evidence: req-b1579fe37e4e 已裁定/发布（PoC scope）；WAME 侧为 PoC governor
+  data_class: poc
+  inferred: true
+  notes: PoC governor 上限 S2
+- vu_id: XiaoC-VU-03
+  project: XiaoC
+  weight: 4
+  scene: 消费方联调（XiaoG/PKC/XGD/飞书）
+  authority: XiaoC + 消费方
+  object: 消费方任务包与联调记录
+  source_of_record: 无
+  acceptor: 消费方 owner
+  stage: S1
+  stage_evidence: 消费方任务包齐备但实际联调未做
+  data_class: fixture
+  inferred: true
+  notes: 任务包 ≠ 联调
+- vu_id: XiaoC-VU-04
+  project: XiaoC
+  weight: 3
+  scene: 模型路由 / UI / Wrangler
+  authority: XiaoC 平台组
+  object: 路由配置与部署记录
+  source_of_record: 无
+  acceptor: XiaoC owner
+  stage: S1
+  stage_evidence: 需专项授权；无部署证据
+  data_class: dry_run
+  inferred: true
+  notes: 环境边界阻塞
+- vu_id: XiaoG-VU-01
+  project: XiaoG
+  weight: 5
+  scene: 轻量执行入口最小 Loop
+  authority: XiaoG 执行入口组
+  object: 执行会话与任务
+  source_of_record: XiaoG 本地
+  acceptor: XiaoG owner
+  stage: S1
+  stage_evidence: L4 只读审计 mock 已通过（B 级）；全栈自 2026-10-16 起暂停
+  data_class: fixture
+  inferred: true
+  notes: mock 通过 ≠ 真实执行
+- vu_id: XiaoG-VU-02
+  project: XiaoG
+  weight: 4
+  scene: live API/设备验证
+  authority: XiaoG + 设备 owner
+  object: live API 响应与设备记录
+  source_of_record: 无
+  acceptor: XiaoG owner
+  stage: S0
+  stage_evidence: 需专项授权，未执行；无 device 记录
+  data_class: none
+  inferred: true
+  notes: 未授权、未执行
+- vu_id: XiaoG-VU-03
+  project: XiaoG
+  weight: 3
+  scene: 会话/BFF 契约
+  authority: XiaoG 接口组
+  object: BFF 契约与联调记录
+  source_of_record: 无
+  acceptor: XiaoG owner
+  stage: S1
+  stage_evidence: F-033 消费方任务包列为待联调；BFF 契约未验证
+  data_class: fixture
+  inferred: true
+  notes: 契约未验证
+- vu_id: GCMEM-VU-01
+  project: GCMEM
+  weight: 5
+  scene: 长期记忆账本 append-only
+  authority: GCMEM 记忆服务组
+  object: 记忆账本条目
+  source_of_record: GCMEM 本地账本
+  acceptor: GCMEM owner
+  stage: S2
+  stage_evidence: F-026 tests/build/summary pass；本地回归与 doctor 已记录（B 级）
+  data_class: fixture
+  inferred: true
+  notes: 本地证据，无跨端验收
+- vu_id: GCMEM-VU-02
+  project: GCMEM
+  weight: 4
+  scene: 语义检索
+  authority: GCMEM 检索组
+  object: 检索结果与指标
+  source_of_record: 本地评测集（22 条）
+  acceptor: GCMEM owner
+  stage: S2
+  stage_evidence: 检索指标来自 22 条本地合成评测集
+  data_class: synthetic
+  inferred: true
+  notes: 合成评测，规模极小
+- vu_id: GCMEM-VU-03
+  project: GCMEM
+  weight: 3
+  scene: 三夜挖掘验收
+  authority: 小G + GCMEM
+  object: 三夜挖掘验收记录
+  source_of_record: 无
+  acceptor: GCMEM owner
+  stage: S1
+  stage_evidence: 三夜挖掘验收 1/3；无完整记录
+  data_class: fixture
+  inferred: true
+  notes: 1/3 完成
+- vu_id: GCMEM-VU-04
+  project: GCMEM
+  weight: 3
+  scene: 小G 容器侧迁移
+  authority: GCMEM + 小G
+  object: 容器迁移记录
+  source_of_record: 无
+  acceptor: GCMEM owner
+  stage: S0
+  stage_evidence: 容器迁移未验证；小G 全栈暂停
+  data_class: none
+  inferred: true
+  notes: 迁移未验证
+- vu_id: WAE-VU-01
+  project: WAE
+  weight: 4
+  scene: 唯一总体方案与首批界面路线
+  authority: WAE 界面组
+  object: 总体方案与分步路线
+  source_of_record: WAE 仓 docs
+  acceptor: WAE owner
+  stage: S1
+  stage_evidence: 唯一总体方案 pending_unique_plan；实施方案待建立
+  data_class: fixture
+  inferred: true
+  notes: 方案未确认
+- vu_id: WAE-VU-02
+  project: WAE
+  weight: 4
+  scene: 外壳解耦/令牌收口/侧栏统一/状态语义层
+  authority: WAE 前端组
+  object: 界面外壳与令牌配置
+  source_of_record: 无
+  acceptor: WAE owner
+  stage: S0
+  stage_evidence: P0 四项全部未开始
+  data_class: none
+  inferred: true
+  notes: 零实现
+- vu_id: WAE-VU-03
+  project: WAE
+  weight: 3
+  scene: 首批项目界面纳入（PKC/Brain/PVAOS）
+  authority: WAE + 首批项目
+  object: 界面接入记录
+  source_of_record: 无
+  acceptor: 首批项目 owner
+  stage: S0
+  stage_evidence: 首批纳入未做
+  data_class: none
+  inferred: true
+  notes: 零接入
+- vu_id: World-VU-01
+  project: World
+  weight: 4
+  scene: Ontology 版本基线裁定
+  authority: World 资产组 + WAME
+  object: Ontology 版本基线
+  source_of_record: World 仓
+  acceptor: World owner
+  stage: S1
+  stage_evidence: Ontology 0.2.x 与实发 0.2.0 冲突未裁定；方案仍 candidate
+  data_class: fixture
+  inferred: true
+  notes: 版本冲突未裁定
+- vu_id: World-VU-02
+  project: World
+  weight: 3
+  scene: 世界资产迁移
+  authority: World 资产组
+  object: 迁移记录
+  source_of_record: 无
+  acceptor: World owner + WAME
+  stage: S0
+  stage_evidence: P1 授权未完成；无迁移记录
+  data_class: none
+  inferred: true
+  notes: 未授权、未迁移
+- vu_id: World-VU-03
+  project: World
+  weight: 3
+  scene: 中央门禁与专属验收命令
+  authority: GPCF 门禁 + World
+  object: 门禁结论与验收命令
+  source_of_record: GPCF 中央门禁
+  acceptor: GPCF owner
+  stage: S1
+  stage_evidence: F-021 tests/build pass，但中央门禁 rework_required、6 项 missing_metadata
+  data_class: fixture
+  inferred: true
+  notes: 证据存在但门禁退回
+- vu_id: DRC-VU-01
+  project: DRC
+  weight: 4
+  scene: 数据资源目录与数据库连接
+  authority: DRC 数据资源组
+  object: 资源目录条目
+  source_of_record: DRC 本地
+  acceptor: DRC owner
+  stage: S1
+  stage_evidence: 双方案候选、git ls-remote 0fc24478；数据库连接未实现
+  data_class: fixture
+  inferred: true
+  notes: 仅纳管登记
+- vu_id: DRC-VU-02
+  project: DRC
+  weight: 3
+  scene: 资源/权限模型
+  authority: DRC 权限组
+  object: 权限模型与授权记录
+  source_of_record: 无
+  acceptor: DRC owner
+  stage: S0
+  stage_evidence: 权限模型未实现
+  data_class: none
+  inferred: true
+  notes: 零实现
+- vu_id: DRC-VU-03
+  project: DRC
+  weight: 3
+  scene: 最小数据流程与审计契约
+  authority: DRC + GPCF
+  object: 流程记录与审计契约
+  source_of_record: 无
+  acceptor: DRC owner
+  stage: S0
+  stage_evidence: loop_document_gate=rework_required、project_group_gate_readiness=fail
+  data_class: none
+  inferred: true
+  notes: 门禁未过
+- vu_id: PQC-VU-01
+  project: PQC
+  weight: 4
+  scene: 包装成本测算/报价
+  authority: PQC 业务组
+  object: 报价单
+  source_of_record: PQC 本地
+  acceptor: 业务 owner
+  stage: S1
+  stage_evidence: F-032 仅 plan、iteration 0，全 evidence pending；项目总体方案 missing
+  data_class: dry_run
+  inferred: true
+  notes: 设计阶段
+- vu_id: PQC-VU-02
+  project: PQC
+  weight: 4
+  scene: 订单/回款闭环
+  authority: PQC 商务组
+  object: 订单与回款单据
+  source_of_record: 无
+  acceptor: 客户/财务
+  stage: S0
+  stage_evidence: 无真实订单、无回款记录
+  data_class: none
+  inferred: true
+  notes: 商业闭环为零（K6=5）
+- vu_id: PQC-VU-03
+  project: PQC
+  weight: 3
+  scene: 外部服务经 PVAai（F-032）
+  authority: PQC + PVAai
+  object: 外部服务调用契约
+  source_of_record: 无
+  acceptor: PQC owner
+  stage: S1
+  stage_evidence: F-032 处 plan，无契约冻结与试点证据
+  data_class: dry_run
+  inferred: true
+  notes: 未实施
+- vu_id: SpaceAI-VU-01
+  project: SpaceAI
+  weight: 5
+  scene: 全景平台（F-024）
+  authority: SpaceAI 平台组
+  object: 全景工程汇聚记录
+  source_of_record: spaceai.db（SIMULATED，39 表 510 行）
+  acceptor: SpaceAI owner
+  stage: S2
+  stage_evidence: F-024 tests/build/api/summary pass、current_step commit；数据为合成样例库
+  data_class: synthetic
+  inferred: true
+  notes: 合成数据上限 S2
+- vu_id: SpaceAI-VU-02
+  project: SpaceAI
+  weight: 4
+  scene: CWME 城市世界模型引擎（F-017 证据落本仓）
+  authority: SpaceAI 城市世界模型组
+  object: CWME 产物
+  source_of_record: SpaceAI 仓 .harness/evidence
+  acceptor: SpaceAI owner
+  stage: S2
+  stage_evidence: F-017 tests/build pass；证据位于本仓但登记在 kds 名下
+  data_class: fixture
+  inferred: true
+  notes: 账实不符，待归属纠正
+- vu_id: SpaceAI-VU-03
+  project: SpaceAI
+  weight: 4
+  scene: 真实设备/业务数据接入
+  authority: SpaceAI + 设备 owner
+  object: 设备数据接入记录
+  source_of_record: 无
+  acceptor: SpaceAI owner
+  stage: S0
+  stage_evidence: 真实设备未接入
+  data_class: none
+  inferred: true
+  notes: 无接入记录
+- vu_id: SpaceAI-VU-04
+  project: SpaceAI
+  weight: 3
+  scene: 合成→真实数据迁移
+  authority: SpaceAI 数据组
+  object: 数据迁移记录
+  source_of_record: 无
+  acceptor: SpaceAI owner
+  stage: S0
+  stage_evidence: 合成库未迁移
+  data_class: none
+  inferred: true
+  notes: 未开始
+- vu_id: SpaceAIStudio-VU-01
+  project: SpaceAIStudio
+  weight: 4
+  scene: 多平台桌面交付（P0–P5 37/37）
+  authority: SpaceAI Studio 交付组
+  object: 多平台产物清单
+  source_of_record: Studio 仓
+  acceptor: SpaceAI Studio owner
+  stage: S2
+  stage_evidence: P0–P5 交付 37/37、openspec validate --strict 通过
+  data_class: fixture
+  inferred: true
+  notes: 文档+测试通过，缺运行证据
+- vu_id: SpaceAIStudio-VU-02
+  project: SpaceAIStudio
+  weight: 4
+  scene: macOS/Windows/Linux GUI 启动运行证据
+  authority: SpaceAI Studio 运行组
+  object: 启动日志与截图
+  source_of_record: 无
+  acceptor: SpaceAI Studio owner
+  stage: S1
+  stage_evidence: 运行态启动证据缺；仅 macOS 包有测试记录
+  data_class: fixture
+  inferred: true
+  notes: 运行证据未采集
+- vu_id: SpaceAIStudio-VU-03
+  project: SpaceAIStudio
+  weight: 4
+  scene: 独立可构建（敏感文件远端排除）
+  authority: SpaceAI Studio 工程组
+  object: 独立构建产物
+  source_of_record: Studio 仓
+  acceptor: SpaceAI Studio owner
+  stage: S1
+  stage_evidence: 远端有意排除 7 个敏感文件，不能独立构建
+  data_class: fixture
+  inferred: true
+  notes: 构建不自足
+- vu_id: Project-VU-01
+  project: Project
+  weight: 4
+  scene: GPCF Feature/Evidence 只读投影（F-028）
+  authority: PMC 协作平台组
+  object: Feature 投影记录
+  source_of_record: PMC 本地库
+  acceptor: PMC owner
+  stage: S2
+  stage_evidence: F-028 已关闭：28 个 Feature 只读投影完成，测试通过
+  data_class: fixture
+  inferred: true
+  notes: 只读投影，非写入协作
+- vu_id: Project-VU-02
+  project: Project
+  weight: 3
+  scene: Plane 用户界面验证
+  authority: PMC 产品组
+  object: Plane UI 验证记录
+  source_of_record: 无
+  acceptor: PMC owner
+  stage: S0
+  stage_evidence: Plane 用户界面未验证；本机验证实例已停机
+  data_class: none
+  inferred: true
+  notes: UI 未验证
+- vu_id: Project-VU-03
+  project: Project
+  weight: 4
+  scene: 常驻只读投影与幂等同步
+  authority: PMC 平台组
+  object: 幂等同步记录
+  source_of_record: PMC 本地开发实例
+  acceptor: PMC owner
+  stage: S1
+  stage_evidence: 仅本机开发实例（已停机）幂等同步证据；共享/生产实例写入未授权
+  data_class: dry_run
+  inferred: true
+  notes: 非常驻、非生产
+- vu_id: PDC-VU-01
+  project: PDC
+  weight: 5
+  scene: 包装设计 Web+Electron 应用
+  authority: PDC 业务工具组
+  object: 包装设计草案
+  source_of_record: PDC 本地
+  acceptor: PDC owner
+  stage: S1
+  stage_evidence: F-030 tests fail、summary fail（GPCF 侧）；仓内自述 471/471 用例通过（B 级）
+  data_class: fixture
+  inferred: true
+  notes: GPCF 侧证据 fail，不按 S2 计
+- vu_id: PDC-VU-02
+  project: PDC
+  weight: 4
+  scene: 关键用户任务与浏览器运行
+  authority: PDC 产品组
+  object: 关键用户任务记录
+  source_of_record: 无
+  acceptor: PDC owner
+  stage: S1
+  stage_evidence: 浏览器关键任务未重跑
+  data_class: fixture
+  inferred: true
+  notes: 未重跑
+- vu_id: PDC-VU-03
+  project: PDC
+  weight: 3
+  scene: 双方案继承核验
+  authority: PDC + GPCF
+  object: 方案继承核验记录
+  source_of_record: PDC 仓 docs
+  acceptor: PDC owner
+  stage: S1
+  stage_evidence: 项目级总体方案与实施方案候选双主控继承未核验
+  data_class: fixture
+  inferred: true
+  notes: 继承未核
+- vu_id: SLC-VU-01
+  project: SLC
+  weight: 4
+  scene: 运力测算应用纳管基线
+  authority: SLC 应用组
+  object: 纳管登记与 Git 基线
+  source_of_record: SLC 仓
+  acceptor: SLC owner
+  stage: S1
+  stage_evidence: 源码基线已推送、纳管登记完成；无 Feature
+  data_class: fixture
+  inferred: true
+  notes: 仅登记
+- vu_id: SLC-VU-02
+  project: SLC
+  weight: 4
+  scene: 应用类型/测试/构建/关键任务重跑
+  authority: SLC 工程组
+  object: 测试与构建产物
+  source_of_record: 无
+  acceptor: SLC owner
+  stage: S0
+  stage_evidence: 全部未重跑；本轮仅核验 Git 与治理登记
+  data_class: none
+  inferred: true
+  notes: 零验证
+- vu_id: SLC-VU-03
+  project: SLC
+  weight: 3
+  scene: 跨仓门禁
+  authority: SLC + GPCF
+  object: 门禁结论
+  source_of_record: GPCF 门禁
+  acceptor: GPCF owner
+  stage: S0
+  stage_evidence: 跨仓门禁 20/20 未通过
+  data_class: none
+  inferred: true
+  notes: 门禁全 fail
+- vu_id: FireQuote-VU-01
+  project: FireQuote
+  weight: 4
+  scene: 企业定额六层结构编制与版本发布
+  authority: FireQuote 产品 owner
+  object: 企业定额条目（六层结构 + 资源消耗 + 适用条件）
+  source_of_record: FireQuote 企业定额库（本地库；未接企业主数据）
+  acceptor: 造价/定额负责人
+  stage: S2
+  stage_evidence: 定额编制页与生命周期状态机可用、后端单测与前端构建通过（2026-10-18 门禁 89 passed）；数据为示范口径，未接真实企业定额
+  data_class: fixture
+  inferred: true
+  notes: 结构已实现，缺真实企业定额导入与版本发布回执
+- vu_id: FireQuote-VU-02
+  project: FireQuote
+  weight: 3
+  scene: 图纸/清单资料解析与候选证据关联
+  authority: FireQuote 产品 owner
+  object: 解析候选条目（PDF/DXF 图层与块、Excel/CSV 清单行）
+  source_of_record: 客户图纸与清单原件（未接入）
+  acceptor: 造价工程师
+  stage: S1
+  stage_evidence: 图纸与图审页、清单对接页已实现；解析结果仅候选、须人工确认；真实客户图纸尚未验证
+  data_class: fixture
+  inferred: true
+  notes: 真实图纸/清单未接入，未产生真实解析回执
+- vu_id: FireQuote-VU-03
+  project: FireQuote
+  weight: 5
+  scene: 确定性测算引擎与价格快照绑定
+  authority: FireQuote 产品 owner + 造价复核
+  object: 测算结果（Decimal 计算 + ROUND_HALF_UP@0.01 + 版本绑定 + 价格快照 provenance）
+  source_of_record: 价格快照库（本地）
+  acceptor: 造价复核人
+  stage: S2
+  stage_evidence: §7.4 示例 100m→8,340.00 可精确复算，90m 两口径（7,666.00 / 7,506.00）复算一致；后端 89 passed/1 skipped
+  data_class: fixture
+  inferred: true
+  notes: 数值为示范数据，未做真实项目复核
+- vu_id: FireQuote-VU-04
+  project: FireQuote
+  weight: 4
+  scene: 偏差分解与报价审批状态机（量差/消耗差/价差 + 让价管控）
+  authority: FireQuote 产品 owner + 审批链
+  object: 偏差分解结果与审批记录（含让价决策留痕）
+  source_of_record: 作业与审批库（本地）
+  acceptor: 项目经理/审批人
+  stage: S1
+  stage_evidence: 偏差分析页恒等式 Σ分解=实际−基准 已实现；审批状态机未接真实业务作业；让价审批无真实回执
+  data_class: fixture
+  inferred: true
+  notes: 涉及让价（资金相关），只登记能力，不做任何真实报价动作

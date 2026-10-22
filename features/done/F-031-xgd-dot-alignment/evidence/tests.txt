@@ -1,0 +1,65 @@
+# Tests Evidence
+
+采集时点：2026-10-22T07:35–07:38+08:00（本机 macOS，Node v26.0.0）。
+采集环境：`GlobalCloud XGD`（分支 `main`；各命令执行后复查 `git status --porcelain` 为空（07:35–07:36）→ 未改 XGD 仓 tracked/untracked 文件。07:37 后有并发外部进程写 `docs/harness/evidence/` 其它文件，非本任务）。
+命令均为仓内 `npm run`；dot/unit 测试使用 `os.tmpdir` 临时库，不写仓内数据。
+
+## xgd_harness_validate
+
+- cwd: `GlobalCloud XGD`
+- command: `npm run harness:validate`
+- exit_code: 0
+- duration: ~1s
+
+```text
+xgd_loop_harness=pass
+round=XGD-LR-002 declared_rounds=1/15 substantive_rounds=1/15 generated_items=4 batch_generated=false substance_gate=pass
+```
+
+## xgd_test_unit
+
+- cwd: `GlobalCloud XGD`
+- command: `npm run test:unit`
+- exit_code: 0
+- duration: ~1s
+
+```text
+PASS: block 标题存在
+PASS: block 含教训 id
+PASS: block 保留 tool 标签
+PASS: 无教训返回空字符串
+
+ALL PASS
+
+[PASS] unit tests: 9/9 suites
+```
+
+## xgd_test_dot（F-031 P0 dot 契约测试）
+
+- cwd: `GlobalCloud XGD`
+- command: `npm run test:dot`
+- exit_code: 0
+- duration: <1s
+- 输出 112 行；覆盖 dot 档案默认值/更新、职责状态机与 TICK 选择、活动事件与脱敏、分层暂停、
+  周期计划、自定义规则、工具写操作。分层停止语义的契约级断言摘录：
+
+```text
+[PASS] 4.1 dot 可暂停
+[PASS] 4.2 暂停时 TICK 上下文包含 PAUSED
+[PASS] 2.6 paused 职责不参与 TICK 选择
+[PASS] 7.6 关闭开关后职责工具拒绝执行
+[PASS] 8.10 触发时注入 DOT_SCHEDULE 指令
+[PASS] 8.13 触发写入 schedule_fired 活动
+...
+[PASS] dot alignment tests: 108/108 assertions
+```
+
+## gpcf_validate_feature_workspace（GPCF 侧结构门禁）
+
+- cwd: `GlobalCoud GPCF`
+- command: `python3 tools/kds-sync/validate_gpcf_2_feature_workspace.py`
+- exit_code: 0
+
+```text
+gpcf_2_feature_workspace=pass feature_delivery_center=true project_scope=28 new_feature_entry=enabled close_feature_exit=enabled status_promotion_allowed=false
+```
