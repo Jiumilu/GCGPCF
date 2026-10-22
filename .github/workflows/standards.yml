@@ -34,9 +34,8 @@ jobs:
           set -e
           REPO_NAME="GlobalCloud GPCF"
           WS="$RUNNER_TEMP/ws"
-          mkdir -p "$WS/GlobalCloud GPCF/config"
           cp -R repo/.standards "$WS/_governance"
-          cp repo/.standards/registry/project-group-projects.yaml "$WS/GlobalCloud GPCF/config/"
+          # GPCF 本身是注册表宿主：repo 内已有 config/project-group-projects.yaml，直接复制 repo 即可
           cp -R repo "$WS/$REPO_NAME"
           echo "workspace ready: $WS"
 
