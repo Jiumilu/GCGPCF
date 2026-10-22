@@ -12,9 +12,11 @@ import json
 import subprocess
 from pathlib import Path
 
+from gfis_real_fact_entry_guard import project_group_root
+
 
 ROOT = Path(__file__).resolve().parents[2]
-GFIS_ROOT = ROOT.parent / "GlobalCloud GFIS"
+GFIS_ROOT = project_group_root(ROOT) / "GlobalCloud GFIS"
 
 GFIS_VALIDATORS = [
     "validate_gfis_real_source_record_intake_gate.py",

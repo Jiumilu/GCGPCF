@@ -8,9 +8,11 @@ import os
 import subprocess
 from pathlib import Path
 
+from gfis_real_fact_entry_guard import project_group_root
+
 
 ROOT = Path(__file__).resolve().parents[2]
-PROJECT_ROOT = ROOT.parent
+PROJECT_ROOT = project_group_root(ROOT)
 EVIDENCE = ROOT / "docs/harness/evidence/globalcloud-project-group-authorization-pre-execution-environment-readiness-20260626.md"
 COMMAND_PACK = ROOT / "docs/harness/evidence/globalcloud-project-group-authorization-pre-execution-command-pack-20260626.md"
 BOARD = ROOT / "09-status/globalcloud-project-group-real-execution-governance-board.md"

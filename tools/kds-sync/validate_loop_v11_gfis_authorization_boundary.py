@@ -5,9 +5,11 @@ import json
 from pathlib import Path
 from typing import Any
 
+from gfis_real_fact_entry_guard import project_group_root
+
 
 ROOT = Path(__file__).resolve().parents[2]
-PROJECT_ROOT = ROOT.parent
+PROJECT_ROOT = project_group_root(ROOT)
 GFIS_ROOT = PROJECT_ROOT / "GlobalCloud GFIS"
 DEV_010_EVIDENCE = GFIS_ROOT / "docs/harness/sop-e2e/evidence/gfis-dev-010-manual-submission-command-preview.json"
 DEV_011_EVIDENCE = GFIS_ROOT / "docs/harness/sop-e2e/evidence/gfis-dev-011-manual-execution-authorization-preflight.json"

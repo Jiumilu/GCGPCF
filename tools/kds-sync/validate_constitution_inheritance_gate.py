@@ -5,9 +5,11 @@ from __future__ import annotations
 
 from pathlib import Path
 
+from gfis_real_fact_entry_guard import project_group_root
+
 
 ROOT = Path(__file__).resolve().parents[2]
-PROJECT_GROUP_ROOT = ROOT.parent
+PROJECT_GROUP_ROOT = project_group_root(ROOT)
 
 
 def require_text(path: Path, terms: tuple[str, ...]) -> None:

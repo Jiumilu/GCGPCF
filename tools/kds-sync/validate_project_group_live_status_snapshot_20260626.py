@@ -10,9 +10,11 @@ import subprocess
 from pathlib import Path
 import yaml
 
+from gfis_real_fact_entry_guard import project_group_root
+
 
 ROOT = Path(__file__).resolve().parents[2]
-PROJECT_ROOT = ROOT.parent
+PROJECT_ROOT = project_group_root(ROOT)
 DOC = ROOT / "docs/harness/evidence/globalcloud-project-group-live-status-snapshot-20260626.md"
 BOARD = ROOT / "09-status/globalcloud-project-group-real-execution-governance-board.md"
 REGISTER = ROOT / "09-status/globalcloud-core-chain-real-evidence-register.md"

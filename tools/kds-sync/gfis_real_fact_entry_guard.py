@@ -20,6 +20,26 @@ GFIS_ZERO_KEYS = [
 ]
 
 
+def project_group_root(repo_root: Path) -> Path:
+    """Resolve the primary project-group directory from a checkout or worktree."""
+    result = subprocess.run(
+        ["git", "rev-parse", "--git-common-dir"],
+        cwd=repo_root,
+        text=True,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE,
+        check=False,
+    )
+    if result.returncode == 0:
+        common_dir = Path(result.stdout.strip())
+        if not common_dir.is_absolute():
+            common_dir = repo_root / common_dir
+        common_dir = common_dir.resolve()
+        if common_dir.name == ".git":
+            return common_dir.parent.parent
+    return repo_root.parent
+
+
 def parse_kv_output(output: str) -> dict[str, str]:
     parsed: dict[str, str] = {}
     for part in output.replace("\n", " ").split():
