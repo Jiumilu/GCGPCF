@@ -5,7 +5,7 @@ project: GPCF
 related_projects: [GPCF]
 domain: governance
 status: controlled
-version: v1.8
+version: v1.9
 owner: GPCF
 kds_space: 开发
 kds_path: 开发/91-治理与验收/projects/spaceai/STATUS.md
@@ -35,8 +35,8 @@ superseded_by: []
 ## 运行状态（2026-10-22 复测）
 
 - 平台服务：BFF `127.0.0.1:39010`（`/healthz` status ok、mode demo、**263 端点**、库摘要 SIMULATED 39 表 510 行）；前端 `127.0.0.1:5273`（Vite 6.4.4）。
-- 全量测试：**141 文件 / 1279 例全过**（2026-10-22 19:45 实测，51.80s，exit 0；含并行会话 B5h–B5j 新增用例）；`pnpm typecheck` **0 错误**。
-- 数据规模：`data/spaceai.db` 压缩后 **160.5MB**（168,275,968 B；压缩前 2069.5MB）——历史归档表 2196 万行已外置到 `data/archives/citylink-archive-20261020.db`（1984.3MB，manifest 登记），备份 `data/backups/spaceai.db.bak-20261022T114118`；`EXT_CityLink` 61,289、`EXT_SceneAsset` 50,179、`EXT_ObolObservation` 约 52.9 万、`IngestEvent` 约 14.2 万（随 BFF 正常增长）。
+- 全量测试：**142 文件 / 1283 例全过**（2026-10-22 20:01 实测，25.71s，exit 0；含新增时间索引守卫 4 例与并行会话用例）；`pnpm typecheck` **0 错误**。
+- 数据规模：`data/spaceai.db` **181.3MB**（190,074,880 B = 压缩后 160.5MB + 时间索引 20.8MB；压缩前 2069.5MB）——历史归档表 2196 万行已外置到 `data/archives/citylink-archive-20261020.db`（1984.3MB，manifest 登记），备份 `data/backups/spaceai.db.bak-20261022T114118`；`EXT_CityLink` 61,289、`EXT_SceneAsset` 50,179、`EXT_ObolObservation` 约 52.9 万、`IngestEvent` 约 14.2 万（随 BFF 正常增长）。
 - 测试成本：修复前 771s、临时占用约 28GB；T4 + D-8 后 ~20–26s；2026-10-22 再上**小种子库**：基库 160.3MB → **18.9MB**，构建 10.4–13.1s → **0.49–0.61s**，全量峰值临时占用 4.15GB → **0.38–0.51GB**。
 - BFF 启动：约 6 秒就绪（2026-10-20 口径；2026-10-22 只复测 `/healthz`，未复测冷启动耗时）。
 - CWME 本地应用：`apps/city-model/index.html` 已随 Legacy 归档移出根目录（2026-10-22），F-017 证据路径以归档路径为准。
@@ -99,7 +99,7 @@ superseded_by: []
 | 3 | C 测试基座 | ✅ 完成：小种子库 18.9MB、峰值 0.4–0.5GB、138 文件/1263 例连绿；DB_PATH 注入 4 例证明 | 平台 `6d7fffc` |
 | 4 | E L4 采购/合规 | ✅ 完成（文档）：RFQ 执行包 7 件 + 合规外部数据源核验清单（未申请 key、未对外发送） | 平台 `6c8c9bc` |
 | 5 | F 治理收尾 | ✅ 完成：补建两个 OpenSpec 变更（三层对齐 `[OK]`），关闭治理欠账 | GPCF `4354c5baf` |
-| 6 | B 数据保留 | ✅ 完成：方案 + 工具 + **实际压缩执行**（2069.5MB → 160.5MB，外置 1984.3MB/2196 万行，备份保留） | 平台 `e06c9da`、`23a1a4d` |
+| 6 | B 数据保留 | ✅ 完成：方案 + 工具 + 压缩（2069.5MB → 160.5MB）+ **时间索引**（近 1 天查询 5–9ms→0.05ms） | 平台 `e06c9da`、`23a1a4d`、`b9236aa` |
 | 7 | G 推送 / H 全景收尾 | G ⏸ 暂缓（老卢选择等并行会话收口）；H ✅ 由并行会话完成 B5f–B5j（五大块全部外提） | 见 D-13 / F-038 |
 
 **边界**：全部本地提交、0 推送（43 提交，老卢选择暂缓）、未部署、未提升验收状态；数据压缩已于 19:41 执行（有备份，可回滚）。
@@ -123,7 +123,8 @@ superseded_by: []
 
 ## 终态证据（2026-10-22）
 
-- 全量测试：`npx vitest run` **141 文件 / 1279 例通过**（19:45，51.80s，exit 0）；`pnpm typecheck` **0 错误**。
+- 全量测试：`npx vitest run` **142 文件 / 1283 例通过**（20:01，25.71s，exit 0）；`pnpm typecheck` **0 错误**。
+- **追加表时间索引已补**（20:01）：`idx_ingest_createdat` / `idx_obol_at`；近 1 天查询 5–9ms→**0.05ms**、18–22ms→**0.5–1ms**；`retention-report` 索引体检由两表告警变为「所有 >10 万行表都有索引」；证据 `harness/data-retention/index-evidence-20261022.md`（平台 `b9236aa`）。
 - **数据压缩已执行**（19:41 维护窗口，老卢授权）：2069.5MB → **160.5MB**；外置 1984.3MB / 21,962,610 行；备份 2069.5MB；BFF 重启后 `/healthz` 200；压缩后全量测试通过。
 - 提交数说明：本地领先数随并行会话持续提交变化（19:04 = 30、19:11 = 33、19:22 = 34），本页数字为复测时点快照。
 - L4 一键验收：`harness/l4-acceptance/smoke-sim` 与 `smoke-demo` 的 `report.json` 均 **0 fail**（60 / 56 FPS；贴地 0m；画面差异 4.57% / 3.40%；错误 0）。
@@ -132,7 +133,7 @@ superseded_by: []
 - 接口：`/healthz` 200（263 端点）；`/RestFul/Rebuild/Tileset` 200（2 条资产：占位 1 条 published、SIMULATED 1 条未发布）。
 - 证据索引：`features/active/F-037-map-3d-l4-precision-model/evidence/`、`features/active/F-038-panorama-operation-normalization/evidence/`。
 - 测试与 e2e：小种子库（18.9MB / 构建 0.5s）+ `webServer` 常态化（`pnpm e2e:smoke`）；数据保留方案与压缩工具（dry-run）就绪。
-- **未执行**：远端 CI（未 push，工作流只在本地等价跑通）；IngestEvent / Obol 时间索引与时间窗归档（D-10 剩余）；KDS 镜像提交（镜像由自动同步写入，但镜像树与源码差异有上千条未提交，属独立操作，见 D-11）。
+- **未执行**：远端 CI（未 push，工作流只在本地等价跑通）；时间窗归档（D-10 剩余，需数据变旧，当前 0 行到期）；KDS 镜像提交（镜像由自动同步写入，但镜像树与源码差异有上千条未提交，属独立操作，见 D-11）。
 - OpenSpec 变更账：`openspec/changes/spaceai-l4-precision-model`、`openspec/changes/spaceai-panorama-operation-normalization`（2026-10-22 补建，三层对齐 `[OK]`）。
 
 ## 状态与边界
@@ -148,7 +149,7 @@ superseded_by: []
 |---|---|---|
 | D-1 | 测试临时库不清理致磁盘两次写满；`db.test.ts` 偶发失败（DB_PATH 于 import 期冻结 + worker 模块缓存跨文件存活） | **已大幅收敛**：T4 + D-8 后实拷贝消除；2026-10-22 小种子库把基库 160.3MB → **18.9MB**、峰值临时占用 4.15GB → **0.4–0.5GB**、构建 ~11s → **0.5s**；`db.test.ts` 仍有意直读运行库（未改语义），偶发未复现 |
 | D-7 | 全量套件偶发单文件失败（2026-10-20 出现 2 次，重跑即绿） | **已定位并修复**：5 轮循环捕获现场，为 `world-axis.test.ts > W1-1 时空检索` **默认 5s 超时**（实测 5004ms），非此前的克隆内容猜测；已给该文件 20 个用例显式 30s 超时（与 ingest-bus 同法）。克隆完整性校验保留（解决另一类问题）。修复后连续三轮全量 99 文件 / 905 项全过 |
-| D-10 | 追加表无保留策略；库 2.17GB 中 1905.9MB 是历史归档表（2196 万行），追加表数据仅约 10 天 | **已执行压缩（2026-10-22 19:41，老卢授权）**：2069.5MB → **160.5MB**，归档表外置 `data/archives/`（21,962,610 行 / 1984.3MB），备份 `data/backups/spaceai.db.bak-20261022T114118`，manifest `harness/data-retention/archive-manifest-20261022.json`；**剩余**：IngestEvent / Obol 时间索引未建、时间窗归档待数据变旧（当前 0 行到期） |
+| D-10 | 追加表无保留策略；库 2.17GB 中 1905.9MB 是历史归档表（2196 万行），追加表数据仅约 10 天 | **压缩 + 时间索引均已完成**（2026-10-22）：2069.5MB → 160.5MB（归档表外置 + 备份 + manifest）；新增 `idx_ingest_createdat` / `idx_obol_at`（库 181.3MB，近 1 天查询提升 100–180× / 20–40×，4 例查询计划守卫）；**剩余**：时间窗归档待数据变旧（当前 0 行到期）、`(Result, Id)` 查询型索引未做（不在本次范围） |
 | D-11 | KDS 镜像与源码差异：`.kds` 镜像树与 `local-mirror-ledger.jsonl` 有上千条未提交差异（含自动镜像同步产物与历史迁移/删除，非本轮产生；本轮新增文档已由自动同步写入镜像与 ledger） | **未执行**：镜像提交需单独操作 + 授权，不与其他改动混做 |
 | D-12 | e2e 基座缺 `webServer`：`playwright.config.ts` 无自启，9 个 spec 需手工先起 dev 5273 + BFF 39010 | **已修复（2026-10-22）**：`webServer` 自起 BFF+dev、`reuseExistingServer`、`e2e:smoke` 一条命令；Lead 复跑 panorama-smoke 1 passed 33.2s |
 | D-13 | 本地 main 领先 `origin/main` **43 提交未推送**（19:45；随并行会话增长）；工作区另有并行会话 WIP（`apps/desktop/src/main.ts`、`vite.config.ts`、`pnpm-workspace.yaml` 与若干 untracked） | **暂缓推送**：老卢 2026-10-22 选择「等并行会话收口后一次性推送」（决策模型 0.17）；并行 WIP 不纳入本仓提交，待各自会话收口 |
@@ -287,6 +288,14 @@ SpaceAI Platform 是安防统一重构主工作区，CWME 是城市/空间域实
 3. F-038 → **iteration 4**：B5h/B5i/B5j（飞翔 / CWME / 控制器）由并行会话提交，**B5 五大块全部外提完成**；剩余 i18n、人工验收与 script 行数目标（2956 行）。
 4. 待办排序执行第 6 项（B 数据保留）由「部分」改为「完成」；第 7 项（G 推送）老卢选择**暂缓**，等并行会话收口后一次性推送。
 5. D-10 台账改为已执行 + 剩余项（时间索引、窗口归档）；D-13 更新为 43 提交并记录暂缓决定。
+
+## 变更说明（v1.8 → v1.9，2026-10-22 晚）
+
+1. **D-10 时间索引补齐**：`IngestEvent.CreatedAt`、`EXT_ObolObservation.At` 建索引（幂等 DDL 在 `ensureIngestTable` / `ensureObolTables`），4 例查询计划守卫测试；库 160.5MB → 181.3MB（+20.8MB 索引，仍比压缩前 −91%）。
+2. 实测：近 1 天查询 Ingest 5–9ms→**0.05ms**、Obol 18–22ms→**0.5–1ms**；`retention-report` 索引体检转为全部通过。
+3. 运行状态/终态证据刷新为 **142 文件 / 1283 例**（20:01）；数据规模改为索引后实测。
+4. D-10 剩余仅「时间窗归档（待数据变旧）」；D-13 提交数不变（43→44，以 git 实查为准）。
+5. 边界不变：partial、未 push、未部署、无数据删除。
 
 ## 变更说明（v1.5 → v1.6，2026-10-22 晚）
 
