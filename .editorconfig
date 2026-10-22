@@ -1,0 +1,33 @@
+# GlobalCloud 项目群统一 EditorConfig 模板
+# 用法：复制为项目仓根目录 .editorconfig，按技术栈保留对应段。
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+indent_style = space
+indent_size = 2
+max_line_length = 100
+
+[*.{py,pyi}]
+indent_size = 4
+
+[*.{go,mod,sum}]
+indent_style = tab
+
+[*.{cs,csproj,sln}]
+indent_size = 4
+
+[*.{java,kt,kts}]
+indent_size = 4
+
+[*.md]
+trim_trailing_whitespace = false
+
+[Makefile]
+indent_style = tab
+
+[*.{json,yml,yaml}]
+indent_size = 2

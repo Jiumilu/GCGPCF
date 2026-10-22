@@ -24,6 +24,7 @@ acceptance:
 - 消费方任务包齐备且未改他人仓库
 - 证据：.harness/evidence/xiaoc-vision-r1-ecosystem-20261021/
 loop:
+  dispatched: false
   current_step: evidence
   iteration: 1
 evidence:

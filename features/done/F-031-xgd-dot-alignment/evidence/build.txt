@@ -1,0 +1,59 @@
+# Build And Lint Evidence
+
+采集时点：2026-10-22T07:35–07:38+08:00；采集环境 `GlobalCloud XGD`（`main`，执行前后工作区干净）。
+口径：以 XGD 仓的 lint / typecheck / 浏览器 smoke 覆盖本地"可构建可运行"面；
+**未执行** `electron-builder` 打包（打包/签名属发布边界 D10，本任务不触达）。
+
+## xgd_npm_lint
+
+- cwd: `GlobalCloud XGD`
+- command: `npm run lint`
+- exit_code: 0
+- duration: ~18s
+
+```text
+[PASS] lint: syntax + secret scan passed for 335 JavaScript files
+```
+
+## xgd_npm_typecheck
+
+- cwd: `GlobalCloud XGD`
+- command: `npm run typecheck`
+- exit_code: 0
+- duration: ~20s
+
+```text
+[PASS] syntax check: 335/335 JavaScript files
+```
+
+## xgd_npm_smoke_brain_ui（真实浏览器 smoke，Chromium 156.0.8078.4）
+
+- cwd: `GlobalCloud XGD`
+- command: `npm run smoke:brain-ui`
+- exit_code: 0
+- duration: ~7s
+- 结果：`[PASS] dot console flow`、`[PASS] brain-ui smoke`（dot 浮层建职责/计划/规则与关闭、3D 图、搜索、人物卡）
+- 该 smoke 自带 mock HTTP 服务与临时端口，不依赖真实后端、不写仓内文件
+
+```text
+[PASS] dot console flow
+[PASS] brain-ui smoke
+{"d3":true,"graphMode":"3d","nodes":2,"links":1,"starGraphOk":true,"graphToolbar":true,"graphSearch":true,"acuiHost":true,"personCard":"马云","personImage":true,"closeHidden":true,"brand":"SmokeXiaoG AI Agent"}
+```
+
+## gpcf_git_diff_check
+
+- cwd: `GlobalCoud GPCF`
+- command: `git diff --check`
+- exit_code: 0（无输出）
+
+## gpcf_py_compile_scripts（GPCF 证据脚本语法）
+
+- cwd: `GlobalCoud GPCF`
+- 说明：`gpcf_check_evidence.py` 的 check-only 模式不重写证据；本轮未重跑 py_compile 全量，
+  但因本 Feature 新增 `evidence/probe_xgd_dot_api.py`，已用 `python3 -m py_compile` 单独校验通过。
+
+```text
+python3 -m py_compile features/active/F-031-xgd-dot-alignment/evidence/probe_xgd_dot_api.py
+exit_code: 0
+```

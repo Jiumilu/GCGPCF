@@ -1,0 +1,276 @@
+# GlobalCloud 项目群授权回执台账（append-only）
+# 任务：PG-03
+# 规则：只追加、不删除、不改写旧回执。
+
+schema_version: "1.0"
+generated_at: "2026-10-22T05:40:00+08:00"
+ledger_ref: "09-status/globalcloud-project-group-single-authorization-ledger-v1.0.md"
+authorization_granted_count: 22
+action_executed_count: 16
+pending_execution_count: 7
+receipts:
+  - auth_id: AUTH-GPCF-SCHEME-REVIEW-20260626
+    granted_at: "2026-10-22T05:40:00+08:00"
+    granted_by: "老卢"
+    grant_basis: "2026-10-22 05:38 问答批准（选项：批准全部 3 项）"
+    repo: "GlobalCoud GPCF"
+    scope: "人工 review + 结论登记 + 执行前只读门禁"
+    actions_allowed: ["read", "review", "record_conclusion", "write_evidence", "run_readonly_gate"]
+    actions_forbidden: ["stage", "commit", "push", "delete", "cleanup", "deploy", "real_data_intake", "status_promotion"]
+    expires_at: "2026-11-05T05:40:00+08:00"
+    evidence: "docs/harness/evidence/pre-wave1-review-AUTH-GPCF-SCHEME-REVIEW-20260626-20261022.md"
+    review_conclusion: "review_ready_or_bounded_2026-10-22"
+    revoked_at: null
+  - auth_id: AUTH-GFIS-SCHEME-REVIEW-20260626
+    granted_at: "2026-10-22T05:40:00+08:00"
+    granted_by: "老卢"
+    grant_basis: "2026-10-22 05:38 问答批准（选项：批准全部 3 项）"
+    repo: "GlobalCloud GFIS"
+    scope: "人工 review + 结论登记 + 执行前只读门禁"
+    actions_allowed: ["read", "review", "record_conclusion", "write_evidence", "run_readonly_gate"]
+    actions_forbidden: ["stage", "commit", "push", "delete", "cleanup", "deploy", "real_data_intake", "status_promotion"]
+    expires_at: "2026-11-05T05:40:00+08:00"
+    evidence: "docs/harness/evidence/pre-wave1-review-AUTH-GFIS-SCHEME-REVIEW-20260626-20261022.md"
+    review_conclusion: "review_ready_or_bounded_2026-10-22"
+    revoked_at: null
+  - auth_id: AUTH-SOP-LOOP-GATE-DELEGATE-REVIEW-20260627
+    granted_at: "2026-10-22T05:40:00+08:00"
+    granted_by: "老卢"
+    grant_basis: "2026-10-22 05:38 问答批准（选项：批准全部 3 项）"
+    repo: "GlobalCloud SOP"
+    scope: "人工 review + 结论登记 + 执行前只读门禁"
+    actions_allowed: ["read", "review", "record_conclusion", "write_evidence", "run_readonly_gate"]
+    actions_forbidden: ["stage", "commit", "push", "delete", "cleanup", "deploy", "real_data_intake", "status_promotion"]
+    expires_at: "2026-11-05T05:40:00+08:00"
+    evidence: "docs/harness/evidence/pre-wave1-review-AUTH-SOP-LOOP-GATE-DELEGATE-REVIEW-20260627-20261022.md"
+    review_conclusion: "review_ready_or_bounded_2026-10-22"
+    revoked_at: null
+  - auth_id: AUTH-WAVE1-WAME-LINT-RUNTIME-20260626
+    granted_at: "2026-10-22T05:55:00+08:00"
+    granted_by: "老卢"
+    grant_basis: "2026-10-22 05:55 问答批准全部 5 项"
+    repo: "GlobalCloud WAME"
+    scope: "local_code_fix"
+    actions_allowed: ["read","write_local_code","run_lint","run_runtime_smoke","write_evidence"]
+    actions_forbidden: ["commit","push","deploy","publish","status_promotion"]
+    expires_at: "2026-11-05T05:55:00+08:00"
+    evidence: "docs/harness/evidence/wave1-authorization-batch-20261022.md"
+    review_conclusion: "concluded_2026-10-22"
+    revoked_at: null
+  - auth_id: AUTH-WAVE1-BRAIN-HUMAN-REVIEW-20260626
+    granted_at: "2026-10-22T05:55:00+08:00"
+    granted_by: "老卢"
+    grant_basis: "2026-10-22 05:55 问答批准全部 5 项"
+    repo: "GlobalCloud Brain"
+    scope: "readonly_review"
+    actions_allowed: ["read","review","record_conclusion","write_evidence","run_readonly_gate"]
+    actions_forbidden: ["write_business_fact","commit","push","status_promotion"]
+    expires_at: "2026-11-05T05:55:00+08:00"
+    evidence: "docs/harness/evidence/wave1-authorization-batch-20261022.md"
+    review_conclusion: "concluded_2026-10-22"
+    revoked_at: null
+  - auth_id: AUTH-WAVE1-GPCF-POST-SCHEME-REVIEW-20260626
+    granted_at: "2026-10-22T05:55:00+08:00"
+    granted_by: "老卢"
+    grant_basis: "2026-10-22 05:55 问答批准全部 5 项"
+    repo: "GlobalCoud GPCF"
+    scope: "readonly_review"
+    actions_allowed: ["read","review","record_conclusion","write_evidence","run_readonly_gate"]
+    actions_forbidden: ["commit","push","delete","status_promotion"]
+    expires_at: "2026-11-05T05:55:00+08:00"
+    evidence: "docs/harness/evidence/wave1-authorization-batch-20261022.md"
+    review_conclusion: "concluded_2026-10-22"
+    revoked_at: null
+  - auth_id: AUTH-AAAS-LOOP-GATE-DELEGATE-REVIEW-20260627
+    granted_at: "2026-10-22T05:55:00+08:00"
+    granted_by: "老卢"
+    grant_basis: "2026-10-22 05:55 问答批准全部 5 项"
+    repo: "GlobalCloud AAAS"
+    scope: "readonly_review"
+    actions_allowed: ["read","review","record_conclusion","write_evidence","run_readonly_gate"]
+    actions_forbidden: ["commit","push","delete","status_promotion"]
+    expires_at: "2026-11-05T05:55:00+08:00"
+    evidence: "docs/harness/evidence/wave1-authorization-batch-20261022.md"
+    review_conclusion: "concluded_2026-10-22"
+    revoked_at: null
+  - auth_id: AUTH-XWAIL-LOOP-GATE-DELEGATE-REVIEW-20260627
+    granted_at: "2026-10-22T05:55:00+08:00"
+    granted_by: "老卢"
+    grant_basis: "2026-10-22 05:55 问答批准全部 5 项"
+    repo: "GlobalCloud XWAIL"
+    scope: "readonly_review"
+    actions_allowed: ["read","review","record_conclusion","write_evidence","run_readonly_gate"]
+    actions_forbidden: ["commit","push","delete","status_promotion"]
+    expires_at: "2026-11-05T05:55:00+08:00"
+    evidence: "docs/harness/evidence/wave1-authorization-batch-20261022.md"
+    review_conclusion: "concluded_2026-10-22"
+    revoked_at: null
+  - auth_id: AUTH-KDS-DIFFCHECK-CLEANUP-20260626
+    granted_at: "2026-10-22T06:10:00+08:00"
+    granted_by: "老卢"
+    grant_basis: "2026-10-22 06:10 问答批准 2 项可执行"
+    repo: "GlobalCloud KDS"
+    scope: "cleanup"
+    actions_allowed: ["read","whitespace_only_edit_listed_files","write_evidence"]
+    actions_forbidden: ["non_whitespace_change","api_sync","commit","push","delete"]
+    expires_at: "2026-11-05T06:10:00+08:00"
+    evidence: "docs/harness/evidence/cleanup-delete-batch-20261022.md"
+    review_conclusion: null
+    revoked_at: null
+  - auth_id: AUTH-WAS-DELETE-DS-STORE-20260626
+    granted_at: "2026-10-22T06:10:00+08:00"
+    granted_by: "老卢"
+    grant_basis: "2026-10-22 06:10 问答批准 2 项可执行"
+    repo: "WAS世界资产体系"
+    scope: "delete"
+    actions_allowed: ["read","archive_copy","delete_listed_ds_store","write_evidence"]
+    actions_forbidden: ["other_deletions","commit","push"]
+    expires_at: "2026-11-05T06:10:00+08:00"
+    evidence: "docs/harness/evidence/cleanup-delete-batch-20261022.md"
+    review_conclusion: null
+    revoked_at: null
+
+  - auth_id: AUTH-PG-DENOM29-20261022
+    granted_at: "2026-10-22T19:45:00+08:00"
+    granted_by: "老卢"
+    grant_basis: "2026-10-22 会话裁定 Q1（受控分母 29 纳入 FireQuote）"
+    repo: "GlobalCloud GPCF"
+    scope: "caliber_denominator_29"
+    actions_allowed: ["read", "write_caliber_files", "run_validators", "recompute_vu_ledger", "write_evidence"]
+    actions_forbidden: ["commit", "push", "delete", "status_promotion", "real_data_intake"]
+    expires_at: "2027-01-20T23:59:59+08:00"
+    evidence: "runtime/plan-20261022/GlobalCloud项目群后续工作计划_决策模型辅助版_2026-10-22.md §5（项目群根目录）"
+    review_conclusion: null
+    revoked_at: null
+  - auth_id: AUTH-PG-STATUS-SOT-FEATUREYAML-20261022
+    granted_at: "2026-10-22T19:45:00+08:00"
+    granted_by: "老卢"
+    grant_basis: "2026-10-22 会话裁定 Q2（唯一状态事实源=feature.yaml）"
+    repo: "GlobalCloud GPCF"
+    scope: "status_single_source_of_truth"
+    actions_allowed: ["read", "write_feature_yaml_loop_fields", "write_derivation_script", "write_mapping_yaml", "run_readonly_gate", "write_evidence"]
+    actions_forbidden: ["commit", "push", "delete", "status_promotion", "rewrite_feature_status"]
+    expires_at: "2027-01-20T23:59:59+08:00"
+    evidence: "runtime/plan-20261022/GlobalCloud项目群后续工作计划_决策模型辅助版_2026-10-22.md §5（项目群根目录）"
+    review_conclusion: null
+    revoked_at: null
+  - auth_id: AUTH-PG-WAE-SOURCE-PKC-FIRST-20261022
+    granted_at: "2026-10-22T19:45:00+08:00"
+    granted_by: "老卢"
+    grant_basis: "2026-10-22 会话裁定 Q3（WAE 落仓方案为真源、PKC 首接入）"
+    repo: "GlobalCloud GPCF"
+    scope: "wae_source_and_first_onboarding"
+    actions_allowed: ["read", "write_plan_docs", "register_placement_dry_run", "write_evidence"]
+    actions_forbidden: ["real_token_write", "deploy", "commit", "push", "status_promotion"]
+    expires_at: "2027-01-20T23:59:59+08:00"
+    evidence: "runtime/plan-20261022/GlobalCloud项目群后续工作计划_决策模型辅助版_2026-10-22.md §5（项目群根目录）"
+    review_conclusion: null
+    revoked_at: null
+  - auth_id: AUTH-PG-PQC-FIRST-REAL-PILOT-20261022
+    granted_at: "2026-10-22T19:45:00+08:00"
+    granted_by: "老卢"
+    grant_basis: "2026-10-22 会话裁定 Q4（PQC 首条真实业务试点；真实数据/生产须另批）"
+    repo: "GlobalCloud GPCF"
+    scope: "first_real_business_pilot_pqc"
+    actions_allowed: ["read", "write_plan_docs", "prepare_auth_request", "write_evidence"]
+    actions_forbidden: ["real_customer_data_intake", "production_deploy", "write_business_fact", "commit", "push"]
+    expires_at: "2027-01-20T23:59:59+08:00"
+    evidence: "runtime/plan-20261022/GlobalCloud项目群后续工作计划_决策模型辅助版_2026-10-22.md §5（项目群根目录）"
+    review_conclusion: null
+    revoked_at: null
+  - auth_id: AUTH-PG-WAME-E1-AUTODEGRADE-20261022
+    granted_at: "2026-10-22T19:45:00+08:00"
+    granted_by: "老卢"
+    grant_basis: "2026-10-22 会话裁定 Q5（WAME 启动 E1；90 天末无 granted 回执即自动降级，不再二次请示）"
+    repo: "GlobalCloud GPCF"
+    scope: "wame_e1_start_with_autodegrade"
+    actions_allowed: ["read", "write_local_code", "run_lint", "run_tests", "write_evidence"]
+    actions_forbidden: ["publish", "deploy", "commit", "push", "status_promotion"]
+    expires_at: "2027-01-20T23:59:59+08:00"
+    evidence: "runtime/plan-20261022/GlobalCloud项目群后续工作计划_决策模型辅助版_2026-10-22.md §5（项目群根目录）"
+    review_conclusion: null
+    revoked_at: null
+  - auth_id: AUTH-PG-DISPOSITION-BATCH15-20261022
+    granted_at: "2026-10-22T19:45:00+08:00"
+    granted_by: "老卢"
+    grant_basis: "2026-10-22 会话裁定 Q6（15 项目处置整批：启动 8/合并 2/暂停 4/退出 1）"
+    repo: "GlobalCloud GPCF"
+    scope: "disposition_batch_15"
+    actions_allowed: ["read", "record_disposition", "register_pause", "prepare_execution_checklist", "run_readonly_gate", "write_evidence"]
+    actions_forbidden: ["execute_merge_without_checklist", "execute_exit_without_archive_manifest", "delete_repo", "status_promotion", "commit", "push"]
+    expires_at: "2027-01-20T23:59:59+08:00"
+    evidence: "runtime/plan-20261022/GlobalCloud项目群后续工作计划_决策模型辅助版_2026-10-22.md §5（项目群根目录）"
+    review_conclusion: null
+    revoked_at: null
+  - auth_id: AUTH-PG-TARGET-ABSOLUTE-20261022
+    granted_at: "2026-10-22T19:45:00+08:00"
+    granted_by: "老卢"
+    grant_basis: "2026-10-22 会话裁定 Q7（阶段目标改绝对量：≥1 链闭环 + ≥3 项目解阻塞）"
+    repo: "GlobalCloud GPCF"
+    scope: "target_caliber_absolute"
+    actions_allowed: ["read", "write_plan_docs", "write_evidence"]
+    actions_forbidden: ["status_promotion", "commit", "push"]
+    expires_at: "2027-01-20T23:59:59+08:00"
+    evidence: "runtime/plan-20261022/GlobalCloud项目群后续工作计划_决策模型辅助版_2026-10-22.md §5（项目群根目录）"
+    review_conclusion: null
+    revoked_at: null
+  - auth_id: AUTH-PG-F021-ATTRIBUTION-20261022
+    granted_at: "2026-10-22T20:10:00+08:00"
+    granted_by: "老卢"
+    grant_basis: "2026-10-22 20:08 问答：老卢直接裁定 F-021 归属改 world（gate 0.822 提示需确认）"
+    repo: "GlobalCloud GPCF"
+    scope: "f021_attribution_fix"
+    actions_allowed: ["read", "write_feature_yaml", "write_queue", "write_evidence", "commit"]
+    actions_forbidden: ["push", "deploy", "delete", "status_promotion", "real_data_intake"]
+    expires_at: "2027-01-20T23:59:59+08:00"
+    evidence: "runtime/plan-20261022/GlobalCloud项目群后续工作计划_决策模型辅助版_2026-10-22.md §11"
+    review_conclusion: null
+    revoked_at: null
+  - auth_id: AUTH-PG-BATCH-COMMIT-20261022
+    granted_at: "2026-10-22T20:10:00+08:00"
+    granted_by: "老卢"
+    grant_basis: "2026-10-22 20:11 问答：本批只提交我方独占文件（单次 commit）"
+    repo: "GlobalCloud GPCF"
+    scope: "commit_batch_20261022"
+    actions_allowed: ["read", "commit"]
+    actions_forbidden: ["push", "deploy", "delete", "status_promotion", "commit_other_sessions_work"]
+    expires_at: "2027-01-20T23:59:59+08:00"
+    evidence: "runtime/plan-20261022/GlobalCloud项目群后续工作计划_决策模型辅助版_2026-10-22.md §11"
+    review_conclusion: null
+    revoked_at: null
+  - auth_id: AUTH-PG-F022-ATTRIBUTION-20261022
+    granted_at: "2026-10-22T20:47:00+08:00"
+    granted_by: "老卢"
+    grant_basis: "2026-10-22 20:46 问答：老卢批准直接改 F-022 归属（gate 0.765 需确认）"
+    repo: "GlobalCloud GPCF"
+    scope: "f022_attribution_fix"
+    actions_allowed: ["read", "write_feature_yaml", "write_queue", "write_evidence", "commit"]
+    actions_forbidden: ["push", "deploy", "delete", "status_promotion", "real_data_intake"]
+    expires_at: "2027-01-20T23:59:59+08:00"
+    evidence: "docs/reports/status-source-of-truth-findings-20261022.md"
+    review_conclusion: null
+    revoked_at: null
+  - auth_id: AUTH-PG-F031-ACCEPTANCE-20261022
+    granted_at: "2026-10-22T21:02:00+08:00"
+    granted_by: "老卢"
+    grant_basis: "2026-10-22 21:01 问答：P0 六项逐条勾选全部通过，并选「六项全通过即关单」"
+    repo: "GlobalCloud GPCF"
+    scope: "f031_p0_acceptance_and_close"
+    actions_allowed: ["read", "write_feature_yaml", "write_evidence", "close_feature", "commit"]
+    actions_forbidden: ["push", "deploy", "status_promotion_beyond_close", "real_data_intake"]
+    expires_at: "2027-01-20T23:59:59+08:00"
+    evidence: "features/done/F-031-xgd-dot-alignment/evidence/human-acceptance-20261022.md"
+    review_conclusion: "P0 六项通过（分层停止接受契约级）；不声明 accepted/integrated/production_ready/customer_accepted"
+    revoked_at: null
+  - auth_id: AUTH-PG-P05-UNBLOCK-20261022
+    granted_at: "2026-10-22T21:13:00+08:00"
+    granted_by: "老卢"
+    grant_basis: "2026-10-22 21:12 问答：F-026 重采并解除阻塞；F-015 随 Studio 退役结项；F-030 出清单交 PDC 属主"
+    repo: "GlobalCloud GPCF"
+    scope: "p05_unblock_and_retire"
+    actions_allowed: ["read", "write_feature_yaml", "write_evidence", "close_feature", "write_queue", "commit"]
+    actions_forbidden: ["push", "deploy", "status_promotion_beyond_p05", "real_data_intake", "cross_repo_write"]
+    expires_at: "2027-01-20T23:59:59+08:00"
+    evidence: "docs/reports/p05-blocked-classification-20261022.md"
+    review_conclusion: "F-026 blocked→evaluated（门禁理由过期）；F-015 随 Studio 退役结项（closed）；F-030 清单交 PDC 属主"
+    revoked_at: null

@@ -1,1 +1,1 @@
-waived: 本 Feature 仅核对治理配置；GCMEM 本机 API 已由项目仓单独实调核验。
+waived: 本 Feature 验收不调用 GCMEM 对外 REST/MCP 接口或任何外部 API：回归使用临时账本与本地进程，doctor 为本地 CLI 只读巡检，故 api 豁免；真实 API 调用须独立授权与证据。

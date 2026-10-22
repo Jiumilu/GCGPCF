@@ -886,6 +886,8 @@
 | GPCF-DOC-27101F3BEB | GBrain 多租户知识库权限体系 — v3.1 Hardening | docs/harness/multi-tenant-permission-design.md | controlled |
 | GPCF-DOC-4ED15E157A | GFIS-RUNTIME-SOP-E2E-DEV-COMPLETION-001 多智能体执行包 | docs/harness/tasks/GFIS-RUNTIME-SOP-E2E-DEV-COMPLETION-001.multi-agent.md | controlled |
 | GPCF-DOC-5FE5ED4E8B | tasks | docs/harness/tasks/README.md | controlled |
+| GPCF-DOC-446E3B40D1 | reports | docs/reports/README.md | controlled |
+| GPCF-DOC-D0D0365291 | P05 · 7 个 blocked Feature 分类与处理（2026-10-22） | docs/reports/p05-blocked-classification-20261022.md | controlled |
 | GPCF-DOC-AE29585A23 | standards | docs/standards/README.md | controlled |
 | GPCF-DOC-187BF785F5 | Headroom LCX 安全规则 | loop/context/headroom/docs/security.md | controlled |
 | GPCF-DOC-4F39AFF310 | OpenSpec 变更 | openspec/README.md | controlled |

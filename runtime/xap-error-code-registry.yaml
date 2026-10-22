@@ -1,0 +1,24 @@
+version: v0.1
+status: draft
+owner: GPCF
+source: "CONFLICT-02 裁决 A（2026-10-22，老卢）"
+note: "单一权威注册表草案；语义未经三方逐条确认（verified: false）。未注册码不得进入实现。"
+codes:
+  - {code: XAP-1001, semantics: "请求参数缺失或格式非法", retriable: false, source: [gpcf-list, receipt-spec], verified: false}
+  - {code: XAP-1002, semantics: "字段值非法", retriable: false, source: [gpcf-list], verified: false}
+  - {code: XAP-1003, semantics: "契约/枚举冲突（含 compatibilityDecision 双写冲突）", retriable: false, source: [gpcf-list, receipt-spec, wame-impl], verified: true}
+  - {code: XAP-2001, semantics: "签名校验失败", retriable: false, source: [gpcf-list], verified: false}
+  - {code: XAP-2002, semantics: "摘要/完整性不符", retriable: false, source: [gpcf-list], verified: false}
+  - {code: XAP-2003, semantics: "版本不支持", retriable: false, source: [gpcf-list], verified: false}
+  - {code: XAP-2004, semantics: "contentDigest 与包体不一致", retriable: false, source: [gpcf-list, wame-impl], verified: true}
+  - {code: XAP-4001, semantics: "引用对象不存在（待核）", retriable: false, source: [wame-impl], verified: false}
+  - {code: XAP-4010, semantics: "待核（XWAIL 实现引用）", retriable: false, source: [xwail], verified: false}
+  - {code: XAP-5001, semantics: "内部错误", retriable: true, source: [gpcf-list, receipt-spec, wame-impl], verified: false}
+  - {code: XAP-5002, semantics: "状态冲突（待核）", retriable: true, source: [wame-impl], verified: false}
+  - {code: XAP-5003, semantics: "幂等冲突（待核）", retriable: false, source: [wame-impl], verified: false}
+  - {code: XAP-6001, semantics: "重复提交", retriable: false, source: [receipt-spec, wame-impl], verified: false}
+  - {code: XAP-6002, semantics: "禁止操作", retriable: false, source: [receipt-spec, wame-impl], verified: false}
+  - {code: XAP-6003, semantics: "超时", retriable: true, source: [receipt-spec, wame-impl], verified: false}
+  - {code: XAP-6004, semantics: "依赖不可用", retriable: true, source: [receipt-spec, wame-impl], verified: false}
+  - {code: XAP-6005, semantics: "配额/限流（待核）", retriable: true, source: [receipt-spec], verified: false}
+  - {code: XAP-6006, semantics: "未知错误", retriable: false, source: [receipt-spec, wame-impl], verified: false}

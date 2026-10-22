@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-WAS-PROJECT-MASTER-PLAN-REGISTER-20260624
 title: GlobalCloud 项目群主方案控制台账
 project: GPCF
-related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio, ICP, PQC, SpaceAI, SpaceAIStudio, World, GCMEM, WAE]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio, ICP, PQC, SpaceAI, SpaceAIStudio, World, GCMEM, WAE, WAS, XWAIL, AAAS, SOP, Project, PDC, SLC, DRC]
 domain: status
 status: controlled
 version: v1.0
@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/91-治理与验收/09-status/globalcloud-project-master-plan-control-register.md
 source_path: 09-status/globalcloud-project-master-plan-control-register.md
 sync_direction: bidirectional
-last_reviewed: 2026-10-18
+last_reviewed: 2026-10-21
 supersedes: []
 superseded_by: []
 ---
@@ -58,8 +58,8 @@ superseded_by: []
 
 | project | repo_path | 当前有效总体方案 | 候选/相关文档 | status | 主要问题 | 下一步 |
 |---|---|---|---|---|---|---|
-| 项目群总控 | `GlobalCoud GPCF` | `01-architecture/GlobalCloud 项目群总体方案.md` v1.1 | `01-architecture/WAS世界资产体系总体方案.md`（专项） | `authoritative` | 当前 27 项目已登记；新增项目的方案继承与运行验收仍待核验 | 按项目群主方案验证项目级传导，不提升运行或验收状态 |
-| GlobalCloud GPCF | `GlobalCoud GPCF` | `GlobalCloud GPCF 总体方案.md` v1.1 | `AGENTS.md`, `README.md` | `authoritative` | GPCF 项目定位已对齐双总控、WAME/World/WAE 与 Project 只读边界 | 按当前快照复核运行状态，并保持 Feature/Evidence 权威 |
+| 项目群总控 | `GlobalCoud GPCF` | `01-architecture/GlobalCloud 项目群总体方案.md` v1.3 | `01-architecture/WAS世界资产体系总体方案.md`（专项） | `authoritative` | 28 项目业务/系统/数据管理架构与传导清单已更新；单次文档门禁通过，跨仓就绪仍为 partial/rework | 按主方案 §3.3.1/§4.1 验证数据目录和项目级传导，不提升运行或验收状态 |
+| GlobalCloud GPCF | `GlobalCoud GPCF` | `GlobalCloud GPCF 总体方案.md` v1.1 | `AGENTS.md`, `README.md` | `authoritative` | GPCF 项目定位已对齐双总控、WAME/World/WAE 与 Project 只读边界 | 继续修复实时状态快照门禁，并保持 Feature/Evidence 权威 |
 | WAS世界资产体系 | `WAS世界资产体系` | `docs/GlobalCloud WAS 总体方案.md` | `docs/GlobalCloud-WAS总体方案V1.2-GPCF统一重构版.md` | `authoritative` | 已建立仓内唯一当前有效总体方案，旧 V1.2 文档作为来源底稿 | 后续补充语义变更回流记录和验证证据 |
 | GlobalCloud XWAIL | `GlobalCloud XWAIL` | `GlobalCloud XWAIL 总体方案.md` | `XWAIL实施方案.md` | `authoritative` | 已建立总体方案，实施方案降级为工程实施底稿 | 后续补齐 Schema/Validator/XAP 实现证据 |
 | GlobalCloud AAAS / AaaS | `GlobalCloud AAAS` | `docs/GlobalCloud AaaS 总体方案.md` | `docs/AaaS总体方案_GPCF对齐版.md` | `authoritative` | 已统一显示名为 GlobalCloud AaaS，AAAS 保留为仓库名 | 后续补齐 ServicePackage/Metering/SLA 验证证据 |
@@ -82,10 +82,12 @@ superseded_by: []
 | GlobalCloud SpaceAI Studio | `GlobalCloud SpaceAI Studio` | 待核验 | `projects/spaceai-studio/STATUS.md` | `candidate` | 重构方案存在，尚不能据此声明唯一当前总体方案 | 核验继承链及三平台交付边界 |
 | GlobalCloud World | `GlobalCloud World` | `GlobalCloud World 总体方案.md` | `docs/architecture/GCWORLD总体架构与实施方案_v1.1.md` | `candidate` | 独立仓已有受控唯一方案声明；Ontology 基线 0.2.x 与实发 0.2.0 的继承冲突待 WAS 裁定 | 复核版本基线冲突后再判定 authoritative |
 | GlobalCloud GCMEM | `GlobalCloud Mem` | `GlobalCloud GCMEM 总体方案.md` | `docs/MASTER-DESIGN.md` | `authoritative` | 独立仓已声明项目群继承、唯一方案与 KDS 主存边界；业务运行仍保持 partial | 项目级结构变化继续回传 GPCF，并按影响范围传导 KDS |
-| GlobalCloud WAE | `GlobalCloud WAE` | 待核验 | `projects/wae/MASTER-DESIGN_v0.3.md` | `candidate` | 浏览器总体设计已有迭代，唯一当前版本和继承链待复核 | 核验 v0.3 与 WAME 职责分界 |
+| GlobalCloud WAE | `GlobalCloud WAE` | `docs/GlobalCloud WAE 总体方案.md` v1.0 | `projects/wae/总体方案候选_v1.0_20261022.md`（superseded 候选） | `authoritative` | 老卢 2026-10-22 批准并落仓；继承项目群总体方案；Studio 作废后承接统一界面壳层职责 | 按总体方案 §7 生效条件执行；交付状态不因此提升 |
 | GlobalCloud PMC | `GlobalCloud PMC` | `GlobalCloud Project 总体方案.md` | `projects/project/STATUS.md` | `candidate` | Plane 社区版上游基线与双主控继承已登记；运行和集成仍未验证 | 完成 F-028 证据与开发实例验证后复核 |
 | GlobalCloud PDC | `GlobalCloud PDC` | `GlobalCloud PDC 总体方案.md` | `projects/pdc/STATUS.md` | `candidate` | 独立仓已形成项目级总体方案候选，职责与本地数据边界已写明，双主控继承尚待项目群裁定 | 核验继承、接口与版本基线后再判定权威方案 |
 | GlobalCloud SLC | `GlobalCloud SLC` | 待建立 | `projects/slc/STATUS.md` | `missing` | 独立源码与私有远端已建立；唯一总体方案及双主控继承待核验 | 建立项目总体方案并核对职责、接口与版本基线 |
+| GlobalCloud DRC | `GlobalCloud DRC` | `GlobalCloud DRC 总体方案.md` | `projects/drc/STATUS.md` | `candidate` | 项目级职责与主账边界已记录；项目群 §3.3.1 已给出目录、质量、血缘、权限和生命周期边界，项目继承待核验 | 以脱敏元数据与离线样例核验资源模型和接口；真实连接及授权另行确认 |
+| GlobalCloud FireQuote | `GlobalCloud FireQuote` | 待核验 | `README.md`, `PROJECT_HARNESS_MANIFEST.md` | `missing` | 第 29 项于 2026-10-22 19:11 纳管；仓内已有后端 89 测试与前端构建证据，但未见项目级总体方案与双总控继承声明 | 核验并补《GlobalCloud FireQuote 总体方案》与项目群继承链后再判定权威性 |
 | shared/python_utils | `shared` | 不适用 | `shared/python_utils/` | `not_project` | 共享工具目录，不是业务项目 | 保留为共享库，受导入可用性和依赖治理控制 |
 
 ## 5. 当前结论
@@ -96,25 +98,33 @@ superseded_by: []
 project_master_plan_alignment = repair_required
 project_group_current_state_baseline_refresh_20260626 = controlled
 development_queue_ready = true
-reason = 当前 27 项目均已登记；其中新增项目的唯一总体方案与继承链尚未全部核验
+reason = 当前 28 项目均已登记；单次实时状态快照与文档门禁通过，但跨仓就绪检查因活跃仓库状态漂移失败，且新增项目唯一方案与继承链未全部核验
 ```
 
-可以声明“项目群主方案控制机制已建立，当前 27 项目均已纳入盘点”；不得声明全部项目已具备唯一有效总体方案。缺口按上表保持 candidate/missing 与 repair_required，不等于业务实现完成、客户交付完成或 production_ready。
+可以声明“项目群主方案控制机制已建立，当前 28 项目均已纳入盘点”；不得声明全部项目已具备唯一有效总体方案。缺口按上表保持 candidate/missing 与 repair_required，不等于业务实现完成、客户交付完成或 production_ready。
 2026-10-18 用户确认 WAE 纳入项目群当前范围；WAE 总体方案仍保持 `candidate`，唯一版本和继承链仍待核验。
 
 ## 6. 传导确认清单
 
 ### 2026-10-18 项目群总体架构 v1.1 传导记录
 
-本轮以 `01-architecture/GlobalCloud 项目群总体方案.md` 为当前 27 项目的方案传导源。项目群文档门禁结果以实时检查为准；`patched` 只表示本地项目方案已有架构承接文字，尚未取得全部项目继承校验或真实接口验证。
+本轮以 `01-architecture/GlobalCloud 项目群总体方案.md` §4.1 为 25 项目的逐项影响矩阵。项目群文档门禁已通过，状态上限仍为 `partial`；`patched` 只表示本地项目方案已有架构承接文字，尚未取得全部项目继承校验或真实接口验证。
 
 | 传导状态 | 项目 | 说明 |
 |---|---|---|
 | `patched_pending_project_validation` | GPCF、WAS、XWAIL、AaaS、World、GFIS、GPC、KDS、GCMEM、Brain、PKC、MMC、Studio、SOP、ICP、XiaoC、XGD、XiaoG、Project | 已在现有总体方案补继承或项目级主责/接口边界；项目群文档门禁通过，WAME/PVAOS 继承校验及六项目方案问题仍待收口 |
 | `pending_branch_binding` | WAME、PVAOS | 仓内 AGENTS 要求架构会话绑定专用目标分支；当前检出分支分别为 `wame/world-asset-studio` 和 `main`，不在本轮跨仓会话中切换或混入架构变更 |
-| `pending_unique_plan` | PQC、SpaceAI、SpaceAIStudio、WAE | 当前尚无经台账确认的唯一项目总体方案；中央 §4.1 已分解职责，仓内方案继承链待建立/核验 |
+| `pending_unique_plan` | PQC、SpaceAI、SpaceAIStudio | 当前尚无经台账确认的唯一项目总体方案；中央 §4.1 已分解职责，仓内方案继承链待建立/核验 |
 
 `authorization=local_architecture_document_revision`；`confirmation=project_branch_binding_and_unique_plan_review_pending`；`overall_status=partial/rework`。这不是架构运行集成或客户验收结论。
+
+### 2026-10-21 项目群数据管理架构 v1.3 传导记录
+
+本文 §3.3.1 定义联邦式数据管理边界，系统架构图 §7.1 给出数据流视图；DRC 仅承接目录元数据、责任人、血缘索引与生命周期记录。受影响项目为 28 个已登记项目，其中 GFIS/GPC/PVAOS/PQC/AaaS/WAME/World/GPCF 等需核对源账与契约，KDS/GCMEM/Brain/PKC/ICP/AI 链需核对知识引用与候选边界，MMC/WAME/GPCF 需核对身份、授权和门禁，PDC/SLC/SpaceAI 等需核对本地数据和上游引用。当前是中央方案传导，项目级契约及 DRC 候选方案仍待逐项验证。
+
+`authorization=local_architecture_document_revision`；`confirmation=production_data_access_and_permission_change_pending`；`data_management_architecture=planned`；`architecture_propagation=partial`。文档和图示不等于数据库连接、数据迁移、授权生效或项目群集成。
+
+验证记录：28 项目注册表、总体方案 §4.1 与系统图 §8 的项目集合一致；`document_control.py --check`、污染检查、KDS TOKEN 检查及单次 `loop_document_gate.py` 通过（status ceiling=`partial`）。随后 `validate_loop_project_group_gate_readiness.py` 为 17/20，SOP、Studio、GPCF 三仓均因 Live 快照在检查期间偏移而返回 `rework_required`。整体保持 `partial/rework`，待跨仓状态稳定后重跑；项目方案唯一性与继承问题另行跟踪。
 
 每次主方案或项目方案发生结构性变化时，本台账必须记录：
 

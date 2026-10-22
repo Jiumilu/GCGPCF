@@ -19,6 +19,7 @@ acceptance:
   - change 文档登记进 document-control-register 与 sync-register，镜像一致
   - 门禁结果如实留存；失败不升级状态
 loop:
+  dispatched: false
   current_step: registration
   iteration: 1
 evidence:

@@ -1,0 +1,378 @@
+# GlobalCloud 项目群统一规范 · 机器可读规则集（唯一执行源）
+# 本文件是 gc_standard.py 的唯一规则来源：规则 ID、级别、阈值、白名单、启发式词表均在此维护。
+# 修改本文件后先跑：python3 _governance/tools/gc_standard.py validate
+# 规则的人类说明见 _governance/standards/*.md；本文件只写机器可判定部分。
+#
+# 约定：
+#   - 规则 ID 固定，不得重命名（历史报告与豁免条目依赖 ID）。
+#   - 阈值全部可调；调整后在报告里注明原因。
+#   - 本文件只使用 YAML 子集：映射、列表、标量、行内流式列表/映射；不支持锚点与多行块标量。
+
+schema_version: 1
+name: "GlobalCloud 项目群统一规范规则集"
+updated: "2026-10-22"
+description: "28 个注册项目 + 全群顶层 git 仓的统一可执行规范；检查、阻断、豁免、报告均以此为唯一来源。"
+sources:
+  registry: "GlobalCloud GPCF/config/project-group-projects.yaml"
+  standard: "GlobalCloud MMC/standards/GLOBALCLOUD_HARNESS_ENGINEERING_STANDARD.md"
+  manifest_template: "GlobalCloud MMC/templates/PROJECT_HARNESS_MANIFEST.md"
+  governance_dir: "_governance"
+
+defaults:
+  # 本地检查默认不阻断；CI/钩子显式传 --fail-on error。
+  fail_on: "none"
+  severity_rank: ["error", "warn", "info"]
+  max_items_per_violation: 10
+
+workspace:
+  # R02 豁免的顶层目录（非 git 目录天然豁免，此外仅这些显式豁免）
+  exempt_top_dirs:
+    - "_archive"
+    - "_governance"
+    - "runtime"
+    - "shared"
+    - "wiki"
+    - "_worktree-archive-20261012"
+    - "_xgd-upstream-sync-backups"
+  exempt_name_prefixes: ["_", "."]
+  project_name_regex: "^GlobalCloud [A-Za-z0-9. -]+$"
+  # 拼写错误名单：命中即 error，不得以豁免长期盖住（需改名）
+  known_name_typos:
+    - "GlobalCoud GPCF"
+  # 待改名中文名：允许临时存在，但报 warn 并需豁免。
+  # 2026-10-22 已完成 WAS世界资产体系 → GlobalCloud WAS 改名，故清空该名单（勿再填入已改名仓）。
+  pending_rename_dirs: []
+  # worktree 后缀：出现在项目目录名即 error（R01）
+  worktree_bad_suffixes:
+    - "-p1"
+    - "-transition"
+    - "-authority"
+  required_files: ["README.md", "AGENTS.md", "PROJECT_HARNESS_MANIFEST.md", ".gitignore"]
+
+gitignore:
+  min_coverage: 8
+  # 12 类必须覆盖项；patterns 为 .gitignore 行匹配候选（启发式 fnmatch 双向匹配）
+  required:
+    - key: "node_modules"
+      patterns: ["node_modules/", "node_modules"]
+    - key: "dist"
+      patterns: ["dist/", "dist"]
+    - key: "build"
+      patterns: ["build/", "build"]
+    - key: ".next"
+      patterns: [".next/", ".next"]
+    - key: ".venv"
+      patterns: [".venv/", ".venv"]
+    - key: "coverage"
+      patterns: ["coverage/", "coverage"]
+    - key: "__pycache__"
+      patterns: ["__pycache__/", "__pycache__"]
+    - key: ".pytest_cache"
+      patterns: [".pytest_cache/", ".pytest_cache"]
+    - key: ".DS_Store"
+      patterns: [".DS_Store"]
+    - key: "*.log"
+      patterns: ["*.log"]
+    - key: ".env"
+      patterns: [".env*", ".env", ".env.*"]
+    - key: "runtime"
+      patterns: ["runtime/", "runtime", "runtime-data/"]
+
+root_md:
+  limit: 6
+  allow_names:
+    - "README.md"
+    - "AGENTS.md"
+    - "CHANGELOG.md"
+    - "PROJECT_HARNESS_MANIFEST.md"
+    - "PROJECT_DOCUMENTATION_MANIFEST.md"
+    - "CONTRIBUTING.md"
+    - "SECURITY.md"
+    - "CODE_OF_CONDUCT.md"
+    - "CODEOWNERS"
+  allow_globs: ["LICENSE*", "NOTICE*"]
+
+readme_sections:
+  # 5 段：定位、快速开始/命令、目录结构、状态/边界、文档地图
+  - key: "定位"
+    patterns: ["定位", "项目定位", "概述", "概览", "简介", "是什么", "overview", "about", "introduction", "positioning"]
+  - key: "快速开始/命令"
+    patterns: ["快速开始", "快速上手", "开始", "命令", "使用", "安装", "运行", "quick start", "quickstart", "getting started", "usage", "install", "commands", "development"]
+  - key: "目录结构"
+    patterns: ["目录结构", "项目结构", "目录说明", "结构", "structure", "layout", "directory", "tree"]
+  - key: "状态/边界"
+    patterns: ["状态", "边界", "边界声明", "范围", "现状", "status", "boundary", "scope", "limitations", "not supported"]
+  - key: "文档地图"
+    patterns: ["文档地图", "文档索引", "文档导航", "文档", "docs", "documentation", "doc map"]
+
+agents_sections:
+  # 5 段：项目定位、常用命令、边界/禁改、目录说明、交接
+  - key: "项目定位"
+    patterns: ["项目定位", "定位", "项目简介", "概述", "overview", "positioning"]
+  - key: "常用命令"
+    patterns: ["常用命令", "命令", "commands", "quick start", "开发", "运行", "test", "build"]
+  - key: "边界/禁改"
+    patterns: ["边界", "禁改", "禁止", "红线", "权限", "不得", "boundary", "forbidden", "do not", "限制"]
+  - key: "目录说明"
+    patterns: ["目录说明", "目录结构", "目录", "structure", "layout"]
+  - key: "交接"
+    patterns: ["交接", "handoff", "收工", "汇报", "交付", "hand over"]
+
+manifest_sections:
+  # MMC 模板六段：运行环境、命令、反馈/验收、上下文、工具、约束
+  - key: "运行环境"
+    patterns: ["运行环境", "环境层", "环境", "runtime", "environment"]
+  - key: "命令"
+    patterns: ["命令", "CLI", "执行层", "commands", "cli"]
+  - key: "反馈/验收"
+    patterns: ["反馈", "验收", "完成定义", "feedback", "verification", "acceptance"]
+  - key: "上下文"
+    patterns: ["上下文", "context"]
+  - key: "工具"
+    patterns: ["工具", "工具集成", "tools", "tooling"]
+  - key: "约束"
+    patterns: ["约束", "边界", "constraints", "boundary"]
+
+docs_layout:
+  source_extensions: [".cs", ".ts", ".tsx", ".py", ".js", ".java"]
+  # 根目录允许的工程配置入口（配置不是业务源码；如要最严格可清空此白名单）
+  # 每仓根目录源码白名单：框架约定入口（Next middleware、静态站点 app.js、
+  # 本地服务入口、一次性校验脚本）。迁移需构建/部署验证，先按仓登记。
+  root_source_allowlist:
+    "GlobalCloud Brain":
+      - "viteMmcProxyAuth.ts"
+      - "viteMmcProxyAuth.test.ts"
+    "GlobalCloud WAE":
+      - "vitest.setup.dom.ts"
+    "GlobalCloud SpaceAI Platform":
+      - ".harness/"
+    "GlobalCloud XiaoC":
+      - "middleware.js"
+      - "vitest.workspace.ts"
+    "GlobalCloud XGD":
+      - "check_*.js"
+      - "query.js"
+    "GlobalCloud GFIS":
+      - "app.js"
+    "GlobalCloud GPC":
+      - "app.js"
+    "GlobalCloud KDS":
+      - "api_server.py"
+      - "business_permissions.py"
+  allow_root_globs:
+    - "*.config.js"
+    - "*.config.ts"
+    - "*.config.mjs"
+    - "*.config.cjs"
+    - "*.setup.ts"
+    - "*.global-setup.ts"
+    - "playwright.config.*"
+    - "eslint.config.*"
+    - "postcss.config.*"
+    - "tailwind.config.*"
+    - "babel.config.*"
+    - "jest.config.*"
+    - "vitest.config.*"
+    - "vite*.config.ts"
+    - "webpack.config.*"
+    - "rollup.config.*"
+    - "next.config.*"
+  # 根目录散落物：glob 匹配；suggestion 为归位建议
+  scattered:
+    - glob: "CHANGES-STEP*"
+      suggestion: "docs/changelog/"
+    - glob: "BUGFIX_REPORT.md"
+      suggestion: "docs/reports/"
+    - glob: "*_评审稿*"
+      suggestion: "docs/reports/"
+    - glob: "*_v1.0*"
+      suggestion: "docs/archive/"
+    - glob: "*.bak"
+      suggestion: "docs/archive/ 或删除"
+    - glob: "*.old"
+      suggestion: "docs/archive/ 或删除"
+
+stray:
+  # R11：.DS_Store 任何层级（限 maxdepth）；其余散落物同样限 maxdepth。
+  names: [".DS_Store", "*.tmp", "*~", "*.orig"]
+  env_file: ".env"
+  env_allowed: [".env.example", ".env.sample", ".env.template", ".env.example.local"]
+  maxdepth: 3
+
+# 可脏区声明（04-Git与分支规范 §4）：治理/证据产物与产品代码分区，
+# R14 只统计“可脏区之外”的未提交变更。
+dirty_zones:
+  repos:
+    "GlobalCloud GPCF":
+      - "features/"
+      - ".harness/"
+      - ".kds/"
+      - "09-status/"
+      - "docs/harness/"
+      - "runtime/"
+      - "openspec/"
+      - "projects/"
+      - "docs/"
+      - "tools/"
+      - "00-index/"
+      - "10-archive/"
+    "GlobalCloud SpaceAI Platform":
+      - ".harness/"
+    "GlobalCloud XiaoC":
+      - ".harness/"
+      - "docs/"
+      - "scripts/"
+    "GlobalCloud XiaoG":
+      - ".ekko/"
+
+thresholds:
+  dirty_warn: 50
+  dirty_error: 200
+  branch_warn: 25
+  branch_error: 80
+  branch_stale_days: 90
+  doc_stale_days: 90
+  large_file_mb: 10
+  scan_maxdepth: 3
+  nested_repo_maxdepth: 3
+  # 大文件白名单：仅按仓库 + 扩展名（媒体资产允许入库；非媒体仍报）
+  large_file_whitelist:
+    - repo: "GlobalCloud KDS"
+      extensions: [".mp4", ".mov", ".webm", ".m4v", ".mp3", ".wav", ".m4a", ".png", ".jpg", ".jpeg", ".gif", ".pdf"]
+    - repo: "GlobalCloud WAS"
+      extensions: [".mp4", ".mov", ".webm", ".mp3", ".wav", ".png", ".jpg", ".jpeg", ".gif", ".pdf"]
+
+exceptions:
+  file: "_governance/rules/exceptions.yaml"
+  expired_severity: "warn"
+  # 豁免必填字段（空值/缺失即视为无效豁免并报 warn）
+  required_fields: ["repo", "rule", "reason", "until"]
+
+report:
+  dir: "_governance/reports"
+  filename_pattern: "gc-standard-{date}.md"
+
+# ---------------------------------------------------------------------------
+# 规则清单（20 条，ID 固定）
+# ---------------------------------------------------------------------------
+rules:
+  - id: "R01-repo-name"
+    severity: "error"
+    scope: "repo"
+    title: "仓库目录名规范"
+    description: "顶层仓库目录名必须匹配 ^GlobalCloud [A-Za-z0-9. -]+$ 或登记为待改名；不得是拼写错误名单中的名字，不得带 -p1/-transition/-authority 等 worktree 后缀，不得是软链。"
+    fix_hint: "按注册表 repo 字段改名；worktree 移到 ~/Projects/_wt/<repo>--<branch>/；软链删除并统一物理目录名。"
+  - id: "R02-registered"
+    severity: "error"
+    scope: "workspace"
+    title: "注册表登记"
+    description: "顶层项目目录必须出现在 project-group-projects.yaml 的 repo 字段；未注册的独立 git 仓报 error；注册了但目录不存在也报 error。非 git 目录、_archive、_governance、runtime、shared、wiki、隐藏目录豁免。"
+    fix_hint: "在注册表登记（走新项目准入）或归档到 _archive/；不得保留未注册的活跃仓。"
+  - id: "R03-worktree-location"
+    severity: "info"
+    scope: "repo"
+    title: "worktree 位置"
+    description: "项目仓不得在项目群根目录内新增 worktree；git worktree list 中位于 WS 根内的条目报 info（存量可登记豁免）。"
+    fix_hint: "把 worktree 移到 ~/Projects/_wt/<repo>--<branch>/，并清理已 prunable 的旧 worktree。"
+  - id: "R04-required-files"
+    severity: "error"
+    scope: "repo"
+    title: "四件套齐全"
+    description: "每个注册项目仓根必须有 README.md、AGENTS.md、PROJECT_HARNESS_MANIFEST.md、.gitignore，缺一报一条。"
+    fix_hint: "从 _governance/templates/ 复制统一模板补齐，再按项目实际内容填写。"
+  - id: "R05-gitignore-coverage"
+    severity: "error"
+    scope: "repo"
+    title: ".gitignore 覆盖 12 类产物"
+    description: "必须覆盖 node_modules、dist、build、.next、.venv、coverage、__pycache__、.pytest_cache、.DS_Store、*.log、.env*、runtime 数据目录；至少 8/12 命中，缺失项逐项列出。"
+    fix_hint: "以 _governance/templates/gitignore.template 为基础合并缺失项；合并后重跑检查。"
+  - id: "R06-root-md-limit"
+    severity: "warn"
+    scope: "repo"
+    title: "根目录 .md 数量上限"
+    description: "根目录一级 *.md 数量 ≤6（排除 README/AGENTS/CHANGELOG/PROJECT_HARNESS_MANIFEST/PROJECT_DOCUMENTATION_MANIFEST/LICENSE*/NOTICE*/CONTRIBUTING/SECURITY/CODE_OF_CONDUCT/CODEOWNERS），超出列文件名。"
+    fix_hint: "过程性文档归位 docs/changelog、docs/reports、docs/archive；根目录只留常青入口文档。"
+  - id: "R07-readme-sections"
+    severity: "warn"
+    scope: "repo"
+    title: "README 五段式"
+    description: "README 必须含定位、快速开始/命令、目录结构、状态/边界、文档地图五段（启发式匹配中英文标题或关键词），缺段列名。"
+    fix_hint: "按 _governance/templates/README.template.md 重排章节，保留原内容。"
+  - id: "R08-agents-sections"
+    severity: "warn"
+    scope: "repo"
+    title: "AGENTS 五段式"
+    description: "AGENTS.md 必须含项目定位、常用命令、边界/禁改、目录说明、交接五段，缺段列名。"
+    fix_hint: "按 _governance/templates/AGENTS.template.md 重排章节，保留原内容。"
+  - id: "R09-manifest-sections"
+    severity: "warn"
+    scope: "repo"
+    title: "Manifest 六段"
+    description: "PROJECT_HARNESS_MANIFEST.md 必须含 MMC 模板关键段：运行环境、命令、反馈/验收、上下文、工具、约束，缺段列名。"
+    fix_hint: "按 MMC 模板 _governance/templates/PROJECT_HARNESS_MANIFEST.template.md 对齐六层。"
+  - id: "R10-docs-layout"
+    severity: "warn"
+    scope: "repo"
+    title: "根目录布局"
+    description: "根目录不得直接放源码（*.cs/*.ts/*.tsx/*.py/*.js/*.java）；CHANGES-STEP*、BUGFIX_REPORT.md、*_评审稿*、*_v1.0*、*.bak、*.old 等散落物报 warn 并给归位建议。"
+    fix_hint: "源码进 src/；过程性文件进 docs/changelog、docs/reports、docs/archive。"
+  - id: "R11-stray-files"
+    severity: "warn"
+    scope: "repo"
+    title: "散落垃圾文件"
+    description: ".DS_Store（任何层级，限 maxdepth 3）、*.tmp、*~、*.orig、.env（非 .env.example）存在即报；已加入 .gitignore 也报，防误提交。"
+    fix_hint: "删除本地垃圾文件；.env 用 .env.example 代替；把规则加入 .gitignore。"
+  - id: "R12-tracked-artifacts"
+    severity: "error"
+    scope: "repo"
+    title: "跟踪构建产物"
+    description: "git ls-files 中出现 node_modules/、dist/、build/、.next/、.venv/、venv/、coverage/、__pycache__/ 路径报 error，列出前 10 条与总数。"
+    fix_hint: "git rm -r --cached <path> 并提交 .gitignore；产物由 CI 生成，不入库。"
+  - id: "R13-large-tracked-files"
+    severity: "warn"
+    scope: "repo"
+    title: "跟踪大文件"
+    description: "git ls-tree -r -l HEAD 中 >10MB 文件报 warn；KDS/WAS 的媒体文件按扩展名白名单。"
+    fix_hint: "大文件移出仓库（对象存储/归档），或走资产登记与豁免；不得继续新增。"
+  - id: "R14-dirty-worktree"
+    severity: "info"
+    scope: "repo"
+    title: "工作树脏条目"
+    description: "git status --porcelain -uall 非空：>50 条 warn，>200 条 error（阈值在 thresholds 中可调）；≤50 条记 info。"
+    fix_hint: "治理产物与产品代码分开提交；收工前在交接中登记脏条目清单。"
+  - id: "R15-branch-sprawl"
+    severity: "warn"
+    scope: "repo"
+    title: "分支膨胀"
+    description: "本地分支数 >10 报 warn，>50 报 error；同时报告 90 天未提交分支数（info 证据）。"
+    fix_hint: "合并/删除已完成分支；长期分支转 worktree 或归档；保留 main + 活跃 feat/fix。"
+  - id: "R16-doc-staleness"
+    severity: "info"
+    scope: "repo"
+    title: "文档停滞"
+    description: "注册项目最后 commit 距今 >90 天报 info（存量停滞标记）。"
+    fix_hint: "确认项目是否活跃：活跃则补最近进展与文档；停滞则标记归档/退役流程。"
+  - id: "R17-nested-repos"
+    severity: "error"
+    scope: "repo"
+    title: "嵌套仓库"
+    description: "WS 根内项目仓下不得嵌套 .git（maxdepth 3，排除 node_modules）；发现即 error。"
+    fix_hint: "嵌套仓迁出为独立注册项目，或删除其 .git 并作为普通目录纳入父仓。"
+  - id: "R18-package-lock"
+    severity: "warn"
+    scope: "repo"
+    title: "锁文件缺失"
+    description: "存在 package.json 但无 pnpm-lock.yaml/yarn.lock/package-lock.json 报 warn。"
+    fix_hint: "选定包管理器并提交锁文件，CI 使用 --frozen-lockfile。"
+  - id: "R19-venv-in-repo"
+    severity: "warn"
+    scope: "repo"
+    title: "venv 入仓"
+    description: "仓内 .venv/venv 存在且被 git 跟踪，或存在但未被 .gitignore 忽略报 warn；未跟踪且已忽略的本地环境不报。"
+    fix_hint: "删除并重建本地环境；.venv/、venv/ 写入 .gitignore；如已跟踪先 git rm -r --cached。"
+  - id: "R20-clean-commands"
+    severity: "info"
+    scope: "repo"
+    title: "命令入口"
+    description: "README/Makefile/package.json/pyproject 中找不到 test 命令入口报 info。"
+    fix_hint: "提供 make test 或等价命令，并在 README 快速开始段写明。"

@@ -1,0 +1,16 @@
+#!/bin/sh
+set -eu
+git_dir=$(git rev-parse --git-dir)
+git_common_dir=$(git rev-parse --git-common-dir)
+# Git exports local repository variables to hooks; clear them before tests create fixture repositories.
+for name in $(git rev-parse --local-env-vars); do
+  unset "$name"
+done
+if [ "$git_dir" = "$git_common_dir" ]; then
+  python3 tools/kds-sync/loop_document_gate.py --check-only
+else
+  python3 tools/kds-sync/loop_document_gate.py --check-only --repository-only
+fi
+python3 tools/kds-sync/document_control.py --check
+python3 tools/kds-sync/check_python_bytecode.py
+python3 -m pytest tests/ -q

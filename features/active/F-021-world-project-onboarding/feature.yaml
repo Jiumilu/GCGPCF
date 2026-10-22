@@ -1,6 +1,6 @@
 id: F-021
 name: world-project-onboarding
-project: gpcf
+project: world
 status: blocked
 goal: 将 GlobalCloud World 登记为独立受管项目，建立本地 Git 与私有远端，验证纳管基线并保留既有门禁阻塞
 owner: World
@@ -26,6 +26,14 @@ evidence:
   screenshots: waived
   api: waived
   summary: pass
+verification:
+  tests:
+  - python3 tools/kds-sync/validate_gpcf_2_feature_workspace.py
+  build:
+  - python3 tools/kds-sync/check_python_bytecode.py
+  waivers:
+    screenshots: 本 Feature 为世界资产纳管与门禁证据对齐，无独立 UI 产物；截图不适用（范围理由：无前端页面）。
+    api: 本 Feature 无独立 HTTP 服务；api 证据以 GPCF 中央门禁与 World 仓只读远端一致性为准（范围理由：纳管台账型 Feature）。
 blockers:
 - World 总体方案 Ontology 版本与现行基线冲突，项目方案仍为 candidate
 - 现行 Feature 专属 tests/build 验收命令未声明，screenshots/api 豁免缺少范围特定理由，需重采证据

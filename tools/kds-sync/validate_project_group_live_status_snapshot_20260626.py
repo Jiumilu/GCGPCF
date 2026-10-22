@@ -25,7 +25,7 @@ TZ = timezone(timedelta(hours=8))
 REGISTRY = yaml.safe_load((ROOT / "config/project-group-projects.yaml").read_text(encoding="utf-8"))
 EXPECTED_REPOS = [str(project["repo"]) for project in REGISTRY["projects"]]
 
-VOLATILE_DIRTY_ALLOWLIST = ["GlobalCoud GPCF"]
+VOLATILE_DIRTY_ALLOWLIST = ["GlobalCloud GPCF"]
 SELF_GENERATED_STATUS_PATHS = {
     "docs/harness/evidence/project_group_live_status_current.json",
     "docs/harness/evidence/project_group_live_status_current.md",
@@ -138,7 +138,7 @@ def parse_status_path(line: str) -> str:
 
 
 def filter_self_generated_status(repo_name: str, lines: list[str]) -> list[str]:
-    if repo_name != "GlobalCoud GPCF":
+    if repo_name != "GlobalCloud GPCF":
         return lines
     return [line for line in lines if parse_status_path(line) not in SELF_GENERATED_STATUS_PATHS]
 
@@ -171,6 +171,8 @@ def load_current_snapshot(failures: list[str]) -> dict:
 
 def main() -> int:
     failures: list[str] = []
+    # P02（2026-10-22）：工作树脏污/领先落后为观测项，不参与 fail/pass 判定
+    volatile_warnings: list[str] = []
     doc_text = read(DOC, failures)
     refs_text = "\n".join([read(BOARD, failures), read(REGISTER, failures), read(TASKS, failures), read(STATUS, failures)])
     gfis_real_fact_entry = validate_gfis_real_fact_entry(failures)
@@ -239,9 +241,9 @@ def main() -> int:
     snapshot_sensitive_repos = [str(item) for item in current.get("sensitive_repos", [])]
 
     if snapshot_observed_dirty != observed_dirty:
-        failures.append(f"observed_dirty mismatch: snapshot={snapshot_observed_dirty}, actual={observed_dirty}")
+        volatile_warnings.append(f"observed_dirty drifted: snapshot={snapshot_observed_dirty}, actual={observed_dirty}")
     if snapshot_observed_ahead != observed_ahead:
-        failures.append(f"observed_ahead mismatch: snapshot={snapshot_observed_ahead}, actual={observed_ahead}")
+        volatile_warnings.append(f"observed_ahead drifted: snapshot={snapshot_observed_ahead}, actual={observed_ahead}")
 
     expected_volatile_dirty = sorted(set(observed_dirty) & set(VOLATILE_DIRTY_ALLOWLIST))
     if snapshot_volatile_dirty != expected_volatile_dirty:
@@ -257,7 +259,7 @@ def main() -> int:
             f"review_boundary mismatch: snapshot={snapshot_review_boundary}, expected={expected_review_boundary}"
         )
     if int(current.get("pass_repo_count", -1)) != pass_repo_count:
-        failures.append(f"pass_repo_count mismatch: snapshot={current.get('pass_repo_count')}, actual={pass_repo_count}")
+        volatile_warnings.append(f"pass_repo_count drifted: snapshot={current.get('pass_repo_count')}, actual={pass_repo_count}")
     if snapshot_sensitive_repos != sensitive_repos:
         failures.append(f"sensitive_repos mismatch: snapshot={snapshot_sensitive_repos}, actual={sensitive_repos}")
 
@@ -276,8 +278,9 @@ def main() -> int:
         "current_snapshot": str(CURRENT_JSON.relative_to(ROOT)),
         "gfis_real_fact_entry": gfis_real_fact_entry,
         "failures": failures,
-        "warnings": [
-            "This validates the live status snapshot only; it does not delete files, stage, commit, push, sync KDS API, deploy, or grant accepted/integrated/customer acceptance status."
+        "warnings": volatile_warnings + [
+            "P02 (2026-10-22): observed_dirty/observed_ahead/pass_repo_count 属观测项，漂移只告警不失败；语义判定改由 repo_heads(SHA)+项目覆盖+敏感仓承担。",
+            "This validates the live status snapshot only; it does not delete files, stage, commit, push, sync KDS API, deploy, or grant accepted/integrated/customer acceptance status.",
         ],
     }
     print(json.dumps(result, ensure_ascii=False, indent=2))

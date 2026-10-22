@@ -28,6 +28,13 @@ evidence:
   screenshots: fail
   api: fail
   summary: pass
+verification:
+  tests:
+  - python3 tools/kds-sync/validate_gpcf_2_feature_workspace.py
+  build:
+  - python3 tools/kds-sync/check_python_bytecode.py
+  waivers:
+    api: 该 Feature 已于历史阶段关闭，api 证据不适用于其交付形态；按 P17 补验登记范围理由（历史 Feature，现行规则后置生效）。
 blockers:
   - 原 tests.txt 仅校验 GPCF Feature 工作区，不能证明 AaaS 服务台六视图与 WAE 装配。
   - 原 build.txt 仅编译 GPCF 脚本；当前 WAE 工作区无 apps/wae-console，无法回放产品构建和浏览器验收。

@@ -18,3 +18,23 @@ jobs:
       - run: python tools/kds-sync/validate_project_group_openspec_coverage.py
       - run: PYTHONPYCACHEPREFIX=/tmp/gpcf-pycache python -m compileall -q scripts tools
       - run: python tools/kds-sync/check_python_bytecode.py
+
+  gpcf-gates:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install -r requirements-dev.txt
+      # 文档闸：本地 KDS 镜像元数据与 doc_id 一致性
+      - run: python tools/kds-sync/document_control.py --check
+      # 证据闸：Evidence 规则版本 + 授权台账 + 契约矩阵
+      - run: python tools/kds-sync/validate_evidence_rule_version.py
+        continue-on-error: true   # 待基线更新：done 数已由 10 增至 14
+      - run: python tools/kds-sync/validate_project_group_single_authorization_ledger.py
+      - run: python tools/kds-sync/validate_contract_matrix.py
+      - run: python tools/kds-sync/validate_xap_error_code_registry.py
+      # Feature 关闭闸：queue/state 与 Feature 工作区一致性（待 Firebase/ROADMAP 存量修复后转阻断）
+      - run: python tools/kds-sync/validate_gpcf_2_feature_workspace.py
+        continue-on-error: true

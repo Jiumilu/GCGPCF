@@ -21,6 +21,7 @@ acceptance:
   - 门禁能够对故意引入的违规返回失败
   - Feature 专属验收缺失时不能关闭
 loop:
+  governance_blocked: true
   current_step: evaluate
   iteration: 4
 evidence:

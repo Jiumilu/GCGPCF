@@ -1612,6 +1612,10 @@
 | GPCF-DOC-9126B167F5 | GFIS 运行时 SOP 端到端开发完成 001 执行台账 | docs/harness/tasks/GFIS-RUNTIME-SOP-E2E-DEV-COMPLETION-001.execution-ledger.md | controlled |
 | GPCF-DOC-15B317110B | GFIS-RUNTIME-SOP-E2E-DEV-COMPLETION-001 | docs/harness/tasks/GFIS-RUNTIME-SOP-E2E-DEV-COMPLETION-001.md | controlled |
 | GPCF-DOC-GFIS-RUNTIME-SOP-E2E-MIN-001 | GFIS-RUNTIME-SOP-E2E-MIN-001 | docs/harness/tasks/GFIS-RUNTIME-SOP-E2E-MIN-001.md | controlled |
+| GPCF-DOC-86E433AAA5 | F-030（PDC 纳管）重采清单（交 PDC 属主执行） | docs/reports/p05-pdc-f030-resample-checklist-20261022.md | controlled |
+| GPCF-DOC-F2B6092574 | P06 跨仓收尾清单：WAME / PVA 总体方案补继承声明（交属主执行） | docs/reports/p06-cross-repo-plan-inheritance-checklist-20261022.md | controlled |
+| GPCF-DOC-3A7F6FA260 | 唯一状态事实源（P03）落地发现与阻塞项 | docs/reports/status-source-of-truth-findings-20261022.md | controlled |
+| GPCF-DOC-8A36559878 | World 仓 F-021 归属同步清单（交属主执行） | docs/reports/world-f021-attribution-sync-checklist-20261022.md | controlled |
 | GPCF-DOC-E6A5B97688 | Feature Workspace 标准 | docs/standards/feature-workspace.md | controlled |
 | GPCF-DOC-GKE001-OPENSPEC-CODEGRAPH-EVIDENCE-20260811 | GKE-001 OpenSpec 与 CodeGraph 纳管证据 | features/active/F-013-knowledge-asset-model-system/evidence/gke-001-openspec-codegraph-binding-20260811.md | controlled |
 | GPCF-DOC-7A2A6D4F05 | p1-recall-comparison-template | loop/context/cognee/harness/p1-recall-comparison-template.md | controlled |

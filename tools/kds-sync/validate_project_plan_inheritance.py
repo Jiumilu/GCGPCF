@@ -10,13 +10,13 @@ from pathlib import Path
 PROJECT_ROOT = Path("/Users/lujunxiang/Projects/GlobalCloud V0.0.1")
 
 PLAN_PATHS = [
-    PROJECT_ROOT / "WAS世界资产体系/docs/GlobalCloud WAS 总体方案.md",
+    PROJECT_ROOT / "GlobalCloud WAS/docs/GlobalCloud WAS 总体方案.md",
     PROJECT_ROOT / "GlobalCloud XWAIL/GlobalCloud XWAIL 总体方案.md",
     PROJECT_ROOT / "GlobalCloud AAAS/docs/GlobalCloud AaaS 总体方案.md",
     PROJECT_ROOT / "GlobalCloud GPC/GlobalCloud GPC 总体方案.md",
-    PROJECT_ROOT / "GlobalCloud WAES/GlobalCloud WAES 总体方案.md",
+    PROJECT_ROOT / "GlobalCloud WAME/GlobalCloud WAME 总体方案.md",
     PROJECT_ROOT / "GlobalCloud GFIS/GlobalCloud GFIS 总体方案.md",
-    PROJECT_ROOT / "GlobalCloud PVAOS/GlobalCloud PVAOS 总体方案.md",
+    PROJECT_ROOT / "GlobalCloud PVA/GlobalCloud PVA 总体方案.md",
     PROJECT_ROOT / "GlobalCloud KDS/GlobalCloud KDS 总体方案.md",
     PROJECT_ROOT / "GlobalCloud Brain/GlobalCloud Brain 总体方案.md",
     PROJECT_ROOT / "GlobalCloud Studio/GlobalCloud Studio 总体方案.md",
@@ -26,7 +26,7 @@ PLAN_PATHS = [
     PROJECT_ROOT / "GlobalCloud XGD/GlobalCloud XGD 总体方案.md",
     PROJECT_ROOT / "GlobalCloud XiaoC/GlobalCloud XiaoC 总体方案.md",
     PROJECT_ROOT / "GlobalCloud XiaoG/GlobalCloud XiaoG 总体方案.md",
-    PROJECT_ROOT / "GlobalCoud GPCF/GlobalCloud GPCF 总体方案.md",
+    PROJECT_ROOT / "GlobalCloud GPCF/GlobalCloud GPCF 总体方案.md",
 ]
 
 REQUIRED_SECTIONS = [
@@ -44,7 +44,7 @@ REQUIRED_SECTIONS = [
 ]
 
 REQUIRED_CONTROL_TOKENS = [
-    "GPCF:01-architecture/WAS世界资产体系总体方案.md",
+    "GPCF:01-architecture/GlobalCloud 项目群总体方案.md",
     "GC-WAS-PG-BASELINE-0.1.0",
     "loop_enabled: true",
     "不声明",

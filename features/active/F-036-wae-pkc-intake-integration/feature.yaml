@@ -1,0 +1,78 @@
+id: F-036
+name: wae-pkc-intake-integration
+project: wae
+status: active
+goal: 完成 PKC 在 WAE 的注册与首批接入演练：placement/manifests/menus 注册、UI gate 六件套、令牌与状态语义接入、回滚；由 WAE/PKC 属主执行，不声明已接入。
+owner: agent-dev-01
+priority: P1
+scope:
+  in:
+    - "WAE 登记侧：placement.city.yaml 注册 pkc 一级应用与 pkc-intake 页入口（requires: pkc；不改 PKC 仓）"
+    - "菜单/权限入口：host-kit menus.ts 新增 pkc 项与 requires，并补单测"
+    - "入口页 PkcIntakePage：候选态 / 非声明 / 受控嵌入预演（sandbox iframe；默认不发起请求）"
+    - "登记清单 manifests/pkc-intake.yaml：来源、适配 L2、回滚、非声明"
+    - "门禁与证据：check:apps / gen:apps --check / check:app-assembly / typecheck / test / build / ui_gate C10"
+  out:
+    - "PKC 仓业务代码改写（令牌 P4 / 状态语义 P5 由 PKC 属主执行）"
+    - "真实运行时嵌入联调、多用户/无障碍/任务流 E2E、正式接入评审"
+    - "commit / push / deploy / 发布与任何状态提升"
+acceptance:
+  - "WAE placement 注册 pkc 后 check:apps（P001–P010）、gen:apps --check、check:app-assembly 通过"
+  - "pkc 菜单按角色收敛（system-admin / operator / strategist / studio 可见；viewer / auditor 不可见），有单测守护"
+  - "入口页为候选态且不暴露机器字段；受控嵌入默认不发起请求（DOM 测试 + ui_gate C10 有效 0）"
+  - "WAE typecheck / test / build 真实复跑通过；multi_user/accessibility 有真实双角色与键盘/aria 证据；PKC 侧令牌/状态语义与正式接入保留为阻塞"
+  - "task_flow E2E：WAE 补 CONSOLE_COLORS import 后，原始 dev（无垫片）真实跑通 10 步（登录→应用壳→PKC 入口→候选页→返回；pageErrors=0 / externalRequests=0）⇒ task_flow_e2e_status=pass"
+
+loop:
+  dispatched: false
+  current_step: evaluate
+  iteration: 1
+evidence:
+  tests: pass
+  build: pass
+  screenshots: pass
+  api: waived
+  summary: pass
+blockers:
+  - "PKC 侧令牌与状态语义未接入（协议 P4/P5；ui_gate --gc-* 0 次、C5 未发现），需 PKC 属主执行"
+  - "PKC 真实运行时受控嵌入未启用/未联调（未配置 VITE_PKC_EMBED_URL）"
+  - "E2E 依赖 WAE 未提交工作区修复（useAppContent.ts 补 CONSOLE_COLORS import）；若被回退，task_flow_e2e_status 会回退 fail（run1 可复现），需属主提交该修复"
+  - "评审准备已补齐六门证据（建议 conditional）；shell 级无障碍风险 R-A11Y-1（<main> landmark）/R-A11Y-2（未命名关闭按钮）已于 2026-10-22 修复并复跑验证（mainCount=1 / shellUnnamedCount=0 / 无陷阱）"
+  - "正式接入评审未进行（不声明 PKC 已接入）"
+verification:
+  tests:
+    - "python3 -c \"import subprocess,sys; r=subprocess.run(['pnpm','check:apps'],cwd='../GlobalCloud WAE',capture_output=True,text=True); print(r.stdout[-2000:]); print(r.stderr[-1000:]); sys.exit(r.returncode)\""
+    - "python3 -c \"import subprocess,sys; r=subprocess.run(['pnpm','gen:apps','--check'],cwd='../GlobalCloud WAE',capture_output=True,text=True); print(r.stdout[-2000:]); print(r.stderr[-1000:]); sys.exit(r.returncode)\""
+    - "python3 -c \"import subprocess,sys; r=subprocess.run(['pnpm','check:app-assembly'],cwd='../GlobalCloud WAE',capture_output=True,text=True); print(r.stdout[-2000:]); print(r.stderr[-1000:]); sys.exit(r.returncode)\""
+    - "python3 -c \"import subprocess,sys; r=subprocess.run(['pnpm','typecheck'],cwd='../GlobalCloud WAE',capture_output=True,text=True); print(r.stdout[-2000:]); print(r.stderr[-1000:]); sys.exit(r.returncode)\""
+    - "python3 -c \"import subprocess,sys; r=subprocess.run(['pnpm','--filter','@globalcloud/wame','exec','vitest','run','src/app/apps/PkcIntakePage.dom.test.tsx','src/app/apps/AppsShell.dom.test.tsx'],cwd='../GlobalCloud WAE',capture_output=True,text=True); print(r.stdout[-2000:]); print(r.stderr[-1000:]); sys.exit(r.returncode)\""
+    - "python3 -c \"import subprocess,sys; r=subprocess.run(['pnpm','exec','vitest','run','packages/host-kit/src/host/menus.test.ts'],cwd='../GlobalCloud WAE',capture_output=True,text=True); print(r.stdout[-2000:]); print(r.stderr[-1000:]); sys.exit(r.returncode)\""
+  e2e:
+    - "bash \"evidence/e2e-20261022/run-e2e.sh\"（隔离临时 IdP + WAE dev :4301 + Playwright 原始 dev 无垫片；run3=`PLAYWRIGHT_EXIT=0`，10 步/pageErrors=0/externalRequests=0；历史 run1 fail / run2 shim pass 见 evidence/e2e-20261022/README.md）"
+    - "bash \"evidence/review-20261022/run-review.sh\"（双角色 multi_user + accessibility；`PLAYWRIGHT_EXIT=0`；断言见 evidence/review-20261022/logs/review-assertions.json）"
+  build:
+    - "python3 -c \"import subprocess,sys; r=subprocess.run(['pnpm','build'],cwd='../GlobalCloud WAE',capture_output=True,text=True); print(r.stdout[-2000:]); print(r.stderr[-1000:]); sys.exit(r.returncode)\""
+  waivers:
+    screenshots: "入口页有真实浏览器截图（task_flow E2E run2，6 张：登录/改密/工作台/侧栏 PKC/候选页/返回）；但未启用真实 PKC 运行时，无 PKC 业务界面截图。首轮 raw dev 白屏截图见 evidence/e2e-20261022/screens/。"
+    api: "本轮不调用 PKC/WAME 或外部 API，只做 WAE 登记与本地渲染测试；接口与 403 行为未验证，不作声明。"
+ui_product_first_control:
+  version: v1.1
+  applicability: indirect
+  user_groups:
+  - Feature 负责人
+  primary_human_task: 完成 PKC 在 WAE 的注册与首批接入演练：placement/manifests/menus 注册、UI gate
+    六件套、令牌与状态语义接入、回滚；由 WAE/PKC 属主执行，不声明已接入。
+  machine_interface_boundary: 机器字段留在证据中；人类入口展示任务、风险和下一步
+  gates:
+    functional_completeness: pass
+    quality_baseline: pass
+    multi_user_usability: pass
+    task_flow_e2e_status: pass
+    accessibility_status: pass
+    evidence_overexposure_gate: pass
+  status_ceiling: partial
+review_status: conditional
+reviewed_at: "2026-10-22"
+review_evidence: "evidence/review-20261022/conclusion.md"
+created_at: "2026-10-22T10:29:42+00:00"
+updated_at: "2026-10-22T20:50:00+00:00"
