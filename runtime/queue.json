@@ -120,7 +120,7 @@
       "current_role": "Recorder",
       "workspace": "features/done/F-027-governance-remediation",
       "created_at": "2026-10-18T00:26:03+00:00",
-      "updated_at": "2026-10-22T14:39:27+00:00"
+      "updated_at": "2026-10-22T14:52:26+00:00"
     },
     {
       "id": "F-029",
@@ -263,7 +263,7 @@
       "current_role": "Recorder",
       "workspace": "features/done/F-024-panorama-engineering-convergence",
       "created_at": "2026-10-16T09:01:12+00:00",
-      "updated_at": "2026-10-22T14:46:03+00:00"
+      "updated_at": "2026-10-22T14:52:26+00:00"
     },
     {
       "id": "F-028",
@@ -395,7 +395,7 @@
       "current_role": "Recorder",
       "workspace": "features/done/F-026-gcmem-governance-onboarding",
       "created_at": "2026-10-17T22:49:44+00:00",
-      "updated_at": "2026-10-22T14:44:42+00:00"
+      "updated_at": "2026-10-22T14:52:26+00:00"
     },
     {
       "id": "F-032",

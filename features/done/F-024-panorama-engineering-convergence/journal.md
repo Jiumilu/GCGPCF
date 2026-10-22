@@ -8,8 +8,8 @@ status: controlled
 version: v1.0
 owner: GPCF
 kds_space: 开发
-kds_path: 开发/91-治理与验收/features/active/F-024-panorama-engineering-convergence/journal.md
-source_path: features/active/F-024-panorama-engineering-convergence/journal.md
+kds_path: 开发/91-治理与验收/features/done/F-024-panorama-engineering-convergence/journal.md
+source_path: features/done/F-024-panorama-engineering-convergence/journal.md
 sync_direction: bidirectional
 last_reviewed: 2026-10-16
 supersedes: []
@@ -66,3 +66,16 @@ superseded_by: []
      已记入 F-038 的未完成边界，不在此重复。
 5. 是否可以提交？
    - 可提交（治理产物同步）；Feature 保持 active，项目状态保持 partial。
+
+### Iteration 3
+
+1. 这轮做什么？
+   - 通过 Evidence Gate 关闭 Feature。
+2. 改了什么？
+   - 将 feature.yaml 状态标记为 done。
+3. 怎么验证？
+   - 验证所有 evidence 字段均为 pass 或 waived。
+4. 发现什么问题？
+   - 未发现关闭阻塞项。
+5. 是否可以提交？
+   - 是，仅作为提交候选；commit/push 仍需明确授权。

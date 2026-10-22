@@ -1,0 +1,81 @@
+id: F-026
+name: gcmem-governance-onboarding
+project: gcmem
+status: done
+goal: 核验 GCMEM 独立私有仓并补齐项目群 OpenSpec、技能链与 Harness 纳管证据
+owner: GCMEM
+priority: P2
+scope:
+  in:
+    - 核验 GCMEM 本地 main、GitHub 私有远端与提交一致性
+    - 补齐 GCMEM 项目级方案、Harness 清单和 GPCF OpenSpec/技能链/Feature 映射
+    - 记录回归、文档门禁与未闭合阻塞
+  out:
+    - KDS 账本或共享生产配置写入
+    - 业务验收、跨项目集成、生产发布及状态提升
+    - 清理 GPCF 既有无关门禁问题
+acceptance:
+  - GCMEM main 与私有 origin/main 一致
+  - GCMEM 回归 82/82、doctor healthy
+  - GPCF 23 项目 OpenSpec 覆盖通过
+  - 中央门禁失败保留 partial/rework 并列明原因
+loop:
+  current_step: commit
+  iteration: 5
+evidence:
+  tests: pass
+  build: pass
+  screenshots: waived
+  api: waived
+  summary: pass
+blockers:
+ui_product_first_control:
+  version: v1.1
+  applicability: indirect
+  user_groups:
+  - GCMEM 维护者
+  - 项目群治理负责人
+  primary_human_task: 核对 GCMEM 纳管状态、证据和待处理门禁
+  machine_interface_boundary: 仓库与门禁机器字段留在证据中；人类入口只展示当前状态、风险与下一步
+  gates:
+    functional_completeness: pass
+    quality_baseline: pass
+    multi_user_usability: waived
+    task_flow_e2e_status: pending
+    accessibility_status: waived
+    evidence_overexposure_gate: pass
+  status_ceiling: partial
+verification:
+  tests:
+  - python3 -m pytest -q -p no:cacheprovider "/Users/lujunxiang/Projects/GlobalCloud
+    V0.0.1/GlobalCloud Mem/tests"
+  - python3 "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud Mem/src/gcmem.py"
+    doctor --json
+  build:
+  - python3 -X pycache_prefix=/tmp/gcmem-pycache -m py_compile "/Users/lujunxiang/Projects/GlobalCloud
+    V0.0.1/GlobalCloud Mem/src/gcmem.py" "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud
+    Mem/src/gcmem_api.py" "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud
+    Mem/src/gcmem_mcp.py" "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud
+    Mem/src/gcmem_context.py" "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud
+    Mem/src/gcmem_projection.py" "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud
+    Mem/src/gcmem_shadow.py" "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud
+    Mem/src/gcmem_query.py" "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud
+    Mem/src/gcmem_flags.py" "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud
+    Mem/src/kds_memory.py"
+  - git -C "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud Mem" diff --check
+    HEAD origin/main
+  - git -C "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud Mem" diff --quiet
+    HEAD origin/main
+  waivers:
+    screenshots: 本 Feature 交付物仅为 GCMEM 独立私有仓核验记录、GPCF 纳管证据与门禁命令输出，不交付产品页面、可视化或浏览器交互界面，故无需
+      screenshot/UI 证据。
+    api: 本 Feature 验收不调用 GCMEM 对外 REST/MCP 接口或任何外部 API：回归使用临时账本与本地进程，doctor 为本地 CLI
+      只读巡检，故 api 豁免；真实 API 调用须独立授权与证据。
+resolved_blockers:
+  decided_at: '2026-10-22'
+  decision: blocker 理由（GPCF 中央门禁 rework_required）已过期：同门禁 2026-10-22 已 pass；经老卢裁定解除阻塞，状态
+    blocked→evaluated
+  evidence: runtime/loop-document-gate 最近一次 pass + docs/reports/p05-blocked-classification-20261022.md
+  receipt: AUTH-PG-P05-UNBLOCK-20261022
+created_at: "2026-10-17T22:49:44+00:00"
+updated_at: "2026-10-22T14:52:26+00:00"

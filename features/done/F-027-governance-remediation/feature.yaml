@@ -1,7 +1,7 @@
 id: F-027
 name: governance-remediation
 project: gpcf
-status: active
+status: done
 goal: 修复 GPCF 项目范围、文档生成器、门禁和 Feature 证据闭环，并保留未获人工验收的状态边界
 owner: GPCF
 priority: P0
@@ -21,14 +21,15 @@ acceptance:
   - 门禁能够对故意引入的违规返回失败
   - Feature 专属验收缺失时不能关闭
 loop:
-  current_step: evaluate
-  iteration: 4
+  current_step: commit
+  iteration: 5
 evidence:
   tests: pass
   build: pass
   screenshots: waived
   api: waived
   summary: pass
+blockers:
 ui_product_first_control:
   version: v1.1
   applicability: indirect
@@ -54,10 +55,13 @@ verification:
   waivers:
     screenshots: 本轮只修治理脚本与文档控制，无产品界面交付。
     api: 本轮不调用真实外部或 KDS API，仅校验本地文件与命令。
-created_at: "2026-10-18T00:26:03+00:00"
-updated_at: "2026-10-18T02:11:29+00:00"
 resolved_blockers:
   decided_at: '2026-10-22'
-  decision: 'blocker①「方案候选未全部核验」按 P06 收尾处理（register/inheritance 路径与缺行已修，剩 WAME/PVA 跨仓声明）；blocker②「历史 done Feature 未满足现行关闭规则」由 P17 处理：16 项中 12 项 close_candidate=true（含 5 项补验）、4 项登记受控例外。老卢裁定解除阻塞，状态 blocked→evaluated'
-  evidence: 'docs/reports/p06-cross-repo-plan-inheritance-checklist-20261022.md；09-status/globalcloud-done-feature-audit-20261022.md §2.1；runtime/exceptions.yaml'
+  decision: blocker①「方案候选未全部核验」按 P06 收尾处理（register/inheritance 路径与缺行已修，剩 WAME/PVA
+    跨仓声明）；blocker②「历史 done Feature 未满足现行关闭规则」由 P17 处理：16 项中 12 项 close_candidate=true（含
+    5 项补验）、4 项登记受控例外。老卢裁定解除阻塞，状态 blocked→evaluated
+  evidence: docs/reports/p06-cross-repo-plan-inheritance-checklist-20261022.md；09-status/globalcloud-done-feature-audit-20261022.md
+    §2.1；runtime/exceptions.yaml
   receipt: AUTH-PG-P05-UNBLOCK-20261022
+created_at: "2026-10-18T00:26:03+00:00"
+updated_at: "2026-10-22T14:52:26+00:00"

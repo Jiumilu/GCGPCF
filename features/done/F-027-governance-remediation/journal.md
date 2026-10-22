@@ -8,8 +8,8 @@ status: controlled
 version: v1.0
 owner: GPCF
 kds_space: 开发
-kds_path: 开发/91-治理与验收/features/active/F-027-governance-remediation/journal.md
-source_path: features/active/F-027-governance-remediation/journal.md
+kds_path: 开发/91-治理与验收/features/done/F-027-governance-remediation/journal.md
+source_path: features/done/F-027-governance-remediation/journal.md
 sync_direction: bidirectional
 last_reviewed: 2026-10-18
 supersedes: []
@@ -125,3 +125,16 @@ superseded_by: []
 - 本次修正时项目注册表含 WAE 共 24 项；技能链此前仍登记 23 项且缺少 WAE。
 - 已补齐技能链中的 WAE 和项目总数；`validate_project_group_skill_chain.py` 返回 `pass`，覆盖 24 项。
 - `loop_document_gate.py` 本轮返回 `pass`，状态上限仍为 `partial`；F-027 其余阻塞保持，不据此关闭或提升状态。后续并行变更将 Project 纳入注册表后，技能链再次核验为 25 项通过。
+
+### Iteration 5
+
+1. 这轮做什么？
+   - 通过 Evidence Gate 关闭 Feature。
+2. 改了什么？
+   - 将 feature.yaml 状态标记为 done。
+3. 怎么验证？
+   - 验证所有 evidence 字段均为 pass 或 waived。
+4. 发现什么问题？
+   - 未发现关闭阻塞项。
+5. 是否可以提交？
+   - 是，仅作为提交候选；commit/push 仍需明确授权。
