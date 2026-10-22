@@ -47,3 +47,11 @@ superseded_by: []
 - 不声明 `accepted` / `integrated` / `production_ready` / `customer_accepted`；
 - 不声明真实业务已验证；
 - 不声明本项目已纳入项目群 28 项目口径的完成度分母（29 项目口径待确认）。
+
+## OpenSpec 入口
+
+- 策略：`conditional`
+- 中央入口：`openspec/changes/firequote-<change>/`
+- Feature：`python scripts/gpcf_new_feature.py --project firequote`
+- 默认 Loop：`Delivery`
+- Evidence/Harness：`required/required`

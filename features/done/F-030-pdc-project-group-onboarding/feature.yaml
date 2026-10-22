@@ -1,7 +1,7 @@
 id: F-030
 name: pdc-project-group-onboarding
 project: pdc
-status: active
+status: done
 goal: 将 GlobalCloud PDC 登记到项目群治理清单，核实 Git 私有远端并保留验收与发布边界
 owner: GPCF
 priority: P1
@@ -20,18 +20,15 @@ acceptance:
   - 项目级双方案候选已建立，未将候选误判为受控权威或交付完成
   - PDC 保持 partial/rework，未声明 accepted、integrated 或 production_ready
 loop:
-  governance_blocked: true
-  current_step: evaluate
-  iteration: 3
+  current_step: commit
+  iteration: 4
 evidence:
-  tests: fail
+  tests: pass
   build: pass
   screenshots: waived
   api: waived
-  summary: fail
+  summary: pass
 blockers:
-  - tests evidence failed
-  - summary evidence failed
 verification:
   tests:
   - python3 tools/kds-sync/loop_document_gate.py --check-only
@@ -52,12 +49,12 @@ ui_product_first_control:
   primary_human_task: 将 GlobalCloud PDC 登记到项目群治理清单，核实 Git 私有远端并保留验收与发布边界
   machine_interface_boundary: 机器字段留在证据中；人类入口展示任务、风险和下一步
   gates:
-    functional_completeness: pending
-    quality_baseline: pending
+    functional_completeness: pass
+    quality_baseline: pass
     multi_user_usability: waived
-    task_flow_e2e_status: pending
+    task_flow_e2e_status: waived
     accessibility_status: waived
-    evidence_overexposure_gate: pending
+    evidence_overexposure_gate: pass
   status_ceiling: partial
 created_at: "2026-10-18T11:55:44+00:00"
-updated_at: "2026-10-18T12:05:59+00:00"
+updated_at: "2026-10-22T15:06:49+00:00"

@@ -1,0 +1,125 @@
+# Tests Evidence
+
+## validate_gpcf_2_feature_workspace
+
+status: pass
+
+```text
+gpcf_2_feature_workspace=pass feature_delivery_center=true project_scope=27 new_feature_entry=enabled close_feature_exit=enabled status_promotion_allowed=false
+```
+
+## python3 tools/kds-sync/loop_document_gate.py --check-only
+
+status: fail
+
+```text
+{
+  "gate": "rework_required",
+  "status_ceiling": "partial",
+  "gate_reasons": [
+    "hard_failure:project_group_live_status_current",
+    "hard_failure:loop_engineering_master_plan",
+    "hard_failure:icp_project_registration",
+    "hard_failure:loop_ui_product_first_control",
+    "hard_failure:project_group_real_execution_metadata_coverage"
+  ],
+  "repo_md": 3573,
+  "kds_md": 3596,
+  "local_mirror_ledger_lines": 3470,
+  "local_mirror_unique_docs": 3470,
+  "api_sync_ledger_lines": 141,
+  "missing_metadata": 0,
+  "missing_readme_dirs": 0,
+  "localization_debt": false,
+  "fixed_doc_id_drift": false,
+  "review_overdue_90d": 2821,
+  "review_date_unverified": 2,
+  "status_counts": {
+    "controlled": 3155,
+    "archive": 97,
+    "okf_derived": 99,
+    "draft": 159
+  },
+  "project_counts": {
+    "GPC": 54,
+    "WAME": 194,
+    "GFIS": 116,
+    "GPCF": 1879,
+    "KDS": 1111,
+    "XiaoC": 68,
+    "Brain": 14,
+    "MMC": 13,
+    "PKC": 10,
+    "PVAOS": 13,
+    "Studio": 5,
+    "XGD": 10,
+    "XiaoG": 11,
+    "AAAS": 3,
+    "SOP": 3,
+    "WAS": 3,
+    "XWAIL": 3
+  }
+}
+```
+
+## python3 tools/kds-sync/validate_project_group_openspec_coverage.py
+
+status: pass
+
+```text
+{
+  "gate": "project_group_openspec_coverage",
+  "status": "pass",
+  "current_project_count": 27,
+  "matrix_project_count": 27,
+  "policy_counts": {
+    "conditional": 16,
+    "required": 11,
+    "waived": 0
+  },
+  "central_entry": "openspec/config.yaml",
+  "feature_required": true,
+  "evidence_required": true,
+  "harness_handoff_required": true,
+  "accepted_allowed": false,
+  "integrated_allowed": false,
+  "failures": []
+}
+```
+
+## python3 tools/kds-sync/validate_project_group_skill_chain.py
+
+status: pass
+
+```text
+project_group_skill_chain=pass default_entry=globalcloud-loop-orchestrator registered_skills=6 actual_skills=6 covered_projects=27 orchestrator_chain=validated
+```
+
+## python3 tools/kds-sync/validate_project_master_plan_register.py
+
+status: pass
+
+```text
+{
+  "gate": "project_master_plan_register",
+  "status": "pass",
+  "register": "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCoud GPCF/09-status/globalcloud-project-master-plan-control-register.md",
+  "failures": [],
+  "warnings": []
+}
+```
+
+## python3 tools/kds-sync/validate_project_implementation_register.py
+
+status: pass
+
+```text
+{
+  "gate": "project_implementation_register",
+  "status": "pass",
+  "failures": [],
+  "warnings": [
+    "current project scope has unresolved master-plan candidates"
+  ]
+}
+```
