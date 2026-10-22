@@ -42,10 +42,10 @@ SEMANTIC_KEYS = [
     "freshness_ok",
     "project_count",
     "sensitive_repos",
+    "repo_heads",   # 老卢 2026-10-22 21:59 裁定：恢复 P02 SHA 语义（其他仓 HEAD 变化即失配）
 ]
 # 非语义观测键：只做差异提示，不影响 pass/fail
 OBSERVED_KEYS = [
-    "repo_heads",
     "observed_dirty",
     "observed_ahead",
     "stable_dirty",

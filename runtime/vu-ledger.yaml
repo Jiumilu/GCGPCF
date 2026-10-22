@@ -5,6 +5,9 @@
 # 生成：PG-02（2026-10-22），复算脚本：tools/kds-sync/render_project_group_completion.py
 schema_version: '1.0'
 generated_at: '2026-10-22T05:33:03+08:00'
+# 2026-10-22 修正（P04/P05 账实对齐）：删除 KDS-VU-02「CWME 城市世界模型引擎（F-017）」——
+#   F-017 归属已改为 spaceai，该 VU 由 SpaceAI-VU-02 承载，KDS 侧不应重复计量。
+#   影响：VU 总数 98→97、KDS 由 4 条降为 3 条（仍在 3–5 法定区间）、C_dev 35.9308%→35.5756%。
 project_group_scope: 29
 model_ref:
   document: runtime/plan-20261022/GlobalCloud项目群完成度与综合能力提升_任务优先级清单_v1.0.md
@@ -553,19 +556,6 @@ vu_units:
   data_class: dry_run
   inferred: true
   notes: 本地 dev 通过，非真实 KDS API 同步
-- vu_id: KDS-VU-02
-  project: KDS
-  weight: 4
-  scene: CWME 城市世界模型引擎（F-017）
-  authority: KDS/城市世界模型组
-  object: 城市世界模型（CWME）产物
-  source_of_record: 证据位于 GlobalCloud SpaceAI 仓
-  acceptor: KDS owner
-  stage: S2
-  stage_evidence: F-017 tests/build pass；但登记在 kds 名下、证据在 SpaceAI 仓，账实不符；GPU/数据场地未排期
-  data_class: fixture
-  inferred: true
-  notes: 阶段计 S2，归属与证据位置待纠正
 - vu_id: KDS-VU-03
   project: KDS
   weight: 4
