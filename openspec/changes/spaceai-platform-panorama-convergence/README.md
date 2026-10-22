@@ -4,7 +4,7 @@ title: spaceai-platform-panorama-convergence
 project: KDS
 related_projects: [GPC, WAME, KDS, GPCF]
 domain: openspec
-status: draft
+status: implemented
 version: v1.0
 owner: KDS
 kds_space: 开发

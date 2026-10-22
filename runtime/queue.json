@@ -123,6 +123,17 @@
       "updated_at": "2026-10-18T02:11:29+00:00"
     },
     {
+      "id": "F-033",
+      "name": "r1-ecosystem-integration",
+      "project": "xiaoc",
+      "priority": "P0",
+      "status": "blocked",
+      "current_role": "Dispatcher",
+      "workspace": "features/active/F-033-r1-ecosystem-integration",
+      "created_at": "2026-10-21T05:00:33+00:00",
+      "updated_at": "2026-10-22T00:21:50+00:00"
+    },
+    {
       "id": "F-004",
       "name": "loop-governance-slimming",
       "project": "gpcf",

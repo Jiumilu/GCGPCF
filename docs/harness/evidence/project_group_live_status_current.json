@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-10-22T18:02:18.994807+08:00",
+  "generated_at": "2026-10-22T18:05:54.509485+08:00",
   "freshness_hours": 12,
   "freshness_ok": true,
   "project_count": 27,
@@ -111,7 +111,7 @@
   ],
   "pass_repo_count": 3,
   "bootstrap_window": false,
-  "previous_generated_at": "2026-10-22T18:02:13.437998+08:00",
+  "previous_generated_at": "2026-10-22T18:05:49.802499+08:00",
   "dirty_details": {
     "GlobalCloud AAAS": {
       "dirty_count": 16,
@@ -419,9 +419,9 @@
       "sensitive_paths": []
     },
     "GlobalCoud GPCF": {
-      "dirty_count": 976,
+      "dirty_count": 982,
       "ahead": 12,
-      "behind": 136,
+      "behind": 137,
       "paths": [
         "$CODEX_HOME/automations/globalcloud-17/README.md",
         ".harness/README.md",
@@ -1221,6 +1221,10 @@
         "features/active/F-031-xgd-dot-alignment/evidence/xgd-dot-alignment-p1p3.md",
         "features/active/F-031-xgd-dot-alignment/feature.yaml",
         "features/active/F-031-xgd-dot-alignment/journal.md",
+        "features/active/F-034-wae-p0-shell-and-role-convergence/artifacts/.gitkeep",
+        "features/active/F-034-wae-p0-shell-and-role-convergence/evidence/.gitkeep",
+        "features/active/F-034-wae-p0-shell-and-role-convergence/feature.yaml",
+        "features/active/F-034-wae-p0-shell-and-role-convergence/journal.md",
         "features/done/F-010-project-group-ui-engineering-coverage/artifacts/.gitkeep",
         "features/done/F-010-project-group-ui-engineering-coverage/artifacts/studio-runtime-reference/studio-settings-desktop-20260712.json",
         "features/done/F-010-project-group-ui-engineering-coverage/artifacts/studio-runtime-reference/studio-settings-desktop-20260712.png",
@@ -1373,6 +1377,7 @@
         "projects/slc/RISK.md",
         "projects/slc/ROADMAP.md",
         "projects/slc/STATUS.md",
+        "\"projects/wae/\\346\\200\\273\\344\\275\\223\\346\\226\\271\\346\\241\\210\\345\\200\\231\\351\\200\\211_v1.0_20261022.md\"",
         "runtime/audit/daily-status-20261022.jsonl",
         "runtime/audit/daily-status-20261022.md",
         "runtime/audit/decision-ledger-20261022.jsonl",
@@ -1386,6 +1391,7 @@
         "runtime/logs/F-030.jsonl",
         "runtime/logs/F-031.jsonl",
         "runtime/logs/F-033.jsonl",
+        "runtime/logs/F-034.jsonl",
         "runtime/vu-ledger.yaml",
         "templates/authorization-batch-request.md",
         "tests/test_gpcf_feature_move_metadata.py",
@@ -3159,12 +3165,14 @@
       "sensitive_paths": []
     },
     "GlobalCloud SpaceAI Platform": {
-      "dirty_count": 22,
-      "ahead": 17,
+      "dirty_count": 29,
+      "ahead": 18,
       "behind": 0,
       "paths": [
         "apps/desktop/src/main.ts",
         "apps/desktop/vite.config.ts",
+        "package.json",
+        "plugins/map-3d/src/views/PanoramaDeep.vue",
         ".harness/runs/20261022-panorama-ops/01-map-ops.md",
         ".harness/runs/20261022-panorama-ops/02-card-ops.md",
         ".harness/runs/20261022-panorama-ops/03-nav-ops.md",
@@ -3178,12 +3186,17 @@
         ".harness/runs/20261022-panorama-ops/11-b3-deletion-inventory.md",
         ".harness/runs/20261022-panorama-ops/12-b3-execution.md",
         ".harness/runs/20261022-panorama-ops/13-b4-execution.md",
+        ".harness/runs/20261022-panorama-ops/14-full-gate.md",
+        ".harness/runs/20261022-panorama-ops/15-b4b-execution.md",
         ".harness/runs/20261022-panorama-ops/b0b1/b0b1.patch",
         ".harness/runs/20261022-panorama-ops/b0b1/b0b1b2.patch",
         "\"DSH_\\345\\274\\200\\345\\217\\221\\351\\200\\237\\346\\237\\245.md\"",
         "apps/desktop/public/gc-feedback-entry.js",
         "apps/desktop/src/feedback/embedFeedback.ts",
         "\"docs/\\345\\205\\250\\346\\231\\257\\346\\200\\201\\345\\212\\277_\\346\\223\\215\\344\\275\\234\\346\\265\\201\\347\\250\\213\\350\\247\\204\\350\\214\\203\\345\\214\\226\\344\\270\\216\\345\\220\\210\\347\\220\\206\\345\\214\\226\\346\\226\\271\\346\\241\\210_20261022.md\"",
+        "plugins/map-3d/tests/l4-acceptance.test.ts",
+        "tools/l4/acceptance-lib.mjs",
+        "tools/l4/acceptance.mjs",
         "\"\\351\\227\\256\\351\\242\\230\\346\\212\\245\\345\\221\\212_\\346\\265\\213\\350\\257\\225\\344\\270\\264\\346\\227\\266\\345\\272\\223\\344\\270\\215\\346\\270\\205\\347\\220\\206_20261014.md\""
       ],
       "sensitive_paths": []
@@ -3256,15 +3269,11 @@
       "sensitive_paths": []
     },
     "GlobalCloud WAE": {
-      "dirty_count": 5,
+      "dirty_count": 1,
       "ahead": 0,
       "behind": 0,
       "paths": [
-        "docs/.DS_Store",
-        "packages/app-shell/src/GlobalCloudShell.tsx",
-        "packages/app-shell/src/GlobalCloudTopbar.tsx",
-        "packages/app-shell/src/GlobalSearchModal.tsx",
-        "packages/app-shell/src/MobileNav.tsx"
+        "docs/.DS_Store"
       ],
       "sensitive_paths": []
     },
