@@ -1,18 +1,18 @@
 {
   "feature": "F-034",
   "name": "wae-p0-shell-and-role-convergence（WAE 侧证据包）",
-  "generated_at": "2026-10-22T13:37:59.303Z",
+  "generated_at": "2026-10-22T14:53:24.621Z",
   "repo": "GlobalCloud WAE",
   "branch": "refactor/ui-spec-wae",
-  "commit": "71faf609068978f74ea13be8005f81cd3113aa64",
+  "commit": "6d110b7f5cc670173b798ba1093d83218cfad598",
   "discipline": {
     "status_ceiling": "F-034 至多 ready_for_review；本清单不提升任何状态",
     "replay": "见 docs/evidence/F-034/README.md（采集脚本 + pnpm evidence:collect）"
   },
   "archive_target": "GlobalCloud GPCF/features/active/F-034-wae-p0-shell-and-role-convergence/evidence/（跨仓写入，待老卢授权；本清单为待复制源）",
   "counts": {
-    "total": 12,
-    "pass": 11,
+    "total": 15,
+    "pass": 14,
     "expected_diff": 1,
     "skip": 0,
     "fail": 0,
@@ -29,7 +29,7 @@
       "result": "pass",
       "artifacts": [],
       "docs": [],
-      "tail": "      Tests  1353 passed (1353) ⏎    Start at  21:34:16 ⏎    Duration  125.39s (transform 6.62s, setup 567ms, import 24.18s, tests 28.14s, environment 29.38s)"
+      "tail": "      Tests  1368 passed (1368) ⏎    Start at  22:41:02 ⏎    Duration  61.19s (transform 2.89s, setup 174ms, import 11.15s, tests 20.65s, environment 13.60s)"
     },
     {
       "id": "02-typecheck",
@@ -53,7 +53,7 @@
       "result": "pass",
       "artifacts": [],
       "docs": [],
-      "tail": "      Tests  106 passed (106) ⏎    Start at  21:36:32 ⏎    Duration  39.82s (transform 2.39s, setup 2.43s, import 6.77s, tests 8.43s, environment 16.55s)"
+      "tail": "      Tests  110 passed (110) ⏎    Start at  22:42:09 ⏎    Duration  14.79s (transform 1.15s, setup 703ms, import 3.12s, tests 3.56s, environment 4.62s)"
     },
     {
       "id": "04-wame-build",
@@ -65,7 +65,7 @@
       "result": "pass",
       "artifacts": [],
       "docs": [],
-      "tail": "- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks ⏎ - Adjust chunk size limit for this warning via build.chunkSizeWarningLimit. ⏎ ✓ built in 4.11s"
+      "tail": "- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks ⏎ - Adjust chunk size limit for this warning via build.chunkSizeWarningLimit. ⏎ ✓ built in 3.27s"
     },
     {
       "id": "05-e2e-dual-role",
@@ -182,6 +182,80 @@
         "docs/adr/0001-framework-distribution.md"
       ],
       "tail": "module-kit          29.2         8        0 ⏎  ⏎ ✓ 构建完成：6 包 → packages/*/dist/（index.mjs + *.d.ts + css/）"
+    },
+    {
+      "id": "13-e2e-a11y",
+      "kind": "e2e",
+      "title": "G8 无障碍/移动端矩阵",
+      "command": "pnpm e2e:a11y",
+      "log": "docs/evidence/F-034/logs/13-e2e-a11y.log",
+      "exit": 0,
+      "result": "pass",
+      "artifacts": [
+        {
+          "path": "docs/evidence/F-034/screens/a11y-desktop-20261022.png",
+          "bytes": 213461,
+          "sha256": "f9566333600bc5a410212eadab0bf6b1849193e01b30fa9593429197b2a8787a"
+        },
+        {
+          "path": "docs/evidence/F-034/screens/a11y-mobile-20261022.png",
+          "bytes": 68247,
+          "sha256": "b25fba6a9c440ff9b636d844693bbd1471c364c3aec86c080b127049975bd4c3"
+        }
+      ],
+      "docs": [
+        "docs/plan/F-034_G8_无障碍矩阵_证据_20261022.md"
+      ],
+      "tail": "✓ C 移动端：无 pageerror — 0 条 ⏎  ⏎ 无障碍 / 移动端矩阵：**全部通过**（报告：.e2e-a11y-report.md）"
+    },
+    {
+      "id": "14-e2e-visual",
+      "kind": "e2e",
+      "title": "G1 逐页视觉/结构基线（4 页 × 2 档）",
+      "command": "pnpm e2e:visual",
+      "log": "docs/evidence/F-034/logs/14-e2e-visual.log",
+      "exit": 0,
+      "result": "pass",
+      "artifacts": [
+        {
+          "path": "docs/evidence/F-034/visual/fingerprints.json",
+          "bytes": 4209,
+          "sha256": "909dca817d9151c51dc912d571136cde5acec5fa78703bae16ae2aa14d3f2708"
+        },
+        {
+          "path": "docs/evidence/F-034/visual/home-desktop.png",
+          "bytes": 191286,
+          "sha256": "8b738be1975cf602557cc73701c2464c0da61e3a409177936680e4c0526aa830"
+        },
+        {
+          "path": "docs/evidence/F-034/visual/app-shell-desktop.png",
+          "bytes": 191271,
+          "sha256": "7573392ce86a6848a32ddff904b42566c4a449dd457d3c531f9c25db7f619028"
+        },
+        {
+          "path": "docs/evidence/F-034/visual/pkc-intake-desktop.png",
+          "bytes": 212135,
+          "sha256": "a1945e4bb6ac566074a47b370727d3afd361c19ddf045cc4fbe4275d01c45d2a"
+        }
+      ],
+      "docs": [
+        "docs/plan/F-034_UI_gate_六件套_20261022.md"
+      ],
+      "tail": "指纹基线已写：docs/evidence/F-034/visual/fingerprints.json ⏎  ⏎ G1 逐页视觉/结构基线：**全部通过**（截图目录 .e2e-report/visual/）"
+    },
+    {
+      "id": "15-e2e-machine-fields",
+      "kind": "e2e",
+      "title": "无机器字段暴露扫描（验收 4，F-010 口径）",
+      "command": "pnpm e2e:machine-fields",
+      "log": "docs/evidence/F-034/logs/15-e2e-machine-fields.log",
+      "exit": 0,
+      "result": "pass",
+      "artifacts": [],
+      "docs": [
+        "docs/plan/F-034_ready_for_review_差距评估_20261022.md"
+      ],
+      "tail": "✓ 全流程 pageerror=0 — 0 条 ⏎  ⏎ 无机器字段扫描：**通过**（报告：.e2e-machine-fields-report.md）"
     }
   ]
 }

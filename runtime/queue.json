@@ -61,22 +61,22 @@
       "name": "project-group-ui-engineering-coverage",
       "project": "gpcf",
       "priority": "P0",
-      "status": "evaluated",
-      "current_role": "Evaluator",
+      "status": "closed",
+      "current_role": "Recorder",
       "workspace": "features/done/F-010-project-group-ui-engineering-coverage",
       "created_at": "2026-07-12T09:47:45+00:00",
-      "updated_at": "2026-07-16T00:00:00+08:00"
+      "updated_at": "2026-10-22T09:16:24+00:00"
     },
     {
       "id": "F-011",
       "name": "studio-workbench-ui-runtime-closure",
       "project": "studio",
       "priority": "P0",
-      "status": "evaluated",
-      "current_role": "Evaluator",
+      "status": "closed",
+      "current_role": "Recorder",
       "workspace": "features/done/F-011-studio-workbench-ui-runtime-closure",
       "created_at": "2026-07-12T09:57:45+00:00",
-      "updated_at": "2026-07-16T00:00:00+08:00"
+      "updated_at": "2026-10-21T23:19:05+00:00"
     },
     {
       "id": "F-012",
@@ -237,11 +237,11 @@
       "name": "icp-industry-console",
       "project": "icp",
       "priority": "P1",
-      "status": "evaluated",
-      "current_role": "Evaluator",
+      "status": "closed",
+      "current_role": "Recorder",
       "workspace": "features/done/F-019-icp-industry-console",
       "created_at": "2026-10-14T02:05:18+00:00",
-      "updated_at": "2026-10-14T02:06:34+00:00"
+      "updated_at": "2026-10-21T23:19:05+00:00"
     },
     {
       "id": "F-020",

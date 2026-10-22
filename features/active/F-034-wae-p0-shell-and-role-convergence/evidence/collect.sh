@@ -20,4 +20,7 @@ run 09-check-app-assembly 300 pnpm check:app-assembly
 run 10-check-registry 300 pnpm check:registry
 run 11-check-tokens-parity 300 pnpm check:tokens-parity
 run 12-build-packages 600 pnpm build:packages
+run 13-e2e-a11y 600 pnpm e2e:a11y
+run 14-e2e-visual 600 pnpm e2e:visual
+run 15-e2e-machine-fields 600 pnpm e2e:machine-fields
 echo "DONE"

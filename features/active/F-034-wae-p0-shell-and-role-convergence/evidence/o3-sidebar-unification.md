@@ -4,19 +4,22 @@ title: O3 侧栏统一 —— 证据（F-034，2026-10-22）
 project: GPCF
 related_projects: [AAAS, Brain, WAS, XiaoC, WAME, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP]
 domain: governance
-status: controlled
+status: superseded
 version: v1.0
 owner: GPCF
 kds_space: 开发
-kds_path: 开发/91-治理与验收/features/done/F-034-wae-p0-shell-and-role-convergence/evidence/o3-sidebar-unification.md
+kds_path: 开发/91-治理与验收/features/active/F-034-wae-p0-shell-and-role-convergence/evidence/o3-sidebar-unification.md
 source_path: features/active/F-034-wae-p0-shell-and-role-convergence/evidence/o3-sidebar-unification.md
 sync_direction: bidirectional
-last_reviewed: unreviewed
+last_reviewed: 2026-10-22
 supersedes: []
-superseded_by: []
+superseded_by: ["GlobalCloud WAE 受控方案 v1.2 §5 O1（产品壳内可关可回退）"]
 ---
 
 # O3 侧栏统一 —— 证据（F-034，2026-10-22）
+
+> **本证据已作废（2026-10-22）**：其引用的 `packages/app-shell` 已随 A2「单一壳收敛」删除（提交 `2dc6392`），文中可回放命令实测 `exit 1`（No test files found）；O1 判据已按受控方案 **v1.2** 改述为「产品壳内壳能力可关可回退」，现行证据见 `evidence/summary.md` 与 WAE 仓 `docs/evidence/F-034/`（15 项）。保留本文件仅为历史留痕。
+
 
 > 本轮只读盘点：未修改 WAE / WAME 任何仓。跨仓归并不在本轮范围。
 

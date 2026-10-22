@@ -26,16 +26,17 @@ superseded_by: []
 
 | 路径 | 内容 |
 |---|---|
-| `collect.sh` | 采集脚本：真跑 12 条判据命令，写 `logs/<id>.log` + `logs/<id>.exit` |
+| `collect.sh` | 采集脚本：真跑 **15** 条判据命令，写 `logs/<id>.log` + `logs/<id>.exit` |
 | `logs/` | 每条命令的原始输出 + 退出码（**唯一结果来源**，不手写） |
-| `screens/` | 真机截图：双角色 admin/viewer、PKC dry-run、M2 能力阀 on/off、WAME 回归 |
+| `screens/` | 真机截图：双角色 admin/viewer、PKC dry-run、M2 能力阀 on/off、WAME 回归、**G8 无障碍两档** |
+| `visual/` | **G1 基线**：4 页 × 2 档截图 + `fingerprints.json`(结构指纹) |
 | `manifest.json` | 机器可读清单：命令、退出码、结果、日志路径、截图 sha256/字节数、commit |
 | `summary.md` | 人读版：M1 判据逐项对账 + 非声明 + 剩余项 |
 
 ## 二、怎么重放（两步）
 
 ```bash
-# ① 采集：真跑 12 条命令（约 3–5 分钟；e2e 会各自起独立 dev 端口）
+# ① 采集：真跑 15 条命令（约 6–8 分钟；e2e 会各自起独立 dev 端口）
 bash docs/evidence/F-034/collect.sh
 
 # ② 汇总：校验存在性 + 算 sha256 + 读退出码 → 重写 manifest.json
@@ -45,9 +46,9 @@ pnpm evidence:collect
 > 退出码语义：`0=pass`；`2=环境不可用(skip)`；`11(采集侧记为 1)=预期差异`（跨仓令牌比对）；其它=`fail`。
 > **没有日志的项一律标 `missing`，不猜结果。**
 
-## 三、本次清单（2026-10-22 夜）
+## 三、本次清单（2026-10-22 夜，刷新至 14 项）
 
-`total=12 ｜ pass=11 ｜ expected_diff=1 ｜ skip=0 ｜ fail=0 ｜ missing=0`
+`total=15 ｜ pass=14 ｜ expected_diff=1 ｜ skip=0 ｜ fail=0 ｜ missing=0`
 
 | id | 判据 | 命令 | 结果 |
 |---|---|---|---|
@@ -61,8 +62,11 @@ pnpm evidence:collect
 | 08 | 生成物新鲜度 | `pnpm gen:apps --check` | pass |
 | 09 | 装配×落位对账 A1–A4 | `pnpm check:app-assembly` | pass |
 | 10 | 注册表/加载器一致性 | `pnpm check:registry` | pass |
-| 11 | O2 跨仓令牌一致性（只读） | `pnpm check:tokens-parity` | **expected_diff**（PKC 快照过期；见比对报告） |
+| 11 | O2 跨仓令牌一致性（只读） | `pnpm check:tokens-parity` | **expected_diff**（PKC 快照过期；见比对报告与登记表） |
 | 12 | 框架包构建（A2 后 6 包） | `pnpm build:packages` | pass |
+| 13 | **G8 无障碍/移动端矩阵** | `pnpm e2e:a11y` | pass（13 项断言） |
+| 14 | **G1 逐页视觉/结构基线** | `pnpm e2e:visual` | pass（18 项断言；指纹 `visual/fingerprints.json`） |
+| 15 | **无机器字段暴露扫描** | `pnpm e2e:machine-fields` | pass（5 页 0 命中 + 金丝雀自检 6 类模式命中） |
 
 ## 四、纪律
 

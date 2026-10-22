@@ -1,0 +1,168 @@
+{
+  "generated_at": "2026-10-22T14:50:12.501Z",
+  "git_commit": "6149f54",
+  "note": "结构指纹基线（非像素基线）：mains/buttons/links/overflow/colors/landmarks 可跨次比对；截图存 .e2e-report/visual/",
+  "pass": true,
+  "fingerprints": [
+    {
+      "page": "home",
+      "viewport": "desktop",
+      "title": "WAE 世界资产浏览器（Rust + WASM）",
+      "mains": 1,
+      "buttons": 31,
+      "links": 0,
+      "overflow": false,
+      "colors": {
+        "bodyBg": "oklch(0.165 0.006 260)",
+        "primary": "oklch(0.62 0.185 275)",
+        "sidebar": "oklch(0.215 0.008 260)"
+      },
+      "landmarks": {
+        "accountMenu": 0,
+        "appRail": 1,
+        "appContent": 1,
+        "pkcPage": 0
+      }
+    },
+    {
+      "page": "app-shell",
+      "viewport": "desktop",
+      "title": "WAE 世界资产浏览器（Rust + WASM）",
+      "mains": 1,
+      "buttons": 31,
+      "links": 0,
+      "overflow": false,
+      "colors": {
+        "bodyBg": "oklch(0.165 0.006 260)",
+        "primary": "oklch(0.62 0.185 275)",
+        "sidebar": "oklch(0.215 0.008 260)"
+      },
+      "landmarks": {
+        "accountMenu": 0,
+        "appRail": 1,
+        "appContent": 1,
+        "pkcPage": 0
+      }
+    },
+    {
+      "page": "service-hub",
+      "viewport": "desktop",
+      "title": "WAE 世界资产浏览器（Rust + WASM）",
+      "mains": 1,
+      "buttons": 36,
+      "links": 0,
+      "overflow": false,
+      "colors": {
+        "bodyBg": "oklch(0.165 0.006 260)",
+        "primary": "oklch(0.62 0.185 275)",
+        "sidebar": "oklch(0.215 0.008 260)"
+      },
+      "landmarks": {
+        "accountMenu": 0,
+        "appRail": 1,
+        "appContent": 1,
+        "pkcPage": 0
+      }
+    },
+    {
+      "page": "pkc-intake",
+      "viewport": "desktop",
+      "title": "WAE 世界资产浏览器（Rust + WASM）",
+      "mains": 1,
+      "buttons": 22,
+      "links": 0,
+      "overflow": false,
+      "colors": {
+        "bodyBg": "oklch(0.165 0.006 260)",
+        "primary": "oklch(0.62 0.185 275)",
+        "sidebar": "oklch(0.215 0.008 260)"
+      },
+      "landmarks": {
+        "accountMenu": 0,
+        "appRail": 1,
+        "appContent": 1,
+        "pkcPage": 1
+      }
+    },
+    {
+      "page": "home",
+      "viewport": "narrow",
+      "title": "WAE 世界资产浏览器（Rust + WASM）",
+      "mains": 1,
+      "buttons": 31,
+      "links": 0,
+      "overflow": false,
+      "colors": {
+        "bodyBg": "oklch(0.165 0.006 260)",
+        "primary": "oklch(0.62 0.185 275)",
+        "sidebar": "oklch(0.215 0.008 260)"
+      },
+      "landmarks": {
+        "accountMenu": 0,
+        "appRail": 1,
+        "appContent": 1,
+        "pkcPage": 0
+      }
+    },
+    {
+      "page": "app-shell",
+      "viewport": "narrow",
+      "title": "WAE 世界资产浏览器（Rust + WASM）",
+      "mains": 1,
+      "buttons": 31,
+      "links": 0,
+      "overflow": false,
+      "colors": {
+        "bodyBg": "oklch(0.165 0.006 260)",
+        "primary": "oklch(0.62 0.185 275)",
+        "sidebar": "oklch(0.215 0.008 260)"
+      },
+      "landmarks": {
+        "accountMenu": 0,
+        "appRail": 1,
+        "appContent": 1,
+        "pkcPage": 0
+      }
+    },
+    {
+      "page": "service-hub",
+      "viewport": "narrow",
+      "title": "WAE 世界资产浏览器（Rust + WASM）",
+      "mains": 1,
+      "buttons": 36,
+      "links": 0,
+      "overflow": false,
+      "colors": {
+        "bodyBg": "oklch(0.165 0.006 260)",
+        "primary": "oklch(0.62 0.185 275)",
+        "sidebar": "oklch(0.215 0.008 260)"
+      },
+      "landmarks": {
+        "accountMenu": 0,
+        "appRail": 1,
+        "appContent": 1,
+        "pkcPage": 0
+      }
+    },
+    {
+      "page": "pkc-intake",
+      "viewport": "narrow",
+      "title": "WAE 世界资产浏览器（Rust + WASM）",
+      "mains": 1,
+      "buttons": 22,
+      "links": 0,
+      "overflow": false,
+      "colors": {
+        "bodyBg": "oklch(0.165 0.006 260)",
+        "primary": "oklch(0.62 0.185 275)",
+        "sidebar": "oklch(0.215 0.008 260)"
+      },
+      "landmarks": {
+        "accountMenu": 0,
+        "appRail": 1,
+        "appContent": 1,
+        "pkcPage": 1
+      }
+    }
+  ]
+}

@@ -40,6 +40,33 @@ STEP_TO_QUEUE_STATUS = {
 }
 
 
+def select_authoritative(feature_dirs: list[Path]) -> tuple[list[Path], list[dict]]:
+    """同一 feature id 在 active/done 重复时，done 优先，并返回重复告警。"""
+    by_id: dict[str, Path] = {}
+    duplicates: list[dict] = []
+    for feature_dir in feature_dirs:
+        feature_file = feature_dir / "feature.yaml"
+        if not feature_file.exists():
+            continue
+        try:
+            fid = str(yaml.safe_load(feature_file.read_text(encoding="utf-8")).get("id") or "")
+        except Exception:
+            continue
+        if not fid:
+            continue
+        if fid in by_id:
+            kept, other = by_id[fid], feature_dir
+            # done 优先
+            if "features/done/" in other.as_posix() and "features/active/" in kept.as_posix():
+                by_id[fid] = other
+                duplicates.append({"feature": fid, "kept": other.as_posix(), "ignored": kept.as_posix()})
+            else:
+                duplicates.append({"feature": fid, "kept": kept.as_posix(), "ignored": other.as_posix()})
+        else:
+            by_id[fid] = feature_dir
+    return list(by_id.values()), duplicates
+
+
 def load_feature(feature_dir: Path) -> dict:
     data = yaml.safe_load((feature_dir / "feature.yaml").read_text(encoding="utf-8"))
     if not isinstance(data, dict):
@@ -93,6 +120,11 @@ def expected_from_feature(feature: dict) -> dict:
 
 
 def iter_features() -> list[Path]:
+    """按 active/done 顺序返回 Feature 目录。
+
+    注意：并发迁移中可能出现同一 Feature 在 active 与 done 各留一份（复制式移动）。
+    调用方需用 select_authoritative() 去重，done 优先（已关闭状态更权威）。
+    """
     dirs: list[Path] = []
     for sub in ("active", "done"):
         base = ROOT / "features" / sub
@@ -119,10 +151,8 @@ def main() -> int:
     unknown: list[str] = []
     changed = 0
 
-    for feature_dir in iter_features():
-        if not (feature_dir / "feature.yaml").exists():
-            # 兼容正在迁移中的工作区目录（例如并发移动 done/active 的中间态）
-            continue
+    feature_dirs, duplicate_warnings = select_authoritative(iter_features())
+    for feature_dir in feature_dirs:
         feature = load_feature(feature_dir)
         fid = str(feature.get("id") or "").strip()
         if not fid or (only and fid not in only):
@@ -159,7 +189,8 @@ def main() -> int:
         "mode": "write" if args.write else "check",
         "source_of_truth": "features/*/*/feature.yaml",
         "derived": "runtime/queue.json",
-        "checked_features": len(iter_features()),
+        "checked_features": len(feature_dirs),
+        "duplicate_workspaces": duplicate_warnings,
         "mismatch_count": len(mismatches),
         "unknown_in_queue": unknown,
         "written": changed if args.write else 0,
