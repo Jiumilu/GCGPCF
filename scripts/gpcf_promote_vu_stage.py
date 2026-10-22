@@ -69,6 +69,8 @@ def main() -> int:
     parser.add_argument("--evidence", required=True)
     parser.add_argument("--auth-id", required=True)
     parser.add_argument("--dry-run", action="store_true")
+    parser.add_argument("--ledger", default=str(LEDGER), help="VU 台账路径（测试/彩排用）")
+    parser.add_argument("--receipts", default=str(RECEIPTS), help="回执台账路径（测试/彩排用）")
     args = parser.parse_args()
 
     ledger_path = Path(args.evidence)
@@ -77,10 +79,12 @@ def main() -> int:
         return 1
 
     problems = validate_evidence(ledger_path.read_text(encoding="utf-8"))
-    receipts_doc = yaml.safe_load(RECEIPTS.read_text(encoding="utf-8")) if RECEIPTS.exists() else {}
+    receipts_path = Path(args.receipts)
+    receipts_doc = yaml.safe_load(receipts_path.read_text(encoding="utf-8")) if receipts_path.exists() else {}
     problems += validate_receipt(receipts_doc, args.auth_id)
 
-    ledger_doc = yaml.safe_load(LEDGER.read_text(encoding="utf-8"))
+    ledger_file = Path(args.ledger)
+    ledger_doc = yaml.safe_load(ledger_file.read_text(encoding="utf-8"))
     units = ledger_doc.get("vu_units") or []
     target = next((u for u in units if u.get("vu_id") == args.vu_id), None)
     if target is None:
@@ -108,7 +112,7 @@ def main() -> int:
         target["promoted_at"] = "2026-10-22"
         target["promotion_basis"] = "P14 判据：真实单据/数据 + 回执 + 回滚记录，data_class=real"
         target["inferred"] = False
-        LEDGER.write_text(yaml.safe_dump(ledger_doc, allow_unicode=True, sort_keys=False), encoding="utf-8")
+        ledger_file.write_text(yaml.safe_dump(ledger_doc, allow_unicode=True, sort_keys=False), encoding="utf-8")
         result["written"] = True
     print(json.dumps(result, ensure_ascii=False))
     return 0

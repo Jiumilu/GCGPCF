@@ -286,3 +286,41 @@ def test_exceptions_expiry_checker_flags_expired():
 
     later = module.evaluate(doc, date(2027, 2, 1))
     assert {x["exemption_id"] for x in later["expired"]} == {"EXC-A", "EXC-B"}
+
+
+def test_promote_vu_stage_positive_path_writes_s4(tmp_path):
+    """正向路径：合规证据 + 有效回执 → 允许写入 S4，并把 inferred 置 false。"""
+    import subprocess
+    import sys
+    import yaml
+
+    ledger = tmp_path / "vu-ledger.yaml"
+    ledger.write_text(yaml.safe_dump({
+        "schema_version": "1.0",
+        "vu_units": [{
+            "vu_id": "TEST-VU-01", "project": "TEST", "weight": 4, "stage": "S2",
+            "inferred": True, "scene": "测试场景",
+        }],
+    }, allow_unicode=True), encoding="utf-8")
+    receipts = tmp_path / "receipts.yaml"
+    receipts.write_text(yaml.safe_dump({"receipts": [{
+        "auth_id": "AUTH-TEST", "granted_by": "老卢", "revoked_at": None,
+    }]}, allow_unicode=True), encoding="utf-8")
+    evidence = tmp_path / "receipt.json"
+    evidence.write_text(
+        '{"data_class": "real", "authorization_granted": true, "rollback": "已演练 2026-10-22"}',
+        encoding="utf-8",
+    )
+
+    result = subprocess.run(
+        [sys.executable, str(ROOT / "scripts/gpcf_promote_vu_stage.py"),
+         "--vu-id", "TEST-VU-01", "--evidence", str(evidence), "--auth-id", "AUTH-TEST",
+         "--ledger", str(ledger), "--receipts", str(receipts)],
+        text=True, capture_output=True, check=False,
+    )
+    assert result.returncode == 0, result.stdout + result.stderr
+    updated = yaml.safe_load(ledger.read_text(encoding="utf-8"))
+    vu = updated["vu_units"][0]
+    assert vu["stage"] == "S4"
+    assert vu["inferred"] is False
+    assert vu["promoted_at"]
