@@ -12,3 +12,13 @@ __pycache__/
 .pytest_cache/
 .DS_Store
 tmp/
+
+# === GlobalCloud 项目群统一 .gitignore 补齐（gc_standard R05 · 2026-10-22）===
+# 仅追加缺失模式，未改动上方原有内容
+node_modules/
+dist/
+build/
+.next/
+.venv/
+coverage/
+*.log
