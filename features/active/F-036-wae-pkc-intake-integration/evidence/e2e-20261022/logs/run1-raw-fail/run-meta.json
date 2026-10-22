@@ -1,0 +1,9 @@
+{
+  "port": 4301,
+  "port4300_status": "busy-other-session",
+  "isolated_idp_dir": "/tmp/f036-e2e-idp (deleted after run)",
+  "bootstrapped_user": "f036-e2e-admin (system-admin, mustChangePassword=true)",
+  "playwright_exit": 1,
+  "run_at": "2026-10-22T12:03:56Z",
+  "secrets_in_evidence": "none (password only in /tmp + process env; evidence scrubbed)"
+}

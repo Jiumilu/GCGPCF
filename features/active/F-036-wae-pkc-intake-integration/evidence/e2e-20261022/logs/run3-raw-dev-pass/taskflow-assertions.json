@@ -1,0 +1,70 @@
+{
+  "baseURL": "http://127.0.0.1:4301",
+  "account": "F-036 隔离临时 system-admin（口令 env 注入，未写入证据）",
+  "steps": [
+    {
+      "step": "login-page-loaded",
+      "at": "2026-10-22T12:09:51.504Z",
+      "url": "http://127.0.0.1:4301/"
+    },
+    {
+      "step": "forced-password-change-page",
+      "at": "2026-10-22T12:09:54.213Z"
+    },
+    {
+      "step": "password-changed",
+      "at": "2026-10-22T12:09:54.321Z",
+      "forced": true
+    },
+    {
+      "step": "workbench-home",
+      "at": "2026-10-22T12:09:55.204Z"
+    },
+    {
+      "step": "sidebar-pkc-visible",
+      "at": "2026-10-22T12:09:55.725Z",
+      "testId": "app-nav-pkc",
+      "url": "http://127.0.0.1:4301/global-cloud-workbench"
+    },
+    {
+      "step": "pkc-page-opened",
+      "at": "2026-10-22T12:09:55.832Z",
+      "url": "http://127.0.0.1:4301/global-cloud-workbench/pkc/pkc-intake"
+    },
+    {
+      "step": "candidate-and-nonclaims-visible",
+      "at": "2026-10-22T12:09:55.855Z",
+      "hasCandidateBadge": true,
+      "hasNonClaim": true
+    },
+    {
+      "step": "no-machine-fields",
+      "at": "2026-10-22T12:09:55.855Z",
+      "checked": [
+        "packageId",
+        "evidenceRefs",
+        "contentDigest",
+        "status_ceiling",
+        "cost_tier"
+      ],
+      "leaked": []
+    },
+    {
+      "step": "embedment-default-off",
+      "at": "2026-10-22T12:09:55.920Z",
+      "frameCount": 0,
+      "externalRequests": 0
+    },
+    {
+      "step": "return-workbench",
+      "at": "2026-10-22T12:09:55.983Z",
+      "url": "http://127.0.0.1:4301/global-cloud-workbench"
+    }
+  ],
+  "pageErrors": [],
+  "consoleErrors": [
+    "Failed to load resource: the server responded with a status of 401 (Unauthorized)"
+  ],
+  "externalRequests": [],
+  "result": "pass"
+}

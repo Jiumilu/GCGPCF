@@ -34,11 +34,9 @@ evidence:
   api: waived
   summary: pass
 blockers:
-  - "PKC 侧令牌与状态语义未接入（协议 P4/P5；ui_gate --gc-* 0 次、C5 未发现），需 PKC 属主执行"
-  - "PKC 真实运行时受控嵌入未启用/未联调（未配置 VITE_PKC_EMBED_URL）"
-  - "E2E 依赖 WAE 未提交工作区修复（useAppContent.ts 补 CONSOLE_COLORS import）；若被回退，task_flow_e2e_status 会回退 fail（run1 可复现），需属主提交该修复"
-  - "评审准备已补齐六门证据（建议 conditional）；shell 级无障碍风险 R-A11Y-1（<main> landmark）/R-A11Y-2（未命名关闭按钮）已于 2026-10-22 修复并复跑验证（mainCount=1 / shellUnnamedCount=0 / 无陷阱）"
-  - "正式接入评审未进行（不声明 PKC 已接入）"
+  - "PKC P4/P5 已最小接入：gc 令牌快照 + theme 映射（C6 0→117）、7 值状态字典 + StatusBadge（C5 存在）；残留=非真实包消费、部分页面未迁移、C1/C4/C10 既有项"
+  - "PKC 真实运行时受控嵌入未启用/未联调（未配置 VITE_PKC_EMBED_URL；就绪核查见 evidence/embed-readiness-20261022.md）"
+  - "正式接入评审未进行；review_status=conditional；不得声明 PKC 已接入"
 verification:
   tests:
     - "python3 -c \"import subprocess,sys; r=subprocess.run(['pnpm','check:apps'],cwd='../GlobalCloud WAE',capture_output=True,text=True); print(r.stdout[-2000:]); print(r.stderr[-1000:]); sys.exit(r.returncode)\""

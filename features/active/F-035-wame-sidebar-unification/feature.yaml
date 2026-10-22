@@ -32,7 +32,7 @@ evidence:
   api: waived
   summary: pass
 blockers:
-  - "@globalcloud/app-shell 未发布 npm（WAE 私有 workspace 包，private: true + exports 指向 TS 源码 + workspace:* 依赖），WAME 无法直接 import；需发布包或并入同一 workspace 的授权"
+  - "app-shell 目录已清空且移出发布集；老卢选择改为消费 app-registry 契约。app-registry 已新增 sidebarContract 纯类型并重打包（13.1KB）；wame/architecture-contracts worktree 端到端验证通过（同步 F-035 sidebar + tgz 依赖，pnpm install --ignore-scripts exit 0，tsc --noEmit exit 0）。剩余：WAME 属主在 architecture-contracts 分支正式应用依赖 + import；生产消费需私有 registry"
   - "FunctionPanel（1557 行）是主内容区功能面板而非导航侧栏；并入侧栏属信息架构产品重构，需产品设计 + 验收授权后另行立项"
   - "无视觉回归证据（screenshots=waived）；多用户/无障碍未实测（waived）、任务流 E2E 未跑（pending）"
 verification:

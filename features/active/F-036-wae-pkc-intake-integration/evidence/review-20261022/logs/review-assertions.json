@@ -1,0 +1,307 @@
+{
+  "baseURL": "http://127.0.0.1:4301",
+  "accounts": {
+    "admin": "F-036 隔离临时 system-admin（env 注入口令，未写入证据）",
+    "viewer": "F-036 评审 viewer（admin API 建号，env 注入口令）"
+  },
+  "steps": [
+    {
+      "step": "A-admin-sees-pkc-entry",
+      "at": "2026-10-22T12:29:54.599Z",
+      "url": "http://127.0.0.1:4301/global-cloud-workbench"
+    },
+    {
+      "step": "A-created-viewer-account",
+      "at": "2026-10-22T12:29:54.714Z",
+      "status": 200
+    },
+    {
+      "step": "B-viewer-login",
+      "at": "2026-10-22T12:29:58.214Z",
+      "role": "viewer",
+      "menus": [
+        "overview",
+        "feedback-center",
+        "scene",
+        "pqc-sop"
+      ]
+    },
+    {
+      "step": "B-viewer-no-pkc-entry",
+      "at": "2026-10-22T12:29:59.530Z",
+      "url": "http://127.0.0.1:4301/global-cloud-workbench",
+      "pkcNavCount": 0
+    },
+    {
+      "step": "a11y-static-audit",
+      "at": "2026-10-22T12:30:00.276Z",
+      "mainLandmark": true,
+      "mainCount": 1,
+      "lang": "zh-CN",
+      "headingCount": 4,
+      "pkcHeading": "PKC 知识工作台（候选接入）",
+      "ariaLabelCount": 9,
+      "pageInteractiveCount": 0,
+      "pageUnnamed": [],
+      "shellInteractiveCount": 20,
+      "shellUnnamedCount": 0,
+      "shellUnnamedList": []
+    },
+    {
+      "step": "a11y-nav-focus",
+      "at": "2026-10-22T12:30:00.487Z",
+      "tag": "button",
+      "testid": "app-nav-pkc",
+      "outline": "oklab(0.74 0.0139449 -0.159391 / 0.5) auto 1px",
+      "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, oklab(0.62 0.0161238 -0.184296 / 0.2) 0px 0px 0px 1px, rgba(0, 0, 0, 0) 0px 0px 0px 0px",
+      "keyboardReachedPkc": true
+    },
+    {
+      "step": "a11y-keyboard-traversal",
+      "at": "2026-10-22T12:30:00.922Z",
+      "steps": 16,
+      "distinct": 14,
+      "maxSame": 1,
+      "trap": false,
+      "sample": [
+        {
+          "step": 1,
+          "key": "BUTTON:app-nav-service:服务控制台",
+          "tag": "button",
+          "testid": "app-nav-service",
+          "focusVisible": true,
+          "outline": "oklab(0.74 0.0139449 -0.159391 / 0.5) auto 1px",
+          "boxShadow": "none"
+        },
+        {
+          "step": 2,
+          "key": "BUTTON::",
+          "tag": "button",
+          "testid": null,
+          "focusVisible": true,
+          "outline": "oklab(0.74 0.0139449 -0.159391 / 0.5) none 3px",
+          "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, oklab(0 0 0 / 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px"
+        },
+        {
+          "step": 3,
+          "key": "BUTTON::智能推荐5",
+          "tag": "button",
+          "testid": null,
+          "focusVisible": true,
+          "outline": "oklab(0.74 0.0139449 -0.159391 / 0.5) none 3px",
+          "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, oklab(0 0 0 / 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.1) 0px 4px 6px -4px"
+        },
+        {
+          "step": 4,
+          "key": "body",
+          "tag": "body",
+          "testid": null,
+          "focusVisible": false,
+          "outline": "",
+          "boxShadow": ""
+        },
+        {
+          "step": 5,
+          "key": "BUTTON:feedback-entry-launcher:反馈⌘⇧F",
+          "tag": "button",
+          "testid": "feedback-entry-launcher",
+          "focusVisible": true,
+          "outline": "rgb(122, 162, 255) solid 2px",
+          "boxShadow": "rgba(0, 0, 0, 0.55) 0px 10px 40px 0px"
+        },
+        {
+          "step": 6,
+          "key": "INPUT::",
+          "tag": "input",
+          "testid": null,
+          "focusVisible": true,
+          "outline": "oklab(0.74 0.0139449 -0.159391 / 0.5) none 3px",
+          "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, oklab(0 0 0 / 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px"
+        }
+      ]
+    }
+  ],
+  "audit": {
+    "mainLandmark": true,
+    "mainCount": 1,
+    "lang": "zh-CN",
+    "headingCount": 4,
+    "pkcHeading": "PKC 知识工作台（候选接入）",
+    "ariaLabelCount": 9,
+    "pageInteractiveCount": 0,
+    "pageUnnamed": [],
+    "shellInteractiveCount": 20,
+    "shellUnnamedCount": 0,
+    "shellUnnamedList": []
+  },
+  "mainCount": 1,
+  "a11yFindings": {
+    "mainLandmarkMissing": false,
+    "shellUnnamedCount": 0,
+    "note": "AppsShell 无 <main> landmark 属既有 shell 结构（风险 R-A11Y-1，需 WAE 属主修复）；页内可交互元素均可访问名"
+  },
+  "keyboard": {
+    "navFocus": {
+      "tag": "button",
+      "testid": "app-nav-pkc",
+      "outline": "oklab(0.74 0.0139449 -0.159391 / 0.5) auto 1px",
+      "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, oklab(0.62 0.0161238 -0.184296 / 0.2) 0px 0px 0px 1px, rgba(0, 0, 0, 0) 0px 0px 0px 0px",
+      "keyboardReachedPkc": true
+    },
+    "navFocusVisible": true,
+    "traversal": [
+      {
+        "step": 1,
+        "key": "BUTTON:app-nav-service:服务控制台",
+        "tag": "button",
+        "testid": "app-nav-service",
+        "focusVisible": true,
+        "outline": "oklab(0.74 0.0139449 -0.159391 / 0.5) auto 1px",
+        "boxShadow": "none"
+      },
+      {
+        "step": 2,
+        "key": "BUTTON::",
+        "tag": "button",
+        "testid": null,
+        "focusVisible": true,
+        "outline": "oklab(0.74 0.0139449 -0.159391 / 0.5) none 3px",
+        "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, oklab(0 0 0 / 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px"
+      },
+      {
+        "step": 3,
+        "key": "BUTTON::智能推荐5",
+        "tag": "button",
+        "testid": null,
+        "focusVisible": true,
+        "outline": "oklab(0.74 0.0139449 -0.159391 / 0.5) none 3px",
+        "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, oklab(0 0 0 / 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.1) 0px 4px 6px -4px"
+      },
+      {
+        "step": 4,
+        "key": "body",
+        "tag": "body",
+        "testid": null,
+        "focusVisible": false,
+        "outline": "",
+        "boxShadow": ""
+      },
+      {
+        "step": 5,
+        "key": "BUTTON:feedback-entry-launcher:反馈⌘⇧F",
+        "tag": "button",
+        "testid": "feedback-entry-launcher",
+        "focusVisible": true,
+        "outline": "rgb(122, 162, 255) solid 2px",
+        "boxShadow": "rgba(0, 0, 0, 0.55) 0px 10px 40px 0px"
+      },
+      {
+        "step": 6,
+        "key": "INPUT::",
+        "tag": "input",
+        "testid": null,
+        "focusVisible": true,
+        "outline": "oklab(0.74 0.0139449 -0.159391 / 0.5) none 3px",
+        "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, oklab(0 0 0 / 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px"
+      },
+      {
+        "step": 7,
+        "key": "BUTTON:open-demo-center:✨ 特性广场",
+        "tag": "button",
+        "testid": "open-demo-center",
+        "focusVisible": true,
+        "outline": "oklab(0.74 0.0139449 -0.159391 / 0.5) none 3px",
+        "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, oklab(0 0 0 / 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px"
+      },
+      {
+        "step": 8,
+        "key": "BUTTON:feedback-topbar-open:💬 反馈",
+        "tag": "button",
+        "testid": "feedback-topbar-open",
+        "focusVisible": true,
+        "outline": "oklab(0.74 0.0139449 -0.159391 / 0.5) none 3px",
+        "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, oklab(0 0 0 / 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px"
+      },
+      {
+        "step": 9,
+        "key": "BUTTON:feedback-topbar-center:反馈中心",
+        "tag": "button",
+        "testid": "feedback-topbar-center",
+        "focusVisible": true,
+        "outline": "oklab(0.74 0.0139449 -0.159391 / 0.5) none 3px",
+        "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, oklab(0 0 0 / 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px"
+      },
+      {
+        "step": 10,
+        "key": "BUTTON::主页",
+        "tag": "button",
+        "testid": null,
+        "focusVisible": true,
+        "outline": "oklab(0.74 0.0139449 -0.159391 / 0.5) auto 1px",
+        "boxShadow": "none"
+      },
+      {
+        "step": 11,
+        "key": "BUTTON::Global Cloud",
+        "tag": "button",
+        "testid": null,
+        "focusVisible": true,
+        "outline": "oklab(0.74 0.0139449 -0.159391 / 0.5) auto 1px",
+        "boxShadow": "none"
+      },
+      {
+        "step": 12,
+        "key": "BUTTON::",
+        "tag": "button",
+        "testid": null,
+        "focusVisible": true,
+        "outline": "oklab(0.74 0.0139449 -0.159391 / 0.5) none 1px",
+        "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, oklab(0.74 0.0139449 -0.159391 / 0.5) 0px 0px 0px 3px, rgba(0, 0, 0, 0) 0px 0px 0px 0px"
+      },
+      {
+        "step": 13,
+        "key": "BUTTON::",
+        "tag": "button",
+        "testid": null,
+        "focusVisible": true,
+        "outline": "oklab(0.74 0.0139449 -0.159391 / 0.5) none 3px",
+        "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, oklab(0 0 0 / 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px"
+      },
+      {
+        "step": 14,
+        "key": "BUTTON:app-nav-feedback:反馈中心",
+        "tag": "button",
+        "testid": "app-nav-feedback",
+        "focusVisible": true,
+        "outline": "oklab(0.74 0.0139449 -0.159391 / 0.5) auto 1px",
+        "boxShadow": "none"
+      },
+      {
+        "step": 15,
+        "key": "BUTTON:app-nav-spaceai:SpaceAI 场景",
+        "tag": "button",
+        "testid": "app-nav-spaceai",
+        "focusVisible": true,
+        "outline": "oklab(0.74 0.0139449 -0.159391 / 0.5) auto 1px",
+        "boxShadow": "none"
+      },
+      {
+        "step": 16,
+        "key": "BUTTON:app-nav-pqc:PQC 包装业务",
+        "tag": "button",
+        "testid": "app-nav-pqc",
+        "focusVisible": true,
+        "outline": "oklab(0.74 0.0139449 -0.159391 / 0.5) auto 1px",
+        "boxShadow": "none"
+      }
+    ],
+    "trap": false,
+    "distinct": 14
+  },
+  "result": "pass",
+  "pageErrors": [],
+  "consoleErrors": [
+    "A: Failed to load resource: the server responded with a status of 401 (Unauthorized)",
+    "B: Failed to load resource: the server responded with a status of 401 (Unauthorized)"
+  ]
+}

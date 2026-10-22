@@ -69,6 +69,23 @@ python scripts/gpcf_dispatch.py F-001
 
 <!-- 2026-10-22 文档可读性整改（R07/R08/R09）：以下为 append-only 补齐的缺失章节，上文未改动 -->
 
+## 测试与门禁
+
+本仓测试：
+
+```bash
+python3 -m pytest tests/ -q
+```
+
+关键门禁（CI 同款，均可本地复跑）：
+
+```bash
+python3 tools/kds-sync/loop_document_gate.py --check-only
+python3 tools/kds-sync/validate_contract_matrix.py
+python3 tools/kds-sync/validate_gpcf_2_feature_workspace.py
+python3 tools/kds-sync/validate_project_group_caliber_baseline.py
+```
+
 ## 目录结构
 
 ```text

@@ -1,0 +1,31 @@
+--- a/package.json
++++ b/package.json
+@@ -18,6 +18,7 @@
+     "check:e2e": "npm run check && npm run test:e2e"
+   },
+   "dependencies": {
++    "@globalcloud/app-registry": "file:../GlobalCloud WAE/dist-packages/globalcloud-app-registry-1.0.0.tgz",
+     "@emotion/react": "11.14.0",
+     "@emotion/styled": "11.14.1",
+     "@mui/icons-material": "7.3.5",
+--- a/src/app/layout/GlobalCloudSidebar.tsx
++++ b/src/app/layout/GlobalCloudSidebar.tsx
+@@ -20,15 +20,11 @@
+  * 行为保持：无 props 渲染时 = 原 4 项导航 + 原样式/激活判定（与改造前逐像素等价，测试守护）。
+  */
+ import { Boxes, Factory, LayoutDashboard, Network, type LucideIcon } from 'lucide-react';
++import type { SidebarItem as SharedSidebarItem } from '@globalcloud/app-registry';
+ 
+-/** 侧栏条目（与 `@globalcloud/app-shell` 的 `SidebarItem` 同形）。 */
+-export interface SidebarItem {
+-  id: string;
+-  label: string;
+-  path: string;
++/** 侧栏条目：共享契约 + 本仓图标实现。 */
++export interface SidebarItem extends SharedSidebarItem {
+   icon: LucideIcon;
+-  /** 需要的菜单/角色权限；未给 = 公开项。subject 缺省时受限项不显示。 */
+-  requires?: { roles?: string[] };
+ }
+ 
+ export interface GlobalCloudSidebarProps {
