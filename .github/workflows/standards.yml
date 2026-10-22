@@ -37,7 +37,7 @@ jobs:
           mkdir -p "$WS/$REPO_NAME/config"
           cp -R repo/.standards "$WS/_governance"
           # 只拷仓库内容（排除 .git 与本地镜像，避免嵌套仓库/体积），而不是把 repo 目录拷进目标下
-          ( cd repo && tar --exclude=.git --exclude=.kds -cf - . ) | ( cd "$WS/$REPO_NAME" && tar -xf - )
+          rsync -a --exclude=.git --exclude=.kds repo/ "$WS/$REPO_NAME/"
           cp repo/.standards/registry/project-group-projects.yaml "$WS/$REPO_NAME/config/"
           echo "workspace ready: $WS"
 
