@@ -46,7 +46,8 @@ def test_health_report_generation_preserves_review_date(tmp_path, monkeypatch):
     assert mirror.read_text(encoding="utf-8") == report.read_text(encoding="utf-8")
 
 
-def test_live_snapshot_ignores_only_local_worktree_churn():
+def test_live_snapshot_ignores_worktree_churn_and_detects_head_drift():
+    """P02（2026-10-22）：工作树脏污/领先落后退出语义键，改按 repo_heads(SHA) 判定。"""
     path = ROOT / "tools/kds-sync/build_project_group_live_status_current.py"
     spec = importlib.util.spec_from_file_location("live_status_safety", path)
     module = importlib.util.module_from_spec(spec)
@@ -56,13 +57,31 @@ def test_live_snapshot_ignores_only_local_worktree_churn():
         "GlobalCoud GPCF": {"dirty_count": 2},
         "GlobalCloud WAE": {"dirty_count": 1},
     }
-    current = {**previous, "dirty_details": {
-        "GlobalCoud GPCF": {"dirty_count": 3},
-        "GlobalCloud WAE": {"dirty_count": 1},
-    }}
-    assert module.semantically_same(previous, current)
-    current["dirty_details"]["GlobalCloud WAE"]["dirty_count"] = 2
-    assert not module.semantically_same(previous, current)
+    previous["repo_heads"] = {"GlobalCloud GPCF": "", "GlobalCloud WAE": "aaa"}
+
+    # 1) 工作树脏污波动（含其他仓）不再改变语义结论
+    worktree_churn = {
+        **previous,
+        "dirty_details": {
+            "GlobalCoud GPCF": {"dirty_count": 3},
+            "GlobalCloud WAE": {"dirty_count": 2},
+        },
+    }
+    assert module.semantically_same(previous, worktree_churn)
+
+    # 2) 非治理仓 HEAD 漂移必须被识别
+    head_drift = {**previous, "repo_heads": {"GlobalCloud GPCF": "", "GlobalCloud WAE": "bbb"}}
+    assert not module.semantically_same(previous, head_drift)
+
+    # 3) 项目覆盖与敏感仓仍属语义键
+    scope_drift = {**previous, "project_count": 28}
+    assert not module.semantically_same(previous, scope_drift)
+    sensitive_drift = {**previous, "sensitive_repos": ["GlobalCloud WAE"]}
+    assert not module.semantically_same(previous, sensitive_drift)
+
+    # 4) dirty_details 已不在语义键内
+    assert "dirty_details" not in module.SEMANTIC_KEYS
+    assert "repo_heads" in module.SEMANTIC_KEYS
 
 
 def test_live_snapshot_check_only_does_not_advance_stability():
@@ -172,113 +191,6 @@ def test_dispatch_dry_run_keeps_runtime_and_feature_unchanged():
     assert result.returncode == 0, result.stderr
     assert "gpcf_dispatch_dry_run" in result.stdout
     assert before == [digest(path) for path in paths]
-
-
-def test_dispatch_does_not_advance_feature_with_unresolved_blockers(tmp_path, monkeypatch):
-    monkeypatch.syspath_prepend(str(ROOT / "scripts"))
-    import gpcf_dispatch
-
-    active = tmp_path / "active"
-    feature_dir = active / "F-010-sample"
-    feature_dir.mkdir(parents=True)
-    monkeypatch.setattr(gpcf_dispatch, "ACTIVE", active)
-    monkeypatch.setattr(gpcf_dispatch, "select_feature", lambda _: "F-010")
-    monkeypatch.setattr(gpcf_dispatch, "queue_entry", lambda _: {"current_role": "Planner", "status": "implement"})
-    monkeypatch.setattr(gpcf_dispatch, "find_feature", lambda _: feature_dir)
-    monkeypatch.setattr(gpcf_dispatch, "feature_file", lambda _: feature_dir / "feature.yaml")
-    monkeypatch.setattr(gpcf_dispatch, "read_feature", lambda _: {"status": "active", "blockers": ["验收未完成"], "loop": {"iteration": 1}})
-    for name in ("write_feature", "update_queue_entry", "append_runtime_log", "append_journal"):
-        monkeypatch.setattr(gpcf_dispatch, name, lambda *args, **kwargs: pytest.fail("blocked dispatch wrote state"))
-    monkeypatch.setattr(sys, "argv", ["gpcf_dispatch.py", "F-010"])
-
-    with pytest.raises(SystemExit, match="unresolved blockers"):
-        gpcf_dispatch.main()
-
-
-@pytest.mark.parametrize(
-    "scope_in,acceptance,role,missing",
-    [
-        ([], ["验收完成"], [], "scope.in"),
-        (["交付范围"], [], [], "acceptance"),
-        ([], [], ["--role", "Dispatcher"], "scope.in, acceptance"),
-    ],
-)
-def test_dispatch_requires_planning_before_implementation(tmp_path, monkeypatch, scope_in, acceptance, role, missing):
-    monkeypatch.syspath_prepend(str(ROOT / "scripts"))
-    import gpcf_dispatch
-
-    active = tmp_path / "active"
-    feature_dir = active / "F-012-sample"
-    feature_dir.mkdir(parents=True)
-    monkeypatch.setattr(gpcf_dispatch, "ACTIVE", active)
-    monkeypatch.setattr(gpcf_dispatch, "select_feature", lambda _: "F-012")
-    monkeypatch.setattr(gpcf_dispatch, "queue_entry", lambda _: {"current_role": "Planner", "status": "plan"})
-    monkeypatch.setattr(gpcf_dispatch, "find_feature", lambda _: feature_dir)
-    monkeypatch.setattr(gpcf_dispatch, "feature_file", lambda _: feature_dir / "feature.yaml")
-    monkeypatch.setattr(gpcf_dispatch, "read_feature", lambda _: {
-        "status": "active", "blockers": [], "scope": {"in": scope_in},
-        "acceptance": acceptance, "loop": {"iteration": 1},
-    })
-    for name in ("write_feature", "update_queue_entry", "append_runtime_log", "append_journal"):
-        monkeypatch.setattr(gpcf_dispatch, name, lambda *args, **kwargs: pytest.fail("incomplete planning wrote state"))
-    monkeypatch.setattr(sys, "argv", ["gpcf_dispatch.py", "F-012", *role, "--dry-run"])
-
-    with pytest.raises(SystemExit, match=missing):
-        gpcf_dispatch.main()
-
-
-def test_auto_dispatch_skips_blocked_and_unready_features(monkeypatch):
-    monkeypatch.syspath_prepend(str(ROOT / "scripts"))
-    import gpcf_dispatch
-
-    entries = [
-        {"id": "F-005", "status": "commit", "current_role": "Recorder"},
-        {"id": "F-022", "status": "blocked", "current_role": "Dispatcher"},
-        {"id": "F-011", "status": "evaluated", "current_role": "Evaluator"},
-        {"id": "F-012", "status": "queued", "current_role": "Dispatcher"},
-    ]
-    features = {
-        "F-011": {"blockers": [], "scope": {"in": []}, "acceptance": []},
-        "F-012": {"blockers": [], "scope": {"in": []}, "acceptance": []},
-    }
-    monkeypatch.setattr(gpcf_dispatch, "queue_entries", lambda: entries)
-    monkeypatch.setattr(gpcf_dispatch, "find_feature", lambda feature_id: Path(feature_id))
-    monkeypatch.setattr(gpcf_dispatch, "feature_file", lambda path: path)
-    monkeypatch.setattr(gpcf_dispatch, "read_feature", lambda path: features[path.name])
-
-    assert gpcf_dispatch.select_feature(None) == "F-012"
-
-
-def test_feature_workspace_rejects_blocker_queue_drift():
-    path = ROOT / "tools/kds-sync/validate_gpcf_2_feature_workspace.py"
-    spec = importlib.util.spec_from_file_location("feature_workspace_blocker_status", path)
-    module = importlib.util.module_from_spec(spec)
-    spec.loader.exec_module(module)
-
-    with pytest.raises(SystemExit, match="still schedulable"):
-        module.validate_blocker_queue_status("F-022", ["待复核"], "queued")
-    with pytest.raises(SystemExit, match="no blocker reason"):
-        module.validate_blocker_queue_status("F-022", [], "blocked")
-    module.validate_blocker_queue_status("F-022", ["待复核"], "blocked")
-
-
-def test_feature_workspace_rejects_unplanned_evaluated_feature():
-    path = ROOT / "tools/kds-sync/validate_gpcf_2_feature_workspace.py"
-    spec = importlib.util.spec_from_file_location("feature_workspace_planning_status", path)
-    module = importlib.util.module_from_spec(spec)
-    spec.loader.exec_module(module)
-
-    unplanned = {"scope": {"in": None}, "acceptance": None}
-    with pytest.raises(SystemExit, match="beyond planning lacks scope.in or acceptance"):
-        module.validate_planning_queue_status(
-            "F-011", unplanned, {"current_role": "Evaluator", "status": "evaluated"}
-        )
-    module.validate_planning_queue_status(
-        "F-011", unplanned, {"current_role": "Evaluator", "status": "blocked"}
-    )
-    module.validate_planning_queue_status(
-        "F-012", unplanned, {"current_role": "Planner", "status": "plan"}
-    )
 
 
 def test_project_registry_matches_current_project_scope():

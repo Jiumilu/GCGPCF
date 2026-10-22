@@ -88,3 +88,4 @@ superseded_by: []
 - 修复了导出器附带的3个CDN脚本依赖；当前成品为完全本地资源。数据均为合成，未接真实城市、未训练神经网络、未部署。
 - authorization：用户已授权本地应用形成及CWME定位纠正；confirmation：业务验收与生产发布未确认。中央门禁仍失败，保持partial，不提升Feature或runtime状态。
 - 证据：`evidence/cwme-city-model-app-20261016.json` 及其本地 Harness 索引；最终审计与交接在本轮run留存。
+- P04（2026-10-22 19:42，台账口径修正）：删除 attribution_note 中已过期的「queue.json 中 F-017 的 project 仍为 kds」一句（queue 实测 project 已为 spaceai）；`loop.current_step` 由手工里程碑名 `b4_first_month_completed` 归一到词汇表值 `evaluate`（词汇表见 scripts/gpcf_feature_lib.py:29，里程碑事实已在 blockers 留痕）。queue 侧不改（`evaluated/Evaluator` 为 evaluate 的派生值）。未改 updated_at（避免被误读为进展）。
