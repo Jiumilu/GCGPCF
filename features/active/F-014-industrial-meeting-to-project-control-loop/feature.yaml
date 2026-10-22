@@ -28,6 +28,13 @@ evidence:
   screenshots: pass
   api: waived
   summary: pass
+verification:
+  tests:
+  - python3 tools/kds-sync/validate_gpcf_2_feature_workspace.py
+  build:
+  - python3 tools/kds-sync/check_python_bytecode.py
+  waivers:
+    api: 本 Feature 为会议到项目控制环路的本地闭环，真实接收台账与 KDS/MMC 运行配置边界未授权；api 证据不适用（范围理由：无对外接口）。
 blockers:
   - real-data pilot, authoritative receiving ledger owner, retention policy, and KDS/MMC runtime configuration boundary remain outside the local fixture authorization
 ui_product_first_control:

@@ -45,6 +45,13 @@ evidence:
   screenshots: pass
   api: waived
   summary: pass
+verification:
+  tests:
+  - python3 tools/kds-sync/validate_gpcf_2_feature_workspace.py
+  build:
+  - python3 tools/kds-sync/check_python_bytecode.py
+  waivers:
+    api: 本 Feature 为知识资产模型与 KDS 侧建模，无独立可调用 HTTP 接口面；api 证据不适用，改以 tests/build 与文档门禁为准（范围理由：无服务端入口）。
 blockers:
   - kds_p1_apply_blocked_by_dirty_worktree
   - gpcf_a10r27_current_truth_4file_delta_pending_independent_review_and_separate_commit_push_disposition

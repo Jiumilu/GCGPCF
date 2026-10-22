@@ -77,6 +77,11 @@ evidence:
   screenshots: pass
   api: pending
   summary: pending
+verification:
+  tests:
+  - python3 tools/kds-sync/validate_gpcf_2_feature_workspace.py
+  build:
+  - python3 tools/kds-sync/check_python_bytecode.py
 blockers:
   - admin现有快照24小时本机隔离试用已获准并验证；不等于生产身份联动、长期开放或生产旧构建核验，原身份库撤权联动与正式发布仍受限制
   - 候选关系消费契约和明确标识导航已本地验证；真实人员组织项目关系资料、逐条权威依据及第二真实版本仍缺，不以隔离测试冒充真实试点，不阻断独立开发
