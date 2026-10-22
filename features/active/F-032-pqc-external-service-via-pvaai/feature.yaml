@@ -10,6 +10,7 @@ scope:
   out:
 acceptance:
 loop:
+  dispatched: false
   current_step: plan
   iteration: 0
 evidence:

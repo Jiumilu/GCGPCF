@@ -21,6 +21,7 @@ acceptance:
   - 门禁能够对故意引入的违规返回失败
   - Feature 专属验收缺失时不能关闭
 loop:
+  governance_blocked: true
   current_step: evaluate
   iteration: 4
 evidence:
@@ -30,9 +31,9 @@ evidence:
   api: waived
   summary: pass
 blockers:
-  - 当前 24 项项目方案候选尚未全部核验
+  - 当前项目方案候选尚未全部核验
   - 9 个历史 done Feature 均未满足现行关闭证据规则，需逐项补验或保留历史例外记录
-  - 当前 18 个 active Feature 均未满足现行关闭条件，其中 10 个缺少 runtime 角色日志
+  - 当前未关闭 Feature 尚未满足现行关闭条件，部分缺少 runtime 角色日志
 ui_product_first_control:
   version: v1.1
   applicability: indirect

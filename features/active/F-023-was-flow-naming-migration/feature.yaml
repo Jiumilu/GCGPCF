@@ -21,6 +21,7 @@ acceptance:
   - WAS 仓旧名残留 100% 落兼容/定义/说明类（数据文件 0 残留）
   - 迁移表与执行落痕登记进 document-control-register 与 sync-register
 loop:
+  dispatched: false
   current_step: verification
   iteration: 1
 evidence:

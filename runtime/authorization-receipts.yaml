@@ -5,8 +5,8 @@
 schema_version: "1.0"
 generated_at: "2026-10-22T05:40:00+08:00"
 ledger_ref: "09-status/globalcloud-project-group-single-authorization-ledger-v1.0.md"
-authorization_granted_count: 19
-action_executed_count: 12
+authorization_granted_count: 20
+action_executed_count: 13
 pending_execution_count: 7
 receipts:
   - auth_id: AUTH-GPCF-SCHEME-REVIEW-20260626
@@ -236,5 +236,17 @@ receipts:
     actions_forbidden: ["push", "deploy", "delete", "status_promotion", "commit_other_sessions_work"]
     expires_at: "2027-01-20T23:59:59+08:00"
     evidence: "runtime/plan-20261022/GlobalCloud项目群后续工作计划_决策模型辅助版_2026-10-22.md §11"
+    review_conclusion: null
+    revoked_at: null
+  - auth_id: AUTH-PG-F022-ATTRIBUTION-20261022
+    granted_at: "2026-10-22T20:47:00+08:00"
+    granted_by: "老卢"
+    grant_basis: "2026-10-22 20:46 问答：老卢批准直接改 F-022 归属（gate 0.765 需确认）"
+    repo: "GlobalCloud GPCF"
+    scope: "f022_attribution_fix"
+    actions_allowed: ["read", "write_feature_yaml", "write_queue", "write_evidence", "commit"]
+    actions_forbidden: ["push", "deploy", "delete", "status_promotion", "real_data_intake"]
+    expires_at: "2027-01-20T23:59:59+08:00"
+    evidence: "docs/reports/status-source-of-truth-findings-20261022.md"
     review_conclusion: null
     revoked_at: null

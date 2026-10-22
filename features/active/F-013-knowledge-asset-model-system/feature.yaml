@@ -36,6 +36,7 @@ acceptance:
   - 现有 OKF KnowledgeObject 保持 canonical，不产生第二知识主账
   - 文档门禁结果和未闭合边界被显式记录
 loop:
+  governance_blocked: true
   current_step: evaluate
   iteration: 330
 evidence:

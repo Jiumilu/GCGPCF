@@ -20,6 +20,7 @@ acceptance:
   - GPCF 23 项目 OpenSpec 覆盖通过
   - 中央门禁失败保留 partial/rework 并列明原因
 loop:
+  governance_blocked: true
   current_step: evaluate
   iteration: 4
 evidence:
@@ -29,8 +30,7 @@ evidence:
   api: waived
   summary: pass
 blockers:
-  - GPCF 中央文档门禁 rework_required：既有 missing_metadata、UI control 与 document_pollution
-  - 技能链总检查：既有 wae 目录未列入 23 项目登记
+  - GPCF 中央文档门禁 rework_required（2026-10-22 复验）：missing_metadata=1、missing_readme_dirs=1、project_group_live_status_current 与 project_group_live_status_snapshot hard failure；既有项，非本 Feature 可清理范围
 ui_product_first_control:
   version: v1.1
   applicability: indirect
@@ -47,5 +47,16 @@ ui_product_first_control:
     accessibility_status: waived
     evidence_overexposure_gate: pass
   status_ceiling: partial
+verification:
+  tests:
+  - python3 -m pytest -q -p no:cacheprovider "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud Mem/tests"
+  - python3 "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud Mem/src/gcmem.py" doctor --json
+  build:
+  - python3 -X pycache_prefix=/tmp/gcmem-pycache -m py_compile "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud Mem/src/gcmem.py" "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud Mem/src/gcmem_api.py" "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud Mem/src/gcmem_mcp.py" "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud Mem/src/gcmem_context.py" "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud Mem/src/gcmem_projection.py" "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud Mem/src/gcmem_shadow.py" "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud Mem/src/gcmem_query.py" "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud Mem/src/gcmem_flags.py" "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud Mem/src/kds_memory.py"
+  - git -C "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud Mem" diff --check HEAD origin/main
+  - git -C "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud Mem" diff --quiet HEAD origin/main
+  waivers:
+    screenshots: 本 Feature 交付物仅为 GCMEM 独立私有仓核验记录、GPCF 纳管证据与门禁命令输出，不交付产品页面、可视化或浏览器交互界面，故无需 screenshot/UI 证据。
+    api: 本 Feature 验收不调用 GCMEM 对外 REST/MCP 接口或任何外部 API：回归使用临时账本与本地进程，doctor 为本地 CLI 只读巡检，故 api 豁免；真实 API 调用须独立授权与证据。
 created_at: "2026-10-17T22:49:44+00:00"
-updated_at: "2026-10-17T22:51:44+00:00"
+updated_at: "2026-10-21T23:15:00+00:00"

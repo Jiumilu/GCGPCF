@@ -19,6 +19,7 @@ acceptance:
   - Phase 0 remains fixture-only and demonstrates no automatic ledger write
   - Real-data pilot, authoritative receiving ledger, retention policy, permission/configuration change, deployment, and status promotion remain separately authorized
 loop:
+  governance_blocked: true
   current_step: evaluate
   iteration: 27
 evidence:

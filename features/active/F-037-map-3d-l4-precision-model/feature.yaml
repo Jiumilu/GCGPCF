@@ -30,6 +30,7 @@ acceptance:
   - 全仓 135 文件 / 1242 例通过（2026-10-22 19:04 复测）
   - 占位资产在 UI、文档、证据三处显式标注，任何证据不得表述为真实 L4 精度
 loop:
+  dispatched: false
   current_step: commit
   iteration: 1
 evidence:

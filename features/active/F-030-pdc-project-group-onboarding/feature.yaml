@@ -1,0 +1,63 @@
+id: F-030
+name: pdc-project-group-onboarding
+project: pdc
+status: active
+goal: 将 GlobalCloud PDC 登记到项目群治理清单，核实 Git 私有远端并保留验收与发布边界
+owner: GPCF
+priority: P1
+scope:
+  in:
+    - GPCF 项目清单、中央入口、方案台账、OpenSpec 与技能链登记
+    - GCPDC 本地 Git 与私有远端 main 一致性核验
+    - 建立项目级总体与实施方案候选并登记继承待核验状态
+    - 明确项目状态、授权、确认及回退边界
+  out:
+    - GCPDC 应用功能改造、WAE 装配、客户验收和生产发布
+    - 其他项目仓的历史状态重写
+acceptance:
+  - 项目群清单与中央入口覆盖当前登记范围，相关定向验证和文档门禁通过
+  - 本地与远端 main 提交一致，未重复创建或推送远端
+  - 项目级双方案候选已建立，未将候选误判为受控权威或交付完成
+  - PDC 保持 partial/rework，未声明 accepted、integrated 或 production_ready
+loop:
+  governance_blocked: true
+  current_step: evaluate
+  iteration: 3
+evidence:
+  tests: fail
+  build: pass
+  screenshots: waived
+  api: waived
+  summary: fail
+blockers:
+  - tests evidence failed
+  - summary evidence failed
+verification:
+  tests:
+  - python3 tools/kds-sync/loop_document_gate.py --check-only
+  - python3 tools/kds-sync/validate_project_group_openspec_coverage.py
+  - python3 tools/kds-sync/validate_project_group_skill_chain.py
+  - python3 tools/kds-sync/validate_project_master_plan_register.py
+  - python3 tools/kds-sync/validate_project_implementation_register.py
+  build:
+  - git diff --check
+  waivers:
+    screenshots: 本轮只登记项目群治理入口，没有新增产品界面或浏览器任务。
+    api: 本轮只读取 GitHub 仓库元数据，没有新增应用 API 或真实外部写入。
+ui_product_first_control:
+  version: v1.1
+  applicability: indirect
+  user_groups:
+  - Feature 负责人
+  primary_human_task: 将 GlobalCloud PDC 登记到项目群治理清单，核实 Git 私有远端并保留验收与发布边界
+  machine_interface_boundary: 机器字段留在证据中；人类入口展示任务、风险和下一步
+  gates:
+    functional_completeness: pending
+    quality_baseline: pending
+    multi_user_usability: waived
+    task_flow_e2e_status: pending
+    accessibility_status: waived
+    evidence_overexposure_gate: pending
+  status_ceiling: partial
+created_at: "2026-10-18T11:55:44+00:00"
+updated_at: "2026-10-18T12:05:59+00:00"

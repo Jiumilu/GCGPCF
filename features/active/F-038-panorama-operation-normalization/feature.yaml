@@ -30,6 +30,7 @@ acceptance:
   - 全仓 135 文件 / 1242 例通过；typecheck 0（2026-10-22 19:04 复测）
   - 状态保持 partial / 待验收，不提升 accepted / integrated / production_ready / customer_accepted
 loop:
+  dispatched: false
   current_step: commit
   iteration: 1
 evidence:
