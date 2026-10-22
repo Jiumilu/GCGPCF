@@ -18,7 +18,9 @@ PROJECT_ROOT = ROOT.parent
 TZ = timezone(timedelta(hours=8))
 
 REGISTRY = yaml.safe_load((ROOT / "config/project-group-projects.yaml").read_text(encoding="utf-8"))
+# 受控分母 = 在册 projects + 已退出但保留分母的 retired_projects（2026-10-22 Q6 裁定）
 EXPECTED_REPOS = [str(project["repo"]) for project in REGISTRY["projects"]]
+EXPECTED_REPOS += [str(project["repo"]) for project in (REGISTRY.get("retired_projects") or [])]
 if len(EXPECTED_REPOS) != int(REGISTRY["current_project_count"]):
     raise SystemExit("FAIL: project registry count does not match entries")
 
@@ -31,16 +33,23 @@ SELF_GENERATED_STATUS_PATHS = {
     "docs/harness/evidence/project_group_live_status_current.json",
     "docs/harness/evidence/project_group_live_status_current.md",
 }
+# 语义键（决定 snapshot_matches）：只放"结构性、可复现"的字段。
+# 2026-10-22 P02：工作树脏污/领先落后在多会话并发下每次运行都变，移出语义键，
+# 只按 repo_heads（各仓 commit SHA）+ 项目覆盖 + 敏感仓比对；脏污类保留为观测项。
 SEMANTIC_KEYS = [
     "freshness_ok",
     "project_count",
+    "sensitive_repos",
+    "repo_heads",
+]
+# 非语义观测键：只做差异提示，不影响 pass/fail
+OBSERVED_KEYS = [
     "observed_dirty",
     "observed_ahead",
     "stable_dirty",
     "stable_ahead",
     "volatile_dirty",
     "review_boundary",
-    "sensitive_repos",
     "pass_repo_count",
     "bootstrap_window",
     "dirty_details",
@@ -53,6 +62,19 @@ SENSITIVE_PATTERNS = [
     re.compile(r"credential", re.IGNORECASE),
     re.compile(r"token", re.IGNORECASE),
 ]
+
+
+def git_head(repo: Path) -> str:
+    """返回仓 HEAD commit SHA；不可用时返回空串（不进入语义比对）。"""
+    result = subprocess.run(
+        ["git", "-C", str(repo), "rev-parse", "HEAD"],
+        capture_output=True,
+        text=True,
+        check=False,
+    )
+    if result.returncode != 0:
+        return ""
+    return result.stdout.strip()
 
 
 def git_status(repo: Path) -> list[str]:
@@ -179,6 +201,7 @@ def main() -> int:
     observed_ahead: list[str] = []
     sensitive_repos: list[str] = []
     dirty_details: dict[str, dict] = {}
+    repo_heads: dict[str, str] = {}
 
     pass_repo_count = 0
 
@@ -196,6 +219,9 @@ def main() -> int:
             sensitive_repos.append(repo_name)
         if not status_lines and ahead == 0 and behind == 0:
             pass_repo_count += 1
+        # 本仓（治理仓）提交频繁且由治理动作自身产生，HEAD 不参与语义比对，
+        # 否则每次治理提交都会让快照失配（与 VOLATILE_DIRTY_ALLOWLIST 同意图）
+        repo_heads[repo_name] = "" if repo_name in VOLATILE_DIRTY_ALLOWLIST else git_head(repo)
         dirty_details[repo_name] = {
             "dirty_count": len(status_lines),
             "ahead": ahead,
@@ -226,6 +252,7 @@ def main() -> int:
         "pass_repo_count": pass_repo_count,
         "bootstrap_window": bootstrap,
         "previous_generated_at": previous.get("generated_at"),
+        "repo_heads": repo_heads,
         "dirty_details": dirty_details,
     }
     if previous and previous_snapshot_is_fresh(previous) and semantically_same(previous, snapshot):
@@ -235,7 +262,10 @@ def main() -> int:
 
     if args.check_only:
         same = bool(previous) and previous_snapshot_is_fresh(previous) and semantically_same(previous, snapshot)
-        print(json.dumps({"status": "pass" if same else "fail", "project_count": len(EXPECTED_REPOS), "snapshot_fresh": previous_snapshot_is_fresh(previous), "snapshot_matches": bool(previous) and semantically_same(previous, snapshot)}, ensure_ascii=False))
+        observed_changes = sorted(
+            key for key in OBSERVED_KEYS if previous.get(key) != snapshot.get(key)
+        )
+        print(json.dumps({"status": "pass" if same else "fail", "project_count": len(EXPECTED_REPOS), "snapshot_fresh": previous_snapshot_is_fresh(previous), "snapshot_matches": bool(previous) and semantically_same(previous, snapshot), "semantic_keys": SEMANTIC_KEYS, "observed_changed_keys": observed_changes}, ensure_ascii=False))
         return 0 if same else 1
 
     json_out.write_text(json.dumps(snapshot, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")

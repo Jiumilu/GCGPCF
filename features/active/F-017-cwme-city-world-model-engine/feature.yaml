@@ -1,6 +1,14 @@
 id: F-017
 name: cwme-city-world-model-engine
-project: kds
+project: spaceai
+attribution_note: >-
+  归属纠正（2026-10-22，PJ-12）：原值 project: kds 系 2026-10-11 立项时以 KDS 知识库承载 B4 本体产物所致，非执行项目归属。
+  实测依据：(1) ../GlobalCloud SpaceAI/README.md 明确「关联 Feature：GPCF F-017（CWME）」；
+  (2) F-017 工作内容与运行证据在 GlobalCloud SpaceAI 仓（apps/city-model/、prototypes/was-city-flood/、
+  .harness/runs/20261016-080823-spaceai-was-city-flood-replay/evidence-index.yaml）；
+  (3) projects/spaceai/STATUS.md 将 F-017 列为 SpaceAI 当前 Feature；
+  (4) 同仓关联 Feature F-024 亦为 project: spaceai。
+  KDS 侧仅以知识空间承载 CWME 本体产物（现路径 世界资产/引擎/ontology/；journal 记载为 世界资产/世界模型引擎/ontology/，路径漂移待 KDS 侧核），不作为执行项目归属依据。
 status: active
 goal: "城市级世界模型引擎（CWME，WCM 世界城市模型的引擎实现）：以 SpaceAI+Cesium 为孪生基座、Neo4j 为图存储、Protégé/pySHACL 为本体工具链，先交付内核化最小闭环与城市/园区样板；与 WAS 语义底座及绿链图谱（WAM）协同，遵守 GCWORLD 四世界隔离与 WAME 治理边界。"
 owner: GPCF
@@ -22,10 +30,10 @@ acceptance:
   - 问答防幻觉：20 条抽检无事实错误（M4）
   - 应用独立性：校园包零引擎改动（M6）
 loop:
-  current_step: b4_first_month_completed
+  current_step: evaluate
   iteration: 1
 created_at: "2026-10-11T05:41:00+00:00"   # F-017 创建（2026-10-11 13:41 CST）
-updated_at: "2026-10-11T07:19:54+00:00"
+updated_at: "2026-10-21T23:24:11+00:00"
 evidence:
   tests: pass
   build: pass
