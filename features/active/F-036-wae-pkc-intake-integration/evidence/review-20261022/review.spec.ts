@@ -98,7 +98,7 @@ async function login(page: Page, user: string, password: string, newPassword?: s
     await pw.nth(2).fill(newPassword)
     await page.getByRole('button', { name: /保存新口令并继续/ }).first().click()
   }
-  await expect(page.getByText(/欢迎回来/).first()).toBeVisible({ timeout: 30000 })
+  await expect(page.getByRole('button', { name: 'Global Cloud', exact: true }).first()).toBeVisible({ timeout: 30000 })
 }
 
 async function openAppShell(page: Page) {

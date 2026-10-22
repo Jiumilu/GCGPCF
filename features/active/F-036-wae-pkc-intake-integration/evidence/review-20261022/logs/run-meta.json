@@ -4,6 +4,6 @@
   "isolated_idp_dir": "/tmp/f036-review-idp (deleted after run)",
   "accounts": ["f036-review-admin (system-admin, bootstrap)", "f036-review-viewer (viewer, created via POST /api/idp/users)"],
   "playwright_exit": 0,
-  "run_at": "2026-10-22T12:30:01Z",
+  "run_at": "2026-10-22T22:23:38Z",
   "secrets_in_evidence": "none"
 }
