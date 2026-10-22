@@ -5,9 +5,9 @@
 schema_version: "1.0"
 generated_at: "2026-10-22T05:40:00+08:00"
 ledger_ref: "09-status/globalcloud-project-group-single-authorization-ledger-v1.0.md"
-authorization_granted_count: 22
+authorization_granted_count: 23
 action_executed_count: 16
-pending_execution_count: 7
+pending_execution_count: 8
 receipts:
   - auth_id: AUTH-GPCF-SCHEME-REVIEW-20260626
     granted_at: "2026-10-22T05:40:00+08:00"
@@ -273,4 +273,17 @@ receipts:
     expires_at: "2027-01-20T23:59:59+08:00"
     evidence: "docs/reports/p05-blocked-classification-20261022.md"
     review_conclusion: "F-026 blocked→evaluated（门禁理由过期）；F-015 随 Studio 退役结项（closed）；F-030 清单交 PDC 属主"
+    revoked_at: null
+  - auth_id: AUTH-PG-PQC-REAL-PILOT-20261022
+    granted_at: "2026-10-22T22:10:00+08:00"
+    granted_by: "老卢"
+    grant_basis: "2026-10-22 22:09 问答：批准 A1-A4（含 staging）；真实客户由 PQC 属主选单→老卢确认；A5 未批"
+    repo: "GlobalCloud PQC"
+    scope: "pqc_first_real_customer_pilot"
+    actions_allowed: ["read", "intake_real_customer_order_deidentified", "run_quote_chain", "write_evidence", "write_staging_deploy"]
+    actions_forbidden: ["production_deploy", "external_quotation_commitment", "price_concession",
+                        "customer_data_export", "commit_real_customer_docs_to_repo", "status_promotion", "push"]
+    expires_at: "2027-01-20T23:59:59+08:00"
+    evidence: "docs/reports/p12-pqc-real-pilot-authorization-request-20261022.md"
+    review_conclusion: "A1-A4 已批；客户一单待 PQC 属主选单后老卢确认；不得用合成数据推 C_real"
     revoked_at: null
