@@ -23,4 +23,6 @@ run 12-build-packages 600 pnpm build:packages
 run 13-e2e-a11y 600 pnpm e2e:a11y
 run 14-e2e-visual 600 pnpm e2e:visual
 run 15-e2e-machine-fields 600 pnpm e2e:machine-fields
+run 16-e2e-pkc-states 600 pnpm e2e:pkc-states
+run 17-check-tokens-registry 300 pnpm check:tokens-parity:registry
 echo "DONE"

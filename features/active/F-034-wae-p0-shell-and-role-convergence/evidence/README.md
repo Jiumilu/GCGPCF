@@ -26,7 +26,7 @@ superseded_by: []
 
 | 路径 | 内容 |
 |---|---|
-| `collect.sh` | 采集脚本：真跑 **15** 条判据命令，写 `logs/<id>.log` + `logs/<id>.exit` |
+| `collect.sh` | 采集脚本：真跑 **17** 条判据命令，写 `logs/<id>.log` + `logs/<id>.exit` |
 | `logs/` | 每条命令的原始输出 + 退出码（**唯一结果来源**，不手写） |
 | `screens/` | 真机截图：双角色 admin/viewer、PKC dry-run、M2 能力阀 on/off、WAME 回归、**G8 无障碍两档** |
 | `visual/` | **G1 基线**：4 页 × 2 档截图 + `fingerprints.json`(结构指纹) |
@@ -48,7 +48,7 @@ pnpm evidence:collect
 
 ## 三、本次清单（2026-10-22 夜，刷新至 14 项）
 
-`total=15 ｜ pass=14 ｜ expected_diff=1 ｜ skip=0 ｜ fail=0 ｜ missing=0`
+`total=17 ｜ pass=15 ｜ expected_diff=2 ｜ skip=0 ｜ fail=0 ｜ missing=0`
 
 | id | 判据 | 命令 | 结果 |
 |---|---|---|---|
@@ -67,6 +67,8 @@ pnpm evidence:collect
 | 13 | **G8 无障碍/移动端矩阵** | `pnpm e2e:a11y` | pass（13 项断言） |
 | 14 | **G1 逐页视觉/结构基线** | `pnpm e2e:visual` | pass（18 项断言；指纹 `visual/fingerprints.json`） |
 | 15 | **无机器字段暴露扫描** | `pnpm e2e:machine-fields` | pass（5 页 0 命中 + 金丝雀自检 6 类模式命中） |
+| 16 | **PKC 受控嵌入状态机** | `pnpm e2e:pkc-states` | pass（12 项：合法启用 / 凭据拒绝 0 请求 / 令牌参数拒绝 0 请求） |
+| 17 | **O2 偏离登记表判定** | `pnpm check:tokens-parity:registry` | **expected_diff**（PKC 仍 pending_owner；Brain 与登记一致） |
 
 ## 四、纪律
 

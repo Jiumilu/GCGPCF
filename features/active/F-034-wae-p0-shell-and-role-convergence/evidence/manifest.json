@@ -1,19 +1,19 @@
 {
   "feature": "F-034",
   "name": "wae-p0-shell-and-role-convergence（WAE 侧证据包）",
-  "generated_at": "2026-10-22T14:53:24.621Z",
+  "generated_at": "2026-10-22T22:16:54.596Z",
   "repo": "GlobalCloud WAE",
   "branch": "refactor/ui-spec-wae",
-  "commit": "6d110b7f5cc670173b798ba1093d83218cfad598",
+  "commit": "f3941cb13050ed4b64e24525ad9b862e8408cca5",
   "discipline": {
     "status_ceiling": "F-034 至多 ready_for_review；本清单不提升任何状态",
     "replay": "见 docs/evidence/F-034/README.md（采集脚本 + pnpm evidence:collect）"
   },
   "archive_target": "GlobalCloud GPCF/features/active/F-034-wae-p0-shell-and-role-convergence/evidence/（跨仓写入，待老卢授权；本清单为待复制源）",
   "counts": {
-    "total": 15,
-    "pass": 14,
-    "expected_diff": 1,
+    "total": 17,
+    "pass": 15,
+    "expected_diff": 2,
     "skip": 0,
     "fail": 0,
     "missing": 0
@@ -53,7 +53,7 @@
       "result": "pass",
       "artifacts": [],
       "docs": [],
-      "tail": "      Tests  110 passed (110) ⏎    Start at  22:42:09 ⏎    Duration  14.79s (transform 1.15s, setup 703ms, import 3.12s, tests 3.56s, environment 4.62s)"
+      "tail": "      Tests  127 passed (127) ⏎    Start at  23:15:51 ⏎    Duration  30.26s (transform 2.46s, setup 1.52s, import 6.30s, tests 8.97s, environment 8.68s)"
     },
     {
       "id": "04-wame-build",
@@ -65,7 +65,7 @@
       "result": "pass",
       "artifacts": [],
       "docs": [],
-      "tail": "- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks ⏎ - Adjust chunk size limit for this warning via build.chunkSizeWarningLimit. ⏎ ✓ built in 3.27s"
+      "tail": "- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks ⏎ - Adjust chunk size limit for this warning via build.chunkSizeWarningLimit. ⏎ ✓ built in 5.45s"
     },
     {
       "id": "05-e2e-dual-role",
@@ -256,6 +256,43 @@
         "docs/plan/F-034_ready_for_review_差距评估_20261022.md"
       ],
       "tail": "✓ 全流程 pageerror=0 — 0 条 ⏎  ⏎ 无机器字段扫描：**通过**（报告：.e2e-machine-fields-report.md）"
+    },
+    {
+      "id": "16-e2e-pkc-states",
+      "kind": "e2e",
+      "title": "PKC 候选页受控嵌入状态机（合法启用/凭据拒绝/令牌拒绝）",
+      "command": "pnpm e2e:pkc-states",
+      "log": "docs/evidence/F-034/logs/16-e2e-pkc-states.log",
+      "exit": 0,
+      "result": "pass",
+      "artifacts": [],
+      "docs": [
+        "docs/access/PKC接入协议_v0.1.md",
+        "docs/access/PKC接入检查表_v0.1.md"
+      ],
+      "tail": "✓ S3 pageerror=0 — 0 条 ⏎  ⏎ PKC 受控嵌入状态机：**全部通过**（报告：.e2e-pkc-states-report.md）"
+    },
+    {
+      "id": "17-check-tokens-registry",
+      "kind": "registry",
+      "title": "O2 偏离登记表判定（实测 vs 登记）",
+      "command": "pnpm check:tokens-parity:registry",
+      "log": "docs/evidence/F-034/logs/17-check-tokens-registry.log",
+      "exit": 1,
+      "result": "expected_diff",
+      "artifacts": [
+        {
+          "path": "docs/evidence/F-034/../token-deviation-registry.json",
+          "bytes": 2835,
+          "sha256": "fcd57df633b8bdc63a2c141d2bc3a5ede8675a5d253a112bcce0bb241dac4c93"
+        }
+      ],
+      "docs": [
+        "docs/plan/O2跨仓令牌一致性比对_20261022.md",
+        "docs/access/跨仓令牌整改提醒_20261022.md"
+      ],
+      "note": "登记表里 PKC 仍 pending_owner（快照过期）⇒ 当前退出 1，按 expected_diff 记录；两仓回执后转 pass",
+      "tail": " ⏎ 结论：**登记表与实测不一致**（未整改或偏离漂移；见 docs/evidence/token-deviation-registry.json） ⏎ [ELIFECYCLE] Command failed with exit code 1."
     }
   ]
 }

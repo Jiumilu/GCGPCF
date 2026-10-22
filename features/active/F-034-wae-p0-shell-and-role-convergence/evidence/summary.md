@@ -18,7 +18,7 @@ superseded_by: []
 
 # F-034 证据摘要（WAE 侧，2026-10-22）
 
-> 与 `manifest.json` 一一对应（**15 项：14 pass、1 expected_diff**）。数字全部来自 `logs/` 原始输出。
+> 与 `manifest.json` 一一对应（**17 项：15 pass、2 expected_diff**）。数字全部来自 `logs/` 原始输出。
 > **不提升状态**：F-034 仍 `active/plan`；本摘要不是完成报告。
 
 ## 一、总账
@@ -37,6 +37,8 @@ superseded_by: []
 | **G8 无障碍/移动端矩阵** | **13 项断言通过** | `logs/13-e2e-a11y.log` |
 | **G1 逐页视觉/结构基线** | **18 项断言通过** | `logs/14-e2e-visual.log` |
 | **无机器字段暴露扫描** | **5 页 0 命中 + 金丝雀自检** | `logs/15-e2e-machine-fields.log` |
+| **PKC 受控嵌入状态机** | **12 项断言通过** | `logs/16-e2e-pkc-states.log` |
+| **O2 偏离登记表判定** | **expected_diff**（PKC 快照过期、Brain 待确认） | `logs/17-check-tokens-registry.log` |
 
 ## 二、M1 判据逐项对账（受控方案 v1.1）
 
@@ -91,9 +93,3 @@ superseded_by: []
 
 1. 未做：PKC/Brain 仓任何改动；GPCF 归档；M3 Studio 例外与 Brain/PVAOS 批次；视觉回归（他仓环境）；
 2. 非声明：不声明 PKC 已接入/已集成/生产就绪/客户验收；不声明 O2 完成；F-034 不提升状态。
-
-## 2026-10-23 闸门证据更新
-
-- `task_flow_e2e_status` → pass：`logs/05-e2e-dual-role.log`（admin 7 项可见、viewer 0/0、users 403、pageerror 0）。
-- `evidence_overexposure_gate` → pass：`logs/15-e2e-machine-fields.log`（5 页 0 命中 + 金丝雀自检）。
-- 注意：F-034 仍有 O1/O3/M3 与运行时阻塞，**不因闸门更新而关闭**。
