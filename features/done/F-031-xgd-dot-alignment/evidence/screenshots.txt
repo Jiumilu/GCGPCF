@@ -1,0 +1,46 @@
+# UI / Screenshot Evidence
+
+采集时点：2026-10-22T07:36+08:00；采集环境 `GlobalCloud XGD`（真实后端 `http://127.0.0.1:3721`，PID 97425）。
+截图写入 GPCF F-031 evidence 目录；XGD 仓在该时点 `git status --porcelain` 为空。
+浏览器：Chromium 156.0.8078.4（Playwright 1.64.1，仓内 `node_modules`），viewport 1440×900，无 pageerror。
+
+## 截图资产
+
+| 文件 | 说明 |
+|---|---|
+| `screenshots/xgd-brain-ui-20261022.png` | Brain UI 主界面（`/brain-ui`，HTTP 200）：3D 记忆图 388/728 节点、91 连线、状态「已连接」，左侧「用户消息处理器」，底部「已取消麦克风权限确认」 |
+| `screenshots/xgd-dot-console-20261022.png` | dot 常驻智能体控制台（真实 `GET /dot/*` 数据）：档案「小即 @xiaog」、连接器 7 项（Brain UI 已连接）、`1 条活跃职责·0 个启用计划·456 条活动·68 个工具`、活动列表、底部 `P0 · 档案 / 职责 / 活动 / 分层停止` |
+| `screenshots/xgd-dot-responsibilities-20261022.png` | dot 职责 tab（真实数据 5 条职责） |
+
+三张均为 PNG 1440×900、RGB 非交错，字节数分别约 1.13 MB / 152 KB / 226 KB。
+
+## 采集方式（真实后端，未改数据）
+
+1. Playwright 打开 `http://127.0.0.1:3721/brain-ui`，等待 `#dot-open-btn` 可见后截图（主界面）。
+2. 点击 `#dot-open-btn` 打开 dot 浮层，等待 `#dot-overlay` 可见后截图（活动 tab）。
+3. 切换 `#dot-tab-responsibilities` 后截图（职责 tab）。
+4. 页面内操作只触发 `GET /dot/*` 只读请求；未点击暂停/审批/新建等写操作按钮。
+5. 首次加载弹出的系统「权限确认」浮层（麦克风）在采集时点「取消」拒绝：截图底部可见
+   「已取消麦克风权限确认」——**未授予任何浏览器权限**。
+
+## 关键断言（页面内 evaluate 实测）
+
+```json
+{
+  "title": "小即 · Cognitive Surface",
+  "dotOverlayVisible": true,
+  "dotHandle": "@xiaog",
+  "dotMeta": "1 条活跃职责·0 个启用计划·456 条活动·68 个工具",
+  "activityItems": 120,
+  "responsibilitiesItems": 5,
+  "graphCanvas": true,
+  "pageUrl": "http://127.0.0.1:3721/brain-ui",
+  "pageErrors": []
+}
+```
+
+## 边界
+
+- 截图来自本机真实运行实例，内容含本地运行态数据（活动/记忆计数），仅用于本私有仓证据，不外发。
+- 截图证明 UI 可渲染且 dot 视图可读取真实数据；**不**证明业务验收、真实客户环境可用或发布就绪。
+- 与 `npm run smoke:brain-ui`（mock 服务，见 build.txt）互为补充：smoke 证流程，截图证真实数据渲染。

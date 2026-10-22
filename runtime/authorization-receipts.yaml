@@ -5,8 +5,8 @@
 schema_version: "1.0"
 generated_at: "2026-10-22T05:40:00+08:00"
 ledger_ref: "09-status/globalcloud-project-group-single-authorization-ledger-v1.0.md"
-authorization_granted_count: 20
-action_executed_count: 13
+authorization_granted_count: 21
+action_executed_count: 14
 pending_execution_count: 7
 receipts:
   - auth_id: AUTH-GPCF-SCHEME-REVIEW-20260626
@@ -249,4 +249,16 @@ receipts:
     expires_at: "2027-01-20T23:59:59+08:00"
     evidence: "docs/reports/status-source-of-truth-findings-20261022.md"
     review_conclusion: null
+    revoked_at: null
+  - auth_id: AUTH-PG-F031-ACCEPTANCE-20261022
+    granted_at: "2026-10-22T21:02:00+08:00"
+    granted_by: "老卢"
+    grant_basis: "2026-10-22 21:01 问答：P0 六项逐条勾选全部通过，并选「六项全通过即关单」"
+    repo: "GlobalCloud GPCF"
+    scope: "f031_p0_acceptance_and_close"
+    actions_allowed: ["read", "write_feature_yaml", "write_evidence", "close_feature", "commit"]
+    actions_forbidden: ["push", "deploy", "status_promotion_beyond_close", "real_data_intake"]
+    expires_at: "2027-01-20T23:59:59+08:00"
+    evidence: "features/done/F-031-xgd-dot-alignment/evidence/human-acceptance-20261022.md"
+    review_conclusion: "P0 六项通过（分层停止接受契约级）；不声明 accepted/integrated/production_ready/customer_accepted"
     revoked_at: null

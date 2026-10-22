@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-10-22T20:58:20.935096+08:00",
+  "generated_at": "2026-10-22T21:09:25.245042+08:00",
   "freshness_hours": 12,
   "freshness_ok": true,
   "project_count": 29,
@@ -32,10 +32,12 @@
     "GlobalCloud FireQuote"
   ],
   "observed_ahead": [
+    "GlobalCloud GPCF",
     "GlobalCloud GFIS",
     "GlobalCloud MMC",
     "GlobalCloud XiaoG",
-    "GlobalCloud SpaceAI Platform"
+    "GlobalCloud SpaceAI Platform",
+    "GlobalCloud WAE"
   ],
   "stable_dirty": [
     "GlobalCloud AAAS",
@@ -66,8 +68,10 @@
   ],
   "stable_ahead": [
     "GlobalCloud GFIS",
+    "GlobalCloud GPCF",
     "GlobalCloud MMC",
     "GlobalCloud SpaceAI Platform",
+    "GlobalCloud WAE",
     "GlobalCloud XiaoG"
   ],
   "volatile_dirty": [
@@ -102,11 +106,12 @@
   ],
   "sensitive_repos": [
     "GlobalCloud XiaoC",
-    "GlobalCloud GPCF"
+    "GlobalCloud GPCF",
+    "GlobalCloud PKC"
   ],
   "pass_repo_count": 4,
   "bootstrap_window": false,
-  "previous_generated_at": "2026-10-22T20:56:20.087541+08:00",
+  "previous_generated_at": "2026-10-22T21:07:24.250118+08:00",
   "repo_heads": {
     "GlobalCloud AAAS": "a71e190cd7567346a2bc952f3ef45cdf1c4e1cdb",
     "GlobalCloud Brain": "257cca79febcb59357e8a84370ecc380dba877de",
@@ -131,7 +136,7 @@
     "GlobalCloud SpaceAI Studio": "75bf3b3728015eb19290ac6ad97439d479f487ed",
     "GlobalCloud World": "8bc29d24532d76c8d8ed9fa5da4a36beaf270e97",
     "GlobalCloud Mem": "d837321da22651c047603fe20dfc305a5680df4c",
-    "GlobalCloud WAE": "dd82a3a475738a4afb80fa81f722d407603c66ea",
+    "GlobalCloud WAE": "657fc0bcff2fb2aad88d4936ccd6c1be8911d58e",
     "GlobalCloud PMC": "6d5fed1f692870203af24c7822879ec835095815",
     "GlobalCloud PDC": "8d88fd5c24a3de45609550f79d8a7b199446bd09",
     "GlobalCloud SLC": "15668abe2cd007377a0c9ff2c9dc9e65f4d5af9e",
@@ -444,8 +449,8 @@
       "sensitive_paths": []
     },
     "GlobalCloud GPCF": {
-      "dirty_count": 1100,
-      "ahead": 0,
+      "dirty_count": 1106,
+      "ahead": 1,
       "behind": 0,
       "paths": [
         "$CODEX_HOME/automations/globalcloud-17/README.md",
@@ -1027,6 +1032,24 @@
         "features/active/F-026-gcmem-governance-onboarding/evidence/summary.md",
         "features/active/F-026-gcmem-governance-onboarding/evidence/tests.txt",
         "features/active/F-027-governance-remediation/journal.md",
+        "features/done/F-031-xgd-dot-alignment/artifacts/.gitkeep",
+        "features/done/F-031-xgd-dot-alignment/evidence/.gitkeep",
+        "features/done/F-031-xgd-dot-alignment/evidence/api.txt",
+        "features/done/F-031-xgd-dot-alignment/evidence/build.txt",
+        "features/done/F-031-xgd-dot-alignment/evidence/human-acceptance-20261022.md",
+        "features/done/F-031-xgd-dot-alignment/evidence/probe_xgd_dot_api.py",
+        "features/done/F-031-xgd-dot-alignment/evidence/screenshots.txt",
+        "features/done/F-031-xgd-dot-alignment/evidence/screenshots/xgd-brain-ui-20261022.png",
+        "features/done/F-031-xgd-dot-alignment/evidence/screenshots/xgd-dot-console-20261022.png",
+        "features/done/F-031-xgd-dot-alignment/evidence/screenshots/xgd-dot-responsibilities-20261022.png",
+        "features/done/F-031-xgd-dot-alignment/evidence/summary.md",
+        "features/done/F-031-xgd-dot-alignment/evidence/tests.txt",
+        "features/done/F-031-xgd-dot-alignment/evidence/xgd-dot-alignment-baseline.md",
+        "features/done/F-031-xgd-dot-alignment/evidence/xgd-dot-alignment-p0-core.md",
+        "features/done/F-031-xgd-dot-alignment/evidence/xgd-dot-alignment-p0-full.md",
+        "features/done/F-031-xgd-dot-alignment/evidence/xgd-dot-alignment-p1p3.md",
+        "features/done/F-031-xgd-dot-alignment/feature.yaml",
+        "features/done/F-031-xgd-dot-alignment/journal.md",
         "loop/context/cognee/README.md",
         "loop/context/cognee/harness/README.md",
         "loop/context/headroom/README.md",
@@ -1111,7 +1134,10 @@
         "projects/xwail/STATUS.md",
         "runtime/asset-registry/registry.yaml",
         "runtime/audit/README.md",
+        "runtime/audit/decision-ledger-20261022.jsonl",
+        "runtime/authorization-receipts.yaml",
         "runtime/logs/F-011.jsonl",
+        "runtime/queue.json",
         "runtime/state.json",
         "scripts/gpcf_check_evidence.py",
         "scripts/gpcf_feature_lib.py",
@@ -1185,12 +1211,6 @@
         "\".kds/development-space/\\345\\274\\200\\345\\217\\221/91-\\346\\262\\273\\347\\220\\206\\344\\270\\216\\351\\252\\214\\346\\224\\266/features/active/F-029-hermes-ai-runtime-admission/journal.md\"",
         "\".kds/development-space/\\345\\274\\200\\345\\217\\221/91-\\346\\262\\273\\347\\220\\206\\344\\270\\216\\351\\252\\214\\346\\224\\266/features/active/F-030-pdc-project-group-onboarding/evidence/summary.md\"",
         "\".kds/development-space/\\345\\274\\200\\345\\217\\221/91-\\346\\262\\273\\347\\220\\206\\344\\270\\216\\351\\252\\214\\346\\224\\266/features/active/F-030-pdc-project-group-onboarding/journal.md\"",
-        "\".kds/development-space/\\345\\274\\200\\345\\217\\221/91-\\346\\262\\273\\347\\220\\206\\344\\270\\216\\351\\252\\214\\346\\224\\266/features/active/F-031-xgd-dot-alignment/evidence/summary.md\"",
-        "\".kds/development-space/\\345\\274\\200\\345\\217\\221/91-\\346\\262\\273\\347\\220\\206\\344\\270\\216\\351\\252\\214\\346\\224\\266/features/active/F-031-xgd-dot-alignment/evidence/xgd-dot-alignment-baseline.md\"",
-        "\".kds/development-space/\\345\\274\\200\\345\\217\\221/91-\\346\\262\\273\\347\\220\\206\\344\\270\\216\\351\\252\\214\\346\\224\\266/features/active/F-031-xgd-dot-alignment/evidence/xgd-dot-alignment-p0-core.md\"",
-        "\".kds/development-space/\\345\\274\\200\\345\\217\\221/91-\\346\\262\\273\\347\\220\\206\\344\\270\\216\\351\\252\\214\\346\\224\\266/features/active/F-031-xgd-dot-alignment/evidence/xgd-dot-alignment-p0-full.md\"",
-        "\".kds/development-space/\\345\\274\\200\\345\\217\\221/91-\\346\\262\\273\\347\\220\\206\\344\\270\\216\\351\\252\\214\\346\\224\\266/features/active/F-031-xgd-dot-alignment/evidence/xgd-dot-alignment-p1p3.md\"",
-        "\".kds/development-space/\\345\\274\\200\\345\\217\\221/91-\\346\\262\\273\\347\\220\\206\\344\\270\\216\\351\\252\\214\\346\\224\\266/features/active/F-031-xgd-dot-alignment/journal.md\"",
         "\".kds/development-space/\\345\\274\\200\\345\\217\\221/91-\\346\\262\\273\\347\\220\\206\\344\\270\\216\\351\\252\\214\\346\\224\\266/features/active/F-032-pqc-external-service-via-pvaai/journal.md\"",
         "\".kds/development-space/\\345\\274\\200\\345\\217\\221/91-\\346\\262\\273\\347\\220\\206\\344\\270\\216\\351\\252\\214\\346\\224\\266/features/active/F-033-r1-ecosystem-integration/journal.md\"",
         "\".kds/development-space/\\345\\274\\200\\345\\217\\221/91-\\346\\262\\273\\347\\220\\206\\344\\270\\216\\351\\252\\214\\346\\224\\266/features/active/F-035-wame-sidebar-unification/evidence/summary.md\"",
@@ -1216,6 +1236,13 @@
         "\".kds/development-space/\\345\\274\\200\\345\\217\\221/91-\\346\\262\\273\\347\\220\\206\\344\\270\\216\\351\\252\\214\\346\\224\\266/features/done/F-019-icp-industry-console/journal.md\"",
         "\".kds/development-space/\\345\\274\\200\\345\\217\\221/91-\\346\\262\\273\\347\\220\\206\\344\\270\\216\\351\\252\\214\\346\\224\\266/features/done/F-028-plane-gpcf-feature-evidence-integration/evidence/summary.md\"",
         "\".kds/development-space/\\345\\274\\200\\345\\217\\221/91-\\346\\262\\273\\347\\220\\206\\344\\270\\216\\351\\252\\214\\346\\224\\266/features/done/F-028-plane-gpcf-feature-evidence-integration/journal.md\"",
+        "\".kds/development-space/\\345\\274\\200\\345\\217\\221/91-\\346\\262\\273\\347\\220\\206\\344\\270\\216\\351\\252\\214\\346\\224\\266/features/done/F-031-xgd-dot-alignment/evidence/human-acceptance-20261022.md\"",
+        "\".kds/development-space/\\345\\274\\200\\345\\217\\221/91-\\346\\262\\273\\347\\220\\206\\344\\270\\216\\351\\252\\214\\346\\224\\266/features/done/F-031-xgd-dot-alignment/evidence/summary.md\"",
+        "\".kds/development-space/\\345\\274\\200\\345\\217\\221/91-\\346\\262\\273\\347\\220\\206\\344\\270\\216\\351\\252\\214\\346\\224\\266/features/done/F-031-xgd-dot-alignment/evidence/xgd-dot-alignment-baseline.md\"",
+        "\".kds/development-space/\\345\\274\\200\\345\\217\\221/91-\\346\\262\\273\\347\\220\\206\\344\\270\\216\\351\\252\\214\\346\\224\\266/features/done/F-031-xgd-dot-alignment/evidence/xgd-dot-alignment-p0-core.md\"",
+        "\".kds/development-space/\\345\\274\\200\\345\\217\\221/91-\\346\\262\\273\\347\\220\\206\\344\\270\\216\\351\\252\\214\\346\\224\\266/features/done/F-031-xgd-dot-alignment/evidence/xgd-dot-alignment-p0-full.md\"",
+        "\".kds/development-space/\\345\\274\\200\\345\\217\\221/91-\\346\\262\\273\\347\\220\\206\\344\\270\\216\\351\\252\\214\\346\\224\\266/features/done/F-031-xgd-dot-alignment/evidence/xgd-dot-alignment-p1p3.md\"",
+        "\".kds/development-space/\\345\\274\\200\\345\\217\\221/91-\\346\\262\\273\\347\\220\\206\\344\\270\\216\\351\\252\\214\\346\\224\\266/features/done/F-031-xgd-dot-alignment/journal.md\"",
         "\".kds/development-space/\\345\\274\\200\\345\\217\\221/91-\\346\\262\\273\\347\\220\\206\\344\\270\\216\\351\\252\\214\\346\\224\\266/features/done/F-034-wae-p0-shell-and-role-convergence/evidence/o1-shell-decoupling.md\"",
         "\".kds/development-space/\\345\\274\\200\\345\\217\\221/91-\\346\\262\\273\\347\\220\\206\\344\\270\\216\\351\\252\\214\\346\\224\\266/features/done/F-034-wae-p0-shell-and-role-convergence/evidence/o2-token-consolidation.md\"",
         "\".kds/development-space/\\345\\274\\200\\345\\217\\221/91-\\346\\262\\273\\347\\220\\206\\344\\270\\216\\351\\252\\214\\346\\224\\266/features/done/F-034-wae-p0-shell-and-role-convergence/evidence/o3-sidebar-unification.md\"",
@@ -1312,22 +1339,6 @@
         "features/active/F-030-pdc-project-group-onboarding/evidence/summary.md",
         "features/active/F-030-pdc-project-group-onboarding/evidence/tests.txt",
         "features/active/F-030-pdc-project-group-onboarding/journal.md",
-        "features/active/F-031-xgd-dot-alignment/artifacts/.gitkeep",
-        "features/active/F-031-xgd-dot-alignment/evidence/.gitkeep",
-        "features/active/F-031-xgd-dot-alignment/evidence/api.txt",
-        "features/active/F-031-xgd-dot-alignment/evidence/build.txt",
-        "features/active/F-031-xgd-dot-alignment/evidence/probe_xgd_dot_api.py",
-        "features/active/F-031-xgd-dot-alignment/evidence/screenshots.txt",
-        "features/active/F-031-xgd-dot-alignment/evidence/screenshots/xgd-brain-ui-20261022.png",
-        "features/active/F-031-xgd-dot-alignment/evidence/screenshots/xgd-dot-console-20261022.png",
-        "features/active/F-031-xgd-dot-alignment/evidence/screenshots/xgd-dot-responsibilities-20261022.png",
-        "features/active/F-031-xgd-dot-alignment/evidence/summary.md",
-        "features/active/F-031-xgd-dot-alignment/evidence/tests.txt",
-        "features/active/F-031-xgd-dot-alignment/evidence/xgd-dot-alignment-baseline.md",
-        "features/active/F-031-xgd-dot-alignment/evidence/xgd-dot-alignment-p0-core.md",
-        "features/active/F-031-xgd-dot-alignment/evidence/xgd-dot-alignment-p0-full.md",
-        "features/active/F-031-xgd-dot-alignment/evidence/xgd-dot-alignment-p1p3.md",
-        "features/active/F-031-xgd-dot-alignment/journal.md",
         "features/active/F-035-wame-sidebar-unification/artifacts/.gitkeep",
         "features/active/F-035-wame-sidebar-unification/evidence/.gitkeep",
         "features/active/F-035-wame-sidebar-unification/evidence/summary.md",
@@ -1690,13 +1701,22 @@
       "sensitive_paths": []
     },
     "GlobalCloud PKC": {
-      "dirty_count": 1,
+      "dirty_count": 8,
       "ahead": 0,
       "behind": 0,
       "paths": [
-        "\"GlobalCloud PKC \\346\\200\\273\\344\\275\\223\\346\\226\\271\\346\\241\\210.md\""
+        "\"GlobalCloud PKC \\346\\200\\273\\344\\275\\223\\346\\226\\271\\346\\241\\210.md\"",
+        "src/app/pages/TasksPage.tsx",
+        "src/styles/index.css",
+        "src/styles/theme.css",
+        "docs/evidence/pkc-p4-p5-20261022.md",
+        "src/app/components/ui/status-badge.tsx",
+        "src/styles/gc-tokens.css",
+        "src/test/status-badge.test.tsx"
       ],
-      "sensitive_paths": []
+      "sensitive_paths": [
+        "src/styles/gc-tokens.css"
+      ]
     },
     "GlobalCloud XGD": {
       "dirty_count": 19,
@@ -1836,21 +1856,24 @@
       "sensitive_paths": []
     },
     "GlobalCloud WAE": {
-      "dirty_count": 3,
-      "ahead": 0,
+      "dirty_count": 5,
+      "ahead": 2,
       "behind": 0,
       "paths": [
-        "scripts/build-packages.mts",
-        "scripts/check-consumer.mts",
-        "scripts/gate.sh"
+        "deploy/macmini/watchdog.sh",
+        "deploy/macmini/route-daemon/com.csydsc.wae-route.plist",
+        "deploy/macmini/route-daemon/install.sh",
+        "deploy/macmini/route-daemon/uninstall.sh",
+        "deploy/macmini/route-daemon/wae-route.sh"
       ],
       "sensitive_paths": []
     },
     "GlobalCloud PMC": {
-      "dirty_count": 2,
+      "dirty_count": 3,
       "ahead": 0,
       "behind": 0,
       "paths": [
+        "PROJECT_HARNESS_MANIFEST.md",
         "tools/mcp-http-bridge/bridge.py",
         "tools/mcp-http-bridge/bridge.py.bak-valve-20261022163127"
       ],
