@@ -5,7 +5,7 @@ project: GPCF
 related_projects: [SpaceAI, GPCF]
 domain: governance
 status: controlled
-version: v1.2
+version: v1.3
 owner: GPCF
 kds_space: 开发
 kds_path: 开发/91-治理与验收/projects/spaceai/ROADMAP.md
@@ -32,7 +32,7 @@ superseded_by: []
 1. **真实 L4 资产**（唯一硬缺口）：采购执行包 / 合规外部数据核验（Google Photorealistic 3D Tiles、Cesium ion）/ 恢复自采，三选一均需老卢授权；到位后跑 `pnpm l4:acceptance` 并做供应商质检（精度验收）。
 2. **全景态势收尾**：B5 剩余四大块外提（卡片列 / 飞翔 / CWME / 控制器）、i18n 约 600 行、人工验收（派单确认与失败保留、CWME 回投 30s 幂等）。
 3. **平台欠账**：数据保留策略（D-10）、测试基座小种子库、契约 / 写可靠只读复核、e2e `webServer` 常态化（D-12）。
-4. **账实与发布**：推送 34 提交（需授权）、KDS 镜像同步（D-11）、F-037 / F-038 的 OpenSpec 变更补建（需老卢决定）。
+4. **账实与发布**：推送 34 提交（需授权）、KDS 镜像同步（D-11）；F-037 / F-038 的 OpenSpec 变更已于 2026-10-22 补建（三层对齐通过）。
 
 ## 两条交付线独立
 

@@ -5,7 +5,7 @@ project: GPCF
 related_projects: [GPCF]
 domain: governance
 status: controlled
-version: v1.5
+version: v1.6
 owner: GPCF
 kds_space: 开发
 kds_path: 开发/91-治理与验收/projects/spaceai/STATUS.md
@@ -56,7 +56,7 @@ superseded_by: []
 - **F-038 panorama-operation-normalization**（P1，active，**iteration 2**，2026-10-22 追溯建账）：全景态势操作流程规范化执行到 B5f（B0–B5f 共 13 个本地提交；143 项操作 / 106 条问题审计 + N1–N12 方案）；**部分完成**——B5 剩余四大块（卡片列 / 飞翔 / CWME / 控制器）、i18n 约 600 行、人工验收留待下一轮。
 - F-038 证据：`../GlobalCloud SpaceAI Platform/.harness/runs/20261022-panorama-ops/`（01–21）、`docs/全景态势_操作流程规范化与合理化方案_20261022.md`；Feature 证据在 `features/active/F-038-.../evidence/`。
 - 其余两个 spaceai OpenSpec 变更：`spaceai-was-city-flood-replay` **implemented**（12/12）；`spaceai-studio-multiplatform-refactor` **in_progress**（91/93，剩字段级适配与移动端适配）。
-- **治理欠账（2026-10-22 登记）**：F-037 与 F-038 的工作当时未建 `openspec/changes/spaceai-*` 变更（仅 PMC GC-335 等登记）；补建或并入后续变更需老卢决定，本轮不擅自补建。
+- **治理欠账（2026-10-22 登记，同日关闭）**：F-037 / F-038 当时未建 `openspec/changes/spaceai-*` 变更；2026-10-22 晚已补建 `spaceai-l4-precision-model`（**implemented**，真实资产仍待授权）与 `spaceai-panorama-operation-normalization`（**in_progress**，B5 剩余四大块未完成），三层对齐表门禁通过。
 
 ## 本轮迭代（2026-10-20 起，三条主线）
 
@@ -114,6 +114,7 @@ superseded_by: []
 - 接口：`/healthz` 200（263 端点）；`/RestFul/Rebuild/Tileset` 200（2 条资产：占位 1 条 published、SIMULATED 1 条未发布）。
 - 证据索引：`features/active/F-037-map-3d-l4-precision-model/evidence/`、`features/active/F-038-panorama-operation-normalization/evidence/`。
 - **未执行**：远端 CI（未 push，工作流只在本地等价跑通）；KDS 镜像提交（镜像由自动同步写入，但镜像树与源码差异有上千条未提交，属独立操作，见 D-11）。
+- OpenSpec 变更账：`openspec/changes/spaceai-l4-precision-model`、`openspec/changes/spaceai-panorama-operation-normalization`（2026-10-22 补建，三层对齐 `[OK]`）。
 
 ## 状态与边界
 
@@ -250,3 +251,9 @@ SpaceAI Platform 是安防统一重构主工作区，CWME 是城市/空间域实
 2. 运行状态与终态证据刷新为 **136 文件 / 1251 例**（19:21 实测）。
 3. 逐处把「领先 30 提交」改为**复测时点快照 + 以 git 实查为准**（19:22 已 34，并行会话仍在提交），避免账实随提交漂移。
 4. 边界不变：partial、未 push、未部署。
+
+## 变更说明（v1.5 → v1.6，2026-10-22 晚）
+
+1. 补建两个 OpenSpec 变更：`spaceai-l4-precision-model`（implemented；真实资产待授权）、`spaceai-panorama-operation-normalization`（in_progress）；均含「三层对齐」段并通过 `validate_change_alignment_sections.py`。
+2. 「F-037 / F-038 未建 OpenSpec 变更」治理欠账同日关闭；只补账，不重做工作、不提升验收状态。
+3. 终态证据新增 OpenSpec 变更账条目；其余数字与边界不变。

@@ -66,3 +66,11 @@ superseded_by: []
    - 采购 / 自采文档已归档但暂停执行，不算交付达成。
 5. 是否可以提交？
    - 证据齐备可提交（治理产物独立提交）；Feature 保持 active，项目状态保持 partial，不提升 accepted / integrated / production_ready / customer_accepted。
+
+
+## 治理补记（2026-10-22）
+
+- 本 Feature 的 OpenSpec 变更账已补建：`openspec/changes/spaceai-l4-precision-model/`（proposal / design / tasks / specs / README / `.openspec.yaml`），
+  状态 **implemented**，含「三层对齐（契约 → 工具链 → 应用链）」段。
+- 校验：`python3 tools/kds-sync/validate_change_alignment_sections.py` → 本变更为 `[OK]`。
+- 此前 STATUS 登记的「F-037 / F-038 未建 OpenSpec 变更」欠账**同日关闭**；只补账，不重做工作、不提升验收状态。

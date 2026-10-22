@@ -5,7 +5,7 @@ project: GPCF
 related_projects: [SpaceAI, GPCF]
 domain: governance
 status: controlled
-version: v1.2
+version: v1.3
 owner: GPCF
 kds_space: 开发
 kds_path: 开发/91-治理与验收/projects/spaceai/RISK.md
@@ -31,7 +31,7 @@ superseded_by: []
 | R-05 | KDS 镜像不同步 | 中 | 镜像树与源码有上千条未提交差异；若以镜像为准读账会得到过期事实（D-11） |
 | R-06 | 人工验收缺口 | 中 | 派单确认/失败保留、CWME 回投确认/30s 幂等未被自动 e2e 覆盖，自动断言不能替代人工验收 |
 | R-07 | 合成数据被写成真实运行 | 高（既有） | 不得把合成样例库、局部浏览器验证、占位三维模型写成真实城市/设备运行或平台集成 |
-| R-08 | OpenSpec 变更缺口 | 中 | F-037 / F-038 未建 `openspec/changes/spaceai-*` 变更，仅 Feature 记账 |
+| R-08 | OpenSpec 变更缺口 | **低（2026-10-22 关闭）** | F-037 / F-038 已补建 `openspec/changes/spaceai-l4-precision-model`（implemented）与 `.../spaceai-panorama-operation-normalization`（in_progress），三层对齐表门禁通过 |
 
 ## 控制动作
 
