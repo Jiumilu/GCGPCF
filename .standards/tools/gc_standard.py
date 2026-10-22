@@ -329,7 +329,11 @@ def load_standards(ws):
     missing = [rid for rid in REQUIRED_RULE_IDS if rid not in ids]
     if missing:
         raise ConfigError("standards.yaml 缺少规则：%s" % ", ".join(missing))
-    extra = [rid for rid in ids if rid not in REQUIRED_RULE_IDS]
+    # 允许声明「由其他工具执行」的工作区级规则（如 gates_status.py 的 R21/R22）
+    by_other = {rule.get("id") for rule in rules
+                if isinstance(rule, dict) and rule.get("enforced_by")
+                and rule.get("enforced_by") != "gc_standard.py"}
+    extra = [rid for rid in ids if rid not in REQUIRED_RULE_IDS and rid not in by_other]
     if extra:
         raise ConfigError("standards.yaml 存在未实现规则：%s" % ", ".join(extra))
     if len(ids) != len(set(ids)):
@@ -2228,9 +2232,14 @@ def cmd_validate(ws, cfg):
     today = datetime.date.today()
     expired = [entry for entry in exceptions if entry["until"] < today]
     rule_ids = [rule["id"] for rule in cfg["rules"]]
+    by_other = [r["id"] for r in cfg["rules"] if isinstance(r, dict) and r.get("enforced_by")
+                and r.get("enforced_by") != "gc_standard.py"]
+    implemented = [rid for rid, _ in RULE_CHECKS]
+    missing_impl = [rid for rid in REQUIRED_RULE_IDS if rid not in implemented]
     print("standards.yaml：%s" % cfg["_path"])
     print("规则：%d 条（%s）" % (len(rule_ids), "、".join(rule_ids)))
-    print("实现校验：%s" % ("通过（20 条规则均有判定函数）" if [rid for rid, _ in RULE_CHECKS] == REQUIRED_RULE_IDS else "失败"))
+    print("实现校验：%s" % ("通过（%d 条判定函数 + %d 条外部执行 %s）" % (
+        len(implemented), len(by_other), "、".join(by_other)) if not missing_impl else "失败：%s" % "、".join(missing_impl)))
     print("注册表：%s（%d 个项目）" % (registry["_path"], len(registry["_projects"])))
     print("豁免台账：%s（有效 %d 条，过期 %d 条，问题 %d 条）" % (
         os.path.relpath(path, ws) if os.path.exists(path) else "(不存在)",
@@ -2241,8 +2250,8 @@ def cmd_validate(ws, cfg):
     for problem in problems:
         print("  ! %s" % problem["message"])
     ok = (
-        [rid for rid, _ in RULE_CHECKS] == REQUIRED_RULE_IDS
-        and len(rule_ids) == len(REQUIRED_RULE_IDS)
+        not missing_impl
+        and len(rule_ids) == len(REQUIRED_RULE_IDS) + len(by_other)
         and not problems
     )
     print("结论：%s" % ("PASS" if ok else "FAIL（修复后重跑）"))

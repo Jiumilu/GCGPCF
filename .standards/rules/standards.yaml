@@ -202,6 +202,11 @@ stray:
 # 可脏区声明（04-Git与分支规范 §4）：治理/证据产物与产品代码分区，
 # R14 只统计“可脏区之外”的未提交变更。
 dirty_zones:
+  # v1.2 要求：每个可脏区声明需有 review_after（≤90 天）；过期由 gates_status 报 warn
+  review_after:
+    "GlobalCloud GPCF": "2027-01-20"
+    "GlobalCloud XiaoC": "2027-01-20"
+    "GlobalCloud SpaceAI Platform": "2027-01-20"
   repos:
     "GlobalCloud GPCF":
       - "features/"
@@ -344,7 +349,7 @@ rules:
     severity: "warn"
     scope: "repo"
     title: "分支膨胀"
-    description: "本地分支数 >10 报 warn，>50 报 error；同时报告 90 天未提交分支数（info 证据）。"
+    description: "本地分支数 >25 报 warn，>80 报 error（v1.1）；同时报告 90 天未提交分支数。v1.2 提案：治理仓可分仓阈值，先观察一个月（2026-11-22 后评估）。"
     fix_hint: "合并/删除已完成分支；长期分支转 worktree 或归档；保留 main + 活跃 feat/fix。"
   - id: "R16-doc-staleness"
     severity: "info"
@@ -376,3 +381,19 @@ rules:
     title: "命令入口"
     description: "README/Makefile/package.json/pyproject 中找不到 test 命令入口报 info。"
     fix_hint: "提供 make test 或等价命令，并在 README 快速开始段写明。"
+
+  # ===== v1.2（2026-10-22，老卢确认；工作区级规则，由 gates_status.py 执行）=====
+  - id: "R21-root-entry-drift"
+    severity: "warn"
+    scope: "workspace"
+    enforced_by: "gates_status.py"
+    title: "根入口副本漂移"
+    description: "根 README.md/AGENTS.md 必须与 _governance/root-entry/ 的版本化副本一致；不一致报 warn（试点 2 周，暂不阻断）。"
+    fix_hint: "以根文件为准，同步副本：cp README.md AGENTS.md _governance/root-entry/ 并提交治理仓。"
+  - id: "R22-governance-version"
+    severity: "warn"
+    scope: "workspace"
+    enforced_by: "gates_status.py"
+    title: "治理版本一致性"
+    description: "_governance/VERSION 的版本号必须出现在 CHANGELOG.md 对应小节标题与 standards/00-总则.md 的版本行。"
+    fix_hint: "三处同时升版本：VERSION、CHANGELOG 新小节、00 篇版本行；补变更说明。"
