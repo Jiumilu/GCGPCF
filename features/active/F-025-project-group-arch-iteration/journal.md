@@ -45,10 +45,3 @@ superseded_by: []
    - none
 5. 是否可以提交？
    - 否，Feature 保持 active 跟踪分析侧 P0；开发侧另行立项。
-
-### Iteration 2（2026-10-18 · 项目群总体架构 v1.1）
-
-1. 输入：项目群 25 项目清单、既有系统架构图、O1–O8 分析稿、各项目总体方案与当前 live 状态；首次文档门禁为 `rework_required`。
-2. 输出：主方案补齐业务价值链、权威账、系统能力层、接口族和 25 项目承接矩阵；系统图补 Project 并纠正 GFIS 出库与 GPC 客户 POD；分析稿收窄 XAP 为治理交换；19 个项目现有总体方案已局部传导，6 项 pending 在中央台账及状态页登记。
-3. 验证：25 项目清单/矩阵/系统图各 25 项且集合一致；`loop_document_gate.py=pass`（status_ceiling=`partial`）；`validate_loop_project_group_gate_readiness.py=pass`（20/20）；污染与 KDS TOKEN 检查通过；`git diff --check` 通过。
-4. 未闭合：WAME/PVAOS 受目标分支绑定限制；PQC/SpaceAI/SpaceAIStudio/WAE 唯一项目总体方案未确认；F-025 Evidence Gate 仍提示范围、验收及证据未齐，Feature 保持 active，不提升集成或验收状态。

@@ -1,0 +1,14 @@
+UI evidence detected from real Studio runtime verification.
+
+command:
+- npm test -- tests/client/settings-view-default-credential.test.ts tests/client/router-default-credential-guard.test.ts
+- npx playwright test tests/e2e/studio-shell-visual.spec.ts --project=chromium
+
+assets:
+- artifacts/studio-settings-runtime/settings-desktop.png
+- artifacts/studio-settings-runtime/settings-desktop.json
+
+notes:
+- evidence/runtime-ui.md
+- Playwright settings desktop capture succeeded.
+- Later project-workbench assertion failed on existing shell expectation `main.app-main display=contents`, outside current SettingsView scope.
