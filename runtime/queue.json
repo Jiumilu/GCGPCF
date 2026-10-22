@@ -116,11 +116,11 @@
       "name": "governance-remediation",
       "project": "gpcf",
       "priority": "P0",
-      "status": "evaluated",
-      "current_role": "Evaluator",
-      "workspace": "features/active/F-027-governance-remediation",
+      "status": "closed",
+      "current_role": "Recorder",
+      "workspace": "features/done/F-027-governance-remediation",
       "created_at": "2026-10-18T00:26:03+00:00",
-      "updated_at": "2026-10-18T02:11:29+00:00"
+      "updated_at": "2026-10-22T14:39:27+00:00"
     },
     {
       "id": "F-029",
@@ -259,11 +259,11 @@
       "name": "panorama-engineering-convergence",
       "project": "spaceai",
       "priority": "P1",
-      "status": "commit",
+      "status": "closed",
       "current_role": "Recorder",
-      "workspace": "features/active/F-024-panorama-engineering-convergence",
+      "workspace": "features/done/F-024-panorama-engineering-convergence",
       "created_at": "2026-10-16T09:01:12+00:00",
-      "updated_at": "2026-10-22T11:30:00+00:00"
+      "updated_at": "2026-10-22T14:46:03+00:00"
     },
     {
       "id": "F-028",
@@ -303,11 +303,11 @@
       "name": "wae-p0-shell-and-role-convergence",
       "project": "wae",
       "priority": "P1",
-      "status": "closed",
-      "current_role": "Recorder",
+      "status": "evaluated",
+      "current_role": "Evaluator",
       "workspace": "features/done/F-034-wae-p0-shell-and-role-convergence",
       "created_at": "2026-10-22T10:02:42+00:00",
-      "updated_at": "2026-10-22T10:29:47+00:00"
+      "updated_at": "2026-10-22T14:10:00+00:00"
     },
     {
       "id": "F-035",
@@ -391,11 +391,11 @@
       "name": "gcmem-governance-onboarding",
       "project": "gcmem",
       "priority": "P2",
-      "status": "evaluated",
-      "current_role": "Evaluator",
-      "workspace": "features/active/F-026-gcmem-governance-onboarding",
+      "status": "closed",
+      "current_role": "Recorder",
+      "workspace": "features/done/F-026-gcmem-governance-onboarding",
       "created_at": "2026-10-17T22:49:44+00:00",
-      "updated_at": "2026-10-21T23:15:00+00:00"
+      "updated_at": "2026-10-22T14:44:42+00:00"
     },
     {
       "id": "F-032",

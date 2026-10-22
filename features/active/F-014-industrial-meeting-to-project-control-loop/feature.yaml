@@ -2,24 +2,32 @@ id: F-014
 name: industrial-meeting-to-project-control-loop
 project: gpcf
 status: active
-goal: "Establish the phased Industrial Green Chain meeting-to-project-control loop: KDS canonical evidence-linked candidates, MMC delegation, Studio review, human/object-owner approval, and authoritative project ledger handoff without automatic business-state changes."
+goal: "Establish the phased Industrial Green Chain meeting-to-project-control loop: KDS canonical evidence-linked candidates, MMC delegation, PMC/Plane authoritative project-ledger intake, human/object-owner approval without automatic business-state changes."
 owner: GPCF
+authoritative_receiving_ledger:
+  owner: Project        # PMC / Plane 项目主账（老卢 2026-10-22 22:44 裁定）
+  ledger: "PMC Plane project ledger（29 项投影已验证）"
+  write_mode: "人工确认后写入，禁止自动写入"
+retention_policy:
+  rule: "24 个月后归档（不删除，转 _archive 并写 MANIFEST）"
+  decided_at: '2026-10-22'
+  approved_by: laolu
 priority: P1
 scope:
   in:
     - GPCF coordination of the Industrial Green Chain meeting-to-project-control contract and phased delivery gates
-    - Studio OpenSpec change industrial-meeting-to-project-control-loop and its Phase 0 fixture-only review contract
-    - KDS canonical candidate, MMC delegation, Studio review, Brain cited-analysis, and authoritative-ledger handoff boundaries
+    - 原 Studio OpenSpec change industrial-meeting-to-project-control-loop 条款**已随 Studio 退役失效**（Studio 2026-10-22 裁退出、F-015 随退役结项），不再作为验收载体；历史 OpenSpec 仅作引用
+    - KDS canonical candidate、MMC 委派、Brain 引用分析、**PMC/Plane 权威接收台账**（owner=Project）的交接边界；留存策略见 `retention_policy`
   out:
     - Real meeting-data import, real KDS or business-ledger writes, credential creation/use, permission changes, deployment, and production migration
     - Automatic business-state changes, acceptance, integration, production-ready, or customer-accepted status claims
 acceptance:
-  - Studio OpenSpec proposal, design, delta specifications, and task plan validate strictly
-  - GPCF and Studio documentation gates pass with no new metadata debt
+  - PMC/Plane 接收台账边界定义清晰：会议候选 → 项目条目只经人工确认写入，无自动写入
+  - GPCF 文档门禁通过且不新增元数据债务（Studio 侧已退役，不再要求其门禁）
   - Phase 0 remains fixture-only and demonstrates no automatic ledger write
   - Real-data pilot, authoritative receiving ledger, retention policy, permission/configuration change, deployment, and status promotion remain separately authorized
 loop:
-  governance_blocked: true
+  governance_blocked: true   # 真实数据与 KDS/MMC 配置边界未授权，仍为治理阻塞
   current_step: evaluate
   iteration: 27
 evidence:
@@ -35,8 +43,6 @@ verification:
   - python3 tools/kds-sync/check_python_bytecode.py
   waivers:
     api: 本 Feature 为会议到项目控制环路的本地闭环，真实接收台账与 KDS/MMC 运行配置边界未授权；api 证据不适用（范围理由：无对外接口）。
-blockers:
-  - real-data pilot, authoritative receiving ledger owner, retention policy, and KDS/MMC runtime configuration boundary remain outside the local fixture authorization
 ui_product_first_control:
   version: v1.1
   applicability: direct
@@ -58,3 +64,10 @@ ui_product_first_control:
   status_ceiling: partial
 created_at: "2026-08-22T03:44:32+00:00"
 updated_at: "2026-08-23T02:03:35+00:00"
+resolved_blockers:
+  decided_at: '2026-10-22'
+  decision: '权威接收台账 owner=Project(PMC)、留存=24 个月后归档、Studio review 条款随退役失效并重定 scope —— 老卢 2026-10-22 22:44 问答裁定'
+  evidence: 'docs/reports/f014-ledger-owner-and-retention-20261022.md；回执 AUTH-PG-F014-LEDGER-OWNER-20261022'
+blockers:
+  - 真实会议数据试点未授权（需单独 gate(production) 级授权与数据范围）
+  - KDS/MMC 运行配置边界变更未授权（跨项目运行态配置，需属主执行）

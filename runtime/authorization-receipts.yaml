@@ -5,8 +5,8 @@
 schema_version: "1.0"
 generated_at: "2026-10-22T05:40:00+08:00"
 ledger_ref: "09-status/globalcloud-project-group-single-authorization-ledger-v1.0.md"
-authorization_granted_count: 23
-action_executed_count: 16
+authorization_granted_count: 24
+action_executed_count: 17
 pending_execution_count: 8
 receipts:
   - auth_id: AUTH-GPCF-SCHEME-REVIEW-20260626
@@ -286,4 +286,17 @@ receipts:
     expires_at: "2027-01-20T23:59:59+08:00"
     evidence: "docs/reports/p12-pqc-real-pilot-authorization-request-20261022.md"
     review_conclusion: "A1-A4 已批；客户一单待 PQC 属主选单后老卢确认；不得用合成数据推 C_real"
+    revoked_at: null
+  - auth_id: AUTH-PG-F014-LEDGER-OWNER-20261022
+    granted_at: "2026-10-22T22:45:00+08:00"
+    granted_by: "老卢"
+    grant_basis: "2026-10-22 22:44 问答：权威接收台账 owner=Project(PMC)；F-014 scope 按 Studio 退役重定；留存 24 个月后归档"
+    repo: "GlobalCloud GPCF"
+    scope: "f014_ledger_owner_scope_retention"
+    actions_allowed: ["read", "write_feature_yaml", "write_evidence", "write_plan_docs", "commit"]
+    actions_forbidden: ["real_meeting_data_intake", "production_deploy", "planner_write", "kds_mmc_config_change",
+                        "status_promotion", "push"]
+    expires_at: "2027-01-20T23:59:59+08:00"
+    evidence: "docs/reports/f014-ledger-owner-and-retention-20261022.md"
+    review_conclusion: "owner=Project；scope 已重定；留存 24 个月；真实数据与 KDS/MMC 配置仍待授权"
     revoked_at: null
