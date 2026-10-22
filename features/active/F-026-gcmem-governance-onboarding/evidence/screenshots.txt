@@ -1,1 +1,1 @@
-waived: Feature scope has no UI/browser evidence requirement.
+waived: 本 Feature 交付物仅为 GCMEM 独立私有仓核验记录、GPCF 纳管证据与门禁命令输出，不交付产品页面、可视化或浏览器交互界面，故无需 screenshot/UI 证据。

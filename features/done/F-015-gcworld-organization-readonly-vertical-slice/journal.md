@@ -8,8 +8,8 @@ status: controlled
 version: v1.0
 owner: GPCF
 kds_space: 开发
-kds_path: 开发/91-治理与验收/features/active/F-015-gcworld-organization-readonly-vertical-slice/journal.md
-source_path: features/active/F-015-gcworld-organization-readonly-vertical-slice/journal.md
+kds_path: 开发/91-治理与验收/features/done/F-015-gcworld-organization-readonly-vertical-slice/journal.md
+source_path: features/done/F-015-gcworld-organization-readonly-vertical-slice/journal.md
 sync_direction: bidirectional
 last_reviewed: 2026-10-10
 supersedes: []
@@ -495,3 +495,16 @@ superseded_by: []
    - iteration 34、35 连续两轮「采集本地可回放证据」无实质进展；api/summary 两类均依赖真实接入，本地隔离不可能满足；本地纵切（33 项 scope 主体、e2e）已达成。
 5. 是否可以提交？
    - 是（stage-1 冻结记录）。恢复条件＝真实接入就绪（stage-2 启动时重采 API/summary 证据）。
+
+### Iteration 36
+
+1. 这轮做什么？
+   - 通过 Evidence Gate 关闭 Feature。
+2. 改了什么？
+   - 将 feature.yaml 状态标记为 done。
+3. 怎么验证？
+   - 验证所有 evidence 字段均为 pass 或 waived。
+4. 发现什么问题？
+   - 未发现关闭阻塞项。
+5. 是否可以提交？
+   - 是，仅作为提交候选；commit/push 仍需明确授权。

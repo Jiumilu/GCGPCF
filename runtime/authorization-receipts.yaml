@@ -5,8 +5,8 @@
 schema_version: "1.0"
 generated_at: "2026-10-22T05:40:00+08:00"
 ledger_ref: "09-status/globalcloud-project-group-single-authorization-ledger-v1.0.md"
-authorization_granted_count: 21
-action_executed_count: 14
+authorization_granted_count: 22
+action_executed_count: 16
 pending_execution_count: 7
 receipts:
   - auth_id: AUTH-GPCF-SCHEME-REVIEW-20260626
@@ -261,4 +261,16 @@ receipts:
     expires_at: "2027-01-20T23:59:59+08:00"
     evidence: "features/done/F-031-xgd-dot-alignment/evidence/human-acceptance-20261022.md"
     review_conclusion: "P0 六项通过（分层停止接受契约级）；不声明 accepted/integrated/production_ready/customer_accepted"
+    revoked_at: null
+  - auth_id: AUTH-PG-P05-UNBLOCK-20261022
+    granted_at: "2026-10-22T21:13:00+08:00"
+    granted_by: "老卢"
+    grant_basis: "2026-10-22 21:12 问答：F-026 重采并解除阻塞；F-015 随 Studio 退役结项；F-030 出清单交 PDC 属主"
+    repo: "GlobalCloud GPCF"
+    scope: "p05_unblock_and_retire"
+    actions_allowed: ["read", "write_feature_yaml", "write_evidence", "close_feature", "write_queue", "commit"]
+    actions_forbidden: ["push", "deploy", "status_promotion_beyond_p05", "real_data_intake", "cross_repo_write"]
+    expires_at: "2027-01-20T23:59:59+08:00"
+    evidence: "docs/reports/p05-blocked-classification-20261022.md"
+    review_conclusion: "F-026 blocked→evaluated（门禁理由过期）；F-015 随 Studio 退役结项（closed）；F-030 清单交 PDC 属主"
     revoked_at: null

@@ -15,3 +15,35 @@ status: pass
 ```text
 (no output)
 ```
+
+## feature_verification_py_compile_gcmem_core (2026-10-22)
+
+command: `python3 -X pycache_prefix=/tmp/gcmem-pycache -m py_compile` + GCMEM 9 个核心源文件（`gcmem.py`、`gcmem_api.py`、`gcmem_mcp.py`、`gcmem_context.py`、`gcmem_projection.py`、`gcmem_shadow.py`、`gcmem_query.py`、`gcmem_flags.py`、`kds_memory.py`，均位于 `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud Mem/src/`）
+
+status: pass
+
+```text
+(no output)
+```
+
+notes: `-X pycache_prefix=/tmp/gcmem-pycache` 避免向 GCMEM 仓写 `__pycache__`；该命令按 GPCF Evidence Gate 允许的 argv 形式（仅 `python3`/`git`，cwd=GPCF 仓根）声明。
+
+## feature_verification_git_head_origin_main (2026-10-22)
+
+command: `git -C "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud Mem" diff --check HEAD origin/main`
+
+status: pass
+
+```text
+(no output)
+```
+
+command: `git -C "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud Mem" diff --quiet HEAD origin/main`
+
+status: pass
+
+```text
+(no output)  # exit 0 = HEAD 与本地 origin/main 引用树一致，覆盖 acceptance 第 1 条
+```
+
+notes: 比较对象为本地 `origin/main` remote-tracking 引用（未执行 `git fetch`，未写 GCMEM 仓）。

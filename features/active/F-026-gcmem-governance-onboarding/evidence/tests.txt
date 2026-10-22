@@ -7,3 +7,39 @@ status: pass
 ```text
 gpcf_2_feature_workspace=pass feature_delivery_center=true project_scope=18 new_feature_entry=enabled close_feature_exit=enabled status_promotion_allowed=false
 ```
+
+## feature_verification_pytest_regression (2026-10-22)
+
+command: `python3 -m pytest -q -p no:cacheprovider "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud Mem/tests"`
+
+status: pass
+
+```text
+........................................................................ [ 16%]
+........................................................................ [ 32%]
+........................................................................ [ 49%]
+........................................................................ [ 65%]
+........................................................................ [ 82%]
+........................................................................ [ 98%]
+.......                                                                  [100%]
+439 passed in 32.31s
+```
+
+notes: 该命令按 GPCF Evidence Gate 允许的 argv 形式（仅 `python3`/`git`，cwd=GPCF 仓根）声明并由本任务实测。GCMEM 仓 canonical 形式为 `cd tests && PYTHONPATH= /usr/bin/python3 -m pytest -q`，同日实测 `439 passed in 27.78s`。`-p no:cacheprovider` 用于避免向 GCMEM 仓写 pytest 缓存。
+
+## feature_verification_gcmem_doctor (2026-10-22)
+
+command: `python3 "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud Mem/src/gcmem.py" doctor --json`
+
+status: pass
+
+```text
+{
+ "total": 508,
+ "healthy": true,
+ "issues": [],
+ "notes": []
+}
+```
+
+notes: 账本位于 `GlobalCloud KDS/_meta/hermes-memory-log.md`，为 live append-only；total 随时间增长（同日早先实测 298，本次快照 508），判据为 `healthy=true` 且 `issues` 为空。本命令只读，不写账本。

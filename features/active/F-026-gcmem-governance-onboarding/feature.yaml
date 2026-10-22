@@ -20,7 +20,6 @@ acceptance:
   - GPCF 23 项目 OpenSpec 覆盖通过
   - 中央门禁失败保留 partial/rework 并列明原因
 loop:
-  governance_blocked: true
   current_step: evaluate
   iteration: 4
 evidence:
@@ -29,8 +28,6 @@ evidence:
   screenshots: waived
   api: waived
   summary: pass
-blockers:
-  - GPCF 中央文档门禁 rework_required（2026-10-22 复验）：missing_metadata=1、missing_readme_dirs=1、project_group_live_status_current 与 project_group_live_status_snapshot hard failure；既有项，非本 Feature 可清理范围
 ui_product_first_control:
   version: v1.1
   applicability: indirect
@@ -60,3 +57,8 @@ verification:
     api: 本 Feature 验收不调用 GCMEM 对外 REST/MCP 接口或任何外部 API：回归使用临时账本与本地进程，doctor 为本地 CLI 只读巡检，故 api 豁免；真实 API 调用须独立授权与证据。
 created_at: "2026-10-17T22:49:44+00:00"
 updated_at: "2026-10-21T23:15:00+00:00"
+resolved_blockers:
+  decided_at: '2026-10-22'
+  decision: 'blocker 理由（GPCF 中央门禁 rework_required）已过期：同门禁 2026-10-22 已 pass；经老卢裁定解除阻塞，状态 blocked→evaluated'
+  evidence: 'runtime/loop-document-gate 最近一次 pass + docs/reports/p05-blocked-classification-20261022.md'
+  receipt: AUTH-PG-P05-UNBLOCK-20261022
