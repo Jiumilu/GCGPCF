@@ -19,9 +19,9 @@ TASK_PACKS = ROOT / "docs/harness/evidence/globalcloud-project-group-next-execut
 STATUS_MATRIX = ROOT / "docs/harness/evidence/globalcloud-project-group-status-advancement-matrix-20260625.md"
 
 REPOS = {
-    "AUTH-WAS-DELETE-DS-STORE-20260626": PROJECT_ROOT / "WAS世界资产体系",
+    "AUTH-WAS-DELETE-DS-STORE-20260626": PROJECT_ROOT / "GlobalCloud WAS",
     "AUTH-GPC-REVIEW-20260626": PROJECT_ROOT / "GlobalCloud GPC",
-    "AUTH-PVAOS-REVIEW-20260626": PROJECT_ROOT / "GlobalCloud PVAOS",
+    "AUTH-PVAOS-REVIEW-20260626": PROJECT_ROOT / "GlobalCloud PVA",
     "AUTH-STUDIO-REVIEW-20260626": PROJECT_ROOT / "GlobalCloud Studio",
     "AUTH-GPCF-GOVERNANCE-REVIEW-20260626": ROOT,
     "AUTH-KDS-OWNER-DECISION-20260626": PROJECT_ROOT / "GlobalCloud KDS",
@@ -34,7 +34,7 @@ PACKAGE_SCRIPTS = {
         "scripts": ["quality:repo", "test:e2e"],
     },
     "AUTH-PVAOS-REVIEW-20260626": {
-        "package": PROJECT_ROOT / "GlobalCloud PVAOS/package.json",
+        "package": PROJECT_ROOT / "GlobalCloud PVA/package.json",
         "scripts": ["release:gate:local"],
     },
     "AUTH-STUDIO-REVIEW-20260626": {

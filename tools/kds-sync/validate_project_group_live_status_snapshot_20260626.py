@@ -25,7 +25,7 @@ TZ = timezone(timedelta(hours=8))
 REGISTRY = yaml.safe_load((ROOT / "config/project-group-projects.yaml").read_text(encoding="utf-8"))
 EXPECTED_REPOS = [str(project["repo"]) for project in REGISTRY["projects"]]
 
-VOLATILE_DIRTY_ALLOWLIST = ["GlobalCoud GPCF"]
+VOLATILE_DIRTY_ALLOWLIST = ["GlobalCloud GPCF"]
 SELF_GENERATED_STATUS_PATHS = {
     "docs/harness/evidence/project_group_live_status_current.json",
     "docs/harness/evidence/project_group_live_status_current.md",
@@ -138,7 +138,7 @@ def parse_status_path(line: str) -> str:
 
 
 def filter_self_generated_status(repo_name: str, lines: list[str]) -> list[str]:
-    if repo_name != "GlobalCoud GPCF":
+    if repo_name != "GlobalCloud GPCF":
         return lines
     return [line for line in lines if parse_status_path(line) not in SELF_GENERATED_STATUS_PATHS]
 
