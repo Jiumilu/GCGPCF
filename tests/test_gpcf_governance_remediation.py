@@ -222,3 +222,25 @@ def test_head_drift_within_tolerance_passes():
     other_field = dict(drifted, project_count=28)
     assert not module.within_head_tolerance(base, other_field)
 
+
+
+def test_promote_vu_stage_rejects_synthetic_and_missing_receipt():
+    """P14 纪律：S4 只能由 real 证据 + 有效回执推进，禁止 fixture/dry_run/poc/synthetic。"""
+    import importlib.util
+    spec = importlib.util.spec_from_file_location(
+        "promote_vu", ROOT / "scripts/gpcf_promote_vu_stage.py"
+    )
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+
+    good = "data_class: real\nauthorization_granted: true\nrollback: 已演练（2026-10-22）\n"
+    assert module.validate_evidence(good) == []
+
+    assert any("data_class: real" in p for p in module.validate_evidence("rollback: 已演练\n"))
+    assert any("fixture" in p for p in module.validate_evidence("data_class: fixture\nauthorization_granted: true\nrollback: x\n"))
+
+    receipts = {"receipts": [{"auth_id": "AUTH-X", "granted_by": "老卢", "revoked_at": None}]}
+    assert module.validate_receipt(receipts, "AUTH-X") == []
+    assert module.validate_receipt(receipts, "AUTH-MISSING")
+    revoked = {"receipts": [{"auth_id": "AUTH-Y", "granted_by": "老卢", "revoked_at": "2026-10-22"}]}
+    assert any("撤销" in p for p in module.validate_receipt(revoked, "AUTH-Y"))
