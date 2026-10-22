@@ -1,0 +1,18 @@
+# F-037 构建/类型证据（2026-10-22 19:04 复测）
+
+仓库：`../GlobalCloud SpaceAI Platform`（HEAD `39a55e6`）
+
+## pnpm typecheck
+
+```
+$ pnpm -r exec tsc --noEmit
+EXIT:0
+```
+
+结论：0 错误（全包）。
+
+## 构建与 CI 门禁
+
+- `.github/workflows/l4-acceptance.yml`：三段（`l4-unit` 单元 / `l4-toolchain` 工具链 / `l4-acceptance` 验收），含临时目录校验（`TMPDIR`）。
+- 该工作流为手工触发（Actions → l4-acceptance → Run workflow），本地未 push 故未在远端执行；本地等价命令已跑通（见 tests.txt / api.json）。
+- 本次治理轮只补账与证据，未改产品代码与工作流。

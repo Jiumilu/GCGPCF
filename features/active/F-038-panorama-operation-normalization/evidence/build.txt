@@ -1,0 +1,19 @@
+# F-038 构建/类型证据（2026-10-22 19:04 复测）
+
+仓库：`../GlobalCloud SpaceAI Platform`（HEAD `39a55e6`）
+
+## pnpm typecheck
+
+```
+$ pnpm -r exec tsc --noEmit
+EXIT:0
+```
+
+结论：0 错误（全包）。
+
+## 构建与门禁
+
+- 本轮改动集中在 `plugins/map-3d`（视图/组合式/测试）与 `e2e/`，未新增构建目标、未改打包与 CI 契约。
+- 收口记录里的权威门禁（`39a55e6`，2026-10-22 18:58–18:59）：
+  全仓 `pnpm test` 135 文件 / 1242 例通过、`pnpm run typecheck` exit 0。
+- 本次治理轮只补账与证据，未改产品代码。

@@ -1,0 +1,26 @@
+# F-037 视觉证据（waived：不复制二进制，指向真实产物）
+
+本 Feature 的截图保存在主项目仓库（二进制不重复入 GPCF）：
+
+```
+../GlobalCloud SpaceAI Platform/harness/l4-acceptance/smoke-sim/   # SIMULATED 演练资产验收（PASS）
+  ├── 01-l4.png / 01-l4-wide.png      L4 默认加载
+  ├── 02-whitebox.png                 切白盒
+  ├── 03-l4-return.png                回切 L4
+  ├── 04-fallback.png                 清单 500 → 回落白盒
+  └── report.md / report.json         判定明细（0 fail，60 FPS）
+../GlobalCloud SpaceAI Platform/harness/l4-acceptance/smoke-demo/  # 三园区占位资产演示（PASS）
+  └── 同结构 5 张 + report.md / report.json（0 fail，56 FPS）
+../GlobalCloud SpaceAI Platform/harness/l4-evidence/               # 首批链路证据
+  ├── 05-precision-control.png        图层菜单「模型精度」控件
+  └── sim-drill/                      演练（含 after-rollback/ 回滚后快照）
+```
+
+判定口径：
+
+- L4↔白盒切换的可观测判据是**画面差异**（实测 4.57% / 3.40%，阈值 ≥1%）+ `data-status=ready` + 三园区白盒批次 `show=false`；
+- 贴地判据是根包围体 minHeight 与模型底面偏移（实测 0m，阈值 ≤0.2m）；
+- 占位资产的截图只证明“链路通”，**不证明 L4 几何精度**。
+
+waiver 理由：真实 PNG 与报告已在主项目仓库可随时复核，GPCF 内重复存二进制会与主项目证据漂移；
+精度含义以 feature.yaml / summary.md 的三处标注为准。
