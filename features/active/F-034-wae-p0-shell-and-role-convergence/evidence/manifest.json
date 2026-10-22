@@ -1,0 +1,187 @@
+{
+  "feature": "F-034",
+  "name": "wae-p0-shell-and-role-convergence（WAE 侧证据包）",
+  "generated_at": "2026-10-22T13:37:59.303Z",
+  "repo": "GlobalCloud WAE",
+  "branch": "refactor/ui-spec-wae",
+  "commit": "71faf609068978f74ea13be8005f81cd3113aa64",
+  "discipline": {
+    "status_ceiling": "F-034 至多 ready_for_review；本清单不提升任何状态",
+    "replay": "见 docs/evidence/F-034/README.md（采集脚本 + pnpm evidence:collect）"
+  },
+  "archive_target": "GlobalCloud GPCF/features/active/F-034-wae-p0-shell-and-role-convergence/evidence/（跨仓写入，待老卢授权；本清单为待复制源）",
+  "counts": {
+    "total": 12,
+    "pass": 11,
+    "expected_diff": 1,
+    "skip": 0,
+    "fail": 0,
+    "missing": 0
+  },
+  "items": [
+    {
+      "id": "01-test-framework",
+      "kind": "test",
+      "title": "框架全量单测（node+dom）",
+      "command": "pnpm test",
+      "log": "docs/evidence/F-034/logs/01-test-framework.log",
+      "exit": 0,
+      "result": "pass",
+      "artifacts": [],
+      "docs": [],
+      "tail": "      Tests  1353 passed (1353) ⏎    Start at  21:34:16 ⏎    Duration  125.39s (transform 6.62s, setup 567ms, import 24.18s, tests 28.14s, environment 29.38s)"
+    },
+    {
+      "id": "02-typecheck",
+      "kind": "typecheck",
+      "title": "框架 typecheck",
+      "command": "pnpm typecheck",
+      "log": "docs/evidence/F-034/logs/02-typecheck.log",
+      "exit": 0,
+      "result": "pass",
+      "artifacts": [],
+      "docs": [],
+      "tail": "$ tsc -p tsconfig.json --noEmit"
+    },
+    {
+      "id": "03-wame-vitest",
+      "kind": "test",
+      "title": "WAME 全量单测",
+      "command": "pnpm --dir apps/wame exec vitest run",
+      "log": "docs/evidence/F-034/logs/03-wame-vitest.log",
+      "exit": 0,
+      "result": "pass",
+      "artifacts": [],
+      "docs": [],
+      "tail": "      Tests  106 passed (106) ⏎    Start at  21:36:32 ⏎    Duration  39.82s (transform 2.39s, setup 2.43s, import 6.77s, tests 8.43s, environment 16.55s)"
+    },
+    {
+      "id": "04-wame-build",
+      "kind": "build",
+      "title": "WAME 生产构建",
+      "command": "pnpm --dir apps/wame exec vite build",
+      "log": "docs/evidence/F-034/logs/04-wame-build.log",
+      "exit": 0,
+      "result": "pass",
+      "artifacts": [],
+      "docs": [],
+      "tail": "- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks ⏎ - Adjust chunk size limit for this warning via build.chunkSizeWarningLimit. ⏎ ✓ built in 4.11s"
+    },
+    {
+      "id": "05-e2e-dual-role",
+      "kind": "e2e",
+      "title": "双角色收敛 E2E（F-034 角色收敛）",
+      "command": "pnpm e2e:dual-role",
+      "log": "docs/evidence/F-034/logs/05-e2e-dual-role.log",
+      "exit": 0,
+      "result": "pass",
+      "artifacts": [
+        {
+          "path": "docs/evidence/F-034/screens/dual-role-admin-20261022.png",
+          "bytes": 194288,
+          "sha256": "6a81b233fda57fc641bdefd0e3ccc16616049e711490f89ab555239766846d12"
+        },
+        {
+          "path": "docs/evidence/F-034/screens/dual-role-viewer-20261022.png",
+          "bytes": 198090,
+          "sha256": "b41bdc0bf236861a1d2a5494c9f12851ef12a2d6059fe005174605dee9bd91e2"
+        }
+      ],
+      "docs": [],
+      "tail": "✓ A5b viewer 无 pageerror — 0 条 ⏎  ⏎ 双角色收敛 E2E：**全部通过**（报告：.e2e-dual-role-report.md）"
+    },
+    {
+      "id": "06-e2e-pkc-intake",
+      "kind": "e2e",
+      "title": "PKC 候选页 dry-run E2E（F-036 / M3 前置）",
+      "command": "pnpm e2e:pkc-intake",
+      "log": "docs/evidence/F-034/logs/06-e2e-pkc-intake.log",
+      "exit": 0,
+      "result": "pass",
+      "artifacts": [
+        {
+          "path": "docs/evidence/F-034/screens/pkc-intake-dry-run-20261022.png",
+          "bytes": 222360,
+          "sha256": "a9e1cba4080457204d1829aaa39be43bb5e0ba54bd5816ccbd29f1c381a99811"
+        }
+      ],
+      "docs": [],
+      "tail": "✓ A9 无 pageerror — 0 条 ⏎  ⏎ PKC 候选接入页 E2E：**全部通过**（报告：.e2e-pkc-intake-report.md）"
+    },
+    {
+      "id": "07-check-apps",
+      "kind": "judge",
+      "title": "落位校验 P001–P010",
+      "command": "pnpm check:apps",
+      "log": "docs/evidence/F-034/logs/07-check-apps.log",
+      "exit": 0,
+      "result": "pass",
+      "artifacts": [],
+      "docs": [],
+      "tail": "  工作台（workbench）条目：0 ⏎  ⏎ 应用落位校验：**全部合规**"
+    },
+    {
+      "id": "08-gen-apps-check",
+      "kind": "judge",
+      "title": "生成物新鲜度",
+      "command": "pnpm gen:apps --check",
+      "log": "docs/evidence/F-034/logs/08-gen-apps-check.log",
+      "exit": 0,
+      "result": "pass",
+      "artifacts": [],
+      "docs": [],
+      "tail": "✓ 生成物最新：apps/wame/src/app/apps/generated.loaders.ts ⏎  ⏎ ✓ 生成物均是最新（2 个文件）"
+    },
+    {
+      "id": "09-check-app-assembly",
+      "kind": "judge",
+      "title": "装配×落位对账 A1–A4",
+      "command": "pnpm check:app-assembly",
+      "log": "docs/evidence/F-034/logs/09-check-app-assembly.log",
+      "exit": 0,
+      "result": "pass",
+      "artifacts": [],
+      "docs": [],
+      "tail": "  两侧交集 18 条 ⏎  ⏎ ✓ 对账一致：装配的都有入口、入口的都有加载器、加载器都能在装配集里找到"
+    },
+    {
+      "id": "10-check-registry",
+      "kind": "judge",
+      "title": "注册表/加载器一致性",
+      "command": "pnpm check:registry",
+      "log": "docs/evidence/F-034/logs/10-check-registry.log",
+      "exit": 0,
+      "result": "pass",
+      "artifacts": [],
+      "docs": [],
+      "tail": "✓ 加载器覆盖：装配 18 条 ｜ loader 18 条 ｜ 悬空 0 ⏎  ⏎ R2 校验：**全部合规**"
+    },
+    {
+      "id": "11-check-tokens-parity",
+      "kind": "parity",
+      "title": "O2 跨仓令牌一致性（只读）",
+      "command": "pnpm check:tokens-parity",
+      "log": "docs/evidence/F-034/logs/11-check-tokens-parity.log",
+      "exit": 1,
+      "result": "expected_diff",
+      "artifacts": [],
+      "docs": [],
+      "note": "跨仓比对按设计在\"存在差异\"时退出 1；采集脚本把 1 记为 expected_diff（不计失败，但如实列出）",
+      "tail": " ⏎ 结论：**存在差异**（需按裁定处置，见 docs/plan/O2跨仓令牌一致性比对_20261022.md） ⏎ [ELIFECYCLE] Command failed with exit code 1."
+    },
+    {
+      "id": "12-build-packages",
+      "kind": "build",
+      "title": "框架包构建（A2 后 6 包）",
+      "command": "pnpm build:packages",
+      "log": "docs/evidence/F-034/logs/12-build-packages.log",
+      "exit": 0,
+      "result": "pass",
+      "artifacts": [],
+      "docs": [
+        "docs/adr/0001-framework-distribution.md"
+      ],
+      "tail": "module-kit          29.2         8        0 ⏎  ⏎ ✓ 构建完成：6 包 → packages/*/dist/（index.mjs + *.d.ts + css/）"
+    }
+  ]
+}
