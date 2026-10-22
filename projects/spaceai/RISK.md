@@ -5,7 +5,7 @@ project: GPCF
 related_projects: [SpaceAI, GPCF]
 domain: governance
 status: controlled
-version: v1.6
+version: v1.7
 owner: GPCF
 kds_space: 开发
 kds_path: 开发/91-治理与验收/projects/spaceai/RISK.md
@@ -26,7 +26,7 @@ superseded_by: []
 |---|---|---|---|
 | R-01 | 占位资产被当成真实 L4 精模 | 高 | L4 链路已通，但演练/验收资产为 placeholder / SIMULATED，只能证明加载/切换/回落/贴地，**不能证明平面/高程 ≤0.3m 精度** |
 | R-02 | 库无上限增长 | 低（已压缩 + 建索引） | 2026-10-22 已执行压缩：2069.5MB → 160.5MB，归档表外置 + 备份；并补时间索引 `idx_ingest_createdat` / `idx_obol_at`（库 181.3MB；近 1 天查询提升 100–180× / 20–40×）；**剩余**：时间窗归档待数据变旧（D-10） |
-| R-03 | 30+ 个提交只在本地 | 中 | `main` 领先 `origin/main` **34 提交**（19:04 为 30，随并行会话增长）；单点磁盘故障即丢失，推送需授权（D-13） |
+| R-03 | 提交只在本地 | **已关闭（2026-10-22）** | 已推送私有远端，远端 `070a778`，本地/远端 0/0（推送前修正了一次提交信息错位，未 force push）；单点丢失风险解除 |
 | R-04 | 并行会话 WIP 混入 | 中 | 工作区有他方未提交改动（`apps/desktop/src/main.ts`、`vite.config.ts`、`pnpm-workspace.yaml` 等），误提交会把未验收改动带入账 |
 | R-05 | KDS 镜像不同步 | 中 | 镜像树与源码有上千条未提交差异；若以镜像为准读账会得到过期事实（D-11） |
 | R-06 | 人工验收缺口 | 中 | 派单确认/失败保留、CWME 回投确认/30s 幂等未被自动 e2e 覆盖，自动断言不能替代人工验收 |
