@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-10-22T07:47:40.835033+08:00",
+  "generated_at": "2026-10-22T08:05:22.459506+08:00",
   "freshness_hours": 12,
   "freshness_ok": true,
   "project_count": 27,
@@ -26,12 +26,12 @@
     "GlobalCloud SpaceAI Platform",
     "GlobalCloud World",
     "GlobalCloud Mem",
+    "GlobalCloud PMC",
     "GlobalCloud PDC"
   ],
   "observed_ahead": [
     "GlobalCloud AAAS",
     "WAS世界资产体系",
-    "GlobalCloud XiaoC",
     "GlobalCloud Studio",
     "GlobalCoud GPCF",
     "GlobalCloud XiaoG",
@@ -66,11 +66,11 @@
   ],
   "stable_ahead": [
     "GlobalCloud AAAS",
+    "GlobalCloud Mem",
     "GlobalCloud SpaceAI Platform",
     "GlobalCloud Studio",
     "GlobalCloud WAE",
     "GlobalCloud World",
-    "GlobalCloud XiaoC",
     "GlobalCloud XiaoG",
     "GlobalCoud GPCF",
     "WAS世界资产体系"
@@ -106,9 +106,9 @@
     "GlobalCloud XiaoC",
     "GlobalCoud GPCF"
   ],
-  "pass_repo_count": 4,
+  "pass_repo_count": 3,
   "bootstrap_window": false,
-  "previous_generated_at": "2026-10-22T07:10:51.453348+08:00",
+  "previous_generated_at": "2026-10-22T07:47:40.835033+08:00",
   "dirty_details": {
     "GlobalCloud AAAS": {
       "dirty_count": 16,
@@ -154,8 +154,8 @@
       "sensitive_paths": []
     },
     "GlobalCloud XiaoC": {
-      "dirty_count": 202,
-      "ahead": 1,
+      "dirty_count": 214,
+      "ahead": 0,
       "behind": 0,
       "paths": [
         ".dockerignore",
@@ -214,14 +214,20 @@
         ".harness/evidence/xiaoc-feishu-20261022/60-human-inbound-blocker.md",
         ".harness/evidence/xiaoc-feishu-20261022/61-human-inbound-verified.md",
         ".harness/evidence/xiaoc-feishu-20261022/62-group-mention-verified.md",
+        ".harness/evidence/xiaoc-feishu-20261022/70-webhook-e2e.md",
+        ".harness/evidence/xiaoc-feishu-20261022/71-load-test.md",
+        ".harness/evidence/xiaoc-feishu-20261022/72-crossmachine.md",
         ".harness/evidence/xiaoc-feishu-20261022/REPORT.md",
+        ".harness/evidence/xiaoc-feishu-20261022/crossmachine.json",
         ".harness/evidence/xiaoc-feishu-20261022/e2e.json",
         ".harness/evidence/xiaoc-feishu-20261022/live-check.json",
         ".harness/evidence/xiaoc-feishu-20261022/live-check.pre-repo-deps.json",
+        ".harness/evidence/xiaoc-feishu-20261022/load-test.json",
         ".harness/evidence/xiaoc-feishu-20261022/run-e2e-json.err",
         ".harness/evidence/xiaoc-feishu-20261022/run-e2e.err",
         ".harness/evidence/xiaoc-feishu-20261022/run-json.err",
         ".harness/evidence/xiaoc-feishu-20261022/run.err",
+        ".harness/evidence/xiaoc-feishu-20261022/webhook-e2e.json",
         ".harness/evidence/xiaoc-mcp-skill-20261020/07-launcher-stdout.jsonl",
         ".harness/evidence/xiaoc-mcp-skill-20261020/11a-real-smoke-assessment.md",
         ".harness/evidence/xiaoc-mcp-skill-20261020/22-smoke-fix.md",
@@ -302,11 +308,13 @@
         ".harness/evidence/xiaoc-mcp-skill-20261020/REPORT.md",
         ".harness/evidence/xiaoc-mcp-skill-20261020/env.txt",
         ".harness/evidence/xiaoc-mcp-skill-20261020/summary.json",
+        "docs/integration/artifacts/feishu-bridge-service-package.candidate.json",
         "docs/integration/artifacts/wame-mmc-authority-test-vectors.candidate.json",
         "docs/integration/artifacts/wame-service-package-registration.bundle.candidate.json",
         "docs/integration/artifacts/wame-service-package-registration.example.candidate.json",
         "docs/integration/artifacts/wame-service-package-registration.request.candidate.json",
         "docs/integration/artifacts/wame-service-package-registration.schema.candidate.json",
+        "docs/integration/feishu-bridge-wame-registration.md",
         "docs/integration/feishu-bridge.md",
         "docs/integration/wame-formal-authority-mmc-design.md",
         "docs/integration/wame-formal-registration-number-proposal.md",
@@ -357,9 +365,13 @@
         "packages/feishu-bridge/tsconfig.json",
         "packages/feishu-bridge/tsconfig.test.json",
         "scripts/feishu-bridge-e2e.mjs",
+        "scripts/feishu-bridge-load.mjs",
         "scripts/feishu-bridge-run.sh",
         "scripts/feishu-bridge-service.sh",
-        "scripts/feishu-live-check.mjs"
+        "scripts/feishu-crossmachine-check.mjs",
+        "scripts/feishu-live-check.mjs",
+        "scripts/feishu-webhook-e2e.mjs",
+        "scripts/feishu-webhook-tunnel.md"
       ],
       "sensitive_paths": [
         ".env.bak-20261020-hermes-key",
@@ -401,7 +413,7 @@
     "GlobalCoud GPCF": {
       "dirty_count": 875,
       "ahead": 12,
-      "behind": 132,
+      "behind": 134,
       "paths": [
         "$CODEX_HOME/automations/globalcloud-17/README.md",
         ".harness/README.md",
@@ -1318,7 +1330,7 @@
       "sensitive_paths": []
     },
     "GlobalCloud KDS": {
-      "dirty_count": 38,
+      "dirty_count": 44,
       "ahead": 0,
       "behind": 0,
       "paths": [
@@ -1329,14 +1341,25 @@
         "_meta/project-registry.yaml",
         "\"entities/\\344\\274\\201\\344\\270\\232\\344\\277\\241\\346\\201\\257\\345\\272\\223.md\"",
         "\"\\345\\215\\227\\346\\274\\263\\351\\233\\266\\347\\242\\263\\344\\272\\247\\344\\270\\232\\345\\233\\255.md\"",
+        "\"\\345\\267\\245\\344\\270\\232\\347\\273\\277\\351\\223\\276/\\344\\274\\232\\350\\256\\256\\350\\264\\250\\351\\207\\217\\351\\227\\250\\347\\246\\201\\351\\230\\273\\346\\226\\255\\346\\270\\205\\345\\215\\225_2026-05-19.md\"",
+        "\"\\345\\267\\245\\344\\270\\232\\347\\273\\277\\351\\223\\276/\\344\\275\\223\\347\\263\\273/GlobalCloud\\345\\256\\252\\346\\263\\225\\345\\205\\245\\345\\217\\243.md\"",
+        "\"\\345\\267\\245\\344\\270\\232\\347\\273\\277\\351\\223\\276/\\344\\275\\223\\347\\263\\273/GlobalCloud\\345\\256\\252\\346\\263\\225\\345\\217\\257\\347\\224\\250\\346\\200\\247\\350\\257\\204\\344\\274\\260\\346\\240\\207\\345\\207\\206.md\"",
+        "\"\\345\\267\\245\\344\\270\\232\\347\\273\\277\\351\\223\\276/\\344\\275\\223\\347\\263\\273/GloudCloud\\345\\256\\252\\346\\263\\225\\344\\277\\256\\350\\256\\242\\350\\247\\204\\345\\210\\231.md\"",
+        "\"\\345\\267\\245\\344\\270\\232\\347\\273\\277\\351\\223\\276/\\344\\275\\223\\347\\263\\273/GloudCloud\\345\\256\\252\\346\\263\\225\\350\\277\\220\\350\\241\\214\\345\\274\\202\\345\\270\\270\\345\\244\\204\\347\\220\\206\\345\\221\\275\\344\\273\\244\\345\\215\\241.md\"",
+        "\"\\345\\267\\245\\344\\270\\232\\347\\273\\277\\351\\223\\276/\\345\\217\\230\\346\\233\\264\\345\\221\\212\\350\\255\\246_2026-05-18.md\"",
+        "\"\\345\\267\\245\\344\\270\\232\\347\\273\\277\\351\\223\\276/\\345\\256\\235\\351\\251\\254\\345\\214\\205\\350\\243\\205\\344\\270\\232\\345\\212\\241\\346\\212\\245\\344\\273\\267\\344\\270\\216\\344\\272\\244\\344\\273\\230.md\"",
         "\"\\345\\267\\245\\344\\270\\232\\347\\273\\277\\351\\223\\276/\\345\\256\\235\\351\\251\\254\\345\\276\\252\\347\\216\\257\\345\\214\\205\\350\\243\\205\\344\\270\\232\\345\\212\\241.md\"",
+        "\"\\345\\267\\245\\344\\270\\232\\347\\273\\277\\351\\223\\276/\\345\\267\\245\\344\\270\\232\\347\\273\\277\\351\\223\\276\\344\\270\\232\\345\\212\\241\\344\\275\\223\\347\\263\\273.md\"",
+        "\"\\345\\267\\245\\344\\270\\232\\347\\273\\277\\351\\223\\276/\\345\\267\\245\\344\\270\\232\\347\\273\\277\\351\\223\\276\\346\\224\\277\\347\\255\\226\\347\\240\\224\\347\\251\\266.md\"",
+        "\"\\345\\267\\245\\344\\270\\232\\347\\273\\277\\351\\223\\276/\\347\\243\\267\\347\\237\\263\\350\\206\\217EPC\\346\\213\\233\\346\\240\\207\\346\\241\\210\\344\\276\\213.md\"",
+        "\"\\345\\267\\245\\344\\270\\232\\347\\273\\277\\351\\223\\276/\\347\\243\\267\\347\\237\\263\\350\\206\\217\\345\\214\\205\\346\\235\\220\\345\\267\\245\\345\\216\\202\\345\\271\\263\\345\\217\\260\\345\\214\\226\\346\\210\\230\\347\\225\\245.md\"",
+        "\"\\345\\267\\245\\344\\270\\232\\347\\273\\277\\351\\223\\276/\\350\\221\\233\\345\\214\\226\\351\\241\\271\\347\\233\\256-\\350\\241\\214\\345\\212\\250\\350\\277\\275\\350\\270\\252.md\"",
+        "\"\\345\\267\\245\\344\\270\\232\\347\\273\\277\\351\\223\\276/\\351\\233\\266\\347\\242\\263\\350\\265\\260\\345\\273\\212.md\"",
         "99_Reports/daily-mining-2026-10-17.md",
         "99_Reports/daily-mining-2026-10-18.md",
         "99_Reports/daily-mining-2026-10-19.md",
         "99_Reports/daily-mining-2026-10-20.md",
         "99_Reports/daily-mining-2026-10-21.md",
-        "99_Reports/evolution-2026-10-16.md",
-        "99_Reports/evolution-2026-10-17.md",
         "\"PVA\\344\\273\\267\\345\\200\\274\\350\\201\\224\\347\\233\\237/\\344\\270\\232\\345\\212\\241\\347\\263\\273\\347\\273\\237/PVAAI\\347\\262\\276\\346\\237\\245_\\351\\227\\256\\351\\242\\230\\345\\217\\260\\350\\264\\246_20261019.json\"",
         "entities/_verify-reports/verify-20261019.json",
         "\"entities/\\344\\274\\201\\344\\270\\232\\344\\277\\241\\346\\201\\257\\345\\272\\223.md.bak-2026-10-19\"",
@@ -1349,11 +1372,6 @@
         "\"\\344\\275\\223\\347\\263\\273/AaaS\\346\\236\\266\\346\\236\\204_20261017/AaaS\\346\\236\\266\\346\\236\\204\\345\\233\\276_\\344\\270\\232\\345\\212\\241\\344\\270\\216\\347\\263\\273\\347\\273\\237_20261017_v1.6.html\"",
         "\"\\344\\275\\223\\347\\263\\273/AaaS\\346\\236\\266\\346\\236\\204_20261017/AaaS\\346\\236\\266\\346\\236\\204\\345\\233\\276_\\344\\270\\232\\345\\212\\241\\344\\270\\216\\347\\263\\273\\347\\273\\237_20261017_v1.7.html\"",
         "\"\\344\\275\\223\\347\\263\\273/AaaS\\346\\236\\266\\346\\236\\204_20261017/AaaS\\346\\236\\266\\346\\236\\204\\345\\233\\276_\\344\\270\\232\\345\\212\\241\\344\\270\\216\\347\\263\\273\\347\\273\\237_20261017_v1.8.html\"",
-        "\"\\344\\275\\223\\347\\263\\273/KDS\\345\\234\\272\\346\\231\\257\\346\\216\\245\\345\\205\\245_\\351\\241\\271\\347\\233\\256\\347\\276\\244\\345\\205\\250\\345\\234\\272\\346\\231\\257\\347\\233\\230\\347\\202\\271\\344\\270\\216PVAOS\\351\\246\\226\\350\\220\\275_v0.1.md\"",
-        "\"\\344\\275\\223\\347\\263\\273/KDS\\345\\234\\272\\346\\231\\257\\346\\216\\245\\345\\205\\245_\\351\\241\\271\\347\\233\\256\\347\\276\\244\\345\\205\\250\\345\\234\\272\\346\\231\\257\\347\\233\\230\\347\\202\\271\\344\\270\\216PVAOS\\351\\246\\226\\350\\220\\275_v0.2.md\"",
-        "\"\\344\\275\\223\\347\\263\\273/KDS\\350\\256\\277\\351\\227\\256\\346\\216\\247\\345\\210\\266\\344\\270\\216\\350\\276\\271\\347\\225\\214\\346\\216\\247\\345\\210\\266_\\346\\200\\273\\344\\275\\223\\350\\256\\276\\350\\256\\241_v0.1.md\"",
-        "\"\\344\\275\\223\\347\\263\\273/KDS\\350\\256\\277\\351\\227\\256\\346\\216\\247\\345\\210\\266\\344\\270\\216\\350\\276\\271\\347\\225\\214\\346\\216\\247\\345\\210\\266_\\346\\200\\273\\344\\275\\223\\350\\256\\276\\350\\256\\241_v0.2.md\"",
-        "\"\\344\\275\\223\\347\\263\\273/KDS\\350\\256\\277\\351\\227\\256\\346\\216\\247\\345\\210\\266\\344\\270\\216\\350\\276\\271\\347\\225\\214\\346\\216\\247\\345\\210\\266_\\346\\200\\273\\344\\275\\223\\350\\256\\276\\350\\256\\241_v0.3.md\"",
         "\"\\345\\267\\245\\344\\270\\232\\347\\273\\277\\351\\223\\276/\\345\\233\\276\\350\\260\\261/snapshots/2026-10-20_b2-preview/claims.yaml\"",
         "\"\\345\\267\\245\\344\\270\\232\\347\\273\\277\\351\\223\\276/\\345\\233\\276\\350\\260\\261/snapshots/2026-10-20_b2-preview/content_digest.txt\"",
         "\"\\345\\267\\245\\344\\270\\232\\347\\273\\277\\351\\223\\276/\\345\\233\\276\\350\\260\\261/snapshots/2026-10-20_b2-preview/manifest_snapshot.json\"",
@@ -1524,20 +1542,17 @@
       "sensitive_paths": []
     },
     "GlobalCloud Mem": {
-      "dirty_count": 52,
-      "ahead": 1,
+      "dirty_count": 49,
+      "ahead": 4,
       "behind": 0,
       "paths": [
         "\"GlobalCloud GCMEM \\346\\200\\273\\344\\275\\223\\346\\226\\271\\346\\241\\210.md\"",
-        "\"docs/GCMEM-\\344\\270\\211\\347\\253\\257\\350\\277\\221\\344\\270\\200\\346\\234\\210\\350\\241\\245\\345\\275\\225-\\346\\211\\247\\350\\241\\214\\346\\212\\245\\345\\221\\212-20261022.md\"",
-        "src/gcmem.py",
-        "tests/test_gcmem.py",
-        "tests/test_gcmem_api.py",
         ".scratch/backfill-2026-10/admission-question.json",
         ".scratch/backfill-2026-10/admission-samples-result.json",
         ".scratch/backfill-2026-10/admission.jsonl",
         ".scratch/backfill-2026-10/apply-plan-C.json",
         ".scratch/backfill-2026-10/apply-plan-Cplus.json",
+        ".scratch/backfill-2026-10/apply-plan-T1.json",
         ".scratch/backfill-2026-10/apply-plan-composition.json",
         ".scratch/backfill-2026-10/apply-plan-dropped.json",
         ".scratch/backfill-2026-10/apply-plan.json",
@@ -1591,10 +1606,12 @@
       "sensitive_paths": []
     },
     "GlobalCloud PMC": {
-      "dirty_count": 0,
+      "dirty_count": 1,
       "ahead": 0,
       "behind": 0,
-      "paths": [],
+      "paths": [
+        "\"docs/pmc/PMC-\\351\\241\\271\\347\\233\\256\\347\\251\\272\\351\\227\\264-\\351\\241\\271\\347\\233\\256\\345\\275\\222\\345\\261\\236\\345\\200\\231\\351\\200\\211\\350\\241\\250-v0.1.md\""
+      ],
       "sensitive_paths": []
     },
     "GlobalCloud PDC": {
