@@ -5,7 +5,7 @@ project: GPCF
 related_projects: [SpaceAI, GPCF]
 domain: governance
 status: controlled
-version: v1.3
+version: v1.4
 owner: GPCF
 kds_space: 开发
 kds_path: 开发/91-治理与验收/projects/spaceai/RISK.md
@@ -25,7 +25,7 @@ superseded_by: []
 | ID | 风险 | 等级 | 说明 |
 |---|---|---|---|
 | R-01 | 占位资产被当成真实 L4 精模 | 高 | L4 链路已通，但演练/验收资产为 placeholder / SIMULATED，只能证明加载/切换/回落/贴地，**不能证明平面/高程 ≤0.3m 精度** |
-| R-02 | 库无上限增长 | 中高 | `data/spaceai.db` **2.17GB**；`EXT_ObolObservation` 527,570 / `IngestEvent` 142,097 / `EXT_SceneAsset` 50,179 追加表无保留策略（D-10） |
+| R-02 | 库无上限增长 | 中（方案就绪） | `data/spaceai.db` **2.17GB**，其中历史归档表 1905.9MB（87.9%）；保留窗口表 + dry-run 压缩工具已就绪（预计 2.07GiB → 约 165MB），执行需维护窗口 + 授权（D-10） |
 | R-03 | 30+ 个提交只在本地 | 中 | `main` 领先 `origin/main` **34 提交**（19:04 为 30，随并行会话增长）；单点磁盘故障即丢失，推送需授权（D-13） |
 | R-04 | 并行会话 WIP 混入 | 中 | 工作区有他方未提交改动（`apps/desktop/src/main.ts`、`vite.config.ts`、`pnpm-workspace.yaml` 等），误提交会把未验收改动带入账 |
 | R-05 | KDS 镜像不同步 | 中 | 镜像树与源码有上千条未提交差异；若以镜像为准读账会得到过期事实（D-11） |

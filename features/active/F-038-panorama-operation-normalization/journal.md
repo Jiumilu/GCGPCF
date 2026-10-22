@@ -100,3 +100,22 @@ superseded_by: []
   状态 **in_progress**，含「三层对齐（契约 → 工具链 → 应用链）」段。
 - 校验：`python3 tools/kds-sync/validate_change_alignment_sections.py` → 本变更为 `[OK]`。
 - 此前 STATUS 登记的「F-037 / F-038 未建 OpenSpec 变更」欠账**同日关闭**；只补账，不重做工作、不提升验收状态。
+
+
+### Iteration 3（2026-10-22 晚，B5g 卡片列外提）
+
+1. 这轮做什么？
+   - 记录并行会话继续推进的 B5g（卡片列外提），刷新 Feature 边界到最新事实。
+2. 改了什么？
+   - `9f4fbcb` feat(pano): B5g 卡片列外提——新增 `components/PanoramaCardColumn.vue`（385 行）与
+     `panorama/cardColumn.ts`（85 行），`PanoramaDeep.vue` 3711 → **3638 行**，新增 8 例组件测试（`panorama-card-column.test.ts`）。
+   - 本 iteration 只更新本 Feature 的 feature.yaml（goal/scope/acceptance/blockers/iteration）与本 journal；
+     产品代码由并行会话提交。
+3. 怎么验证？
+   - 全仓：`npx vitest run` → **139 文件 / 1268 例通过**（2026-10-22 19:36，46.95s）；`pnpm typecheck` → 0。
+   - 本 Feature 相关：43 例（新增 card-column 8 例）。
+4. 发现什么问题？
+   - B5 剩余由四大块降为**三大块**（飞翔 / CWME / 控制器）；i18n 约 600 行与人工验收仍未做。
+   - 并行会话在持续推进该线，本 Feature 只做账实同步，不重复实现。
+5. 是否可以提交？
+   - 可提交（治理产物独立提交）；Feature 保持 active，状态 partial，不提升。
