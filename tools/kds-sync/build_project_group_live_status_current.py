@@ -34,16 +34,18 @@ SELF_GENERATED_STATUS_PATHS = {
     "docs/harness/evidence/project_group_live_status_current.md",
 }
 # 语义键（决定 snapshot_matches）：只放"结构性、可复现"的字段。
-# 2026-10-22 P02：工作树脏污/领先落后在多会话并发下每次运行都变，移出语义键，
-# 只按 repo_heads（各仓 commit SHA）+ 项目覆盖 + 敏感仓比对；脏污类保留为观测项。
+# 2026-10-22 P02：工作树脏污/领先落后在多会话并发下每次运行都变，移出语义键；脏污类保留为观测项。
+# 2026-10-22 P03：repo_heads（各仓 HEAD SHA）同样分钟级漂移——**任一仓提交都会让本快照过期**，
+#   而本检查串在 pre-commit 里 ⇒ "任何仓提交 → GPCF 提交被阻断"的自指死锁（F-034 归档时实测）。
+#   故 repo_heads 移入观测项（仍可见、只提示不判 fail）；语义判定只保留 新鲜度/项目覆盖/敏感仓。
 SEMANTIC_KEYS = [
     "freshness_ok",
     "project_count",
     "sensitive_repos",
-    "repo_heads",
 ]
 # 非语义观测键：只做差异提示，不影响 pass/fail
 OBSERVED_KEYS = [
+    "repo_heads",
     "observed_dirty",
     "observed_ahead",
     "stable_dirty",

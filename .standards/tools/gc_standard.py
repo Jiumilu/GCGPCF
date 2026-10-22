@@ -1104,6 +1104,9 @@ def check_R06(ctx, repo):
     for name in repo.root_entries:
         if not name.lower().endswith(".md"):
             continue
+        # 隐藏的临时/验证报告（.xxx.md）不算「根目录文档」，由 R11 散落规则管理
+        if name.startswith("."):
+            continue
         if name.lower() in allow_names:
             continue
         if any(fnmatch.fnmatchcase(name, pat) for pat in allow_globs):
