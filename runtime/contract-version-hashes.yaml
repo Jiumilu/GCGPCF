@@ -1,0 +1,13 @@
+contracts:
+  GlobalCloud GPCF/01-architecture/XAP回执与执行报告规格草案_v0.1.md:
+    hash: 1114f52f66d3c5d6
+    version: v1.0
+  GlobalCloud GPCF/03-data-ai-knowledge/GlobalCloud绿色供应链体系事件合同.md:
+    hash: 68b96c879c4001a2
+    version: v1.0
+  GlobalCloud GPCF/okf/knowledge-asset-contract-manifest.yaml:
+    hash: e333fb42a8219bc6
+    version: unknown
+  GlobalCloud XWAIL/schemas-json/xap-manifest.schema.json:
+    hash: c277dd1e2797d667
+    version: unknown

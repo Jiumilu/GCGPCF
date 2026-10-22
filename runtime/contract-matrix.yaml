@@ -265,7 +265,9 @@ conflicts:
         - "XWAIL: check_object_schemas PASS 34 / FAIL 0（含新正/负例）；validate_xwail --all pass；verify_xap --all pass"
         - "GPCF: tools/kds-sync/validate_knowledge_asset_model_system.py → knowledge_asset_model_gate=pass"
       residual:
-        - "工具未做『version 未变但 contentHash 变』的自动漂移告警；事件运行时未计算合同 contentHash"
+        - "事件运行时未计算合同 contentHash"
+        - "漂移告警已补：tools/kds-sync/validate_contract_version_drift.py（4 契约基线，CI 阻断）；事件/连接器契约待扩展"
+      residual_updated_at: "2026-10-23"
       evidence: ../GlobalCloud XWAIL/schemas-json/xap-manifest.schema.json
       implementation: "landed_2026-10-22"
 

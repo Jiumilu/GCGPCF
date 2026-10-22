@@ -6,6 +6,17 @@ updated: 2026-10-22
 source_tasks:
   - PG-09（能力复用中台：提示词/技能/模板/组件注册表，起步）
   - PG-10（状态机日巡检 + 决策台账 + 周度瓶颈评审）
+bootstrap_entries:
+  - startlux-decision
+extension_phase: PG-09 能力复用中台（最小版）扩展（2026-10-22，只追加条目，不改写 bootstrap 条目）
+generated_at: "2026-10-22T06:35:00+08:00"
+usage_rule: >-
+  引用前先按 asset id 查表，只从 source_path 指向的受控文件取值，不在本表内嵌正文；
+  reused_by 必须可回溯，reuse_basis 标注 verified_reference（有文件逐字引用或复制）或
+  artifact_usage（存在按该资产格式产出的下游产物）；status 为 draft 的资产不得直接用于
+  对外交付，deprecated 资产不得新引用；资产登记只表示「可复用」，不表示任何项目状态提升，
+  不替代 WAME 裁决、KDS 事实主存、GFIS source-of-record 与 Harness 证据验收；
+  不得在本表登记凭据、客户原件或受限内容（只登记路径与元数据）。
 entries:
   - id: startlux-decision
     title: StartLux-Decision v1.1 决策模型
@@ -35,3 +46,612 @@ entries:
       confirmed_on: 2026-10-22
       structure: two_layer
     related: [WAME, GPCF, KDS, GCMEM, Project, WAE]
+
+  # ---------- PG-09 扩展条目（2026-10-22 追加；四类：prompt / skill / template / component）----------
+
+  - id: prompt.gpcf-agent-reach-execution
+    title: 项目群 Agent-Reach 全量实施方案与执行提示词
+    version: v1.0
+    type: prompt
+    owner: GPCF
+    governor: GPCF
+    scope:
+      - 互联网搜索/读取/通道健康检查能力层的全量实施入口（硬边界 + 阶段 + 完成定义）
+      - 消费方：接稳（连接器可靠性）、证验（证据验收）、GPCF 任务包编写
+    access: read-only
+    license: 项目群内部使用（自研，不对外分发）
+    source_path: 02-governance/GlobalCloud项目群Agent-Reach全量实施方案与执行提示词.md
+    evidence:
+      - source_path 存在性核对（2026-10-22 只读）
+      - 骨架抽样：runtime/plan-20261022/prompt-conventions.md §0.1 取样 S3
+    reused_by: [GPCF]
+    reuse_count: 1
+    reuse_basis: verified_reference
+    status: active
+    notes: 三连硬边界写法（最高状态 / 除非…不得声明 / 主责清单）可作为新提示词基线
+    constraints:
+      - 不得替代 KDS 事实主存、WAME 裁决、GFIS source-of-record、Harness 证据验收
+      - 本条目只登记路径与元数据，不复制提示词正文
+
+  - id: prompt.gpcf-was-ontology-execution
+    title: 项目群 WAS／Ontology 全量实施方案与执行提示词
+    version: v1.0
+    type: prompt
+    owner: GPCF
+    governor: GPCF
+    scope:
+      - WAS/Ontology 知识工程与领域建模的全量实施入口
+      - 提供 Governance Loop 回放块（run/stop/verify/recover/debug）范例
+    access: read-only
+    license: 项目群内部使用（自研，不对外分发）
+    source_path: 02-governance/GlobalCloud项目群WAS／Ontology全量实施方案与执行提示词.md
+    evidence:
+      - source_path 存在性核对（2026-10-22 只读）
+      - 骨架抽样：runtime/plan-20261022/prompt-conventions.md §0.1 取样 S2 与 §e 范例 2
+    reused_by: [GPCF]
+    reuse_count: 1
+    reuse_basis: verified_reference
+    status: active
+    notes: LOOP 回放块写法（input/action/output/stop/verify 均给具体对象与命令）来源
+    constraints:
+      - 不得替代 KDS 事实主存、WAME 裁决、Harness 证据验收
+      - 只在内部治理文档引用，不对外分发正文
+
+  - id: prompt.gpcf-headroom-lcx-execution
+    title: 项目群 Headroom-LCX 全量实施方案与执行提示词
+    version: v1.0
+    type: prompt
+    owner: GPCF
+    governor: GPCF
+    scope:
+      - Headroom-LCX 成本/性能测量与授权链路的全量实施入口
+      - 授权模型、WAME 门禁、证据字段的写法来源
+    access: read-only
+    license: 项目群内部使用（自研，不对外分发）
+    source_path: 02-governance/GlobalCloud项目群Headroom-LCX全量实施方案与执行提示词.md
+    evidence:
+      - source_path 存在性核对（2026-10-22 只读）
+      - 骨架抽样：runtime/plan-20261022/prompt-conventions.md §0.1 取样 S4
+    reused_by: [GPCF]
+    reuse_count: 1
+    reuse_basis: verified_reference
+    status: active
+    notes: 最完整的「硬边界 + 上游事实 + 目标架构 + 阶段 + 必须输出 + 每轮验证 + 完成定义」链
+    constraints:
+      - 测量结论不得声明 production_ready 或对外承诺 SLA
+      - 本条目只登记路径与元数据
+
+  - id: prompt.smartfactory-prompt-library
+    title: 智慧工厂进一步梳理与提示词库（Prompt 00–20）
+    version: v1.0
+    type: prompt
+    owner: GPCF
+    governor: GPCF
+    scope:
+      - 可复用提示词片段库（用途 + 身份/必读/口径/边界/任务/输出）
+      - 消费方：KDS 世界资产梳理、GPCF 提示词改写
+    access: read-only
+    license: 项目群内部使用（自研，不对外分发）
+    source_path: 01-architecture/GlobalCloud智慧工厂进一步梳理与提示词库.md
+    evidence:
+      - source_path 存在性核对（2026-10-22 只读）
+      - 跨目录引用统计（rg，2026-10-22）：KDS 侧 77 处、GPCF 侧 8 处
+    reused_by: [GPCF, KDS]
+    reuse_count: 2
+    reuse_basis: verified_reference
+    status: active
+    notes: 唯一「提示词片段库」体裁（体裁 C），适合做单点片段复用
+    constraints:
+      - 片段引用不得脱离原硬边界单独使用
+      - 不复制正文进本表
+
+  - id: prompt.wae-assembly-taskbook
+    title: WAE 项目按装配体系推进_实施提示词 v1.0
+    version: v1.0
+    type: prompt
+    owner: KDS
+    governor: GPCF
+    scope:
+      - 项目任务书体裁（红线 + 工作方式 + 三段式汇报）样板
+      - 消费方：WAE 项目执行、其它项目任务书抄写
+    access: read-only
+    license: 项目群内部使用（自研，不对外分发）
+    source_path: ../GlobalCloud KDS/世界资产/WAE项目按装配体系推进_实施提示词_v1.0.md
+    evidence:
+      - source_path 存在性核对（2026-10-22 只读）
+      - WAE 侧引用统计（rg，2026-10-22）：1 处
+      - 体裁抽样：runtime/plan-20261022/prompt-conventions.md §0.1 取样 S6
+    reused_by: [KDS, WAE]
+    reuse_count: 2
+    reuse_basis: verified_reference
+    status: active
+    notes: 「不动 / 不 fork / 不碰 / 不做 / 不吹」动词短句红线写法来源
+    constraints:
+      - 不声明 WAE 项目状态提升
+      - 本文档存放于 KDS 世界资产，引用走 KDS 路径
+
+  - id: prompt.mmc-project-line-taskbook
+    title: MMC 项目线实施提示词 v1.0
+    version: v1.0
+    type: prompt
+    owner: MMC
+    governor: GPCF
+    scope:
+      - 项目任务书体裁（六条红线 + 里程碑批次 M1–M4 + 验收标准）
+      - 消费方：MMC 项目线执行
+    access: read-only
+    license: 项目群内部使用（自研，不对外分发）
+    source_path: ../GlobalCloud MMC/docs/planning/MMC项目线实施提示词_v1.0.md
+    evidence:
+      - source_path 存在性核对（2026-10-22 只读）
+      - 体裁抽样：runtime/plan-20261022/prompt-conventions.md §0.1 取样 S7
+    reused_by: [MMC]
+    reuse_count: 1
+    reuse_basis: artifact_usage
+    status: active
+    notes: 自包含任务书形态 B 的实例；可提炼为通用项目任务书模板（待推广）
+    constraints:
+      - 不声明 MMC 项目状态提升
+      - 本条目只登记路径与元数据
+
+  - id: prompt.project-group-task-prompt-library
+    title: GlobalCloud 项目群任务提示词库 v1.0
+    version: v1.0
+    type: prompt
+    owner: GPCF
+    governor: GPCF
+    scope:
+      - 45 个任务包（PG-01…PG-17 / PJ-01…PJ-28）的统一执行提示词来源
+      - 消费方：项目群 Lead 派发、各任务执行智能体
+    access: read-only
+    license: 项目群内部使用（自研，不对外分发）
+    source_path: ../runtime/plan-20261022/GlobalCloud项目群任务提示词库_v1.0.md
+    evidence:
+      - source_path 存在性核对（2026-10-22 只读）
+      - 上游清单：runtime/plan-20261022/GlobalCloud项目群完成度与综合能力提升_任务优先级清单_v1.0.md
+    reused_by: [GPCF]
+    reuse_count: 1
+    reuse_basis: artifact_usage
+    status: draft
+    notes: 落在项目群规划 scratch 目录，未被文档控制登记；入库前需人工确认受控归属
+    constraints:
+      - scratch 资产不得当作受控文档引用
+      - 不声明任何任务已完成或状态提升
+
+  - id: skill.globalcloud-loop-orchestrator
+    title: globalcloud-loop-orchestrator 技能
+    version: v1.0
+    type: skill
+    owner: GPCF
+    governor: GPCF
+    scope:
+      - LOOP 编排：轮次结构、门禁顺序、交付/治理双 Loop 切换
+      - 消费方：各项目执行智能体
+    access: read-only
+    license: 项目群内部使用（自研，不对外分发）
+    source_path: .codex/skills/globalcloud-loop-orchestrator/SKILL.md
+    evidence:
+      - source_path 存在性核对（2026-10-22 只读）
+      - 能力登记：02-governance/loop/LOOP_CAPABILITY_REGISTRY.md（controlled）
+      - 轮次产物统计：各项目 docs/harness/loops/ 存在 loop-round 记录
+    reused_by: [GPCF, Studio, GFIS, KDS, MMC, XGD]
+    reuse_count: 6
+    reuse_basis: artifact_usage
+    status: active
+    notes: 项目群 LOOP 默认编排技能；能力注册表登记为 controlled
+    constraints:
+      - 不得替代 WAME 裁决与人工状态提升入口
+      - 技能为只读说明，不授权任何生产或跨仓写入
+
+  - id: skill.globalcloud-document-governance
+    title: globalcloud-document-governance 技能
+    version: v1.0
+    type: skill
+    owner: GPCF
+    governor: GPCF
+    scope:
+      - 受控文档头（doc_id / kds_path / sync_direction）与文档控制台账维护
+      - 消费方：GPCF、KDS 镜像、各项目文档治理
+    access: read-only
+    license: 项目群内部使用（自研，不对外分发）
+    source_path: .codex/skills/globalcloud-document-governance/SKILL.md
+    evidence:
+      - source_path 存在性核对（2026-10-22 只读）
+      - 能力登记：02-governance/loop/LOOP_CAPABILITY_REGISTRY.md（controlled）
+      - 引用统计（rg，2026-10-22）：document_control 在 GPCF 340 处、KDS 97 处
+    reused_by: [GPCF, KDS]
+    reuse_count: 2
+    reuse_basis: verified_reference
+    status: active
+    notes: 与 tools/kds-sync/document_control.py 配对使用
+    constraints:
+      - 不得在未获授权时改写 KDS 生产镜像
+      - 文档通过不等于业务完成
+
+  - id: skill.globalcloud-openspec-governance
+    title: globalcloud-openspec-governance 技能
+    version: v1.0
+    type: skill
+    owner: GPCF
+    governor: GPCF
+    scope:
+      - OpenSpec 变更目录规范与项目群治理映射
+      - 消费方：使用 openspec 变更流的项目
+    access: read-only
+    license: 项目群内部使用（自研，不对外分发）
+    source_path: .codex/skills/globalcloud-openspec-governance/SKILL.md
+    evidence:
+      - source_path 存在性核对（2026-10-22 只读）
+      - openspec 变更目录存在：GlobalCloud KDS/openspec/changes/
+    reused_by: [GPCF, KDS]
+    reuse_count: 2
+    reuse_basis: artifact_usage
+    status: active
+    notes: 与 skill.openspec-change-cycle（13 份项目副本）构成 openspec 能力族
+    constraints:
+      - 变更提案不构成实施授权
+      - 不声明项目状态提升
+
+  - id: skill.openspec-change-cycle
+    title: openspec 变更周期技能族（propose / apply / archive / explore / sync-specs）
+    version: v1.0
+    type: skill
+    owner: GPCF
+    governor: GPCF
+    scope:
+      - 提案 → 应用 → 归档 → 规格同步的标准变更流程
+      - 消费方：项目群内所有已复制该技能族的项目
+    access: read-only
+    license: 上游许可未在仓库内声明，暂限项目群内部使用，对外分发前需核实
+    source_path: ../GlobalCloud KDS/.codex/skills/openspec-propose/SKILL.md
+    evidence:
+      - source_path 存在性核对（2026-10-22 只读）
+      - 副本统计（2026-10-22）：13 个项目各存一份 openspec-propose
+      - 副本项目：GFIS / GPC / ICP / KDS / MMC / PVA / PVAOS / SOP / Studio / WAME / WAME-p1 / XGD / XiaoC
+    reused_by: [GFIS, GPC, ICP, KDS, MMC, PVA, PVAOS, SOP, Studio, WAME, WAME-p1, XGD, XiaoC]
+    reuse_count: 13
+    reuse_basis: verified_reference
+    status: draft
+    notes: 典型「无单一权威副本」资产，13 份手工复制，是 PG-09 要收敛的主要对象
+    constraints:
+      - 不得把任一项目副本当作权威版本
+      - 许可未核实前不得对外分发
+
+  - id: skill.globalcloud-ui-quality-gate
+    title: globalcloud-ui-quality-gate 技能
+    version: v1.0
+    type: skill
+    owner: GPCF
+    governor: GPCF
+    scope:
+      - UI 质量基线：可用性、可访问性、构建与截图证据门禁
+      - 消费方：Studio、WAE 等前端交付项目
+    access: read-only
+    license: 项目群内部使用（自研，不对外分发）
+    source_path: .codex/skills/globalcloud-ui-quality-gate/SKILL.md
+    evidence:
+      - source_path 存在性核对（2026-10-22 只读）
+      - 能力登记：02-governance/loop/LOOP_CAPABILITY_REGISTRY.md（pilot）
+    reused_by: [GPCF, Studio]
+    reuse_count: 2
+    reuse_basis: artifact_usage
+    status: active
+    notes: 能力注册表状态为 pilot，尚未升格 default_enabled
+    constraints:
+      - 截图与本地构建不等于客户验收
+      - 不声明 production_ready
+
+  - id: skill.globalcloud-project-group-git-clean
+    title: globalcloud-project-group-git-clean 技能
+    version: v1.0
+    type: skill
+    owner: GPCF
+    governor: GPCF
+    scope:
+      - 工作区洁净度判定与脏路径分类流程
+      - 消费方：GPCF 门禁与轮次收口
+    access: read-only
+    license: 项目群内部使用（自研，不对外分发）
+    source_path: .codex/skills/globalcloud-project-group-git-clean/SKILL.md
+    evidence:
+      - source_path 存在性核对（2026-10-22 只读）
+      - 目录工具：tools/kds-sync/classify_dirty_paths.py
+    reused_by: [GPCF]
+    reuse_count: 1
+    reuse_basis: verified_reference
+    status: active
+    notes: 单项目使用，属「待推广」清单
+    constraints:
+      - 本技能不执行 stage / commit / push
+      - 工作区 clean 与否不代表业务完成
+
+  - id: template.loop-round
+    title: LOOP 轮次记录模板
+    version: v1.0
+    type: template
+    owner: GPCF
+    governor: GPCF
+    scope:
+      - Governance Loop 轮次记录（run / stop / verify / recover / debug + 真实性检查）
+      - 消费方：各项目轮次记录
+    access: read-only
+    license: 项目群内部使用（自研，不对外分发）
+    source_path: templates/LOOP_ROUND_TEMPLATE.md
+    evidence:
+      - source_path 存在性核对（2026-10-22 只读）
+      - 轮次产物统计（rg，2026-10-22）：GPCF 1270 / Studio 1015 / GFIS 360 / MMC 23 / XGD 10 / KDS 6 份 loop-round 记录
+    reused_by: [GPCF, Studio, GFIS, MMC, XGD, KDS]
+    reuse_count: 6
+    reuse_basis: artifact_usage
+    status: active
+    notes: 项目群最高频模板；未登记 run/stop/verify/recover/debug 的轮次最高 partial
+    constraints:
+      - 模板不含真实业务结论，填写者自负真实性
+      - 不声明状态提升
+
+  - id: template.loop-evidence
+    title: LOOP 证据记录模板
+    version: v1.0
+    type: template
+    owner: GPCF
+    governor: GPCF
+    scope:
+      - 证据文件的类型、最低字段与命名规范
+      - 消费方：GPCF、KDS 镜像轮次
+    access: read-only
+    license: 项目群内部使用（自研，不对外分发）
+    source_path: templates/LOOP_EVIDENCE_TEMPLATE.md
+    evidence:
+      - source_path 存在性核对（2026-10-22 只读）
+      - 引用统计（rg，2026-10-22）：KDS 8 处、GPCF 5 处
+    reused_by: [GPCF, KDS]
+    reuse_count: 2
+    reuse_basis: verified_reference
+    status: active
+    notes: 与 02-governance/gpcf-evidence-taxonomy.md 配对
+    constraints:
+      - 禁止把 fixture / mock 当真实业务证据
+      - 证据文件不得含凭据或客户原件
+
+  - id: template.loop-round-five-direction
+    title: LOOP 轮次五方向记录模板（YAML）
+    version: v1.0
+    type: template
+    owner: GPCF
+    governor: GPCF
+    scope:
+      - 机读形态轮次记录（五方向 + 效率/证据门禁字段）
+      - 消费方：GPCF 门禁脚本
+    access: read-only
+    license: 项目群内部使用（自研，不对外分发）
+    source_path: templates/loop-round-v2-five-direction.yaml
+    evidence:
+      - source_path 存在性核对（2026-10-22 只读）
+      - 引用统计（rg，2026-10-22）：GPCF 12 处
+    reused_by: [GPCF]
+    reuse_count: 1
+    reuse_basis: verified_reference
+    status: active
+    notes: 单项目使用，适合作为机读轮的收敛入口
+    constraints:
+      - 字段不得自行改写（门禁按字段名解析）
+      - 不声明状态提升
+
+  - id: template.project-master-plan
+    title: 项目总体方案模板
+    version: v1.0
+    type: template
+    owner: GPCF
+    governor: GPCF
+    scope:
+      - 项目级总体方案骨架（定位 / 继承链路 / 架构 / 版本 / 边界）
+      - 消费方：各项目总体方案编写
+    access: read-only
+    license: 项目群内部使用（自研，不对外分发）
+    source_path: templates/project-master-plan-template.md
+    evidence:
+      - source_path 存在性核对（2026-10-22 只读）
+      - 产物核对（2026-10-22）：KDS / MMC / GFIS / Studio 根目录均存在「GlobalCloud <项目> 总体方案.md」
+    reused_by: [GPCF, KDS, MMC, GFIS, Studio]
+    reuse_count: 5
+    reuse_basis: artifact_usage
+    status: active
+    notes: 项目总体方案必须继承项目群总体方案
+    constraints:
+      - 项目级方案变化必须回传项目群主方案
+      - 方案存在不等于实施完成
+
+  - id: template.real-evidence-record
+    title: 真实证据记录模板
+    version: v1.0
+    type: template
+    owner: GPCF
+    governor: GPCF
+    scope:
+      - 真实/脱敏/fixture 三态证据的记录骨架
+      - 消费方：GPCF 证据验收
+    access: read-only
+    license: 项目群内部使用（自研，不对外分发）
+    source_path: templates/real-evidence-record-template.md
+    evidence:
+      - source_path 存在性核对（2026-10-22 只读）
+      - 引用统计（rg，2026-10-22）：GPCF 8 处
+    reused_by: [GPCF]
+    reuse_count: 1
+    reuse_basis: verified_reference
+    status: active
+    notes: 解决「把 fixture 当真实证据」的历史失败模式
+    constraints:
+      - 三态标注缺失的证据不得用于状态判断
+      - 不声明 real_business_verified
+
+  - id: component.loop-document-gate
+    title: loop_document_gate.py 项目群文档门禁
+    version: v1.0
+    type: component
+    owner: GPCF
+    governor: GPCF
+    scope:
+      - 项目群文档门禁：metadata / 目录 README / 中文化债务检查，输出 pass 或 rework_required
+      - 消费方：各项目 LOOP 收口
+    access: read-only
+    license: 项目群内部使用（自研，不对外分发）
+    source_path: tools/kds-sync/loop_document_gate.py
+    evidence:
+      - source_path 存在性核对（2026-10-22 只读）
+      - 跨项目引用统计（rg，2026-10-22）：GPCF 631 / Studio 115 / KDS 62 / SOP 24 / SpaceAI 7 / SpaceAI Platform 5 / PQC 4 / ICP 4
+    reused_by: [GPCF, Studio, KDS, SOP, SpaceAI, SpaceAI Platform, PQC, ICP]
+    reuse_count: 8
+    reuse_basis: verified_reference
+    status: active
+    notes: 全注册表跨项目复用最广的组件；只委托 GPCF 一方执行
+    constraints:
+      - gate pass 不等于业务完成
+      - 不得改写被检查项目的业务文件
+
+  - id: component.document-control
+    title: document_control.py 文档控制与 KDS 镜像同步
+    version: v1.0
+    type: component
+    owner: GPCF
+    governor: GPCF
+    scope:
+      - 文档控制台账、KDS 本地镜像与同步流水生成
+      - 消费方：GPCF、KDS、WAE、MMC
+    access: read-only
+    license: 项目群内部使用（自研，不对外分发）
+    source_path: tools/kds-sync/document_control.py
+    evidence:
+      - source_path 存在性核对（2026-10-22 只读）
+      - 跨项目引用统计（rg，2026-10-22）：GPCF 340 / KDS 97 / WAE 3 / MMC 1
+    reused_by: [GPCF, KDS, WAE, MMC]
+    reuse_count: 4
+    reuse_basis: verified_reference
+    status: active
+    notes: 会全量重写台账与 .kds 镜像，属需授权动作；本地镜像不等于真实 KDS API 已同步
+    constraints:
+      - 未经授权不得运行会重写全量台账的批量模式
+      - 不得把本地镜像当作真实 API 同步证据
+
+  - id: component.document-pollution-check
+    title: check_document_pollution.py 文档污染检查
+    version: v1.0
+    type: component
+    owner: GPCF
+    governor: GPCF
+    scope:
+      - 真实性污染 / 越权声明 / 平行台账等文档污染检查
+      - 消费方：GPCF、KDS、SOP
+    access: read-only
+    license: 项目群内部使用（自研，不对外分发）
+    source_path: tools/kds-sync/check_document_pollution.py
+    evidence:
+      - source_path 存在性核对（2026-10-22 只读）
+      - 跨项目引用统计（rg，2026-10-22）：GPCF 365 / KDS 51 / SOP 13
+    reused_by: [GPCF, KDS, SOP]
+    reuse_count: 3
+    reuse_basis: verified_reference
+    status: active
+    notes: 与 02-governance/GlobalCloud项目群文档防污染规则.md 配对
+    constraints:
+      - 只读检查，不改写被检查文档
+      - pass 不等于内容真实
+
+  - id: component.check-frontmatter-gate
+    title: check_frontmatter_gate.py 受控文档头门禁
+    version: v1.0
+    type: component
+    owner: GPCF
+    governor: GPCF
+    scope:
+      - doc_id / kds_path / sync_direction 等受控文档头完整性校验
+      - 消费方：GPCF、SpaceAI、SpaceAI Platform
+    access: read-only
+    license: 项目群内部使用（自研，不对外分发）
+    source_path: tools/kds-sync/check_frontmatter_gate.py
+    evidence:
+      - source_path 存在性核对（2026-10-22 只读）
+      - 跨项目引用统计（rg，2026-10-22）：GPCF 3 / SpaceAI 1 / SpaceAI Platform 1
+    reused_by: [GPCF, SpaceAI, SpaceAI Platform]
+    reuse_count: 3
+    reuse_basis: verified_reference
+    status: active
+    notes: 引用量低但跨项目分布已成形，可升为默认门禁
+    constraints:
+      - 不改写被检查文档
+      - 头部合规不等于文档内容合格
+
+  - id: component.gpcf-new-feature
+    title: gpcf_new_feature.py（GPCF 2.0 Feature 统一入口）
+    version: v2.0
+    type: component
+    owner: GPCF
+    governor: GPCF
+    scope:
+      - Program / Project / Feature / Loop / Evidence 模型下的新开发唯一入口
+      - 消费方：GPCF 代各项目 Feature 交付
+    access: read-only
+    license: 项目群内部使用（自研，不对外分发）
+    source_path: scripts/gpcf_new_feature.py
+    evidence:
+      - source_path 存在性核对（2026-10-22 只读）
+      - 运行规则：AGENTS.md「GPCF 2.0 Feature 交付规则」
+      - 现存 Feature：features/active/ 下 F-004、F-005、F-010、F-011、F-012 等
+    reused_by: [GPCF]
+    reuse_count: 1
+    reuse_basis: artifact_usage
+    status: active
+    notes: 各项目 Feature 统一经 GPCF 入口交付，故登记在 GPCF 名下
+    constraints:
+      - 不得为单个 Feature 扩张 progress/review/task/status/log/notes/decision 文档
+      - 建 Feature 不等于授权实施
+
+  - id: component.asset-registry-validator
+    title: validate_asset_registry.py 能力资产注册表校验器
+    version: v1.0
+    type: component
+    owner: GPCF
+    governor: GPCF
+    scope:
+      - 注册表 schema、id 唯一、type/status 白名单、source_path 存在、license 非空、复用字段与敏感内容校验
+      - 消费方：GPCF 治理门禁、PG-09 后续波次
+    access: read-only
+    license: 项目群内部使用（自研，不对外分发）
+    source_path: tools/kds-sync/validate_asset_registry.py
+    evidence:
+      - source_path 存在性核对（2026-10-22 只读）
+      - 本次自检：PASS（29-status 报告粘贴真实输出）
+    reused_by: [GPCF]
+    reuse_count: 1
+    reuse_basis: verified_reference
+    status: active
+    notes: 只读校验，不写注册表；负例覆盖重复 id / 路径不存在 / 敏感字段
+    constraints:
+      - 校验通过不等于资产已被采用
+      - 不声明任何项目状态提升
+
+  - id: component.app-registry-sidebar-contract
+    title: app-registry 侧栏契约（SidebarItem / SidebarContractProps）
+    version: v1.0
+    type: component
+    owner: WAE
+    governor: GPCF
+    scope:
+      - 跨仓侧栏类型契约：id/label/path/requires + items/subject/rootPath/getCurrentPath
+      - 消费方：WAME（F-035 侧栏归并）；不包含运行时组件实现
+    access: read-only
+    license: 项目群内部使用（自研，不对外分发）
+    source_path: ../GlobalCloud WAE/packages/app-registry/src/sidebarContract.ts
+    evidence:
+      - source_path 存在性核对（2026-10-23 只读）
+      - app-registry tgz 13.1KB 含 dist/sidebarContract.d.ts（2026-10-23）
+      - 临时目录安装 tgz + tsc 消费编译 exit 0（2026-10-23）
+    reused_by: [WAE]
+    reuse_count: 1
+    reuse_basis: verified_reference
+    status: draft
+    notes: 契约已落包，WAME 侧依赖/import 待 architecture-contracts 分支落地；不声明已消费
+    constraints:
+      - 仅类型契约，不替代运行时实现
+      - 消费方需安装 tgz 或私有 registry 包
+      - 不声明任何项目状态提升
