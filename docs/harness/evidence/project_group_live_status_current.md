@@ -18,14 +18,14 @@ superseded_by: []
 data_layer: derived
 authority_level: A2
 verification_status: source_verified
-generated_at: 2026-10-22 23:50:56 +0800
+generated_at: 2026-10-23 00:21:26 +0800
 ---
 
 # GlobalCloud 项目群当前 Live 状态快照
 
 ## Summary
 
-- generated_at: `2026-10-22T23:50:56.483044+08:00`
+- generated_at: `2026-10-23T00:21:26.508156+08:00`
 - freshness_ok: `true`
 - project_count: `29`
 - pass_repo_count: `3`
@@ -52,11 +52,11 @@ generated_at: 2026-10-22 23:50:56 +0800
 | `GlobalCloud WAME` | 6 | 0 | 0 | `none` |
 | `GlobalCloud GPC` | 1 | 5 | 0 | `none` |
 | `GlobalCloud Studio` | 1 | 0 | 0 | `none` |
-| `GlobalCloud GPCF` | 934 | 5 | 0 | `".kds/development-space/\345\274\200\345\217\221/91-\346\262\273\347\220\206\344\270\216\351\252\214\346\224\266/features/active/F-034-wae-p0-shell-and-role-convergence/evidence/o2-token-consolidation.md", ".kds/development-space/\345\274\200\345\217\221/92-\350\257\201\346\215\256\344\270\216\344\274\232\350\257\235\345\275\222\346\241\243/.harness/runs/kds-real-token-sync-20260613-062146/README.md", ".kds/development-space/\345\274\200\345\217\221/92-\350\257\201\346\215\256\344\270\216\344\274\232\350\257\235\345\275\222\346\241\243/.harness/runs/kds-real-token-sync-20260613-062146/evidence/README.md", ".kds/development-space/\345\274\200\345\217\221/92-\350\257\201\346\215\256\344\270\216\344\274\232\350\257\235\345\275\222\346\241\243/.harness/runs/kds-real-token-sync-20260613-062146/patches/README.md", ".kds/development-space/\345\274\200\345\217\221/92-\350\257\201\346\215\256\344\270\216\344\274\232\350\257\235\345\275\222\346\241\243/.harness/runs/kds-real-token-sync-20260613-062146/workspaces/README.md", .harness/runs/kds-real-token-sync-20260613-062146/README.md, .harness/runs/kds-real-token-sync-20260613-062146/evidence/README.md, .harness/runs/kds-real-token-sync-20260613-062146/patches/README.md, .harness/runs/kds-real-token-sync-20260613-062146/workspaces/README.md` |
+| `GlobalCloud GPCF` | 934 | 6 | 0 | `".kds/development-space/\345\274\200\345\217\221/91-\346\262\273\347\220\206\344\270\216\351\252\214\346\224\266/features/active/F-034-wae-p0-shell-and-role-convergence/evidence/o2-token-consolidation.md", ".kds/development-space/\345\274\200\345\217\221/92-\350\257\201\346\215\256\344\270\216\344\274\232\350\257\235\345\275\222\346\241\243/.harness/runs/kds-real-token-sync-20260613-062146/README.md", ".kds/development-space/\345\274\200\345\217\221/92-\350\257\201\346\215\256\344\270\216\344\274\232\350\257\235\345\275\222\346\241\243/.harness/runs/kds-real-token-sync-20260613-062146/evidence/README.md", ".kds/development-space/\345\274\200\345\217\221/92-\350\257\201\346\215\256\344\270\216\344\274\232\350\257\235\345\275\222\346\241\243/.harness/runs/kds-real-token-sync-20260613-062146/patches/README.md", ".kds/development-space/\345\274\200\345\217\221/92-\350\257\201\346\215\256\344\270\216\344\274\232\350\257\235\345\275\222\346\241\243/.harness/runs/kds-real-token-sync-20260613-062146/workspaces/README.md", .harness/runs/kds-real-token-sync-20260613-062146/README.md, .harness/runs/kds-real-token-sync-20260613-062146/evidence/README.md, .harness/runs/kds-real-token-sync-20260613-062146/patches/README.md, .harness/runs/kds-real-token-sync-20260613-062146/workspaces/README.md` |
 | `GlobalCloud XWAIL` | 1 | 0 | 0 | `none` |
 | `GlobalCloud GFIS` | 1 | 0 | 0 | `none` |
 | `GlobalCloud MMC` | 1 | 13 | 7 | `none` |
-| `GlobalCloud KDS` | 5 | 0 | 0 | `none` |
+| `GlobalCloud KDS` | 4 | 0 | 0 | `none` |
 | `GlobalCloud XiaoG` | 1 | 1079 | 16 | `none` |
 | `GlobalCloud PVA` | 41 | 0 | 0 | `none` |
 | `GlobalCloud SOP` | 21 | 0 | 0 | `none` |
