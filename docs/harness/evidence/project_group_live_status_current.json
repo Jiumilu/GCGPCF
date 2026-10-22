@@ -33,13 +33,14 @@
     "GlobalCloud FireQuote"
   ],
   "observed_ahead": [
+    "GlobalCloud Brain",
     "GlobalCloud XiaoC",
     "GlobalCloud GPC",
-    "GlobalCloud GPCF",
     "GlobalCloud MMC",
+    "GlobalCloud KDS",
     "GlobalCloud XiaoG",
+    "GlobalCloud PKC",
     "GlobalCloud SpaceAI Platform",
-    "GlobalCloud Mem",
     "GlobalCloud WAE",
     "GlobalCloud PMC",
     "GlobalCloud SLC"
@@ -54,6 +55,7 @@
     "GlobalCloud ICP",
     "GlobalCloud KDS",
     "GlobalCloud MMC",
+    "GlobalCloud Mem",
     "GlobalCloud PDC",
     "GlobalCloud PKC",
     "GlobalCloud PMC",
@@ -72,9 +74,11 @@
     "GlobalCloud XiaoG"
   ],
   "stable_ahead": [
+    "GlobalCloud Brain",
     "GlobalCloud GPC",
-    "GlobalCloud GPCF",
+    "GlobalCloud KDS",
     "GlobalCloud MMC",
+    "GlobalCloud PKC",
     "GlobalCloud PMC",
     "GlobalCloud SLC",
     "GlobalCloud SpaceAI Platform",
@@ -95,6 +99,7 @@
     "GlobalCloud ICP",
     "GlobalCloud KDS",
     "GlobalCloud MMC",
+    "GlobalCloud Mem",
     "GlobalCloud PDC",
     "GlobalCloud PKC",
     "GlobalCloud PMC",
@@ -122,7 +127,7 @@
   "previous_generated_at": "2026-10-22T22:16:34.378513+08:00",
   "repo_heads": {
     "GlobalCloud AAAS": "f6da33ae462a784b2779311781eba6a588a1eaf0",
-    "GlobalCloud Brain": "963645e98225b17368f7da5e69c68124c99faedd",
+    "GlobalCloud Brain": "3f8cbb75e794c0ad801846b001cb415aef7ad75d",
     "GlobalCloud WAS": "239e5039aa9e791faaab8dc6d21980c413a4eed7",
     "GlobalCloud XiaoC": "9657443169e88bd5e60411fa7e0d1920d5f0a9e2",
     "GlobalCloud WAME": "aab1a9be9981a7e29dfd20ab621f295c94e60569",
@@ -132,20 +137,20 @@
     "GlobalCloud XWAIL": "ea09cdb91decfd3eaef9d3500a8667c902d034f2",
     "GlobalCloud GFIS": "683ff0e62af2f68367e2ffb138b7a0e727b2c420",
     "GlobalCloud MMC": "663831d40e606057ba1e3104333cb2261e100eb7",
-    "GlobalCloud KDS": "ec6ea3edf530dafae7324192229488010fbac88b",
+    "GlobalCloud KDS": "364e30bdc5e730aacb426cdc35e61c57b099d130",
     "GlobalCloud XiaoG": "6ed744d6db45c512cd809762420e16eeb36709ed",
     "GlobalCloud PVA": "0f2474750fe750d6056d026da2f426300d70dc4b",
     "GlobalCloud SOP": "30b16c585fb8983c046da7dacbdf604844be6ba8",
-    "GlobalCloud PKC": "99c1116ab4c97de0be028531720b6cc524c4ec0a",
+    "GlobalCloud PKC": "8ce255263760ebbc2c815c1048623f3f6d710fd2",
     "GlobalCloud XGD": "617863a751a8e0e37139f7468eb477e71a9391be",
     "GlobalCloud ICP": "8ea16a5079f5ae58e26236393a0e001ca20457ef",
     "GlobalCloud PQC": "c25fd561eb77b679a5827b85e9a16ebe2cee49d4",
-    "GlobalCloud SpaceAI Platform": "c6d1bb1da0eb6ec90f84141d1bf0ef564dcbe3b4",
+    "GlobalCloud SpaceAI Platform": "5bd911b68016bdf151f033502f02d5711de04e08",
     "GlobalCloud SpaceAI Studio": "dd99d4cb1fd63cc782c1802e7337b200a8f51a19",
     "GlobalCloud World": "4c29506acfd0bc47ba657c415e4cbddcc52cda05",
-    "GlobalCloud Mem": "e0acb22963f8684a34134d2fa2e67bab64347afc",
-    "GlobalCloud WAE": "0892cecfaa36bb3671e258b4989f59811228781a",
-    "GlobalCloud PMC": "a1f72bb5045e623c9fba09b1b45d07f59492fe86",
+    "GlobalCloud Mem": "ad8977ee2a0cf4b3d606fd55bc0c3d66f4f98966",
+    "GlobalCloud WAE": "91e215dc87257c1b6850d5e9cbdb486269af5f5a",
+    "GlobalCloud PMC": "fca2d26b64098b705ec04830e31253ba4de698c5",
     "GlobalCloud PDC": "21f0de4cccdbeeedd7f6b522fe05aff793606ae4",
     "GlobalCloud SLC": "a866196f2844dce0f98bf2a524d4a6dfcafa3b51",
     "GlobalCloud DRC": "f6bf98fa1f58a31aaec887dde15f41e61ba07495",
@@ -179,7 +184,7 @@
     },
     "GlobalCloud Brain": {
       "dirty_count": 1,
-      "ahead": 0,
+      "ahead": 1,
       "behind": 0,
       "paths": [
         "\"GlobalCloud Brain \\346\\200\\273\\344\\275\\223\\346\\226\\271\\346\\241\\210.md\""
@@ -455,8 +460,8 @@
       "sensitive_paths": []
     },
     "GlobalCloud GPCF": {
-      "dirty_count": 1057,
-      "ahead": 1,
+      "dirty_count": 1054,
+      "ahead": 0,
       "behind": 0,
       "paths": [
         "$CODEX_HOME/automations/globalcloud-17/README.md",
@@ -996,10 +1001,10 @@
         "docs/harness/evidence/batch2-tracking-20261022.md",
         "docs/harness/evidence/globalcloud-project-group-external-loop-gate-delegate-baseline-20260627.md",
         "docs/harness/evidence/l3_admission_assessment.json",
-        "docs/harness/evidence/wame-sidebar-consumption-plan-20261023.md",
         "docs/harness/loops/README.md",
         "docs/harness/minimum-closed-loop/README.md",
         "docs/harness/tasks/README.md",
+        "docs/reports/p16-test-build-owner-checklist-20261022.md",
         "docs/standards/README.md",
         "features/active/F-010-project-group-ui-engineering-coverage/artifacts/.gitkeep",
         "features/active/F-010-project-group-ui-engineering-coverage/artifacts/studio-runtime-reference/studio-settings-desktop-20260712.json",
@@ -1035,7 +1040,6 @@
         "features/active/F-019-icp-industry-console/feature.yaml",
         "features/active/F-019-icp-industry-console/journal.md",
         "features/active/F-025-project-group-arch-iteration/journal.md",
-        "features/active/F-035-wame-sidebar-unification/feature.yaml",
         "loop/context/cognee/README.md",
         "loop/context/cognee/harness/README.md",
         "loop/context/headroom/README.md",
@@ -1121,11 +1125,9 @@
         "runtime/queue.json",
         "runtime/state.json",
         "templates/README.md",
-        "tests/test_gpcf_governance_remediation.py",
         "third_party/agent-reach/README.md",
         "tools/README.md",
         "tools/kds-sync/README.md",
-        "tools/kds-sync/build_project_group_live_status_current.py",
         "tools/kds-sync/document_control.py",
         "tools/kds-sync/validate_icp_project_registration.py",
         "tools/kds-sync/validate_project_group_external_loop_gate_delegate_baseline_20260627.py",
@@ -1160,6 +1162,7 @@
         "\".kds/development-space/\\345\\274\\200\\345\\217\\221/12-GPCF/docs/reports/p07-disposition-ledger-evidence-20261022.md\"",
         "\".kds/development-space/\\345\\274\\200\\345\\217\\221/12-GPCF/docs/reports/p08-p09-owner-execution-packets-20261022.md\"",
         "\".kds/development-space/\\345\\274\\200\\345\\217\\221/12-GPCF/docs/reports/p12-pqc-real-pilot-authorization-request-20261022.md\"",
+        "\".kds/development-space/\\345\\274\\200\\345\\217\\221/12-GPCF/docs/reports/p14-pqc-pilot-execution-runbook-20261022.md\"",
         "\".kds/development-space/\\345\\274\\200\\345\\217\\221/12-GPCF/docs/reports/p16-ci-matrix-gap-analysis-20261022.md\"",
         "\".kds/development-space/\\345\\274\\200\\345\\217\\221/12-GPCF/docs/reports/status-source-of-truth-findings-20261022.md\"",
         "\".kds/development-space/\\345\\274\\200\\345\\217\\221/12-GPCF/docs/reports/world-f021-attribution-sync-checklist-20261022.md\"",
@@ -1322,10 +1325,9 @@
         "docs/harness/evidence/pj24-wae-p0-plan-20261022.md",
         "docs/harness/evidence/pj25-pmc-plane-verification-20261022.md",
         "docs/harness/evidence/pre-wave1-review-pack-20261022.md",
-        "docs/harness/evidence/wame-f035-handoff-20261023.md",
         "docs/harness/evidence/wave1-review-pack-20261022.md",
         "docs/reports/README.md",
-        "docs/reports/p16-test-build-owner-checklist-20261022.md",
+        "docs/reports/p14-pqc-pilot-execution-runbook-20261022.md",
         "docs/runbooks/README.md",
         "docs/runbooks/runtime-host-v1.0.md",
         "features/active/F-029-hermes-ai-runtime-admission/artifacts/.gitkeep",
@@ -1558,7 +1560,7 @@
     },
     "GlobalCloud KDS": {
       "dirty_count": 3,
-      "ahead": 0,
+      "ahead": 1,
       "behind": 0,
       "paths": [
         "_meta/hermes-memory-log.md",
@@ -1656,7 +1658,7 @@
     },
     "GlobalCloud PKC": {
       "dirty_count": 17,
-      "ahead": 0,
+      "ahead": 1,
       "behind": 0,
       "paths": [
         "\"GlobalCloud PKC \\346\\200\\273\\344\\275\\223\\346\\226\\271\\346\\241\\210.md\"",
@@ -1734,8 +1736,8 @@
       "sensitive_paths": []
     },
     "GlobalCloud SpaceAI Platform": {
-      "dirty_count": 69,
-      "ahead": 23,
+      "dirty_count": 70,
+      "ahead": 25,
       "behind": 1,
       "paths": [
         ".standards/VERSION",
@@ -1788,6 +1790,7 @@
         ".harness/runs/20261022-panorama-ops/41-r7a-shell.md",
         ".harness/runs/20261022-panorama-ops/42-r7b-asset-tree.md",
         ".harness/runs/20261022-panorama-ops/43-r7c-palette-datainfo.md",
+        ".harness/runs/20261022-panorama-ops/44-r7d-fav-voice.md",
         ".harness/runs/20261022-panorama-ops/b0b1/b0b1.patch",
         ".harness/runs/20261022-panorama-ops/b0b1/b0b1b2.patch",
         ".harness/runs/20261022-panorama-ops/checks/b5f-bubbles-v2.mjs",
@@ -1804,8 +1807,8 @@
         "apps/desktop/public/gc-feedback-entry.js",
         "apps/desktop/src/feedback/embedFeedback.ts",
         "\"docs/\\345\\205\\250\\346\\231\\257\\346\\200\\201\\345\\212\\277_\\346\\223\\215\\344\\275\\234\\346\\265\\201\\347\\250\\213\\350\\247\\204\\350\\214\\203\\345\\214\\226\\344\\270\\216\\345\\220\\210\\347\\220\\206\\345\\214\\226\\346\\226\\271\\346\\241\\210_20261022.md\"",
-        "plugins/map-3d/src/panorama/useFavorites.ts",
-        "plugins/map-3d/src/panorama/useVoiceCmd.ts",
+        "plugins/map-3d/src/panorama/useBubbleEnhance.ts",
+        "plugins/map-3d/tests/panorama-bubble-enhance.test.ts",
         "\"\\351\\227\\256\\351\\242\\230\\346\\212\\245\\345\\221\\212_\\346\\265\\213\\350\\257\\225\\344\\270\\264\\346\\227\\266\\345\\272\\223\\344\\270\\215\\346\\270\\205\\347\\220\\206_20261014.md\""
       ],
       "sensitive_paths": []
@@ -1827,30 +1830,29 @@
       "sensitive_paths": []
     },
     "GlobalCloud Mem": {
-      "dirty_count": 2,
-      "ahead": 1,
+      "dirty_count": 3,
+      "ahead": 0,
       "behind": 0,
       "paths": [
+        "\"docs/GCMEM-v3-holdout\\345\\244\\215\\346\\240\\270.md\"",
         "tests/review_v3_holdout.py",
         "tests/v3_holdout_review_report.json"
       ],
       "sensitive_paths": []
     },
     "GlobalCloud WAE": {
-      "dirty_count": 4,
-      "ahead": 5,
+      "dirty_count": 2,
+      "ahead": 8,
       "behind": 0,
       "paths": [
-        "apps/wame/src/app/modules/idp-console/IdpConsolePage.tsx",
         "packages/app-registry/src/index.ts",
-        "packages/host-kit/src/host/idpRoutes.ts",
         "packages/app-registry/src/sidebarContract.ts"
       ],
       "sensitive_paths": []
     },
     "GlobalCloud PMC": {
       "dirty_count": 3,
-      "ahead": 2,
+      "ahead": 3,
       "behind": 0,
       "paths": [
         "PROJECT_HARNESS_MANIFEST.md",
