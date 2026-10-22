@@ -713,3 +713,12 @@ lifecycleState: draft
 | Hermes/XGD -> XiaoC | C0/C2 | Hermes / XGD | CON-GPC-WAES-001 | 模型调用请求、Agent 运行上下文、建议结果回传 |
 | 自定义模型 -> WAME 准入网关 | C0/C4 | WAME | CON-GPC-WAES-001 | 自定义模型准入、风险评估、授权生效 |
 | 本地模型 -> XiaoC/Hermes | C0/C2 | XiaoC / Hermes | CON-GPC-WAES-001 | 本地模型调用、计量记录、越权拦截 |
+
+---
+
+## 附：连接器编号命名对照（2026-10-22 · CONFLICT-08）
+
+- **统一命名 = WAME**；`WAES` 为历史别名一版。
+- 既有编号 `CON-GFIS-WAES-001` **保留不改**（历史证据/已发布合同按 legacy alias 读取），在本合同标注为 **superseded**；新连接器/新合同使用 `CON-GFIS-WAME-001` 及后续编号。
+- 订阅方迁移：按 `wame.` 域订阅；迁移期如需双订阅，由订阅方按事件 `idempotencyKey` 去重（见事件合同 §14.4）。
+- 不改写任何历史证据中的 `WAES` 字样；运行时代码/域名改名由 WAE/WAME 属主另行排期。

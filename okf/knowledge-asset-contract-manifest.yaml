@@ -86,3 +86,12 @@ status_boundary:
   customer_accepted: false
   kds_write_authorized: false
   deployment_authorized: false
+
+# ── CONFLICT-04 版本语义（2026-10-22 追加，老卢裁决 A：semver + 内容哈希双标识）──
+version_semantics:
+  semver: contract_version
+  content_hash: canonical_manifest_sha256
+  rule: >-
+    内容变更即内容哈希变更；破坏性变更升主版本，兼容新增升次版本；
+    线上契约 camelCase 引用 contentHash，存储/canonical 用 snake_case canonical_manifest_sha256；
+    二者同时校验，禁止同版本多哈希。

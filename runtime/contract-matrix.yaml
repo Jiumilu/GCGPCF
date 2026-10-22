@@ -1,6 +1,6 @@
 schema_version: 1
 matrix_id: globalcloud.cross_project_contract_matrix
-generated_at: "2026-10-22T19:50:00+08:00"
+generated_at: "2026-10-22T21:05:00+08:00"
 owner: GPCF
 scope: 项目群跨项目契约盘点（inventory，只读）。只登记版本、状态、Schema 路径、证据、消费方、兼容规则与冲突点；不签署、不冻结、不授权、不改写任何被盘点契约。
 source_of_truth: false
@@ -210,8 +210,24 @@ conflicts:
       - 01-architecture/GlobalCloud 项目群总体方案.md
     impact: 跨契约字段映射靠手工，易出现同一语义两种拼写（contentDigest / content_digest）导致校验漏判与台账对不齐。
     recommendation: 在 XAP 侧定义「线上契约 camelCase、存储 snake_case、转换点唯一」的规则，并把转换点写进消费者接入清单。
-    status: open
+    status: closed
     inferred: false
+    adjudication:
+      decision: "A"
+      decided_by: 老卢
+      decided_at: "2026-10-22"
+      summary: "线上 camelCase / 存储 snake_case / 转换点唯一；转换点写入接入清单"
+    closure:
+      closed_at: "2026-10-22"
+      closed_scope: "契约条款落仓：XAP 规格 §九（线上 camelCase / 存储 snake_case / 转换点唯一 + 3 个转换点登记）；零字段重命名"
+      closed_changes:
+        - "01-architecture/XAP回执与执行报告规格草案_v0.1.md 追加 §九 字段命名与 casing + 转换点清单（C1 XWAIL canonical / C2 WAME SQLite / C3 KDS canonical）"
+      verification:
+        - "XWAIL: check_object_schemas PASS 34 / FAIL 0；validate_xwail --all pass；verify_xap --all pass"
+      residual:
+        - "转换点仅登记 3 个已知边界，未做全量消费者逐字段审计；新消费者接入须声明其使用的转换点"
+      evidence: 01-architecture/XAP回执与执行报告规格草案_v0.1.md
+      implementation: "landed_2026-10-22"
 
   - conflict_id: CONFLICT-04
     topic: 版本语义
@@ -231,8 +247,27 @@ conflicts:
       - features/active/F-013-knowledge-asset-model-system/artifacts/gke-001-canonical-v0.1-17c9-freeze-20261012.yaml
     impact: 消费方无法用版本号判断契约是否变化；同一版本号可能对应不同哈希，缓存、兼容判定与回放全部不可靠。
     recommendation: 统一为「契约版本 semver + 内容哈希」双标识：内容变更即哈希变，破坏性变更才升主版本；前端展示与门禁同时校验两者。
-    status: open
+    status: closed
     inferred: false
+    adjudication:
+      decision: "A"
+      decided_by: 老卢
+      decided_at: "2026-10-22"
+      summary: "契约版本 semver + 内容哈希双标识"
+    closure:
+      closed_at: "2026-10-22"
+      closed_scope: "XWAIL manifest schema v1.2 + contentHash 校验 + 契约文档双标识规则 + canonical manifest version_semantics"
+      closed_changes:
+        - "GlobalCloud XWAIL schemas-json/xap-manifest.schema.json：contract v1.2 增 contentHash（semver + 内容哈希双标识），schemaVersion 允许 1.2"
+        - "GlobalCloud XWAIL scripts/xwail_common.py：contentHash 格式校验；新增正例 pos-contenthash / 负例 neg-contenthash-format"
+        - "GPCF XAP 规格 §十、事件合同 §14.1、okf/knowledge-asset-contract-manifest.yaml version_semantics 同步双标识规则"
+      verification:
+        - "XWAIL: check_object_schemas PASS 34 / FAIL 0（含新正/负例）；validate_xwail --all pass；verify_xap --all pass"
+        - "GPCF: tools/kds-sync/validate_knowledge_asset_model_system.py → knowledge_asset_model_gate=pass"
+      residual:
+        - "工具未做『version 未变但 contentHash 变』的自动漂移告警；事件运行时未计算合同 contentHash"
+      evidence: ../GlobalCloud XWAIL/schemas-json/xap-manifest.schema.json
+      implementation: "landed_2026-10-22"
 
   - conflict_id: CONFLICT-05
     topic: XAP 签名与无签名边界
@@ -250,8 +285,28 @@ conflicts:
       - features/active/F-033-r1-ecosystem-integration/feature.yaml
     impact: 无签名包与签名包在受理台账里无法区分强度，回执的 authority 与完整性证据可能被当成同一等级证据。
     recommendation: 在 manifest Schema 显式加 signature 与 digest 定义（可选但可判），台账记录 signature_status；正式治理受理要求签名，PoC 受理标注 no_signature 且不得作为治理证据。
-    status: open
+    status: closed
     inferred: false
+    adjudication:
+      decision: "A"
+      decided_by: 老卢
+      decided_at: "2026-10-22"
+      summary: "manifest 显式 signature/digest；正式要求签名，PoC 标 no_signature"
+    closure:
+      closed_at: "2026-10-22"
+      closed_scope: "manifest 显式 signature/digest（schema v1.2 + 负例）；WAME 台账 signature_status 三态 + 发布/查询响应；PoC 标 no_signature 口径"
+      closed_changes:
+        - "GlobalCloud XWAIL schemas-json/xap-manifest.schema.json：显式 signature{algorithm/keyId/signature/scope/digest?}；新增 neg-signature-algorithm 负例（策略可判）"
+        - "GlobalCloud WAME server/xap-intake/intake_core.py：publications.signature_status 列（幂等迁移）+ publish/get_publication 返回 signatureStatus；_signature_status 三态判定"
+        - "GlobalCloud WAME server/xap-intake/tests/test_intake.py：+3 测试（PoC no_signature / formal / invalid_signature）"
+        - "GPCF XAP 规格 §十一；F-033 PoC 包按 no_signature 记录、不得作为治理证据"
+      verification:
+        - "XWAIL: check_object_schemas PASS 34 / FAIL 0；validate_xwail --all pass；verify_xap --all pass"
+        - "WAME: python3 -m unittest discover -s tests -q → Ran 87 tests OK（84+3）"
+      residual:
+        - "受理侧未强制拒绝 no_signature/formal 治理请求（仅台账可判）；本任务未新增错误码（CONFLICT-02 错误码注册表已由并发任务落仓）"
+      evidence: ../GlobalCloud WAME/server/xap-intake/intake_core.py
+      implementation: "landed_2026-10-22"
 
   - conflict_id: CONFLICT-06
     topic: 幂等键构成
@@ -266,8 +321,24 @@ conflicts:
       - 01-architecture/XAP回执与执行报告规格草案_v0.1.md
     impact: 同一业务动作既发事件又提 XAP 包时，可能出现重复处理或误判重复，补偿规则失效。
     recommendation: 定义「业务动作幂等键 → 事件 idempotencyKey → XAP 包幂等键」三段映射，或在事件信封中加 packageRef 关联字段。
-    status: open
+    status: closed
     inferred: false
+    adjudication:
+      decision: "A"
+      decided_by: 老卢
+      decided_at: "2026-10-22"
+      summary: "业务动作→事件 idempotencyKey→XAP 包幂等键三段映射"
+    closure:
+      closed_at: "2026-10-22"
+      closed_scope: "事件合同契约条款：信封可选 packageRef + 幂等三段映射（业务动作键→事件 idempotencyKey→XAP 包键）"
+      closed_changes:
+        - "03-data-ai-knowledge/GlobalCloud绿色供应链体系事件合同.md §14.2/§14.3：可选 packageRef{packageId,version,contentHash?} + 三段映射表与不变量；既有事件不变"
+      verification:
+        - "契约文本落仓；既有事件字段未改动（向后兼容）；WAME 幂等键既有测试套 87 tests OK 覆盖 XAP 侧行为"
+      residual:
+        - "事件信封无机器可校验 JSON Schema（事件合同为文本契约）；WAE/WAME 事件运行时尚未消费 packageRef 做自动对账"
+      evidence: 03-data-ai-knowledge/GlobalCloud绿色供应链体系事件合同.md
+      implementation: "landed_2026-10-22"
 
   - conflict_id: CONFLICT-07
     topic: decision 字段同名双枚举
@@ -332,5 +403,22 @@ conflicts:
       - features/active/F-013-knowledge-asset-model-system/artifacts/gke-001-canonical-v0.1-17c9-freeze-20261012.yaml
     impact: 同一治理域在两套契约里两个名字，事件路由、订阅与台账归集会出现两套标识。
     recommendation: 事件合同增补命名对照（waes. 为历史别名，wame. 为新名），连接器编号保留但标注 superseded，订阅方按新名迁移。
-    status: open
+    status: closed
     inferred: false
+    adjudication:
+      decision: "A"
+      decided_by: 老卢
+      decided_at: "2026-10-22"
+      summary: "统一 WAME 命名，保留 WAES legacy 映射一版"
+    closure:
+      closed_at: "2026-10-22"
+      closed_scope: "事件合同 + 连接器合同命名对照：WAES 为 legacy alias、WAME 为统一名；连接器编号 legacy superseded 映射"
+      closed_changes:
+        - "03-data-ai-knowledge/GlobalCloud绿色供应链体系事件合同.md §14.4：waes.→wame. 别名表、CON-GFIS-WAES-001→CON-GFIS-WAME-001、历史证据不改写"
+        - "03-data-ai-knowledge/GlobalCloud绿色供应链体系连接器合同.md 附：编号 legacy 映射与订阅方迁移规则"
+      verification:
+        - "契约文本落仓；历史证据未改写（零删除）；WAME 87 tests OK / XWAIL 34 fixtures pass 不受影响"
+      residual:
+        - "WAE/WAME 运行时域名与连接器代码/配置未改名（属主排期）；订阅方迁移未执行"
+      evidence: 03-data-ai-knowledge/GlobalCloud绿色供应链体系事件合同.md
+      implementation: "landed_2026-10-22"

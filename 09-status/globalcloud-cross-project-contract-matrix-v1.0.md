@@ -305,3 +305,37 @@ FAIL validate_contract_matrix: 1 项校验失败（matrix=/tmp/pg12-neg/missing-
 - 本次 A3/A4/A5 为**工作区改动，未 commit / push**。
 - `closed` 表示 A1–A4 已落仓并本地验证、A5 矩阵刷新完成；**不表示**跨仓生产集成、契约冻结/签署或任何项目状态提升。
 - 不声明任何项目 `accepted` / `integrated` / `production_ready` / `customer_accepted`。
+
+---
+
+## 9. 剩余 5 条契约落仓（2026-10-22 · 03 / 04 / 05 / 06 / 08）
+
+> 承接 §7–§8。本轮按老卢裁决 A 落仓 5 条剩余冲突的**契约条款 + 最小实现/测试**；不声明契约冻结，不改生产，不 commit/push。
+> 机器状态以 `runtime/contract-matrix.yaml` 为准：`CONFLICT-03/04/05/06/08` 由 `mitigated` 改为 **`closed`**（各附 `closure` 块：落仓范围/改动/验证/残留/证据）。另：`CONFLICT-02`（XAP 错误码注册表）由并发任务于同日落仓关闭（`runtime/xap-error-code-registry.yaml` + 校验器），非本轮改动。
+
+| conflict | 落仓内容 | 验证 | 残留 |
+|---|---|---|---|
+| CONFLICT-03 casing | XAP 规格 §九：线上 camelCase / 存储 snake_case / 转换点唯一 + 3 个已知转换点（XWAIL canonical / WAME SQLite / KDS canonical）；零字段重命名 | XWAIL 34 fixtures PASS / validate_xwail & verify_xap pass | 仅登记 3 个已知边界，未做全量消费者逐字段审计 |
+| CONFLICT-04 版本语义 | XWAIL manifest schema **v1.2** 增 `contentHash`（semver + 内容哈希双标识，`schemaVersion` 允许 1.2）+ validator 校验 + 正/负例；XAP 规格 §十、事件合同 §14.1、canonical manifest `version_semantics` | `check_object_schemas` **PASS 34 / FAIL 0**；`validate_xwail`/`verify_xap` pass；KDS canonical gate pass | 未做"version 未变但哈希变"自动漂移告警；事件运行时未计算合同 contentHash |
+| CONFLICT-05 签名边界 | manifest 显式 `signature`/`digest`（v1.2 + `neg-signature-algorithm` 负例）；WAME `publications.signature_status`（幂等迁移）+ `publish`/`get_publication` 返回 `signatureStatus`（formal/no_signature/invalid_signature）+ 3 测试；PoC 标 no_signature | XWAIL 34 PASS；WAME **Ran 87 tests OK**（84+3） | 受理侧未强制拒绝 no_signature/formal（仅台账可判）；未新增错误码 |
+| CONFLICT-06 幂等 | 事件合同 §14.2/§14.3：信封可选 `packageRef{packageId,version,contentHash?}` + 业务动作→事件 idempotencyKey→XAP 包键三段映射与不变量；既有事件不变 | 契约文本落仓；向后兼容（既有字段零改动） | 事件信封无机器校验 JSON Schema；事件运行时未消费 packageRef 自动对账 |
+| CONFLICT-08 命名 | 事件合同 §14.4：`waes.`→`wame.` 别名表、`CON-GFIS-WAES-001`→`CON-GFIS-WAME-001`（legacy superseded）；连接器合同附 legacy 映射；历史证据零改写 | 契约文本落仓；WAME 87 tests / XWAIL 34 fixtures 不受影响 | WAE/WAME 运行时域名与连接器代码/配置未改名（属主排期） |
+
+### 9.1 改动文件
+
+- `GlobalCloud XWAIL/schemas-json/xap-manifest.schema.json`（v1.2：contentHash；schemaVersion 1.2）
+- `GlobalCloud XWAIL/scripts/xwail_common.py`（contentHash 校验）
+- `GlobalCloud XWAIL/schemas-json/testcases/{positive,negative}/...`（+1 正例 / +2 负例）
+- `GlobalCloud WAME/server/xap-intake/intake_core.py`（signature_status 三态 + 幂等迁移）
+- `GlobalCloud WAME/server/xap-intake/tests/test_intake.py`（+3 测试）
+- `GlobalCloud GPCF/01-architecture/XAP回执与执行报告规格草案_v0.1.md`（§九/§十/§十一）
+- `GlobalCloud GPCF/03-data-ai-knowledge/GlobalCloud绿色供应链体系事件合同.md`（§14）
+- `GlobalCloud GPCF/03-data-ai-knowledge/GlobalCloud绿色供应链体系连接器合同.md`（命名/编号附）
+- `GlobalCloud GPCF/okf/knowledge-asset-contract-manifest.yaml`（version_semantics）
+- `GlobalCloud GPCF/runtime/contract-matrix.yaml` + 本文件
+
+### 9.2 非声明
+
+- 不声明契约冻结/统一/签署；`closed` 表示契约条款落仓 + 最小实现/测试通过，不等于各系统运行时已全部迁移。
+- 未 commit / push；未改生产；未声明任何项目状态提升。
+- 并发任务对 `CONFLICT-02` 的关闭与错误码注册表改动未在本轮范围内回退或改写。
