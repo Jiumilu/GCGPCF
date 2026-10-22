@@ -18,7 +18,7 @@ concurrency:
 jobs:
   standards:
     name: 统一规范检查（R01-R20）
-    runs-on: [self-hosted, macOS]
+    runs-on: ubuntu-latest
     timeout-minutes: 10
     env:
       GIT_LFS_SKIP_SMUDGE: "1"
