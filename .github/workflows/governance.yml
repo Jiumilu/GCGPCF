@@ -29,11 +29,7 @@ jobs:
       - run: python -m pip install -r requirements-dev.txt
       # 文档闸：本地 KDS 镜像元数据与 doc_id 一致性
       - run: python tools/kds-sync/document_control.py --check
-      # 证据闸：Evidence 规则版本 + 授权台账 + 契约矩阵
-      - run: python tools/kds-sync/validate_evidence_rule_version.py
-        continue-on-error: true   # 待基线更新：done 数已由 10 增至 14
-      - run: python tools/kds-sync/validate_project_group_single_authorization_ledger.py
-      - run: python tools/kds-sync/validate_contract_matrix.py
+      # 证据闸：XAP 错误码注册表（其余证据闸脚本当前仓内不存在，待补齐后恢复）
       - run: python tools/kds-sync/validate_xap_error_code_registry.py
       # Feature 关闭闸：queue/state 与 Feature 工作区一致性（待 Firebase/ROADMAP 存量修复后转阻断）
       - run: python tools/kds-sync/validate_gpcf_2_feature_workspace.py

@@ -34,10 +34,11 @@ jobs:
           set -e
           REPO_NAME="GlobalCloud GPCF"
           WS="$RUNNER_TEMP/ws"
-          mkdir -p "$WS/GlobalCloud GPCF/config"
+          mkdir -p "$WS/$REPO_NAME/config"
           cp -R repo/.standards "$WS/_governance"
-          cp repo/.standards/registry/project-group-projects.yaml "$WS/GlobalCloud GPCF/config/"
-          cp -R repo "$WS/$REPO_NAME"
+          # 只拷仓库内容（排除 .git 与本地镜像，避免嵌套仓库/体积），而不是把 repo 目录拷进目标下
+          ( cd repo && tar --exclude=.git --exclude=.kds -cf - . ) | ( cd "$WS/$REPO_NAME" && tar -xf - )
+          cp repo/.standards/registry/project-group-projects.yaml "$WS/$REPO_NAME/config/"
           echo "workspace ready: $WS"
 
       - name: 统一规范检查（error 阻断）
