@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://globalcloud.local/schemas/event-envelope-package-ref.schema.json",
+  "title": "事件信封 packageRef 片段（CONFLICT-06）",
+  "description": "事件合同 §14.2 的可选 packageRef；用于把事件 idempotencyKey 与 XAP 包幂等键关联。完整事件信封 schema 由事件合同 owner 维护，本文件只定义该片段。",
+  "type": "object",
+  "required": ["packageId", "version"],
+  "properties": {
+    "packageId": { "type": "string", "minLength": 1 },
+    "version": { "type": "string", "pattern": "^v?[0-9]+\\.[0-9]+(\\.[0-9]+)?$" },
+    "contentHash": { "type": "string", "pattern": "^[a-f0-9]{64}$" }
+  },
+  "additionalProperties": false
+}
