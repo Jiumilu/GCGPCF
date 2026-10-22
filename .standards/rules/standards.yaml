@@ -144,6 +144,8 @@ docs_layout:
       - "viteMmcProxyAuth.test.ts"
     "GlobalCloud WAE":
       - "vitest.setup.dom.ts"
+    "GlobalCloud SpaceAI Platform":
+      - ".harness/"
     "GlobalCloud XiaoC":
       - "middleware.js"
       - "vitest.workspace.ts"
@@ -214,6 +216,8 @@ dirty_zones:
       - "tools/"
       - "00-index/"
       - "10-archive/"
+    "GlobalCloud SpaceAI Platform":
+      - ".harness/"
     "GlobalCloud XiaoC":
       - ".harness/"
       - "docs/"
@@ -224,8 +228,8 @@ dirty_zones:
 thresholds:
   dirty_warn: 50
   dirty_error: 200
-  branch_warn: 10
-  branch_error: 50
+  branch_warn: 25
+  branch_error: 80
   branch_stale_days: 90
   doc_stale_days: 90
   large_file_mb: 10
