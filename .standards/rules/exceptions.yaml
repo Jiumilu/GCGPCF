@@ -1,0 +1,44 @@
+# GlobalCloud 项目群豁免台账
+# 规则来源：_governance/rules/standards.yaml
+# 必填字段：repo / rule / reason / until（YYYY-MM-DD，最长期限 ≤90 天）
+# 规则：到期自动失效并转 warn；不得自动续期；同一仓同一规则连续两次豁免 → 触发规范修订评审。
+# 校验：python3 _governance/tools/gc_standard.py validate
+schema_version: 1
+exceptions:
+  - repo: "GlobalCloud KDS"
+    rule: "R13-large-tracked-files"
+    reason: "KDS 媒体/证据资产允许入库；媒体扩展名已走白名单，剩余 >10MB JSON 证据待归档外置"
+    until: "2026-12-31"
+    approved_by: "laolu"
+
+  - repo: "GlobalCloud Studio"
+    rule: "R03-worktree-location"
+    reason: "存量 worktree GlobalCloud Studio-release0 位于项目群根内（prunable），待清理归档后移除豁免"
+    until: "2026-12-31"
+    approved_by: "laolu"
+
+  # WAES 退役仓：承载双决策模型策略文件（dual-policies.yaml），迁移前不可归档
+  - repo: "GlobalCloud WAES"
+    rule: "R02-registered"
+    reason: "已退役（2026-10-22），但 MCP 决策模型仍读取其 runtime 策略文件；策略迁移后归档进 _archive"
+    until: "2026-12-31"
+    approved_by: "laolu"
+
+  - repo: "GlobalCloud WAES"
+    rule: "R04-required-files"
+    reason: "退役冻结仓，不再补四件套；归档前保持原样"
+    until: "2026-12-31"
+    approved_by: "laolu"
+
+  - repo: "GlobalCloud WAES"
+    rule: "R05-gitignore-coverage"
+    reason: "退役冻结仓，不再维护 .gitignore；归档前保持原样"
+    until: "2026-12-31"
+    approved_by: "laolu"
+
+  # SpaceAI Studio：legacy WinForms（.NET）工程，源码在仓库根目录，迁移需同步 .sln/.csproj 并复跑构建
+  - repo: "GlobalCloud SpaceAI Studio"
+    rule: "R10-docs-layout"
+    reason: "存量 legacy .NET 工程根目录布局（约 50 个 .cs）；迁移到 src/ 需改 .sln/.csproj 并做构建验证，待专项迁移"
+    until: "2027-01-20"
+    approved_by: "laolu"
