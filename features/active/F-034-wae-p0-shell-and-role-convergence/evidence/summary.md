@@ -9,7 +9,7 @@ version: v1.1
 owner: GPCF
 kds_space: 开发
 kds_path: 开发/91-治理与验收/features/done/F-034-wae-p0-shell-and-role-convergence/evidence/summary.md
-source_path: features/done/F-034-wae-p0-shell-and-role-convergence/evidence/summary.md
+source_path: features/active/F-034-wae-p0-shell-and-role-convergence/evidence/summary.md
 sync_direction: local_only
 last_reviewed: 2026-10-22
 supersedes: []
