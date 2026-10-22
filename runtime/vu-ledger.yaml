@@ -772,11 +772,11 @@ vu_units:
   object: 工作台运行实例与页面
   source_of_record: Studio 本地 runtime
   acceptor: Studio owner
-  stage: S2
-  stage_evidence: F-011 tests/build/screenshots pass、api waived；current_step evaluate，未收口
+  stage: S3
+  stage_evidence: F-011 已 closed（check-only close_candidate=true）；tests/build/screenshots pass、api waived；工作台证据包在 done 目录
   data_class: fixture
   inferred: true
-  notes: 证据三项 pass，缺收口与专属验收命令
+  notes: evidence 包 + 关闭复核 = S3；多用户/无障碍另由 Studio-VU-02 承担
 - vu_id: Studio-VU-02
   project: Studio
   weight: 3

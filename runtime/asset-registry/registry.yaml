@@ -646,11 +646,12 @@ entries:
       - source_path 存在性核对（2026-10-23 只读）
       - app-registry tgz 13.1KB 含 dist/sidebarContract.d.ts（2026-10-23）
       - 临时目录安装 tgz + tsc 消费编译 exit 0（2026-10-23）
-    reused_by: [WAE]
-    reuse_count: 1
+      - WAME 分支 b233438/ea8f321 消费并 push（2026-10-23）
+    reused_by: [WAE, WAME]
+    reuse_count: 2
     reuse_basis: verified_reference
-    status: draft
-    notes: 契约已落包，WAME 侧依赖/import 待 architecture-contracts 分支落地；不声明已消费
+    status: active
+    notes: 契约已落包；WAME architecture-contracts 分支 b233438 落依赖+import 并已 push（2026-10-23）
     constraints:
       - 仅类型契约，不替代运行时实现
       - 消费方需安装 tgz 或私有 registry 包
