@@ -31,6 +31,12 @@ derived_views:
     fields:
       loop_status: "由 feature.yaml 汇总（同一 Feature 只认源值）"
 
+# 派生优先级（2026-10-22 Q3 裁定）：governance_blocked/status=blocked > dispatched=false(queued) > step 映射
+# 源侧新增可选字段（缺省 dispatched=true, governance_blocked=false）：
+#   loop.dispatched: true|false          # 是否已派发给执行角色
+#   loop.governance_blocked: true|false  # 是否因治理原因阻塞
+derivation_priority: ["status==done -> closed", "governance_blocked|status==blocked -> blocked", "dispatched==false -> queued", "step -> step_to_queue_status"]
+
 step_vocabulary: [plan, implement, evaluate, repair, commit]
 role_by_step:
   plan: Planner

@@ -66,15 +66,22 @@ def expected_from_feature(feature: dict) -> dict:
     loop = feature.get("loop") or {}
     step = str(loop.get("current_step") or "").strip()
     status = str(feature.get("status") or "").strip()
-    if status == "blocked":
-        queue_status = "blocked"
-        role = ROLE_BY_STEP.get(step) or "Evaluator"
-    else:
-        queue_status = STEP_TO_QUEUE_STATUS.get(step)
-        role = ROLE_BY_STEP.get(step)
+    # P03 派生优先级（老卢 2026-10-22 裁定：在源侧补两个维度）
+    #   governance_blocked(或 status=blocked) > dispatched=false(queued) > step 映射
+    governance_blocked = bool(loop.get("governance_blocked")) or status == "blocked"
+    dispatched = loop.get("dispatched", True)
     if status == "done":
         queue_status = "closed"
         role = ROLE_BY_STEP.get("commit", "Recorder")
+    elif governance_blocked:
+        queue_status = "blocked"
+        role = ROLE_BY_STEP.get(step) or "Evaluator"
+    elif not dispatched:
+        queue_status = "queued"
+        role = "Dispatcher"
+    else:
+        queue_status = STEP_TO_QUEUE_STATUS.get(step)
+        role = ROLE_BY_STEP.get(step)
     return {
         "project": feature.get("project"),
         "priority": feature.get("priority"),
