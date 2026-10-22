@@ -5,7 +5,7 @@ project: GPCF
 related_projects: [GPCF]
 domain: governance
 status: controlled
-version: v1.10
+version: v1.11
 owner: GPCF
 kds_space: 开发
 kds_path: 开发/91-治理与验收/projects/spaceai/STATUS.md
@@ -133,7 +133,8 @@ superseded_by: []
 - 接口：`/healthz` 200（263 端点）；`/RestFul/Rebuild/Tileset` 200（2 条资产：占位 1 条 published、SIMULATED 1 条未发布）。
 - 证据索引：`features/active/F-037-map-3d-l4-precision-model/evidence/`、`features/active/F-038-panorama-operation-normalization/evidence/`。
 - 测试与 e2e：小种子库（18.9MB / 构建 0.5s）+ `webServer` 常态化（`pnpm e2e:smoke`）；数据保留方案与压缩工具（dry-run）就绪。
-- **未执行**：远端 CI（未 push，工作流只在本地等价跑通）；时间窗归档（D-10 剩余，需数据变旧，当前 0 行到期）；KDS 镜像提交（镜像由自动同步写入，但镜像树与源码差异有上千条未提交，属独立操作，见 D-11）。
+- **未执行**：时间窗归档（D-10 剩余，需数据变旧，当前 0 行到期）；真实 KDS API 写入（本轮只做本地镜像）。
+- **已执行**：远端 CI 已恢复（GPCF 注册 self-hosted runner `mac-mini-gpcf`，repository-checks + 统一规范检查均跑通）；KDS 镜像全量收敛并提交（D-11 关闭，PR #57）。
 - OpenSpec 变更账：`openspec/changes/spaceai-l4-precision-model`、`openspec/changes/spaceai-panorama-operation-normalization`（2026-10-22 补建，三层对齐 `[OK]`）。
 
 ## 状态与边界
@@ -150,7 +151,7 @@ superseded_by: []
 | D-1 | 测试临时库不清理致磁盘两次写满；`db.test.ts` 偶发失败（DB_PATH 于 import 期冻结 + worker 模块缓存跨文件存活） | **已大幅收敛**：T4 + D-8 后实拷贝消除；2026-10-22 小种子库把基库 160.3MB → **18.9MB**、峰值临时占用 4.15GB → **0.4–0.5GB**、构建 ~11s → **0.5s**；`db.test.ts` 仍有意直读运行库（未改语义），偶发未复现 |
 | D-7 | 全量套件偶发单文件失败（2026-10-20 出现 2 次，重跑即绿） | **已定位并修复**：5 轮循环捕获现场，为 `world-axis.test.ts > W1-1 时空检索` **默认 5s 超时**（实测 5004ms），非此前的克隆内容猜测；已给该文件 20 个用例显式 30s 超时（与 ingest-bus 同法）。克隆完整性校验保留（解决另一类问题）。修复后连续三轮全量 99 文件 / 905 项全过 |
 | D-10 | 追加表无保留策略；库 2.17GB 中 1905.9MB 是历史归档表（2196 万行），追加表数据仅约 10 天 | **压缩 + 时间索引均已完成**（2026-10-22）：2069.5MB → 160.5MB（归档表外置 + 备份 + manifest）；新增 `idx_ingest_createdat` / `idx_obol_at`（库 181.3MB，近 1 天查询提升 100–180× / 20–40×，4 例查询计划守卫）；**剩余**：时间窗归档待数据变旧（当前 0 行到期）、`(Result, Id)` 查询型索引未做（不在本次范围） |
-| D-11 | KDS 镜像与源码差异：`.kds` 镜像树与 `local-mirror-ledger.jsonl` 有上千条未提交差异（含自动镜像同步产物与历史迁移/删除，非本轮产生；本轮新增文档已由自动同步写入镜像与 ledger） | **未执行**：镜像提交需单独操作 + 授权，不与其他改动混做 |
+| D-11 | KDS 镜像与源码差异 | **已关闭（2026-10-22）**：`document_control.py --apply-full` 全量重建并提交（PR #57，484 文件 / +8845−4338：213 个目录 README 补 frontmatter、3 个台账重算、270 个镜像文件重写）；重建后 `--check` 幂等为 0；repository-only 门禁 pass（kds_md 3612）。真实 KDS API 写入未做（另需授权） |
 | D-12 | e2e 基座缺 `webServer`：`playwright.config.ts` 无自启，9 个 spec 需手工先起 dev 5273 + BFF 39010 | **已修复（2026-10-22）**：`webServer` 自起 BFF+dev、`reuseExistingServer`、`e2e:smoke` 一条命令；Lead 复跑 panorama-smoke 1 passed 33.2s |
 | D-13 | 提交与远端同步 | **已关闭（2026-10-22 20:09）**：老卢「继续」授权推送；main 推送到私有远端（46 本地提交 + 远端 1 个 CI 提交合并，含冲突解决：`.github/workflows/standards.yml` 采用远端 self-hosted runner 方案）；远端 `070a778`，本地/远端 0/0。历史备注：推送前修正了 `b9236aa` 的提交信息错位（索引工作被冠以 pano 信息），改写为 `e239242`（仅本地未推送历史）；未 force push |
 
@@ -263,6 +264,13 @@ SpaceAI Platform 是安防统一重构主工作区，CWME 是城市/空间域实
 4. **运行状态**改为 2026-10-22 复测：135 文件 / 1242 例、typecheck 0、库 2.17GB 与四张追加表行数、L4 一键验收 PASS ×2、e2e 需手工起服务。
 5. **新增「终态证据（2026-10-22）」**：测试/验收/接口/演练证据与未执行项（远端 CI、KDS 镜像同步）。
 6. **缺陷台账**：更正 D-1（32GB 实拷贝已由 T4 + D-8 根治，`db.test.ts` 偶发未复现）；新增 D-10（数据保留）、D-11（KDS 镜像不同步）、D-12（e2e 无 webServer）、D-13（30 提交未推送 + 并行 WIP）。
+
+## 变更说明（v1.10 → v1.11，2026-10-22 晚）
+
+1. **D-11 关闭**：文档控制/本地 KDS 镜像全量收敛（PR #57，484 文件）；重建后 `document_control --check` 幂等为 0，repository-only 门禁 pass（kds_md 3612）。
+2. **CI 恢复**：GPCF 注册 self-hosted runner `mac-mini-gpcf`（launchd 常驻），`repository-checks` 与 `统一规范检查（R01-R20）` 均已跑通；此前 PR #55 曾因无 runner 排队 8 分钟。
+3. 终态证据与缺陷台账同步：D-11 改「已关闭」，未执行项仅剩时间窗归档与真实 KDS API 写入。
+4. 边界不变：partial、未部署、未提升验收状态。
 7. 边界不变：overall_status 保持 **partial**，未 push、未部署、未接真实设备或生产数据，不提升任何验收状态。
 
 ## 变更说明（v1.4 → v1.5，2026-10-22 晚）
