@@ -5,7 +5,7 @@ project: GPCF
 related_projects: [GPCF]
 domain: governance
 status: controlled
-version: v1.11
+version: v1.12
 owner: GPCF
 kds_space: 开发
 kds_path: 开发/91-治理与验收/projects/spaceai/STATUS.md
@@ -154,6 +154,9 @@ superseded_by: []
 | D-11 | KDS 镜像与源码差异 | **已关闭（2026-10-22）**：`document_control.py --apply-full` 全量重建并提交（PR #57，484 文件 / +8845−4338：213 个目录 README 补 frontmatter、3 个台账重算、270 个镜像文件重写）；重建后 `--check` 幂等为 0；repository-only 门禁 pass（kds_md 3612）。真实 KDS API 写入未做（另需授权） |
 | D-12 | e2e 基座缺 `webServer`：`playwright.config.ts` 无自启，9 个 spec 需手工先起 dev 5273 + BFF 39010 | **已修复（2026-10-22）**：`webServer` 自起 BFF+dev、`reuseExistingServer`、`e2e:smoke` 一条命令；Lead 复跑 panorama-smoke 1 passed 33.2s |
 | D-13 | 提交与远端同步 | **已关闭（2026-10-22 20:09）**：老卢「继续」授权推送；main 推送到私有远端（46 本地提交 + 远端 1 个 CI 提交合并，含冲突解决：`.github/workflows/standards.yml` 采用远端 self-hosted runner 方案）；远端 `070a778`，本地/远端 0/0。历史备注：推送前修正了 `b9236aa` 的提交信息错位（索引工作被冠以 pano 信息），改写为 `e239242`（仅本地未推送历史）；未 force push |
+| D-14 | 写路径「失败仍报成功」类缺陷（审计发现；T2 后残留） | **已修复并已推送（2026-10-22 深夜）**：只读审计（`tools/audit/contract-write-audit.mjs` + `.harness/runs/20261022-contract-write-audit/report.md`）定位 P0 原子性 1 个（`commitDraft` 两写无 tx）、P1 真值上报 31 个单写、P2 播种 5 个；分四轮修复：P0 `8a913a0`、P1 高价值 11 `a669722`、P1 其余 17 `9506f70`、P2 `d1fc01a`；配套统一错误出口 + 44 例注入测试。扫描口径 `run()` 吞异常写 63 函数 → **17（剩余均为启动播种或已核实例外/误报）** |
+| D-15 | 契约登记滞后：25 条实现先行端点未进协议（Demo/Focus/Scene 等）；31 条 bridged 无元数据标注 | **已关闭（2026-10-22 深夜，`5bd911b`）**：登记 263 → **288**，25 条补登（Demo 标 `demo:true` 非对外契约），31 条标 `coverage:'bridged'`；`/__contract__` 与 mock 兜底参数形态泛化为 `\{param\}`；棘轮 `unregistered 26 → 0`，新增 bridged 双向一致断言。实测：显式实现 **226/280 = 80.7%**、仅样例 23（逐条例外）、bridged 31、**未登记 0** |
+
 
 ## 前端持续重构（第 37–43 轮续）
 
@@ -318,3 +321,15 @@ SpaceAI Platform 是安防统一重构主工作区，CWME 是城市/空间域实
 1. 补建两个 OpenSpec 变更：`spaceai-l4-precision-model`（implemented；真实资产待授权）、`spaceai-panorama-operation-normalization`（in_progress）；均含「三层对齐」段并通过 `validate_change_alignment_sections.py`。
 2. 「F-037 / F-038 未建 OpenSpec 变更」治理欠账同日关闭；只补账，不重做工作、不提升验收状态。
 3. 终态证据新增 OpenSpec 变更账条目；其余数字与边界不变。
+
+## 变更说明（v1.11 → v1.12，2026-10-22 深夜）
+
+1. **契约/写可靠审计闭环（四轮，全部经决策模型排序 + 老卢逐轮授权）**：
+   - 只读审计产出工具 + 证据（`tools/audit/contract-write-audit.mjs`、`.harness/runs/20261022-contract-write-audit/report.md`）；
+   - P0 `8a913a0`（`commitDraft` 事务化 + 真值上报）、P1 高价值 11 `a669722`、P1 其余 17 `9506f70`、P2 播种事务化 `d1fc01a`、契约补登记 `5bd911b`；
+   - 契约：登记 **288**，显式实现 **226/280 = 80.7%**，仅样例 23（逐条例外）、bridged 31、**未登记 0**；
+   - 写可靠：`run()` 吞异常写 63 函数 → **17**（余为启动播种/有意例外/扫描误报）；新增 44 例触发器注入测试。
+2. **发布**：Platform PR **#1**（审计 + P0-P2 + 契约 + 并行 pano R 系列，统一规范检查 pass）、PR **#2**（R7f/R7g/R7h + origin 对齐）均已合并；本地/远端 **0/0**（`5e28dad`）。
+3. **运行状态**：全仓 **158 文件 / 1447 例**通过、typecheck 0（本轮收尾实测）；审计工具可复跑并已在报告中固化口径。
+4. **缺陷台账**：新增 D-14（写可靠缺陷，已修复）、D-15（契约登记滞后，已关闭）。
+5. 边界不变：**partial**、未部署、未接真实设备/生产数据、不提升任何验收状态；并行会话 pano 重构 WIP（脏树）不在本轮范围内。
