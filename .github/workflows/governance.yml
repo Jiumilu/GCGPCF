@@ -29,10 +29,18 @@ jobs:
       - run: python tools/kds-sync/document_control.py --check
       # 证据闸：Evidence 规则版本 + 授权台账 + 契约矩阵
       - run: python tools/kds-sync/validate_evidence_rule_version.py
-        continue-on-error: true   # 待基线更新：done 数已由 10 增至 14
+      - run: python tools/kds-sync/validate_project_group_caliber_baseline.py
+      - run: python tools/kds-sync/validate_vu_ledger.py
+      - run: sudo apt-get update && sudo apt-get install -y ripgrep
+        continue-on-error: true
+      - run: python tools/kds-sync/measure_asset_reuse.py
+        continue-on-error: true   # CI 无兄弟仓，跨仓计数为 0；本地运行才有跨仓
+      - run: python tools/kds-sync/validate_asset_reuse.py
+        continue-on-error: true   # 首次进 CI：依赖项目群口径文件，先观察
       - run: python tools/kds-sync/validate_project_group_single_authorization_ledger.py
       - run: python tools/kds-sync/validate_contract_matrix.py
       - run: python tools/kds-sync/validate_xap_error_code_registry.py
+      - run: python tools/kds-sync/validate_contract_version_drift.py
+      - run: python tools/kds-sync/validate_event_package_ref.py
       # Feature 关闭闸：queue/state 与 Feature 工作区一致性（待 Firebase/ROADMAP 存量修复后转阻断）
       - run: python tools/kds-sync/validate_gpcf_2_feature_workspace.py
-        continue-on-error: true

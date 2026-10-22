@@ -240,7 +240,7 @@ def main() -> int:
                 f"- api: {api_status}",
                 f"- acceptance_declared: {str(acceptance_complete).lower()}",
                 "- lint: 已通过 build 证据中的 git diff --check 覆盖。",
-                "- risk: 未授权 commit、push、deploy、真实 API、状态提升。",
+                "- risk: 本快照不代表真实 API 运行；真实调用须有独立授权与证据，推送、部署和状态提升须按各自边界确认。",
                 "",
             ]
         ),
