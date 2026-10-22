@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-10-22T20:39:40.864964+08:00",
+  "generated_at": "2026-10-22T20:41:43.242521+08:00",
   "freshness_hours": 12,
   "freshness_ok": true,
   "project_count": 29,
@@ -31,11 +31,9 @@
     "GlobalCloud FireQuote"
   ],
   "observed_ahead": [
-    "GlobalCloud WAME",
     "GlobalCloud GFIS",
     "GlobalCloud MMC",
     "GlobalCloud XiaoG",
-    "GlobalCloud PKC",
     "GlobalCloud SpaceAI Platform",
     "GlobalCloud WAE"
   ],
@@ -107,7 +105,7 @@
   ],
   "pass_repo_count": 4,
   "bootstrap_window": false,
-  "previous_generated_at": "2026-10-22T20:38:46.092303+08:00",
+  "previous_generated_at": "2026-10-22T20:39:40.864964+08:00",
   "repo_heads": {
     "GlobalCloud AAAS": "a71e190cd7567346a2bc952f3ef45cdf1c4e1cdb",
     "GlobalCloud Brain": "257cca79febcb59357e8a84370ecc380dba877de",
@@ -132,7 +130,7 @@
     "GlobalCloud SpaceAI Studio": "75bf3b3728015eb19290ac6ad97439d479f487ed",
     "GlobalCloud World": "8bc29d24532d76c8d8ed9fa5da4a36beaf270e97",
     "GlobalCloud Mem": "d837321da22651c047603fe20dfc305a5680df4c",
-    "GlobalCloud WAE": "637289ed6c2b692833b646525b264d161061b3cd",
+    "GlobalCloud WAE": "fb79a060a3fe9eb9da109527b5b3716a539846eb",
     "GlobalCloud PMC": "6d5fed1f692870203af24c7822879ec835095815",
     "GlobalCloud PDC": "8d88fd5c24a3de45609550f79d8a7b199446bd09",
     "GlobalCloud SLC": "15668abe2cd007377a0c9ff2c9dc9e65f4d5af9e",
@@ -414,7 +412,7 @@
     },
     "GlobalCloud WAME": {
       "dirty_count": 9,
-      "ahead": 1,
+      "ahead": 0,
       "behind": 0,
       "paths": [
         "server/xap-intake/intake_core.py",
@@ -448,7 +446,7 @@
       "sensitive_paths": []
     },
     "GlobalCloud GPCF": {
-      "dirty_count": 1104,
+      "dirty_count": 1105,
       "ahead": 0,
       "behind": 0,
       "paths": [
@@ -1367,6 +1365,7 @@
         "features/active/F-036-wae-pkc-intake-integration/evidence/e2e-20261022/screens/run2-with-shim/f036-flow-05-pkc-candidate-page.png",
         "features/active/F-036-wae-pkc-intake-integration/evidence/e2e-20261022/screens/run2-with-shim/f036-flow-06-return-workbench.png",
         "features/active/F-036-wae-pkc-intake-integration/evidence/review-20261022/README.md",
+        "features/active/F-036-wae-pkc-intake-integration/evidence/review-20261022/conclusion.md",
         "features/active/F-036-wae-pkc-intake-integration/evidence/review-20261022/logs/review-assertions.json",
         "features/active/F-036-wae-pkc-intake-integration/evidence/review-20261022/logs/run-meta.json",
         "features/active/F-036-wae-pkc-intake-integration/evidence/review-20261022/playwright.review.config.ts",
@@ -1706,7 +1705,7 @@
     },
     "GlobalCloud PKC": {
       "dirty_count": 1,
-      "ahead": 1,
+      "ahead": 0,
       "behind": 0,
       "paths": [
         "\"GlobalCloud PKC \\346\\200\\273\\344\\275\\223\\346\\226\\271\\346\\241\\210.md\""
@@ -1850,7 +1849,7 @@
     },
     "GlobalCloud WAE": {
       "dirty_count": 0,
-      "ahead": 7,
+      "ahead": 3,
       "behind": 0,
       "paths": [],
       "sensitive_paths": []
