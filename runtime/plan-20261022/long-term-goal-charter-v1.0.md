@@ -27,14 +27,14 @@ superseded_by: []
 
 **Goal ID**：`goal-b0948e79-29b1-41af-b922-417dbcc455b1`（max 30 rounds）。
 
-## 2. 基线（2026-10-22；最近刷新 2026-10-23 02:10，Goal Round 25）
+## 2. 基线（2026-10-22；最近刷新 2026-10-23 17:10，Goal Round 112）
 
 | 指标 | 当前 | 90 天目标 |
 |---|---|---|
-| `C_dev` | **35.58%**（VU 97 / 权重和 105） | ≥ 55.00% |
+| `C_dev` | **37.06%**（VU 97 / 权重和 105；4 处阶段按证据修正） | ≥ 55.00% |
 | `C_real` | **0.00%** | ≥ 12.00% |
-| 六维能力 K | **≈ 23.99 / 100**（估算；K5 按跨仓证据 31） | 37（P0 目标） |
-| 活跃 Feature | 23（closed 14） | 按计划收敛 |
+| 六维能力 K | **≈ 24.31 / 100**（估算；K3 54 / K4 47 / K5 31） | 37（P0 目标） |
+| 活跃 Feature | 20（closed 17；active 目录 19） | 按计划收敛 |
 | 项目范围 | 29（FireQuote 新纳入；caliber baseline pass） | 29 或回 28 |
 | 契约冲突 | 8/8 closed | 维持 |
 | 批次 2 前置 | 0/2 | 外部输入后 ≥ 2/2 |
@@ -73,14 +73,15 @@ superseded_by: []
 
 | 项 | 状态 | 下一步 |
 |---|---|---|
-| F-036 PKC 接入 | conditional | PKC P4/P5 最小接入（147 tests）；真实嵌入就绪核查已完成；其他页面/正式评审待做 |
-| F-035 WAME 侧栏 | pass 未关闭 | app-shell 发布/同 workspace；FunctionPanel 重构另立项 |
+| F-036 PKC 接入 | conditional | 六门 pass；本地 dev 嵌入验证通过；生产/CSP/SSO/403、正式评审待做 |
+| F-035 WAME 侧栏 | pass 未关闭 | WAME worktree 本地提交 b233438/ea8f321；tsc+侧栏测试 5/5；待属主 push、registry、产品决策 |
 | 批次 2 | 0/2（龄期 1 天） | 业务方 5 类单据、GPC PG-11；3 工作日（10-27）升级 |
 | 契约残留 | 已收口部分 | 漂移告警/packageRef schema 已落；强制签名代码/packageRef 运行时/域名迁移待做 |
-| FireQuote 29 口径 | 已补节奏文件；caliber pass | 范围/分母确认 |
+| FireQuote 29 口径 | 已补 OpenSpec/技能链/实施方案台账；caliber pass | 范围/分母确认 |
 | 多仓未提交 | GPCF 1118 dirty | 按显式路径分批提交（需授权） |
-| 门禁/测试 | 11/11 pass；pytest 59/59 | 保持 |
+| 门禁/测试 | 11/11 pass；pytest 60/60 | 保持 |
 | 剩余 P2 任务 | 未开始 | 按清单推进 |
+| 活跃 Feature | 19；已关闭 F-024/F-026/F-027/F-030 | 继续按证据关闭 |
 
 ## 8. 非声明
 

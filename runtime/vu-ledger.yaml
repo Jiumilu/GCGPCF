@@ -1358,7 +1358,7 @@ vu_units:
   source_of_record: PDC 本地
   acceptor: PDC owner
   stage: S1
-  stage_evidence: F-030 tests fail、summary fail（GPCF 侧）；仓内自述 471/471 用例通过（B 级）
+  stage_evidence: F-030 已 closed（GPCF 侧 5/5 验证 pass）；PDC 仓内自述 471/471 用例通过（B 级）；无 PDC 应用运行时/界面证据，阶段保持 S1
   data_class: fixture
   inferred: true
   notes: GPCF 侧证据 fail，不按 S2 计
