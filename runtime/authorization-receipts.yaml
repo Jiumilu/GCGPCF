@@ -5,8 +5,8 @@
 schema_version: "1.0"
 generated_at: "2026-10-22T05:40:00+08:00"
 ledger_ref: "09-status/globalcloud-project-group-single-authorization-ledger-v1.0.md"
-authorization_granted_count: 24
-action_executed_count: 17
+authorization_granted_count: 25
+action_executed_count: 18
 pending_execution_count: 8
 receipts:
   - auth_id: AUTH-GPCF-SCHEME-REVIEW-20260626
@@ -299,4 +299,18 @@ receipts:
     expires_at: "2027-01-20T23:59:59+08:00"
     evidence: "docs/reports/f014-ledger-owner-and-retention-20261022.md"
     review_conclusion: "owner=Project；scope 已重定；留存 24 个月；真实数据与 KDS/MMC 配置仍待授权"
+    revoked_at: null
+  - auth_id: AUTH-PG-F014-REAL-MEETING-PILOT-20261022
+    granted_at: "2026-10-22T22:52:00+08:00"
+    granted_by: "老卢"
+    grant_basis: "2026-10-22 22:51 问答：批准 B1+B2 最小范围 + 脱敏最严；B3 配置边界未批"
+    repo: "GlobalCloud GPCF"
+    scope: "f014_real_meeting_data_pilot"
+    actions_allowed: ["read", "intake_real_meeting_minutes_deidentified", "write_kds_canonical_candidate",
+                      "mmc_delegation", "write_evidence", "write_planner_after_human_confirm"]
+    actions_forbidden: ["planner_auto_write", "customer_data_export", "production_deploy",
+                        "kds_mmc_config_change", "status_promotion", "push"]
+    expires_at: "2027-01-20T23:59:59+08:00"
+    evidence: "docs/reports/f014-real-data-pilot-authorization-request-20261022.md"
+    review_conclusion: "B1+B2 已批；脱敏最严（去姓名与联系方式）；禁止自动写入；B3 未批"
     revoked_at: null

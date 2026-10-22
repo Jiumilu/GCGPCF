@@ -53,3 +53,9 @@ ui_product_first_control:
     accessibility_status: waived
     evidence_overexposure_gate: pass
   status_ceiling: partial
+blockers:
+  - World 总体方案 Ontology 版本与现行基线冲突（World 方案 0.2.x vs WAS 实发 0.2.0），项目方案仍为 candidate；需 WAS 出具基线裁定（见 docs/reports/f021-was-ontology-ruling-request-20261022.md）
+resolved_blockers:
+  decided_at: '2026-10-22'
+  decision: '原 blocker②「tests/build 未声明 + waiver 无理由」已在 P05 补齐 verification 声明后消除；复跑 gpcf_check_evidence 仅剩治理阻塞'
+  evidence: 'features/active/F-021-world-project-onboarding/feature.yaml verification 块；gpcf_check_evidence.py F-021 --check-only'

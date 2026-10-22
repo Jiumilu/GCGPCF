@@ -27,7 +27,6 @@ acceptance:
   - Phase 0 remains fixture-only and demonstrates no automatic ledger write
   - Real-data pilot, authoritative receiving ledger, retention policy, permission/configuration change, deployment, and status promotion remain separately authorized
 loop:
-  governance_blocked: true   # 真实数据与 KDS/MMC 配置边界未授权，仍为治理阻塞
   current_step: evaluate
   iteration: 27
 evidence:
@@ -69,5 +68,4 @@ resolved_blockers:
   decision: '权威接收台账 owner=Project(PMC)、留存=24 个月后归档、Studio review 条款随退役失效并重定 scope —— 老卢 2026-10-22 22:44 问答裁定'
   evidence: 'docs/reports/f014-ledger-owner-and-retention-20261022.md；回执 AUTH-PG-F014-LEDGER-OWNER-20261022'
 blockers:
-  - 真实会议数据试点未授权（需单独 gate(production) 级授权与数据范围）
-  - KDS/MMC 运行配置边界变更未授权（跨项目运行态配置，需属主执行）
+  - B3 KDS/MMC 运行配置边界变更未授权（跨项目运行态配置，需属主执行）；真实试点已获批 B1+B2，执行回执待回填
