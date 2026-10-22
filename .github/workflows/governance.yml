@@ -32,6 +32,7 @@ jobs:
         continue-on-error: true   # 待基线更新：done 数已由 10 增至 14
       - run: python tools/kds-sync/validate_project_group_single_authorization_ledger.py
       - run: python tools/kds-sync/validate_contract_matrix.py
+      - run: python tools/kds-sync/validate_xap_error_code_registry.py
       # Feature 关闭闸：queue/state 与 Feature 工作区一致性（待 Firebase/ROADMAP 存量修复后转阻断）
       - run: python tools/kds-sync/validate_gpcf_2_feature_workspace.py
         continue-on-error: true
