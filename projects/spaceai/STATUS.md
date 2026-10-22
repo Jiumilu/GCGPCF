@@ -5,13 +5,13 @@ project: GPCF
 related_projects: [GPCF]
 domain: governance
 status: controlled
-version: v1.3
+version: v1.4
 owner: GPCF
 kds_space: 开发
 kds_path: 开发/91-治理与验收/projects/spaceai/STATUS.md
 source_path: projects/spaceai/STATUS.md
 sync_direction: bidirectional
-last_reviewed: '2026-10-20'
+last_reviewed: '2026-10-22'
 supersedes: []
 superseded_by: []
 ---
@@ -20,8 +20,8 @@ superseded_by: []
 
 ## 项目定位（2026-10-16 更新）
 
-- **当前主项目：GlobalCloud SpaceAI Platform**（`../GlobalCloud SpaceAI Platform`，安防监控平台统一重构，独立 Git 仓）。
-- `../GlobalCloud SpaceAI` 为 **CWME 归档与本地应用区**（保留 `apps/city-model/`、`prototypes/was-city-flood/`、CWME 评审文档与 `.harness/` 证据）。
+- **当前唯一正本：GlobalCloud SpaceAI Platform**（`../GlobalCloud SpaceAI Platform`，安防监控平台统一重构，独立 Git 仓）。
+- 原 `../GlobalCloud SpaceAI`（SpaceAI-Legacy，CWME 归档与本地应用区）**已于 2026-10-22 归档**：与 Platform 同源双克隆分叉，Platform 为唯一正本；Legacy 46 个独有提交已打 tag `archive-spaceai-legacy-20261022`，目录移至 `_archive/2026-10-22-retired-assets/GlobalCloud SpaceAI`（可原路 `mv` 恢复，见其 `MANIFEST.md`）。CWME 资产（`apps/city-model/`、`apps/was-city-flood/`、CWME 评审文档与 `.harness/` 证据）随之归档，F-017 的证据路径以归档路径为准。
 - 历史 Windows/.NET 桌面工程（`MB3000.sln` 及各 C# 项目）于 **2026-10-16 按用户指示丢弃**，本地不再保留；可恢复副本在 `/tmp/gcspaceai-backup/legacy-windows-source-20261016.tar.gz`（含疑似明文凭据，外发前须脱敏）。
 - 角色：external；目录名与中央注册别名沿用 SpaceAI。
 
@@ -32,23 +32,31 @@ superseded_by: []
 - 为满足 GitHub 100MB 单文件限制，已用 `git filter-repo` 剔除历史中的 195MB 废弃备份库（`data/spaceai.db.prename.bak`）：433 提交保留、`.git` 74M→15M、**重写前后 HEAD 树哈希一致**（只改历史未动内容）。
 - 推送均为快进，未 force push，未覆盖远端既有历史。
 
-## 运行状态（2026-10-20 复测）
+## 运行状态（2026-10-22 复测）
 
-- 平台服务：BFF `127.0.0.1:39010`（`/healthz` status ok、263 端点、库 SIMULATED 39 表 510 行）；前端 `127.0.0.1:5273`（Vite 6.4.4）。
-- CWME 本地应用：`apps/city-model/index.html` 可浏览器直开；预览服务 `127.0.0.1:4173`。
-- 全量测试：**87 文件 / 807 项全过**（2026-10-20 T4 修复后实测，连续三轮：**31.2s / 22.1s / 19.2s**）。
-- 测试成本：修复前 771s（曾 12–20 分钟不结束）、临时占用约 28GB；修复后 **~20–31s、临时占用≈0**（APFS 写时复制）。
-- BFF 启动：修复后 **约 6 秒**就绪（此前 90 秒–6 分钟），且重启不再向运行库追加数据。
+- 平台服务：BFF `127.0.0.1:39010`（`/healthz` status ok、mode demo、**263 端点**、库摘要 SIMULATED 39 表 510 行）；前端 `127.0.0.1:5273`（Vite 6.4.4）。
+- 全量测试：**135 文件 / 1242 例全过**（2026-10-22 19:04 实测，26.44s，exit 0）；`pnpm typecheck` **0 错误**。
+- 数据规模：`data/spaceai.db` **2.17GB**；`EXT_CityLink` **61,289**（去重后新表）、`EXT_ObolObservation` 527,570、`IngestEvent` 142,097、`EXT_SceneAsset` 50,179（2026-10-22 实查；追加表保留策略未执行，见缺陷 D-10）。
+- 测试成本：修复前 771s（曾 12–20 分钟不结束）、临时占用约 28GB；T4 + D-8 后 **~20–26s**（紧凑测试基库 135MB，不再实拷贝 32GB）。
+- BFF 启动：约 6 秒就绪（2026-10-20 口径；2026-10-22 只复测 `/healthz`，未复测冷启动耗时）。
+- CWME 本地应用：`apps/city-model/index.html` 已随 Legacy 归档移出根目录（2026-10-22），F-017 证据路径以归档路径为准。
+- e2e：`e2e/` 9 个 spec（含 `panorama-l4` 3 条、`panorama-operate` 5 条、`panorama-smoke`）；**需手工先起 dev 5273 + BFF 39010**——`playwright.config.ts` 无 `webServer`（见缺陷 D-12）。
+- L4 一键验收：`harness/l4-acceptance/` **PASS ×2**（smoke-sim 60 FPS / smoke-demo 56 FPS，0 fail；资产为 placeholder/SIMULATED）。
 - 数据性质：`data/spaceai.db` 为合成样例库（`_seed_info.data_kind = SIMULATED`），非真实业务数据。
 
 ## 当前 Feature
 
-- **F-017 cwme-city-world-model-engine**（active，partial）：CWME 城市模型与内涝切片回放；本地应用入口为 ../GlobalCloud SpaceAI/apps/city-model/index.html，证据索引在 ../GlobalCloud SpaceAI/.harness/runs/20261016-080823-spaceai-was-city-flood-replay/evidence-index.yaml。
+- **F-017 cwme-city-world-model-engine**（active，partial）：CWME 城市模型与内涝切片回放；本地应用入口为 `_archive/2026-10-22-retired-assets/GlobalCloud SpaceAI/apps/city-model/index.html`（原 `../GlobalCloud SpaceAI`，2026-10-22 归档），证据索引在同目录 `.harness/runs/20261016-080823-spaceai-was-city-flood-replay/evidence-index.yaml`。
 - 关联 OpenSpec：openspec/changes/spaceai-was-city-flood-replay；仅有合成样例和本地浏览器验证，不声明 Platform 集成或真实城市运行。
-- **F-024 panorama-engineering-convergence**（P1，active，**iteration 1**）：全景态势工程收敛；证据已补齐（tests/build/api pass、screenshots waived 附理由），OpenSpec 变更状态 **implemented**（22/22）。
-- 交付：组件 3351 → 3310 行、新增 8 个纯模块与 8 个测试文件（188 项）；模板零改动；修复 D-4、D-3、D-5。
+- **F-024 panorama-engineering-convergence**（P1，active，**iteration 2**）：全景态势工程收敛；iteration 1 证据保持有效（tests/build/api pass、screenshots waived 附理由），iteration 2 于 2026-10-22 补记 B5a–B5e 的拆分收益。
+- 交付：iteration 1 组件 3351 → 3310 行、8 个纯模块 + 188 项测试、模板零改动、修复 D-4/D-3/D-5；iteration 2 再外提 5 个组合式（`useFeedback`/`useCardConfig`/`useCameraModes`/`useCardOrder`/`useDemoModes`，新增 9 例），组件当前 **3955 行**（期间并行 L4 改动新增约 230 行）。
 - 证据：`../GlobalCloud SpaceAI Platform/harness/runs/20261016-panorama-convergence/`；Feature 证据在 `features/active/F-024-.../evidence/`。
+- **F-037 map-3d-l4-precision-model**（P1，active，iteration 1，2026-10-22 追溯建账）：三维地图 L4 精模链路（口径/清单/BFF/引擎/切换回落/接入工具链/一键验收/演练/CI）全部落地并本地提交 6 个提交；**真实 L4 资产未接入**（采购与自采暂停，待授权）。
+- F-037 证据：`../GlobalCloud SpaceAI Platform/harness/l4-acceptance/`（PASS ×2）、`harness/l4-evidence/`、`docs/3d/l4-*.md`；Feature 证据在 `features/active/F-037-.../evidence/`。
+- **F-038 panorama-operation-normalization**（P1，active，iteration 1，2026-10-22 追溯建账）：全景态势操作流程规范化执行到 B5e（B0–B5e 共 12 个本地提交；143 项操作 / 106 条问题审计 + N1–N12 方案）；**部分完成**——B5 剩余五大块、i18n 约 600 行、人工验收留待下一轮。
+- F-038 证据：`../GlobalCloud SpaceAI Platform/.harness/runs/20261022-panorama-ops/`（01–21）、`docs/全景态势_操作流程规范化与合理化方案_20261022.md`；Feature 证据在 `features/active/F-038-.../evidence/`。
 - 其余两个 spaceai OpenSpec 变更：`spaceai-was-city-flood-replay` **implemented**（12/12）；`spaceai-studio-multiplatform-refactor` **in_progress**（91/93，剩字段级适配与移动端适配）。
+- **治理欠账（2026-10-22 登记）**：F-037 与 F-038 的工作当时未建 `openspec/changes/spaceai-*` 变更（仅 PMC GC-335 等登记）；补建或并入后续变更需老卢决定，本轮不擅自补建。
 
 ## 本轮迭代（2026-10-20 起，三条主线）
 
@@ -64,6 +72,20 @@ superseded_by: []
 | T4 | 测试基座 | **已完成**：定位城市数据幂等守卫 off-by-one（`> 50000` 而实际恰为 50,000）致每次 createApp 重建 2133 万行；修复后全量 771s→**~20–31s**、createApp 106s→0.3s、r09 143s→1s；`DB_PATH` 惰性可注入；18 个测试已隔离；**连续三轮全绿（87 文件/807 项）** |
 | 前端 | SSE 收口 / PanoramaDeep 拆分 / 设计系统 | **SSE 收口 ✅**、**设计系统 ✅**（令牌落地、23 个 `--gc-*` 全部有定义、浏览器实测生效）；**PanoramaDeep 拆分：部分达成**——组件 3351 → **3184 行**，外提 **20 个模块**（新增测试 100+ 项），并补了 **组件级测试**（3 项，经变异验证可捕获「类型与单测都过、运行时崩」的事故）。未达原计划「脚本 <800 行」（当前 2191 行，差 2.7×）；停止依据与建议见主项目 `harness/runs/20261020-final-gate/ASSESSMENT.md` 第六节 |
 | 性能 | 无 GPU 环境可用性（SwiftShader） | **✅ 完成**：实测有 GPU 75.2 FPS / SwiftShader **4.8 FPS**；诊断确认瓶颈是**逐帧重绘**而非填充率（隐藏画布 5.5→60 FPS；0.6 分辨率仍只 5.4 FPS）；新增渲染档位判定（软件渲染 → 关阴影/雾/光照/FXAA + 0.6 分辨率 + **按需渲染** + 心跳 requestRender），实测软件渲染 **4.8 → 56.4 FPS（11.75×）**，有 GPU 侧 70.5 FPS 无回归；画面经像素采样验证（16 采样点 16 色）非冻结，21 卡、0 错误 |
+
+## 本轮迭代（2026-10-22，多线并行）
+
+老卢 2026-10-22 指令：三维地图模型升级为 L4 级精模、白盒模型保留可切换；随后同意**暂停 L4 自采**、转平台欠账。
+本轮四条线均本地提交、**0 推送**，验收状态一律保持 partial。
+
+| 线 | 主题 | 状态 | 证据 |
+|---|---|---|---|
+| A | 三维地图 L4 精模（F-037） | **链路完成，真实资产缺**：6 提交（管线 / 工具链 / 演练 / 验收 / CI / 采购包）；L4 相关 53 例、全仓 1242 例；一键验收 PASS ×2；占位与真实三处标注 | `harness/l4-acceptance/`、`docs/3d/l4-*.md` |
+| B | 全景态势操作规范化（F-038） | **部分完成（B0–B5e，12 提交）**：143 项操作 / 106 条问题审计 → N1–N12；六组 P0、Esc 单一契约、⌘K 命令面板、偏好收口；e2e 5/5；余 B5 五大块 / i18n / 人工验收 | `.harness/runs/20261022-panorama-ops/01–21` |
+| C | 平台欠账清理 | **完成**：`log-viewer` / `scene-hub` 零测试补齐 26 例（`063cc49`）；项目群规范四件套与 `.gitignore`（`6e7e227`）；README / AGENTS / Manifest 缺失章节（`1b7f4b1`） | 提交记录；全仓 1242 例 |
+| D | 治理账实（本轮） | **完成**：追溯建 F-037 / F-038 账、F-024 iteration 2、STATUS / RISK / ROADMAP 同步；**OpenSpec 变更补建与 KDS 镜像同步登记为欠账** | 本文件、`features/active/F-037-*`、`F-038-*` |
+
+**边界**：未 push（main 领先 `origin/main` 30 提交）、未部署、未接真实设备或生产数据；L4 采购 / 自采 / 合规外部数据均待授权。
 
 ## 终态证据（2026-10-20）
 
@@ -82,6 +104,16 @@ superseded_by: []
 
 **已登记未执行的治理动作**：OpenSpec 物理归档（`changes/` → `changes/archive/`）未做——移动会同时改变 `.kds` 镜像路径与 frontmatter 的 `kds_path`/`source_path` 双向映射，需一次专门的镜像同步操作，不与其他改动混做。
 
+## 终态证据（2026-10-22）
+
+- 全量测试：`npx vitest run` **135 文件 / 1242 例通过**（19:04，26.44s，exit 0）；`pnpm typecheck` **0 错误**（19:04）。
+- L4 一键验收：`harness/l4-acceptance/smoke-sim` 与 `smoke-demo` 的 `report.json` 均 **0 fail**（60 / 56 FPS；贴地 0m；画面差异 4.57% / 3.40%；错误 0）。
+- L4 工具链冒烟：`harness/l4-evidence/toolchain-smoke.md`（校验 / manifest / 导入 dry-run 全 exit 0）；SIMULATED 演练 `harness/l4-evidence/sim-drill/report.md` 含回滚后快照。
+- e2e：`panorama-l4.spec.ts` 3 条、`panorama-operate.spec.ts` 5/5（真实 Chrome）；其余 spec 需手工起服务（D-12）。
+- 接口：`/healthz` 200（263 端点）；`/RestFul/Rebuild/Tileset` 200（2 条资产：占位 1 条 published、SIMULATED 1 条未发布）。
+- 证据索引：`features/active/F-037-map-3d-l4-precision-model/evidence/`、`features/active/F-038-panorama-operation-normalization/evidence/`。
+- **未执行**：远端 CI（未 push，工作流只在本地等价跑通）；KDS 镜像提交（镜像由自动同步写入，但镜像树与源码差异有上千条未提交，属独立操作，见 D-11）。
+
 ## 状态与边界
 
 - project_status: registered；overall_status: partial。
@@ -93,8 +125,12 @@ superseded_by: []
 
 | ID | 问题 | 状态 |
 |---|---|---|
-| D-1 | 测试临时库不清理致磁盘两次写满；`db.test.ts` 偶发失败（DB_PATH 于 import 期冻结 + worker 模块缓存跨文件存活） | 磁盘部分已治理（运行级根目录 + 主进程 teardown，跨轮零累积）；但**每轮仍实拷贝 17×1.9GB≈32GB**、`db.test.ts` 仍偶发 → 列入 **T4** |
+| D-1 | 测试临时库不清理致磁盘两次写满；`db.test.ts` 偶发失败（DB_PATH 于 import 期冻结 + worker 模块缓存跨文件存活） | 磁盘与实拷贝部分**已由 T4 + D-8 根治**（`VACUUM INTO` 紧凑基库 135MB，不再 17×1.9GB≈32GB 实拷贝；全量 ~20–26s）；`db.test.ts` 偶发在 2026-10-22 全量复测中**未复现**，保留观察 |
 | D-7 | 全量套件偶发单文件失败（2026-10-20 出现 2 次，重跑即绿） | **已定位并修复**：5 轮循环捕获现场，为 `world-axis.test.ts > W1-1 时空检索` **默认 5s 超时**（实测 5004ms），非此前的克隆内容猜测；已给该文件 20 个用例显式 30s 超时（与 ingest-bus 同法）。克隆完整性校验保留（解决另一类问题）。修复后连续三轮全量 99 文件 / 905 项全过 |
+| D-10 | 追加表无保留策略：`EXT_ObolObservation` 527,570 / `IngestEvent` 142,097 / `EXT_SceneAsset` 50,179，库 **2.17GB** 且持续增长 | **未执行**：需按时间窗非删除归档 + 容量巡检（原计划 P1-2）；本轮只登记不动手 |
+| D-11 | KDS 镜像与源码差异：`.kds` 镜像树与 `local-mirror-ledger.jsonl` 有上千条未提交差异（含自动镜像同步产物与历史迁移/删除，非本轮产生；本轮新增文档已由自动同步写入镜像与 ledger） | **未执行**：镜像提交需单独操作 + 授权，不与其他改动混做 |
+| D-12 | e2e 基座缺 `webServer`：`playwright.config.ts` 无自启，9 个 spec 需手工先起 dev 5273 + BFF 39010 | **未执行**（原计划 P2-4）；本轮以手工服务跑通关键 spec |
+| D-13 | 本地 main 领先 `origin/main` **30 提交未推送**；工作区另有并行会话 WIP（`apps/desktop/src/main.ts`、`vite.config.ts`、`pnpm-workspace.yaml` 与若干 untracked） | **未推送**：推送需老卢授权；并行 WIP 不纳入本仓提交，待各自会话收口 |
 
 ## 前端持续重构（第 37–43 轮续）
 
@@ -196,3 +232,13 @@ SpaceAI Platform 是安防统一重构主工作区，CWME 是城市/空间域实
 3. 运行状态一节改为 2026-10-20 复测数据：86 文件 / 802 项、单轮 12.8 分钟、临时占用约 28GB。
 4. 缺陷台账 D-1 更新：磁盘累积已治理，但每轮仍 32GB 实拷贝与 `db.test.ts` 偶发，明确列入 T4。
 5. 登记未执行动作：OpenSpec 物理归档需同步 `.kds` 镜像与 frontmatter 双向路径，单独操作。
+
+## 变更说明（v1.3 → v1.4，2026-10-22）
+
+1. **项目定位**：原 `../GlobalCloud SpaceAI`（SpaceAI-Legacy）于 2026-10-22 归档至 `_archive/2026-10-22-retired-assets/GlobalCloud SpaceAI`，Platform 为唯一正本；F-017 的应用入口与证据路径改为归档路径。
+2. **当前 Feature**：F-024 推进到 iteration 2（B5a–B5e 拆分补记）；**新增 F-037（L4 精模）与 F-038（全景态势操作规范化）** 两个追溯建账的 Feature，并登记「未建 OpenSpec 变更」的治理欠账。
+3. **新增「本轮迭代（2026-10-22，多线并行）」**：四条线（L4 / 全景操作规范化 / 平台欠账清理 / 治理账实）的状态、提交与证据，明确 0 推送与 partial 上限。
+4. **运行状态**改为 2026-10-22 复测：135 文件 / 1242 例、typecheck 0、库 2.17GB 与四张追加表行数、L4 一键验收 PASS ×2、e2e 需手工起服务。
+5. **新增「终态证据（2026-10-22）」**：测试/验收/接口/演练证据与未执行项（远端 CI、KDS 镜像同步）。
+6. **缺陷台账**：更正 D-1（32GB 实拷贝已由 T4 + D-8 根治，`db.test.ts` 偶发未复现）；新增 D-10（数据保留）、D-11（KDS 镜像不同步）、D-12（e2e 无 webServer）、D-13（30 提交未推送 + 并行 WIP）。
+7. 边界不变：overall_status 保持 **partial**，未 push、未部署、未接真实设备或生产数据，不提升任何验收状态。

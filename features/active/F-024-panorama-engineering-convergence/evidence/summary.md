@@ -48,3 +48,20 @@ superseded_by: []
 - 域 5 大屏态切换与单卡投放、域 6 气泡系统与点选映射、域 7 层级导航下钻、域 4 轨迹回放未抽取。
 - 未做性能优化本身；仅建立无 GPU 基线（SwiftShader 3 FPS vs 有头 61 FPS）与可回收结构。
 - 物理归档（openspec/changes → archive）未执行：需同步更新 `.kds` 镜像与 `kds_path`/`source_path` 双向映射，属独立治理动作，已登记为后续项。
+
+## 2026-10-22 补记（iteration 2）
+
+B5 系列继续朝「PanoramaDeep 拆分」目标推进（明细见 journal Iteration 2）：
+
+| 提交 | 外提内容 | 新增测试 |
+|---|---|---|
+| `54fc1c3` B5a | PanoramaHelp.vue / PanoramaPalette.vue 组件切片 | 组件测试沿用 |
+| `b98c2be` B5b | useFeedback / useCardConfig | — |
+| `ea0b5ea` B5c | useCameraModes | 3 |
+| `b438c24` B5d | useCardOrder | 4 |
+| `39a55e6` B5e | useDemoModes | 2 |
+
+- 组件规模：`PanoramaDeep.vue` **3955 行**（并行 L4 精模改动向该组件新增约 230 行、B5 外提约 460 行逻辑，组件侧净减约 200 行）。
+- 全仓复测：135 文件 / 1242 例通过、typecheck 0（2026-10-22 19:04，HEAD `39a55e6`）。
+- 归口：B0–B4 操作流程规范化记 **F-038**；L4 精模记 **F-037**；本 Feature 只记「拆分/收敛」这条线，避免重复记账。
+- 目标差距：script <800 行仍未达；B5 剩余五大块与 i18n 记入 F-038 边界。

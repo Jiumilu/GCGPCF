@@ -1,0 +1,36 @@
+# F-038 测试证据（2026-10-22 19:04 复测）
+
+仓库：`../GlobalCloud SpaceAI Platform`（HEAD `39a55e6`，本地未 push）
+
+## 1. 本 Feature 相关单测（5 文件 / 26 例）
+
+```
+ ✓ plugins/map-3d/tests/panorama-operate.test.ts (14 tests) 3172ms
+ ✓ plugins/map-3d/tests/panorama-camera-modes.test.ts (3 tests) 8ms
+ ✓ plugins/map-3d/tests/panorama-card-order.test.ts (4 tests) 8ms
+ ✓ plugins/map-3d/tests/panorama-audit-privacy.test.ts (3 tests) 5ms
+ ✓ plugins/map-3d/tests/panorama-demo-modes.test.ts (2 tests) 5ms
+```
+
+覆盖：B0 操作契约（反馈通道解耦 / 派单门禁 / CWME 回投门禁 / 驾驶 Esc 胶囊）、
+B2 Esc 单一契约（逐层退出 / ? 帮助 / 共享组件 closeOnEsc）、B2 演示态互斥、
+B3 入口收敛与 ⌘K 命令面板、B4 审计脱敏与偏好合并冲突保护、B5 三个组合式外提。
+
+## 2. e2e（真实 Chrome）
+
+- `e2e/panorama-operate.spec.ts`：**5/5 通过**（2026-10-22 18:35，见 `.harness/runs/20261022-panorama-ops/16-acceptance-b5a.md`）
+- `e2e/panorama-smoke.spec.ts`：回归通过（断言 0 页面错误）
+
+## 3. 全仓
+
+```
+ Test Files  135 passed (135)
+      Tests  1242 passed (1242)
+   Duration  26.44s
+ EXIT:0
+```
+
+## 诚实边界
+
+单测与 e2e 断言的是**操作行为与契约**，不覆盖人工验收项（派单确认/失败保留、
+CWME 回投确认/30s 幂等的真实气泡与面板状态）。上述人工验收留待下一轮。

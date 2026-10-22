@@ -47,3 +47,22 @@ superseded_by: []
    - 物理归档（changes → archive）会破坏 `.kds` 镜像与 kds_path 双向映射，本轮未执行，登记为后续独立治理动作。
 5. 是否可以提交？
    - 证据齐备，可提交；Feature 保持 active（本轮迭代仍在推进其他主线），不提升项目验收状态。
+
+### Iteration 2（2026-10-22 治理账实同步）
+
+1. 这轮做什么？
+   - 把 2026-10-22 全景态势 B5 系列对「PanoramaDeep 拆分」目标的推进补记到本 Feature（此前只登记在并行会话的收口记录里）。
+2. 改了什么？
+   - 记账：`54fc1c3` B5a 组件切片（PanoramaHelp / PanoramaPalette）、`b98c2be` B5b（useFeedback / useCardConfig）、
+     `ea0b5ea` B5c（useCameraModes，3 例）、`b438c24` B5d（useCardOrder，4 例）、`39a55e6` B5e（useDemoModes，2 例）。
+   - 归口说明：B0–B4（操作契约 / 六组 P0 / 入口收敛 / 偏好与脱敏）属操作流程规范化，记 **F-038**，不在本 Feature 重复记账；
+     L4 精模改动记 **F-037**。
+   - 本 Feature 只更新 `loop.iteration` 1→2、`updated_at` 与本节 journal；scope/acceptance 不改（iteration 1 的验收口径保持原样）。
+3. 怎么验证？
+   - `npx vitest run` → 135 文件 / 1242 例通过（2026-10-22 19:04，HEAD `39a55e6`）；`pnpm typecheck` → 0。
+   - 组件规模复核：`PanoramaDeep.vue` 3955 行（期间并行 L4 向该组件新增约 230 行、B5 外提约 460 行逻辑，组件侧净减约 200 行）。
+4. 发现什么问题？
+   - 与 iteration 1 的目标仍有差距：script 行数目标 <800 未达；B5 剩余五大块（卡片列 / 气泡 / 飞翔 / CWME / 控制器）仍内联，
+     已记入 F-038 的未完成边界，不在此重复。
+5. 是否可以提交？
+   - 可提交（治理产物同步）；Feature 保持 active，项目状态保持 partial。

@@ -1,0 +1,15 @@
+{
+ "captured_at": "2026-10-22T19:05:54+08:00",
+ "healthz": {
+  "status": "pass",
+  "http": 200,
+  "url": "http://127.0.0.1:39010/healthz",
+  "body_head": "{\"success\":true,\"time\":\"2026-10-22 19-05-54\",\"data\":{\"status\":\"ok\",\"mode\":\"demo\",\"endpoints\":263,\"database\":{\"available\":true,\"path\":\"/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud SpaceAI Platform/data/spaceai.db\",\"kind\":\"SIMULATED\",\"tables\":39,\"rows\":510},\"ai\":{\"provider\":\"hermes\",\"hermes\":{\"ok\":true,\"detail\":\"ok\"}}}}"
+ },
+ "l4_tileset": {
+  "status": "pass",
+  "http": 200,
+  "url": "http://127.0.0.1:39010/RestFul/Rebuild/Tileset",
+  "body_head": "{\"success\":true,\"time\":\"2026-10-22 19-05-54\",\"data\":{\"rows\":[{\"id\":\"l4-demo-sanguyuan\",\"name\":\"三园区 L4 占位演示\",\"kind\":\"3dtiles\",\"precision\":\"L4\",\"format\":\"3D Tiles 1.1 + glTF 2.0\",\"url\":\"/RestFul/Rebuild/Asset/l4-demo/tileset.json\",\"cover\":[\"居住区\",\"工厂\",\"商业中心\"],\"source\":\"placeholder\",\"sourceNote\":\"几何占位·非真实 L4：仅验证加载/切换/回落链路，不代表真实建筑精度\",\"license\":\"内部演示数据（脚本生成，无第三方版权）\",\"heightOffset\":0,\"published\":true,\"bytes\":14808},{\"id\":\"l4-sim-vendor\",\"name\":\"SIMULATED 供应商 L4 演练资产\",\"kind\":\"3dtiles\",\"precision\":\"L4\",\"format\":\"3D Tiles 1.1\",\"url\":\"/RestFul/Rebuild/Asset/l4-sim-vendor/tileset.json\",\"cover\":[\"居住区\",\"工厂\""
+ }
+}

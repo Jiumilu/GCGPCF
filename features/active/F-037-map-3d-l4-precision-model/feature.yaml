@@ -1,0 +1,70 @@
+id: F-037
+name: map-3d-l4-precision-model
+project: spaceai
+status: active
+goal: 三维地图 L4 精模升级：三园区优先、真实/占位资产三处标注、白盒模型可切换；资产规范/清单/BFF、引擎能力、精度模型与切换回落、接入工具链、一键验收、SIMULATED 演练、CI 门禁全部落地。真实 L4 资产待授权接入；仅本地开发，不 push 不部署。
+owner: agent-dev-01
+priority: P1
+scope:
+  in:
+  - 口径与资产规范：docs/3d/l4-model.md（L4 定义、3D Tiles 1.1 + glTF 2.0 规范、清单 schema、source=real/placeholder 必填、license 必填、贴地 heightOffset、三园区范围）
+  - 资产清单与 BFF：data/rebuild/l4/manifest.json + GET /RestFul/Rebuild/Tileset（清单持久读与内存登记表合并，返回 manifest 路径/时间/条数）
+  - 引擎能力：unisecEngine 的 tilesetAdd / tilesetSetAllVisible / tilesetSetVisible / tilesetGroundClamp（贴地校准）
+  - 精度与切换：panorama/modelPrecision.ts 纯逻辑（154 行）+ useModelPrecision.ts（加载/切换/回落/降级，172 行）；localStorage 记忆；清单异常自动回落白盒
+  - UI：图层菜单「模型精度 L4 精模/白盒」；真实/占位三处标注（菜单、资产信息、文档）
+  - 接入工具链：tools/l4 的 validate-tileset / import-asset / switch-asset（校验、导入、启停、回滚；dry-run 与 --apply）
+  - 一键验收：tools/l4 acceptance.mjs + acceptance-lib.mjs；CI 门禁 .github/workflows/l4-acceptance.yml（单元 / 工具链 / 验收三段）
+  - SIMULATED 演练：tools/db/gen-l4-sim-asset.mjs 生成 162 栋演练资产并跑全流程（生成/校验/导入/上线/回落/回滚）
+  - 采购与自采准备：l4-procurement-spec / l4-self-collect-plan / l4-pilot-factory-package 与 RFQ 模板、比价表（暂停执行，待授权）
+  out:
+  - 不接入真实 L4 资产：采购与自采均暂停（2026-10-22 老卢决定），不做对外询价、不飞行、不采购
+  - 不含室内细节（CityGML LOD4 室内另立范围）
+  - 不改数据库 schema、不部署、不 push、不动生产数据
+  - 重建算力仍为 stub，不做真实三维重建与供应商质检
+acceptance:
+  - 三园区占位 / SIMULATED 资产可加载、可切白盒、可回切 L4；清单异常（500）时自动回落白盒，mode=whitebox
+  - 一键验收 report.json 0 fail（PASS ×2：smoke-sim 60 FPS、smoke-demo 56 FPS）
+  - 贴地偏移 ≤0.2m（实测 0m）；L4↔白盒画面差异 ≥1%（实测 4.57% / 3.40%）；页面级与控制台错误 0
+  - L4 相关 3 个测试文件共 53 例通过（modelPrecision 20 / acceptance-lib 14 / tools 19）
+  - e2e panorama-l4 3 条通过（默认加载 / 切换 / 回落）；typecheck 0
+  - 全仓 135 文件 / 1242 例通过（2026-10-22 19:04 复测）
+  - 占位资产在 UI、文档、证据三处显式标注，任何证据不得表述为真实 L4 精度
+loop:
+  current_step: commit
+  iteration: 1
+evidence:
+  tests: pass
+  build: pass
+  screenshots: waived
+  api: pass
+  summary: pass
+verification:
+  tests:
+  - npx vitest run plugins/map-3d/tests（L4 相关 53 例）
+  - npx vitest run（全仓 135 文件 / 1242 例）
+  build:
+  - pnpm typecheck（0 错误）
+  api:
+  - curl -s http://127.0.0.1:39010/RestFul/Rebuild/Tileset
+  acceptance:
+  - pnpm l4:acceptance（前置：BFF 39010 + dev 5273 + 系统 Chrome）
+  waivers:
+    screenshots: 截图二进制归档在主项目仓库 harness/l4-acceptance/{smoke-sim,smoke-demo}/ 与 harness/l4-evidence/（report.md / report.json 同为证据），GPCF 只登记路径与判定口径，不重复存二进制；占位资产截图的精度含义以三处标注为准。
+blockers:
+- 真实 L4 资产未接入：采购、自采、合规外部数据三条路径均未授权（2026-10-22 决定暂停自采）；真实几何精度需供应商质检或实测后方可验收
+ui_product_first_control:
+  version: v1.1
+  applicability: direct
+  user_groups: [园区值守员, 指挥中心操作员, Feature 开发者, 治理审计者]
+  primary_human_task: 在全景态势中判断当前是白盒体块还是 L4 精模、切换精度、并识别资产是占位还是真实
+  machine_interface_boundary: 清单 source/manifest/schema 字段留在 BFF 与证据中；界面只呈现精度模式与真实/占位标注
+  gates:
+    functional_completeness: pass
+    quality_baseline: pass
+    multi_user_usability: pending
+    task_flow_e2e_status: pass
+    accessibility_status: waived
+    evidence_overexposure_gate: pass
+  status_ceiling: partial
+created_at: "2026-10-22T11:04:30+00:00"
+updated_at: "2026-10-22T11:30:00+00:00"

@@ -1,0 +1,39 @@
+# F-037 测试证据（2026-10-22 19:04 复测）
+
+仓库：`../GlobalCloud SpaceAI Platform`（HEAD `39a55e6`，本地未 push）
+
+## 1. L4 相关（3 文件 / 53 例）
+
+```
+ ✓ plugins/map-3d/tests/l4-tools.test.ts (19 tests) 13ms
+ ✓ plugins/map-3d/tests/panorama-model-precision.test.ts (20 tests) 12ms
+ ✓ plugins/map-3d/tests/l4-acceptance.test.ts (14 tests) 16ms
+```
+
+命令：`npx vitest run plugins/map-3d/tests`
+
+## 2. 全仓
+
+```
+ Test Files  135 passed (135)
+      Tests  1242 passed (1242)
+   Duration  26.44s
+ EXIT:0
+```
+
+命令：`npx vitest run`（TMPDIR=/tmp/spaceai-tq）
+
+## 3. e2e（L4 动线，2026-10-22 16:5x 提交时执行）
+
+- `e2e/panorama-l4.spec.ts`：3 条（默认加载 / 切白盒 / 回落白盒）通过
+- `e2e/panorama-smoke.spec.ts`：回归通过（断言 0 页面错误）
+
+## 4. 一键验收（`pnpm l4:acceptance`，需 BFF+dev 服务）
+
+- `harness/l4-acceptance/smoke-sim/report.json`：0 fail（60 FPS）
+- `harness/l4-acceptance/smoke-demo/report.json`：0 fail（56 FPS）
+
+## 诚实边界
+
+上述资产为 placeholder / SIMULATED，只验证链路、切换、回落、贴地与性能基线，
+**不验证几何精度**；真实 L4 精度需供应商质检或实测后另行验收。
