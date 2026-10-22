@@ -121,11 +121,11 @@ def test_document_control_dry_run_does_not_change_control_files():
 def test_closed_feature_replay_does_not_change_queue_or_evidence():
     paths = [
         ROOT / "runtime/queue.json",
-        ROOT / "features/done/F-020-aaas-service-console/feature.yaml",
+        ROOT / "features/done/F-008-icp-project-group-admission/feature.yaml",
     ]
     before = [digest(path) for path in paths]
     result = subprocess.run(
-        [sys.executable, "scripts/gpcf_check_evidence.py", "F-020"],
+        [sys.executable, "scripts/gpcf_check_evidence.py", "F-008"],
         cwd=ROOT, text=True, capture_output=True, check=False,
     )
     assert "close_candidate=false" in result.stdout
@@ -168,7 +168,7 @@ def test_explicit_active_acceptance_is_not_an_evidence_close_candidate():
 def test_dispatch_dry_run_keeps_runtime_and_feature_unchanged():
     paths = [
         ROOT / "runtime/queue.json",
-        ROOT / "features/done/F-020-aaas-service-console/feature.yaml",
+        ROOT / "features/done/F-008-icp-project-group-admission/feature.yaml",
     ]
     before = [digest(path) for path in paths]
     result = subprocess.run(

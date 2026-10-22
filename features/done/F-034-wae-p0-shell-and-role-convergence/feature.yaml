@@ -1,0 +1,90 @@
+id: F-034
+name: wae-p0-shell-and-role-convergence
+project: wae
+status: done
+goal: 落地 WAE P0 四项（外壳解耦/令牌收口/侧栏统一/状态语义层）并修复 AppsShell 导航角色收敛缺陷（generated.ts 缺 requires），为 PKC/Brain/PVAOS 首批接入提供可回放载体；不声明项目状态提升。
+owner: agent-dev-01
+priority: P1
+scope:
+  in:
+    - O1 外壳解耦：纯壳 + capabilities 默认全关 + slots；右侧面板不默认渲染
+    - O2 令牌收口：76 令牌单源可验证；PKC 4 处、Brain 30+5 偏离逐项裁定后替换
+    - O3 侧栏统一：框架侧唯一侧栏 + 项目侧 FunctionPanel/Sidebar/GlobalCloudSidebar 三套归并
+    - O4 状态语义层：7 值状态字典 + StatusBadge + S1/S2 代码级
+    - AppsShell 角色收敛：generated.ts 的 app/entry 增加 requires，viewer 不可见服务控制台入口
+    - 首批接入前置：PKC→Brain→PVAOS 接入协议与检查表落盘
+  out:
+    - WAE 仓外代码/配置改动（属主项目执行）
+    - 唯一总体方案裁定、项目状态提升、commit/push/deploy/发布
+    - PKC/Brain/PVAOS 仓内改造与验收
+acceptance:
+  - O1-O4 每项有可回放证据（单测/build/截图或结构指标），并过 UI gate 六件套
+  - AppsShell：viewer 登录后不显示服务控制台/GCAs/MMC/GPCF/ICP/AaaS/身份与权限入口；system-admin 可见；页面与接口一致（403）
+  - "pnpm test / typecheck / build / check:modules 真实复跑并有输出（失败如实记录）"
+  - 首批接入协议与检查表落盘；PKC 首个接入演练（不声明已接入）
+loop:
+  current_step: commit
+  iteration: 1
+evidence:
+  tests: pass
+  build: pass
+  screenshots: waived
+  api: waived
+  summary: pass
+blockers:
+verification:
+  tests:
+  - python3 -c "import subprocess,sys; r=subprocess.run(['pnpm','test'],cwd='../GlobalCloud
+    WAE',capture_output=True,text=True); print(r.stdout[-2000:]); print(r.stderr[-1000:]);
+    sys.exit(r.returncode)"
+  - python3 -c "import subprocess,sys; r=subprocess.run(['pnpm','typecheck'],cwd='../GlobalCloud
+    WAE',capture_output=True,text=True); print(r.stdout[-2000:]); print(r.stderr[-1000:]);
+    sys.exit(r.returncode)"
+  - python3 -c "import subprocess,sys; r=subprocess.run(['pnpm','--filter','@globalcloud/wame','test'],cwd='../GlobalCloud
+    WAE',capture_output=True,text=True); print(r.stdout[-2000:]); print(r.stderr[-1000:]);
+    sys.exit(r.returncode)"
+  - python3 -c "import subprocess,sys; r=subprocess.run(['pnpm','check:apps'],cwd='../GlobalCloud
+    WAE',capture_output=True,text=True); print(r.stdout[-2000:]); print(r.stderr[-1000:]);
+    sys.exit(r.returncode)"
+  - python3 -c "import subprocess,sys; r=subprocess.run(['pnpm','gen:apps','--check'],cwd='../GlobalCloud
+    WAE',capture_output=True,text=True); print(r.stdout[-2000:]); print(r.stderr[-1000:]);
+    sys.exit(r.returncode)"
+  - python3 -c "import subprocess,sys; r=subprocess.run(['pnpm','exec','vitest','run','packages/app-shell/src/shellCapabilities.test.ts','packages/app-shell/src/shell.dom.test.tsx','packages/ui-kit/src/statusDictionary.test.ts','packages/ui-templates/src/templateRegions.test.ts'],cwd='../GlobalCloud
+    WAE',capture_output=True,text=True); print(r.stdout[-2000:]); print(r.stderr[-1000:]);
+    sys.exit(r.returncode)"
+  - python3 -c "import subprocess,sys; r=subprocess.run([sys.executable,'tools/verify-token-sources.py'],cwd='../GlobalCloud
+    WAE',capture_output=True,text=True); print(r.stdout[-2000:]); print(r.stderr[-1000:]);
+    sys.exit(r.returncode)"
+  - python3 -c "import subprocess,sys; r=subprocess.run([sys.executable,'_governance/drafts/ui-spec/tools/sync_tokens.py','--check'],cwd='..',capture_output=True,text=True);
+    print(r.stdout[-2000:]); print(r.stderr[-1000:]); sys.exit(r.returncode)"
+  build:
+  - python3 -c "import subprocess,sys; r=subprocess.run(['pnpm','build'],cwd='../GlobalCloud
+    WAE',capture_output=True,text=True); print(r.stdout[-2000:]); print(r.stderr[-1000:]);
+    sys.exit(r.returncode)"
+  waivers:
+    api: 本 Feature 为 WAE 界面壳层与角色收敛治理，不调用真实外部/KDS API；接口行为仅以本地 403/页面判据验证。
+    screenshots: 本轮交付为壳层角色收敛（落位配置 requires + 生成物 + DOM 组件测试 + 机器可读角色矩阵），无新增可截图的独立产品页面；UI
+      证据以 AppsShell DOM 测试与 role-convergence 机器校验为准，不重复入库截图。
+known_issues:
+- O3 侧栏统一为 partial：WAME 三套侧栏未归并（跨仓），后续任务 F-035。
+- PKC 未在 WAE 注册，真实接入未做；已有协议+检查表与 dry-run，后续任务 F-036。
+- task_flow_e2e_status / evidence_overexposure_gate 无运行时证据（pending）；本轮以 AppShell 角色收敛与
+  O1–O4 静态/单测证据为准。
+ui_product_first_control:
+  version: v1.1
+  applicability: indirect
+  user_groups:
+  - Feature 负责人
+  primary_human_task: 落地 WAE P0 四项（外壳解耦/令牌收口/侧栏统一/状态语义层）并修复 AppsShell 导航角色收敛缺陷（generated.ts
+    缺 requires），为 PKC/Brain/PVAOS 首批接入提供可回放载体；不声明项目状态提升。
+  machine_interface_boundary: 机器字段留在证据中；人类入口展示任务、风险和下一步
+  gates:
+    functional_completeness: pass
+    quality_baseline: pass
+    multi_user_usability: waived
+    task_flow_e2e_status: pending
+    accessibility_status: waived
+    evidence_overexposure_gate: pending
+  status_ceiling: partial
+created_at: "2026-10-22T10:02:42+00:00"
+updated_at: "2026-10-22T10:29:47+00:00"

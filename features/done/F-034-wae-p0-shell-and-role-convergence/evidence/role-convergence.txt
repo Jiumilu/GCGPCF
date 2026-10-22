@@ -1,0 +1,130 @@
+# F-034 AppsShell 角色收敛 —— 原始证据（2026-10-22）
+
+> 本文件是 `evidence/summary.md` 的原始输出附件；仅记录本地可回放命令与输出，不代表提交、推送、部署或状态提升。
+
+## 1. 配置源改动（WAE 仓，唯一配置源）
+
+文件：`docs/assembly-spec/placement.city.yaml`
+
+服务控制台 entries 新增 `requires`（值逐个取自 `packages/host-kit/src/host/menus.ts` 的 `MENU_CATALOG[].id`，未猜测）：
+
+```text
+gcas-console      -> gcas
+mmc-console       -> mmc
+gpcf-console      -> gpcf
+icp-console       -> icp
+aaas-console      -> aaas
+feedback-console  -> feedback
+idp-console       -> idp-console
+```
+
+## 2. 生成物（pnpm gen:apps）
+
+```text
+$ pnpm gen:apps
+✓ 读取配置：平台 city ｜ 应用 4 ｜ 条目 20 ｜ 模块包 19
+✓ 写入生成物：apps/wame/src/app/apps/generated.ts
+✓ 生成物无变化：apps/wame/src/app/apps/generated.loaders.ts
+应用落位生成：1 个写入，1 个无变化
+```
+
+`apps/wame/src/app/apps/generated.ts` 中对应 entries 已带 `requires`：
+
+```text
+{ id: 'gcas-console', app: 'service', kind: 'console', label: 'GCAs 工作台', order: 10, home: true, requires: 'gcas', source: 'module' },
+{ id: 'mmc-console', app: 'service', kind: 'console', label: 'MMC 控制台', order: 20, requires: 'mmc', source: 'module' },
+{ id: 'gpcf-console', app: 'service', kind: 'console', label: 'GPCF 治理台', order: 30, requires: 'gpcf', source: 'module' },
+{ id: 'icp-console', app: 'service', kind: 'console', label: 'ICP 产业台', order: 40, requires: 'icp', source: 'module' },
+{ id: 'aaas-console', app: 'service', kind: 'console', label: 'AaaS 服务台', order: 50, requires: 'aaas', source: 'module' },
+{ id: 'feedback-console', app: 'service', kind: 'console', label: '智能反馈管理（只读兼容）', order: 60, requires: 'feedback', source: 'module' },
+{ id: 'idp-console', app: 'service', kind: 'page', label: '身份与权限', order: 70, requires: 'idp-console', source: 'page' },
+```
+
+## 3. 机器可读角色矩阵（只读脚本，真实消费 MENU_CATALOG + APP_NAV_CONFIG）
+
+命令（临时脚本在 `/tmp`，不写入仓库）：`pnpm exec tsx /tmp/verify-f034-role.mts`
+
+脚本内容（只读；可原样复跑，与本轮实际执行的 `/tmp/verify-f034-role.mts` 逐字一致）：
+
+```ts
+import { pathToFileURL } from 'node:url';
+
+const ROOT = '/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud WAE';
+const load = async (rel: string) => import(pathToFileURL(`${ROOT}/${rel}`).href);
+
+const { MENU_CATALOG, menuIdsFor } = await load('packages/host-kit/src/host/menus.ts');
+const { APP_NAV_CONFIG } = await load('apps/wame/src/app/apps/generated.ts');
+
+const catalogIds = new Set(MENU_CATALOG.map((m: { id: string }) => m.id));
+const entries = APP_NAV_CONFIG.entries as Array<{ id: string; app: string; requires?: string }>;
+const serviceEntries = entries.filter((e) => e.app === 'service');
+
+const unknown = entries.filter((e) => e.requires && !catalogIds.has(e.requires));
+const viewerMenus = menuIdsFor({ role: 'viewer' });
+const adminMenus = menuIdsFor({ role: 'system-admin' });
+const unauthenticated = menuIdsFor({});
+
+const viewerVisibleRestricted = serviceEntries.filter((e) => e.requires && viewerMenus.includes(e.requires));
+const adminMissing = serviceEntries.filter((e) => e.requires && !adminMenus.includes(e.requires));
+const unauthVisibleRestricted = serviceEntries.filter((e) => e.requires && unauthenticated.includes(e.requires));
+
+console.log('catalog_menu_ids =', MENU_CATALOG.map((m: { id: string }) => m.id).join(','));
+console.log('service_entries =', serviceEntries.map((e) => `${e.id}->${e.requires}`).join(', '));
+console.log('requires_unknown_ids =', JSON.stringify(unknown.map((e) => e.requires)));
+console.log('viewer_menus =', JSON.stringify(viewerMenus));
+console.log('system_admin_menus =', JSON.stringify(adminMenus));
+console.log('unauthenticated_menus =', JSON.stringify(unauthenticated));
+console.log('viewer_visible_restricted =', JSON.stringify(viewerVisibleRestricted.map((e) => e.id)));
+console.log('admin_missing_required =', JSON.stringify(adminMissing.map((e) => e.id)));
+console.log('unauthenticated_visible_restricted =', JSON.stringify(unauthVisibleRestricted.map((e) => e.id)));
+const ok = unknown.length === 0 && viewerVisibleRestricted.length === 0 && adminMissing.length === 0 && unauthVisibleRestricted.length === 0;
+console.log('RESULT =', ok ? 'PASS' : 'FAIL');
+process.exit(ok ? 0 : 1);
+```
+
+```text
+catalog_menu_ids = overview,gcas,mmc,gpcf,icp,aaas,feedback-center,feedback,scene,pqc,pqc-calc,pqc-orders,pqc-sop,idp-console,alarm-action,message-dispatch
+service_entries = gcas-console->gcas, mmc-console->mmc, gpcf-console->gpcf, icp-console->icp, aaas-console->aaas, feedback-console->feedback, idp-console->idp-console
+requires_unknown_ids = []
+viewer_menus = ["overview","feedback-center","scene","pqc-sop"]
+system_admin_menus = ["overview","gcas","mmc","gpcf","icp","aaas","feedback-center","feedback","scene","pqc","pqc-calc","pqc-orders","pqc-sop","idp-console","alarm-action","message-dispatch"]
+unauthenticated_menus = ["overview","feedback-center","scene","pqc-sop"]
+viewer_visible_restricted = []
+admin_missing_required = []
+unauthenticated_visible_restricted = []
+RESULT = PASS
+```
+
+判读：
+- 所有 `requires` 都能在 `MENU_CATALOG` 中找到（无自造 menu id）；
+- **viewer（以及未认证）** 的可见菜单中不含任何服务控制台 menu id ⇒ 7 个受限入口全部不可见；
+- **system-admin** 的可见菜单包含全部 7 个 menu id ⇒ 7 个受限入口全部可见。
+
+## 4. 组件测试（apps/wame，jsdom）
+
+命令：`npx vitest run src/app/apps/AppsShell.dom.test.tsx --reporter=verbose`
+
+```text
+✓ 应用壳：角色收敛（L1 呈现层，requires → 服务端 menus） > viewer（无任何服务控制台菜单）看不到「服务控制台」与全部受限入口
+✓ 应用壳：角色收敛（L1 呈现层，requires → 服务端 menus） > system-admin（全量菜单）可见「服务控制台」与 7 个控制台入口
+✓ 应用壳：角色收敛（L1 呈现层，requires → 服务端 menus） > 部分授权（仅 gcas/mmc）只显示对应两个控制台
+✓ 应用壳：角色收敛（L1 呈现层，requires → 服务端 menus） > 未认证（menus=[]）同样不渲染受限入口；深链到无权限控制台回落公开应用
+Test Files  1 passed (1)
+     Tests  15 passed (15)
+```
+
+（其余 11 例为既有落位/旧入口/移动端用例，全部保持通过。）
+
+## 5. 命令结果（WAE 仓根，真实执行）
+
+| 命令 | 结果 | 摘要 |
+|---|---|---|
+| `pnpm check:apps` | pass | P001–P010 全部通过；服务应用 7 个二级 |
+| `pnpm gen:apps --check` | pass | 2 个生成物均最新 |
+| `pnpm typecheck` | pass | `tsc -p tsconfig.json --noEmit` 无输出 |
+| `pnpm --filter @globalcloud/wame typecheck` | pass | `tsc --noEmit` 无输出 |
+| `pnpm test` | pass | 131 files / 1373 tests passed |
+| `pnpm --filter @globalcloud/wame test` | pass | 13 files / 89 tests passed（含 AppsShell 15 例） |
+| `pnpm build` | pass | `vite build` 成功（仅 >500 kB chunk 体积警告，非阻断） |
+| `pnpm check:modules` | pass | 19 个模块包合规/不适用 19，不合规 0 |
+| `python3 _governance/tools/gc_standard.py check --repo "GlobalCloud WAE" --fail-on error` | pass（exit 0） | error 0 / warn 4（既有）/ info 1 |

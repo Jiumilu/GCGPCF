@@ -119,3 +119,9 @@ superseded_by: []
 - 用户授权后，PR #1 已合并到 main；合并提交 `29f6f09da` 的 `repository-checks` 为 success。
 - main 仍强制要求 GitHub Actions 提供该检查，严格更新和管理员强制执行已核对。
 - F-027 继续为 active：项目方案候选、历史 Feature 证据和文档人工复核债均未关闭。
+
+### 2026-10-18 技能链项目范围修正
+
+- 本次修正时项目注册表含 WAE 共 24 项；技能链此前仍登记 23 项且缺少 WAE。
+- 已补齐技能链中的 WAE 和项目总数；`validate_project_group_skill_chain.py` 返回 `pass`，覆盖 24 项。
+- `loop_document_gate.py` 本轮返回 `pass`，状态上限仍为 `partial`；F-027 其余阻塞保持，不据此关闭或提升状态。后续并行变更将 Project 纳入注册表后，技能链再次核验为 25 项通过。
