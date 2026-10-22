@@ -1,7 +1,7 @@
 id: F-034
 name: wae-p0-shell-and-role-convergence
 project: wae
-status: done
+status: active
 goal: 落地 WAE P0 四项（外壳解耦/令牌收口/侧栏统一/状态语义层）并修复 AppsShell 导航角色收敛缺陷（generated.ts 缺 requires），为 PKC/Brain/PVAOS 首批接入提供可回放载体；不声明项目状态提升。
 owner: agent-dev-01
 priority: P1
@@ -23,15 +23,20 @@ acceptance:
   - "pnpm test / typecheck / build / check:modules 真实复跑并有输出（失败如实记录）"
   - 首批接入协议与检查表落盘；PKC 首个接入演练（不声明已接入）
 loop:
-  current_step: commit
-  iteration: 1
+  current_step: evaluate
+  iteration: 2
 evidence:
   tests: pass
   build: pass
-  screenshots: waived
+  screenshots: pass
   api: waived
   summary: pass
 blockers:
+- "2026-10-22 回滚：状态提升未经老卢确认（WAE 侧长期目标纪律：F-034 至多 ready_for_review）。原 status: done 由另一 Agent 依据其 2026-10-22 18:02 自建证据置位，未覆盖 WAE 主线后续证据（O1 因 A2 删框架壳已改述、O3 项目侧未归并、PKC/Brain/PVAOS 未接入）。"
+- "O2 跨仓令牌：PKC 快照过期（缺 12 令牌）、Brain 5 独有+28 差异，整改属两仓属主"
+- "O3 侧栏统一：WAE 产品壳首例已落（WameSidebarPlugin + capability），项目侧三套未归并"
+- "M3 首批接入（Studio 例外→PKC→Brain→PVAOS）：Studio 例外材料待三方签；PKC 侧 7 项待属主"
+- "task_flow_e2e_status / evidence_overexposure_gate：仍待运行时证据"
 verification:
   tests:
   - python3 -c "import subprocess,sys; r=subprocess.run(['pnpm','test'],cwd='../GlobalCloud
@@ -87,4 +92,4 @@ ui_product_first_control:
     evidence_overexposure_gate: pending
   status_ceiling: partial
 created_at: "2026-10-22T10:02:42+00:00"
-updated_at: "2026-10-22T10:29:47+00:00"
+updated_at: "2026-10-22T14:10:00+00:00"

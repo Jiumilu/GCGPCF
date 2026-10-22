@@ -1,6 +1,14 @@
 #!/bin/sh
 set -eu
-python3 tools/kds-sync/loop_document_gate.py --check-only
+# P04（2026-10-22，老卢授权，决策模型 hook_downgrade 0.66）：loop_document_gate 本地降级为**告警**。
+# 原因：其 project_group_live_status_current 依赖"全仓 HEAD 快照"，任一仓提交都会让快照过期，
+#       与 pre-commit 组合成「任何仓提交 → GPCF 提交被阻断」的自指死锁（F-034 证据归档实测，
+#       见 WAE 仓 docs/plan/GPCF门禁阻断_只读诊断_20261022.md）。
+# 边界：只改本地提交体验；**语义设计不变**（HEAD 漂移仍属语义键，见 tests/test_gpcf_governance_remediation.py）；
+#       CI 仍以 --fail-on error 守门，不因此放过仓库级问题。
+if ! python3 tools/kds-sync/loop_document_gate.py --check-only; then
+  echo "[warn] loop_document_gate 未通过（gate_reasons 见上）——本地仅告警、不阻断提交；CI 仍 fail-on error" >&2
+fi
 python3 tools/kds-sync/document_control.py --check
 python3 tools/kds-sync/check_python_bytecode.py
 python3 -m pytest tests/ -q
