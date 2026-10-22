@@ -203,3 +203,22 @@ def test_bytecode_check_handles_long_names_and_reports_syntax_errors(tmp_path):
     failing = subprocess.run(command, cwd=ROOT, text=True, capture_output=True, check=False)
     assert failing.returncode != 0
     assert "python_bytecode=fail files=2 failures=1" in failing.stdout
+
+def test_head_drift_within_tolerance_passes():
+    """P02 容忍窗口（老卢 2026-10-22 22:21 裁定）：仅 repo_heads 漂移且在 15 分钟内视为通过。"""
+    import importlib.util
+    from datetime import datetime, timedelta
+    path = ROOT / "tools/kds-sync/build_project_group_live_status_current.py"
+    spec = importlib.util.spec_from_file_location("live_status_tolerance", path)
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    base = {key: "x" for key in module.SEMANTIC_KEYS}
+    base["repo_heads"] = {"GlobalCloud WAE": "aaa"}
+    base["generated_at"] = datetime.now().astimezone().isoformat()
+    drifted = dict(base, repo_heads={"GlobalCloud WAE": "bbb"})
+    assert module.within_head_tolerance(base, drifted)
+    stale = dict(base, generated_at=(datetime.now() - timedelta(minutes=30)).astimezone().isoformat())
+    assert not module.within_head_tolerance(stale, drifted)
+    other_field = dict(drifted, project_count=28)
+    assert not module.within_head_tolerance(base, other_field)
+

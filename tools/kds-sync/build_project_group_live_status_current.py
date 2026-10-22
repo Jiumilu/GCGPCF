@@ -156,6 +156,28 @@ def previous_snapshot_is_fresh(previous: dict) -> bool:
     return datetime.now(TZ) - generated_at <= timedelta(hours=FRESHNESS_HOURS)
 
 
+HEAD_TOLERANCE_MINUTES = 15
+
+
+def within_head_tolerance(previous: dict, snapshot: dict) -> bool:
+    """老卢 2026-10-22 22:21 裁定：SHA 漂移给 15 分钟容忍窗口。
+
+    仅当"唯一语义差异是 repo_heads"、且旧快照生成时间在 15 分钟内时，视为可接受，
+    避免其他仓并发提交造成的短时门禁红；超窗仍需重建快照。
+    """
+    diffs = [key for key in SEMANTIC_KEYS if previous.get(key) != snapshot.get(key)]
+    if diffs != ["repo_heads"]:
+        return False
+    generated_at_raw = str(previous.get("generated_at") or "")
+    if not generated_at_raw:
+        return False
+    try:
+        previous_at = datetime.fromisoformat(generated_at_raw)
+    except ValueError:
+        return False
+    return datetime.now(TZ) - previous_at <= timedelta(minutes=HEAD_TOLERANCE_MINUTES)
+
+
 def semantically_same(previous: dict, snapshot: dict) -> bool:
     for key in SEMANTIC_KEYS:
         if key == "dirty_details":
@@ -257,17 +279,21 @@ def main() -> int:
         "repo_heads": repo_heads,
         "dirty_details": dirty_details,
     }
-    if previous and previous_snapshot_is_fresh(previous) and semantically_same(previous, snapshot):
+    same_semantics = bool(previous) and semantically_same(previous, snapshot)
+    tolerated = bool(previous) and not same_semantics and within_head_tolerance(previous, snapshot)
+    if previous and previous_snapshot_is_fresh(previous) and (same_semantics or tolerated):
         snapshot["generated_at"] = previous["generated_at"]
         snapshot["previous_generated_at"] = previous.get("previous_generated_at")
         generated_at = datetime.fromisoformat(str(snapshot["generated_at"]))
 
     if args.check_only:
-        same = bool(previous) and previous_snapshot_is_fresh(previous) and semantically_same(previous, snapshot)
+        base_same = bool(previous) and previous_snapshot_is_fresh(previous) and semantically_same(previous, snapshot)
+        tolerated = bool(previous) and not base_same and within_head_tolerance(previous, snapshot)
+        same = base_same or tolerated
         observed_changes = sorted(
             key for key in OBSERVED_KEYS if previous.get(key) != snapshot.get(key)
         )
-        print(json.dumps({"status": "pass" if same else "fail", "project_count": len(EXPECTED_REPOS), "snapshot_fresh": previous_snapshot_is_fresh(previous), "snapshot_matches": bool(previous) and semantically_same(previous, snapshot), "semantic_keys": SEMANTIC_KEYS, "observed_changed_keys": observed_changes}, ensure_ascii=False))
+        print(json.dumps({"status": "pass" if same else "fail", "project_count": len(EXPECTED_REPOS), "snapshot_fresh": previous_snapshot_is_fresh(previous), "snapshot_matches": bool(previous) and semantically_same(previous, snapshot), "head_tolerance_applied": tolerated, "head_tolerance_minutes": HEAD_TOLERANCE_MINUTES, "semantic_keys": SEMANTIC_KEYS, "observed_changed_keys": observed_changes}, ensure_ascii=False))
         return 0 if same else 1
 
     json_out.write_text(json.dumps(snapshot, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
