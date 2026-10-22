@@ -1,6 +1,6 @@
 # GPC 开发文档空间
 
-生成日期：2026-10-16
+生成日期：2026-10-22
 
 用途：KDS `开发` 空间中 `GPC` 项目的受控文档入口。
 
@@ -8,13 +8,6 @@
 | --- | --- | --- | --- |
 | GPCF-DOC-285E77EC87 | globalcloud-17 | $CODEX_HOME/automations/globalcloud-17/README.md | controlled |
 | GPCF-DOC-9BC6636D29 | globalcloud-17 运行记忆 | $CODEX_HOME/automations/globalcloud-17/memory.md | controlled |
-| GPCF-DOC-C1D2E3F4A5 | impeccable | .agents/skills/impeccable/README.md | controlled |
-| GPCF-DOC-D4E5F6A7B8 | reference | .agents/skills/impeccable/reference/README.md | controlled |
-| GPCF-DOC-4B5717387C | .pytest_cache | .pytest_cache/README.md | controlled |
-| GPCF-DOC-FAD086E548 | commands | .zcode/commands/README.md | controlled |
-| GPCF-ZCODE-COMMAND-EVIDENCE-20260712 | evidence | .zcode/commands/evidence.md | controlled |
-| GPCF-ZCODE-COMMAND-LOOP-20260712 | loop | .zcode/commands/loop.md | controlled |
-| GPCF-ZCODE-COMMAND-SYNC-KDS-20260712 | sync-kds | .zcode/commands/sync-kds.md | controlled |
 | GPCF-DOC-56BC03A70C | GlobalCloud 绿色供应链体系 P0 最小闭环界面实施清单 | 04-ui-delivery/GlobalCloud绿色供应链体系P0最小闭环界面实施清单.md | controlled |
 | GPCF-DOC-BD1C1FE02E | GlobalCloud 绿色供应链体系 P0 最小闭环界面验收矩阵 | 04-ui-delivery/GlobalCloud绿色供应链体系P0最小闭环界面验收矩阵.md | controlled |
 | GPCF-DOC-5D5E27312C | GlobalCloud 绿色供应链体系对话模式与操作模式规范 | 04-ui-delivery/GlobalCloud绿色供应链体系对话模式与操作模式规范.md | controlled |

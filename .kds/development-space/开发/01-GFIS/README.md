@@ -1,15 +1,11 @@
 # GFIS 开发文档空间
 
-生成日期：2026-10-16
+生成日期：2026-10-22
 
 用途：KDS `开发` 空间中 `GFIS` 项目的受控文档入口。
 
 | doc_id | title | source_path | status |
 | --- | --- | --- | --- |
-| GPCF-DOC-A001000012 | harden | .agents/skills/impeccable/reference/harden.md | controlled |
-| GPCF-DOC-A001000015 | Interaction Design | .agents/skills/impeccable/reference/interaction-design.md | controlled |
-| GPCF-DOC-A001000019 | overdrive | .agents/skills/impeccable/reference/overdrive.md | controlled |
-| GPCF-DOC-A001000021 | polish | .agents/skills/impeccable/reference/polish.md | controlled |
 | GPCF-DOC-3B548BE016 | f423b226-0141-4aac-8df6-728f615aa3a1 | .kunsdd/draft/f423b226-0141-4aac-8df6-728f615aa3a1/README.md | controlled |
 | GPCF-DOC-F6D4D8B07A | 跨项目 Agent 长期记忆系统 | .kunsdd/draft/f423b226-0141-4aac-8df6-728f615aa3a1/requirement.md | controlled |
 | GPCF-DOC-82A2F06757 | GPCF-GF-LR-001 输入定义 | 08-evidence-samples/GFIS/GPCF-GF-LR-001-input.md | controlled |

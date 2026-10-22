@@ -16,6 +16,7 @@ supersedes: []
 superseded_by: []
 ---
 
+
 # gcworld-coverage-assessment
 
 目录：`openspec/changes/gcworld-evidence-twin-foundation/specs/gcworld-coverage-assessment`

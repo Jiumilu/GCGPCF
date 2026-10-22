@@ -16,6 +16,7 @@ supersedes: []
 superseded_by: []
 ---
 
+
 # 状态与控制台账
 
 目录：`09-status`
@@ -54,6 +55,8 @@ KDS 路径前缀：`开发/12-GPCF/09-status/`
 | GPCF-DOC-PROJECT-IMPLEMENTATION-CONTROL-REGISTER-20260624 | GlobalCloud 项目群实施方案控制台账 | 09-status/globalcloud-project-implementation-control-register.md | GPCF | controlled |
 | GPCF-DOC-6CE17269E9 | GlobalCloud 项目群项目主线对齐矩阵 | 09-status/globalcloud-project-mainline-alignment-matrix.md | GPCF | controlled |
 | GPCF-DOC-WAS-PROJECT-MASTER-PLAN-REGISTER-20260624 | GlobalCloud 项目群主方案控制台账 | 09-status/globalcloud-project-master-plan-control-register.md | GPCF | controlled |
+| GPCF-DOC-XGD-IMPLEMENTATION-REPORT-20261021 | GlobalCloud XGD 实施回传（2026-10-21） | 09-status/globalcloud-xgd-implementation-report-20261021.md | GPCF | draft |
+| GPCF-DOC-XGD-UPSTREAM-SYNC-FEEDBACK-20261021 | XGD 上游同步回传（2026-10-21） | 09-status/globalcloud-xgd-upstream-sync-feedback-20261021.md | GPCF | draft |
 | GPCF-DOC-C586488E67 | GPCF Project Status Matrix | 09-status/gpcf-project-status-matrix.md | GPCF | controlled |
 | GPCF-DOC-B1085FD000 | KDS API 同步流水覆盖事件记录 | 09-status/kds-api-sync-ledger-incident-20260617.md | GPCF | controlled |
 | GPCF-DOC-KDS-SYNC-PLAN | KDS Development Space Sync Plan | 09-status/kds-development-space-sync-plan.md | GPCF | controlled |

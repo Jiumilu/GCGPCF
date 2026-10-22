@@ -16,6 +16,7 @@ supersedes: []
 superseded_by: []
 ---
 
+
 # 治理规范
 
 目录：`02-governance`
@@ -56,11 +57,11 @@ KDS 路径前缀：`开发/12-GPCF/02-governance/`
 | GPCF-DOC-FD6BA2EC78 | GlobalCloud 绿色供应链体系设计-实现追踪矩阵规范 | 02-governance/GlobalCloud绿色供应链体系设计-实现追踪矩阵规范.md | WAME | controlled |
 | GPCF-DOC-94AA31880F | GlobalCloud 绿色供应链体系项目仓库实施准入规范 | 02-governance/GlobalCloud绿色供应链体系项目仓库实施准入规范.md | WAME | controlled |
 | GPCF-DOC-AGENT-REACH-FULL-IMPLEMENTATION-20260622 | GlobalCloud 项目群 Agent-Reach 全量实施方案与执行提示词 | 02-governance/GlobalCloud项目群Agent-Reach全量实施方案与执行提示词.md | WAME | controlled |
+| GPCF-DOC-C60B81A4D2 | GlobalCloud 项目群 Codex-DSH-Hermes 协同开发与运行方案 | 02-governance/GlobalCloud项目群Codex-DSH-Hermes协同开发与运行方案.md | WAME | controlled |
 | GPCF-DOC-3A9B7F4E12 | GlobalCloud 项目群 Cognee 纳入项目群及 LOOP 工程体系评估与 POC 方案 | 02-governance/GlobalCloud项目群Cognee纳入项目群及LOOP工程体系评估与POC方案.md | WAME | controlled |
 | GPCF-DOC-5E60043D38 | GlobalCloud 项目群 Headroom LCX 全量实施方案与执行提示词 | 02-governance/GlobalCloud项目群Headroom-LCX全量实施方案与执行提示词.md | WAME | controlled |
 | GPCF-DOC-2BBAE6E546 | GlobalCloud 项目群 Headroom 接入应用与成本评估模型 | 02-governance/GlobalCloud项目群Headroom接入应用与成本评估模型.md | WAME | controlled |
 | GPCF-DOC-AC66DE8415 | GlobalCloud 项目群 KDS 开发空间安全规范 | 02-governance/GlobalCloud项目群KDS开发空间安全规范.md | WAME | controlled |
-| GPCF-DOC-C60B81A4D2 | GlobalCloud 项目群 Codex-DSH-Hermes 协同开发与运行方案 | 02-governance/GlobalCloud项目群Codex-DSH-Hermes协同开发与运行方案.md | WAME | controlled |
 | GPCF-DOC-785AEA3125 | GlobalCloud项目群WAS／Ontology全量实施方案与执行提示词 | 02-governance/GlobalCloud项目群WAS／Ontology全量实施方案与执行提示词.md | WAME | controlled |
 | GPCF-DOC-D2373AEE37 | GlobalCloud 项目群在 Codex 中的模型分工与成本控制方案 | 02-governance/GlobalCloud项目群在Codex中的模型分工与成本控制方案.md | WAME | controlled |
 | GPCF-DOC-PROJECT-GROUP-MASTER-PLAN-GOVERNANCE-20260624 | GlobalCloud 项目群总体方案治理专项目标与路线图 | 02-governance/GlobalCloud项目群总体方案治理专项目标与路线图.md | WAME | controlled |

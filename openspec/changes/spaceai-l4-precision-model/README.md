@@ -16,24 +16,31 @@ supersedes: []
 superseded_by: []
 ---
 
+
 # spaceai-l4-precision-model
 
-三维地图 L4 精模：资产口径、清单契约、加载/切换/回落、接入工具链、一键验收与 CI。
+目录：`openspec/changes/spaceai-l4-precision-model`
 
-| 项 | 内容 |
-|---|---|
-| 状态 | **implemented（链路）/ partial（真实资产未接入）** |
-| 追溯补建 | 2026-10-22（工作已完成并本地提交 6 个提交，补建变更账） |
-| 对应 Feature | `features/active/F-037-map-3d-l4-precision-model` |
-| 承接项目 | GlobalCloud SpaceAI Platform（独立 Git 仓） |
-| 提交 | `3880c18` `577c15b` `30cefd2` `d6c83b1` `f42aac0` `65738fc` |
-| 关键证据 | `harness/l4-acceptance/`（PASS ×2）、`harness/l4-evidence/sim-drill/`、`docs/3d/l4-*.md` |
-| 未完成 | 真实 L4 资产（采购/自采/外部源均待授权）；几何精度验收 |
-| 边界 | 未 push、未部署、未提升验收状态；不改 schema |
+用途：保存本目录下的受控文档、证据或规格材料。
 
-## 文件
+KDS 空间：`开发`
 
-- `proposal.md`：Why / What / 三层对齐 / Impact
-- `design.md`：口径、清单、切换回落、工具链、验收与取舍
-- `tasks.md`：任务勾选与未完成项
-- `specs/spaceai-l4-precision-model/spec.md`：能力规格（Requirement / Scenario）
+关联项目：KDS, GPCF
+
+受控规则：
+
+- 本目录新增 Markdown 文档必须重新运行 `python3 tools/kds-sync/document_control.py`。
+- 当前有效文档使用 `controlled`；草案使用 `draft`；历史证据使用 `archive`。
+- 过期或被替代文档不得删除，必须进入归档台账或保留替代关系。
+
+## 文档清单
+
+| doc_id | title | source_path | project | status |
+| --- | --- | --- | --- | --- |
+| GPCF-DOC-C6440B6B | spaceai-l4-precision-model | openspec/changes/spaceai-l4-precision-model/README.md | KDS | implemented |
+| GPCF-DOC-40640A40 | design | openspec/changes/spaceai-l4-precision-model/design.md | GPCF | implemented |
+| GPCF-DOC-0C89CA9D | proposal | openspec/changes/spaceai-l4-precision-model/proposal.md | KDS | implemented |
+| GPCF-DOC-902F9E55 | specs | openspec/changes/spaceai-l4-precision-model/specs/README.md | GPCF | implemented |
+| GPCF-DOC-369A7797 | spaceai-l4-precision-model 规格索引 | openspec/changes/spaceai-l4-precision-model/specs/spaceai-l4-precision-model/README.md | KDS | draft |
+| GPCF-DOC-58D9EB15 | spec | openspec/changes/spaceai-l4-precision-model/specs/spaceai-l4-precision-model/spec.md | GPCF | implemented |
+| GPCF-DOC-E2F62413 | tasks | openspec/changes/spaceai-l4-precision-model/tasks.md | GPCF | implemented |

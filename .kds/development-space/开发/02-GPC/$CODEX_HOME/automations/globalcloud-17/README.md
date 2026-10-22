@@ -11,10 +11,11 @@ kds_space: 开发
 kds_path: 开发/02-GPC/$CODEX_HOME/automations/globalcloud-17/README.md
 source_path: $CODEX_HOME/automations/globalcloud-17/README.md
 sync_direction: bidirectional
-last_reviewed: 2026-10-16
+last_reviewed: 2026-10-12
 supersedes: []
 superseded_by: []
 ---
+
 
 # globalcloud-17
 

@@ -16,6 +16,7 @@ supersedes: []
 superseded_by: []
 ---
 
+
 # specs
 
 目录：`openspec/changes/was-scenario-flow-extension/specs`

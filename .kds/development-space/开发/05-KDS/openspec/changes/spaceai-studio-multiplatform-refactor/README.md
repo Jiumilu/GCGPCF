@@ -16,6 +16,7 @@ supersedes: []
 superseded_by: []
 ---
 
+
 # spaceai-studio-multiplatform-refactor
 
 目录：`openspec/changes/spaceai-studio-multiplatform-refactor`
@@ -36,10 +37,10 @@ KDS 空间：`开发`
 
 | doc_id | title | source_path | project | status |
 | --- | --- | --- | --- | --- |
-| GPCF-DOC-477C45A148 | spaceai-studio-multiplatform-refactor | openspec/changes/spaceai-studio-multiplatform-refactor/README.md | KDS | draft |
-| GPCF-OS-SPACEAI-STUDIO-MULTIPLATFORM-REFACTOR-DESIGN-20261010 | design | openspec/changes/spaceai-studio-multiplatform-refactor/design.md | KDS | draft |
-| GPCF-OS-SPACEAI-STUDIO-MULTIPLATFORM-REFACTOR-PROPOSAL-20261010 | proposal | openspec/changes/spaceai-studio-multiplatform-refactor/proposal.md | KDS | draft |
-| GPCF-DOC-8B83B1A79A | specs | openspec/changes/spaceai-studio-multiplatform-refactor/specs/README.md | KDS | draft |
-| GPCF-DOC-D53A9468CA | spaceai-studio-multiplatform-platform | openspec/changes/spaceai-studio-multiplatform-refactor/specs/spaceai-studio-multiplatform-platform/README.md | KDS | draft |
-| GPCF-OS-SPACEAI-STUDIO-MULTIPLATFORM-REFACTOR-SPEC-20261010 | spec | openspec/changes/spaceai-studio-multiplatform-refactor/specs/spaceai-studio-multiplatform-platform/spec.md | GPCF | draft |
-| GPCF-OS-SPACEAI-STUDIO-MULTIPLATFORM-REFACTOR-TASKS-20261010 | tasks | openspec/changes/spaceai-studio-multiplatform-refactor/tasks.md | KDS | draft |
+| GPCF-DOC-477C45A148 | spaceai-studio-multiplatform-refactor | openspec/changes/spaceai-studio-multiplatform-refactor/README.md | KDS | in_progress |
+| GPCF-OS-SPACEAI-STUDIO-MULTIPLATFORM-REFACTOR-DESIGN-20261010 | design | openspec/changes/spaceai-studio-multiplatform-refactor/design.md | KDS | in_progress |
+| GPCF-OS-SPACEAI-STUDIO-MULTIPLATFORM-REFACTOR-PROPOSAL-20261010 | proposal | openspec/changes/spaceai-studio-multiplatform-refactor/proposal.md | KDS | in_progress |
+| GPCF-DOC-8B83B1A79A | specs | openspec/changes/spaceai-studio-multiplatform-refactor/specs/README.md | KDS | in_progress |
+| GPCF-DOC-D53A9468CA | spaceai-studio-multiplatform-platform | openspec/changes/spaceai-studio-multiplatform-refactor/specs/spaceai-studio-multiplatform-platform/README.md | KDS | in_progress |
+| GPCF-OS-SPACEAI-STUDIO-MULTIPLATFORM-REFACTOR-SPEC-20261010 | spec | openspec/changes/spaceai-studio-multiplatform-refactor/specs/spaceai-studio-multiplatform-platform/spec.md | GPCF | in_progress |
+| GPCF-OS-SPACEAI-STUDIO-MULTIPLATFORM-REFACTOR-TASKS-20261010 | tasks | openspec/changes/spaceai-studio-multiplatform-refactor/tasks.md | KDS | in_progress |

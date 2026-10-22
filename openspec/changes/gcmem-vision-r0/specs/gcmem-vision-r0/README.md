@@ -16,6 +16,7 @@ supersedes: []
 superseded_by: []
 ---
 
+
 # gcmem-vision-r0
 
 目录：`openspec/changes/gcmem-vision-r0/specs/gcmem-vision-r0`
@@ -36,4 +37,5 @@ KDS 空间：`开发`
 
 | doc_id | title | source_path | project | status |
 | --- | --- | --- | --- | --- |
-| GPCF-PROJECT-GCMEM-VISION-R0-SPEC-20261021 | gcmem-vision-r0 能力规格 | openspec/changes/gcmem-vision-r0/specs/gcmem-vision-r0/spec.md | GPCF | draft |
+| GPCF-DOC-266E4E965D | gcmem-vision-r0 | openspec/changes/gcmem-vision-r0/specs/gcmem-vision-r0/README.md | KDS | draft |
+| GPCF-GCMEM-VISION-R0-SPEC-20261021 | GCMEM R0 能力规格（gcmem-vision-r0） | openspec/changes/gcmem-vision-r0/specs/gcmem-vision-r0/spec.md | GPCF | draft |

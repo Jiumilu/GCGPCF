@@ -16,6 +16,7 @@ supersedes: []
 superseded_by: []
 ---
 
+
 # project-group-icp-registration
 
 目录：`openspec/changes/register-globalcloud-icp/specs/project-group-icp-registration`

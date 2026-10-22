@@ -16,6 +16,7 @@ supersedes: []
 superseded_by: []
 ---
 
+
 # register-globalcloud-icp
 
 目录：`openspec/changes/register-globalcloud-icp`

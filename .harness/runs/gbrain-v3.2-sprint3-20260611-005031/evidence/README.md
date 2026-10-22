@@ -16,6 +16,7 @@ supersedes: []
 superseded_by: []
 ---
 
+
 # evidence
 
 目录：`.harness/runs/gbrain-v3.2-sprint3-20260611-005031/evidence`

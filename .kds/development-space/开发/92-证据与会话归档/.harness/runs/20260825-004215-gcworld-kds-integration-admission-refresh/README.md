@@ -11,10 +11,11 @@ kds_space: 开发
 kds_path: 开发/92-证据与会话归档/.harness/runs/20260825-004215-gcworld-kds-integration-admission-refresh/README.md
 source_path: .harness/runs/20260825-004215-gcworld-kds-integration-admission-refresh/README.md
 sync_direction: bidirectional
-last_reviewed: 2026-10-16
+last_reviewed: 2026-10-12
 supersedes: []
 superseded_by: []
 ---
+
 
 # 20260825-004215-gcworld-kds-integration-admission-refresh
 

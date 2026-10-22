@@ -1,20 +1,22 @@
 ---
 doc_id: GPCF-DOC-GCMEM-MEM0-CMP
-title: GCMEM 与 mem0 全量对比（v1.5 · 2026-10-17）
+title: GCMEM 与 mem0 全量对比（v2.0 · 2026-10-20）
 project: GPCF
 related_projects: [GPCF]
 domain: governance
 status: controlled
-version: v1.0
+version: v2.0
 owner: GPCF
 kds_space: 开发
 kds_path: 开发/91-治理与验收/projects/gcmem/GCMEM-vs-mem0-对比.md
 source_path: projects/gcmem/GCMEM-vs-mem0-对比.md
 sync_direction: bidirectional
-last_reviewed: 2026-10-17
+last_reviewed: 2026-10-20
 supersedes: []
 superseded_by: []
 ---
+
+> 同步说明（2026-10-20，老卢授权 E4）：正文由 GCMEM 仓 `docs/docs/GCMEM-vs-mem0-对比.md` 同步；事实源以 GCMEM 仓为最新，本副本随 E4 同步流程更新。
 
 # GCMEM 与 mem0 全量对比（v1.5）
 
@@ -51,7 +53,7 @@ superseded_by: []
 
 | 差距 | 影响 | 补救方案 | 状态 |
 |---|---|---|---|
-| ~~无 metadata 键值过滤~~ | ~~调用方按自定义维度筛记忆~~ | ~~API search/get_all 加 metadata 参数~~ | ✅ 已补（v1.5.1，2026-10-17）：条目行尾 `· meta:k=v;…`，API/MCP/CLI 全链支持，过滤 AND 语义，回归 26/26 |
+| ~~无 metadata 键值过滤~~ | ~~调用方按自定义维度筛记忆~~ | ~~API search/get_all 加 metadata 参数~~ | ✅ 已补（v1.5.1，2026-10-17）：条目行尾 `· meta:k=v;…`，API/MCP/CLI 全链支持，过滤 AND 语义；回归 26/26（v1.5.1 时点；现行 **113/113**，2026-10-20） |
 | 无 run_id 级作用域 | 单会话级记忆隔离 | 账本加 `· run:` 标注即可（格式已支持 src 同级扩展） | 低（暂缓） |
 | 检索无多向量库/重排 | 大规模（>1万条）时 bigram 本地排序退化 | 账本达千条级再评估：接 KDS 已有多路召回或 LLM rerank | 低（当前 35 条） |
 | 单一 LLM 供应商 | DeepSeek 不可用时判重/提炼降级为字符串路径 | 已内置降级（infer 失败→快路径，不阻塞写入） | 低 |

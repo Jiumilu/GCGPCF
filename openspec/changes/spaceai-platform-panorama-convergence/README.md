@@ -16,6 +16,7 @@ supersedes: []
 superseded_by: []
 ---
 
+
 # spaceai-platform-panorama-convergence
 
 目录：`openspec/changes/spaceai-platform-panorama-convergence`
@@ -36,10 +37,10 @@ KDS 空间：`开发`
 
 | doc_id | title | source_path | project | status |
 | --- | --- | --- | --- | --- |
-| GPCF-DOC-2007BED0D1 | spaceai-platform-panorama-convergence | openspec/changes/spaceai-platform-panorama-convergence/README.md | KDS | draft |
-| GPCF-SPACEAI-PANORAMA-DESIGN-20261016 | design | openspec/changes/spaceai-platform-panorama-convergence/design.md | GPCF | draft |
-| GPCF-SPACEAI-PANORAMA-PROPOSAL-20261016 | proposal | openspec/changes/spaceai-platform-panorama-convergence/proposal.md | KDS | draft |
-| GPCF-DOC-A29F69DAAF | specs | openspec/changes/spaceai-platform-panorama-convergence/specs/README.md | KDS | draft |
-| GPCF-DOC-DDBDFB20B3 | spaceai-platform-panorama-structure | openspec/changes/spaceai-platform-panorama-convergence/specs/spaceai-platform-panorama-structure/README.md | KDS | draft |
-| GPCF-OS-PANORAMA-STRUCTURE-SPEC-20261016 | 全景态势模块化结构与行为基线 | openspec/changes/spaceai-platform-panorama-convergence/specs/spaceai-platform-panorama-structure/spec.md | GPCF | draft |
-| GPCF-SPACEAI-PANORAMA-TASKS-20261016 | tasks | openspec/changes/spaceai-platform-panorama-convergence/tasks.md | GPCF | draft |
+| GPCF-DOC-2007BED0D1 | spaceai-platform-panorama-convergence | openspec/changes/spaceai-platform-panorama-convergence/README.md | KDS | implemented |
+| GPCF-SPACEAI-PANORAMA-DESIGN-20261016 | design | openspec/changes/spaceai-platform-panorama-convergence/design.md | GPCF | implemented |
+| GPCF-SPACEAI-PANORAMA-PROPOSAL-20261016 | proposal | openspec/changes/spaceai-platform-panorama-convergence/proposal.md | KDS | implemented |
+| GPCF-DOC-A29F69DAAF | specs | openspec/changes/spaceai-platform-panorama-convergence/specs/README.md | KDS | implemented |
+| GPCF-DOC-DDBDFB20B3 | spaceai-platform-panorama-structure | openspec/changes/spaceai-platform-panorama-convergence/specs/spaceai-platform-panorama-structure/README.md | KDS | implemented |
+| GPCF-OS-PANORAMA-STRUCTURE-SPEC-20261016 | 全景态势模块化结构与行为基线 | openspec/changes/spaceai-platform-panorama-convergence/specs/spaceai-platform-panorama-structure/spec.md | GPCF | implemented |
+| GPCF-SPACEAI-PANORAMA-TASKS-20261016 | tasks | openspec/changes/spaceai-platform-panorama-convergence/tasks.md | GPCF | implemented |

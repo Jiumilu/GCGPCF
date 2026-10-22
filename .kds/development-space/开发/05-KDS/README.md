@@ -1,6 +1,6 @@
 # KDS 开发文档空间
 
-生成日期：2026-10-16
+生成日期：2026-10-22
 
 用途：KDS `开发` 空间中 `KDS` 项目的受控文档入口。
 
@@ -725,7 +725,6 @@
 | GPCF-DOC-B3ABDDC956 | Ontology/WAS 3 小时实施 P0 启动校准证据 | docs/harness/evidence/ontology-was-3h-p0-start-20260621.md | controlled |
 | GPCF-DOC-90C8663294 | Ontology/WAS 3 小时实施 P1 Source Record 准备度证据 | docs/harness/evidence/ontology-was-3h-p1-source-record-readiness-20260621.md | controlled |
 | GPCF-DOC-C21E66324C | Ontology/WAS 真实 Source Record Intake Package | docs/harness/evidence/ontology-was-real-source-record-intake-pack-20260621.md | controlled |
-| GPCF-DOC-PROJECTGROUPLIVESTATUSCURRENT20260701 | GlobalCloud 项目群当前 Live 状态快照 | docs/harness/evidence/project_group_live_status_current.md | controlled |
 | GPCF-DOC-FACA370CCA | 会话主任务总结与声明控制边界 | docs/harness/evidence/session-main-task-summary-declaration-boundary-20260622.md | controlled |
 | GPCF-DOC-3A9B82D614 | Session Mainline Drift Watch 20260622 | docs/harness/evidence/session-mainline-drift-watch-20260622.md | controlled |
 | GPCF-DOC-SESSION-HANDOFF-REQUEST-GATE-20260622 | Session Mainline Handoff Request Gate 20260622 | docs/harness/evidence/session-mainline-handoff-request-gate-20260622.md | controlled |
@@ -897,6 +896,9 @@
 | GPCF-DOC-E61CE550C4 | specs | openspec/changes/enable-project-group-openspec-coverage/specs/README.md | draft |
 | GPCF-DOC-5419DA34A8 | project-group-openspec-coverage | openspec/changes/enable-project-group-openspec-coverage/specs/project-group-openspec-coverage/README.md | draft |
 | GPCF-OS-OPEN-SPEC-COVERAGE-TASKS-20260712 | tasks | openspec/changes/enable-project-group-openspec-coverage/tasks.md | draft |
+| GPCF-DOC-09A691DC1E | GCMEM R0 变更包索引（gcmem-vision-r0） | openspec/changes/gcmem-vision-r0/README.md | draft |
+| GPCF-DOC-512AB6C9 | gcmem-vision-r0 规格索引 | openspec/changes/gcmem-vision-r0/specs/README.md | draft |
+| GPCF-DOC-266E4E965D | gcmem-vision-r0 | openspec/changes/gcmem-vision-r0/specs/gcmem-vision-r0/README.md | draft |
 | GPCF-DOC-07DC110521 | gcworld-controlled-runtime-integration | openspec/changes/gcworld-controlled-runtime-integration/README.md | draft |
 | GPCF-DOC-GCWORLD-040 | proposal | openspec/changes/gcworld-controlled-runtime-integration/proposal.md | draft |
 | GPCF-DOC-F303786957 | specs | openspec/changes/gcworld-controlled-runtime-integration/specs/README.md | draft |
@@ -978,20 +980,26 @@
 | GPCF-OS-ICP-REGISTRATION-SPEC-20260712 | spec | openspec/changes/register-globalcloud-icp/specs/project-group-icp-registration/spec.md | draft |
 | GPCF-DOC-DA59B18707 | sop-bind-matrix-to-icp-foundation | openspec/changes/sop-bind-matrix-to-icp-foundation/README.md | draft |
 | GPCF-OS-ICP-SOP-COUPLING-PROPOSAL-20260713 | proposal | openspec/changes/sop-bind-matrix-to-icp-foundation/proposal.md | draft |
-| GPCF-DOC-2007BED0D1 | spaceai-platform-panorama-convergence | openspec/changes/spaceai-platform-panorama-convergence/README.md | draft |
-| GPCF-SPACEAI-PANORAMA-PROPOSAL-20261016 | proposal | openspec/changes/spaceai-platform-panorama-convergence/proposal.md | draft |
-| GPCF-DOC-A29F69DAAF | specs | openspec/changes/spaceai-platform-panorama-convergence/specs/README.md | draft |
-| GPCF-DOC-DDBDFB20B3 | spaceai-platform-panorama-structure | openspec/changes/spaceai-platform-panorama-convergence/specs/spaceai-platform-panorama-structure/README.md | draft |
-| GPCF-DOC-477C45A148 | spaceai-studio-multiplatform-refactor | openspec/changes/spaceai-studio-multiplatform-refactor/README.md | draft |
-| GPCF-OS-SPACEAI-STUDIO-MULTIPLATFORM-REFACTOR-DESIGN-20261010 | design | openspec/changes/spaceai-studio-multiplatform-refactor/design.md | draft |
-| GPCF-OS-SPACEAI-STUDIO-MULTIPLATFORM-REFACTOR-PROPOSAL-20261010 | proposal | openspec/changes/spaceai-studio-multiplatform-refactor/proposal.md | draft |
-| GPCF-DOC-8B83B1A79A | specs | openspec/changes/spaceai-studio-multiplatform-refactor/specs/README.md | draft |
-| GPCF-DOC-D53A9468CA | spaceai-studio-multiplatform-platform | openspec/changes/spaceai-studio-multiplatform-refactor/specs/spaceai-studio-multiplatform-platform/README.md | draft |
-| GPCF-OS-SPACEAI-STUDIO-MULTIPLATFORM-REFACTOR-TASKS-20261010 | tasks | openspec/changes/spaceai-studio-multiplatform-refactor/tasks.md | draft |
-| GPCF-DOC-5D99E8D484 | spaceai-was-city-flood-replay | openspec/changes/spaceai-was-city-flood-replay/README.md | draft |
-| GPCF-SPACEAI-FLOOD-PROPOSAL-20261016 | proposal | openspec/changes/spaceai-was-city-flood-replay/proposal.md | draft |
-| GPCF-DOC-FECC2A4859 | specs | openspec/changes/spaceai-was-city-flood-replay/specs/README.md | draft |
-| GPCF-DOC-307EB657D0 | spaceai-city-slice-replay | openspec/changes/spaceai-was-city-flood-replay/specs/spaceai-city-slice-replay/README.md | draft |
+| GPCF-DOC-C6440B6B | spaceai-l4-precision-model | openspec/changes/spaceai-l4-precision-model/README.md | implemented |
+| GPCF-DOC-0C89CA9D | proposal | openspec/changes/spaceai-l4-precision-model/proposal.md | implemented |
+| GPCF-DOC-369A7797 | spaceai-l4-precision-model 规格索引 | openspec/changes/spaceai-l4-precision-model/specs/spaceai-l4-precision-model/README.md | draft |
+| GPCF-DOC-93941CDB | spaceai-panorama-operation-normalization | openspec/changes/spaceai-panorama-operation-normalization/README.md | in_progress |
+| GPCF-DOC-353529D8 | proposal | openspec/changes/spaceai-panorama-operation-normalization/proposal.md | in_progress |
+| GPCF-DOC-2F02F9A8 | spaceai-panorama-operation-normalization 规格索引 | openspec/changes/spaceai-panorama-operation-normalization/specs/spaceai-panorama-operation-normalization/README.md | draft |
+| GPCF-DOC-2007BED0D1 | spaceai-platform-panorama-convergence | openspec/changes/spaceai-platform-panorama-convergence/README.md | implemented |
+| GPCF-SPACEAI-PANORAMA-PROPOSAL-20261016 | proposal | openspec/changes/spaceai-platform-panorama-convergence/proposal.md | implemented |
+| GPCF-DOC-A29F69DAAF | specs | openspec/changes/spaceai-platform-panorama-convergence/specs/README.md | implemented |
+| GPCF-DOC-DDBDFB20B3 | spaceai-platform-panorama-structure | openspec/changes/spaceai-platform-panorama-convergence/specs/spaceai-platform-panorama-structure/README.md | implemented |
+| GPCF-DOC-477C45A148 | spaceai-studio-multiplatform-refactor | openspec/changes/spaceai-studio-multiplatform-refactor/README.md | in_progress |
+| GPCF-OS-SPACEAI-STUDIO-MULTIPLATFORM-REFACTOR-DESIGN-20261010 | design | openspec/changes/spaceai-studio-multiplatform-refactor/design.md | in_progress |
+| GPCF-OS-SPACEAI-STUDIO-MULTIPLATFORM-REFACTOR-PROPOSAL-20261010 | proposal | openspec/changes/spaceai-studio-multiplatform-refactor/proposal.md | in_progress |
+| GPCF-DOC-8B83B1A79A | specs | openspec/changes/spaceai-studio-multiplatform-refactor/specs/README.md | in_progress |
+| GPCF-DOC-D53A9468CA | spaceai-studio-multiplatform-platform | openspec/changes/spaceai-studio-multiplatform-refactor/specs/spaceai-studio-multiplatform-platform/README.md | in_progress |
+| GPCF-OS-SPACEAI-STUDIO-MULTIPLATFORM-REFACTOR-TASKS-20261010 | tasks | openspec/changes/spaceai-studio-multiplatform-refactor/tasks.md | in_progress |
+| GPCF-DOC-5D99E8D484 | spaceai-was-city-flood-replay | openspec/changes/spaceai-was-city-flood-replay/README.md | implemented |
+| GPCF-SPACEAI-FLOOD-PROPOSAL-20261016 | proposal | openspec/changes/spaceai-was-city-flood-replay/proposal.md | implemented |
+| GPCF-DOC-FECC2A4859 | specs | openspec/changes/spaceai-was-city-flood-replay/specs/README.md | implemented |
+| GPCF-DOC-307EB657D0 | spaceai-city-slice-replay | openspec/changes/spaceai-was-city-flood-replay/specs/spaceai-city-slice-replay/README.md | implemented |
 | GPCF-DOC-4C32519F10 | was-flow-naming-migration | openspec/changes/was-flow-naming-migration/README.md | draft |
 | GPCF-DOC-3EBD68D2C6 | artifacts | openspec/changes/was-flow-naming-migration/artifacts/README.md | draft |
 | GPCF-DOC-FCAE31EF6C | Design — was-flow-naming-migration | openspec/changes/was-flow-naming-migration/design.md | draft |
