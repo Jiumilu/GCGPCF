@@ -80,3 +80,33 @@ superseded_by: []
 5. SSO/403：iframe 内 401/403 需可读提示，不得静默失败；未对齐前不得作为治理证据。
 
 以上为建议，未改 PKC 配置。
+
+## 9. 本地嵌入联调尝试（2026-10-23 10:00）
+
+- 启动 PKC dev :5174 与 WAE dev :4300（带 `VITE_PKC_EMBED_URL`、`VITE_WAE_AUTH_DEV_BYPASS=1`）。
+- Playwright（system Chrome）访问 `/global-cloud-workbench/pkc/pkc-intake`，页面为**统一身份登录页**，未进入应用壳；未出现 `pkc-embed-enable` 按钮，无法触发 iframe。
+- 外部请求 0；未产生联调结论。
+- 原因假设：WAE Vite root 可能为 `apps/wame`，根 `.env.local` 未被加载；需在正确 env 目录或启动命令中注入。
+- 已停止两服务、删除临时 `.env.local` 与测试目录；未改 WAE 代码。
+- 结论：**联调未完成**；代码路径/配置项仍以静态核查为准。
+
+## 10. 本地嵌入验证成功（2026-10-23 10:10）
+
+- 关键修正：WAE Vite root 为 `apps/wame`，env 写 `apps/wame/.env.local`：
+  `VITE_WAE_AUTH_DEV_BYPASS=1`、`VITE_PKC_EMBED_URL=http://127.0.0.1:5174/`。
+- 结果：
+  - 点击前：frameCount=0，enableButtonCount=1（不自动发请求）。
+  - 点击后：frameCount=1，src=`http://127.0.0.1:5174/`。
+  - iframe 内 PKC Home 已渲染（标题/导航/知识健康度 82%）。
+  - frames：WAE 入口 + PKC 5174。
+- 证据：`evidence/embed-20261023/`（before/after 截图 + assertions.json）。
+- 限制：仅 dev bypass 本地验证；未验证生产构建、CSP/XFO、SSO/403 对齐；不声明生产可用。
+- 已停止两服务、删除临时 `apps/wame/.env.local`、清理测试目录。
+
+## 11. 复现脚本归档（2026-10-23 10:20）
+
+`evidence/embed-20261023/` 新增：
+- `run-embed.sh`：启动 PKC :5174、WAE :4300（写入 `apps/wame/.env.local`），跑校验后清理。
+- `embed-check.js`：Playwright system Chrome，检查点击前 frame=0/按钮=1、点击后 frame=1/src=5174、iframe 内 PKC 文本。
+- `assertions.json`：本轮实测断言。
+注意：脚本会临时创建 `node_modules`（若不存在）与 `.env.local`，退出时删除 env。

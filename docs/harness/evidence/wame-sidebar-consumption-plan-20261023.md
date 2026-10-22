@@ -114,3 +114,32 @@ superseded_by: []
 - 证明：F-035 侧栏实现 + 共享契约类型可在 WAME 分支类型检查通过。
 - 已恢复 worktree 跟踪文件并清理生成的 lock/workspace；未 commit。
 - 真实 WAME patch 使用仓库根相对路径（`../GlobalCloud WAE/...`），与 worktree 测试的绝对路径等价。
+
+## 12. 分支应用（2026-10-23 09:00）
+
+- 老卢授权：在 `wame/architecture-contracts` worktree 应用 patch（不 commit），决策值 0.782。
+- 执行：
+  1. 复制当前 F-035 `GlobalCloudSidebar.tsx` 到 worktree；
+  2. `git apply` patch（package.json 依赖 + import/interface）；
+  3. 临时软链 `~/.codex/worktrees/GlobalCloud WAE` 使相对 file: 依赖可解析；
+  4. `pnpm install --ignore-scripts` exit 0；`pnpm typecheck` exit 0；
+  5. 移除临时软链与生成的 pnpm-lock。
+- 当前 worktree 状态（未提交）：`package.json`、`src/app/layout/GlobalCloudSidebar.tsx` 修改。
+- 回滚：`git restore package.json src/app/layout/GlobalCloudSidebar.tsx` + `pnpm install`。
+- 注意：该 worktree 可能被其他会话共用，属主提交前需确认。
+
+## 13. 本地提交（2026-10-23 09:10）
+
+- 老卢授权：在 architecture-contracts worktree 本地 commit（不 push），决策值 0.409。
+- 提交 `b233438 feat(wame): consume app-registry sidebar contract`（2 files，+78/-16）。
+- 门禁：WAME pre-commit pass。
+- 未 push；推送留给 WAME 属主。
+
+## 14. 侧栏测试验证（2026-10-23 09:20）
+
+- 在 architecture-contracts worktree 用临时 vitest 配置运行 `tests/global-cloud-sidebar.test.tsx`。
+- 初次：4 passed / 1 failed（`components/Sidebar` 别名仍指旧实现）。
+- 同步 F-035 `components/Sidebar.tsx` 后：**5/5 passed**。
+- 追加本地提交 `ea8f321 fix(wame): keep Sidebar compatibility alias`（不 push）。
+- 临时测试文件与 vitest 配置已移除；worktree clean。
+- 说明：测试文件未提交（该分支 vitest include 仅 `*.test.ts`，需另调配置）。

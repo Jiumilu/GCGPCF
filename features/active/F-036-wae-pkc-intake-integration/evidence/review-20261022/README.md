@@ -133,3 +133,10 @@ superseded_by: []
 - 不声明 PKC 已接入 / 已集成 / accepted / integrated / production_ready / 客户验收。
 - 本文件为评审准备材料，不是评审结论；最终结论由评审人/老卢给出。
 - 未 commit / push；未关闭 Feature；未改 PKC 仓 / WAE 业务代码。
+
+## 2026-10-23 更新：真实嵌入（本地 dev）
+
+- R-PKC-1 的“真实受控嵌入未联调”部分更新：
+  - 本地 dev bypass 验证通过（点击前 frame=0/按钮=1；点击后 frame=1、src=PKC :5174；iframe 内 PKC Home 渲染）。
+  - 证据：`evidence/embed-20261023/`（截图 + assertions + run-embed.sh）。
+- 仍未验证：生产构建、CSP/X-Frame-Options、SSO/403 对齐；不改变 conditional 结论，不声明 PKC 已接入。

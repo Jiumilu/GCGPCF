@@ -35,7 +35,7 @@ evidence:
   summary: pass
 blockers:
   - "PKC P4/P5 已最小接入：gc 令牌快照 + theme 映射（C6 0→117）、7 值状态字典 + StatusBadge（C5 存在）；残留=非真实包消费、部分页面未迁移、C1/C4/C10 既有项"
-  - "PKC 真实运行时受控嵌入未启用/未联调（未配置 VITE_PKC_EMBED_URL；就绪核查见 evidence/embed-readiness-20261022.md）"
+  - "PKC 真实运行时受控嵌入：本地 dev bypass 已验证（点击后 iframe 加载 PKC Home，见 evidence/embed-20261023/）；生产构建/CSP/SSO/403 未验证"
   - "正式接入评审未进行；review_status=conditional；不得声明 PKC 已接入"
 verification:
   tests:
