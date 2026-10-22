@@ -616,11 +616,11 @@ vu_units:
   object: 9 个历史 done Feature 补验记录
   source_of_record: features/done
   acceptor: GPCF 治理 owner
-  stage: S1
-  stage_evidence: F-027 blockers 自述 9 个已关闭 Feature 不符现行关闭规则；补验未执行
+  stage: S2
+  stage_evidence: F-027 已 closed：12 tests、document_control --check 0、py_compile 0、bytecode 1235 files/0 fail；复核证据见 features/done/F-027.../evidence/remediation-verification-20261023.md
   data_class: dry_run
   inferred: true
-  notes: 关闭规则被回溯改写，信用无法累计
+  notes: 按“tests/build/validator pass = S2”修正；历史关闭规则仍有受控例外，不升 S3
 - vu_id: GPCF-VU-04
   project: GPCF
   weight: 2
@@ -720,11 +720,11 @@ vu_units:
   object: API 响应与 summary 证据
   source_of_record: ICP API
   acceptor: ICP owner
-  stage: S1
-  stage_evidence: F-019 api evidence required、summary evidence failed；无 10-15 后更新
+  stage: S2
+  stage_evidence: 2026-10-23 实测：gc_icp.api 5/5 GET 200（health/industry-model/resource-pools/scenarios/constitution-governance）、pytest 33 passed；F-019 api/summary=pass（multi_user 仍 pending）
   data_class: fixture
   inferred: true
-  notes: 两类证据缺，Feature blocked
+  notes: 按“tests/build/validator pass = S2”修正；无真实业务源，不升 S4
 - vu_id: Brain-VU-01
   project: Brain
   weight: 5
@@ -902,11 +902,11 @@ vu_units:
   object: UI 截图、API 响应与 summary
   source_of_record: XGD 仓
   acceptor: XGD owner
-  stage: S1
-  stage_evidence: F-031 screenshots/api/summary 三项 fail；人工确认未做
+  stage: S3
+  stage_evidence: F-031 已 closed；done 含 screenshots / api.txt / summary.md / human-acceptance-20261022.md，evidence 包 + 人工验收记录（2026-10-22）
   data_class: fixture
   inferred: true
-  notes: 三项证据 fail，Feature blocked
+  notes: 按“evidence 包 + review/人工确认 = S3”修正；真实业务源未接，不升 S4
 - vu_id: XGD-VU-03
   project: XGD
   weight: 4
@@ -1019,11 +1019,11 @@ vu_units:
   object: 记忆账本条目
   source_of_record: GCMEM 本地账本
   acceptor: GCMEM owner
-  stage: S2
-  stage_evidence: F-026 tests/build/summary pass；本地回归与 doctor 已记录（B 级）
+  stage: S3
+  stage_evidence: F-026 已 closed：439 tests、doctor healthy、HEAD=本地 origin/main、证据包齐全（B 级）
   data_class: fixture
   inferred: true
-  notes: 本地证据，无跨端验收
+  notes: evidence 包 + 关闭复核 = S3；无真实业务源，不升 S4
 - vu_id: GCMEM-VU-02
   project: GCMEM
   weight: 4
