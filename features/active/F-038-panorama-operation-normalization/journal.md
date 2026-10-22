@@ -72,3 +72,23 @@ superseded_by: []
    - 收口期间工作目录改名（`GlobalCloud SpaceAI` → `GlobalCloud SpaceAI Platform`）导致旧会话第 15/16 轮启动失败；收口动作在新路径会话补齐。
 5. 是否可以提交？
    - 证据齐备可提交（治理产物独立提交）；Feature 保持 active，状态 partial / 待验收，不提升。
+
+### Iteration 2（2026-10-22 晚，B5f 续做）
+
+1. 这轮做什么？
+   - 记录并行会话在收口后继续推进的 B5f（气泡层外提），并把 Feature 的边界与计数刷新到最新事实。
+2. 改了什么？
+   - `441f55c` feat(pano): B5f 气泡层外提——新增 `components/PanoramaBubbles.vue`（156 行）与
+     `panorama/bubbleState.ts`（103 行），`PanoramaDeep.vue` 净减 244 行（3955 → 3711），新增 9 例组件测试。
+   - 本 iteration 只更新本 Feature 的 feature.yaml（goal/scope/acceptance/blockers/iteration）与本 journal；
+     产品代码由并行会话提交，本轮未改。
+3. 怎么验证？
+   - 全仓：`npx vitest run` → **136 文件 / 1251 例通过**（2026-10-22 19:21，47.82s，并发负载下）；
+     `pnpm typecheck` → 0。
+   - 本 Feature 相关：35 例（新增 bubbles 9 例）。
+   - e2e：沿用 18:35 的 panorama-operate 5/5 记录（B5f 未触碰该动线）。
+4. 发现什么问题？
+   - B5 剩余由五大块降为**四大块**（卡片列 / 飞翔 / CWME / 控制器）；i18n 约 600 行与人工验收仍未做。
+   - 工作区并行 WIP 仍在（`apps/desktop/*`、`pnpm-workspace.yaml` 等），未纳入本 Feature。
+5. 是否可以提交？
+   - 可提交（治理产物独立提交）；Feature 保持 active，状态 partial，不提升。

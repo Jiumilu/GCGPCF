@@ -2,7 +2,7 @@ id: F-038
 name: panorama-operation-normalization
 project: spaceai
 status: active
-goal: 全景态势所有操作流程规范化、合理化并落地：143 项操作 / 106 条问题审计 → N1–N12 规范 → B0–B5 批次改造；决策模型辅助 23 项判定、Q1–Q8 授权问答；执行到 B5e，B5 剩余五大块、i18n 与人工验收留待下一轮。
+goal: 全景态势所有操作流程规范化、合理化并落地：143 项操作 / 106 条问题审计 → N1–N12 规范 → B0–B5 批次改造；决策模型辅助 23 项判定、Q1–Q8 授权问答；执行到 B5f，B5 剩余四大块、i18n 与人工验收留待下一轮。
 owner: agent-dev-01
 priority: P1
 scope:
@@ -15,23 +15,24 @@ scope:
   - B3：入口收敛 D1–D7、死代码与假字段清理、⌘K 命令面板（28 条命令）
   - B4：偏好键收口 gc.pano.*、审计待补队列、导出脱敏、卡片可访问性
   - B5a–B5e：PanoramaHelp / PanoramaPalette 组件切片，useFeedback / useCardConfig / useCameraModes / useCardOrder / useDemoModes 五个组合式外提
+  - B5f：气泡层外提（PanoramaBubbles.vue + panorama/bubbleState.ts + 9 例组件测试），PanoramaDeep 3955 → 3711 行
   - 证据：.harness/runs/20261022-panorama-ops/01–21（审计、批次执行、合并验证、全量门禁、收口）
   out:
-  - B5 剩余五大块未外提：卡片列、气泡、飞翔、CWME、控制器仍在 PanoramaDeep.vue 内（script 目标 <800 行未达）
+  - B5 剩余四大块未外提：卡片列、飞翔、CWME、控制器仍在 PanoramaDeep.vue 内（script 目标 <800 行未达）
   - i18n 未完成：约 600 行中文硬编码待迁（仅工具栏与卡片标题走 T()）
   - 人工验收未做：派单确认 / 失败保留、CWME 回投确认 / 30s 幂等需真实气泡与面板状态
   - 不 push、不部署、不改接口契约与数据库 schema、不提升验收状态
   - 其它工作流不计入本 Feature：L4 精模 → F-037；零测试插件、仓库规范四件套等另记
 acceptance:
   - 方案与审计成文归档：4 份审计 + 索引 + 方案 v2.3 + 21 份批次/门禁/收口证据
-  - B0–B5e 共 12 个本地提交落地；合并提交 --no-ff 合回 main，冲突仅 import 1 处
-  - 相关测试 26 例通过（panorama-operate 14 / camera-modes 3 / card-order 4 / audit-privacy 3 / demo-modes 2）
+  - B0–B5f 共 13 个本地提交落地（B5f = 441f55c，2026-10-22 19:11）；合并提交 --no-ff 合回 main，冲突仅 import 1 处
+  - 相关测试 35 例通过（panorama-operate 14 / camera-modes 3 / card-order 4 / audit-privacy 3 / demo-modes 2 / bubbles 9）
   - e2e panorama-operate 5/5 通过（真实 Chrome，2026-10-22 18:35）
-  - 全仓 135 文件 / 1242 例通过；typecheck 0（2026-10-22 19:04 复测）
+  - 全仓 136 文件 / 1251 例通过；typecheck 0（2026-10-22 19:21 复测）
   - 状态保持 partial / 待验收，不提升 accepted / integrated / production_ready / customer_accepted
 loop:
   current_step: commit
-  iteration: 1
+  iteration: 2
 evidence:
   tests: pass
   build: pass
@@ -40,8 +41,8 @@ evidence:
   summary: pass
 verification:
   tests:
-  - npx vitest run plugins/map-3d/tests（全景相关含 26 例本 Feature 用例）
-  - npx vitest run（全仓 135 文件 / 1242 例）
+  - npx vitest run plugins/map-3d/tests（全景相关含 35 例本 Feature 用例）
+  - npx vitest run（全仓 136 文件 / 1251 例）
   build:
   - pnpm typecheck（0 错误）
   api:
@@ -51,7 +52,7 @@ verification:
   waivers:
     screenshots: 本轮以交互行为改造为主，零回归判定用操作契约测试 + e2e 断言 + DOM 结构指标；未另做视觉截图对照。视觉与人工验收（派单/CWME 回投真实状态）明确留待下一轮，不以本 Feature 证据替代。
 blockers:
-- B5 剩余五大块（卡片列 / 气泡 / 飞翔 / CWME / 控制器）仍在内联，PanoramaDeep.vue script 目标未达
+- B5 剩余四大块（卡片列 / 飞翔 / CWME / 控制器）仍在内联，PanoramaDeep.vue script 目标未达
 - i18n 约 600 行与人工验收未完成，属下一轮范围
 - 工作区仍有并行会话 WIP（apps/desktop、pnpm-workspace.yaml 等），本 Feature 未纳入
 ui_product_first_control:
@@ -69,4 +70,4 @@ ui_product_first_control:
     evidence_overexposure_gate: pass
   status_ceiling: partial
 created_at: "2026-10-22T11:04:30+00:00"
-updated_at: "2026-10-22T11:30:00+00:00"
+updated_at: "2026-10-22T11:35:00+00:00"

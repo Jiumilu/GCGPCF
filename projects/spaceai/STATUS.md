@@ -5,7 +5,7 @@ project: GPCF
 related_projects: [GPCF]
 domain: governance
 status: controlled
-version: v1.4
+version: v1.5
 owner: GPCF
 kds_space: 开发
 kds_path: 开发/91-治理与验收/projects/spaceai/STATUS.md
@@ -35,7 +35,7 @@ superseded_by: []
 ## 运行状态（2026-10-22 复测）
 
 - 平台服务：BFF `127.0.0.1:39010`（`/healthz` status ok、mode demo、**263 端点**、库摘要 SIMULATED 39 表 510 行）；前端 `127.0.0.1:5273`（Vite 6.4.4）。
-- 全量测试：**135 文件 / 1242 例全过**（2026-10-22 19:04 实测，26.44s，exit 0）；`pnpm typecheck` **0 错误**。
+- 全量测试：**136 文件 / 1251 例全过**（2026-10-22 19:21 实测，47.82s，exit 0；并发负载下）；`pnpm typecheck` **0 错误**。
 - 数据规模：`data/spaceai.db` **2.17GB**；`EXT_CityLink` **61,289**（去重后新表）、`EXT_ObolObservation` 527,570、`IngestEvent` 142,097、`EXT_SceneAsset` 50,179（2026-10-22 实查；追加表保留策略未执行，见缺陷 D-10）。
 - 测试成本：修复前 771s（曾 12–20 分钟不结束）、临时占用约 28GB；T4 + D-8 后 **~20–26s**（紧凑测试基库 135MB，不再实拷贝 32GB）。
 - BFF 启动：约 6 秒就绪（2026-10-20 口径；2026-10-22 只复测 `/healthz`，未复测冷启动耗时）。
@@ -48,12 +48,12 @@ superseded_by: []
 
 - **F-017 cwme-city-world-model-engine**（active，partial）：CWME 城市模型与内涝切片回放；本地应用入口为 `_archive/2026-10-22-retired-assets/GlobalCloud SpaceAI/apps/city-model/index.html`（原 `../GlobalCloud SpaceAI`，2026-10-22 归档），证据索引在同目录 `.harness/runs/20261016-080823-spaceai-was-city-flood-replay/evidence-index.yaml`。
 - 关联 OpenSpec：openspec/changes/spaceai-was-city-flood-replay；仅有合成样例和本地浏览器验证，不声明 Platform 集成或真实城市运行。
-- **F-024 panorama-engineering-convergence**（P1，active，**iteration 2**）：全景态势工程收敛；iteration 1 证据保持有效（tests/build/api pass、screenshots waived 附理由），iteration 2 于 2026-10-22 补记 B5a–B5e 的拆分收益。
-- 交付：iteration 1 组件 3351 → 3310 行、8 个纯模块 + 188 项测试、模板零改动、修复 D-4/D-3/D-5；iteration 2 再外提 5 个组合式（`useFeedback`/`useCardConfig`/`useCameraModes`/`useCardOrder`/`useDemoModes`，新增 9 例），组件当前 **3955 行**（期间并行 L4 改动新增约 230 行）。
+- **F-024 panorama-engineering-convergence**（P1，active，**iteration 2**）：全景态势工程收敛；iteration 1 证据保持有效（tests/build/api pass、screenshots waived 附理由），iteration 2 于 2026-10-22 补记 B5a–B5e 的拆分收益；B5f 气泡层外提（`441f55c`）归 F-038 记账。
+- 交付：iteration 1 组件 3351 → 3310 行、8 个纯模块 + 188 项测试、模板零改动、修复 D-4/D-3/D-5；iteration 2 再外提 5 个组合式（`useFeedback`/`useCardConfig`/`useCameraModes`/`useCardOrder`/`useDemoModes`，新增 9 例）；B5f 后组件 **3711 行**（气泡层另拆 2 个模块 + 156 行组件）。
 - 证据：`../GlobalCloud SpaceAI Platform/harness/runs/20261016-panorama-convergence/`；Feature 证据在 `features/active/F-024-.../evidence/`。
 - **F-037 map-3d-l4-precision-model**（P1，active，iteration 1，2026-10-22 追溯建账）：三维地图 L4 精模链路（口径/清单/BFF/引擎/切换回落/接入工具链/一键验收/演练/CI）全部落地并本地提交 6 个提交；**真实 L4 资产未接入**（采购与自采暂停，待授权）。
 - F-037 证据：`../GlobalCloud SpaceAI Platform/harness/l4-acceptance/`（PASS ×2）、`harness/l4-evidence/`、`docs/3d/l4-*.md`；Feature 证据在 `features/active/F-037-.../evidence/`。
-- **F-038 panorama-operation-normalization**（P1，active，iteration 1，2026-10-22 追溯建账）：全景态势操作流程规范化执行到 B5e（B0–B5e 共 12 个本地提交；143 项操作 / 106 条问题审计 + N1–N12 方案）；**部分完成**——B5 剩余五大块、i18n 约 600 行、人工验收留待下一轮。
+- **F-038 panorama-operation-normalization**（P1，active，**iteration 2**，2026-10-22 追溯建账）：全景态势操作流程规范化执行到 B5f（B0–B5f 共 13 个本地提交；143 项操作 / 106 条问题审计 + N1–N12 方案）；**部分完成**——B5 剩余四大块（卡片列 / 飞翔 / CWME / 控制器）、i18n 约 600 行、人工验收留待下一轮。
 - F-038 证据：`../GlobalCloud SpaceAI Platform/.harness/runs/20261022-panorama-ops/`（01–21）、`docs/全景态势_操作流程规范化与合理化方案_20261022.md`；Feature 证据在 `features/active/F-038-.../evidence/`。
 - 其余两个 spaceai OpenSpec 变更：`spaceai-was-city-flood-replay` **implemented**（12/12）；`spaceai-studio-multiplatform-refactor` **in_progress**（91/93，剩字段级适配与移动端适配）。
 - **治理欠账（2026-10-22 登记）**：F-037 与 F-038 的工作当时未建 `openspec/changes/spaceai-*` 变更（仅 PMC GC-335 等登记）；补建或并入后续变更需老卢决定，本轮不擅自补建。
@@ -81,11 +81,11 @@ superseded_by: []
 | 线 | 主题 | 状态 | 证据 |
 |---|---|---|---|
 | A | 三维地图 L4 精模（F-037） | **链路完成，真实资产缺**：6 提交（管线 / 工具链 / 演练 / 验收 / CI / 采购包）；L4 相关 53 例、全仓 1242 例；一键验收 PASS ×2；占位与真实三处标注 | `harness/l4-acceptance/`、`docs/3d/l4-*.md` |
-| B | 全景态势操作规范化（F-038） | **部分完成（B0–B5e，12 提交）**：143 项操作 / 106 条问题审计 → N1–N12；六组 P0、Esc 单一契约、⌘K 命令面板、偏好收口；e2e 5/5；余 B5 五大块 / i18n / 人工验收 | `.harness/runs/20261022-panorama-ops/01–21` |
+| B | 全景态势操作规范化（F-038） | **部分完成（B0–B5f，13 提交）**：143 项操作 / 106 条问题审计 → N1–N12；六组 P0、Esc 单一契约、⌘K 命令面板、偏好收口、气泡层外提；组件 3711 行；e2e 5/5；余 B5 四大块 / i18n / 人工验收 | `.harness/runs/20261022-panorama-ops/01–21` |
 | C | 平台欠账清理 | **完成**：`log-viewer` / `scene-hub` 零测试补齐 26 例（`063cc49`）；项目群规范四件套与 `.gitignore`（`6e7e227`）；README / AGENTS / Manifest 缺失章节（`1b7f4b1`） | 提交记录；全仓 1242 例 |
 | D | 治理账实（本轮） | **完成**：追溯建 F-037 / F-038 账、F-024 iteration 2、STATUS / RISK / ROADMAP 同步；**OpenSpec 变更补建与 KDS 镜像同步登记为欠账** | 本文件、`features/active/F-037-*`、`F-038-*` |
 
-**边界**：未 push（main 领先 `origin/main` 30 提交）、未部署、未接真实设备或生产数据；L4 采购 / 自采 / 合规外部数据均待授权。
+**边界**：未 push（main 领先 `origin/main` 34 提交，随并行会话变动，以 `git rev-list --count origin/main..main` 为准）、未部署、未接真实设备或生产数据；L4 采购 / 自采 / 合规外部数据均待授权。
 
 ## 终态证据（2026-10-20）
 
@@ -106,7 +106,8 @@ superseded_by: []
 
 ## 终态证据（2026-10-22）
 
-- 全量测试：`npx vitest run` **135 文件 / 1242 例通过**（19:04，26.44s，exit 0）；`pnpm typecheck` **0 错误**（19:04）。
+- 全量测试：`npx vitest run` **136 文件 / 1251 例通过**（19:21，47.82s，exit 0）；`pnpm typecheck` **0 错误**（19:04 与 19:21 各测一次）。
+- 提交数说明：本地领先数随并行会话持续提交变化（19:04 = 30、19:11 = 33、19:22 = 34），本页数字为复测时点快照。
 - L4 一键验收：`harness/l4-acceptance/smoke-sim` 与 `smoke-demo` 的 `report.json` 均 **0 fail**（60 / 56 FPS；贴地 0m；画面差异 4.57% / 3.40%；错误 0）。
 - L4 工具链冒烟：`harness/l4-evidence/toolchain-smoke.md`（校验 / manifest / 导入 dry-run 全 exit 0）；SIMULATED 演练 `harness/l4-evidence/sim-drill/report.md` 含回滚后快照。
 - e2e：`panorama-l4.spec.ts` 3 条、`panorama-operate.spec.ts` 5/5（真实 Chrome）；其余 spec 需手工起服务（D-12）。
@@ -130,7 +131,7 @@ superseded_by: []
 | D-10 | 追加表无保留策略：`EXT_ObolObservation` 527,570 / `IngestEvent` 142,097 / `EXT_SceneAsset` 50,179，库 **2.17GB** 且持续增长 | **未执行**：需按时间窗非删除归档 + 容量巡检（原计划 P1-2）；本轮只登记不动手 |
 | D-11 | KDS 镜像与源码差异：`.kds` 镜像树与 `local-mirror-ledger.jsonl` 有上千条未提交差异（含自动镜像同步产物与历史迁移/删除，非本轮产生；本轮新增文档已由自动同步写入镜像与 ledger） | **未执行**：镜像提交需单独操作 + 授权，不与其他改动混做 |
 | D-12 | e2e 基座缺 `webServer`：`playwright.config.ts` 无自启，9 个 spec 需手工先起 dev 5273 + BFF 39010 | **未执行**（原计划 P2-4）；本轮以手工服务跑通关键 spec |
-| D-13 | 本地 main 领先 `origin/main` **30 提交未推送**；工作区另有并行会话 WIP（`apps/desktop/src/main.ts`、`vite.config.ts`、`pnpm-workspace.yaml` 与若干 untracked） | **未推送**：推送需老卢授权；并行 WIP 不纳入本仓提交，待各自会话收口 |
+| D-13 | 本地 main 领先 `origin/main` **34 提交未推送**（19:04 为 30，随并行会话增长）；工作区另有并行会话 WIP（`apps/desktop/src/main.ts`、`vite.config.ts`、`pnpm-workspace.yaml` 与若干 untracked） | **未推送**：推送需老卢授权；并行 WIP 不纳入本仓提交，待各自会话收口 |
 
 ## 前端持续重构（第 37–43 轮续）
 
@@ -242,3 +243,10 @@ SpaceAI Platform 是安防统一重构主工作区，CWME 是城市/空间域实
 5. **新增「终态证据（2026-10-22）」**：测试/验收/接口/演练证据与未执行项（远端 CI、KDS 镜像同步）。
 6. **缺陷台账**：更正 D-1（32GB 实拷贝已由 T4 + D-8 根治，`db.test.ts` 偶发未复现）；新增 D-10（数据保留）、D-11（KDS 镜像不同步）、D-12（e2e 无 webServer）、D-13（30 提交未推送 + 并行 WIP）。
 7. 边界不变：overall_status 保持 **partial**，未 push、未部署、未接真实设备或生产数据，不提升任何验收状态。
+
+## 变更说明（v1.4 → v1.5，2026-10-22 晚）
+
+1. F-038 推进到 **iteration 2**：B5f 气泡层外提（`441f55c`，PanoramaBubbles + bubbleState + 9 例），组件 3955 → **3711 行**；B5 剩余由五大块降为四大块。
+2. 运行状态与终态证据刷新为 **136 文件 / 1251 例**（19:21 实测）。
+3. 逐处把「领先 30 提交」改为**复测时点快照 + 以 git 实查为准**（19:22 已 34，并行会话仍在提交），避免账实随提交漂移。
+4. 边界不变：partial、未 push、未部署。
