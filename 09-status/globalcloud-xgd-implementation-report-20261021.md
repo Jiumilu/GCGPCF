@@ -27,6 +27,7 @@ master_control: GPCF:01-architecture/GlobalCloud 项目群总体方案.md
 - clean clone 验证：`npm ci` 15s + `/healthz` 200 + `/runtime/info` 200。
 - 实施范围：H1 可信基线、H2 任务/工作流/隔离/独立 Web 控制台/第二宿主 PoC、H3 长程分析模型+持久化/API。
 - 详细状态：`GlobalCloud XGD/docs/IMPLEMENTATION_STATUS_2026-10-21.md`。
+- 2026-10-22 更新：发布 `2.1.205`；H2 四周内测已启动（2026-10-22 → 2026-11-19，本机/内网）；H3 真实分析+人工结案/UI E2E；XiaoG BFF/UI 全链路；72h/24h 观测运行中。
 
 ## 2. 状态口径
 
@@ -41,10 +42,10 @@ master_control: GPCF:01-architecture/GlobalCloud 项目群总体方案.md
 ## 3. 未完成与阻塞
 
 - D10 签名/公证：缺 Apple Developer ID/公证凭据，无法产出 dmg/zip 与签名内测包。
-- D11 XiaoG BFF/UI：XGD 侧 BFF 契约/客户端已完成；XiaoG 仓实现未排期。
-- 72h 观测：已启动 72h 后台观测（PID 50939，输出 `docs/harness/evidence/runtime-observation-72h.jsonl`），尚未完成。
-- 语音完整 E2E：ASR/TTS 组件 PASS，LLM 回答链未通过（live 运行时无响应）。
-- GPCF 五处登记：本回传仅覆盖状态入口；KDS 镜像/文档控制台账待补。
+- D11 XiaoG BFF/UI：PR #6–#12 已合并；HTTP+JWT、message、SSE、workflows、UI 工作台均实测通过；仅剩更完整 UI/运维项。
+- 72h 观测：2026-10-21 首轮中断（997 样本归档），2026-10-22 06:30 重启；另启 24h 多宿主观测；均未完成。
+- 语音完整 E2E：已 PASS（live 3.5s；隔离 3 次；根因是 smoke 21s 窗口短于 provider 40–53s，已改 120s）。
+- GPCF 五处登记：本回传 PR #49 已合并（`c2330dc8`）；KDS 镜像/文档控制台账待补。
 
 ## 4. 声明边界
 
