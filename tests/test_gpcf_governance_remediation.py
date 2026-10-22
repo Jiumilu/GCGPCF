@@ -262,3 +262,27 @@ def test_promote_vu_stage_rejects_template_placeholders():
     assert any("占位符" in p or "TODO" in p for p in problems)
     assert not any("data_class: real" in p for p in problems) is False or True  # 占位符本身已足够拒绝
 
+
+
+def test_exceptions_expiry_checker_flags_expired():
+    """P17：受控例外到期必须可被发现（不得自动续期）。"""
+    import importlib.util
+    from datetime import date
+    spec = importlib.util.spec_from_file_location(
+        "exc_expiry", ROOT / "tools/kds-sync/check_exceptions_expiry.py"
+    )
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+
+    doc = {"exceptions": [
+        {"exemption_id": "EXC-A", "approved_by": "laolu", "until": "2027-01-20"},
+        {"exemption_id": "EXC-B", "approved_by": "laolu", "until": "2026-12-01"},
+        {"exemption_id": "EXC-C", "until": "2027-06-01"},  # 缺 approved_by
+    ]}
+    result = module.evaluate(doc, date(2026, 11, 15))  # EXC-B 距到期 16 天 → soon
+    assert result["expired"] == []
+    assert {x["exemption_id"] for x in result["expiring_soon"]} == {"EXC-B"}
+    assert "EXC-C" in result["invalid"]
+
+    later = module.evaluate(doc, date(2027, 2, 1))
+    assert {x["exemption_id"] for x in later["expired"]} == {"EXC-A", "EXC-B"}
