@@ -1,0 +1,47 @@
+# Tests Evidence
+
+## validate_gpcf_2_feature_workspace
+
+status: pass
+
+```text
+gpcf_2_feature_workspace=pass feature_delivery_center=true project_scope=28 new_feature_entry=enabled close_feature_exit=enabled status_promotion_allowed=false
+```
+
+notes: 2026-10-22 在 GPCF 仓根复跑（覆盖 2026-07 记录中 project_scope=18 的历史快照）。
+
+## validate_project_group_ui_engineering_coverage (2026-10-22)
+
+command: `python3 tools/kds-sync/validate_project_group_ui_engineering_coverage.py`
+
+status: fail
+
+```text
+FAIL validate_project_group_ui_engineering_coverage: UI master plan mapping count mismatch
+```
+
+fail_reason: 本地 registry（`config/project-group-projects.yaml`）为 28 项目，而 UI 总控文件 `04-ui-delivery/GlobalCloud项目群界面工程整体实施方案.md` 的项目映射表仅 26 条，缺 `PDC`、`DRC` 两条映射（validator 要求映射项目集合与 registry 完全一致）。修复需在 UI 总控文件补录 2 条映射，属 04-ui-delivery 文档写入，超出本任务 F-010 目录写范围。
+
+## validate_loop_ui_product_first_control (2026-10-22)
+
+command: `python3 tools/kds-sync/validate_loop_ui_product_first_control.py`
+
+status: pass
+
+```text
+loop_ui_product_first_control=pass studio_control=governance_only product_first_ui_gate=required evidence_overexposure_gate=required debug_details_default_hidden=required task_flow_e2e_required=true human_operable_gate=required multi_user_usability_gate=required project_count=28 active_feature_coverage=23 status_promotion_allowed=false gfis_status_ceiling=repair_required
+```
+
+notes: 该 validator 仅证明 UI 产品优先控制链与 gate 字段齐备，不证明 F-010 的 multi_user_usability / task_flow_e2e_status / accessibility_status / evidence_overexposure_gate 四项目标 gate 已取证（见 summary.md 与 feature.yaml blockers）。
+
+## 2026-10-22 修复后复核（Lead）
+
+command: `python3 tools/kds-sync/validate_project_group_ui_engineering_coverage.py`
+
+status: pass
+
+```text
+project_group_ui_engineering_coverage=pass project_count=28 ui_master_mapping=complete ui_governance_chain=validated
+```
+
+fix: 在 `04-ui-delivery/GlobalCloud项目群界面工程整体实施方案.md` 项目映射表补录 PDC、DRC 两条映射（主类/副类/定位摘要），映射 26→28 与 registry 一致。

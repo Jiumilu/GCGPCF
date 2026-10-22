@@ -1,0 +1,1 @@
+waived: 本 Feature 只改 Studio 设置页前端界面与样式，不新增后端接口、不调用真实外部或 KDS API，无 API 证据要求；按范围豁免并保留 partial 边界。

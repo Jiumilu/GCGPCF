@@ -1,0 +1,36 @@
+{
+  "feature_id": "F-029",
+  "prepared_at_utc": "2026-10-18T02:58:53Z",
+  "sender": "Codex/GPCF",
+  "intended_receiver": "DSH development and test owner",
+  "receiver_acknowledged": true,
+  "acknowledged_scope": "DSH accepted and completed a limited packet-only read-only review on 2026-10-18T06:49:21Z; no source files or services were accessed by DSH",
+  "delivery_blocker": null,
+  "current_responsible_party": "Codex/GPCF for independent evidence review and remaining F-029 scope",
+  "input_version": "Hermes 0.22.1 observed in authenticated health probe on 2026-10-18",
+  "evidence": "features/active/F-029-hermes-ai-runtime-admission/evidence/p0-preflight-20261018.json",
+  "development_task": {
+    "defect": "GET /v1/skills returns HTTP 500",
+    "root_cause": "api_server.py:_handle_skills passes include_editorial=True to _find_all_skills, whose current signature accepts only skip_disabled",
+    "minimal_candidate": "Remove include_editorial=True from this call; preserve authentication and skill catalog visibility behavior",
+    "candidate_patch": "features/active/F-029-hermes-ai-runtime-admission/artifacts/hermes-skills-api-candidate.patch",
+    "candidate_patch_check": "git apply --check passed; Codex applied the user-authorized local patch and restarted the gateway on 2026-10-18; targeted test and live API check passed",
+    "tests_required": [
+      "Focused API handler test returns 200 with an authenticated request",
+      "Unauthenticated request remains 401",
+      "Skill listing remains sorted and does not disclose disabled or hidden entries unexpectedly",
+      "Authenticated live retest after an authorized rollout"
+    ]
+  },
+  "operations_task": {
+    "defect": "Public Hermes Web UI returns HTTP 502",
+    "known_fact": "Local Web UI port 8648 has no listener; 8642 API is a separate service",
+    "next_diagnostic": "Verify Web UI service, its authentication/access control, and documented SSH tunnel/Caddy route before proposing restoration",
+    "live_restart_or_public_change": "requires separate user authorization"
+  },
+  "handoff_status": "limited_readonly_review_received_and_completed",
+  "latest_delivery_attempt": "2026-10-18T06:28:11Z: dsh headless returned MISSING_CREDENTIAL before task acceptance; see evidence/tool-control-probe-20261018.json",
+  "interim_result": "DSH completed the limited packet-only review. Codex independently resolved the whole-file test isolation question: 114/114 passed in an independent temporary clone with the same two-file patch; see evidence/hermes-api-test-isolation-20261018.json",
+  "latest_successful_delivery": "2026-10-18T06:49:21Z: DSH headless exited 0 and returned an explicit F-029 packet-only receipt; see evidence/dsh-readonly-review-20261018.json",
+  "next_responsible_party": "Codex/GPCF for gate review; DSH has not accepted code change or full-suite test ownership"
+}

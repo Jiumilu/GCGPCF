@@ -1,0 +1,17 @@
+{
+  "verified_at_utc": "2026-10-18T03:21:49.164682+00:00",
+  "environment": "isolated local Plane API at 127.0.0.1:18081",
+  "feature_id": "F-028",
+  "project_id": "efbc9f78-55ad-46c9-8bf2-c659c1305679",
+  "work_item_id": "2255f061-8ab4-4cc9-8f8b-dca8a8567300",
+  "first_sync": "F-028: created",
+  "second_sync": "F-028: updated",
+  "external_id": "F-028",
+  "external_source": "globalcloud-gpcf",
+  "description_has_evidence": true,
+  "gpcf_source_unchanged": true,
+  "gpcf_source_sha256": {
+    "runtime/queue.json": "ebe586ac84757a19eec2ad5d7e690f9407761e624e3ea56f2761387b2a05b676",
+    "features/active/F-028-plane-gpcf-feature-evidence-integration/feature.yaml": "0e5096a5bd80ae97bc10d66aacfbb8933a7686cb823b6b01ff3f67ddfd9eb108"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "feature_id": "F-029",
+  "checked_at_utc": "2026-10-18T06:28:11Z",
+  "coordinator": "Codex/GPCF",
+  "dsh": {
+    "action": "read-only headless task acceptance probe",
+    "result": "blocked_before_task_acceptance",
+    "exit_code": 1,
+    "diagnostic": "MISSING_CREDENTIAL for provider route deepseek-official",
+    "receiver_acknowledged": false,
+    "current_responsible_party": "Codex/GPCF",
+    "credential_handling": "No key read, displayed, copied, or persisted by Codex; user will configure DSH directly"
+  },
+  "hermes": {
+    "action": "authenticated read-only local API probe",
+    "health_detailed_status": 200,
+    "models_status": 200,
+    "skills_status": 200,
+    "skills_count": 274,
+    "interpretation": "Local Hermes API is available; this does not prove project-level AI execution or monitoring"
+  },
+  "gpcf": {
+    "feature_role": "Planner",
+    "queue_status": "plan",
+    "handoff_status": "blocked_no_dsh_receipt",
+    "status_ceiling": "partial"
+  }
+}

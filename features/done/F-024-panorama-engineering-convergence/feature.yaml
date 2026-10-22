@@ -1,0 +1,70 @@
+id: F-024
+name: panorama-engineering-convergence
+project: spaceai
+status: done
+goal: 全景态势工程收敛：PanoramaDeep 3351 行单文件、410 函数、0 专项测试；按域拆分 composable 并建立行为基线测试，界面功能零变化；交付结构须支撑后续无 GPU 环境性能优化
+owner: agent-dev-01
+priority: P1
+scope:
+  in:
+    - 把全景态势 3351 行单文件按 8 个域抽为纯模块（cards/cardLayout/prefRead/replay/presentation/mapInteraction/favorites/effects），模板零改动
+    - 为每个域建立行为基线测试（先测后抽），共 188 项
+    - 副作用收口：8 处未纳入卸载清理的定时器接入注册表，音频上下文纳入回收，卸载统一 dispose
+    - 修复抽取中发现的既有缺陷：D-4 坏数据整屏崩溃、D-3 B11 拼图未实现、D-5 偏好跨机同步无效
+    - 建立无 GPU 环境性能基线（有头 61 FPS / SwiftShader 3 FPS / 堆 290–401MB）供后续优化
+  out:
+    - 不新增业务功能、不改视觉与交互（模板零改动是判定基础）
+    - 不做性能优化本身（只建立基线与可回收结构）
+    - 不改接口契约与数据库 schema
+    - 不接入真实设备、不部署、不提升业务验收状态
+    - 域 5 大屏态切换/单卡投放、域 6 气泡与点选映射、域 7 层级导航下钻、域 4 轨迹回放未抽取（已记录在各域证据）
+acceptance:
+  - 8 个域全部抽为纯模块并有对应测试文件；每域测试先于抽取存在且抽取前后均为绿
+  - PanoramaDeep.vue 模板零改动；结构指标对照恒定（DOM 1503 / 可见卡 21 / RestFul 27）
+  - 域 3 破坏性对照可复现：旧代码 DOM 239/卡片 0/3 个页错误 → 修复后 1477/21/0
+  - 副作用注册表提供 activeCount()，可断言挂载→卸载后归零；反复进出 3 轮堆不线性增长
+  - 全量测试通过；typecheck 通过；新增测试 188 项
+  - 证据归档于主项目 harness/runs/20261016-panorama-convergence/
+loop:
+  current_step: commit
+  iteration: 3
+evidence:
+  tests: pass
+  build: pass
+  screenshots: waived
+  api: pass
+  summary: pass
+blockers:
+verification:
+  tests:
+  - python3 -c "import subprocess,sys; r=subprocess.run(['npx','vitest','run','--reporter=dot'],cwd='../GlobalCloud
+    SpaceAI Platform',capture_output=True,text=True); print(r.stdout[-2000:]); sys.exit(r.returncode)"
+  build:
+  - python3 -c "import subprocess,sys; r=subprocess.run(['npx','tsc','--noEmit','-p','plugins/map-3d/tsconfig.json'],cwd='../GlobalCloud
+    SpaceAI Platform',capture_output=True,text=True); print(r.stdout[-2000:], r.stderr[-1000:]);
+    sys.exit(r.returncode)"
+  api:
+  - python3 -c "import urllib.request; print(urllib.request.urlopen('http://127.0.0.1:39010/healthz',
+    timeout=8).read()[:300])"
+  waivers:
+    screenshots: 本轮为工程收敛且模板零改动，截图仅用于抽取前后人工对照；二进制不重复入库，证据指向主项目 harness/runs/20261016-panorama-convergence/evidence/（4
+      张基线/对照 PNG + 1 张运行态）。零回归判定以结构指标（DOM 1503 / 卡片 21 / 接口 27）为准。
+ui_product_first_control:
+  version: v1.1
+  applicability: indirect
+  user_groups:
+  - Feature 开发者
+  - Loop 编排者
+  - 治理审计者
+  primary_human_task: 看懂全景态势工程收敛的域拆分进度、行为基线测试与功能零变化保证
+  machine_interface_boundary: 域拆分与测试证据保留机器字段；默认工作区只呈现目标、进度、证据与风险
+  gates:
+    functional_completeness: pass
+    quality_baseline: pass
+    multi_user_usability: waived
+    task_flow_e2e_status: pass
+    accessibility_status: waived
+    evidence_overexposure_gate: pass
+  status_ceiling: partial
+created_at: "2026-10-16T09:01:12+00:00"
+updated_at: "2026-10-22T14:46:03+00:00"

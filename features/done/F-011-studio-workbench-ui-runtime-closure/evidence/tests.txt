@@ -1,0 +1,32 @@
+# Tests Evidence
+
+## feature_scoped_studio_settings_tests
+
+status: pass
+
+```text
+command: cd ../GlobalCloud Studio && npx vitest run tests/client/settings-view-default-credential.test.ts tests/client/router-default-credential-guard.test.ts --reporter=dot
+Test Files  2 passed (2)
+Tests       13 passed (13)
+exit 0
+```
+
+## validate_gpcf_2_feature_workspace
+
+status: pass
+
+```text
+gpcf_2_feature_workspace=pass feature_delivery_center=true project_scope=28 new_feature_entry=enabled close_feature_exit=enabled status_promotion_allowed=false
+```
+
+## repo_wide_studio_suite_recorded_not_gated
+
+status: fail（仓级记录，不计入本 Feature 门禁）
+
+```text
+command: cd ../GlobalCloud Studio && npx vitest run --reporter=dot
+Test Files  4 failed | 353 passed | 2 skipped (359)
+Tests       4 failed | 3665 passed | 36 skipped (3705)
+失败项：tests/server/meeting-approval-readonly.test.ts、tests/server/studio-codegraph-benchmark.test.ts、tests/server/studio-codegraph-test-map.test.ts、tests/client/chat-view-binding-errors.test.ts
+说明：与本 Feature（设置页工作台入口）无关的仓内既有失败，本轮未修复；详见 evidence/verification-2026-10-22.txt。
+```

@@ -1,0 +1,16 @@
+UI evidence detected from project-group Studio closure sample.
+
+reference_feature:
+- F-011 studio-workbench-ui-runtime-closure
+
+assets:
+- artifacts/studio-runtime-reference/studio-settings-desktop-20260712.png
+- artifacts/studio-runtime-reference/studio-settings-desktop-20260712.json
+
+notes:
+- Studio 真实设置页已完成工作台入口增强并生成浏览器截图与结构指标。
+- 该证据用于支撑项目群“界面实际开发、效果、体验及质量提升”闭环，不代表所有项目页面均已逐页实装。
+- 2026-10-22 四项 UI gate 补采：`evidence/ui-gates-20261022/`（WAE 统一身份入口 a11y / 证据暴露截图 + Studio HEAD 空白页回归截图 + 运行日志）。
+- accessibility / evidence_overexposure 仅覆盖 WAE 登录首屏；multi_user 仍 pending、task_flow 为 fail（Studio 回归），见 `evidence/ui-gates-20261022/summary.md`。
+- 2026-10-22 task-18 追加：WAE 完整任务流截图 `evidence/ui-gates-20261022/screens/wae-flow-01..07-*.png`（登录页/空提交失败恢复/首登改密/工作台/项目管理器/返回主页/退出回登录页），断言 `logs/taskflow-assertions.json`。
+- 2026-10-22 task-19 追加：双角色截图 `evidence/ui-gates-20261022/screens/multi-user-*.png`（A 用户目录 2/2 可见 / B 无权限 403 提示 / 双方退出后登录页），断言 `logs/multi-user-assertions.json`。

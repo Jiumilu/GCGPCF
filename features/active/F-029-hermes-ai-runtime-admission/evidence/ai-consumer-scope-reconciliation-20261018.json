@@ -1,0 +1,37 @@
+{
+  "feature_id": "F-029",
+  "checked_at_utc": "2026-10-18T12:55:28Z",
+  "current_scope_source": "config/project-group-projects.yaml",
+  "current_project_count": 27,
+  "historical_candidate_inventory": "evidence/ai-consumer-candidate-inventory-20261018.json",
+  "historical_project_count": 25,
+  "newly_registered_projects": [
+    "PDC",
+    "SLC"
+  ],
+  "method": "Read-only ripgrep search of nonignored text files in only the two newly registered repositories; no contents, credentials, or source files were sent to DSH",
+  "patterns": {
+    "hermes_reference": "(?i)hermes|callLLM",
+    "direct_provider_reference": "(?i)api\\.deepseek\\.com|api\\.openai\\.com|api\\.anthropic\\.com|DeepSeekClient|OpenAI\\("
+  },
+  "results": {
+    "PDC": {
+      "hermes_reference_file_count": 0,
+      "direct_provider_reference_file_count": 0,
+      "search_exit_codes": [
+        1,
+        1
+      ]
+    },
+    "SLC": {
+      "hermes_reference_file_count": 0,
+      "direct_provider_reference_file_count": 0,
+      "search_exit_codes": [
+        1,
+        1
+      ]
+    }
+  },
+  "interpretation": "The two newly registered repositories have no nonignored text-file matches for these patterns. The combined historical and supplemental candidate scan now covers the 27 registered projects, but does not verify runtime AI usage, Hermes integration, or absence of AI capabilities.",
+  "status_ceiling": "partial"
+}
