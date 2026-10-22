@@ -120,6 +120,9 @@ def main() -> int:
     changed = 0
 
     for feature_dir in iter_features():
+        if not (feature_dir / "feature.yaml").exists():
+            # 兼容正在迁移中的工作区目录（例如并发移动 done/active 的中间态）
+            continue
         feature = load_feature(feature_dir)
         fid = str(feature.get("id") or "").strip()
         if not fid or (only and fid not in only):
