@@ -1,0 +1,64 @@
+# GlobalCloud 项目群 · 唯一状态事实源映射（P03）
+# 老卢 2026-10-22 裁定 Q2：唯一事实源 = feature.yaml；queue.json 与项目 STATUS 为派生视图。
+# 本文件是"口径声明 + 映射表"，不承载状态本体。
+schema_version: "1.0"
+generated_at: "2026-10-22T20:40:00+08:00"
+authority:
+  decided_by: "老卢"
+  decided_at: "2026-10-22"
+  decision: "Q2 — 唯一状态事实源定为 feature.yaml；queue.json 与项目 STATUS 改为派生视图"
+  receipt: "AUTH-PG-STATUS-SOT-FEATUREYAML-20261022"
+
+source_of_truth:
+  # 唯一可写源：Feature 工作区文件
+  feature_file: "GlobalCloud GPCF/features/{active|done}/{feature_id}-*/feature.yaml"
+  fields:
+    status: "feature.yaml :: status"                 # 工作区状态（active/blocked/...）
+    loop_step: "feature.yaml :: loop.current_step"    # 步骤（plan/implement/evaluate/repair/commit）
+    loop_iteration: "feature.yaml :: loop.iteration"
+    project_attribution: "feature.yaml :: project"    # 归属（唯一可写处）
+    priority: "feature.yaml :: priority"
+
+derived_views:
+  - path: "GlobalCloud GPCF/runtime/queue.json"
+    fields:
+      status: "由 loop.current_step 映射（见 step_to_queue_status）"
+      current_role: "由 loop.current_step 映射（见 role_by_step）"
+      project: "直接取自 feature.yaml :: project"
+      updated_at: "取自 feature.yaml :: updated_at（不得写派生时间）"
+      priority: "直接取自 feature.yaml :: priority"
+  - path: "GlobalCloud GPCF/projects/{slug}/STATUS.md"
+    fields:
+      loop_status: "由 feature.yaml 汇总（同一 Feature 只认源值）"
+
+step_vocabulary: [plan, implement, evaluate, repair, commit]
+role_by_step:
+  plan: Planner
+  implement: Builder
+  evaluate: Evaluator
+  repair: Repair
+  commit: Recorder
+step_to_queue_status:
+  plan: plan
+  implement: implement
+  evaluate: evaluated
+  repair: repair
+  commit: commit
+  # blocked 为外加治理态：feature.yaml::status=blocked 时优先映射 blocked
+  blocked: blocked
+
+writer_of_record:
+  allowed: ["python3 scripts/gpcf_check_evidence.py <F>（唯一允许写 loop.current_step 的入口）", "人工经授权的台账修正（需回执）"]
+  forbidden: ["直接手改 queue.json 的 status/current_role/updated_at", "手改 STATUS.md 的 loop_status"]
+
+updated_at_semantics: "queue/STATUS 的 updated_at 仅表示派生批次时间，不作进展依据（防 R6 批量时间误读）"
+
+conflict_policy:
+  on_mismatch: "以 feature.yaml 为准；派生视图不一致时门禁阻断，禁止人工改派生侧对齐"
+  checker: "python3 tools/kds-sync/derive_status_views.py --check"
+
+exceptions_ref: "GlobalCloud GPCF/runtime/exceptions.yaml（P17 新建，登记受控例外）"
+notes:
+  - "blocked 状态由 feature.yaml::status 决定，不由 step 映射得到。"
+  - "F-017 的证据在 SpaceAI 仓，但归属以 feature.yaml::project 为准（=spaceai）。"
+  - "F-021 归属已改 world（2026-10-22 老卢裁定，回执 AUTH-PG-F021-ATTRIBUTION-20261022）。"

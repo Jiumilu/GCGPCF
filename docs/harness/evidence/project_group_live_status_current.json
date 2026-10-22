@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-10-22T20:21:42.981466+08:00",
+  "generated_at": "2026-10-22T20:36:31.026739+08:00",
   "freshness_hours": 12,
   "freshness_ok": true,
   "project_count": 29,
@@ -26,7 +26,7 @@
     "GlobalCloud PQC",
     "GlobalCloud SpaceAI Platform",
     "GlobalCloud World",
-    "GlobalCloud WAE",
+    "GlobalCloud Mem",
     "GlobalCloud PMC",
     "GlobalCloud PDC",
     "GlobalCloud FireQuote"
@@ -37,6 +37,7 @@
     "GlobalCloud MMC",
     "GlobalCloud XiaoG",
     "GlobalCloud SpaceAI Platform",
+    "GlobalCloud Mem",
     "GlobalCloud WAE"
   ],
   "stable_dirty": [
@@ -57,7 +58,6 @@
     "GlobalCloud SOP",
     "GlobalCloud SpaceAI Platform",
     "GlobalCloud Studio",
-    "GlobalCloud WAE",
     "GlobalCloud WAME",
     "GlobalCloud WAS",
     "GlobalCloud World",
@@ -95,7 +95,6 @@
     "GlobalCloud SOP",
     "GlobalCloud SpaceAI Platform",
     "GlobalCloud Studio",
-    "GlobalCloud WAE",
     "GlobalCloud WAME",
     "GlobalCloud WAS",
     "GlobalCloud World",
@@ -108,9 +107,9 @@
     "GlobalCloud XiaoC",
     "GlobalCloud GPCF"
   ],
-  "pass_repo_count": 4,
+  "pass_repo_count": 3,
   "bootstrap_window": false,
-  "previous_generated_at": "2026-10-22T20:20:49.689904+08:00",
+  "previous_generated_at": "2026-10-22T20:21:42.981466+08:00",
   "repo_heads": {
     "GlobalCloud AAAS": "a71e190cd7567346a2bc952f3ef45cdf1c4e1cdb",
     "GlobalCloud Brain": "257cca79febcb59357e8a84370ecc380dba877de",
@@ -131,11 +130,11 @@
     "GlobalCloud XGD": "0d186ad651dbfbf3f79a5028bd767f0c8429985c",
     "GlobalCloud ICP": "7eca3f34c27b8029e5050bfc6d38cc453a50de10",
     "GlobalCloud PQC": "e4e0ce2846e4644305a34c9c92b9330c65c1ba2c",
-    "GlobalCloud SpaceAI Platform": "6fc4c081c3657c4d2c96939dee1be9c3875e4398",
+    "GlobalCloud SpaceAI Platform": "6e21c74110c66cf715e0530405fb935829a70680",
     "GlobalCloud SpaceAI Studio": "75bf3b3728015eb19290ac6ad97439d479f487ed",
     "GlobalCloud World": "8bc29d24532d76c8d8ed9fa5da4a36beaf270e97",
-    "GlobalCloud Mem": "832c29423307b441ff41c56e598d084167240f57",
-    "GlobalCloud WAE": "6eadc25a1015dcbc0b210d807c1a4d949bec8180",
+    "GlobalCloud Mem": "43e42d4d7e4e16174b3150e7c0e7fe70192c9d6d",
+    "GlobalCloud WAE": "adb2e652540dde1e46850c5e157554c3db9012aa",
     "GlobalCloud PMC": "2b828e898bee258b863bf413fbd9805578ddc19b",
     "GlobalCloud PDC": "8d88fd5c24a3de45609550f79d8a7b199446bd09",
     "GlobalCloud SLC": "15668abe2cd007377a0c9ff2c9dc9e65f4d5af9e",
@@ -451,8 +450,8 @@
       "sensitive_paths": []
     },
     "GlobalCloud GPCF": {
-      "dirty_count": 1096,
-      "ahead": 1,
+      "dirty_count": 1100,
+      "ahead": 2,
       "behind": 0,
       "paths": [
         "$CODEX_HOME/automations/globalcloud-17/README.md",
@@ -1287,6 +1286,7 @@
         "docs/harness/evidence/pre-wave1-review-pack-20261022.md",
         "docs/harness/evidence/studio-retirement-alternative-plan-20261022.md",
         "docs/harness/evidence/wave1-review-pack-20261022.md",
+        "docs/reports/status-source-of-truth-findings-20261022.md",
         "docs/runbooks/README.md",
         "docs/runbooks/runtime-host-v1.0.md",
         "features/active/F-029-hermes-ai-runtime-admission/artifacts/.gitkeep",
@@ -1362,6 +1362,7 @@
         "features/active/F-036-wae-pkc-intake-integration/evidence/e2e-20261022/screens/run2-with-shim/f036-flow-04-sidebar-pkc-entry.png",
         "features/active/F-036-wae-pkc-intake-integration/evidence/e2e-20261022/screens/run2-with-shim/f036-flow-05-pkc-candidate-page.png",
         "features/active/F-036-wae-pkc-intake-integration/evidence/e2e-20261022/screens/run2-with-shim/f036-flow-06-return-workbench.png",
+        "features/active/F-036-wae-pkc-intake-integration/evidence/review-20261022/README.md",
         "features/active/F-036-wae-pkc-intake-integration/evidence/review-20261022/logs/review-assertions.json",
         "features/active/F-036-wae-pkc-intake-integration/evidence/review-20261022/logs/run-meta.json",
         "features/active/F-036-wae-pkc-intake-integration/evidence/review-20261022/playwright.review.config.ts",
@@ -1541,10 +1542,12 @@
         "runtime/logs/F-034.jsonl",
         "runtime/logs/F-035.jsonl",
         "runtime/logs/F-036.jsonl",
+        "runtime/status-source-of-truth.yaml",
         "templates/authorization-batch-request.md",
         "tests/test_gpcf_feature_move_metadata.py",
         "tools/kds-sync/classify_dirty_paths.py",
         "tools/kds-sync/daily_project_status_audit.py",
+        "tools/kds-sync/derive_status_views.py",
         "tools/kds-sync/runtime_health_check.py",
         "tools/kds-sync/validate_asset_registry.py",
         "tools/kds-sync/validate_contract_matrix.py",
@@ -1612,7 +1615,7 @@
     "GlobalCloud XiaoG": {
       "dirty_count": 1,
       "ahead": 1073,
-      "behind": 15,
+      "behind": 16,
       "paths": [
         "\"GlobalCloud XiaoG \\346\\200\\273\\344\\275\\223\\346\\226\\271\\346\\241\\210.md\""
       ],
@@ -1761,9 +1764,9 @@
       "sensitive_paths": []
     },
     "GlobalCloud SpaceAI Platform": {
-      "dirty_count": 48,
-      "ahead": 2,
-      "behind": 0,
+      "dirty_count": 52,
+      "ahead": 4,
+      "behind": 1,
       "paths": [
         "apps/desktop/src/main.ts",
         "apps/desktop/vite.config.ts",
@@ -1799,6 +1802,8 @@
         ".harness/runs/20261022-panorama-ops/29-r1-feedback.md",
         ".harness/runs/20261022-panorama-ops/30-r2-card-data.md",
         ".harness/runs/20261022-panorama-ops/31-r3a-map-tools.md",
+        ".harness/runs/20261022-panorama-ops/32-r3b1-views.md",
+        ".harness/runs/20261022-panorama-ops/33-r3b2-snap-ctx.md",
         ".harness/runs/20261022-panorama-ops/b0b1/b0b1.patch",
         ".harness/runs/20261022-panorama-ops/b0b1/b0b1b2.patch",
         ".harness/runs/20261022-panorama-ops/checks/b5f-bubbles-v2.mjs",
@@ -1808,6 +1813,8 @@
         ".harness/runs/20261022-panorama-ops/checks/b5i-cwme-panel.mjs",
         ".harness/runs/20261022-panorama-ops/checks/b5j-ctrl.mjs",
         ".harness/runs/20261022-panorama-ops/checks/r3a-tools.mjs",
+        ".harness/runs/20261022-panorama-ops/checks/r3b1-views.mjs",
+        ".harness/runs/20261022-panorama-ops/checks/r3b2-snap-ctx.mjs",
         "\"DSH_\\345\\274\\200\\345\\217\\221\\351\\200\\237\\346\\237\\245.md\"",
         "apps/desktop/public/gc-feedback-entry.js",
         "apps/desktop/src/feedback/embedFeedback.ts",
@@ -1833,30 +1840,19 @@
       "sensitive_paths": []
     },
     "GlobalCloud Mem": {
-      "dirty_count": 0,
-      "ahead": 0,
+      "dirty_count": 1,
+      "ahead": 5,
       "behind": 0,
-      "paths": [],
+      "paths": [
+        "scripts/release.sh"
+      ],
       "sensitive_paths": []
     },
     "GlobalCloud WAE": {
-      "dirty_count": 12,
+      "dirty_count": 0,
       "ahead": 4,
       "behind": 0,
-      "paths": [
-        "apps/wame/src/app/apps/AppsShell.dom.test.tsx",
-        "apps/wame/src/app/apps/AppsShell.tsx",
-        "apps/wame/src/app/apps/generated.ts",
-        "apps/wame/src/app/apps/pageComponents.tsx",
-        "docs/assembly-spec/placement.city.yaml",
-        "packages/host-kit/src/host/menus.test.ts",
-        "packages/host-kit/src/host/menus.ts",
-        "apps/wame/src/app/apps/PkcIntakePage.dom.test.tsx",
-        "apps/wame/src/app/apps/PkcIntakePage.tsx",
-        "\"docs/GlobalCloud WAE \\345\\256\\236\\346\\226\\275\\346\\226\\271\\346\\241\\210.md\"",
-        "\"docs/GlobalCloud WAE \\346\\200\\273\\344\\275\\223\\346\\226\\271\\346\\241\\210.md\"",
-        "docs/assembly-spec/manifests/pkc-intake.yaml"
-      ],
+      "paths": [],
       "sensitive_paths": []
     },
     "GlobalCloud PMC": {
