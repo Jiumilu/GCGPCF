@@ -7,8 +7,16 @@ owner: SOP
 priority: P0
 scope:
   in:
+    - "ICP→SOP 版本化引用清单（端点/版本/字段）"
+    - "SOP 启动时 ICP 版本与必填字段校验"
+    - "SOP 矩阵直接消费 ICP 基线，不复制数据"
   out:
+    - "ICP 数据复制到 SOP 作为事实源"
+    - "生产发布/状态提升"
 acceptance:
+  - "ICP→SOP 引用清单评审通过（版本/端点/字段）"
+  - "ICP 版本不兼容时 SOP 拒绝并给出恢复提示"
+  - "SOP 矩阵无 ICP 数据副本，字段映射可回放"
 loop:
   dispatched: false
   current_step: plan

@@ -8,8 +8,8 @@ status: controlled
 version: v1.0
 owner: GPCF
 kds_space: 开发
-kds_path: 开发/91-治理与验收/features/active/F-021-world-project-onboarding/journal.md
-source_path: features/active/F-021-world-project-onboarding/journal.md
+kds_path: 开发/91-治理与验收/features/done/F-021-world-project-onboarding/journal.md
+source_path: features/done/F-021-world-project-onboarding/journal.md
 sync_direction: bidirectional
 last_reviewed: '2026-10-16'
 supersedes: []
@@ -66,3 +66,16 @@ superseded_by: []
 ## 2026-10-18 阻塞复核
 
 中央文档结构门禁现为 `pass`（复核债使状态上限仍为 `partial`），WAE 已按用户裁定纳入 24 项项目清单；这两条旧阻塞不再适用。只读证据检查仍返回 `close_candidate=false`：缺少 Feature 专属 tests/build 命令及范围特定的截图/API 豁免说明。World 总体方案的 Ontology 版本冲突尚未裁定，继续保持 `blocked`，不修改历史证据或提升纳管状态。
+
+### Iteration 3
+
+1. 这轮做什么？
+   - 通过 Evidence Gate 关闭 Feature。
+2. 改了什么？
+   - 将 feature.yaml 状态标记为 done。
+3. 怎么验证？
+   - 验证所有 evidence 字段均为 pass 或 waived。
+4. 发现什么问题？
+   - 未发现关闭阻塞项。
+5. 是否可以提交？
+   - 是，仅作为提交候选；commit/push 仍需明确授权。
