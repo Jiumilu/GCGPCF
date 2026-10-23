@@ -1,0 +1,8 @@
+{
+  "url": "http://localhost:4320/",
+  "wait_ms": 8000,
+  "clicked_world_assets": true,
+  "pageErrors": [],
+  "sidebar_visible": true,
+  "evidence": ["sidebar-before.png", "sidebar-after.png"]
+}

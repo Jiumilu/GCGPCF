@@ -8,8 +8,8 @@ status: controlled
 version: v1.0
 owner: GPCF
 kds_space: 开发
-kds_path: 开发/91-治理与验收/features/active/F-035-wame-sidebar-unification/evidence/closure-readiness-20261023.md
-source_path: features/active/F-035-wame-sidebar-unification/evidence/closure-readiness-20261023.md
+kds_path: 开发/91-治理与验收/features/done/F-035-wame-sidebar-unification/evidence/closure-readiness-20261023.md
+source_path: features/done/F-035-wame-sidebar-unification/evidence/closure-readiness-20261023.md
 sync_direction: bidirectional
 last_reviewed: 2026-10-23
 supersedes: []
