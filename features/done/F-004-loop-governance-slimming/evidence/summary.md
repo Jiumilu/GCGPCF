@@ -8,8 +8,8 @@ status: controlled
 version: v1.0
 owner: GPCF
 kds_space: 开发
-kds_path: 开发/91-治理与验收/features/active/F-004-loop-governance-slimming/evidence/summary.md
-source_path: features/active/F-004-loop-governance-slimming/evidence/summary.md
+kds_path: 开发/91-治理与验收/features/done/F-004-loop-governance-slimming/evidence/summary.md
+source_path: features/done/F-004-loop-governance-slimming/evidence/summary.md
 sync_direction: bidirectional
 last_reviewed: 2026-07-08
 supersedes: []
