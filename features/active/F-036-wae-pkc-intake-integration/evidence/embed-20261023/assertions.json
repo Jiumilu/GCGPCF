@@ -5,12 +5,32 @@
   "pkc": "http://127.0.0.1:5174/",
   "auth": "VITE_WAE_AUTH_DEV_BYPASS=1 (apps/wame/.env.local)",
   "embed_url_env": "VITE_PKC_EMBED_URL=http://127.0.0.1:5174/",
-  "before_click": { "frameCount": 0, "enableButtonCount": 1 },
-  "after_click": { "frameCount": 1, "src": "http://127.0.0.1:5174/" },
+  "before_click": {
+    "frameCount": 0,
+    "enableButtonCount": 1
+  },
+  "after_click": {
+    "frameCount": 1,
+    "src": "http://127.0.0.1:5174/"
+  },
   "frames": [
     "http://127.0.0.1:4300/global-cloud-workbench/pkc/pkc-intake",
     "http://127.0.0.1:5174/"
   ],
   "pkc_frame_text_head": "GlobalCloud PKC 0.0.1 Intelligence Workflow 概览 任务系统 Agent 记录 项目知识包 批量修复 报告导出 知识问答 Doctor 诊断 设置 浅色模式 知识健康度 82%",
-  "note": "dev bypass only; no production claim"
+  "note": "dev bypass only; no production claim",
+  "rerun": {
+    "date": "2026-10-23",
+    "after_wae_fixes": [
+      "d9d9ee9 allow-same-origin",
+      "3247e53 duplicate aria-label"
+    ],
+    "beforeClickFrameCount": 0,
+    "enableButtonCount": 1,
+    "clicked": true,
+    "afterClickFrameCount": 1,
+    "src": "http://127.0.0.1:5174/",
+    "pkcFrameTextHead": "GlobalCloud PKC 0.0.1 Intelligence Workflow 概览 任务系统 ... 知识健康度 82%",
+    "externalRequestsNote": "localhost:8000/8080/18080 健康/连接器探活来自 WAE 宿主，非 PKC iframe 外部请求"
+  }
 }
