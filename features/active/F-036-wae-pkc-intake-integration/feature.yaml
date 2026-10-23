@@ -36,7 +36,7 @@ evidence:
 blockers:
   - "PKC P4/P5 已最小接入：gc 令牌快照 + theme 映射（C6 0→117）、7 值状态字典 + StatusBadge（C5 存在）；残留=非真实包消费、部分页面未迁移、C1/C4/C10 既有项"
   - "PKC 真实运行时受控嵌入：dev bypass 与登录态（system-admin + 隔离 IdP）均已验证点击后 iframe 加载 PKC Home（evidence/embed-20261023、embed-auth-20261023）；WAE 修复已 push（d9d9ee9/3247e53）；生产构建/CSP/SSO/403 未验证"
-  - "正式评审已做（evidence/formal-review-20261024.md）：conditional，不批准关闭；生产/CSP/SSO/403 与属主签字未满足"
+  - "正式评审已做（evidence/formal-review-20261024.md）：conditional，不批准关闭；CSP frame-ancestors 行为已验证（csp-20261024）；生产部署/SSO/403 与属主签字未满足"
 verification:
   tests:
     - "python3 -c \"import subprocess,sys; r=subprocess.run(['pnpm','check:apps'],cwd='../GlobalCloud WAE',capture_output=True,text=True); print(r.stdout[-2000:]); print(r.stderr[-1000:]); sys.exit(r.returncode)\""
