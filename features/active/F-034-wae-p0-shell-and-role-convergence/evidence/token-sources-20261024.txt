@@ -1,0 +1,14 @@
+单一来源 GlobalCloud WAE/packages/ui-tokens/src/tokens.css（76 令牌, sha 54729cdf634fadd5）
+
+逐字节相同（零视觉回归的可证明依据）：1 份
+  ✓ GlobalCloud Brain/default_shadcn_theme.css
+
+路径不存在：['GlobalCloud WAES/src/styles/default_theme.css', 'GlobalCloud PVAOS/src/styles/default_theme.css', 'GlobalCloud PVAOS/default_shadcn_theme.css']
+
+已知偏离（记录在案，未改动对方项目）：
+  • GlobalCloud PKC/src/styles/theme.css: 值不同 34 处
+  • GlobalCloud Brain/src/styles/theme.css: 值不同 30 处、独有令牌 5
+
+本仓应用对单一来源的消费关系（T2 判据）：
+  ✓ apps/wame/src/styles/default_theme.css：薄壳 → 取值来自 @globalcloud/ui-tokens（零重复声明）
+  ✓ apps/wame/src/styles/globals.css：薄壳 → 取值来自 @globalcloud/ui-tokens（零重复声明）

@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-10-23T10:33:11.688736+08:00",
+  "generated_at": "2026-10-23T18:08:46.713900+08:00",
   "freshness_hours": 12,
   "freshness_ok": true,
   "project_count": 29,
@@ -37,8 +37,8 @@
     "GlobalCloud MMC",
     "GlobalCloud XiaoG",
     "GlobalCloud PKC",
-    "GlobalCloud SpaceAI Platform",
     "GlobalCloud Mem",
+    "GlobalCloud WAE",
     "GlobalCloud PMC",
     "GlobalCloud SLC"
   ],
@@ -76,7 +76,7 @@
     "GlobalCloud PKC",
     "GlobalCloud PMC",
     "GlobalCloud SLC",
-    "GlobalCloud SpaceAI Platform",
+    "GlobalCloud WAE",
     "GlobalCloud XiaoC",
     "GlobalCloud XiaoG"
   ],
@@ -116,7 +116,7 @@
   ],
   "pass_repo_count": 3,
   "bootstrap_window": false,
-  "previous_generated_at": "2026-10-23T10:02:42.437147+08:00",
+  "previous_generated_at": "2026-10-23T17:30:48.865217+08:00",
   "repo_heads": {
     "GlobalCloud AAAS": "f6da33ae462a784b2779311781eba6a588a1eaf0",
     "GlobalCloud Brain": "8edd9b2ec06eec25658e62703c4d251fbff6530a",
@@ -137,12 +137,12 @@
     "GlobalCloud XGD": "e9e9fb294e45c3e7897edabb16fd73a62f4d7598",
     "GlobalCloud ICP": "8ea16a5079f5ae58e26236393a0e001ca20457ef",
     "GlobalCloud PQC": "c25fd561eb77b679a5827b85e9a16ebe2cee49d4",
-    "GlobalCloud SpaceAI Platform": "737e360bfebadf35d3182682abb17d334e9a2e38",
+    "GlobalCloud SpaceAI Platform": "2e0dfc2b891b86c88f90b1a1f7f7d6222e4b943a",
     "GlobalCloud SpaceAI Studio": "dd99d4cb1fd63cc782c1802e7337b200a8f51a19",
     "GlobalCloud World": "4c29506acfd0bc47ba657c415e4cbddcc52cda05",
     "GlobalCloud Mem": "05efb07268be29ed8a38dc832cdddbc51262d7b9",
-    "GlobalCloud WAE": "04f8ddee449c4c07369b499e1b385191b6f149eb",
-    "GlobalCloud PMC": "8bf6979a1a0507013f35881a3985b03f23905c4d",
+    "GlobalCloud WAE": "ad9476bdc898f8896cb98195d3024a5194161a46",
+    "GlobalCloud PMC": "7a3633601d52feb81cdeffdf34697a7f065bcda0",
     "GlobalCloud PDC": "21f0de4cccdbeeedd7f6b522fe05aff793606ae4",
     "GlobalCloud SLC": "a866196f2844dce0f98bf2a524d4a6dfcafa3b51",
     "GlobalCloud DRC": "f6bf98fa1f58a31aaec887dde15f41e61ba07495",
@@ -453,7 +453,7 @@
       "sensitive_paths": []
     },
     "GlobalCloud GPCF": {
-      "dirty_count": 951,
+      "dirty_count": 953,
       "ahead": 0,
       "behind": 0,
       "paths": [
@@ -999,6 +999,7 @@
         "docs/harness/tasks/README.md",
         "docs/reports/plan-progress-ledger-20261022.md",
         "docs/standards/README.md",
+        "features/active/F-034-wae-p0-shell-and-role-convergence/feature.yaml",
         "features/active/F-036-wae-pkc-intake-integration/evidence/embed-auth-20261023/README.md",
         "features/active/F-036-wae-pkc-intake-integration/evidence/embed-sandbox-diag-20261023/README.md",
         "features/done/F-035-wame-sidebar-unification/evidence/e2e-20261023/README.md",
@@ -1086,6 +1087,7 @@
         "runtime/logs/F-004.jsonl",
         "runtime/logs/F-011.jsonl",
         "runtime/logs/F-015.jsonl",
+        "runtime/logs/F-021.jsonl",
         "runtime/logs/F-026.jsonl",
         "runtime/logs/F-027.jsonl",
         "runtime/vu-ledger.yaml",
@@ -1306,7 +1308,6 @@
         "09-status/globalcloud-project-group-dirty-classification-baseline-v1.0.md",
         "09-status/globalcloud-project-group-single-authorization-ledger-v1.0.md",
         "09-status/globalcloud-weekly-bottleneck-review-template.md",
-        "docs/harness/evidence/active-feature-blockers-20261024.md",
         "docs/harness/evidence/batch2-escalation-draft-20261023.md",
         "docs/harness/evidence/batch2-prerequisites-20261022.md",
         "docs/harness/evidence/cleanup-delete-batch-20261022.md",
@@ -1339,6 +1340,8 @@
         "features/active/F-029-hermes-ai-runtime-admission/evidence/tool-control-probe-20261018.json",
         "features/active/F-029-hermes-ai-runtime-admission/feature.yaml",
         "features/active/F-029-hermes-ai-runtime-admission/journal.md",
+        "features/active/F-034-wae-p0-shell-and-role-convergence/evidence/token-consolidation-request-20261024.md",
+        "features/active/F-034-wae-p0-shell-and-role-convergence/evidence/token-sources-20261024.txt",
         "features/done/F-027-governance-remediation/evidence/remediation-verification-20261023.md",
         "features/done/F-028-plane-gpcf-feature-evidence-integration/artifacts/.gitkeep",
         "features/done/F-028-plane-gpcf-feature-evidence-integration/evidence/.gitkeep",
@@ -1404,7 +1407,6 @@
         "tools/kds-sync/classify_dirty_paths.py",
         "tools/kds-sync/daily_project_status_audit.py",
         "tools/kds-sync/runtime_health_check.py",
-        "tools/kds-sync/scan_feature_close_candidates.py",
         "tools/kds-sync/validate_asset_registry.py",
         "tools/kds-sync/validate_contract_matrix.py",
         "tools/kds-sync/validate_gke001_chain_matrix.py"
@@ -1418,7 +1420,9 @@
         ".harness/runs/kds-real-token-sync-20260613-062146/README.md",
         ".harness/runs/kds-real-token-sync-20260613-062146/evidence/README.md",
         ".harness/runs/kds-real-token-sync-20260613-062146/patches/README.md",
-        ".harness/runs/kds-real-token-sync-20260613-062146/workspaces/README.md"
+        ".harness/runs/kds-real-token-sync-20260613-062146/workspaces/README.md",
+        "features/active/F-034-wae-p0-shell-and-role-convergence/evidence/token-consolidation-request-20261024.md",
+        "features/active/F-034-wae-p0-shell-and-role-convergence/evidence/token-sources-20261024.txt"
       ]
     },
     "GlobalCloud XWAIL": {
@@ -1662,9 +1666,9 @@
       "sensitive_paths": []
     },
     "GlobalCloud SpaceAI Platform": {
-      "dirty_count": 2307,
-      "ahead": 10,
-      "behind": 1,
+      "dirty_count": 2309,
+      "ahead": 0,
+      "behind": 0,
       "paths": [
         ".standards/VERSION",
         ".standards/rules/standards.yaml",
@@ -1742,6 +1746,8 @@
         ".harness/runs/20261022-panorama-ops/61-r3-8-card-ctx.md",
         ".harness/runs/20261022-panorama-ops/62-r3-9-ctrl-ctx.md",
         ".harness/runs/20261022-panorama-ops/63-r3-10-focus-pick.md",
+        ".harness/runs/20261022-panorama-ops/64-r3-close.md",
+        ".harness/runs/20261022-panorama-ops/65-remote-push-incident.md",
         ".harness/runs/20261022-panorama-ops/b0b1/b0b1.patch",
         ".harness/runs/20261022-panorama-ops/b0b1/b0b1b2.patch",
         ".harness/runs/20261022-panorama-ops/checks/b5f-bubbles-v2.mjs",
@@ -4001,7 +4007,7 @@
     },
     "GlobalCloud WAE": {
       "dirty_count": 2,
-      "ahead": 0,
+      "ahead": 2,
       "behind": 0,
       "paths": [
         "packages/app-registry/src/index.ts",
@@ -4011,7 +4017,7 @@
     },
     "GlobalCloud PMC": {
       "dirty_count": 3,
-      "ahead": 4,
+      "ahead": 5,
       "behind": 0,
       "paths": [
         "PROJECT_HARNESS_MANIFEST.md",
