@@ -83,3 +83,10 @@ superseded_by: []
 - [x] 9.6 验收复跑：2026-10-23 **PASS**（`harness/l4-acceptance/2026-10-23T01-07-31-373Z/report.json`）。
       根因不是 UI 功能回归：①侧栏 DOM 契约变更致测试选择器过期；②PanoramaDeep.vue `isFavoLite` 未定义（已修，随 B5-R2 d4a2bcc）；
       ③引擎就绪时序（需等 `__gcEngine.viewer`）。证据与复现：`harness/coordination/ui-regression-20261023/`。
+
+## 10. 园区既有成果合作（2026-10-23 备料，未对外）
+
+- [x] 10.1 `docs/3d/l4-park-cooperation-package.md`：路径对比、成果清单、三种合作模式（数据授权/联合补测/委托补测）、合规问询、发送前 5 项授权点。
+- [x] 10.2 模板：`harness/l4-park-coop/{request-list,compliance-questionnaire,license-letter-outline}.md`（均标注未发送）。
+- [ ] 10.3 对外联系/发送/收数/签约：**待老卢逐项授权**（联系对象、模板、接收方式、签署主体、补测预算）。
+- [ ] 10.4 收到成果后按 §9 验包入口接入并复跑验收；不合格不导入、不宣称 L4 精度。
