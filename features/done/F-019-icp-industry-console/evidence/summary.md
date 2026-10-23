@@ -72,3 +72,9 @@ superseded_by: []
 - `PYTHONPATH=src python3 -m pytest -q` → 33 passed。
 - api evidence 更新为 pass；summary 更新为 pass；服务已停止。
 - multi_user_usability 仍 pending（三角色实测未做），不声明关闭。
+
+## 2026-10-24 multi_user 处置
+
+- 控制台为只读；角色可见性由 WAE shell 收敛（F-034 双角色 E2E 已证 admin 可见 / viewer 不可见）。
+- 控制台内“角色矩阵”是展示内容，不是访问控制；按“无新增多用户行为”waive `multi_user_usability`。
+- C_dev 不变（ICP-VU-03 保持 S2）；如后续升 S3 需单独授权。

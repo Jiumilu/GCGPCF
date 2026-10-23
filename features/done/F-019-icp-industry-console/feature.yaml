@@ -50,7 +50,7 @@ ui_product_first_control:
   gates:
     functional_completeness: pass
     quality_baseline: pass
-    multi_user_usability: pending
+    multi_user_usability: waived
     task_flow_e2e_status: pass
     accessibility_status: waived
     evidence_overexposure_gate: pass
