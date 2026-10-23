@@ -7,8 +7,17 @@ owner: agent-dev-01
 priority: P0
 scope:
   in:
+    - "O1：WAME 引擎 E1（资产主账 + 模型注册最小集）分期规划"
+    - "O7：CWME 归位逻辑层口径统一传导"
+    - "O8：图面重叠修复复核（已完成项留痕）"
   out:
+    - "代替各项目真实开发排期"
+    - "生产发布与状态提升"
 acceptance:
+  - "O1 E1 分期规划文档评审通过，明确里程碑与依赖"
+  - "O7 CWME 归位口径在 SpaceAI/World/CWME 三侧一致"
+  - "O8 修复结果有可回放证据"
+  - "不声明架构迭代等于开发完成"
 loop:
   dispatched: false
   current_step: plan

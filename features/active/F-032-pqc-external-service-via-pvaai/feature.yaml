@@ -7,8 +7,17 @@ owner: agent-dev-01
 priority: P2
 scope:
   in:
+    - "PQC 询价/测算/订单服务接口设计（经 PVA PVAAI 承载）"
+    - "数据在 PQC 执行，PVA 只承载对话与应用模块"
+    - "设计评审、契约冻结、分阶段试点"
   out:
+    - "生产发布/真实客户接入"
+    - "在 PVA 复制 PQC 业务数据"
 acceptance:
+  - "服务接口与数据边界设计评审通过"
+  - "PQC↔PVA 契约冻结（版本/字段/错误码）"
+  - "合成数据分阶段试点通过，且不声明生产就绪"
+  - "回滚路径明确（关闭入口即回退）"
 loop:
   dispatched: false
   current_step: plan
