@@ -145,3 +145,21 @@ superseded_by: []
    - 其余 e2e 用例仍用 `.kpis` 等旧选择器，需批量同步（非 L4 验收范围）。
 5. 是否可以提交？
    - 可以（测试/探针/证据/账实；本地提交不 push）；Feature 保持 active/partial，真实资产与几何精度仍未验。
+
+### Iteration 5（2026-10-23 上午 · e2e 基座同步，验证环境恢复）
+
+1. 这轮做什么？
+   - L4 验收依赖的 e2e 基座恢复：把 e2e 全量从 14 passed / 11 failed 同步到当前 DOM，避免「验收能过、回归套件全红」。
+2. 改了什么？
+   - 冒烟语义化（内容非空 + 无页面错误）；命令面板 `.cp-input input`；首页 `.hq`；
+   - 7 条用例按「能力已移除/视图已合并/外部产物缺失」诚实跳过并写明原因（不假绿）；
+   - 新增探针 `tools/e2e/probe-menu-map.mjs`（菜单→视图映射）、`probe-palette.mjs`（命令面板）。
+3. 怎么验证？
+   - `npx playwright test` → **18 passed / 7 skipped / 0 failed（1.3 分钟）**（09:56 实测）；
+   - 与 L4 验收（同日 09:07 PASS）互补：验收证明 L4 链路，套件证明主界面/导航/菜单渲染不回归。
+4. 发现什么问题？
+   - `flipTimer is not defined` 页面错误系 Vite 缓存陈旧（清 `node_modules/.vite` 后消失），非代码缺陷；
+   - 7 条跳过项需产品/并行重构确认后再补选择器（经典版移除、孪生大屏命令语义、Cesium 场景并入 pano、
+     DemoCenter 演示动线、B3 回放、CWME 静态产物）。
+5. 是否可以提交？
+   - 可以（测试与诊断工具，UI 代码未改）；未 push、不提升验收状态。

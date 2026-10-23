@@ -35,6 +35,7 @@ acceptance:
   - 全链路演练：`node tools/l4/chain-dryrun.mjs` → 9 步 / 10 断言全过（2026-10-23，不依赖登录/UI）
   - 一键验收复跑：**PASS**（2026-10-23 09:07，`harness/l4-acceptance/2026-10-23T01-07-31-373Z/report.json`）——
     贴地 0m、切白盒/回切、画面差异 3.28% ≥1%、清单 500 → fallback/whitebox、页面错误 0、控制台错误 0、FPS 55.7
+  - e2e 基座恢复：`npx playwright test` → 18 passed / 7 skipped / 0 failed（2026-10-23 09:56，1.3m；原 14/11）
 loop:
   current_step: commit
   iteration: 2
@@ -57,6 +58,7 @@ verification:
   - node tools/l4/verify-vendor-package.mjs --dir <vendor-package>（真实资产验收入口；DRY-RUN 见 harness/l4-acceptance/vendor-dryrun/）
   - node tools/l4/chain-dryrun.mjs（全链路演练；证据 harness/l4-acceptance/vendor-chain-dryrun/）
   - node tools/e2e/probe-ui-nav.mjs / probe-pano-state.mjs / probe-precision.mjs（回归探针：DOM 契约/引擎就绪/精度面板）
+  - npx playwright test（e2e 全量：18 passed / 7 skipped / 0 failed，2026-10-23）
   waivers:
     screenshots: 截图二进制归档在主项目仓库 harness/l4-acceptance/{smoke-sim,smoke-demo}/ 与 harness/l4-evidence/（report.md / report.json 同为证据），GPCF 只登记路径与判定口径，不重复存二进制；占位资产截图的精度含义以三处标注为准。
 blockers:
@@ -78,4 +80,4 @@ ui_product_first_control:
     evidence_overexposure_gate: pass
   status_ceiling: partial
 created_at: "2026-10-22T11:04:30+00:00"
-updated_at: "2026-10-23T01:20:00+00:00"
+updated_at: "2026-10-23T02:00:00+00:00"
