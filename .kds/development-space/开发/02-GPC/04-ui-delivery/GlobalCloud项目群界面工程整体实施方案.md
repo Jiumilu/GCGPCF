@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-4E2A91B7C6
 title: GlobalCloud项目群界面工程整体实施方案
 project: GPC
-related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio, ICP, SpaceAIStudio]
+related_projects: [AAAS, Brain, WAS, XiaoC, WAME, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP, PQC, SpaceAI, SpaceAIStudio, World, GCMEM, WAE, Project]
 domain: ui-delivery
 status: controlled
 version: v1.0
@@ -134,6 +134,13 @@ superseded_by: []
 | SpaceAI | 专业工作台类 | 高风险页面类 | 既有 Windows 桌面地图与视频设备工程；独立纳管，真实运行待验证 |
 | SpaceAIStudio | 专业工作台类 | 高风险页面类 | Windows 安防监控桌面客户端；设备与报警操作需真实验证，当前 partial |
 | PQC | 业务操作类 | 系统配置与治理类 | 包装成本、报价、审批与订单回款；客户报价视图必须脱敏 |
+| World | 门户与展示类 | 分析决策类 | 世界资产只读浏览入口；业务写入和验收由原 owner 控制 |
+| GCMEM | 系统配置与治理类 | 分析决策类 | 长期记忆状态与检索入口；KDS 保持主存 |
+| WAE | 门户与展示类 | 专业工作台类 | 项目群统一界面框架；当前处于设计阶段 |
+| Project | 专业工作台类 | 系统配置与治理类 | 基于 Plane 社区版的研发协作入口；GPCF 状态只读投影 |
+| SLC | 业务操作类 | 分析决策类 | 运力测算与结果分析；独立 Web/Electron 应用，WAE 接入待评估 |
+| PDC | 业务操作类 | 专业工作台类 | 包装设计、箱型展开、用料计算与 3D 预览；独立 Web/Electron 应用 |
+| DRC | 系统配置与治理类 | 分析决策类 | 项目群数据资源登记、目录、生命周期与访问边界治理；bootstrap/partial |
 
 ## 6. 统一与差异边界
 

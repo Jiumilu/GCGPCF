@@ -1,11 +1,12 @@
 # WAME 开发文档空间
 
-生成日期：2026-10-16
+生成日期：2026-10-23
 
 用途：KDS `开发` 空间中 `WAME` 项目的受控文档入口。
 
 | doc_id | title | source_path | status |
 | --- | --- | --- | --- |
+| GPCF-DOC-A65368A0E1 | `.standards/` — 项目群规范检查快照（勿手改） | .standards/README.md | controlled |
 | GPCF-ZCODE-COMMAND-PROPOSE-20260712 | propose | .zcode/commands/propose.md | controlled |
 | GPCF-ZCODE-COMMAND-STATUS-20260712 | status | .zcode/commands/status.md | controlled |
 | GPCF-DOC-E37161A1FB | A23 模型使用计量与统计回指样本 | 08-evidence-samples/A23 模型使用计量与统计回指样本.md | controlled |

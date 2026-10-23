@@ -1,0 +1,51 @@
+---
+doc_id: GPCF-DOC-XGD-IMPLEMENTATION-REPORT-20261021
+title: GlobalCloud XGD 实施回传（2026-10-21）
+project: GPCF
+related_projects: [XGD, XiaoG, GCMEM, KDS]
+domain: governance
+status: draft
+version: v0.1
+owner: GPCF
+kds_space: 开发
+kds_path: 开发/91-治理与验收/09-status/globalcloud-xgd-implementation-report-20261021.md
+source_path: 09-status/globalcloud-xgd-implementation-report-20261021.md
+sync_direction: bidirectional
+last_reviewed: 2026-10-21
+supersedes: []
+superseded_by: []
+master_control: GPCF:01-architecture/GlobalCloud 项目群总体方案.md
+---
+
+# GlobalCloud XGD 实施回传（2026-10-21）
+
+> 性质：XGD 侧实施状态回传，供 GPCF 登记与传导；`draft`，不代表项目群验收或状态升级。
+
+## 1. 回传事项
+
+- XGD 本地提交：`6a9995f2`（342 文件）+ `5cf72e29`（状态/证据）；已 push 到 `origin/main`（`b02e9090..5cf72e29`）。
+- clean clone 验证：`npm ci` 15s + `/healthz` 200 + `/runtime/info` 200。
+- 实施范围：H1 可信基线、H2 任务/工作流/隔离/独立 Web 控制台/第二宿主 PoC、H3 长程分析模型+持久化/API。
+- 详细状态：`GlobalCloud XGD/docs/IMPLEMENTATION_STATUS_2026-10-21.md`。
+
+## 2. 状态口径
+
+| 项 | 口径 |
+|---|---|
+| XGD 实施状态 | `ready_for_review`（项目整体 `partial`） |
+| H1 | 5 完成 / 3 部分 / 1 阻塞 |
+| H2 | 后端 + 独立 UI v0；XiaoG BFF/签名未完成 |
+| H3 | 模型+持久化/API v0；无 LLM 编排/调度 |
+| 项目群验收 | 未声明 `accepted` / `integrated` / `production_ready` / `customer_accepted` |
+
+## 3. 未完成与阻塞
+
+- D10 签名/公证：缺 Apple Developer ID/公证凭据，无法产出 dmg/zip 与签名内测包。
+- D11 XiaoG BFF/UI：XGD 侧 BFF 契约/客户端已完成；XiaoG 仓实现未排期。
+- 72h 观测：已启动 72h 后台观测（PID 50939，输出 `docs/harness/evidence/runtime-observation-72h.jsonl`），尚未完成。
+- 语音完整 E2E：ASR/TTS 组件 PASS，LLM 回答链未通过（live 运行时无响应）。
+- GPCF 五处登记：本回传仅覆盖状态入口；KDS 镜像/文档控制台账待补。
+
+## 4. 声明边界
+
+本回传不声明项目群集成、生产可用、客户验收或任何状态提升；不替代 GPCF 门禁与人工确认。

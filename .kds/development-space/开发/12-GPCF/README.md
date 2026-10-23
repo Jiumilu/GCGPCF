@@ -1,36 +1,42 @@
 # GPCF 开发文档空间
 
-生成日期：2026-10-16
+生成日期：2026-10-23
 
 用途：KDS `开发` 空间中 `GPCF` 项目的受控文档入口。
 
 | doc_id | title | source_path | status |
 | --- | --- | --- | --- |
+| GPCF-DOC-C1D2E3F4A5 | impeccable | .agents/skills/impeccable/README.md | operational_controlled |
 | GPCF-DOC-B6A5C4D3E2 | SKILL | .agents/skills/impeccable/SKILL.md | controlled |
-| GPCF-DOC-A001000001 | adapt | .agents/skills/impeccable/reference/adapt.md | controlled |
-| GPCF-DOC-A001000002 | animate | .agents/skills/impeccable/reference/animate.md | controlled |
-| GPCF-DOC-A001000003 | audit | .agents/skills/impeccable/reference/audit.md | controlled |
-| GPCF-DOC-A001000005 | bolder | .agents/skills/impeccable/reference/bolder.md | controlled |
-| GPCF-DOC-A001000004 | Brand register | .agents/skills/impeccable/reference/brand.md | controlled |
-| GPCF-DOC-A001000006 | clarify | .agents/skills/impeccable/reference/clarify.md | controlled |
-| GPCF-DOC-A001000025 | Codex: Visual Direction & Asset Production | .agents/skills/impeccable/reference/codex.md | controlled |
-| GPCF-DOC-A001000007 | colorize | .agents/skills/impeccable/reference/colorize.md | controlled |
-| GPCF-DOC-A001000008 | Craft Flow | .agents/skills/impeccable/reference/craft.md | controlled |
-| GPCF-DOC-A001000026 | critique | .agents/skills/impeccable/reference/critique.md | controlled |
-| GPCF-DOC-A001000009 | delight | .agents/skills/impeccable/reference/delight.md | controlled |
-| GPCF-DOC-A001000010 | distill | .agents/skills/impeccable/reference/distill.md | controlled |
-| GPCF-DOC-A001000027 | Design System: [Project Title] | .agents/skills/impeccable/reference/document.md | controlled |
-| GPCF-DOC-A001000011 | Extract Flow | .agents/skills/impeccable/reference/extract.md | controlled |
-| GPCF-DOC-A001000013 | $impeccable hooks | .agents/skills/impeccable/reference/hooks.md | controlled |
-| GPCF-DOC-A001000014 | Init Flow | .agents/skills/impeccable/reference/init.md | controlled |
-| GPCF-DOC-A001000016 | layout | .agents/skills/impeccable/reference/layout.md | controlled |
-| GPCF-DOC-A001000028 | live | .agents/skills/impeccable/reference/live.md | controlled |
-| GPCF-DOC-A001000017 | onboard | .agents/skills/impeccable/reference/onboard.md | controlled |
-| GPCF-DOC-A001000018 | optimize | .agents/skills/impeccable/reference/optimize.md | controlled |
-| GPCF-DOC-A001000020 | Product register | .agents/skills/impeccable/reference/product.md | controlled |
-| GPCF-DOC-A001000022 | quieter | .agents/skills/impeccable/reference/quieter.md | controlled |
-| GPCF-DOC-A001000023 | shape | .agents/skills/impeccable/reference/shape.md | controlled |
-| GPCF-DOC-A001000024 | typeset | .agents/skills/impeccable/reference/typeset.md | controlled |
+| GPCF-DOC-D4E5F6A7B8 | reference | .agents/skills/impeccable/reference/README.md | operational_controlled |
+| GPCF-DOC-A001000001 | adapt | .agents/skills/impeccable/reference/adapt.md | operational_controlled |
+| GPCF-DOC-A001000002 | animate | .agents/skills/impeccable/reference/animate.md | operational_controlled |
+| GPCF-DOC-A001000003 | audit | .agents/skills/impeccable/reference/audit.md | operational_controlled |
+| GPCF-DOC-A001000005 | bolder | .agents/skills/impeccable/reference/bolder.md | operational_controlled |
+| GPCF-DOC-A001000004 | brand | .agents/skills/impeccable/reference/brand.md | operational_controlled |
+| GPCF-DOC-A001000006 | clarify | .agents/skills/impeccable/reference/clarify.md | operational_controlled |
+| GPCF-DOC-A001000025 | codex | .agents/skills/impeccable/reference/codex.md | operational_controlled |
+| GPCF-DOC-A001000007 | colorize | .agents/skills/impeccable/reference/colorize.md | operational_controlled |
+| GPCF-DOC-A001000008 | craft | .agents/skills/impeccable/reference/craft.md | operational_controlled |
+| GPCF-DOC-A001000026 | critique | .agents/skills/impeccable/reference/critique.md | operational_controlled |
+| GPCF-DOC-A001000009 | delight | .agents/skills/impeccable/reference/delight.md | operational_controlled |
+| GPCF-DOC-A001000010 | distill | .agents/skills/impeccable/reference/distill.md | operational_controlled |
+| GPCF-DOC-A001000027 | document | .agents/skills/impeccable/reference/document.md | operational_controlled |
+| GPCF-DOC-A001000011 | extract | .agents/skills/impeccable/reference/extract.md | operational_controlled |
+| GPCF-DOC-A001000012 | harden | .agents/skills/impeccable/reference/harden.md | operational_controlled |
+| GPCF-DOC-A001000013 | hooks | .agents/skills/impeccable/reference/hooks.md | operational_controlled |
+| GPCF-DOC-A001000014 | init | .agents/skills/impeccable/reference/init.md | operational_controlled |
+| GPCF-DOC-A001000015 | interaction-design | .agents/skills/impeccable/reference/interaction-design.md | operational_controlled |
+| GPCF-DOC-A001000016 | layout | .agents/skills/impeccable/reference/layout.md | operational_controlled |
+| GPCF-DOC-A001000028 | live | .agents/skills/impeccable/reference/live.md | operational_controlled |
+| GPCF-DOC-A001000017 | onboard | .agents/skills/impeccable/reference/onboard.md | operational_controlled |
+| GPCF-DOC-A001000018 | optimize | .agents/skills/impeccable/reference/optimize.md | operational_controlled |
+| GPCF-DOC-A001000019 | overdrive | .agents/skills/impeccable/reference/overdrive.md | operational_controlled |
+| GPCF-DOC-A001000021 | polish | .agents/skills/impeccable/reference/polish.md | operational_controlled |
+| GPCF-DOC-A001000020 | product | .agents/skills/impeccable/reference/product.md | operational_controlled |
+| GPCF-DOC-A001000022 | quieter | .agents/skills/impeccable/reference/quieter.md | operational_controlled |
+| GPCF-DOC-A001000023 | shape | .agents/skills/impeccable/reference/shape.md | operational_controlled |
+| GPCF-DOC-A001000024 | typeset | .agents/skills/impeccable/reference/typeset.md | operational_controlled |
 | GPCF-DOC-56E7A7A3B5 | Codex 本地配置 | .codex/README.md | operational_controlled |
 | GPCF-DOC-424C591653 | Codex 本地技能 | .codex/skills/README.md | operational_controlled |
 | GPCF-DOC-B053B83539 | globalcloud-document-governance | .codex/skills/globalcloud-document-governance/README.md | operational_controlled |
@@ -58,113 +64,14 @@
 | GPCF-DOC-A1B2C3D4E5 | globalcloud-ui-quality-gate | .codex/skills/globalcloud-ui-quality-gate/README.md | operational_controlled |
 | GPCF-DOC-3E7F2A1B9C | GlobalCloud UI Quality Gate | .codex/skills/globalcloud-ui-quality-gate/SKILL.md | operational_controlled |
 | GPCF-DOC-F6E5D4C3B2 | references | .codex/skills/globalcloud-ui-quality-gate/references/README.md | operational_controlled |
-| GPCF-DOC-9A8B7C6D5E | Evidence Output | .codex/skills/globalcloud-ui-quality-gate/references/evidence-output.md | operational_controlled |
-| GPCF-DOC-1F2E3D4C5B | Quality Checklist | .codex/skills/globalcloud-ui-quality-gate/references/quality-checklist.md | operational_controlled |
-| GPCF-DOC-6A7B8C9D0E | Tool Routing | .codex/skills/globalcloud-ui-quality-gate/references/tool-routing.md | operational_controlled |
+| GPCF-DOC-9A8B7C6D5E | evidence-output | .codex/skills/globalcloud-ui-quality-gate/references/evidence-output.md | operational_controlled |
+| GPCF-DOC-1F2E3D4C5B | quality-checklist | .codex/skills/globalcloud-ui-quality-gate/references/quality-checklist.md | operational_controlled |
+| GPCF-DOC-6A7B8C9D0E | tool-routing | .codex/skills/globalcloud-ui-quality-gate/references/tool-routing.md | operational_controlled |
 | GPCF-DOC-268058F0F6 | UI/UX 技能 | .codex/skills/ui-ux-pro-max/README.md | operational_controlled |
 | GPCF-DOC-8025BD5C10 | ui-ux-pro-max | .codex/skills/ui-ux-pro-max/SKILL.md | operational_controlled |
 | GPCF-DOC-8DB9DCE902 | .okf | .okf/README.md | controlled |
 | GPCF-DOC-C1EE643433 | architecture | .okf/architecture/README.md | controlled |
 | GPCF-DOC-E3A50CA31F | OKF Architecture Bundle 只读索引 | .okf/architecture/index.md | controlled |
-| GPCF-DOC-F0799E0052 | Summary | .okf/bundles/architecture-v0.1/concepts/01-architecture/AI驱动GFIS与GlobalCloud体系结合分析.md | controlled |
-| GPCF-DOC-6333B7AEA2 | Summary | .okf/bundles/architecture-v0.1/concepts/01-architecture/GlobalCloud体系最小闭环与三阶段激活深度总表.md | controlled |
-| GPCF-DOC-BD939AD888 | Summary | .okf/bundles/architecture-v0.1/concepts/01-architecture/GlobalCloud绿色供应链体系WAME控制塔治理架构图.md | controlled |
-| GPCF-DOC-D278ACC161 | Summary | .okf/bundles/architecture-v0.1/concepts/01-architecture/GlobalCloud绿色供应链体系总架构.md | controlled |
-| GPCF-DOC-6F7F2D47CD | Summary | .okf/bundles/architecture-v0.1/concepts/01-architecture/GlobalCloud项目群交叉分析报告.md | controlled |
-| GPCF-DOC-0C6ABE0306 | Summary | .okf/bundles/architecture-v0.1/concepts/01-architecture/GlobalCloud项目群最小闭环L4实施方案.md | controlled |
-| GPCF-DOC-6BD7D5C192 | concepts/01-architecture | .okf/bundles/architecture-v0.1/concepts/01-architecture/index.md | controlled |
-| GPCF-DOC-09A91E6519 | Architecture OKF v0.1 Derived Bundle | .okf/bundles/architecture-v0.1/index.md | controlled |
-| GPCF-DOC-FE4EDCD536 | Architecture OKF v0.1 Derived Bundle Update Log | .okf/bundles/architecture-v0.1/log.md | controlled |
-| GPCF-DOC-0DF6AA8647 | Loop Control Board | .okf/bundles/governance-v0.1/02-governance/loop/LOOP_CONTROL_BOARD.md | controlled |
-| GPCF-DOC-21CE43CD83 | Summary | .okf/bundles/governance-v0.1/concepts/02-governance/GlobalCloud项目群文档综合治理规范.md | controlled |
-| GPCF-DOC-345F0D5736 | Summary | .okf/bundles/governance-v0.1/concepts/02-governance/GlobalCloud项目群文档防污染规则.md | controlled |
-| GPCF-DOC-21FDE53020 | concepts/02-governance | .okf/bundles/governance-v0.1/concepts/02-governance/index.md | controlled |
-| GPCF-DOC-0DF6AA8647 | Loop Control Board | .okf/bundles/governance-v0.1/concepts/02-governance/loop/LOOP_CONTROL_BOARD.md | controlled |
-| GPCF-DOC-FB949D38ED | Summary | .okf/bundles/governance-v0.1/concepts/02-governance/loop/LOOP_EXECUTION_RULES.md | controlled |
-| GPCF-DOC-FCF123A7BF | Summary | .okf/bundles/governance-v0.1/concepts/02-governance/loop/LOOP_GOVERNANCE_OPERATING_BOUNDARY.md | controlled |
-| GPCF-DOC-C274284D13 | Summary | .okf/bundles/governance-v0.1/concepts/02-governance/loop/LOOP_GOVERNANCE_PHASE_GOAL.md | controlled |
-| GPCF-DOC-C2F75FBFAD | concepts/02-governance/loop | .okf/bundles/governance-v0.1/concepts/02-governance/loop/index.md | controlled |
-| GPCF-DOC-C01E7DEF4F | concepts/09-status | .okf/bundles/governance-v0.1/concepts/09-status/index.md | controlled |
-| GPCF-DOC-8FDD7830FD | Summary | .okf/bundles/governance-v0.1/concepts/09-status/kds-phase10-governance-sustainment-plan.md | controlled |
-| GPCF-DOC-3DAE5A0577 | Summary | .okf/bundles/governance-v0.1/concepts/09-status/odf-introduction-governance-plan.md | controlled |
-| GPCF-DOC-6264664560 | Summary | .okf/bundles/governance-v0.1/concepts/09-status/odf-phase2-expansion-plan.md | controlled |
-| GPCF-DOC-2DD4AF218A | Summary | .okf/bundles/governance-v0.1/concepts/09-status/odf-phase3-schema-gate-plan.md | controlled |
-| GPCF-DOC-C280B3F27B | Summary | .okf/bundles/governance-v0.1/concepts/09-status/odf-phase4-small-batch-admission-plan.md | controlled |
-| GPCF-DOC-79F8A3590E | Summary | .okf/bundles/governance-v0.1/concepts/09-status/odf-phase5-change-request-governance-plan.md | controlled |
-| GPCF-DOC-57C53F95BF | Summary | .okf/bundles/governance-v0.1/concepts/09-status/odf-phase6-manual-confirmation-workbench-plan.md | controlled |
-| GPCF-DOC-174262B774 | Summary | .okf/bundles/governance-v0.1/concepts/09-status/odf-phase7-small-batch-execution-plan.md | controlled |
-| GPCF-DOC-FB6DF83F3F | Summary | .okf/bundles/governance-v0.1/concepts/09-status/odf-phase8-drift-monitoring-plan.md | controlled |
-| GPCF-DOC-63E9CF69F2 | Summary | .okf/bundles/governance-v0.1/concepts/09-status/odf-phase9-dynamic-source-stabilization-plan.md | controlled |
-| GPCF-DOC-69165151F9 | Summary | .okf/bundles/governance-v0.1/concepts/docs/harness/evidence/evidence-index.md | controlled |
-| GPCF-DOC-8E954D5507 | concepts/docs/harness/evidence | .okf/bundles/governance-v0.1/concepts/docs/harness/evidence/index.md | controlled |
-| GPCF-DOC-CA66D495EF | Summary | .okf/bundles/governance-v0.1/concepts/docs/harness/evidence/kds-md-okf-odf-full-closure-report-20260619.md | controlled |
-| GPCF-DOC-108F9D6848 | Summary | .okf/bundles/governance-v0.1/concepts/docs/harness/evidence/kds-phase10-backlog-triage-20260619.md | controlled |
-| GPCF-DOC-0BFEDBE7F0 | Summary | .okf/bundles/governance-v0.1/concepts/docs/harness/evidence/kds-phase10-self-refresh-stabilization-workpack-20260619.md | controlled |
-| GPCF-DOC-887C0CD0ED | Summary | .okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase2-closure-report-20260617.md | controlled |
-| GPCF-DOC-A6C9041EA2 | Summary | .okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase2-sample-ledger-20260617.md | controlled |
-| GPCF-DOC-CA626B997E | Summary | .okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase3-schema-gate-20260617.md | controlled |
-| GPCF-DOC-AB520AAA0B | Summary | .okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase4-small-batch-closure-20260617.md | controlled |
-| GPCF-DOC-0CA23DBC73 | Summary | .okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase4-small-batch-ledger-20260617.md | controlled |
-| GPCF-DOC-1388761D60 | Summary | .okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase5-change-request-closure-20260617.md | controlled |
-| GPCF-DOC-C2F7987EC8 | Summary | .okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase5-change-request-ledger-20260617.md | controlled |
-| GPCF-DOC-0318A0180C | Summary | .okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase6-manual-confirmation-workbench-20260618.md | controlled |
-| GPCF-DOC-4F09F98867 | Summary | .okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase6-manual-confirmation-workbench-closure-20260618.md | controlled |
-| GPCF-DOC-5989E81F31 | Summary | .okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase7-small-batch-closure-20260619.md | controlled |
-| GPCF-DOC-97BF84B81C | Summary | .okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase7-small-batch-ledger-20260619.md | controlled |
-| GPCF-DOC-8C94BDB1C5 | Summary | .okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase8-drift-monitoring-closure-20260619.md | controlled |
-| GPCF-DOC-FAE0036971 | Summary | .okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase8-drift-monitoring-report-20260619.md | controlled |
-| GPCF-DOC-0429206766 | Summary | .okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase9-dynamic-source-stabilization-closure-20260619.md | controlled |
-| GPCF-DOC-799B8D87A3 | Summary | .okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase9-dynamic-source-stabilization-report-20260619.md | controlled |
-| GPCF-DOC-4AFA9E99EC | Summary | .okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-pilot-closure-report-20260617.md | controlled |
-| GPCF-DOC-440AE2CDD3 | Summary | .okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-pilot-sample-ledger-20260617.md | controlled |
-| GPCF-DOC-E461B1E6E8 | concepts/docs/harness | .okf/bundles/governance-v0.1/concepts/docs/harness/index.md | controlled |
-| GPCF-DOC-91F568C078 | Summary | .okf/bundles/governance-v0.1/concepts/docs/harness/loop-state.md | controlled |
-| GPCF-DOC-75D783BDBF | Summary | .okf/bundles/governance-v0.1/concepts/docs/harness/loops/README.md | controlled |
-| GPCF-DOC-587456F3B9 | concepts/docs/harness/loops | .okf/bundles/governance-v0.1/concepts/docs/harness/loops/index.md | controlled |
-| GPCF-DOC-FA1C93B6F4 | Governance OKF v0.1 Derived Bundle | .okf/bundles/governance-v0.1/index.md | controlled |
-| GPCF-DOC-6D7659F2B3 | Governance OKF v0.1 Derived Bundle Update Log | .okf/bundles/governance-v0.1/log.md | controlled |
-| GPCF-DOC-AEE014F023 | Summary | .okf/bundles/kds-v0.1/concepts/02-governance/GlobalCloud项目群KDS开发空间安全规范.md | controlled |
-| GPCF-DOC-C897BF0FF4 | concepts/02-governance | .okf/bundles/kds-v0.1/concepts/02-governance/index.md | controlled |
-| GPCF-DOC-2302CD4424 | Summary | .okf/bundles/kds-v0.1/concepts/03-data-ai-knowledge/GlobalCloud Loop开发KDS关联数据检索机制.md | controlled |
-| GPCF-DOC-9F55BE3115 | Summary | .okf/bundles/kds-v0.1/concepts/03-data-ai-knowledge/GlobalCloudBrain-KDS知识编制与知识UI边界清单.md | controlled |
-| GPCF-DOC-F9BA4A0DA2 | concepts/03-data-ai-knowledge | .okf/bundles/kds-v0.1/concepts/03-data-ai-knowledge/index.md | controlled |
-| GPCF-DOC-D00A2D2D97 | concepts/09-status | .okf/bundles/kds-v0.1/concepts/09-status/index.md | controlled |
-| GPCF-DOC-A28AE2375D | Summary | .okf/bundles/kds-v0.1/concepts/09-status/kds-md-okf-implementation-closure-plan.md | controlled |
-| GPCF-DOC-5DEB82217B | Summary | .okf/bundles/kds-v0.1/concepts/09-status/kds-okf-v01-full-implementation-plan.md | controlled |
-| GPCF-DOC-1ABFDD161D | Summary | .okf/bundles/kds-v0.1/concepts/09-status/kds-phase10-governance-sustainment-plan.md | controlled |
-| GPCF-DOC-EACEA29CA9 | Summary | .okf/bundles/kds-v0.1/concepts/09-status/kds-readonly-probe-report.md | controlled |
-| GPCF-DOC-6A0BBD4A2C | Summary | .okf/bundles/kds-v0.1/concepts/09-status/odf-introduction-governance-plan.md | controlled |
-| GPCF-DOC-52445C063B | Summary | .okf/bundles/kds-v0.1/concepts/09-status/odf-phase2-expansion-plan.md | controlled |
-| GPCF-DOC-07D7CF1059 | Summary | .okf/bundles/kds-v0.1/concepts/09-status/odf-phase3-schema-gate-plan.md | controlled |
-| GPCF-DOC-9F2832976D | Summary | .okf/bundles/kds-v0.1/concepts/09-status/odf-phase4-small-batch-admission-plan.md | controlled |
-| GPCF-DOC-CDD9BF692D | Summary | .okf/bundles/kds-v0.1/concepts/09-status/odf-phase5-change-request-governance-plan.md | controlled |
-| GPCF-DOC-CCB29577A2 | Summary | .okf/bundles/kds-v0.1/concepts/09-status/odf-phase6-manual-confirmation-workbench-plan.md | controlled |
-| GPCF-DOC-F5F31084E9 | Summary | .okf/bundles/kds-v0.1/concepts/09-status/odf-phase7-small-batch-execution-plan.md | controlled |
-| GPCF-DOC-D8529C03DA | Summary | .okf/bundles/kds-v0.1/concepts/09-status/odf-phase8-drift-monitoring-plan.md | controlled |
-| GPCF-DOC-614D612418 | Summary | .okf/bundles/kds-v0.1/concepts/09-status/odf-phase9-dynamic-source-stabilization-plan.md | controlled |
-| GPCF-DOC-B6346DF31E | concepts/docs/harness/evidence | .okf/bundles/kds-v0.1/concepts/docs/harness/evidence/index.md | controlled |
-| GPCF-DOC-47D372B358 | Summary | .okf/bundles/kds-v0.1/concepts/docs/harness/evidence/kds-md-okf-odf-full-closure-report-20260619.md | controlled |
-| GPCF-DOC-49EF1B720D | Summary | .okf/bundles/kds-v0.1/concepts/docs/harness/evidence/kds-phase10-backlog-triage-20260619.md | controlled |
-| GPCF-DOC-9072FD81C8 | Summary | .okf/bundles/kds-v0.1/concepts/docs/harness/evidence/kds-phase10-self-refresh-stabilization-workpack-20260619.md | controlled |
-| GPCF-DOC-DA8E9D0BA0 | Summary | .okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase2-closure-report-20260617.md | controlled |
-| GPCF-DOC-705119F127 | Summary | .okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase2-sample-ledger-20260617.md | controlled |
-| GPCF-DOC-D8FC4ACE9A | Summary | .okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase3-schema-gate-20260617.md | controlled |
-| GPCF-DOC-312A652CF0 | Summary | .okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase4-small-batch-closure-20260617.md | controlled |
-| GPCF-DOC-7806FFFF4C | Summary | .okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase4-small-batch-ledger-20260617.md | controlled |
-| GPCF-DOC-7FF5DE4F5C | Summary | .okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase5-change-request-closure-20260617.md | controlled |
-| GPCF-DOC-09C99A5CD9 | Summary | .okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase5-change-request-ledger-20260617.md | controlled |
-| GPCF-DOC-6BB95F1D48 | Summary | .okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase6-manual-confirmation-workbench-20260618.md | controlled |
-| GPCF-DOC-BD5BCB3156 | Summary | .okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase6-manual-confirmation-workbench-closure-20260618.md | controlled |
-| GPCF-DOC-9F92895BFB | Summary | .okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase7-small-batch-closure-20260619.md | controlled |
-| GPCF-DOC-118B84520F | Summary | .okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase7-small-batch-ledger-20260619.md | controlled |
-| GPCF-DOC-695B04432A | Summary | .okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase8-drift-monitoring-closure-20260619.md | controlled |
-| GPCF-DOC-2B943D89D1 | Summary | .okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase8-drift-monitoring-report-20260619.md | controlled |
-| GPCF-DOC-00BAD98FD4 | Summary | .okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase9-dynamic-source-stabilization-closure-20260619.md | controlled |
-| GPCF-DOC-322FA63FD9 | Summary | .okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase9-dynamic-source-stabilization-report-20260619.md | controlled |
-| GPCF-DOC-446BC2D70C | Summary | .okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-pilot-closure-report-20260617.md | controlled |
-| GPCF-DOC-04AF207E76 | Summary | .okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-pilot-sample-ledger-20260617.md | controlled |
-| GPCF-DOC-1670E0BDC4 | KDS OKF v0.1 Derived Bundle | .okf/bundles/kds-v0.1/index.md | controlled |
-| GPCF-DOC-9ED3705272 | KDS OKF v0.1 Derived Bundle Update Log | .okf/bundles/kds-v0.1/log.md | controlled |
 | GPCF-DOC-B5A4AF3B25 | governance | .okf/governance/README.md | controlled |
 | GPCF-DOC-37BA319CB6 | OKF Governance Bundle 只读索引 | .okf/governance/index.md | controlled |
 | GPCF-DOC-323D4F2AA4 | OKF 兼容层只读导航总索引 | .okf/index.md | controlled |
@@ -190,6 +97,7 @@
 | GPCF-DOC-9757FCD093 | 链同专项正式只读预检结论 | 06-workstreams/链同专项正式只读预检结论.md | controlled |
 | GPCF-DOC-56B87AF669 | 链同专项首轮实施前验证包 | 06-workstreams/链同专项首轮实施前验证包.md | controlled |
 | GPCF-DOC-F204B84F5B | 链同专项首轮实施前验证执行记录 | 06-workstreams/链同专项首轮实施前验证执行记录.md | controlled |
+| GPCF-DOC-GLOBALCLOUD-GPCF-MASTER-PLAN-20260624 | GlobalCloud GPCF 总体方案 | GlobalCloud GPCF 总体方案.md | controlled |
 | GPCF-DOC-GLOBALCLOUD-PROJECT-GROUP-IMPLEMENTATION-PLAN-20260624 | GlobalCloud 项目群实施方案 | GlobalCloud 项目群实施方案.md | controlled |
 | GPCF-DOC-990EE0035A | CodeGraph 业务开发执行层准入规则 | docs/codegraph/codegraph-dev-execution-admission.md | controlled |
 | GPCF-DOC-E1D4339FD6 | CodeGraph 业务开发执行 Harness 门禁 | docs/codegraph/codegraph-dev-execution-harness-gate.md | controlled |
@@ -397,6 +305,7 @@
 | GPCF-DOC-E9D4362ECF | OKF v0.1 Summary Approval Negative Fixtures | docs/harness/evidence/okf-v01-summary-approval-negative-fixtures-20260620.md | controlled |
 | GPCF-DOC-8DC131D430 | Ontology/WAS 3 小时实施 P2 门禁执行与回放证据 | docs/harness/evidence/ontology-was-3h-p2-gate-replay-20260621.md | controlled |
 | GPCF-DOC-20DAB7011D | Ontology/WAS 3 小时实施 P3 收口与下一步决策证据 | docs/harness/evidence/ontology-was-3h-p3-closure-20260621.md | controlled |
+| GPCF-DOC-PROJECTGROUPLIVESTATUSCURRENT20260701 | GlobalCloud 项目群当前 Live 状态快照 | docs/harness/evidence/project_group_live_status_current.md | controlled |
 | GPCF-DOC-718A85136C | Studio Channels Chat 入口补齐验证证据 | docs/harness/evidence/studio-channels-chat-entry-verified-20260622.md | controlled |
 | GPCF-DOC-7D6C9E5C21 | Studio Chat 工作台键盘与移动端复验证据 | docs/harness/evidence/studio-chat-workbench-keyboard-mobile-verified-20260622.md | controlled |
 | GPCF-DOC-A13F6D7B4E | Studio 默认凭据整改链路可访问性复验证据 | docs/harness/evidence/studio-default-credential-a11y-verified-20260624.md | controlled |
@@ -1704,6 +1613,24 @@
 | GPCF-DOC-9126B167F5 | GFIS 运行时 SOP 端到端开发完成 001 执行台账 | docs/harness/tasks/GFIS-RUNTIME-SOP-E2E-DEV-COMPLETION-001.execution-ledger.md | controlled |
 | GPCF-DOC-15B317110B | GFIS-RUNTIME-SOP-E2E-DEV-COMPLETION-001 | docs/harness/tasks/GFIS-RUNTIME-SOP-E2E-DEV-COMPLETION-001.md | controlled |
 | GPCF-DOC-GFIS-RUNTIME-SOP-E2E-MIN-001 | GFIS-RUNTIME-SOP-E2E-MIN-001 | docs/harness/tasks/GFIS-RUNTIME-SOP-E2E-MIN-001.md | controlled |
+| GPCF-DOC-102B1BBB47 | F-021 · WAS Ontology 基线裁定请求（交 WAS 属主） | docs/reports/f021-was-ontology-ruling-request-20261022.md | controlled |
+| GPCF-DOC-7C0B5F0FD1 | 门禁与证据体检（2026-10-22 23:35） | docs/reports/health-sweep-20261022.md | controlled |
+| GPCF-DOC-86E433AAA5 | F-030（PDC 纳管）重采清单（交 PDC 属主执行） | docs/reports/p05-pdc-f030-resample-checklist-20261022.md | controlled |
+| GPCF-DOC-F2B6092574 | P06 跨仓收尾清单：WAME / PVA 总体方案补继承声明（交属主执行） | docs/reports/p06-cross-repo-plan-inheritance-checklist-20261022.md | controlled |
+| GPCF-DOC-0D0FBC993C | P07 · 29 项目处置台账 · 完成证据（2026-10-22） | docs/reports/p07-disposition-ledger-evidence-20261022.md | controlled |
+| GPCF-DOC-58DD3BDFFC | P08 / P09 属主执行包（31–60 天：统一壳 + 首条接入） | docs/reports/p08-p09-owner-execution-packets-20261022.md | controlled |
+| GPCF-DOC-E31E79A62B | P10 / P11 · 界面分层与双角色权限一致性 · WAE 属主执行包 | docs/reports/p10-p11-wae-owner-packet-20261022.md | controlled |
+| GPCF-DOC-E011AE8A70 | P12 · PQC 首条真实业务链试点 · 授权申请包（待老卢签发） | docs/reports/p12-pqc-real-pilot-authorization-request-20261022.md | controlled |
+| GPCF-DOC-A1B1103B05 | P14 · PQC 首条真实业务链执行手册（A1–A4 范围内） | docs/reports/p14-pqc-pilot-execution-runbook-20261022.md | controlled |
+| GPCF-DOC-04CECBF090 | P14 · VU 进入 S4 的机检工具（防合成数据抬 C_real） | docs/reports/p14-s4-promotion-tooling-20261022.md | controlled |
+| GPCF-DOC-CD4AF0C1EA | P16-3 · UI 仓 e2e / browser / a11y 验收草案 | docs/reports/p16-3-ui-acceptance-draft-20261022.md | controlled |
+| GPCF-DOC-5D1F7E0305 | P16 · 跨项目 CI/验收矩阵 · 现状盘点与分阶段建议（2026-10-22） | docs/reports/p16-ci-matrix-gap-analysis-20261022.md | controlled |
+| GPCF-DOC-8B424ACBF2 | P18 · 发布 / 回滚 / 监控 / 归档 Runbook 模板（草案，未执行） | docs/reports/p18-release-rollback-runbook-template-20261022.md | controlled |
+| GPCF-DOC-0A8D4A5642 | P19 · 29 项目组合决策模板（90 天末执行） | docs/reports/p19-combination-decision-template-20261022.md | controlled |
+| GPCF-DOC-22940E5C06 | 90 天计划执行台账（P01–P19）· 2026-10-22 23:10 快照 | docs/reports/plan-progress-ledger-20261022.md | controlled |
+| GPCF-DOC-A3D4097C4E | PQC 真实试点数据接入清单（客户确认后按此一次性执行） | docs/reports/pqc-pilot-intake-checklist-20261022.md | controlled |
+| GPCF-DOC-3A7F6FA260 | 唯一状态事实源（P03）落地发现与阻塞项 | docs/reports/status-source-of-truth-findings-20261022.md | controlled |
+| GPCF-DOC-8A36559878 | World 仓 F-021 归属同步清单（交属主执行） | docs/reports/world-f021-attribution-sync-checklist-20261022.md | controlled |
 | GPCF-DOC-E6A5B97688 | Feature Workspace 标准 | docs/standards/feature-workspace.md | controlled |
 | GPCF-DOC-GKE001-OPENSPEC-CODEGRAPH-EVIDENCE-20260811 | GKE-001 OpenSpec 与 CodeGraph 纳管证据 | features/active/F-013-knowledge-asset-model-system/evidence/gke-001-openspec-codegraph-binding-20260811.md | controlled |
 | GPCF-DOC-7A2A6D4F05 | p1-recall-comparison-template | loop/context/cognee/harness/p1-recall-comparison-template.md | controlled |
@@ -1727,17 +1654,18 @@
 | GPCF-DOC-18A2F48E80 | spec | openspec/changes/kds-production-hardening/specs/session-auth/spec.md | draft |
 | GPCF-DOC-D067D700F1 | spec | openspec/changes/kds-production-hardening/specs/unified-permission-middleware/spec.md | draft |
 | GPCF-OS-ICP-REGISTRATION-TASKS-20260712 | tasks | openspec/changes/register-globalcloud-icp/tasks.md | draft |
-| GPCF-SPACEAI-PANORAMA-DESIGN-20261016 | design | openspec/changes/spaceai-platform-panorama-convergence/design.md | draft |
-| GPCF-OS-PANORAMA-STRUCTURE-SPEC-20261016 | 全景态势模块化结构与行为基线 | openspec/changes/spaceai-platform-panorama-convergence/specs/spaceai-platform-panorama-structure/spec.md | draft |
-| GPCF-SPACEAI-PANORAMA-TASKS-20261016 | tasks | openspec/changes/spaceai-platform-panorama-convergence/tasks.md | draft |
-| GPCF-OS-SPACEAI-STUDIO-MULTIPLATFORM-REFACTOR-SPEC-20261010 | spec | openspec/changes/spaceai-studio-multiplatform-refactor/specs/spaceai-studio-multiplatform-platform/spec.md | draft |
-| GPCF-SPACEAI-FLOOD-DESIGN-20261016 | design | openspec/changes/spaceai-was-city-flood-replay/design.md | draft |
-| GPCF-SPACEAI-FLOOD-SPEC-20261016 | spec | openspec/changes/spaceai-was-city-flood-replay/specs/spaceai-city-slice-replay/spec.md | draft |
-| GPCF-SPACEAI-FLOOD-TASKS-20261016 | tasks | openspec/changes/spaceai-was-city-flood-replay/tasks.md | draft |
+| GPCF-SPACEAI-PANORAMA-DESIGN-20261016 | design | openspec/changes/spaceai-platform-panorama-convergence/design.md | implemented |
+| GPCF-OS-PANORAMA-STRUCTURE-SPEC-20261016 | 全景态势模块化结构与行为基线 | openspec/changes/spaceai-platform-panorama-convergence/specs/spaceai-platform-panorama-structure/spec.md | implemented |
+| GPCF-SPACEAI-PANORAMA-TASKS-20261016 | tasks | openspec/changes/spaceai-platform-panorama-convergence/tasks.md | implemented |
+| GPCF-OS-SPACEAI-STUDIO-MULTIPLATFORM-REFACTOR-SPEC-20261010 | spec | openspec/changes/spaceai-studio-multiplatform-refactor/specs/spaceai-studio-multiplatform-platform/spec.md | in_progress |
+| GPCF-SPACEAI-FLOOD-DESIGN-20261016 | design | openspec/changes/spaceai-was-city-flood-replay/design.md | implemented |
+| GPCF-SPACEAI-FLOOD-SPEC-20261016 | spec | openspec/changes/spaceai-was-city-flood-replay/specs/spaceai-city-slice-replay/spec.md | implemented |
+| GPCF-SPACEAI-FLOOD-TASKS-20261016 | tasks | openspec/changes/spaceai-was-city-flood-replay/tasks.md | implemented |
 | GPCF-DOC-B7F7C251FF | spec | openspec/changes/was-flow-naming-migration/specs/was-flow-naming-migration/spec.md | draft |
 | GPCF-DOC-2FF258337C | XWAIL `flowType` 影响评估说明（场景流扩展·候选） | openspec/changes/was-scenario-flow-extension/artifacts/XWAIL-flowType影响评估说明_20261016.md | draft |
 | GPCF-DOC-5C02110A55 | spec | openspec/changes/was-scenario-flow-extension/specs/was-scenario-flow-extension/spec.md | draft |
 | GPCF-WORLD-OPENSPEC-CHANGES-WORLD-PROJECT-ONBOARDING-SPECS-WORLD-PROJECT-REGISTRATION-SPEC-MD-20261016 | spec | openspec/changes/world-project-onboarding/specs/world-project-registration/spec.md | draft |
+| GPCF-DOC-7786D4B550 | plan-20261022 | runtime/plan-20261022/README.md | controlled |
 | GPCF-DOC-4C34AF960B | Loop CodeGraph Goal Optimization Record Template | templates/LOOP_CODEGRAPH_GOAL_OPTIMIZATION_RECORD_TEMPLATE.md | controlled |
 | GPCF-DOC-0F4B8E6C2A | LOOP 跨会话交接模板 | templates/LOOP_CROSS_SESSION_HANDOFF_TEMPLATE.md | controlled |
 | GPCF-DOC-LOOP-DELIVERY-ROUND-TEMPLATE | LOOP Delivery Round Template | templates/LOOP_DELIVERY_ROUND_TEMPLATE.md | controlled |

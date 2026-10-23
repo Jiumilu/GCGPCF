@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/91-治理与验收/projects/spaceai-studio/STATUS.md
 source_path: projects/spaceai-studio/STATUS.md
 sync_direction: bidirectional
-last_reviewed: 2026-10-10
+last_reviewed: 2026-10-18
 supersedes: []
 superseded_by: []
 ---
@@ -29,6 +29,10 @@ superseded_by: []
 - 验证边界：**TS 51 + Rust 5 测试全通过**；macOS 安装包已产出并校验自包含。缺口：Windows/Linux 产物（CI 进行中）与**实际运行启动证据**；远端有意排除 7 个敏感文件，不能独立构建。
 - 证据：`../GlobalCloud SpaceAI Studio/docs/harness/onboarding-2026-10-10.md`；Harness run `.harness/runs/20261010-075917-spaceai-studio-multiplatform-refactor/`。
 - 下一步：P6 桥接扩展（前端接入 Tauri 命令 / 旧 DLL 兼容桥 / 移动适配）——**按需**推进。
+
+## 项目群总体架构 v1.1 承接（2026-10-18）
+
+SpaceAIStudio 保持独立空间智能桌面工作台和插件宿主，与 SpaceAI、Studio 通过契约协作，不合并代码、主账或验收。仓内唯一项目总体方案尚未确认，传导状态 `pending_unique_plan`；本状态页不替代项目总体方案。
 
 ## OpenSpec 入口
 

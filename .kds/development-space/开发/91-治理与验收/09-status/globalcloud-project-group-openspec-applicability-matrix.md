@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-OPEN-SPEC-18-PROJECT-MATRIX-20260712
 title: GlobalCloud 项目群 OpenSpec 适用性矩阵
 project: GPCF
-related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio, ICP, SpaceAIStudio, GCMEM]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio, ICP, SpaceAIStudio, GCMEM, PDC, SLC, DRC]
 domain: status
 status: controlled
 version: v1.0
@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/91-治理与验收/09-status/globalcloud-project-group-openspec-applicability-matrix.md
 source_path: 09-status/globalcloud-project-group-openspec-applicability-matrix.md
 sync_direction: bidirectional
-last_reviewed: 2026-10-18
+last_reviewed: 2026-10-21
 supersedes: []
 superseded_by: []
 ---
@@ -48,10 +48,16 @@ superseded_by: []
 
 | World | world | required | `openspec/changes/world-<change>/` | `gpcf_new_feature --project world` | Governance | required | required |
 | GCMEM | gcmem | conditional | `openspec/changes/gcmem-<change>/` | `gpcf_new_feature --project gcmem` | Governance | required | required |
+| WAE | wae | conditional | `openspec/changes/wae-<change>/` | `gpcf_new_feature --project wae` | Governance | required | required |
+| Project | project | required | `openspec/changes/project-<change>/` | `gpcf_new_feature --project project` | Governance | required | required |
+| PDC | pdc | conditional | `openspec/changes/pdc-<change>/` | `gpcf_new_feature --project pdc` | Delivery | required | required |
+| SLC | slc | conditional | `openspec/changes/slc-<change>/` | `gpcf_new_feature --project slc` | Delivery | required | required |
+| DRC | drc | required | `openspec/changes/drc-<change>/` | `gpcf_new_feature --project drc` | Governance | required | required |
+| FireQuote | firequote | conditional | `openspec/changes/firequote-<change>/` | `gpcf_new_feature --project firequote` | Delivery | required | required |
 
 ## 状态边界
 
-- 当前 23 项目均有中央入口，`waived=0`；因此无豁免债务。
+- 当前 29 项目均有中央入口，`waived=0`；因此无豁免债务。
 - 中央入口不表示已向各独立项目仓安装 OpenSpec。
 - apply 前必须创建或绑定 Feature；归档前必须通过 Evidence 与文档门禁。
 - Harness 保留最终裁决权；未经人工确认不得提升验收或生产状态。

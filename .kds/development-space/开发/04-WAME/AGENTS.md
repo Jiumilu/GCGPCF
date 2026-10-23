@@ -98,3 +98,46 @@ python scripts/gpcf_dispatch.py <FEATURE_ID>
 ```
 
 每次角色流转必须写入 `runtime/logs/F-xxx.jsonl`。关闭 Feature 必须通过 `python scripts/gpcf_close_feature.py <FEATURE_ID>`，关闭后 queue 状态为 `closed`，角色为 `Recorder`。
+
+<!-- 2026-10-22 文档可读性整改（R07/R08/R09）：以下为 append-only 补齐的缺失章节，上文未改动 -->
+
+## 目录说明
+
+| 目录 / 文件 | 用途 |
+|---|---|
+| `$CODEX_HOME/` | **待核**（仓内无该目录说明） |
+| `00-index/` | 总索引（按目录名前缀推断） |
+| `01-architecture/` | 架构（按目录名前缀推断） |
+| `02-governance/` | 治理（按目录名前缀推断） |
+| `03-data-ai-knowledge/` | 数据/AI/知识（按目录名前缀推断） |
+| `04-ui-delivery/` | 界面与交付（按目录名前缀推断） |
+| `05-agent-team/` | Agent 团队（按目录名前缀推断） |
+| `06-workstreams/` | 工作流（按目录名前缀推断） |
+| `07-acceptance/` | 验收（按目录名前缀推断） |
+| `08-evidence-samples/` | 证据样例（按目录名前缀推断） |
+| `09-status/` | 状态台账（按目录名前缀推断） |
+| `10-archive/` | 归档（按目录名前缀推断） |
+| `config/` | 配置 |
+| `docs/` | 设计、方案、报告、归档 |
+| `features/` | Feature 工作区 |
+| `fixtures/` | 夹具 |
+| `governance/` | 治理 |
+| `harness/` | Harness 资产 |
+| `loop/` | **待核**（仓内无该目录说明） |
+| `loops/` | 闭环记录 |
+| `okf/` | OKF 契约资产 |
+| `openspec/` | OpenSpec 规范 |
+| `packages/` | 包 |
+| `projects/` | 项目节奏入口 |
+| `registry/` | 注册表 |
+| `runtime/` | 运行时 |
+| `scripts/` | 可重复执行脚本 |
+| `templates/` | 模板 |
+| `tests/` | 测试 |
+| `third_party/` | 第三方依赖 |
+| `tools/` | 工具脚本 |
+| `README.md` | 门面入口 |
+| `AGENTS.md` | Agent 规则 |
+| `PROJECT_HARNESS_MANIFEST.md` | Harness 清单 |
+
+- 新文件放对位置：源码进 `src/`（或既有源码目录），文档进 `docs/`，脚本进 `scripts/`，产物进忽略目录。

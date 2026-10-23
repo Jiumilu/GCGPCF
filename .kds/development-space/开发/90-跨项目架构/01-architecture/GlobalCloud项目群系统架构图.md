@@ -2,16 +2,16 @@
 doc_id: GPCF-DOC-GROUP-SYSTEM-ARCHITECTURE-20261017
 title: GlobalCloud 项目群系统架构图
 project: GPCF
-related_projects: [WAS, XWAIL, AAAS, WAME, WAE, GFIS, GPC, PVAOS, PQC, KDS, GCMEM, Brain, PKC, MMC, XiaoC, XiaoG, XGD, SOP, ICP, SpaceAI, SpaceAIStudio, World, Studio]
+related_projects: [WAS, XWAIL, AAAS, WAME, WAE, GFIS, GPC, PVAOS, PQC, KDS, GCMEM, Brain, PKC, MMC, XiaoC, XiaoG, XGD, SOP, ICP, SpaceAI, SpaceAIStudio, World, Studio, GPCF, Project, PDC, SLC, DRC]
 domain: architecture
 status: controlled
-version: v1.0
+version: v1.2
 owner: GPCF
 kds_space: 开发
 kds_path: 开发/90-跨项目架构/01-architecture/GlobalCloud项目群系统架构图.md
 source_path: 01-architecture/GlobalCloud项目群系统架构图.md
 sync_direction: bidirectional
-last_reviewed: 2026-10-17
+last_reviewed: 2026-10-21
 supersedes: []
 superseded_by: []
 ---
@@ -19,9 +19,9 @@ superseded_by: []
 # GlobalCloud 项目群系统架构图
 
 日期：2026-10-17　状态：controlled v1.0（2026-10-17 老卢审阅确认转正）
-口径：覆盖项目群当前纳入的 **23 个纳管项目**（加 GPCF 治理仓共 24 个仓库；2026-10-16 口径，含 2026-10-10 新增 PQC/SpaceAI/SpaceAIStudio、2026-10-12 新增 WAE、2026-10-16 新增 World 与 GCMEM；`GlobalCloud 项目群总体方案` 的 related_projects 与 §2 清单在 WAE/World 上存在口径差异，本图以 GPCF `projects/` 目录实况为准），继承 `GlobalCloud 项目群总体方案` 与 `GlobalCloud 项目群实施方案` 双总控，吸收 2026-10-12 WAS 命名修订（WAME 合并、WAE 移交）与 2026-10-16 第九流「场景流」裁定。
+口径：覆盖 `config/project-group-projects.yaml` 当前登记的 **28 个项目（含 GPCF）**；以 `01-architecture/GlobalCloud 项目群总体方案.md` v1.3 为上位架构控制，实施状态以项目群实施方案和实时证据为准。旧版 24/25 项目图保留为历史范围；2026-10-21 补入 PDC、SLC 与 DRC 的架构边界。WAME/WAE 命名及第九流「场景流」沿用既有裁定。
 
-本文是 2026-06-07 版项目群架构图（`GlobalCloud智慧工厂项目群架构图.md`、`GlobalCloud绿色供应链体系最新架构图.md`）的**全量完成形态**：原图只覆盖 11 个项目，本文补入 WAS 语义契约体系、WAS 运行时链（WAME 引擎/World/CWME/WAE）、知识工程链（KDS/GCMEM/Brain/PKC）、产业控制平面（ICP）、包装业务（PQC）与安防桌面域（SpaceAI/SpaceAIStudio）。
+本文承接 2026-06-07 版项目群架构图（`GlobalCloud智慧工厂项目群架构图.md`、`GlobalCloud绿色供应链体系最新架构图.md`）并覆盖当前登记范围：原图只覆盖 11 个项目，本文补入 WAS 语义契约体系、WAS 运行时链（WAME 引擎/World/CWME/WAE）、知识工程链（KDS/GCMEM/Brain/PKC）、产业控制平面（ICP）、包装业务（PQC）、安防桌面域（SpaceAI/SpaceAIStudio）及新增 PDC/SLC/DRC 边界。架构覆盖不表示系统实现完成。
 
 ## 1. 分层模型与横切面
 
@@ -30,11 +30,11 @@ superseded_by: []
 | L0 | 品牌与宪法 | GlobalCloud 宪法（KDS 保管正本、ICP 主责产业领域、GPCF 传导、WAME/人工裁决） | 最高规范性权威 |
 | L1 | 统一入口层 | WAE | 统一界面框架与统一入口，只统一界面层，不掌业务主账 |
 | L2 | 治理与授权层 | WAME（平台面）、GPCF、MMC、SOP（流引擎中心）、ICP | 治理、证据、授权、状态裁决与项目群控制 |
-| L3 | 平台协同层 | GPC、PVAOS、PQC、AaaS/SCaaS | 跨组织协同、生态入口、商业交付与包装运营 |
+| L3 | 平台协同层 | GPC、PVAOS、PQC、AaaS/SCaaS；独立工具 PDC、SLC | 跨组织协同、生态入口、商业交付、包装设计与运力测算；工具数据保持本域边界 |
 | L4 | 生产执行层 | GFIS、Edge/OT | 单厂事实源与现场接入 |
-| L5 | 知识与数据层 | KDS、GCMEM、Brain、PKC、结构化 DB 域 | 知识主存、长期记忆、知识 UI 与结构化数据 |
+| L5 | 知识与数据层 | KDS、GCMEM、Brain、PKC、DRC、结构化 DB 域 | 知识主存、长期记忆、知识 UI、各域结构化数据与 DRC 资源元数据目录；不集中业务主账 |
 | L6 | AI 能力层 | XiaoC（蚁后）、XGD（大象）、XiaoG（蚂蚁/Hermes） | AI 能力生产、编排路由与受权执行 |
-| L7 | 工程研发底座 | Studio、Harness Engineering（规范仓 MMC） | 研发、治理、发布与验收纪律 |
+| L7 | 工程研发底座 | Studio、Project/Plane、Harness Engineering（规范仓 MMC） | 研发、协作只读投影、治理、发布与验收纪律 |
 | — | 横切面 A | WAS/Ontology/XWAIL | 语义契约体系：定义体系 → 定义语义 → 定义契约 |
 | — | 横切面 B | WAME（引擎面）、World、CWME | WAS 运行时链：引擎 → 世界运行时 → 域实现 |
 | — | 横切面 C | 四流（治理流/业务流/数据流/AI 服务流） | 跨层交互约束模型 |
@@ -42,7 +42,7 @@ superseded_by: []
 
 ## 2. 主图：项目群全景系统架构图
 
-> 可视化形态：[GlobalCloud项目群架构图_20261017_v1.0.html](./GlobalCloud项目群架构图_20261017_v1.0.html)（蓝图风拍板图，结构对标 AaaS_项目群架构图_20261017_v1.0.html；本文件 mermaid 图为其规范源）。
+> 2026-10-17 可视化快照：[GlobalCloud项目群架构图_20261017_v1.0.html](./GlobalCloud项目群架构图_20261017_v1.0.html)。当前 28 项目口径以本文件 Mermaid 图和下方矩阵为准，历史 HTML 不代表新增项目已纳入其画面。
 
 ```mermaid
 flowchart TB
@@ -65,6 +65,8 @@ flowchart TB
     PVAOS["PVAOS 价值联盟门户<br/>租户·组织·伙伴·项目·工作流"]
     PQC["PQC 包装报价成本系统<br/>成本引擎·三级审批·回款"]
     AAAS["AaaS / SCaaS<br/>服务包·订阅·计量·SLA·证据"]
+    PDC["PDC 包装设计工具<br/>展开·用料·参数验证·3D 预览"]
+    SLC["SLC 运力测算工具<br/>独立应用·契约待核验"]
   end
 
   subgraph L4["L4 生产执行层"]
@@ -78,6 +80,7 @@ flowchart TB
     BRAIN["Brain 知识 UI WiIKI<br/>语义检索·知识图谱<br/>高级工作台"]
     PKC["PKC 个人知识工作台<br/>仪表盘·任务·通知"]
     DB["结构化 DB 域<br/>业务主账·治理审计·指标时序<br/>知识元数据·读模型"]
+    DRC["DRC 数据资源目录 candidate<br/>资源元数据·owner·血缘·生命周期<br/>无跨项目主账写入权"]
   end
 
   subgraph L6["L6 AI 能力层"]
@@ -88,6 +91,7 @@ flowchart TB
 
   subgraph L7["L7 工程研发底座"]
     STUDIO["Studio 研发治理发布工作台<br/>Vue·Koa·Electron"]
+    PROJECT["Project / Plane 协作入口<br/>工作项·GPCF Feature/Evidence 只读投影"]
     HARNESS["Harness Engineering<br/>Manifest·验收·状态纪律<br/>规范仓 MMC"]
   end
 
@@ -127,6 +131,7 @@ flowchart TB
   GPCF -. "方案继承与回传" .-> GFIS
   GPCF -. "方案继承与回传" .-> KDS
   GPCF -. "方案继承与回传" .-> WAMEG
+  GPCF -. "Feature/Evidence 只读状态" .-> PROJECT
 
   WAMEG -. "治理门禁·授权·证据" .-> GPC
   WAMEG -. "治理门禁·授权·证据" .-> GFIS
@@ -137,6 +142,8 @@ flowchart TB
   EDGE --> GFIS
   GPC --> PVAOS
   PQC --> PVAOS
+  PDC -. "包装参数引用须有契约" .-> PQC
+  SLC -. "运力测算引用须有契约" .-> GPC
   GFIS -- "事实·事件·证据" --> WAMEG
   GPC -- "订单·签收·异常·证据" --> WAMEG
   PVAOS -- "运行证据" --> WAMEG
@@ -149,6 +156,10 @@ flowchart TB
   GPC -. "知识引用" .-> KDS
   KDS <--> GCMEM
   KDS --> BRAIN
+  GFIS -. "资源元数据登记" .-> DRC
+  GPC -. "资源元数据登记" .-> DRC
+  KDS -. "知识资源元数据登记" .-> DRC
+  DRC -. "目录引用·不代替授权" .-> DB
   KDS -. "RAG 导出" .-> XIAOC
   BRAIN --> XIAOC
   XGD --> XIAOC
@@ -231,7 +242,7 @@ flowchart TB
   OT --> EG --> GFIS
   PVAOS --> GPC
   GPC <--> GFIS
-  GFIS -- "发货·签收·质量·库存·产能" --> GPC
+  GFIS -- "工厂出库·质量·库存·产能" --> GPC
   GPC -- "平台订单·到货预约·SOP 段·调度建议" --> GFIS
   PQC -. "运营数据归属 PVA" .-> PVAOS
   GFIS -- "事实·单据·事件·证据" --> WAME
@@ -368,16 +379,38 @@ flowchart TB
 
 四流口径：治理流约束业务流，不替代业务流；业务流产生事实和事件，不把 WAME 作为业务主账；数据流承载跨系统事实、证据、指标和追踪，不共享业务数据库；AI 服务流消费数据流、受治理流授权，输出建议草案，不写业务事实。
 
-## 8. 项目-架构角色映射矩阵（23 纳管项目 + GPCF）
+### 7.1 项目群数据管理视图
 
-| # | 项目 | 架构层 | 主责 | 关键模块 | 对外数据流 | 就绪度（2026-10-17 口径） |
+```mermaid
+flowchart LR
+  SRC["各项目源系统<br/>GFIS·GPC·PVAOS·PQC·WAME·World 等<br/>各持本域权威账"]
+  KDS["KDS 知识正本<br/>GCMEM 受控记忆写入口"]
+  DRC["DRC 资源目录<br/>元数据·责任人·血缘·生命周期"]
+  EX["契约交换<br/>API·事件·Outbox/Inbox·受控导出"]
+  READ["消费者读模型<br/>报表·ICP·Brain·AI 授权视图"]
+  GOV["源 owner + WAME/人工<br/>授权与业务确认分权"]
+  GPCF["GPCF<br/>架构与 Evidence Gate"]
+  SRC -- "资源描述与来源回链" --> DRC
+  KDS -- "知识资源元数据" --> DRC
+  SRC -- "版本化事实/事件" --> EX --> READ
+  KDS -- "授权知识引用" --> READ
+  DRC -. "发现与准入条件；不复制主账" .-> READ
+  GOV -. "逐项授权" .-> EX
+  GPCF -. "方案传导与验证" .-> DRC
+```
+
+DRC 当前仅有候选方案，图中交换和读模型是目标协作方式，不表示真实数据库已连接或跨项目访问已获授权。详见项目群总体方案 §3.3.1。
+
+## 8. 项目-架构角色映射矩阵（28 项目，含 GPCF）
+
+| # | 项目 | 架构层 | 主责 | 关键模块 | 对外数据流 | 状态口径（各项登记时点，非统一验收） |
 |---|---|---|---|---|---|---|
 | 1 | WAS | 横切 A·语义基座 | 总体语义、架构与治理基线 | 三层资产·八维·九流·生命周期；OKF 契约层 + 11 validator | 读 KDS/GPCF；输出语义边界 → XWAIL/WAME/RAG | controlled，治理准入中；P0 落地，P1-P3 骨架 |
 | 2 | XWAIL | 横切 A·契约 | 机器建模语言、契约、验证 | Schema·Profile·Validator·XAP 包·CLI 校核 | 读 WAS/Ontology；契约 → WAME 受理器/AAAS/Studio | draft/in_progress；V1.2 规则 PoC |
 | 3 | AAAS | L3·商业交付 | 资产服务化、计量、SLA、证据要求 | ServicePackage·Metering·SLA/SLO·EvidenceRequirement·商业状态机 | 读 XWAIL/WAME 状态；服务包 → WAME 治理入口/SCaaS | baseline；服务包定义与样例 |
 | 4 | WAME | L2 平台面 + 横切 B 引擎面 | 资产主账、运行引擎、治理执行、授权发布 | 受理器 xap-intake·主账·模型注册状态机·事件·关系·策略·证据·计量·Agent Desktop | 读 WAS/XWAIL/各业务只读；发布签名制品 → PVAOS | 引擎面 not_implemented；平台面 partial（受理器参考实现可用） |
 | 5 | WAE | L1·统一入口 | 项目群统一界面框架与入口 | ui-tokens·ui-kit·app-registry·app-shell·host-kit 写门禁/idp/装配态 | 界面承载各项目；写门禁默认关闭 | in_progress；框架实施中 |
-| 6 | GFIS | L4·工厂事实源 | 单厂生产/质量/仓储/设备/台账第一执行主体 | ERP 闭环·MES·QMS·WMS·EAM·云端 SaaS 汇总层 | → GPC 产能/库存/发货/签收；→ WAME 事实证据；→ KDS 回读建议 | ready_for_human_acceptance（96/100） |
+| 6 | GFIS | L4·工厂事实源 | 单厂生产/质量/仓储/设备/台账第一执行主体 | ERP 闭环·MES·QMS·WMS·EAM·云端 SaaS 汇总层 | → GPC 产能/库存/质量/工厂出库事件；→ WAME 事实证据；→ KDS 回读建议 | ready_for_human_acceptance（96/100） |
 | 7 | GPC | L3·平台主线 | 绿色供应链公共服务与协同 | 七池·虚拟工厂·流规则包消费·GPC 平台对象模型（PlatformOrder/Shipment/POD/ExceptionCase）·工厂适配器 | ↔ GFIS 订单/事件；→ PVAOS；→ WAME 事件证据 | ready_for_review；平台对象模型 Phase 0/1 |
 | 8 | PVAOS | L3·生态入口 | 价值联盟门户与运营底座 | 门户·租户/组织/权限·伙伴·项目空间·工作流·PVAAI | ← GPC/GFIS/WAME 展示；→ AaaS 订阅计量 | ready_for_review；跨项目接口 implementation_pending |
 | 9 | PQC | L3·包装运营 | 报价成本、采购、订单回款 | 统一口径表·成本引擎·参数审批·报价快照·三级审批·9 表 | ← KDS 案例只读；→ PVA 运营侧 | partial；工程验证通过，业务验收未确认 |
@@ -390,14 +423,18 @@ flowchart TB
 | 16 | XGD | L6·大象 | 长程 Agent、重分析、多端交互 | TICK 主循环·双层思考·记忆系统（SQLite+向量）·焦点栈·Brain UI | → XiaoC 任务分解；→ WAME 建议草案 | not_started（2026-06-10 首轮纳入口径） |
 | 17 | XiaoG | L6·蚂蚁 | 轻量执行、live API、通知、审计 | Hermes Studio：Vue3 控制台·Koa BFF·Electron·八平台渠道·Cron/语音 | 受权执行 → GFIS/GPC/PVAOS/PKC；→ WAME 审计 | ready_for_review |
 | 18 | SOP | L2·流引擎中心 | 项目群唯一流引擎：全流（业务/开发）定义、规则装配、会话治理、流规则包下发 | schemas·sop/matrix·scripts 基线·会话收口·flow-registry（规划中） | ← KDS 唯一事实源；→ GPC/GFIS 下发流规则包；→ WAME/MMC/GPCF 证据 | P1 最小可运行基线，流引擎中心升级中（2026-10-17 裁定） |
-| 19 | GPCF | L2·项目群治理 | 治理、文档、证据、门禁、LOOP 编排 | 双总控·features 体系·Evidence Gate·LOOP·09-status 台账 | → KDS 开发空间镜像；→ 各项目方案传导 | 活跃；F-001~F-024 |
+| 19 | GPCF | L2·项目群治理 | 治理、文档、证据、门禁、LOOP 编排 | 双总控·features 体系·Evidence Gate·LOOP·09-status 台账 | → KDS 开发空间镜像；→ 各项目方案传导；→ Project 只读投影 | 活跃；F-025 架构跟踪中，F-028 已关闭 |
 | 20 | ICP | L2·产业控制 | 24 字产业模型、场景编排、决策候选 | IndustryModel·ResourcePoolProjection·ScenarioPackage·ControlDecisionCandidate·FastAPI | ← KDS 十一池只读；→ SOP/WAME/GPCF；→ GPC/GFIS/PVAOS 建议 | candidate / partial / human_required |
 | 21 | SpaceAI | 旁挂域 | 安防监控平台统一重构 + CWME 场景运营应用 | apps/desktop（Tauri2+Vue3）·apps/server（Koa BFF·SSE）·packages/protocol（52 端点）·domain（32 模型）·plugin-sdk·plugins（设备/报警/巡更/门禁）·mobile-shell·apps/city-model | ↔ World（CWME 空间域）；BFF 注册 MMC 能力目录；契约归 XWAIL；ONVIF/RTSP/GB28181 设备接入 | partial/in_progress（BFF :39010 运行；业务验收未确认） |
 | 22 | SpaceAIStudio | 旁挂域 | 空间智能工作台（与 Studio 平行，不合并） | 遗留 C# WinForms 宿主（12 模块）；重构 apps/desktop（Vue3+Tauri2+Cesium 三维 GIS） | 独立边界；与 SpaceAI/Studio 互不写入 | partial（registered；P0-P5 已交付，待人工验收） |
 | 23 | World | 横切 B·世界运行时 | 世界状态、投影、授权上下文、模拟推演 | 世界模型投影·组织与 Agent·动态授权上下文·模拟实验室·统一工作台 | ← WAME 引擎能力；← KDS 事实；→ WAE 封装；↔ CWME | partial；中央文档门禁 rework_required |
 | 24 | Studio | L7·工程研发底座 | 研发、治理和发布工作台（Hermes Web UI 形态） | Vue3 client（:8649）·Koa server（:8647）·Electron·features 管理·kds-sync LOOP 门禁 | 读 KDS（真实写需显式授权）；LOOP 证据经 WAME/GPCF 门禁；gcworld 模块 2026-10-17 已迁出至 World | LOOP 驱动，无静态状态 |
+| 25 | Project | L7·研发协作入口 | Plane 工作项与 GPCF Feature/Evidence 只读投影 | Plane Community Edition·稳定外部 ID·来源回链 | ← GPCF 只读状态；不得回写 GPCF 交付/验收结论 | partial；F-028 关闭不代表项目群集成验收 |
+| 26 | PDC | L3·独立包装设计工具 | 包装箱展开、用料计算、参数验证与 3D 预览 | Web/Electron·本地 SQLite | 经确认契约与 PQC/GPC 引用；不改平台或工厂主账 | partial/rework；当前版本关键任务与装配待验证 |
+| 27 | SLC | L3·独立运力测算工具 | 运力测算与本地应用数据 | Vite/Electron/Express | 与 GPC 等的上下游对象及权限契约待定义 | partial/rework；项目级双方案与验证待补 |
+| 28 | DRC | L5·数据资源目录 | 数据库与数据资源元数据登记、责任人、质量/血缘索引、生命周期协同 | 目录对象与授权引用（设计中） | ← 各源系统脱敏资源描述；→ 授权消费者的发现视图；不持业务/知识主账 | bootstrap/partial；真实连接、迁移、授权及运行未验证 |
 
-> 未纳入项目群 23 项目清单的仓：`GlobalCloud FireQuote`（消防定额测算平台，独立业务 MVP；GPCF `config/project-group-projects.yaml` 与 `projects/` 均无其条目，仅自管本地 Manifest）、`GlobalCloud SpaceAI Platform`（与 SpaceAI 同远端 GCSpaceAI 的统一重构主工作区，即 registry `spaceai` 条目承载地）、`GlobalCloud Studio-release0`（Studio 旧发行基线）、`_worktree-archive-20261012`（历史 worktree 归档），不进入本图主结构。
+> 不作为独立登记项目的目录：`GlobalCloud FireQuote`（独立业务 MVP，尚未列入项目清单）、`GlobalCloud Studio-release0`（旧发行基线）、`_worktree-archive-20261012`（历史归档）。`GlobalCloud SpaceAI Platform` 是已登记 SpaceAI 项目的主开发工作区，不另计一个项目。
 
 ## 9. 读图口径与不越权声明
 

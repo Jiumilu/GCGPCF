@@ -88,3 +88,11 @@ project_group_external_loop_gate_delegates=pass checked_repos=3 delegation_only=
 - 不声明 AAAS/XWAIL/SOP 已进入 stage、commit、push、deploy、release 或真实 KDS API 同步。
 - 不声明 loop gate delegate replay 等于业务完成。
 - 不声明 `accepted`、`integrated`、`production_ready` 或 `customer_accepted`。
+
+## 2026-10-22 Live Dirty Baseline Re-registration
+
+- 基线文件：`docs/harness/evidence/external-loop-gate-delegate-dirty-baseline-20261022.json`（digest `030ab5d7dafc965f`）。
+- 实测基线：GlobalCloud AAAS 16 条、GlobalCloud XWAIL 1 条、GlobalCloud SOP 15 条；逐条 status line 已登记。
+- 校验方式：validator 改为与登记基线**精确逐条比对**，任何漂移仍判 fail；不是放宽门禁。
+- `owner_confirmation = pending`：本登记只记录当前 live 事实，不代表已确认这些未提交工作可提交或可清理。
+- 不声明 `review_allowed` / `stage_allowed` / `commit_allowed` / `push_allowed` / `delete_allowed` / `status_promotion_allowed` 为 true。

@@ -1,6 +1,6 @@
 # KDS 开发文档空间
 
-生成日期：2026-10-16
+生成日期：2026-10-23
 
 用途：KDS `开发` 空间中 `KDS` 项目的受控文档入口。
 
@@ -725,7 +725,6 @@
 | GPCF-DOC-B3ABDDC956 | Ontology/WAS 3 小时实施 P0 启动校准证据 | docs/harness/evidence/ontology-was-3h-p0-start-20260621.md | controlled |
 | GPCF-DOC-90C8663294 | Ontology/WAS 3 小时实施 P1 Source Record 准备度证据 | docs/harness/evidence/ontology-was-3h-p1-source-record-readiness-20260621.md | controlled |
 | GPCF-DOC-C21E66324C | Ontology/WAS 真实 Source Record Intake Package | docs/harness/evidence/ontology-was-real-source-record-intake-pack-20260621.md | controlled |
-| GPCF-DOC-PROJECTGROUPLIVESTATUSCURRENT20260701 | GlobalCloud 项目群当前 Live 状态快照 | docs/harness/evidence/project_group_live_status_current.md | controlled |
 | GPCF-DOC-FACA370CCA | 会话主任务总结与声明控制边界 | docs/harness/evidence/session-main-task-summary-declaration-boundary-20260622.md | controlled |
 | GPCF-DOC-3A9B82D614 | Session Mainline Drift Watch 20260622 | docs/harness/evidence/session-mainline-drift-watch-20260622.md | controlled |
 | GPCF-DOC-SESSION-HANDOFF-REQUEST-GATE-20260622 | Session Mainline Handoff Request Gate 20260622 | docs/harness/evidence/session-mainline-handoff-request-gate-20260622.md | controlled |
@@ -887,6 +886,18 @@
 | GPCF-DOC-27101F3BEB | GBrain 多租户知识库权限体系 — v3.1 Hardening | docs/harness/multi-tenant-permission-design.md | controlled |
 | GPCF-DOC-4ED15E157A | GFIS-RUNTIME-SOP-E2E-DEV-COMPLETION-001 多智能体执行包 | docs/harness/tasks/GFIS-RUNTIME-SOP-E2E-DEV-COMPLETION-001.multi-agent.md | controlled |
 | GPCF-DOC-5FE5ED4E8B | tasks | docs/harness/tasks/README.md | controlled |
+| GPCF-DOC-446E3B40D1 | reports | docs/reports/README.md | controlled |
+| GPCF-DOC-0A89D098E8 | Day-1 收口报告（2026-10-22 期间执行，23:45 定稿） | docs/reports/day1-closeout-20261022.md | controlled |
+| GPCF-DOC-AE6A14367C | F-013 · KDS 脏工作树收敛请求（交 KDS 属主） | docs/reports/f013-kds-dirty-worktree-request-20261022.md | controlled |
+| GPCF-DOC-D2B0AFA74D | F-014 权威接收台账 owner、scope 重定与留存策略（老卢裁定记录） | docs/reports/f014-ledger-owner-and-retention-20261022.md | controlled |
+| GPCF-DOC-9CD0369F87 | F-014 · 真实会议数据试点授权申请包（待老卢签发） | docs/reports/f014-real-data-pilot-authorization-request-20261022.md | controlled |
+| GPCF-DOC-7DBC7397B6 | 目标判据证据：「≥3 个项目解除门禁阻塞」已达成（可审计） | docs/reports/goal-criterion-evidence-unblocked-20261022.md | controlled |
+| GPCF-DOC-39A3AA5F3D | 交接包：需要外部动作才能闭环的 5 项（2026-10-22 23:25） | docs/reports/handover-kit-20261022.md | controlled |
+| GPCF-DOC-D0D0365291 | P05 · 7 个 blocked Feature 分类与处理（2026-10-22） | docs/reports/p05-blocked-classification-20261022.md | controlled |
+| GPCF-DOC-5E62A3403A | 0–30 天尾巴清理包：剩余 4 个 blocked（交属主/上级裁定） | docs/reports/p05-tail-clearance-packet-20261022.md | controlled |
+| GPCF-DOC-748674198C | P16-2 · test/build 属主补齐清单（29 仓实测） | docs/reports/p16-test-build-owner-checklist-20261022.md | controlled |
+| GPCF-DOC-0BFC37D7C2 | 0–30 天尾巴 4 项 · 催办单（2026-10-22 22:12） | docs/reports/tail-4-followup-20261022.md | controlled |
+| GPCF-DOC-07D122376C | runbooks | docs/runbooks/README.md | controlled |
 | GPCF-DOC-AE29585A23 | standards | docs/standards/README.md | controlled |
 | GPCF-DOC-187BF785F5 | Headroom LCX 安全规则 | loop/context/headroom/docs/security.md | controlled |
 | GPCF-DOC-4F39AFF310 | OpenSpec 变更 | openspec/README.md | controlled |
@@ -897,6 +908,9 @@
 | GPCF-DOC-E61CE550C4 | specs | openspec/changes/enable-project-group-openspec-coverage/specs/README.md | draft |
 | GPCF-DOC-5419DA34A8 | project-group-openspec-coverage | openspec/changes/enable-project-group-openspec-coverage/specs/project-group-openspec-coverage/README.md | draft |
 | GPCF-OS-OPEN-SPEC-COVERAGE-TASKS-20260712 | tasks | openspec/changes/enable-project-group-openspec-coverage/tasks.md | draft |
+| GPCF-DOC-09A691DC1E | GCMEM R0 变更包索引（gcmem-vision-r0） | openspec/changes/gcmem-vision-r0/README.md | draft |
+| GPCF-DOC-4EFB190E49 | specs | openspec/changes/gcmem-vision-r0/specs/README.md | draft |
+| GPCF-DOC-266E4E965D | gcmem-vision-r0 | openspec/changes/gcmem-vision-r0/specs/gcmem-vision-r0/README.md | draft |
 | GPCF-DOC-07DC110521 | gcworld-controlled-runtime-integration | openspec/changes/gcworld-controlled-runtime-integration/README.md | draft |
 | GPCF-DOC-GCWORLD-040 | proposal | openspec/changes/gcworld-controlled-runtime-integration/proposal.md | draft |
 | GPCF-DOC-F303786957 | specs | openspec/changes/gcworld-controlled-runtime-integration/specs/README.md | draft |
@@ -970,6 +984,10 @@
 | GPCF-DOC-9E32DA48ED | session-auth | openspec/changes/kds-production-hardening/specs/session-auth/README.md | draft |
 | GPCF-DOC-D0174E85D8 | unified-permission-middleware | openspec/changes/kds-production-hardening/specs/unified-permission-middleware/README.md | draft |
 | GPCF-DOC-B1187FF6E1 | 任务清单 — KDS v3.1 生产加固 | openspec/changes/kds-production-hardening/tasks.md | draft |
+| GPCF-DOC-8AE1698D01 | project-plane-gpcf-integration | openspec/changes/project-plane-gpcf-integration/README.md | draft |
+| GPCF-DOC-283729C839 | specs | openspec/changes/project-plane-gpcf-integration/specs/README.md | draft |
+| GPCF-DOC-9A020FDC40 | project-gpcf-readonly-projection | openspec/changes/project-plane-gpcf-integration/specs/project-gpcf-readonly-projection/README.md | draft |
+| GPCF-DOC-3B346E1F2B | project-plane-onboarding | openspec/changes/project-plane-gpcf-integration/specs/project-plane-onboarding/README.md | draft |
 | GPCF-DOC-4A5CCF7D61 | register-globalcloud-icp | openspec/changes/register-globalcloud-icp/README.md | draft |
 | GPCF-OS-ICP-REGISTRATION-DESIGN-20260712 | design | openspec/changes/register-globalcloud-icp/design.md | draft |
 | GPCF-OS-ICP-REGISTRATION-PROPOSAL-20260712 | proposal | openspec/changes/register-globalcloud-icp/proposal.md | draft |
@@ -978,20 +996,20 @@
 | GPCF-OS-ICP-REGISTRATION-SPEC-20260712 | spec | openspec/changes/register-globalcloud-icp/specs/project-group-icp-registration/spec.md | draft |
 | GPCF-DOC-DA59B18707 | sop-bind-matrix-to-icp-foundation | openspec/changes/sop-bind-matrix-to-icp-foundation/README.md | draft |
 | GPCF-OS-ICP-SOP-COUPLING-PROPOSAL-20260713 | proposal | openspec/changes/sop-bind-matrix-to-icp-foundation/proposal.md | draft |
-| GPCF-DOC-2007BED0D1 | spaceai-platform-panorama-convergence | openspec/changes/spaceai-platform-panorama-convergence/README.md | draft |
-| GPCF-SPACEAI-PANORAMA-PROPOSAL-20261016 | proposal | openspec/changes/spaceai-platform-panorama-convergence/proposal.md | draft |
-| GPCF-DOC-A29F69DAAF | specs | openspec/changes/spaceai-platform-panorama-convergence/specs/README.md | draft |
-| GPCF-DOC-DDBDFB20B3 | spaceai-platform-panorama-structure | openspec/changes/spaceai-platform-panorama-convergence/specs/spaceai-platform-panorama-structure/README.md | draft |
-| GPCF-DOC-477C45A148 | spaceai-studio-multiplatform-refactor | openspec/changes/spaceai-studio-multiplatform-refactor/README.md | draft |
-| GPCF-OS-SPACEAI-STUDIO-MULTIPLATFORM-REFACTOR-DESIGN-20261010 | design | openspec/changes/spaceai-studio-multiplatform-refactor/design.md | draft |
-| GPCF-OS-SPACEAI-STUDIO-MULTIPLATFORM-REFACTOR-PROPOSAL-20261010 | proposal | openspec/changes/spaceai-studio-multiplatform-refactor/proposal.md | draft |
-| GPCF-DOC-8B83B1A79A | specs | openspec/changes/spaceai-studio-multiplatform-refactor/specs/README.md | draft |
-| GPCF-DOC-D53A9468CA | spaceai-studio-multiplatform-platform | openspec/changes/spaceai-studio-multiplatform-refactor/specs/spaceai-studio-multiplatform-platform/README.md | draft |
-| GPCF-OS-SPACEAI-STUDIO-MULTIPLATFORM-REFACTOR-TASKS-20261010 | tasks | openspec/changes/spaceai-studio-multiplatform-refactor/tasks.md | draft |
-| GPCF-DOC-5D99E8D484 | spaceai-was-city-flood-replay | openspec/changes/spaceai-was-city-flood-replay/README.md | draft |
-| GPCF-SPACEAI-FLOOD-PROPOSAL-20261016 | proposal | openspec/changes/spaceai-was-city-flood-replay/proposal.md | draft |
-| GPCF-DOC-FECC2A4859 | specs | openspec/changes/spaceai-was-city-flood-replay/specs/README.md | draft |
-| GPCF-DOC-307EB657D0 | spaceai-city-slice-replay | openspec/changes/spaceai-was-city-flood-replay/specs/spaceai-city-slice-replay/README.md | draft |
+| GPCF-DOC-2007BED0D1 | spaceai-platform-panorama-convergence | openspec/changes/spaceai-platform-panorama-convergence/README.md | implemented |
+| GPCF-SPACEAI-PANORAMA-PROPOSAL-20261016 | proposal | openspec/changes/spaceai-platform-panorama-convergence/proposal.md | implemented |
+| GPCF-DOC-A29F69DAAF | specs | openspec/changes/spaceai-platform-panorama-convergence/specs/README.md | implemented |
+| GPCF-DOC-DDBDFB20B3 | spaceai-platform-panorama-structure | openspec/changes/spaceai-platform-panorama-convergence/specs/spaceai-platform-panorama-structure/README.md | implemented |
+| GPCF-DOC-477C45A148 | spaceai-studio-multiplatform-refactor | openspec/changes/spaceai-studio-multiplatform-refactor/README.md | in_progress |
+| GPCF-OS-SPACEAI-STUDIO-MULTIPLATFORM-REFACTOR-DESIGN-20261010 | design | openspec/changes/spaceai-studio-multiplatform-refactor/design.md | in_progress |
+| GPCF-OS-SPACEAI-STUDIO-MULTIPLATFORM-REFACTOR-PROPOSAL-20261010 | proposal | openspec/changes/spaceai-studio-multiplatform-refactor/proposal.md | in_progress |
+| GPCF-DOC-8B83B1A79A | specs | openspec/changes/spaceai-studio-multiplatform-refactor/specs/README.md | in_progress |
+| GPCF-DOC-D53A9468CA | spaceai-studio-multiplatform-platform | openspec/changes/spaceai-studio-multiplatform-refactor/specs/spaceai-studio-multiplatform-platform/README.md | in_progress |
+| GPCF-OS-SPACEAI-STUDIO-MULTIPLATFORM-REFACTOR-TASKS-20261010 | tasks | openspec/changes/spaceai-studio-multiplatform-refactor/tasks.md | in_progress |
+| GPCF-DOC-5D99E8D484 | spaceai-was-city-flood-replay | openspec/changes/spaceai-was-city-flood-replay/README.md | implemented |
+| GPCF-SPACEAI-FLOOD-PROPOSAL-20261016 | proposal | openspec/changes/spaceai-was-city-flood-replay/proposal.md | implemented |
+| GPCF-DOC-FECC2A4859 | specs | openspec/changes/spaceai-was-city-flood-replay/specs/README.md | implemented |
+| GPCF-DOC-307EB657D0 | spaceai-city-slice-replay | openspec/changes/spaceai-was-city-flood-replay/specs/spaceai-city-slice-replay/README.md | implemented |
 | GPCF-DOC-4C32519F10 | was-flow-naming-migration | openspec/changes/was-flow-naming-migration/README.md | draft |
 | GPCF-DOC-3EBD68D2C6 | artifacts | openspec/changes/was-flow-naming-migration/artifacts/README.md | draft |
 | GPCF-DOC-FCAE31EF6C | Design — was-flow-naming-migration | openspec/changes/was-flow-naming-migration/design.md | draft |

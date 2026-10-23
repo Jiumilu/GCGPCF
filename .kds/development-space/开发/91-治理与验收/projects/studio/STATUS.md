@@ -5,13 +5,13 @@ project: Studio
 related_projects: [Studio]
 domain: governance
 status: controlled
-version: v1.0
+version: v1.1
 owner: Studio
 kds_space: 开发
 kds_path: 开发/91-治理与验收/projects/studio/STATUS.md
 source_path: projects/studio/STATUS.md
 sync_direction: bidirectional
-last_reviewed: 2026-10-17
+last_reviewed: 2026-10-22
 supersedes: []
 superseded_by: []
 ---
@@ -40,3 +40,13 @@ GCWorld（原 GCWORLD）组织世界只读纵切已于 2026-10-17 **迁移至独
 - Feature：`python scripts/gpcf_new_feature.py --project studio`
 - 默认 Loop：`Delivery`
 - Evidence/Harness：`required/required`
+
+## 2026-10-22 作废决定与替代方案
+
+- 老卢 2026-10-22 决定：Studio 项目准备作废；不再修 Studio 回归（`AppSidebar.vue` 仍引用已删除的 `gcworld.organizations`，登录后整页空白）。
+- 状态：**deprecated（冻结）**；保留在 28 项目范围内，不删除仓库/证据，不自动移出范围。
+- 替代：**WAE**（统一界面壳层/入口）+ **Hermes Web UI**（Agent 对话）+ **PMC**（项目协作）+ **GPCF Console**（治理视图）；GCWorld 已于 2026-10-17 迁 World。
+- F-011 已关闭，保留历史证据；后续不再新增 Studio UI 工作。
+- F-015（gcworld 组织纵切，blocked）待裁定转 World 或登记历史例外，本轮不处置。
+- 非声明：不声明 Studio 已删除/归档；不声明 WAE 已承接；不声明任何项目 accepted/integrated/production_ready/customer_accepted。
+

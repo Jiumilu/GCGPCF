@@ -1,20 +1,22 @@
 ---
 doc_id: GPCF-DOC-GCMEM-MEM0-METRICS
-title: GCMEM 与 mem0 多维度指标分析（2026-10-17）
+title: GCMEM 与 mem0 多维度指标分析（v2.0 · 2026-10-20）
 project: GPCF
 related_projects: [GPCF]
 domain: governance
 status: controlled
-version: v1.0
+version: v2.0
 owner: GPCF
 kds_space: 开发
 kds_path: 开发/91-治理与验收/projects/gcmem/GCMEM-vs-mem0-指标分析.md
 source_path: projects/gcmem/GCMEM-vs-mem0-指标分析.md
 sync_direction: bidirectional
-last_reviewed: 2026-10-17
+last_reviewed: 2026-10-20
 supersedes: []
 superseded_by: []
 ---
+
+> 同步说明（2026-10-20，老卢授权 E4）：正文由 GCMEM 仓 `docs/docs/GCMEM-vs-mem0-指标分析.md` 同步；事实源以 GCMEM 仓为最新，本副本随 E4 同步流程更新。
 
 # GCMEM 与 mem0 多维度指标分析
 
@@ -82,7 +84,7 @@ superseded_by: []
 
 | 指标 | GCMEM | mem0 开源自建 |
 |---|---|---|
-| 回归测试 | **26/26**（含 meta/替代链/解析兼容） | 无（调用方自理） |
+| 回归测试 | **113/113**（2026-10-20：核心 52 + API 22 + 管理台 24 + DSH 捕获桥 15） | 无（调用方自理） |
 | 巡检 | doctor 全绿（结构/近重复/替代链/候选积压） | 无 |
 | 熔断 | 连续 5 败暂停 120s | 无 |
 | 服务保活 | launchd 常驻 + 自动重启 | 自建 |

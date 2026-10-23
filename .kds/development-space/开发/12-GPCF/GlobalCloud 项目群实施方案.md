@@ -2,16 +2,16 @@
 doc_id: GPCF-DOC-GLOBALCLOUD-PROJECT-GROUP-IMPLEMENTATION-PLAN-20260624
 title: GlobalCloud 项目群实施方案
 project: GPCF
-related_projects: [AAAS, Brain, WAS, XiaoC, WAME, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP, PQC, SpaceAI, SpaceAIStudio, World, GCMEM, WAE]
+related_projects: [AAAS, Brain, WAS, XiaoC, WAME, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP, PQC, SpaceAI, SpaceAIStudio, World, GCMEM, WAE, Project, PDC, SLC, DRC, FireQuote]
 domain: architecture
 status: controlled
-version: v1.0
+version: v1.1
 owner: GPCF
 kds_space: 开发
 kds_path: 开发/12-GPCF/GlobalCloud 项目群实施方案.md
 source_path: GlobalCloud 项目群实施方案.md
 sync_direction: bidirectional
-last_reviewed: 2026-10-18
+last_reviewed: 2026-10-21
 supersedes: []
 superseded_by: []
 ---
@@ -51,6 +51,8 @@ GPCF:01-architecture/GlobalCloud 项目群总体方案.md
 
 主方案变化影响实施口径时，必须先更新项目群实施方案，再传导到相关项目实施方案。项目实施方案变化影响总体职责、接口、交付或验收口径时，必须回流项目群实施方案或 Change Proposal。
 
+Codex、DSH、Hermes 的自动交接按 `02-governance/GlobalCloud项目群Codex-DSH-Hermes协同开发与运行方案.md` 第 4.1 节实施：以同一 GPCF Feature 和输入版本关联派单、接收回执、开发测试证据、Hermes 运行回执及异常升级。没有 DSH 确认时责任不转移；没有真实运行证据时不宣称 Hermes 接入完成；自动门禁不替代独立审核与人工授权。当前仅完成协议设计与 Hermes 单接口修复，端到端自动交接待受控试点验证，实施状态保持 `partial`。
+
 ## 3. 实施范围与项目清单
 
 本方案覆盖以下业务和治理项目：
@@ -79,8 +81,20 @@ GPCF:01-architecture/GlobalCloud 项目群总体方案.md
 22. GlobalCloud World
 23. GlobalCloud GCMEM
 24. GlobalCloud WAE
+25. GlobalCloud PMC
+26. GlobalCloud PDC
+27. GlobalCloud SLC
+28. GlobalCloud DRC
 
-当前范围以 `config/project-group-projects.yaml` 为准；2026-10-18 用户明确确认 WAE 纳入当前 24 项目范围。历史 17/18/22 项目快照只代表其生成时的适用范围，不作为当前覆盖结论。新增项目在总体方案、实施方案、台账与验收证据补齐前保持 `partial/rework`，不得据目录或登记直接提升状态。
+当前范围以 `config/project-group-projects.yaml` 为准；2026-10-18 用户明确确认 WAE 纳入此前 24 项目范围，并授权 GlobalCloud PMC（原 GlobalCloud Project）作为第 25 个项目立项、GlobalCloud PDC 作为第 26 个项目纳管、GlobalCloud SLC 作为第 27 个项目纳管。历史 17/18/22/24/25/26 项目快照只代表其生成时的适用范围，不作为当前覆盖结论。2026-10-21 用户授权 GlobalCloud DRC 作为第 28 个项目纳管并建立本地与远端 Git。新增项目在总体方案、实施方案、台账与验收证据补齐前保持 `partial/rework`，不得据目录或登记直接提升状态。
+
+`GlobalCloud PMC` 基于 Plane 社区版源码，首期 F-028 只读投影 GPCF Feature 与 Evidence 状态。`authorization=本地立项与定制开发已授权`；`confirmation=共享/生产实例写入、对外发布、项目群集成和客户验收未确认`；`overall_status=partial`。独立仓库的总体方案与实施方案继承项目群双主控，GPCF 保持交付状态和证据裁决权。
+
+`GlobalCloud PDC` 于 2026-10-18 授权纳入治理清单；独立仓本地与私有远端 `main` 一致，中央入口为 `projects/pdc/STATUS.md`，Feature F-030。项目级双方案候选已形成、继承待核验；Node 22 下类型检查、37 套件 471 用例和 Lint 已通过，当前版本浏览器关键任务与 WAE 装配未验证；`authorization=纳管与现有 Git 远端核验已授权`，`confirmation=业务验收、正式集成、生产发布待人工确认`，`overall_status=partial/rework`。
+
+`GlobalCloud SLC` 于 2026-10-18 授权纳入治理清单；独立仓与私有远端已建立，中央入口为 `projects/slc/STATUS.md`。项目级双方案和当前版本关键任务验证待补；`authorization=纳管与 Git 远端建立已授权`，`confirmation=业务验收、正式集成、生产发布待人工确认`，`overall_status=partial/rework`。
+
+`GlobalCloud DRC` 于 2026-10-21 授权纳入治理清单；独立本地 Git 与项目级双方案候选已建立，私有远端 `Jiumilu/GCDRC` 的 `main` 已核对一致。当前不连接真实数据库、不迁移数据、不变更权限；`authorization=纳管与本地/远端 Git 建立已授权`，`confirmation=生产数据接入、正式集成、发布和客户验收待人工确认`，`overall_status=partial/rework`。
 
 `GlobalCloud World` 于 2026-10-16 授权独立纳管与本地/私有远端 Git 建立。入口 `projects/world/STATUS.md`，Feature F-021；角色 external；不迁移 Studio F-015 或 KDS 主账。authorization=纳管与Git初始同步已授权；confirmation=业务验收与生产发布未确认；overall_status=partial。中央门禁 rework_required，历史覆盖证据保持原范围。
 

@@ -19,7 +19,7 @@ superseded_by: []
 
 # 文档过期与归档台账
 
-日期：2026-10-18
+日期：2026-10-23
 
 用途：登记历史、过期、被替代和运行类文档，避免误用为当前项目完成状态或当前业务口径。
 
@@ -184,3 +184,7 @@ superseded_by: []
 | GPCF-DOC-2F9D256EEE | 历史会话归档 | 10-archive/historical-sessions/README.md | archive | 开发/92-证据与会话归档/10-archive/historical-sessions/README.md |
 | GPCF-DOC-73C77D0200 | 旧来源导入归档 | 10-archive/imported-legacy/README.md | archive | 开发/92-证据与会话归档/10-archive/imported-legacy/README.md |
 | GPCF-DOC-36F8C5657B | 被替代文档归档 | 10-archive/superseded/README.md | archive | 开发/92-证据与会话归档/10-archive/superseded/README.md |
+| GPCF-DOC-AD66B8830A | O1 外壳解耦 —— 证据（F-034，2026-10-22） | features/active/F-034-wae-p0-shell-and-role-convergence/evidence/o1-shell-decoupling.md | superseded | 开发/91-治理与验收/features/active/F-034-wae-p0-shell-and-role-convergence/evidence/o1-shell-decoupling.md |
+| GPCF-DOC-638FE1B07B | O3 侧栏统一 —— 证据（F-034，2026-10-22） | features/active/F-034-wae-p0-shell-and-role-convergence/evidence/o3-sidebar-unification.md | superseded | 开发/91-治理与验收/features/active/F-034-wae-p0-shell-and-role-convergence/evidence/o3-sidebar-unification.md |
+| GPCF-DOC-WAE-IMPL-PLAN-CANDIDATE-20261022 | 世界资产浏览器（WAE）实施方案候选 v1.0（2026-10-22） | projects/wae/实施方案候选_v1.0_20261022.md | superseded | 开发/91-治理与验收/projects/wae/实施方案候选_v1.0_20261022.md |
+| GPCF-DOC-WAE-MASTER-PLAN-CANDIDATE-20261022 | 世界资产浏览器（WAE）总体方案候选 v1.0（2026-10-22） | projects/wae/总体方案候选_v1.0_20261022.md | superseded | 开发/91-治理与验收/projects/wae/总体方案候选_v1.0_20261022.md |

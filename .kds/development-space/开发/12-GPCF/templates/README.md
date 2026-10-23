@@ -16,6 +16,7 @@ supersedes: []
 superseded_by: []
 ---
 
+
 # 模板库
 
 目录：`templates`
@@ -47,6 +48,7 @@ KDS 路径前缀：`开发/12-GPCF/templates/`
 | GPCF-DOC-C3B9DFCB0C | LOOP_ROUND_TEMPLATE | templates/LOOP_ROUND_TEMPLATE.md | GPCF | controlled |
 | GPCF-DOC-9A5D7C1B3E | LOOP 会话主线声明模板 | templates/LOOP_SESSION_MAINLINE_DECLARATION_TEMPLATE.md | GPCF | controlled |
 | GPCF-DOC-48D043BA78 | 模板库 | templates/README.md | GPCF | controlled |
+| GPCF-DOC-AUTHORIZATION-BATCH-REQUEST-TEMPLATE-20261022 | 项目群批量授权请求模板 v1.0 | templates/authorization-batch-request.md | GPCF | draft |
 | GPCF-DOC-33F4C1195D | 证据索引模板 — {项目名} | templates/evidence-index-template.md | GPCF | controlled |
 | GPCF-DOC-8C2AA8996B | Status Audit — {YYYY-MM-DD} | templates/loop-audit-template.md | GPCF | controlled |
 | GPCF-DOC-1D2FA3DB71 | Loop Round {N} | templates/loop-round-template.md | GPCF | controlled |

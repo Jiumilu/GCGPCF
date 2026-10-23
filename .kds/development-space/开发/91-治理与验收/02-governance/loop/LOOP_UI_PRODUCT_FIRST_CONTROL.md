@@ -38,7 +38,7 @@ Functional completeness and quality are prerequisites, not substitutes for usabi
 
 ## 2. 控制范围
 
-本控制适用于项目登记表中的全部 27 个项目：`AAAS`、`Brain`、`WAS`、`XiaoC`、`WAME`、`GPC`、`Studio`、`GPCF`、`XWAIL`、`GFIS`、`MMC`、`KDS`、`XiaoG`、`PVAOS`、`SOP`、`PKC`、`XGD`、`ICP`、`PQC`、`SpaceAI`、`SpaceAIStudio`、`World`、`GCMEM`、`WAE`、`Project`、`PDC`、`SLC`，以及后续经项目群登记表纳管的新增项目。
+本控制适用于项目登记表中的全部 29 个项目：`AAAS`、`Brain`、`WAS`、`XiaoC`、`WAME`、`GPC`、`Studio`、`GPCF`、`XWAIL`、`GFIS`、`MMC`、`KDS`、`XiaoG`、`PVAOS`、`SOP`、`PKC`、`XGD`、`ICP`、`PQC`、`SpaceAI`、`SpaceAIStudio`、`World`、`GCMEM`、`WAE`、`Project`、`PDC`、`SLC`、`DRC`、`FireQuote`，以及后续经项目群登记表纳管的新增项目。
 
 覆盖对象包括：
 
