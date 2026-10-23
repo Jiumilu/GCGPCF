@@ -27,7 +27,7 @@ master_control: GPCF:01-architecture/GlobalCloud 项目群总体方案.md
 - clean clone 验证：`npm ci` 15s + `/healthz` 200 + `/runtime/info` 200。
 - 实施范围：H1 可信基线、H2 任务/工作流/隔离/独立 Web 控制台/第二宿主 PoC、H3 长程分析模型+持久化/API。
 - 详细状态：`GlobalCloud XGD/docs/IMPLEMENTATION_STATUS_2026-10-21.md`。
-- 2026-10-22 更新：发布 `2.1.205`；H2 四周内测已启动（2026-10-22 → 2026-11-19，本机/内网）；H3 真实分析+人工结案/UI E2E；XiaoG BFF/UI 全链路；72h/24h 观测运行中。
+- 2026-10-23 更新：发布 `2.1.210`；H2 内测进行中；运行时/观测改为 launchd 自愈（runtime KeepAlive、observer 崩溃自动重启、watchdog）；72h/24h 观测窗口因中断已重启，当前运行中；D10 仍 blocked。
 
 ## 2. 状态口径
 
