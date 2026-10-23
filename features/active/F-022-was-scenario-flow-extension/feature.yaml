@@ -23,16 +23,23 @@ loop:
   current_step: registration
   iteration: 1
 evidence:
-  tests: pending
-  build: pending
+  tests: pass
+  build: pass
   screenshots: waived
   api: waived
-  summary: pending
+  summary: pass
 blockers:
-  - WAS 侧治理复核（承接方式与六项声明）待进行
-  - XWAIL flowType 影响评估待进行
+  - WAS 侧治理复核（承接方式与六项声明）待进行；请求件见 evidence/was-review-request-20261024.md
 created_at: "2026-10-16T03:47:28+00:00"
 updated_at: "2026-10-16T03:47:28+00:00"
+verification:
+  tests:
+    - "python3 tools/kds-sync/validate_gpcf_2_feature_workspace.py"
+  build:
+    - "python3 tools/kds-sync/document_control.py --check"
+  waivers:
+    screenshots: "F-022 为场景流登记/治理复核，无 UI 交付。"
+    api: "F-022 不调用外部 API，仅登记件与文档镜像。"
 ui_product_first_control:
   version: v1.1
   applicability: indirect
@@ -42,8 +49,12 @@ ui_product_first_control:
   gates:
     functional_completeness: pass
     quality_baseline: pass
-    multi_user_usability: pending
-    task_flow_e2e_status: pending
+    multi_user_usability: waived
+    task_flow_e2e_status: waived
     accessibility_status: waived
     evidence_overexposure_gate: pass
   status_ceiling: partial
+resolved_blockers:
+  - decided_at: "2026-10-24"
+    decision: "XWAIL flowType 影响评估已完成：ALLOWED_FLOWS 已含 ScenarioFlow 与 V1.2 九流，无需改动"
+    evidence: "GlobalCloud XWAIL/scripts/xwail_common.py；evidence/xwail-impact-assessment-20261024.md"
