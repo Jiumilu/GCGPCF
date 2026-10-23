@@ -55,7 +55,7 @@ superseded_by: []
 
 - [x] 6.1 SIMULATED 全流程演练（生成 → 校验 → 导入 → 上线 → 回落 → 回滚），证据 `harness/l4-evidence/sim-drill/`。
 - [x] 6.2 一键验收 PASS ×2：`harness/l4-acceptance/smoke-sim`（60 FPS）、`smoke-demo`（56 FPS），0 fail。
-- [x] 6.3 测试：3 文件 53 例（modelPrecision 20 / acceptance-lib 14 / tools 19）；e2e `panorama-l4` 3 条。
+- [x] 6.3 测试：3 文件 62 例（modelPrecision 20 / acceptance-lib 14 / tools 28）；e2e `panorama-l4` 3 条。
 
 ## 7. 采购 / 自采准备（不执行）
 
@@ -70,3 +70,16 @@ superseded_by: []
 - [ ] 8.2 几何精度验收（≥20 特征点 ≤0.3m）：需真实资产与供应商质检报告。
 - [ ] 8.3 远端 CI 实跑：未 push，工作流只在本地等价跑通。
 - [ ] 8.4 真实三维重建（WorldMirror/3DGS）：算力仍为 stub，不在本变更范围。
+
+## 9. 真实资产验收入口（2026-10-23 补，不采购前提）
+
+- [x] 9.1 `docs/3d/l4-vendor-dataset-spec.md`：交付包规格（tileset/metadata/license/crs/cover/qa≥3 控制点）+ 三条来源路径与各自授权点。
+- [x] 9.2 `tools/l4/verify-vendor-package.mjs` + `l4-lib.mjs::validateVendorPackage`：验包判定 pass/needs_human/fail；
+      SIMULATED 必须显式 `--allow-simulated`；**脚本不判定几何精度达标**（needsHuman 列控制点实测等人工项）。
+- [x] 9.3 单测 +9（l4-tools 19→28）：合规真实包→needs_human、缺 license/crs/qa/控制点/覆盖不全→fail、SIMULATED 默认 fail。
+- [x] 9.4 DRY-RUN 证据 `harness/l4-acceptance/vendor-dryrun/`（合成包，非真实几何；证明 real 路径判定与「不自动宣称精度」）。
+- [x] 9.5 不依赖 UI 的全链路 dry-run：`tools/l4/chain-dryrun.mjs`（生成→验包→导入 dry-run→导入 apply→校验→切换→回滚），
+      临时 manifest + gitignored 资产副本，不触碰线上 manifest；2026-10-23 实测 9 步 / 10 断言全过，证据 `harness/l4-acceptance/vendor-chain-dryrun/`。
+- [x] 9.6 验收复跑：2026-10-23 **PASS**（`harness/l4-acceptance/2026-10-23T01-07-31-373Z/report.json`）。
+      根因不是 UI 功能回归：①侧栏 DOM 契约变更致测试选择器过期；②PanoramaDeep.vue `isFavoLite` 未定义（已修，随 B5-R2 d4a2bcc）；
+      ③引擎就绪时序（需等 `__gcEngine.viewer`）。证据与复现：`harness/coordination/ui-regression-20261023/`。

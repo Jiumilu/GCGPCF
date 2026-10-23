@@ -19,7 +19,7 @@ superseded_by: []
 
 # KDS 开发空间同步台账
 
-日期：2026-10-22
+日期：2026-10-23
 
 用途：登记 Git 文档与 KDS `开发` 空间的双向同步映射。当前实现包含仓库内 `.kds/development-space/开发` 本地镜像与真实 KDS API 同步工具链；单文档 API 状态以 `kds_api_status` 和真实同步审计流水为准。
 
