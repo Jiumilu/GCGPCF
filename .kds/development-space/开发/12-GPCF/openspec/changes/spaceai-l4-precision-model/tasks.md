@@ -78,4 +78,6 @@ superseded_by: []
       SIMULATED 必须显式 `--allow-simulated`；**脚本不判定几何精度达标**（needsHuman 列控制点实测等人工项）。
 - [x] 9.3 单测 +9（l4-tools 19→28）：合规真实包→needs_human、缺 license/crs/qa/控制点/覆盖不全→fail、SIMULATED 默认 fail。
 - [x] 9.4 DRY-RUN 证据 `harness/l4-acceptance/vendor-dryrun/`（合成包，非真实几何；证明 real 路径判定与「不自动宣称精度」）。
-- [ ] 9.5 验收复跑：2026-10-23 被并行会话 pano 重构在途回归阻塞（登录后找不到「全景态势」入口），待其收口后重跑。
+- [x] 9.5 不依赖 UI 的全链路 dry-run：`tools/l4/chain-dryrun.mjs`（生成→验包→导入 dry-run→导入 apply→校验→切换→回滚），
+      临时 manifest + gitignored 资产副本，不触碰线上 manifest；2026-10-23 实测 9 步 / 10 断言全过，证据 `harness/l4-acceptance/vendor-chain-dryrun/`。
+- [ ] 9.6 验收复跑：2026-10-23 被并行会话 pano 重构在途回归阻塞（登录后找不到「全景态势」入口），待其收口后重跑。

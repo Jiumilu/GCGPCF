@@ -17,6 +17,7 @@ scope:
   - SIMULATED 演练：tools/db/gen-l4-sim-asset.mjs 生成 162 栋演练资产并跑全流程（生成/校验/导入/上线/回落/回滚）
   - 采购与自采准备：l4-procurement-spec / l4-self-collect-plan / l4-pilot-factory-package 与 RFQ 模板、比价表（暂停执行，待授权）
   - 真实资产验收入口（2026-10-23）：docs/3d/l4-vendor-dataset-spec.md（交付包规格与三路径授权点）+ tools/l4/verify-vendor-package.mjs（pass/needs_human/fail 判定，不宣称精度达标）+ DRY-RUN 证据
+  - 不依赖 UI 的全链路演练（2026-10-23）：tools/l4/chain-dryrun.mjs（生成→验包→导入 dry-run+apply→校验→切换→回滚；临时 manifest，不触线上）
   out:
   - 不接入真实 L4 资产：采购与自采均暂停（2026-10-22 老卢决定），不做对外询价、不飞行、不采购
   - 不含室内细节（CityGML LOD4 室内另立范围）
@@ -31,6 +32,7 @@ acceptance:
   - 全仓 135 文件 / 1242 例通过（2026-10-22 19:04 复测）
   - 占位资产在 UI、文档、证据三处显式标注，任何证据不得表述为真实 L4 精度
   - 真实交付包核验：合规包 → `needs_human`（0 error，精度留人工）；缺 license/crs/qa/控制点/覆盖 → fail；SIMULATED 默认 fail（须显式允许）
+  - 全链路演练：`node tools/l4/chain-dryrun.mjs` → 9 步 / 10 断言全过（2026-10-23，不依赖登录/UI）
 loop:
   current_step: commit
   iteration: 2
@@ -51,6 +53,7 @@ verification:
   acceptance:
   - pnpm l4:acceptance（前置：BFF 39010 + dev 5273 + 系统 Chrome）
   - node tools/l4/verify-vendor-package.mjs --dir <vendor-package>（真实资产验收入口；DRY-RUN 见 harness/l4-acceptance/vendor-dryrun/）
+  - node tools/l4/chain-dryrun.mjs（全链路演练；证据 harness/l4-acceptance/vendor-chain-dryrun/）
   waivers:
     screenshots: 截图二进制归档在主项目仓库 harness/l4-acceptance/{smoke-sim,smoke-demo}/ 与 harness/l4-evidence/（report.md / report.json 同为证据），GPCF 只登记路径与判定口径，不重复存二进制；占位资产截图的精度含义以三处标注为准。
 blockers:
@@ -71,4 +74,4 @@ ui_product_first_control:
     evidence_overexposure_gate: pass
   status_ceiling: partial
 created_at: "2026-10-22T11:04:30+00:00"
-updated_at: "2026-10-23T00:05:00+00:00"
+updated_at: "2026-10-23T00:20:00+00:00"

@@ -106,3 +106,20 @@ superseded_by: []
 5. 是否可以提交？
    - 可以（文档 + 工具 + 测试 + 证据 + 治理账实；本地提交，不 push、不部署、不提升验收状态）。
    - 未完成：9.5 验收复跑（待并行会话收口）、8.1 真实资产接入（待授权）、8.2 几何精度验收（需真实资产 + 实测）。
+
+### Iteration 3（2026-10-23 上午 · 全链路演练，不依赖 UI）
+
+1. 这轮做什么？
+   - 一键验收/e2e 被并行重构阻塞期间，补上「不依赖登录/UI」的 L4 全链路演练，证明接入链路本身没坏。
+2. 改了什么？
+   - `tools/l4/chain-dryrun.mjs`：生成 SIMULATED → 验包 → 导入 dry-run → 导入 apply → 校验 manifest →
+     `--list`/`--off`/`--on`/`--fallback` 切换回滚；manifest 一律用临时文件，资产副本写 gitignored 目录，结束清理；
+   - 证据 `harness/l4-acceptance/vendor-chain-dryrun/`（report.json 机器可读 + README 复跑说明）。
+3. 怎么验证？
+   - `node tools/l4/chain-dryrun.mjs` → **PASS：9 步全 0，10 项断言全过**（2026-10-23 08:17）；
+   - 断言含：dry-run 不写 manifest、导入后 published=true、停用后 false、启用后 true、回滚后 manifest 有效且占位启用。
+4. 发现什么问题？
+   - 链路本身健康；唯一未闭环项仍是 9.6 验收复跑（被并行 pano 重构阻塞）与真实资产接入（未授权）；
+   - 临时 manifest 隔离有效：线上 `data/rebuild/l4/manifest.json` 未被触碰（可 `git status` 与文件 mtime 复核）。
+5. 是否可以提交？
+   - 可以（工具 + 证据 + 治理账实；本地提交不 push）；Feature 保持 active/partial，不提升验收状态。
