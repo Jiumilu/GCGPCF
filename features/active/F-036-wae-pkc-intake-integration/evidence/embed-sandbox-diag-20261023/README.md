@@ -1,3 +1,15 @@
+---
+doc_id: GPCF-DOC-F036-embed-sandbox-diag-20261023
+title: F-036 嵌入证据
+project: GPCF
+related_projects: [WAE, PKC]
+domain: governance
+status: draft
+version: v1.0
+owner: GPCF
+last_reviewed: 2026-10-23
+---
+
 # F-036 嵌入白块诊断（2026-10-23）
 
 - 现象：PKC 页面在 `sandbox="allow-scripts allow-forms"` iframe 中空白；去掉 sandbox 正常。

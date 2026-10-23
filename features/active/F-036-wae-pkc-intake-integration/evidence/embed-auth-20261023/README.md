@@ -1,3 +1,15 @@
+---
+doc_id: GPCF-DOC-F036-embed-auth-20261023
+title: F-036 嵌入证据
+project: GPCF
+related_projects: [WAE, PKC]
+domain: governance
+status: draft
+version: v1.0
+owner: GPCF
+last_reviewed: 2026-10-23
+---
+
 # F-036 登录态受控嵌入证据（2026-10-23）
 
 - 环境：WAE dev :4301（隔离临时 IdP，system-admin bootstrap）+ PKC dev :5174 + `VITE_PKC_EMBED_URL`。
