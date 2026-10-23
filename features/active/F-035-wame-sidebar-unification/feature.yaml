@@ -32,9 +32,9 @@ evidence:
   api: waived
   summary: pass
 blockers:
-  - "app-shell 目录已清空且移出发布集；改为消费 app-registry 契约。已完成：app-registry sidebarContract 落包（13.1KB）；WAME architecture-contracts worktree 本地提交 b233438（依赖+import）与 ea8f321（Sidebar 兼容别名），tsc --noEmit pass，侧栏测试 5/5 pass。剩余：WAME 属主 push；生产消费需私有 registry"
+  - "app-shell 目录已清空且移出发布集；改为消费 app-registry 契约。已完成：app-registry sidebarContract 落包（13.1KB）；WAME architecture-contracts worktree 本地提交 b233438（依赖+import）与 ea8f321（Sidebar 兼容别名），tsc --noEmit pass，侧栏测试 5/5 pass。剩余：生产消费需私有 registry；属主已 push（b233438/ea8f321）"
   - "FunctionPanel（1557 行）是主内容区功能面板而非导航侧栏；并入侧栏属信息架构产品重构，需产品设计 + 验收授权后另行立项"
-  - "无视觉回归证据（screenshots=waived）；多用户/无障碍未实测（waived）、任务流 E2E 未跑（pending）"
+  - "本地视觉留痕已有（evidence/visual-20261023/wame-sidebar-worktree.png）；仍无前后差分与多用户/无障碍实测；任务流 E2E 未跑（pending）"
 verification:
   tests:
     - "python3 -c \"import subprocess,sys; r=subprocess.run(['npx','tsc','--noEmit'],cwd='../GlobalCloud WAME',capture_output=True,text=True); print(r.stdout[-2000:]); print(r.stderr[-1000:]); sys.exit(r.returncode)\""

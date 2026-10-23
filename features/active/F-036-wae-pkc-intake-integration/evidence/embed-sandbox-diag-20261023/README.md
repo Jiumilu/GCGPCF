@@ -33,3 +33,13 @@ last_reviewed: 2026-10-23
   - 截图 `sandbox-with-same-origin-content.png` 37KB，PKC 内容正常渲染。
 - 对比：无 `allow-same-origin` 4.6KB 空白。
 - 结论：加回 `allow-same-origin` 可修复；跨源 iframe 仍为独立 origin，但需 WAE 安全评审确认。
+
+## 生产构建产物验证（2026-10-23 22:40）
+
+- `pnpm build`（PKC）→ dist 生成，build exit 0。
+- `python3 -m http.server` 服务 dist，iframe 对照：
+  - `sandbox="allow-scripts allow-forms"`：空白（4.6KB）
+  - `sandbox` + `allow-same-origin`：正常渲染（37.7KB）
+- 证据：`dist-sandbox-no-same-origin-blank.png`、`dist-sandbox-allow-same-origin-content.png`。
+- 结论：生产构建产物同样需要 `allow-same-origin`；WAE 修复方向正确。
+- 仍非生产部署验证（无 CSP/SSO/403）。
