@@ -18,6 +18,7 @@ scope:
   - 采购与自采准备：l4-procurement-spec / l4-self-collect-plan / l4-pilot-factory-package 与 RFQ 模板、比价表（暂停执行，待授权）
   - 真实资产验收入口（2026-10-23）：docs/3d/l4-vendor-dataset-spec.md（交付包规格与三路径授权点）+ tools/l4/verify-vendor-package.mjs（pass/needs_human/fail 判定，不宣称精度达标）+ DRY-RUN 证据
   - 公开数据源案头调研（2026-10-23）：docs/3d/l4-open-dataset-research.md（9 类候选矩阵 + 许可/境内合规判据 + 结论：公开源无法满足 L4 几何精度）
+  - 园区既有成果合作备料（2026-10-23）：docs/3d/l4-park-cooperation-package.md + harness/l4-park-coop/ 三份模板（索取清单/合规问询/授权书要素；均未发送）
   - 不依赖 UI 的全链路演练（2026-10-23）：tools/l4/chain-dryrun.mjs（生成→验包→导入 dry-run+apply→校验→切换→回滚；临时 manifest，不触线上）
   out:
   - 不接入真实 L4 资产：采购与自采均暂停（2026-10-22 老卢决定），不做对外询价、不飞行、不采购
@@ -81,4 +82,4 @@ ui_product_first_control:
     evidence_overexposure_gate: pass
   status_ceiling: partial
 created_at: "2026-10-22T11:04:30+00:00"
-updated_at: "2026-10-23T02:00:00+00:00"
+updated_at: "2026-10-23T13:00:00+00:00"
