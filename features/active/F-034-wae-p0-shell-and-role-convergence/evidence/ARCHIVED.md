@@ -1,6 +1,6 @@
 ---
 doc_id: GPCF-DOC-CACA881C1E
-title: 归档说明（F-034 WAE 侧证据包，v3 · 2026-10-23 刷新）
+title: 归档说明（F-034 WAE 侧证据包，v4 · 2026-10-23 刷新）
 project: GPCF
 related_projects: [AAAS, Brain, WAS, XiaoC, WAME, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP]
 domain: governance
@@ -16,18 +16,20 @@ supersedes: []
 superseded_by: []
 ---
 
-# 归档说明（F-034 WAE 侧证据包，v3 · 2026-10-23 刷新）
+# 归档说明（F-034 WAE 侧证据包，v4 · 2026-10-23 刷新）
 
 | 项 | 内容 |
 |---|---|
-| 来源仓 | `GlobalCloud WAE`（分支 `refactor/ui-spec-wae`，提交 `f3941cb`） |
-| 源路径 | `docs/evidence/F-034/`（**17 项：15 pass / 2 expected_diff**） |
-| 归档时间 | 2026-10-23（v3 刷新；v1 12 项 / v2 15 项） |
-| 授权 | 老卢 2026-10-23 授权（问答 + 决策模型 `r5_archive_refresh` 0.385，供参考；本次为纯证据同步） |
+| 来源仓 | `GlobalCloud WAE`（分支 `refactor/ui-spec-wae`，提交 `307a948`） |
+| 源路径 | `docs/evidence/F-034/`（**19 项：17 pass / 2 expected_diff**） |
+| 归档时间 | 2026-10-23（v4 刷新；v1 12 项 / v2 15 项 / v3 17 项） |
+| 授权 | 老卢 2026-10-23 授权（问答 + 决策模型 `archive_refresh` 0.864，供参考；纯证据同步） |
 | 范围 | 仅复制/更新证据文件；未建 Feature、未改 F-034/F-036 定义、未提升任何状态 |
 | 重放 | 回 WAE 仓：`bash docs/evidence/F-034/collect.sh` → `pnpm evidence:collect` |
 
-**v3 变更**：并入第 16 项（PKC 受控嵌入状态机 12/12）、第 17 项（O2 偏离登记表判定 expected_diff）；日志/截图/visual 基线刷新至 WAE 提交 `f3941cb`。
+**v4 变更**：并入第 18 项（像素级基线 4 页 ≤0.02%）、第 19 项（B3 面板布局 E2E 10/10，默认 off）；日志/截图/visual 基线刷新至 WAE 提交 `307a948`。
+
+**两条 expected_diff 说明**：均因 **PKC 快照仍过期**（11 跨仓比对 + 17 登记表判定）；Brain 与登记一致、待书面确认。两轮请求/提醒已投递（PKC `8ce25526`/`ed724d11`，Brain `3f8cbb75`/`8edd9b2e`）。
 
 **残留证据历史处置（2026-10-22）**：`o1-shell-decoupling.md`/`o3-sidebar-unification.md` 已标 `status: superseded`（其引用的 `packages/app-shell` 已随 A2 删除、命令 exit 1）；`kds_path` 已修正为 `features/active`；`summary-active-residue-20261022.md` 已注明"历史残留，以 summary.md 为准"。
 

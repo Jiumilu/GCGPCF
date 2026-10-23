@@ -1,18 +1,18 @@
 {
   "feature": "F-034",
   "name": "wae-p0-shell-and-role-convergence（WAE 侧证据包）",
-  "generated_at": "2026-10-22T22:16:54.596Z",
+  "generated_at": "2026-10-23T01:16:49.745Z",
   "repo": "GlobalCloud WAE",
   "branch": "refactor/ui-spec-wae",
-  "commit": "f3941cb13050ed4b64e24525ad9b862e8408cca5",
+  "commit": "01741a511ea21d8702ebc0a140197a52aad4f3a7",
   "discipline": {
     "status_ceiling": "F-034 至多 ready_for_review；本清单不提升任何状态",
     "replay": "见 docs/evidence/F-034/README.md（采集脚本 + pnpm evidence:collect）"
   },
   "archive_target": "GlobalCloud GPCF/features/active/F-034-wae-p0-shell-and-role-convergence/evidence/（跨仓写入，待老卢授权；本清单为待复制源）",
   "counts": {
-    "total": 17,
-    "pass": 15,
+    "total": 19,
+    "pass": 17,
     "expected_diff": 2,
     "skip": 0,
     "fail": 0,
@@ -29,7 +29,7 @@
       "result": "pass",
       "artifacts": [],
       "docs": [],
-      "tail": "      Tests  1368 passed (1368) ⏎    Start at  22:41:02 ⏎    Duration  61.19s (transform 2.89s, setup 174ms, import 11.15s, tests 20.65s, environment 13.60s)"
+      "tail": "      Tests  1375 passed (1375) ⏎    Start at  09:15:24 ⏎    Duration  74.39s (transform 3.76s, setup 256ms, import 14.54s, tests 21.41s, environment 19.92s)"
     },
     {
       "id": "02-typecheck",
@@ -53,7 +53,7 @@
       "result": "pass",
       "artifacts": [],
       "docs": [],
-      "tail": "      Tests  127 passed (127) ⏎    Start at  23:15:51 ⏎    Duration  30.26s (transform 2.46s, setup 1.52s, import 6.30s, tests 8.97s, environment 8.68s)"
+      "tail": "      Tests  153 passed (153) ⏎    Start at  09:15:04 ⏎    Duration  18.92s (transform 1.31s, setup 743ms, import 3.51s, tests 5.93s, environment 5.11s)"
     },
     {
       "id": "04-wame-build",
@@ -65,7 +65,7 @@
       "result": "pass",
       "artifacts": [],
       "docs": [],
-      "tail": "- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks ⏎ - Adjust chunk size limit for this warning via build.chunkSizeWarningLimit. ⏎ ✓ built in 5.45s"
+      "tail": "- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks ⏎ - Adjust chunk size limit for this warning via build.chunkSizeWarningLimit. ⏎ ✓ built in 3.30s"
     },
     {
       "id": "05-e2e-dual-role",
@@ -293,6 +293,63 @@
       ],
       "note": "登记表里 PKC 仍 pending_owner（快照过期）⇒ 当前退出 1，按 expected_diff 记录；两仓回执后转 pass",
       "tail": " ⏎ 结论：**登记表与实测不一致**（未整改或偏离漂移；见 docs/evidence/token-deviation-registry.json） ⏎ [ELIFECYCLE] Command failed with exit code 1."
+    },
+    {
+      "id": "18-e2e-pixel",
+      "kind": "e2e",
+      "title": "像素级基线比对（4 页 1440，容差 0.1%）",
+      "command": "pnpm e2e:pixel --compare",
+      "log": "docs/evidence/F-034/logs/18-e2e-pixel.log",
+      "exit": 0,
+      "result": "pass",
+      "artifacts": [
+        {
+          "path": "docs/evidence/F-034/visual/pixel/home-1440.png",
+          "bytes": 186748,
+          "sha256": "b0a18ac2aa939bb9b44ecac9279ca5a3cbaf0675ec7a2ef7dc1a19a58eeb2961"
+        },
+        {
+          "path": "docs/evidence/F-034/visual/pixel/app-shell-1440.png",
+          "bytes": 186748,
+          "sha256": "b0a18ac2aa939bb9b44ecac9279ca5a3cbaf0675ec7a2ef7dc1a19a58eeb2961"
+        },
+        {
+          "path": "docs/evidence/F-034/visual/pixel/service-hub-1440.png",
+          "bytes": 177259,
+          "sha256": "f5126b87664b66807db6daf7b63f6ff304cce63a189427de914d5158ad8a1af8"
+        },
+        {
+          "path": "docs/evidence/F-034/visual/pixel/pkc-intake-1440.png",
+          "bytes": 207344,
+          "sha256": "f2a3bde4cc43636ab79f2a094b129a25870fd0577664f937f625a65c8a11fc4b"
+        }
+      ],
+      "docs": [
+        "docs/plan/F-034_UI_gate_六件套_20261022.md"
+      ],
+      "note": "像素基线绑本机渲染环境；默认不进 gate，WAE_PIXEL_GATE=1 时由 gate 跑",
+      "tail": "✓ pageerror=0 — 0 条 ⏎  ⏎ 像素级基线（compare）：**通过**（报告：.e2e-pixel-report.md）"
+    },
+    {
+      "id": "19-e2e-panel-layout",
+      "kind": "e2e",
+      "title": "B3 面板布局（默认 off / 启用态 / 键盘 / 持久化）",
+      "command": "pnpm e2e:panel-layout",
+      "log": "docs/evidence/F-034/logs/19-e2e-panel-layout.log",
+      "exit": 0,
+      "result": "pass",
+      "artifacts": [
+        {
+          "path": "docs/evidence/F-034/screens/panel-layout-enabled-20261023.png",
+          "bytes": 198007,
+          "sha256": "fe72ffe8487c5dfdec5268a6f1fd251c006639cbfcfc519970fce9c8fdb46daf"
+        }
+      ],
+      "docs": [
+        "docs/design/B3多面板语义设计_v0.1.md"
+      ],
+      "note": "自带两个 dev 实例；默认 off 不渲染（零行为变化），启用态 → 拖出右栏 + Home 复位 + 刷新恢复",
+      "tail": "✓ S2 pageerror=0 — 0 条 ⏎  ⏎ B3 面板布局 E2E：**全部通过**（报告：.e2e-panel-layout-report.md）"
     }
   ]
 }

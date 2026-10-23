@@ -26,10 +26,10 @@ superseded_by: []
 
 | 路径 | 内容 |
 |---|---|
-| `collect.sh` | 采集脚本：真跑 **17** 条判据命令，写 `logs/<id>.log` + `logs/<id>.exit` |
-| `logs/` | 每条命令的原始输出 + 退出码（**唯一结果来源**，不手写） |
+| `collect.sh` | 采集脚本：真跑 **18** 条判据命令，写 `logs/<id>.log` + `logs/<id>.exit` |
+| `logs/` | 每条命令的**原始输出 `.log` + 退出码 `.exit`**（唯一结果来源，不手写）；`.log` 经 `.gitignore` 负向规则**已入库**（此前只跟踪 `.exit`，2026-10-23 修正） |
 | `screens/` | 真机截图：双角色 admin/viewer、PKC dry-run、M2 能力阀 on/off、WAME 回归、**G8 无障碍两档** |
-| `visual/` | **G1 基线**：4 页 × 2 档截图 + `fingerprints.json`(结构指纹) |
+| `visual/` | **G1 基线**：4 页×2 档截图 + `fingerprints.json`(结构指纹) + `pixel/`(像素基线 4 张) |
 | `manifest.json` | 机器可读清单：命令、退出码、结果、日志路径、截图 sha256/字节数、commit |
 | `summary.md` | 人读版：M1 判据逐项对账 + 非声明 + 剩余项 |
 
@@ -48,7 +48,7 @@ pnpm evidence:collect
 
 ## 三、本次清单（2026-10-22 夜，刷新至 14 项）
 
-`total=17 ｜ pass=15 ｜ expected_diff=2 ｜ skip=0 ｜ fail=0 ｜ missing=0`
+`total=18 ｜ pass=16 ｜ expected_diff=2 ｜ skip=0 ｜ fail=0 ｜ missing=0`
 
 | id | 判据 | 命令 | 结果 |
 |---|---|---|---|
@@ -69,6 +69,7 @@ pnpm evidence:collect
 | 15 | **无机器字段暴露扫描** | `pnpm e2e:machine-fields` | pass（5 页 0 命中 + 金丝雀自检 6 类模式命中） |
 | 16 | **PKC 受控嵌入状态机** | `pnpm e2e:pkc-states` | pass（12 项：合法启用 / 凭据拒绝 0 请求 / 令牌参数拒绝 0 请求） |
 | 17 | **O2 偏离登记表判定** | `pnpm check:tokens-parity:registry` | **expected_diff**（PKC 仍 pending_owner；Brain 与登记一致） |
+| 18 | **像素级基线比对** | `pnpm e2e:pixel --compare` | pass（4 页，差异 ≤0.02%） |
 
 ## 四、纪律
 
