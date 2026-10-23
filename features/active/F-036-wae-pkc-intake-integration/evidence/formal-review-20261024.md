@@ -37,3 +37,9 @@ PKC 在 WAE 的注册与首批接入演练：placement/manifests/menus、PkcInta
 
 - **conditional：不批准关闭**；不得声明 PKC 已接入或生产可用。
 - 关闭条件：上述 1–3 满足，并由属主签署。
+
+## 5. 2026-10-24 补充核验
+
+- CSP：`frame-ancestors` 白名单内 iframe 正常、白名单外被阻止（evidence/csp-20261024）。
+- SSO/403：设计预案已记录四方案（evidence/sso-403-design-20261024.md）；未实现。
+- 结论不变：conditional，不批准关闭；生产部署/SSO/403 与属主签字仍是关闭条件。

@@ -1,0 +1,65 @@
+{
+  "generated_at": "2026-10-23T17:24:05+0800",
+  "gates": [
+    {
+      "gate": "loop_document_gate.py",
+      "ok": true,
+      "seconds": 14.3
+    },
+    {
+      "gate": "validate_contract_matrix.py",
+      "ok": true,
+      "seconds": 0.1
+    },
+    {
+      "gate": "validate_xap_error_code_registry.py",
+      "ok": true,
+      "seconds": 0.0
+    },
+    {
+      "gate": "validate_contract_version_drift.py",
+      "ok": true,
+      "seconds": 0.0
+    },
+    {
+      "gate": "validate_event_package_ref.py",
+      "ok": true,
+      "seconds": 0.0
+    },
+    {
+      "gate": "validate_gpcf_2_feature_workspace.py",
+      "ok": true,
+      "seconds": 0.3
+    },
+    {
+      "gate": "validate_project_group_caliber_baseline.py",
+      "ok": true,
+      "seconds": 0.0
+    },
+    {
+      "gate": "validate_project_group_single_authorization_ledger.py",
+      "ok": true,
+      "seconds": 0.0
+    },
+    {
+      "gate": "validate_evidence_rule_version.py",
+      "ok": true,
+      "seconds": 0.0
+    },
+    {
+      "gate": "validate_vu_ledger.py",
+      "ok": true,
+      "seconds": 0.2
+    },
+    {
+      "gate": "validate_asset_reuse.py",
+      "ok": true,
+      "seconds": 0.1
+    }
+  ],
+  "gates_pass": 11,
+  "gates_total": 11,
+  "active_feature_count": 18,
+  "closed_feature_count": 19,
+  "C_dev": 37.53
+}
