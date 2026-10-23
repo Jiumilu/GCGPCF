@@ -17,6 +17,7 @@ scope:
   - SIMULATED 演练：tools/db/gen-l4-sim-asset.mjs 生成 162 栋演练资产并跑全流程（生成/校验/导入/上线/回落/回滚）
   - 采购与自采准备：l4-procurement-spec / l4-self-collect-plan / l4-pilot-factory-package 与 RFQ 模板、比价表（暂停执行，待授权）
   - 真实资产验收入口（2026-10-23）：docs/3d/l4-vendor-dataset-spec.md（交付包规格与三路径授权点）+ tools/l4/verify-vendor-package.mjs（pass/needs_human/fail 判定，不宣称精度达标）+ DRY-RUN 证据
+  - 公开数据源案头调研（2026-10-23）：docs/3d/l4-open-dataset-research.md（9 类候选矩阵 + 许可/境内合规判据 + 结论：公开源无法满足 L4 几何精度）
   - 不依赖 UI 的全链路演练（2026-10-23）：tools/l4/chain-dryrun.mjs（生成→验包→导入 dry-run+apply→校验→切换→回滚；临时 manifest，不触线上）
   out:
   - 不接入真实 L4 资产：采购与自采均暂停（2026-10-22 老卢决定），不做对外询价、不飞行、不采购

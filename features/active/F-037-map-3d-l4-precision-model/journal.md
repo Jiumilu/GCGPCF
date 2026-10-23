@@ -163,3 +163,21 @@ superseded_by: []
      DemoCenter 演示动线、B3 回放、CWME 静态产物）。
 5. 是否可以提交？
    - 可以（测试与诊断工具，UI 代码未改）；未 push、不提升验收状态。
+
+### Iteration 6（2026-10-23 下午 · 公开数据源案头调研）
+
+1. 这轮做什么？
+   - 真实资产仍未授权的前提下，评估「公开/合规三维数据源」能否替代采购/自采——只做案头调研，不下载、不采购、不申请账号。
+2. 改了什么？
+   - 平台侧新增 `docs/3d/l4-open-dataset-research.md`：9 类候选源矩阵（OSM/OSM Buildings、Cesium OSM Buildings、
+     Google Photorealistic 3D Tiles、OpenAerialMap/ODM、天地图、实景三维中国、CC 单体模型、DEM、商用地图三维）、
+     判据（几何/格式/许可/境内合规/成本）、与 L4 验包要求的逐项差距、四条建议路径与授权点。
+3. 怎么验证？
+   - 文档级：判据与 [l4-vendor-dataset-spec.md] 的 qa/controlPoints/cover 字段逐项对齐；
+     引用 OSF ODbL、Google Map Tiles 政策、Cesium ion ToS 与自然资源部公开答复（链接见文档 §8）。
+4. 发现什么问题？
+   - **公开源无法满足 L4 几何精度**：OSM 只有白盒；Google 实景三维无精度声明且限制缓存/离线/分发；
+     天地图/实景三维中国需申请或政务合作，非公开下载；ODbL 有传染性；境内测绘资质与审图要求是硬约束。
+   - 因此 L4 真实资产仍只有三条路：采购测绘成果 / 自采 / 园区既有成果合作——均需老卢授权。
+5. 是否可以提交？
+   - 可以（纯文档 + 治理账实）；不改验收口径、不宣称 L4 精度、未下载任何外部数据。
