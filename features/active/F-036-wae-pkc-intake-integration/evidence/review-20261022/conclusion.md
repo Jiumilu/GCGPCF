@@ -47,3 +47,8 @@ superseded_by: []
 
 - 条件 2（真实受控嵌入）：本地 dev bypass 已通过；生产构建/CSP/SSO/403 仍待验证。
 - conditional 结论不变；不得声明 PKC 已接入。
+
+## 2026-10-23 条件更新 2
+
+- 条件 2（真实受控嵌入）：登录态 dev 已通过（system-admin + 隔离 IdP）。
+- 生产构建/CSP/SSO/403 未验证；conditional 结论不变，不得声明生产接入。

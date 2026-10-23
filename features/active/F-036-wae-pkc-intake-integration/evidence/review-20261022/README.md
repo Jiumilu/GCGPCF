@@ -140,3 +140,10 @@ superseded_by: []
   - 本地 dev bypass 验证通过（点击前 frame=0/按钮=1；点击后 frame=1、src=PKC :5174；iframe 内 PKC Home 渲染）。
   - 证据：`evidence/embed-20261023/`（截图 + assertions + run-embed.sh）。
 - 仍未验证：生产构建、CSP/X-Frame-Options、SSO/403 对齐；不改变 conditional 结论，不声明 PKC 已接入。
+
+## 2026-10-23 更新：登录态嵌入验证通过
+
+- 在 WAE d9d9ee9（allow-same-origin）+ 3247e53（去重复 aria-label）后，隔离 IdP + system-admin 登录态测试通过：
+  - 点击启用 → iframe src=PKC :5174 → iframe 内 PKC Home 渲染。
+- 证据：`evidence/embed-auth-20261023/`（Playwright 1 passed，26s）。
+- 仍未验证：生产构建、CSP/XFO、SSO/403；conditional 结论不变。
