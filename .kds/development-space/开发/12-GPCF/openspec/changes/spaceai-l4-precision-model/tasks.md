@@ -80,4 +80,6 @@ superseded_by: []
 - [x] 9.4 DRY-RUN 证据 `harness/l4-acceptance/vendor-dryrun/`（合成包，非真实几何；证明 real 路径判定与「不自动宣称精度」）。
 - [x] 9.5 不依赖 UI 的全链路 dry-run：`tools/l4/chain-dryrun.mjs`（生成→验包→导入 dry-run→导入 apply→校验→切换→回滚），
       临时 manifest + gitignored 资产副本，不触碰线上 manifest；2026-10-23 实测 9 步 / 10 断言全过，证据 `harness/l4-acceptance/vendor-chain-dryrun/`。
-- [ ] 9.6 验收复跑：2026-10-23 被并行会话 pano 重构在途回归阻塞（登录后找不到「全景态势」入口），待其收口后重跑。
+- [x] 9.6 验收复跑：2026-10-23 **PASS**（`harness/l4-acceptance/2026-10-23T01-07-31-373Z/report.json`）。
+      根因不是 UI 功能回归：①侧栏 DOM 契约变更致测试选择器过期；②PanoramaDeep.vue `isFavoLite` 未定义（已修，随 B5-R2 d4a2bcc）；
+      ③引擎就绪时序（需等 `__gcEngine.viewer`）。证据与复现：`harness/coordination/ui-regression-20261023/`。

@@ -123,3 +123,25 @@ superseded_by: []
    - 临时 manifest 隔离有效：线上 `data/rebuild/l4/manifest.json` 未被触碰（可 `git status` 与文件 mtime 复核）。
 5. 是否可以提交？
    - 可以（工具 + 证据 + 治理账实；本地提交不 push）；Feature 保持 active/partial，不提升验收状态。
+
+### Iteration 4（2026-10-23 上午 · 解锁验收并复跑 PASS）
+
+1. 这轮做什么？
+   - L4 一键验收被「登录后菜单为空」阻塞，本轮做根因定位（探针）并修复，复跑验收闭环 9.6。
+2. 改了什么？
+   - 诊断探针：tools/e2e/probe-ui-nav.mjs（DOM/菜单接口/错误）、probe-pano-state.mjs（引擎/精度面板）、probe-precision.mjs（图层菜单+精度状态）；
+   - 选择器同步：e2e/helpers.ts、e2e/smoke.spec.ts（测试1）、tools/l4/acceptance.mjs；
+   - 时序修复：acceptance 登录后等 `__gcEngine.viewer` 就绪再开图层菜单；
+   - 运行时缺陷：PanoramaDeep.vue `isFavoLite` 未定义（修复随 B5-R2 d4a2bcc 进入 HEAD）；
+   - 定位结论与复现：harness/coordination/ui-regression-20261023/。
+3. 怎么验证？
+   - `node tools/l4/acceptance.mjs` → **PASS**（2026-10-23 09:07）：贴地 0m、切白盒/回切 ✓、
+     画面差异 3.28% ≥1%、清单 500 → fallback/whitebox、页面错误 0、控制台错误 0、**FPS 55.7**；
+   - `npx playwright test e2e/smoke.spec.ts -g "登录进入主界面"` → 1 passed；
+   - L4 三测试文件 62 例此前已通过（08:01）。
+4. 发现什么问题？
+   - 之前归因「并行 pano 重构的 UI 回归」不准确：主因是**测试选择器过期**（DOM 契约变了）+ 一个真实运行时错误 + 引擎就绪时序；
+   - dev server 反复掉线的直接原因是工作树中 `plugins/ai-workbench/src/views/AIWorkbenchDeep.vue` 的 Vue SFC 模板解析错误（并行 WIP），已在协调文档中提示；
+   - 其余 e2e 用例仍用 `.kpis` 等旧选择器，需批量同步（非 L4 验收范围）。
+5. 是否可以提交？
+   - 可以（测试/探针/证据/账实；本地提交不 push）；Feature 保持 active/partial，真实资产与几何精度仍未验。
