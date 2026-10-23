@@ -16,6 +16,7 @@ scope:
   - 一键验收：tools/l4 acceptance.mjs + acceptance-lib.mjs；CI 门禁 .github/workflows/l4-acceptance.yml（单元 / 工具链 / 验收三段）
   - SIMULATED 演练：tools/db/gen-l4-sim-asset.mjs 生成 162 栋演练资产并跑全流程（生成/校验/导入/上线/回落/回滚）
   - 采购与自采准备：l4-procurement-spec / l4-self-collect-plan / l4-pilot-factory-package 与 RFQ 模板、比价表（暂停执行，待授权）
+  - 真实资产验收入口（2026-10-23）：docs/3d/l4-vendor-dataset-spec.md（交付包规格与三路径授权点）+ tools/l4/verify-vendor-package.mjs（pass/needs_human/fail 判定，不宣称精度达标）+ DRY-RUN 证据
   out:
   - 不接入真实 L4 资产：采购与自采均暂停（2026-10-22 老卢决定），不做对外询价、不飞行、不采购
   - 不含室内细节（CityGML LOD4 室内另立范围）
@@ -25,13 +26,14 @@ acceptance:
   - 三园区占位 / SIMULATED 资产可加载、可切白盒、可回切 L4；清单异常（500）时自动回落白盒，mode=whitebox
   - 一键验收 report.json 0 fail（PASS ×2：smoke-sim 60 FPS、smoke-demo 56 FPS）
   - 贴地偏移 ≤0.2m（实测 0m）；L4↔白盒画面差异 ≥1%（实测 4.57% / 3.40%）；页面级与控制台错误 0
-  - L4 相关 3 个测试文件共 53 例通过（modelPrecision 20 / acceptance-lib 14 / tools 19）
+  - L4 相关 3 个测试文件共 62 例通过（modelPrecision 20 / acceptance-lib 14 / tools 28，2026-10-23 复测）
   - e2e panorama-l4 3 条通过（默认加载 / 切换 / 回落）；typecheck 0
   - 全仓 135 文件 / 1242 例通过（2026-10-22 19:04 复测）
   - 占位资产在 UI、文档、证据三处显式标注，任何证据不得表述为真实 L4 精度
+  - 真实交付包核验：合规包 → `needs_human`（0 error，精度留人工）；缺 license/crs/qa/控制点/覆盖 → fail；SIMULATED 默认 fail（须显式允许）
 loop:
   current_step: commit
-  iteration: 1
+  iteration: 2
 evidence:
   tests: pass
   build: pass
@@ -48,10 +50,12 @@ verification:
   - curl -s http://127.0.0.1:39010/RestFul/Rebuild/Tileset
   acceptance:
   - pnpm l4:acceptance（前置：BFF 39010 + dev 5273 + 系统 Chrome）
+  - node tools/l4/verify-vendor-package.mjs --dir <vendor-package>（真实资产验收入口；DRY-RUN 见 harness/l4-acceptance/vendor-dryrun/）
   waivers:
     screenshots: 截图二进制归档在主项目仓库 harness/l4-acceptance/{smoke-sim,smoke-demo}/ 与 harness/l4-evidence/（report.md / report.json 同为证据），GPCF 只登记路径与判定口径，不重复存二进制；占位资产截图的精度含义以三处标注为准。
 blockers:
 - 真实 L4 资产未接入：采购、自采、合规外部数据三条路径均未授权（2026-10-22 决定暂停自采）；真实几何精度需供应商质检或实测后方可验收
+- 验收复跑被阻塞（2026-10-23）：并行会话 pano R 系列重构在途回归（登录后找不到「全景态势」菜单/全景入口），L4 一键验收与 e2e 均无法在当前工作树跑通；待其收口后重跑（非 L4 代码回归）
 ui_product_first_control:
   version: v1.1
   applicability: direct
@@ -67,4 +71,4 @@ ui_product_first_control:
     evidence_overexposure_gate: pass
   status_ceiling: partial
 created_at: "2026-10-22T11:04:30+00:00"
-updated_at: "2026-10-22T11:30:00+00:00"
+updated_at: "2026-10-23T00:05:00+00:00"
