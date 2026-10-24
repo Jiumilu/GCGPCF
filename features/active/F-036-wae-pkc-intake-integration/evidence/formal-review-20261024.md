@@ -7,7 +7,13 @@ domain: governance
 status: controlled
 version: v1.0
 owner: GPCF
+kds_space: 开发
+kds_path: 开发/91-治理与验收/features/active/F-036-wae-pkc-intake-integration/evidence/formal-review-20261024.md
+source_path: features/active/F-036-wae-pkc-intake-integration/evidence/formal-review-20261024.md
+sync_direction: bidirectional
 last_reviewed: 2026-10-24
+supersedes: []
+superseded_by: []
 ---
 
 # F-036 正式接入评审记录（2026-10-24）
@@ -43,3 +49,9 @@ PKC 在 WAE 的注册与首批接入演练：placement/manifests/menus、PkcInta
 - CSP：`frame-ancestors` 白名单内 iframe 正常、白名单外被阻止（evidence/csp-20261024）。
 - SSO/403：设计预案已记录四方案（evidence/sso-403-design-20261024.md）；未实现。
 - 结论不变：conditional，不批准关闭；生产部署/SSO/403 与属主签字仍是关闭条件。
+
+## 6. 2026-10-24 补充：401/403 双端消息链
+
+- WAE 708d02e：监听 pkc:embed-ready / pkc:auth-error，显示登录/权限提示。
+- PKC 90dbbf3a：embedBridge 上报 401/403，cachedFetch 触发。
+- 正式评审结论仍 conditional；生产部署/正式 SSO/属主签字未满足。
