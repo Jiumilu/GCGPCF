@@ -5,8 +5,8 @@
 schema_version: "1.0"
 generated_at: "2026-10-22T05:40:00+08:00"
 ledger_ref: "09-status/globalcloud-project-group-single-authorization-ledger-v1.0.md"
-authorization_granted_count: 27
-action_executed_count: 20
+authorization_granted_count: 28
+action_executed_count: 21
 pending_execution_count: 8
 receipts:
   - auth_id: AUTH-GPCF-SCHEME-REVIEW-20260626
@@ -337,4 +337,16 @@ receipts:
     expires_at: "2027-01-20T23:59:59+08:00"
     evidence: "docs/reports/f032-m0-review-ruling-20261024.md"
     review_conclusion: "M0 通过；契约冻结 v1.0（PQC 侧版本号待属主落盘）；契约已登记 controlled；O-1/O-2 已裁定"
+    revoked_at: null
+  - auth_id: AUTH-PG-P06-INHERITANCE-20261024
+    granted_at: "2026-10-24T11:35:00+08:00"
+    granted_by: "老卢"
+    grant_basis: "2026-10-24 11:34 问答：授权在 WAME/PVA 两份总体方案各加 1 行继承声明（gate stop 0.856 已确认）"
+    repo: "GlobalCloud WAME / GlobalCloud PVA"
+    scope: "cross_repo_inheritance_declaration"
+    actions_allowed: ["read", "append_inheritance_line"]
+    actions_forbidden: ["commit", "push", "content_change", "delete"]
+    expires_at: "2026-11-07T23:59:59+08:00"
+    evidence: "docs/reports/p06-inheritance-line-trace-20261024.md"
+    review_conclusion: "各 +1 行；validate_project_plan_inheritance exit 1→0；未提交跨仓"
     revoked_at: null

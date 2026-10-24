@@ -43,3 +43,4 @@
 {"id": "d043", "time": "2026-10-24T07:41:00+08:00", "kind": "decide", "question": "KDS 空白清理授权范围（一行→全部）", "answer": "授权清全部空白（模型 99.3%），9 文件、纯空白、不提交", "none": 0.0089, "adopted": "用户问答确认", "auth_id": "AUTH-PG-KDS-WHITESPACE-20261024"}
 {"id": "d044", "time": "2026-10-24T07:41:00+08:00", "kind": "decide", "question": "F-032 方向冲突（真实客户 vs 合成试点）", "answer": "真实客户 A1-A4 为主线（模型 96.0%）；合成仅前置验证、不计 C_real", "none": 0.0089, "adopted": "用户问答确认", "auth_id": "AUTH-PG-PQC-REAL-PILOT-20261022"}
 {"id": "d045", "time": "2026-10-24T11:26:00+08:00", "kind": "decide", "question": "F-032 M0 评审 + O-1/O-2 + 契约登记", "answer": "M0 通过、契约冻 v1.0；O-1 按实施现状；O-2 合并 5 类；登记 controlled", "none": 0.0094, "adopted": "用户问答确认", "auth_id": "AUTH-PG-F032-M0-20261024"}
+{"id": "d046", "time": "2026-10-24T11:35:00+08:00", "kind": "decide", "question": "P06 跨仓继承声明补行授权", "answer": "授权 WAME/PVA 各加 1 行；inheritance 校验 exit 0", "none": 0.0134, "adopted": "用户问答确认", "auth_id": "AUTH-PG-P06-INHERITANCE-20261024"}

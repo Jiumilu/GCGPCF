@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-10-24T09:34:06.077153+08:00",
+  "generated_at": "2026-10-24T11:33:52.769695+08:00",
   "freshness_hours": 12,
   "freshness_ok": true,
   "project_count": 29,
@@ -34,7 +34,6 @@
     "GlobalCloud Brain",
     "GlobalCloud XiaoC",
     "GlobalCloud GPC",
-    "GlobalCloud GPCF",
     "GlobalCloud MMC",
     "GlobalCloud XiaoG",
     "GlobalCloud PKC",
@@ -71,7 +70,6 @@
   "stable_ahead": [
     "GlobalCloud Brain",
     "GlobalCloud GPC",
-    "GlobalCloud GPCF",
     "GlobalCloud MMC",
     "GlobalCloud Mem",
     "GlobalCloud PKC",
@@ -116,7 +114,7 @@
   ],
   "pass_repo_count": 3,
   "bootstrap_window": false,
-  "previous_generated_at": "2026-10-24T00:13:10.443005+08:00",
+  "previous_generated_at": "2026-10-24T09:34:06.077153+08:00",
   "repo_heads": {
     "GlobalCloud AAAS": "f6da33ae462a784b2779311781eba6a588a1eaf0",
     "GlobalCloud Brain": "8edd9b2ec06eec25658e62703c4d251fbff6530a",
@@ -134,7 +132,7 @@
     "GlobalCloud PVA": "0f2474750fe750d6056d026da2f426300d70dc4b",
     "GlobalCloud SOP": "30b16c585fb8983c046da7dacbdf604844be6ba8",
     "GlobalCloud PKC": "80779af3fa52d5e17eb499575760fc8aa9d1cd8e",
-    "GlobalCloud XGD": "e4a253ff8095327638d2f9b42497861ddaec4be7",
+    "GlobalCloud XGD": "52883311a6c832747162acc91bc18178a78d5435",
     "GlobalCloud ICP": "8ea16a5079f5ae58e26236393a0e001ca20457ef",
     "GlobalCloud PQC": "c25fd561eb77b679a5827b85e9a16ebe2cee49d4",
     "GlobalCloud SpaceAI Platform": "dd4d2e0517bdfab25f97777391481f0b1a40f893",
@@ -421,10 +419,11 @@
       ]
     },
     "GlobalCloud WAME": {
-      "dirty_count": 6,
+      "dirty_count": 7,
       "ahead": 0,
       "behind": 0,
       "paths": [
+        "\"GlobalCloud WAME \\346\\200\\273\\344\\275\\223\\346\\226\\271\\346\\241\\210.md\"",
         "src/app/components/FunctionPanel.tsx",
         "src/app/components/Sidebar.tsx",
         "src/app/layout/GlobalCloudShell.tsx",
@@ -453,8 +452,8 @@
       "sensitive_paths": []
     },
     "GlobalCloud GPCF": {
-      "dirty_count": 406,
-      "ahead": 8,
+      "dirty_count": 408,
+      "ahead": 0,
       "behind": 0,
       "paths": [
         "$CODEX_HOME/automations/globalcloud-17/README.md",
@@ -537,6 +536,8 @@
         "\".kds/development-space/\\345\\274\\200\\345\\217\\221/91-\\346\\262\\273\\347\\220\\206\\344\\270\\216\\351\\252\\214\\346\\224\\266/09-status/document-deprecation-register.md\"",
         "\".kds/development-space/\\345\\274\\200\\345\\217\\221/91-\\346\\262\\273\\347\\220\\206\\344\\270\\216\\351\\252\\214\\346\\224\\266/09-status/globalcloud-document-control-register.md\"",
         "\".kds/development-space/\\345\\274\\200\\345\\217\\221/91-\\346\\262\\273\\347\\220\\206\\344\\270\\216\\351\\252\\214\\346\\224\\266/09-status/kds-development-space-sync-register.md\"",
+        "\".kds/development-space/\\345\\274\\200\\345\\217\\221/91-\\346\\262\\273\\347\\220\\206\\344\\270\\216\\351\\252\\214\\346\\224\\266/runtime/plan-20261022/k1k6-halfway-score-20261023.md\"",
+        "\".kds/development-space/\\345\\274\\200\\345\\217\\221/91-\\346\\262\\273\\347\\220\\206\\344\\270\\216\\351\\252\\214\\346\\224\\266/runtime/plan-20261022/long-term-goal-charter-v1.0.md\"",
         "\".kds/development-space/\\345\\274\\200\\345\\217\\221/README.md\"",
         ".kds/local-mirror-ledger.jsonl",
         ".kunsdd/draft/f423b226-0141-4aac-8df6-728f615aa3a1/README.md",
@@ -731,7 +732,6 @@
         "runtime/audit/README.md",
         "runtime/audit/decision-ledger-20261022.jsonl",
         "runtime/authorization-receipts.yaml",
-        "runtime/contract-matrix.yaml",
         "runtime/logs/F-004.jsonl",
         "runtime/logs/F-011.jsonl",
         "runtime/logs/F-015.jsonl",
@@ -753,6 +753,7 @@
         "\".kds/development-space/\\345\\274\\200\\345\\217\\221/05-KDS/docs/reports/kds-whitespace-cleanup-trace-20261024.md\"",
         "\".kds/development-space/\\345\\274\\200\\345\\217\\221/12-GPCF/docs/reports/f032-direction-ruling-20261024.md\"",
         "\".kds/development-space/\\345\\274\\200\\345\\217\\221/12-GPCF/docs/reports/f032-m0-review-ruling-20261024.md\"",
+        "\".kds/development-space/\\345\\274\\200\\345\\217\\221/12-GPCF/docs/reports/p06-inheritance-line-trace-20261024.md\"",
         "\".kds/development-space/\\345\\274\\200\\345\\217\\221/91-\\346\\262\\273\\347\\220\\206\\344\\270\\216\\351\\252\\214\\346\\224\\266/features/active/F-022-was-scenario-flow-extension/evidence/was-review-request-20261024.md\"",
         "\"02-governance/GlobalCloud\\351\\241\\271\\347\\233\\256\\347\\276\\244\\345\\206\\263\\347\\255\\226\\345\\210\\206\\347\\261\\273\\344\\270\\216\\350\\267\\257\\347\\224\\261\\350\\247\\204\\350\\214\\203_v1.0.md\"",
         "\"02-governance/_draft_v1.1-GlobalCloud\\351\\241\\271\\347\\233\\256\\347\\276\\244\\345\\206\\263\\347\\255\\226\\345\\210\\206\\347\\261\\273\\344\\270\\216\\350\\267\\257\\347\\224\\261\\350\\247\\204\\350\\214\\203.md\"",
@@ -776,8 +777,8 @@
         "docs/harness/evidence/wave1-review-pack-20261022.md",
         "docs/harness/evidence/workspace-consistency-20261023.md",
         "docs/reports/README.md",
-        "docs/reports/f032-m0-review-ruling-20261024.md",
         "docs/reports/handover-kit-20261022.md",
+        "docs/reports/p06-inheritance-line-trace-20261024.md",
         "docs/runbooks/README.md",
         "docs/runbooks/runtime-host-v1.0.md",
         "features/active/F-029-hermes-ai-runtime-admission/artifacts/.gitkeep",
