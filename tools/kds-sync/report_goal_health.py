@@ -24,6 +24,7 @@ GATES = [
     "validate_vu_ledger.py",
     "validate_asset_reuse.py",
     "validate_token_source_exceptions.py",
+    "validate_owner_receipts.py",
 ]
 
 

@@ -59,3 +59,9 @@ superseded_by: []
 | F-025 架构迭代 | GC-366 | WAME/SpaceAI/World |
 
 说明：PMC 子项为路由/跟踪，不替代属主签署；完成后回传证据路径，GPCF 再清 blocker。
+
+## 回执登记
+
+- `runtime/owner-receipts.yaml`：10 个属主回执（GC-357..GC-366），当前 10 pending。
+- 校验：`python3 tools/kds-sync/validate_owner_receipts.py`。
+- approved 必须填 signed_by/signed_at/evidence_paths，且 evidence 文件存在。
