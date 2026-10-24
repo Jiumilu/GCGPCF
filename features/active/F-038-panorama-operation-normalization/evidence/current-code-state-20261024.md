@@ -64,3 +64,8 @@ superseded_by: []
 
 - 新增 `panorama/usePanoLayers.ts`：图层状态/ID/开关外提；
 - script 1246 → **1238** 行；793 tests / tsc 0；SpaceAI main 本地提交（未 push）。
+
+## B5 外提增量 4（2026-10-24）
+
+- 新增 `panorama/usePanoSceneCards.ts`：场景谓词/左右卡列/配对并排外提；
+- script 1238 → **1231** 行；793 tests / tsc 0；SpaceAI main 本地提交（未 push）。
