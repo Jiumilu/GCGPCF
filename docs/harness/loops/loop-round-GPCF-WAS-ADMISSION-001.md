@@ -58,7 +58,7 @@ python3 /Users/lujunxiang/Projects/GlobalCloud\ V0.0.1/WAS世界资产体系/okf
 ```yaml
 project_scope: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio, WAS]
 related_asset_dimensions: [data_asset]
-related_flows: [commerce_flow]
+related_flows: [ServiceFlow]
 related_objects: [CustomerRequirementOrPlatformOrder]
 related_events: [was_project_group_admission]
 source_refs: [was://scenario/gfis-runtime-sop-e2e/S01-customer-requirement-or-platform-order]

@@ -33,7 +33,7 @@ superseded_by: []
 
 本轮只读取 WAS profile 和 GFIS 现有 source-record 阻断证据，要求：
 
-- WAS `S01-customer-requirement-or-platform-order` 保持 `data_asset`、`commerce_flow`、`pending_business_verification`、`T4`。
+- WAS `S01-customer-requirement-or-platform-order` 保持 `data_asset`、`ServiceFlow`、`pending_business_verification`、`T4`。
 - 未来真实 source-of-record 必须具备 12 个 WAS 入场字段。
 - GFIS 当前真实业务计数仍为 0，`real_business_lane=repair_required` 不变。
 - 不创建真实 source-of-record、runtime primary key、review queue、runtime intake、WAME review 或 verified artifact。
@@ -44,7 +44,7 @@ superseded_by: []
 ```yaml
 project_scope: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio, WAS]
 related_asset_dimensions: [data_asset]
-related_flows: [commerce_flow]
+related_flows: [ServiceFlow]
 related_objects: [CustomerRequirementOrPlatformOrder]
 related_events: [gfis_was_source_record_admission_gate]
 source_refs: [was://scenario/gfis-runtime-sop-e2e/S01-customer-requirement-or-platform-order]

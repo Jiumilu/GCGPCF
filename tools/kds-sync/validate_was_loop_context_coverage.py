@@ -116,7 +116,7 @@ def main() -> int:
             require(key in context, f"{source} missing context key: {key}")
         require(context["project_scope"] == PROJECT_GROUP, f"{source} project_scope mismatch")
         require("data_asset" in context["related_asset_dimensions"], f"{source} missing data_asset")
-        require("commerce_flow" in context["related_flows"], f"{source} missing commerce_flow")
+        require("ServiceFlow" in context["related_flows"], f"{source} missing ServiceFlow")
         require("CustomerRequirementOrPlatformOrder" in context["related_objects"], f"{source} missing object family")
         require(REQUIRED_WAME_GATE in context["wame_gate_refs"], f"{source} missing WAME gate ref")
         require("pending_real_source_record" in context["kds_backlinks"], f"{source} missing pending KDS backlink")
@@ -143,7 +143,7 @@ def main() -> int:
     print(
         "was_loop_context_coverage=pass "
         "loop_round_count=13 project_scope_count=14 required_context_keys=12 "
-        "asset_dimension=data_asset flow_type=commerce_flow object_family=CustomerRequirementOrPlatformOrder "
+        "asset_dimension=data_asset flow_type=ServiceFlow object_family=CustomerRequirementOrPlatformOrder "
         "real_source_records=0 valid_source_records=0 runtime_primary_key_ready=0 wame_review=0 "
         "accepted=false integrated=false production_ready=false "
         "next_round=GPCF-ONTOLOGY-WAS-SCENARIO-PROFILE-MATRIX-001"

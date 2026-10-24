@@ -64,10 +64,15 @@ superseded_by: []
   - `capital_flow` → `FinancialFlow`（1 个 wrong-dimension 负例）
 - `validate_was_real_source_record_candidate_precheck.py` 接受集合改为 `{ServiceFlow, commerce_flow}`。
 - 该 validator 复跑 pass（positive 1 / negative 4）。
-- 剩余：3 文件 / 19 处（scenario matrix 16、loop context 兼容断言 3）。
+- 剩余：2 文件 / 16 处（scenario matrix validator 8 + positive fixture 8）；loop context 已迁 ServiceFlow。
 - 注意：admission/submission 两个 validator 当前因旧路径 `WAS世界资产体系` 不存在而 fail（既有问题，与本次改动无关）。
 
 ## 2026-10-24 批 2 兼容层收紧
 
 - admission/submission/precheck 三个 validator 的 flow 断言已收紧为 `ServiceFlow`；
 - 三个 validator 均 pass；旧流名仅余 scenario matrix（需批 1 决策）与 loop context 历史断言。
+
+## 2026-10-24 loop context 迁移
+
+- 13 个 covered loop 文档的 `loop_was_context.related_flows` 由 `commerce_flow` 改为 `ServiceFlow`；
+- `validate_was_loop_context_coverage.py` 期望与输出同步；validator pass。
