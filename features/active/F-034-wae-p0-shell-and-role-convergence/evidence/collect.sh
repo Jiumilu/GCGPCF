@@ -29,4 +29,5 @@ run 18-e2e-pixel 900 pnpm e2e:pixel --compare
 run 19-e2e-panel-layout 900 pnpm e2e:panel-layout
 run 20-m3-b5-visual 900 pnpm e2e:m3-b5-visual
 run 21-e2e-task-flow 600 pnpm e2e:task-flow
+run 22-e2e-embed-drill 900 pnpm e2e:embed-drill
 echo "DONE"

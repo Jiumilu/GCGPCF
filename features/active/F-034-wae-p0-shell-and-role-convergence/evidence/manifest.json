@@ -1,18 +1,18 @@
 {
   "feature": "F-034",
   "name": "wae-p0-shell-and-role-convergence（WAE 侧证据包）",
-  "generated_at": "2026-10-24T22:36:44.736Z",
+  "generated_at": "2026-10-24T22:43:12.432Z",
   "repo": "GlobalCloud WAE",
   "branch": "refactor/ui-spec-wae",
-  "commit": "541c81b330ad0955741fa6f868310eb2a2185389",
+  "commit": "3fda97865a7194ad5273fccf4b4bc5508222699e",
   "discipline": {
     "status_ceiling": "F-034 至多 ready_for_review；本清单不提升任何状态",
     "replay": "见 docs/evidence/F-034/README.md（采集脚本 + pnpm evidence:collect）"
   },
   "archive_target": "GlobalCloud GPCF/features/active/F-034-wae-p0-shell-and-role-convergence/evidence/（跨仓写入，待老卢授权；本清单为待复制源）",
   "counts": {
-    "total": 21,
-    "pass": 21,
+    "total": 22,
+    "pass": 22,
     "expected_diff": 0,
     "skip": 0,
     "fail": 0,
@@ -423,6 +423,28 @@
       ],
       "note": "真实 dev + 临时身份：登录→统一工作台→PKC 候选页→服务控制台→回 PKC 页，8 步 + pageerror=0",
       "tail": "✓ ⑤ 全流程 pageerror=0 — 0 条 ⏎  ⏎ 端到端任务流：**全部通过**（报告：.e2e-task-flow-report.md）"
+    },
+    {
+      "id": "22-e2e-embed-drill",
+      "kind": "e2e",
+      "title": "真实跨源嵌入演练（WAE ⇄ PKC，不同端口=不同源）",
+      "command": "pnpm e2e:embed-drill",
+      "log": "docs/evidence/F-034/logs/22-e2e-embed-drill.log",
+      "exit": 0,
+      "result": "pass",
+      "artifacts": [
+        {
+          "path": "docs/evidence/F-034/screens/pkc-embed-drill-20261025.png",
+          "bytes": 283975,
+          "sha256": "4625eb8081546cd8ae53ba1aa306ba1ac6db32d12f12ef43ec1f6d62b7dec5be"
+        }
+      ],
+      "docs": [
+        "docs/access/PKC接入检查表_v0.1.md",
+        "docs/plan/F-034_ready_for_review_评估_20261025.md"
+      ],
+      "note": "本机双 dev 等价验证：CSP frame-ancestors 放行 + B2 wae:ready + B3 host-idp 身份应用（PKC 侧 dataset 可观测）+ 截图；生产域名/TLS 仍待运维",
+      "tail": "  （附注：被嵌应用后端依赖不可达 8 条，如 http://localhost:8000/api/mmc/v1/health net::ERR_EMPTY_RESPONSE） ⏎  ⏎ 真实跨源嵌入演练：**全部通过**（报告：.e2e-embed-drill-report.md）"
     }
   ]
 }
