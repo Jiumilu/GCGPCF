@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-10-24T15:17:50+0800",
+  "generated_at": "2026-10-24T15:21:53+0800",
   "gates": [
     {
       "gate": "loop_document_gate.py",
       "ok": true,
-      "seconds": 15.9
+      "seconds": 12.6
     },
     {
       "gate": "validate_contract_matrix.py",
@@ -14,7 +14,7 @@
     {
       "gate": "validate_xap_error_code_registry.py",
       "ok": true,
-      "seconds": 0.1
+      "seconds": 0.0
     },
     {
       "gate": "validate_contract_version_drift.py",
@@ -29,7 +29,7 @@
     {
       "gate": "validate_gpcf_2_feature_workspace.py",
       "ok": true,
-      "seconds": 0.4
+      "seconds": 0.3
     },
     {
       "gate": "validate_project_group_caliber_baseline.py",
@@ -64,7 +64,7 @@
   ],
   "gates_pass": 12,
   "gates_total": 12,
-  "active_feature_count": 16,
-  "closed_feature_count": 21,
+  "active_feature_count": 15,
+  "closed_feature_count": 22,
   "C_dev": 41.53
 }

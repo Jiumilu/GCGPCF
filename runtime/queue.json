@@ -237,11 +237,11 @@
       "name": "icp-industry-console",
       "project": "icp",
       "priority": "P1",
-      "status": "evaluated",
+      "status": "closed",
       "current_role": "Evaluator",
       "workspace": "features/done/F-019-icp-industry-console",
       "created_at": "2026-10-14T02:05:18+00:00",
-      "updated_at": "2026-10-14T02:06:34+00:00"
+      "updated_at": "2026-10-24T13:20:00+00:00"
     },
     {
       "id": "F-020",
