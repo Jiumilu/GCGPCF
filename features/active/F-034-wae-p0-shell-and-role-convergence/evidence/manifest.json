@@ -1,10 +1,10 @@
 {
   "feature": "F-034",
   "name": "wae-p0-shell-and-role-convergence（WAE 侧证据包）",
-  "generated_at": "2026-10-24T22:31:21.436Z",
+  "generated_at": "2026-10-24T22:36:44.736Z",
   "repo": "GlobalCloud WAE",
   "branch": "refactor/ui-spec-wae",
-  "commit": "622e942b82818eaed150e6d4f03a9da2f8396769",
+  "commit": "541c81b330ad0955741fa6f868310eb2a2185389",
   "discipline": {
     "status_ceiling": "F-034 至多 ready_for_review；本清单不提升任何状态",
     "replay": "见 docs/evidence/F-034/README.md（采集脚本 + pnpm evidence:collect）"
@@ -53,7 +53,7 @@
       "result": "pass",
       "artifacts": [],
       "docs": [],
-      "tail": "      Tests  163 passed (163) ⏎    Start at  06:16:48 ⏎    Duration  13.08s (transform 1.09s, setup 606ms, import 2.66s, tests 3.22s, environment 3.91s)"
+      "tail": "      Tests  173 passed (173) ⏎    Start at  06:35:53 ⏎    Duration  15.36s (transform 979ms, setup 775ms, import 2.96s, tests 3.92s, environment 4.72s)"
     },
     {
       "id": "04-wame-build",
@@ -65,7 +65,7 @@
       "result": "pass",
       "artifacts": [],
       "docs": [],
-      "tail": "- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks ⏎ - Adjust chunk size limit for this warning via build.chunkSizeWarningLimit. ⏎ ✓ built in 2.81s"
+      "tail": "- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks ⏎ - Adjust chunk size limit for this warning via build.chunkSizeWarningLimit. ⏎ ✓ built in 2.83s"
     },
     {
       "id": "05-e2e-dual-role",

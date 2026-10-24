@@ -16,18 +16,20 @@ supersedes: []
 superseded_by: []
 ---
 
-# 归档说明（F-034 WAE 侧证据包，v7 · 2026-10-25 刷新）
+# 归档说明（F-034 WAE 侧证据包，v8 · 2026-10-25 刷新）
 
 | 项 | 内容 |
 |---|---|
 | 来源仓 | `GlobalCloud WAE`（分支 `refactor/ui-spec-wae`，提交 `ac7e5c7`） |
 | 源路径 | `docs/evidence/F-034/`（**21 项：21 pass / 0 expected_diff / 0 fail**） |
-| 归档时间 | 2026-10-25（v7；v1 12 / v2 15 / v3 17 / v4 19 / v5 19 / v6 20） |
+| 归档时间 | 2026-10-25（v8；v1 12 / v2 15 / v3 17 / v4 19 / v5 19 / v6 20 / v7 21） |
 | 授权 | 老卢 2026-10-24 跨仓解除阻塞授权延续 |
 | 范围 | 仅复制/更新证据文件；Feature 状态仍 `ready_for_review`（老卢 2026-10-25 确认，`1a67aa746`） |
 | 重放 | 回 WAE 仓：`bash docs/evidence/F-034/collect.sh` → `pnpm evidence:collect` |
 
-**v7 变化**：新增第 21 项 **端到端任务流**（真实 dev + 临时身份：登录→统一工作台→PKC 候选页→服务控制台→回 PKC 页，**8/8 步**，pageerror=0）——同时作为 `task_flow_e2e_status` 的运行时证据；`evidence_overexposure_gate` 以第 15 项（5 页 0 命中 + 金丝雀 6/6）为运行时证据（见 `evidence/runtime-evidence-20261025.md`，`c50d9a14e`）。
+**v8 变化**：新增 A1 落位后的日志刷新（WAME 25 文件/173 例、双角色 6/6、任务流 8/8）；Brain/PVAOS 候选入口页已在 WAE 落位（placement+菜单+页面，见 WAE 提交 541c81b），证据包项数不变（21 项全 pass）。
+
+**v7 要点**：新增第 21 项 **端到端任务流**（真实 dev + 临时身份：登录→统一工作台→PKC 候选页→服务控制台→回 PKC 页，**8/8 步**，pageerror=0）——同时作为 `task_flow_e2e_status` 的运行时证据；`evidence_overexposure_gate` 以第 15 项（5 页 0 命中 + 金丝雀 6/6）为运行时证据（见 `evidence/runtime-evidence-20261025.md`，`c50d9a14e`）。
 
 **B5 基线**（v6 起）：`visual/m3-lines/` 10 张（PKC 3 / Brain 4 / PVAOS 3，pageerror=0）；iframe 隔离下为「后置基线」，「前」取各仓 git 历史；Brain 截图含 KDS/模型不可用如实降级态。
 
