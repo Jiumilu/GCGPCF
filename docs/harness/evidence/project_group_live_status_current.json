@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-10-24T19:22:36.227237+08:00",
+  "generated_at": "2026-10-24T19:53:22.145007+08:00",
   "freshness_hours": 12,
   "freshness_ok": true,
   "project_count": 29,
@@ -133,7 +133,7 @@
   ],
   "pass_repo_count": 3,
   "bootstrap_window": false,
-  "previous_generated_at": "2026-10-24T18:59:56.414179+08:00",
+  "previous_generated_at": "2026-10-24T19:22:36.227237+08:00",
   "repo_heads": {
     "GlobalCloud AAAS": "56d9f6af0e8097ff75867e8a8bf1325b5023f7e8",
     "GlobalCloud Brain": "84717b7e47f93b5f859ec691543130020154685e",
@@ -158,7 +158,7 @@
     "GlobalCloud SpaceAI Studio": "a33d51add39f74ae305dd15fa9d95a881870d55b",
     "GlobalCloud World": "099a8f2e81ff4a817833b29a1355f82d336ec334",
     "GlobalCloud Mem": "5d143c1006ed1d0c8ee0673087e1a7307472f855",
-    "GlobalCloud WAE": "9a21eeea0943e85e9340cbb8d89dbd5ec388789b",
+    "GlobalCloud WAE": "5a8e34ee83509592fe2271c8e6101a0ef1af7007",
     "GlobalCloud PMC": "aee0434cca99edec438cb021725eb60ca668b20d",
     "GlobalCloud PDC": "dc4f75bd30d92252a7916ff500d5baf28ed6bf4e",
     "GlobalCloud SLC": "93abf9dacab320c65c0fb6400be3b1d46954bf83",
@@ -478,7 +478,7 @@
     },
     "GlobalCloud GPCF": {
       "dirty_count": 424,
-      "ahead": 13,
+      "ahead": 14,
       "behind": 0,
       "paths": [
         "$CODEX_HOME/automations/globalcloud-17/README.md",
@@ -996,7 +996,7 @@
       "sensitive_paths": []
     },
     "GlobalCloud KDS": {
-      "dirty_count": 11,
+      "dirty_count": 23,
       "ahead": 0,
       "behind": 0,
       "paths": [
@@ -1005,12 +1005,24 @@
         "\"concepts/\\344\\272\\224\\347\\273\\264\\350\\257\\204\\344\\274\\260\\346\\250\\241\\345\\236\\213.md\"",
         "\"concepts/\\345\\223\\221\\351\\223\\203\\345\\236\\213\\345\\244\\215\\345\\210\\266\\351\\232\\276\\345\\272\\246\\345\\210\\206\\345\\270\\203.md\"",
         "\"concepts/\\345\\244\\215\\345\\210\\266\\351\\232\\276\\345\\272\\246\\350\\257\\204\\344\\274\\260\\346\\241\\206\\346\\236\\266.md\"",
+        "\"concepts/\\345\\267\\245\\344\\270\\232\\344\\272\\222\\350\\201\\224\\347\\275\\221\\344\\270\\211\\345\\261\\202\\346\\236\\266\\346\\236\\204.md\"",
         "\"concepts/\\351\\230\\266\\346\\242\\257\\345\\274\\217\\345\\244\\215\\345\\210\\266\\350\\267\\257\\347\\272\\277.md\"",
+        "\"entities/\\346\\231\\272\\346\\205\\247\\345\\267\\245\\345\\216\\202\\344\\270\\216\\347\\273\\277\\350\\211\\262\\344\\276\\233\\345\\272\\224\\351\\223\\276\\345\\271\\263\\345\\217\\260\\346\\226\\271\\346\\241\\210.md\"",
         "wiki/index.md",
         "wiki/log.md",
         "wiki/sources/research--2026-05-14.md",
         "wiki/sources/research-24-2026-05-14.md",
-        "\"concepts/\\345\\217\\243\\344\\273\\244\\351\\251\\261\\345\\212\\250-RACI\\344\\277\\235\\351\\232\\234\\345\\217\\214\\345\\261\\202\\346\\262\\273\\347\\220\\206\\346\\234\\272\\345\\210\\266.md\""
+        "wiki/sources/research-24kpi-2026-05-14.md",
+        "wiki/sources/research-case-009-2026-05-14.md",
+        "wiki/sources/research-case-010-2026-05-14.md",
+        "\"concepts/24\\345\\255\\227\\344\\275\\223\\347\\263\\273\\345\\215\\217\\345\\220\\214\\344\\273\\252\\350\\241\\250\\347\\233\\230.md\"",
+        "\"concepts/\\345\\217\\243\\344\\273\\244\\351\\251\\261\\345\\212\\250-RACI\\344\\277\\235\\351\\232\\234\\345\\217\\214\\345\\261\\202\\346\\262\\273\\347\\220\\206\\346\\234\\272\\345\\210\\266.md\"",
+        "\"concepts/\\346\\225\\260\\345\\255\\227\\350\\203\\275\\347\\242\\263\\347\\256\\241\\347\\220\\206\\345\\271\\263\\345\\217\\260.md\"",
+        "\"concepts/\\346\\267\\267\\345\\220\\210\\347\\273\\251\\346\\225\\210\\346\\250\\241\\345\\274\\217-OKR-KPI.md\"",
+        "\"concepts/\\347\\201\\257\\345\\241\\224\\345\\267\\245\\345\\216\\202\\345\\257\\271\\346\\240\\207.md\"",
+        "\"concepts/\\347\\273\\277\\350\\211\\262\\345\\267\\245\\345\\216\\202\\347\\224\\263\\346\\212\\245\\346\\265\\201\\347\\250\\213.md\"",
+        "\"concepts/\\351\\242\\204\\346\\265\\213\\346\\200\\247\\347\\273\\264\\346\\212\\244.md\"",
+        "\"wiki/findings/CASE-009-\\351\\207\\217\\345\\214\\226\\346\\224\\266\\347\\233\\212\\347\\233\\256\\346\\240\\207-2026-05-14.md\""
       ],
       "sensitive_paths": []
     },
@@ -1234,18 +1246,24 @@
       "sensitive_paths": []
     },
     "GlobalCloud WAE": {
-      "dirty_count": 32,
-      "ahead": 48,
+      "dirty_count": 38,
+      "ahead": 65,
       "behind": 0,
       "paths": [
         "apps/wame/src/app/apps/AppsShell.tsx",
+        "packages/app-registry/src/diagnose/aggregate.test.ts",
+        "packages/app-registry/src/diagnose/aggregate.ts",
+        "packages/app-registry/src/diagnose/types.ts",
         "packages/app-registry/src/index.ts",
+        "scripts/diagnose.mts",
         "\"docs/analysis/DSH\\345\\200\\237\\351\\211\\264_00_\\346\\200\\273\\346\\212\\245\\345\\221\\212_20261024.md\"",
         "\"docs/analysis/DSH\\345\\200\\237\\351\\211\\264_01_\\346\\241\\206\\346\\236\\266\\344\\270\\216\\345\\267\\245\\347\\250\\213\\346\\262\\273\\347\\220\\206_20261024.md\"",
         "\"docs/analysis/DSH\\345\\200\\237\\351\\211\\264_02_\\347\\225\\214\\351\\235\\242\\350\\256\\276\\350\\256\\241_20261024.md\"",
         "\"docs/analysis/DSH\\345\\200\\237\\351\\211\\264_03_WAE\\347\\216\\260\\347\\212\\266\\345\\237\\272\\347\\272\\277_20261024.md\"",
-        "docs/evidence/R1/rehearse-release/2026-10-24/01-rehearse-full.txt",
-        "docs/evidence/R1/rehearse-release/2026-10-24/artifacts/rehearse.json",
+        "docs/evidence/R1/diagnose-g4/2026-10-24/00-baseline-human.txt",
+        "docs/evidence/R1/diagnose-g4/2026-10-24/artifacts/after.json",
+        "docs/evidence/R1/diagnose-g4/2026-10-24/artifacts/before.json",
+        "docs/evidence/R1/diagnose-g4/2026-10-24/artifacts/before.sha256",
         "packages/adopted-dsh/README.md",
         "packages/adopted-dsh/THIRD_PARTY_NOTICES.md",
         "packages/adopted-dsh/package.json",
