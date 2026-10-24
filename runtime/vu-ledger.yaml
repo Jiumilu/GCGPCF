@@ -694,8 +694,8 @@ vu_units:
   object: 节点/池/场景控制台记录
   source_of_record: ICP 本地 HTTP 服务
   acceptor: ICP owner
-  stage: S2
-  stage_evidence: 10 项测试 + 契约门禁 + 本地 HTTP smoke 通过；control register 记 candidate（仅 fixture/development 闭环）
+  stage: S3
+  stage_evidence: F-019 已 closed：10 项测试 + 契约门禁 + 本地 HTTP smoke + API 5/5 + pytest 33；summary pass
   data_class: fixture
   inferred: true
   notes: fixture 闭环，按纪律不升 S4
@@ -1072,7 +1072,7 @@ vu_units:
   source_of_record: WAE 仓 docs
   acceptor: WAE owner
   stage: S1
-  stage_evidence: 唯一总体方案 pending_unique_plan；实施方案待建立
+  stage_evidence: 总体方案 v1.2 controlled/confirmed（老卢批准）；框架分级接入实施方案 v1.0 送审；唯一路线仍待拍板
   data_class: fixture
   inferred: true
   notes: 方案未确认
@@ -1082,11 +1082,11 @@ vu_units:
   scene: 外壳解耦/令牌收口/侧栏统一/状态语义层
   authority: WAE 前端组
   object: 界面外壳与令牌配置
-  source_of_record: 无
+  source_of_record: WAE 仓（packages/ui-tokens + apps/wame）
   acceptor: WAE owner
-  stage: S0
-  stage_evidence: P0 四项全部未开始
-  data_class: none
+  stage: S2
+  stage_evidence: 2026-10-24 复核：外壳解耦已落（A2）、WAE 单一令牌源 76 sha=54729cdf、WAE/WAME 侧栏插件+契约、状态语义部分；WAE 1475 tests/build pass
+  data_class: fixture
   inferred: true
   notes: 零实现
 - vu_id: WAE-VU-03
