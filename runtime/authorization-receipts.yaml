@@ -5,8 +5,8 @@
 schema_version: "1.0"
 generated_at: "2026-10-22T05:40:00+08:00"
 ledger_ref: "09-status/globalcloud-project-group-single-authorization-ledger-v1.0.md"
-authorization_granted_count: 38
-action_executed_count: 30
+authorization_granted_count: 39
+action_executed_count: 31
 pending_execution_count: 8
 receipts:
   - auth_id: AUTH-GPCF-SCHEME-REVIEW-20260626
@@ -469,4 +469,16 @@ receipts:
     expires_at: "2027-01-20T23:59:59+08:00"
     evidence: "docs/reports/gate-check-expansion-20261024.md"
     review_conclusion: "门禁新增 inheritance/contract_matrix/master_plan_register 三项；反向验证可拦截 token 回退；caliber 因 GFIS guard 元检查不纳入（不造假）"
+    revoked_at: null
+  - auth_id: AUTH-PG-CI-ACTIVATE-20261024
+    granted_at: "2026-10-24T16:35:00+08:00"
+    granted_by: "老卢（授权自动按模型采纳）"
+    grant_basis: "decide_template(authorization_qa) probability_yes=0.7089 verdict=yes"
+    repo: "PQC/SOP/KDS/ICP/AAAS/Mem/FireQuote（7 仓）"
+    scope: "cross_repo_local_commit_prepared_workflow"
+    actions_allowed: ["read", "git_add_workflow_file", "git_local_commit"]
+    actions_forbidden: ["push", "other_file_change", "business_code_change", "delete"]
+    expires_at: "2026-11-07T23:59:59+08:00"
+    evidence: "docs/reports/ci-activation-checklist-20261024.md"
+    review_conclusion: "7 仓各本地提交 1 个 test-build.yml（未 push）；已跟踪口径 test 18→25、build 16→23；远端 CI 需属主 push 后生效"
     revoked_at: null
