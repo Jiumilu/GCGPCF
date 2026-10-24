@@ -32,7 +32,7 @@ GlobalCloud GPCF 是 GlobalCloud WAS 项目群的治理、控制、门禁、文�
 
 ## 2. 与项目群主方案的继承关系
 
-本方案继承 `GPCF:01-architecture/WAS世界资产体系总体方案.md`，并作为 `GlobalCoud GPCF` 仓内唯一当前有效项目总体方案。
+本方案继承 `GPCF:01-architecture/GlobalCloud 项目群总体方案.md`（项目群唯一总体控制性文档）；世界资产专项语义基线为 `GPCF:01-architecture/WAS世界资产体系总体方案.md`。本文件是 `GlobalCoud GPCF` 仓内唯一当前有效项目总体方案。
 
 `01-architecture/WAS世界资产体系总体方案.md` 是项目群唯一总体控制性文档；本文件是 GPCF 作为治理项目的项目级总体方案。主方案变化必须经本项目影响评估后传导到所有相关项目方案。本方案变化必须先回流主方案或 Change Proposal，再传导到受影响项目。未经用户确认的结构性变化只能登记为 `draft`、`candidate`、`partial`、`pending` 或 `repair_required`。
 
