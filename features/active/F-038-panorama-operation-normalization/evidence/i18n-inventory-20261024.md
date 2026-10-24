@@ -90,3 +90,8 @@ superseded_by: []
 
 - 关闭/搜索 placeholder/精度/图层提示/收藏空态/场景过滤/小应用/实时流/语音/CWME 控制台与按钮改 `ctx.T()`；
 - 793 tests / tsc 0；SpaceAI main 本地提交（未 push）。
+
+## 阶段 1 批次 10（PanoramaBubbles，2026-10-24）
+
+- 气泡标题按钮/行标签/摄像机/当前画面/AI 输入/派单选项/备注/提交/图片 alt 改 T()；
+- 793 tests / tsc 0；SpaceAI main 本地提交（未 push）。
