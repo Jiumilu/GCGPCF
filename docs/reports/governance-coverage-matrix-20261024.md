@@ -20,7 +20,9 @@ superseded_by: []
 
 一份表把此前的三项审计合到一起：**总体方案继承 / 本地门禁委托 / CI（standards·test·build，均取远端生效口径）**。
 
-## 1. 覆盖矩阵
+## 1. 覆盖矩阵（由脚本生成，可复跑）
+
+复跑：`python3 scripts/gpcf_governance_matrix.py`（加 `--json` 取机器可读）
 
 | 项目 | 总体方案继承 | 本地门禁 | standards | test(远端) | build(远端) |
 |---|---|---|---|---|---|
@@ -57,14 +59,14 @@ superseded_by: []
 ## 2. 统计
 
 ```
-继承: Counter({'合规': 14, '无文件': 8, '不合规': 4, '部分': 3})
- 门禁: Counter({'委托': 21, '无': 7, '正本': 1})
- standards: 29 /29 | test远端: 24 /29 | build远端: 21 /29
+继承:  {'合规': 14, '部分': 3, '不合规': 4, '无文件': 8}
+门禁: {'委托': 21, '正本': 1, '无': 7, '自实现/缺': 0}
+CI 远端: standards 29/29 · test 24/29 · build 21/29
 ```
 
-- **继承**：合规 14、部分 3、不合规 4、无文件 8（口径：根目录 `*总体方案.md` + token + 11 节）
-- **本地门禁**：委托 21、正本 1（GPCF）、**无 7**（ICP/World/GCMEM/PDC/SLC/DRC/FireQuote）
-- **CI**：standards 29/29、test 远端 24/29、build 远端 21/29
+- 继承口径：根目录 `*总体方案.md` + token + 11 节齐全 = 合规
+- 门禁口径：`tools/kds-sync/loop_document_gate.py` 含两个委托 token = 委托
+- CI 口径：**远端生效**（`origin/main` workflow 内容）
 
 ## 3. 多维度同时缺失的仓（优先处置）
 

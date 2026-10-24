@@ -449,3 +449,21 @@ def test_scan_ci_coverage_distinguishes_prepared_vs_active(tmp_path):
     prepared = module.classify(repo)
     assert prepared["test"] is True          # 工作区口径：可见
     assert prepared["active_test"] is False  # 未跟踪：不生效
+
+
+def test_governance_matrix_script_consistent():
+    """覆盖矩阵脚本：29 仓分类齐全、统计自洽。"""
+    import importlib.util
+    spec = importlib.util.spec_from_file_location(
+        "gov_matrix", ROOT / "scripts/gpcf_governance_matrix.py"
+    )
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+
+    rows = module.build_rows()
+    assert len(rows) == 29, len(rows)
+    cats = {"合规", "部分", "不合规", "无文件"}
+    assert {r["inheritance"] for r in rows} <= cats
+    gates = {"委托", "正本", "无", "自实现/缺"}
+    assert {r["gate"] for r in rows} <= gates
+    assert sum(1 for r in rows if r["gate"] == "正本") == 1  # 只有 GPCF 自己是正本
