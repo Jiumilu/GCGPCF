@@ -482,8 +482,8 @@
       "sensitive_paths": []
     },
     "GlobalCloud GPCF": {
-      "dirty_count": 413,
-      "ahead": 5,
+      "dirty_count": 414,
+      "ahead": 6,
       "behind": 0,
       "paths": [
         "$CODEX_HOME/automations/globalcloud-17/README.md",
@@ -648,7 +648,6 @@
         "docs/harness/loops/README.md",
         "docs/harness/minimum-closed-loop/README.md",
         "docs/harness/tasks/README.md",
-        "docs/reports/loop-gate-delegation-audit-20261024.md",
         "docs/standards/README.md",
         "features/active/F-012-icp-sop-foundation-coupling/evidence/owner-action-pack-20261024.md",
         "features/active/F-012-icp-sop-foundation-coupling/evidence/plan-20261024.md",
@@ -765,6 +764,7 @@
         "tools/kds-sync/README.md",
         "tools/kds-sync/validate_icp_project_registration.py",
         "tools/kds-sync/validate_project_group_external_loop_gate_delegate_baseline_20260627.py",
+        "\".kds/development-space/\\345\\274\\200\\345\\217\\221/05-KDS/docs/reports/governance-coverage-matrix-20261024.md\"",
         "\".kds/development-space/\\345\\274\\200\\345\\217\\221/05-KDS/docs/reports/inheritance-coverage-audit-20261024.md\"",
         "\".kds/development-space/\\345\\274\\200\\345\\217\\221/05-KDS/docs/reports/loop-gate-delegation-audit-20261024.md\"",
         "\".kds/development-space/\\345\\274\\200\\345\\217\\221/12-GPCF/docs/reports/ci-queue-root-cause-20261024.md\"",
@@ -804,6 +804,7 @@
         "docs/harness/evidence/wave1-review-pack-20261022.md",
         "docs/harness/evidence/workspace-consistency-20261023.md",
         "docs/reports/README.md",
+        "docs/reports/governance-coverage-matrix-20261024.md",
         "docs/runbooks/README.md",
         "docs/runbooks/runtime-host-v1.0.md",
         "features/active/F-029-hermes-ai-runtime-admission/artifacts/.gitkeep",
@@ -5485,7 +5486,7 @@
       "sensitive_paths": []
     },
     "GlobalCloud WAE": {
-      "dirty_count": 170,
+      "dirty_count": 171,
       "ahead": 1,
       "behind": 0,
       "paths": [
@@ -5578,6 +5579,7 @@
         "docs/evidence/R1/determinism-100/summary.txt",
         "docs/evidence/R1/diagnose-migration/2026-10-24/artifacts/diagnose.json",
         "docs/evidence/R1/diagnose-migration/2026-10-24/artifacts/diagnose.md",
+        "docs/evidence/R1/diagnose-migration/2026-10-24/summary.md",
         "docs/evidence/R1/manifest-v1-19of19/2026-10-24/artifacts/assembly-plan.json",
         "docs/evidence/R1/manifest-v1-19of19/2026-10-24/artifacts/check-manifest-v1.json",
         "docs/evidence/R1/manifest-v1-19of19/2026-10-24/summary.md",
