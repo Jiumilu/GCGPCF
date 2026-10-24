@@ -62,3 +62,19 @@ superseded_by: []
    - 是（仅改 status/loop/blockers/journal 与目录位置）；commit 仍需授权。不声明任何项目状态提升。
 
 > 授权记录：老卢 2026-10-22 22:0x，问答选「回滚为 active」（决策模型 `rollback_to_active` 0.9493）。
+
+## 2026-10-25 状态提升：active → ready_for_review（老卢确认，仅此一档）
+
+1. **这轮做什么？**
+   - 按老卢 2026-10-25 的确认，把 F-034 状态从 `active` 提升为 `ready_for_review`，并刷新 blockers；不触碰更高状态。
+2. **改了什么？**
+   - `feature.yaml`：`status: ready_for_review`、`updated_at`、`blockers` 重写为当前事实（验收条 5 部分、B5 未做、运维域名/TLS、PVA 既有问题、GPCF 待补运行证据）。
+   - `evidence/ready-for-review-assessment-20261025.md`：验收条 1–7 对照 + 四条线现状 + 已知阻塞 + 回放命令（WAE 侧同名文档副本）。
+3. **怎么验证？**
+   - WAE 证据包 19 项 19 pass（O2 跨仓一致：PKC 快照逐字节相同、Brain 偏离 5/28 与登记一致）；框架 136 文件/1375 例、WAME 24 文件/163 例、typecheck 0、build 0、check:apps 合规；双角色 6/6、无机器字段 0 命中、G8 12/12、G1 结构+像素、嵌入 E2E 13/13。
+4. **发现什么问题？**
+   - 验收条 5 的"真实跨域嵌入"仍待生产域名/TLS；三条线 B5 视觉对照与 WAE 侧 Brain/PVAOS 入口页未做；PVA 仓有既有类型错误与 lockfile 漂移（属 PVA 属主）。
+5. **是否可以提交？**
+   - 是（状态提升已获老卢确认，仅至 `ready_for_review`；不声明 done/accepted/生产就绪）。
+
+> 授权记录：老卢 2026-10-25，问答选「现在提 ready_for_review」（决策模型 `raise_now` 0.622）。
