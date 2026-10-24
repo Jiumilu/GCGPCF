@@ -590,8 +590,8 @@ vu_units:
   object: Feature 证据包结论
   source_of_record: GPCF runtime + features/active
   acceptor: GPCF 治理 owner
-  stage: S2
-  stage_evidence: 19 个活跃 Feature（2026-10-23）可回放；本轮关闭 F-024/F-026/F-027/F-030，ICP/F-019 关闭；api 证据已补 2 项（F-019/F-034）
+  stage: S3
+  stage_evidence: 2026-10-24 复核：17 active / closed 20 / 门禁 12/12；F-004/F-021/F-035 关闭流程可回放，F-023/F-036 证据补齐
   data_class: fixture
   inferred: true
   notes: 门禁可跑，但结论不构成真实业务证据
