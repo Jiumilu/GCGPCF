@@ -7,7 +7,13 @@ domain: governance
 status: draft
 version: v1.0
 owner: GPCF
+kds_space: 开发
+kds_path: 开发/91-治理与验收/features/active/F-038-panorama-operation-normalization/evidence/i18n-inventory-20261024.md
+source_path: features/active/F-038-panorama-operation-normalization/evidence/i18n-inventory-20261024.md
+sync_direction: bidirectional
 last_reviewed: 2026-10-24
+supersedes: []
+superseded_by: []
 ---
 
 # F-038 i18n 存量盘点
@@ -39,3 +45,9 @@ last_reviewed: 2026-10-24
 - 验证：map-3d tests 793 passed；tsc --noEmit 0。
 - SpaceAI Platform 本地提交 `92c6843`（main，未 push）。
 - 剩余：模板静态中文（~88 行）、其余脚本字面量、title/aria。
+
+## 阶段 1 批次 2（2026-10-24）
+
+- 追加迁移：告警分类、NLU 行/说明、实时流注记、飞行高度/停留选项。
+- SpaceAI 本地提交 `2c292ce`（main，未 push）。
+- 验证：793 tests / tsc 0。
