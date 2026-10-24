@@ -7,7 +7,13 @@ domain: governance
 status: draft
 version: v1.0
 owner: GPCF
+kds_space: 开发
+kds_path: 开发/91-治理与验收/features/active/F-036-wae-pkc-intake-integration/evidence/pkc-embed-bridge-20261024.md
+source_path: features/active/F-036-wae-pkc-intake-integration/evidence/pkc-embed-bridge-20261024.md
+sync_direction: bidirectional
 last_reviewed: 2026-10-24
+supersedes: []
+superseded_by: []
 ---
 
 # PKC 嵌入消息桥实现
@@ -35,3 +41,9 @@ PKC 新增 `src/lib/embedBridge.ts`：
 ## 非声明
 
 - 不声明 SSO 完成；不声明 F-036 可关闭。
+
+## 2026-10-24 补：referrer 为空时的兜底
+
+- WAE iframe 使用 `referrerPolicy="no-referrer"`，PKC 内 `document.referrer` 可能为空；
+- PKC `resolveParentOrigin` 增加 `location.ancestorOrigins[0]` 兜底，避免 401/403 消息因无 targetOrigin 而不发送；
+- PKC 提交 6daf867e；bridge 4/4、全量 151、build pass。

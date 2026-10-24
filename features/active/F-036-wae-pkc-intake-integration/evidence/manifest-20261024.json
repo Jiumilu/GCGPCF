@@ -1,7 +1,7 @@
 {
   "feature": "F-036",
   "generated_at": "2026-10-24",
-  "count": 83,
+  "count": 84,
   "files": [
     {
       "path": ".gitkeep",
@@ -324,9 +324,14 @@
       "bytes": 2391
     },
     {
+      "path": "manifest-20261024.json",
+      "sha256": "44b824f80a225837348a8fea3b6981cb52ae42e2009b3faecb6638baa0b2dd5e",
+      "bytes": 14893
+    },
+    {
       "path": "pkc-embed-bridge-20261024.md",
-      "sha256": "f907fbe938a30cce8b3e2071ff9f55f0c1d3a9903591a84aa4427c409bf639c7",
-      "bytes": 1235
+      "sha256": "ec0197c9dce39aa4f1a464e0966a7363fa4ea7e39732b367dffc24c55a803345",
+      "bytes": 1577
     },
     {
       "path": "prod-build-20261024.md",
