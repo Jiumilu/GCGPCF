@@ -31,6 +31,14 @@ evidence:
   screenshots: waived
   api: waived
   summary: pass
+verification:
+  tests:
+    - python3 tools/kds-sync/validate_gpcf_2_feature_workspace.py
+  build:
+    - python3 tools/kds-sync/check_python_bytecode.py
+  waivers:
+    api: 本 Feature 为只读图谱试点，无独立对外 HTTP 接口面；api 证据不适用，改以 tests/build 与确定性校验器为准（范围理由：只读、无服务端入口）。
+    screenshots: 图谱输出为 Markdown/Mermaid 源文件与逐条对账清单，无浏览器页面可截图；screenshots 证据不适用（范围理由：无 UI 界面）。
 blockers:
   - 业务确认人、来源读取权限、正式 SOP 版本、试点验收人待落实（不虚构任命）
   - B2—B5 放行依赖 B1 完成与各自授权流程

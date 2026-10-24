@@ -27,6 +27,14 @@ evidence:
   screenshots: waived
   api: waived
   summary: pass
+verification:
+  tests:
+    - python3 tools/kds-sync/validate_gpcf_2_feature_workspace.py
+  build:
+    - python3 tools/kds-sync/check_python_bytecode.py
+  waivers:
+    api: 本 Feature 为端到端业务流程样例（GFIS 事实 → GPC → 报价），不交付独立对外 API；api 证据不适用（范围理由：流程样例非接口交付）。
+    screenshots: 样例以数据与证据文件交付，无 UI 页面；screenshots 证据不适用（范围理由：无界面）。
 blockers:
 ui_product_first_control:
   version: v1.1
