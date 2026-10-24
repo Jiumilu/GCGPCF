@@ -20,6 +20,7 @@ superseded_by: []
 
 - 方法：对注册表 29 仓逐仓执行 `python3 _governance/tools/gc_standard.py check --repo "<仓>" --fail-on error`
 - 结论：**27/29 零 error**；2 仓 error 均来自 **R14-dirty-worktree**（属主在途改动），非代码规范违规
+- 更新（15:15）：SpaceAI Platform 经授权加 2 行 `.gitignore` 后 → **error 0**，口径变为 **28/29**（仅剩 KDS）
 
 ## 1. 结果
 

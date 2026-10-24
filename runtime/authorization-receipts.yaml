@@ -5,8 +5,8 @@
 schema_version: "1.0"
 generated_at: "2026-10-22T05:40:00+08:00"
 ledger_ref: "09-status/globalcloud-project-group-single-authorization-ledger-v1.0.md"
-authorization_granted_count: 29
-action_executed_count: 21
+authorization_granted_count: 30
+action_executed_count: 22
 pending_execution_count: 8
 receipts:
   - auth_id: AUTH-GPCF-SCHEME-REVIEW-20260626
@@ -361,4 +361,16 @@ receipts:
     expires_at: "2027-01-20T23:59:59+08:00"
     evidence: "docs/reports/step-vocabulary-normalization-20261024.md"
     review_conclusion: "仅对需老卢确认的事项按模型 top1 采纳；红线类（生产/凭据/L4 删除）仍不自动执行；needs_human 项不采纳"
+    revoked_at: null
+  - auth_id: AUTH-PG-SPACEAI-GITIGNORE-20261024
+    granted_at: "2026-10-24T15:15:00+08:00"
+    granted_by: "老卢（授权自动按模型采纳）"
+    grant_basis: "decide_template(authorization_qa) probability_yes=0.8794 verdict=yes；gate(rule=production) go=0.197"
+    repo: "GlobalCloud SpaceAI Platform"
+    scope: "cross_repo_gitignore_generated_artifacts"
+    actions_allowed: ["read", "append_gitignore_rules"]
+    actions_forbidden: ["commit", "push", "content_change", "delete", "git_rm_cached"]
+    expires_at: "2026-11-07T23:59:59+08:00"
+    evidence: "docs/reports/spaceai-gitignore-trace-20261024.md"
+    review_conclusion: "追加 data/ 与 .harness/runs/ 两条忽略；dirty 2311→38；standards error 1→0"
     revoked_at: null
