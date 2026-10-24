@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-10-24T23:03:25.354485+08:00",
+  "generated_at": "2026-10-24T23:35:04.994683+08:00",
   "freshness_hours": 12,
   "freshness_ok": true,
   "project_count": 29,
@@ -23,7 +23,6 @@
     "GlobalCloud PQC",
     "GlobalCloud SpaceAI Platform",
     "GlobalCloud World",
-    "GlobalCloud Mem",
     "GlobalCloud WAE",
     "GlobalCloud PMC",
     "GlobalCloud PDC",
@@ -38,7 +37,8 @@
     "GlobalCloud MMC",
     "GlobalCloud XiaoG",
     "GlobalCloud PKC",
-    "GlobalCloud WAE",
+    "GlobalCloud SpaceAI Platform",
+    "GlobalCloud Mem",
     "GlobalCloud SLC"
   ],
   "stable_dirty": [
@@ -66,9 +66,13 @@
     "GlobalCloud XiaoG"
   ],
   "stable_ahead": [
+    "GlobalCloud Brain",
     "GlobalCloud GPC",
+    "GlobalCloud GPCF",
     "GlobalCloud MMC",
+    "GlobalCloud PKC",
     "GlobalCloud SLC",
+    "GlobalCloud Studio",
     "GlobalCloud XiaoC",
     "GlobalCloud XiaoG"
   ],
@@ -105,10 +109,10 @@
   ],
   "pass_repo_count": 4,
   "bootstrap_window": false,
-  "previous_generated_at": "2026-10-24T22:31:28.344483+08:00",
+  "previous_generated_at": "2026-10-24T23:03:25.354485+08:00",
   "repo_heads": {
     "GlobalCloud AAAS": "2d88e17f229ec53867a2890b72ece3e1c27cd1c2",
-    "GlobalCloud Brain": "7c3d72b17f94d2de50e1980ba3a5b78104697f48",
+    "GlobalCloud Brain": "6ffe85be00071b137c3c36b30416f564f713dfcb",
     "GlobalCloud WAS": "76559f70bb3f4953500c3607ca70073f56e4e467",
     "GlobalCloud XiaoC": "a6cd9c96a3c61d5cd51f9da6e50c6b0cfd514064",
     "GlobalCloud WAME": "d56d09a48c36fdf8c40c01c43a3ad50eb8a7c1f3",
@@ -122,15 +126,15 @@
     "GlobalCloud XiaoG": "2edbea3891933ee3ee89ece1f4975e547fe9ab16",
     "GlobalCloud PVA": "3d5d916d9bc807a27c368a5dbb0325ef5efe71ff",
     "GlobalCloud SOP": "0a82e687dc891d05d2f541717aedca955c907132",
-    "GlobalCloud PKC": "708aa959c2cdd8902d3eebadda9dfe9e0aa46aa1",
+    "GlobalCloud PKC": "f1849aad50d9621edf95c93cbb97476ba28ec081",
     "GlobalCloud XGD": "6ed0bfcfcf6f964e209b898e08b94f2ac87fd5ca",
     "GlobalCloud ICP": "2c93394336486e778dbbaacfe463d326d2298721",
     "GlobalCloud PQC": "e9edb69b6ddcd4b4942c147e35976222bff3e379",
-    "GlobalCloud SpaceAI Platform": "a2bb731fb37e40537fa64e4714f44ed34da51495",
+    "GlobalCloud SpaceAI Platform": "65b6ede0d12112ffb883ce67fd33f3b3f7bbdd46",
     "GlobalCloud SpaceAI Studio": "0ca7c857e306598a8c6ec591ab54b8fe55bae8b0",
     "GlobalCloud World": "b2d639787aa4ca5194cec8269ad19c4180415001",
-    "GlobalCloud Mem": "cfe8e4d6532cf081cf6f89538297d4701672cd80",
-    "GlobalCloud WAE": "27d872dcc59df10f6c6ac7cd0df8cc2e155c81e2",
+    "GlobalCloud Mem": "2aad8fb714f94d5dc6ba3e6fec6e8f37c1cf4f04",
+    "GlobalCloud WAE": "6f8d8df92f7d4ec7c6341fad03caae0d75b6553d",
     "GlobalCloud PMC": "2e299de639c27112555feb1b6b102d5ad1e0f605",
     "GlobalCloud PDC": "76311da1080e5a70ca6d25026555fe02f0b8894a",
     "GlobalCloud SLC": "811f5a323b1a750e69864518dfeb7339e0c0c9c6",
@@ -165,7 +169,7 @@
     },
     "GlobalCloud Brain": {
       "dirty_count": 1,
-      "ahead": 1,
+      "ahead": 2,
       "behind": 0,
       "paths": [
         "\"GlobalCloud Brain \\346\\200\\273\\344\\275\\223\\346\\226\\271\\346\\241\\210.md\""
@@ -449,7 +453,7 @@
     },
     "GlobalCloud GPCF": {
       "dirty_count": 422,
-      "ahead": 2,
+      "ahead": 3,
       "behind": 0,
       "paths": [
         "$CODEX_HOME/automations/globalcloud-17/README.md",
@@ -1076,7 +1080,7 @@
     },
     "GlobalCloud PKC": {
       "dirty_count": 0,
-      "ahead": 2,
+      "ahead": 5,
       "behind": 0,
       "paths": [],
       "sensitive_paths": []
@@ -1139,7 +1143,7 @@
     },
     "GlobalCloud SpaceAI Platform": {
       "dirty_count": 35,
-      "ahead": 0,
+      "ahead": 1,
       "behind": 0,
       "paths": [
         ".gitignore",
@@ -1197,28 +1201,15 @@
       "sensitive_paths": []
     },
     "GlobalCloud Mem": {
-      "dirty_count": 12,
-      "ahead": 0,
+      "dirty_count": 0,
+      "ahead": 6,
       "behind": 0,
-      "paths": [
-        "AGENTS.md",
-        "\"GlobalCloud GCMEM \\345\\256\\236\\346\\226\\275\\346\\226\\271\\346\\241\\210.md\"",
-        "README.md",
-        "deploy/ai.globalcloud.gcmem-api.plist",
-        "docs/MASTER-DESIGN.md",
-        "docs/STATUS.md",
-        "scripts/refusal_shadow_stats.py",
-        "src/gcmem_api.py",
-        "\"docs/GCMEM-W5-\\347\\213\\254\\347\\253\\213\\351\\242\\204\\350\\257\\204-20261024.md\"",
-        "\"docs/GCMEM-\\344\\270\\213\\344\\270\\200\\351\\230\\266\\346\\256\\265\\345\\215\\207\\347\\272\\247\\346\\226\\271\\346\\241\\210-20261024.md\"",
-        "\"docs/GCMEM-\\351\\241\\271\\347\\233\\256\\347\\273\\274\\345\\220\\210\\351\\207\\215\\350\\257\\204\\346\\212\\245\\345\\221\\212-20261024.md\"",
-        "tests/test_shadow_async.py"
-      ],
+      "paths": [],
       "sensitive_paths": []
     },
     "GlobalCloud WAE": {
-      "dirty_count": 29,
-      "ahead": 3,
+      "dirty_count": 30,
+      "ahead": 0,
       "behind": 0,
       "paths": [
         "packages/app-registry/src/index.ts",
@@ -1226,6 +1217,7 @@
         "\"docs/analysis/DSH\\345\\200\\237\\351\\211\\264_01_\\346\\241\\206\\346\\236\\266\\344\\270\\216\\345\\267\\245\\347\\250\\213\\346\\262\\273\\347\\220\\206_20261024.md\"",
         "\"docs/analysis/DSH\\345\\200\\237\\351\\211\\264_02_\\347\\225\\214\\351\\235\\242\\350\\256\\276\\350\\256\\241_20261024.md\"",
         "\"docs/analysis/DSH\\345\\200\\237\\351\\211\\264_03_WAE\\347\\216\\260\\347\\212\\266\\345\\237\\272\\347\\272\\277_20261024.md\"",
+        "\"docs/plan/M3\\346\\211\\271\\346\\254\\2413_PVAOS\\345\\211\\215\\347\\275\\256_20261024.md\"",
         "packages/adopted-dsh/README.md",
         "packages/adopted-dsh/THIRD_PARTY_NOTICES.md",
         "packages/adopted-dsh/package.json",
