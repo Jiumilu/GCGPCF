@@ -79,3 +79,9 @@ superseded_by: []
 - 团队任务提示、NLU 未识别说明、卡片标题后缀、星期文案改 T()。
 - 793 tests / tsc 0；SpaceAI main 本地提交（未 push）。
 - 模板用户可见文案已基本迁完；剩余为注释/数据键/少量 aria。
+
+## 阶段 1 批次 8（PanoramaCtrl，2026-10-24）
+
+- 工厂/低空/空间检索、快照保存/空态、数据说明、检索空态/覆盖、底图标签改 `ctx.T()`；
+- 测试 mock 补 `T`（fallback）以符合 `CtrlCtx` 契约；
+- 793 tests / tsc 0；SpaceAI main 本地提交（未 push）。
