@@ -5,8 +5,8 @@
 schema_version: "1.0"
 generated_at: "2026-10-22T05:40:00+08:00"
 ledger_ref: "09-status/globalcloud-project-group-single-authorization-ledger-v1.0.md"
-authorization_granted_count: 26
-action_executed_count: 19
+authorization_granted_count: 27
+action_executed_count: 20
 pending_execution_count: 8
 receipts:
   - auth_id: AUTH-GPCF-SCHEME-REVIEW-20260626
@@ -325,4 +325,16 @@ receipts:
     expires_at: "2026-11-07T23:59:59+08:00"
     evidence: "docs/reports/kds-whitespace-cleanup-trace-20261024.md"
     review_conclusion: "9 文件纯空白清理；KDS diff --check exit 0；未改正文、未提交"
+    revoked_at: null
+  - auth_id: AUTH-PG-F032-M0-20261024
+    granted_at: "2026-10-24T11:26:00+08:00"
+    granted_by: "老卢"
+    grant_basis: "2026-10-24 11:25 问答：M0 通过并冻结契约 v1.0；O-1 按实施现状；O-2 合并 5 类；契约登记为 controlled"
+    repo: "GlobalCloud PQC"
+    scope: "pqc_external_service_m0_and_contract_registration"
+    actions_allowed: ["read", "write_contract_matrix", "write_evidence", "commit_gpcf"]
+    actions_forbidden: ["cross_repo_write", "production_deploy", "customer_data_intake", "status_promotion", "push"]
+    expires_at: "2027-01-20T23:59:59+08:00"
+    evidence: "docs/reports/f032-m0-review-ruling-20261024.md"
+    review_conclusion: "M0 通过；契约冻结 v1.0（PQC 侧版本号待属主落盘）；契约已登记 controlled；O-1/O-2 已裁定"
     revoked_at: null

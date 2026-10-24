@@ -453,8 +453,8 @@
       "sensitive_paths": []
     },
     "GlobalCloud GPCF": {
-      "dirty_count": 401,
-      "ahead": 7,
+      "dirty_count": 406,
+      "ahead": 8,
       "behind": 0,
       "paths": [
         "$CODEX_HOME/automations/globalcloud-17/README.md",
@@ -729,6 +729,9 @@
         "projects/xiaog/STATUS.md",
         "projects/xwail/STATUS.md",
         "runtime/audit/README.md",
+        "runtime/audit/decision-ledger-20261022.jsonl",
+        "runtime/authorization-receipts.yaml",
+        "runtime/contract-matrix.yaml",
         "runtime/logs/F-004.jsonl",
         "runtime/logs/F-011.jsonl",
         "runtime/logs/F-015.jsonl",
@@ -749,6 +752,7 @@
         "tools/kds-sync/validate_project_version_compatibility.py",
         "\".kds/development-space/\\345\\274\\200\\345\\217\\221/05-KDS/docs/reports/kds-whitespace-cleanup-trace-20261024.md\"",
         "\".kds/development-space/\\345\\274\\200\\345\\217\\221/12-GPCF/docs/reports/f032-direction-ruling-20261024.md\"",
+        "\".kds/development-space/\\345\\274\\200\\345\\217\\221/12-GPCF/docs/reports/f032-m0-review-ruling-20261024.md\"",
         "\".kds/development-space/\\345\\274\\200\\345\\217\\221/91-\\346\\262\\273\\347\\220\\206\\344\\270\\216\\351\\252\\214\\346\\224\\266/features/active/F-022-was-scenario-flow-extension/evidence/was-review-request-20261024.md\"",
         "\"02-governance/GlobalCloud\\351\\241\\271\\347\\233\\256\\347\\276\\244\\345\\206\\263\\347\\255\\226\\345\\210\\206\\347\\261\\273\\344\\270\\216\\350\\267\\257\\347\\224\\261\\350\\247\\204\\350\\214\\203_v1.0.md\"",
         "\"02-governance/_draft_v1.1-GlobalCloud\\351\\241\\271\\347\\233\\256\\347\\276\\244\\345\\206\\263\\347\\255\\226\\345\\210\\206\\347\\261\\273\\344\\270\\216\\350\\267\\257\\347\\224\\261\\350\\247\\204\\350\\214\\203.md\"",
@@ -772,6 +776,7 @@
         "docs/harness/evidence/wave1-review-pack-20261022.md",
         "docs/harness/evidence/workspace-consistency-20261023.md",
         "docs/reports/README.md",
+        "docs/reports/f032-m0-review-ruling-20261024.md",
         "docs/reports/handover-kit-20261022.md",
         "docs/runbooks/README.md",
         "docs/runbooks/runtime-host-v1.0.md",
