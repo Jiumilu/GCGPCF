@@ -120,3 +120,9 @@ superseded_by: []
 
 - 快捷键帮助标题/说明/aria、命令面板 placeholder/空态/说明改 T()；
 - 793 tests / tsc 0；SpaceAI main 本地提交（未 push）。
+
+## 阶段 1 批次 16（PanoramaCtrl 边角，2026-10-24）
+
+- CWME 集成/待核/回投/映射、快照计数、数据说明、收藏、层级提示、资产条提示改 `ctx.T()`；
+- 793 tests / tsc 0；SpaceAI main 本地提交（未 push）。
+- 结论：Panorama 主要组件用户可见文案已基本迁完。
