@@ -32,3 +32,10 @@ last_reviewed: 2026-10-24
 
 - 未改代码；本盘点只给迁移范围。
 - 600 行说法为含脚本注释/模板混合估算；实际 CJK 行为 270。
+
+## 2026-10-24 阶段 1 进展
+
+- `PanoramaDeep.vue`：25 处用户可见字面量改为 `T('pano.*', fallback)`（图层/场景/模式/操作/提示）。
+- 验证：map-3d tests 793 passed；tsc --noEmit 0。
+- SpaceAI Platform 本地提交 `92c6843`（main，未 push）。
+- 剩余：模板静态中文（~88 行）、其余脚本字面量、title/aria。
