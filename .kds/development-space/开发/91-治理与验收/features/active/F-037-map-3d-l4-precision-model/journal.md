@@ -200,3 +200,26 @@ superseded_by: []
    - 若园区无可用成果，退回采购或自采（均需授权）。
 5. 是否可以提交？
    - 可以（纯文档/模板 + 治理账实）；未对外发送、未签约、未收数据；不提升验收状态。
+
+### Iteration 8（2026-10-25 早 · e2e 常态化 + precision ctx 回归修复）
+
+1. 这轮做什么？
+   - 把「e2e 能跑」变成「一条命令 + 可复核证据」；顺带排查并修复 e2e 中 L4 三例突然全红的问题。
+2. 改了什么？
+   - 平台侧新增 `scripts/e2e-run.mjs`（`pnpm e2e:run`）：预检（DB/清 Vite 缓存）→ Playwright → 归档
+     `harness/e2e-runs/<ts>-<label>/{summary.json,playwright.json,README.md}`，失败退出码 1；
+   - 新增 `docs/operations/e2e-runbook.md`（基线、失败排查、新增用例约定、与 CI 的关系）；
+   - **真实回归修复**：B5-R4-5「面板自取 ctx」后，precision composable 的自登记键是 `mode/status/text/...`，
+     未映射到 CtrlCtx 的 `precisionMode/precisionStatus/precisionText/...`，`PanoramaCtrl` 读到空值 →
+     精度面板 `data-mode/data-status` 为空、`panorama-l4` 3 例全红；在 `ctrlCtx.ts::useCtrlCtx` 恢复映射；
+   - `e2e/panorama-l4.spec.ts` 登录改用 `menuItem('全景态势')` + 等 `__gcEngine.viewer`（与 L4 验收同口径）。
+3. 怎么验证？
+   - `pnpm e2e:run` → **18 passed / 0 failed / 7 skipped（65.3s）**（证据 harness/e2e-runs/2026-10-24T22-29-41-baseline3/）；
+   - `panorama-l4` 单跑 **3/3 通过**（修复后 30.4s）；
+   - L4 一键验收复跑 **PASS**（FPS 55.7，报告 harness/l4-acceptance/2026-10-24T22-30-54-386Z/）。
+4. 发现什么问题？
+   - 并行重构（B5-R4-5）把 CtrlCtx 的 precision 前缀键丢掉——说明「面板自取 ctx」这类架构改动需要
+     以 e2e/L4 验收作为回归门；本次正是常态化脚本把问题暴露出来；
+   - 首版 e2e-run 的 JSON 汇总解析对 Playwright 1.64 的 `suite.specs[].tests[]` 结构不兼容（0 用例），已修。
+5. 是否可以提交？
+   - 可以（脚本/文档/回归修复 + 证据）；UI 行为未改（仅恢复被丢的 ctx 映射）；未 push、不提升验收状态。
