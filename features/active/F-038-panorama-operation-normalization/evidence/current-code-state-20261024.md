@@ -54,3 +54,8 @@ superseded_by: []
 - 新增 `panorama/usePanoNlu.ts`：B7 一句话上屏规则解析外提；
 - `PanoramaDeep.vue` script 1273 → **1254** 行（目标 <800）；
 - 793 tests / tsc 0；SpaceAI main 本地提交（未 push）。
+
+## B5 外提增量 2（2026-10-24）
+
+- 新增 `panorama/useCardFocus.ts`：A4/A5 聚焦与双击快捷动作外提；
+- script 1254 → **1246** 行；793 tests / tsc 0；SpaceAI main 本地提交（未 push）。
