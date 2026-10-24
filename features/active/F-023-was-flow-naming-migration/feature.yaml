@@ -22,7 +22,7 @@ acceptance:
   - 迁移表与执行落痕登记进 document-control-register 与 sync-register
 loop:
   dispatched: false
-  current_step: verification
+  current_step: evaluate
   iteration: 1
 evidence:
   tests: pass   # validate_all 13/13 PASS；pipeline 契约校验 PASS（2026-10-16）——细节见 journal
@@ -32,7 +32,7 @@ evidence:
   summary: pending
 blockers:
   - 兼容窗口关闭时点（另行版本发布）待定
-  - 存量引用切换批次：GPCF 残余 11 文件/28 处已盘点（evidence/remaining-references-20261024.md）；KDS/WAME 文档待排
+  - 存量引用切换批次：GPCF 残余 11 文件/28 处已盘点；批 1/2 依赖 WAS profile/evidence，需 WAS 属主共同排期；批 3 的 p4 fixtures 已迁（ServiceFlow/FinancialFlow）；残余 6 文件/23 处（evidence/remaining-references-20261024.md）
 created_at: "2026-10-16T04:15:00+00:00"
 updated_at: "2026-10-16T04:15:00+00:00"
 ui_product_first_control:

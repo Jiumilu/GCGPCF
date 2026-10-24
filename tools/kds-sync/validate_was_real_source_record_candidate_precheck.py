@@ -142,7 +142,7 @@ def validate_candidate(candidate: dict[str, Any]) -> list[str]:
         failures.append("was_object_family_mismatch")
     if candidate.get("assetDimension") != "data_asset":
         failures.append("asset_dimension_mismatch")
-    if candidate.get("flowType") != "commerce_flow":
+    if candidate.get("flowType") not in {"ServiceFlow", "commerce_flow"}:
         failures.append("flow_type_mismatch")
     if candidate.get("lifecycle") != "pending_business_verification":
         failures.append("lifecycle_mismatch")

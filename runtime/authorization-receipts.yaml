@@ -5,7 +5,7 @@
 schema_version: "1.0"
 generated_at: "2026-10-22T05:40:00+08:00"
 ledger_ref: "09-status/globalcloud-project-group-single-authorization-ledger-v1.0.md"
-authorization_granted_count: 28
+authorization_granted_count: 29
 action_executed_count: 21
 pending_execution_count: 8
 receipts:
@@ -349,4 +349,16 @@ receipts:
     expires_at: "2026-11-07T23:59:59+08:00"
     evidence: "docs/reports/p06-inheritance-line-trace-20261024.md"
     review_conclusion: "各 +1 行；validate_project_plan_inheritance exit 1→0；未提交跨仓"
+    revoked_at: null
+  - auth_id: AUTH-PLAN-20261024-AUTOADOPT
+    granted_at: "2026-10-24T14:40:00+08:00"
+    granted_by: "老卢"
+    grant_basis: "2026-10-24 14:39 目标指令：我授权自动按决策模型推荐选择确认"
+    repo: "GlobalCloud GPCF"
+    scope: "auto_adopt_decision_model_recommendation"
+    actions_allowed: ["read", "run_decision_model", "adopt_model_top_choice", "write_ledger", "write_evidence", "commit_gpcf"]
+    actions_forbidden: ["production_deploy", "credential_access", "l4_delete", "status_promotion", "push"]
+    expires_at: "2027-01-20T23:59:59+08:00"
+    evidence: "docs/reports/step-vocabulary-normalization-20261024.md"
+    review_conclusion: "仅对需老卢确认的事项按模型 top1 采纳；红线类（生产/凭据/L4 删除）仍不自动执行；needs_human 项不采纳"
     revoked_at: null

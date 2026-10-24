@@ -204,8 +204,8 @@
       "name": "industrial-green-chain-graph-readonly-pilot",
       "project": "gpcf",
       "priority": "P1",
-      "status": null,
-      "current_role": null,
+      "status": "commit",
+      "current_role": "Recorder",
       "workspace": "features/active/F-016-industrial-green-chain-graph-readonly-pilot",
       "created_at": "2026-10-11T10:36:10+08:00",
       "updated_at": "2026-10-11T07:20:58+00:00"

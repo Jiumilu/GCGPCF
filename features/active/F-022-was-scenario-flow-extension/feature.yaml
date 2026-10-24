@@ -20,7 +20,7 @@ acceptance:
   - 门禁结果如实留存；失败不升级状态
 loop:
   dispatched: false
-  current_step: registration
+  current_step: plan
   iteration: 1
 evidence:
   tests: pass

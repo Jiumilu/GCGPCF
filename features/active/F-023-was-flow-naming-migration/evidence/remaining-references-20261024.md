@@ -7,7 +7,13 @@ domain: governance
 status: draft
 version: v1.0
 owner: GPCF
+kds_space: 开发
+kds_path: 开发/91-治理与验收/features/active/F-023-was-flow-naming-migration/evidence/remaining-references-20261024.md
+source_path: features/active/F-023-was-flow-naming-migration/evidence/remaining-references-20261024.md
+sync_direction: bidirectional
 last_reviewed: 2026-10-24
+supersedes: []
+superseded_by: []
 ---
 
 # F-023 旧流名残余引用清单
@@ -41,3 +47,22 @@ last_reviewed: 2026-10-24
 ## 3. 非声明
 
 - 本轮只盘点，未改任何文件；兼容窗口仍需另定关闭时点。
+
+## 2026-10-24 批次可行性复核
+
+- **批 2（admission/precheck）**：`validate_gfis_was_source_record_admission_gate.py` 依赖 WAS 仓
+  `okf/examples/gfis-runtime-sop-e2e-was-profile.yaml` 的 `flowType`；
+  证据 JSON 的 `target_stage.flow_type` 也需同步。属跨项目（WAS）改动，GPCF 侧无法单独完成。
+- **批 1（scenario matrix）**：需同步 GPCF evidence JSON/MD + loop round + WAS schema 口径，跨项目。
+- **批 3（fixtures）**：GPCF 内可改，但需与 WAS profile/validator 同批，避免断链。
+- 结论：F-023 残余迁移需 WAS 属主共同排期；本轮不改文件。
+
+## 2026-10-24 批 3 部分完成
+
+- 5 个 `p4-real-source-record-candidate-*.json` 已迁移：
+  - `commerce_flow` → `ServiceFlow`（4 个）
+  - `capital_flow` → `FinancialFlow`（1 个 wrong-dimension 负例）
+- `validate_was_real_source_record_candidate_precheck.py` 接受集合改为 `{ServiceFlow, commerce_flow}`。
+- 该 validator 复跑 pass（positive 1 / negative 4）。
+- 剩余：6 文件 / 23 处（scenario matrix、loop context、admission 兼容断言）。
+- 注意：admission/submission 两个 validator 当前因旧路径 `WAS世界资产体系` 不存在而 fail（既有问题，与本次改动无关）。

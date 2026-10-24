@@ -21,7 +21,7 @@ acceptance:
   - 校验器全过：内容幂等、命名空间隔离、参数费用零任务化、计划与事实分离
   - 图谱生成前后源文件无非授权变化（不改变来源）
 loop:
-  current_step: b2_released
+  current_step: commit
   iteration: 1
 created_at: "2026-10-11T10:36:10+08:00"
 updated_at: "2026-10-11T07:20:58+00:00"
