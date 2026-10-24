@@ -35,6 +35,7 @@ CHECKS: list[tuple[str, list[str], int]] = [
     ("bytecode", ["tools/kds-sync/check_python_bytecode.py"], 120),
     ("loop_v11_recovery", ["tools/kds-sync/validate_loop_v11_slimming_delivery_recovery.py"], 180),
     ("derive_status", ["tools/kds-sync/derive_status_views.py", "--check"], 180),
+    ("p17_done_audit", ["scripts/gpcf_p17_done_audit.py"], 300),
     ("pytest", ["-m", "pytest", "tests/", "-q"], 600),
 ]
 

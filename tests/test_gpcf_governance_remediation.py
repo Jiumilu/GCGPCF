@@ -411,3 +411,20 @@ def test_full_sweep_covers_key_validators():
     ):
         assert required in names, f"全量体检缺项：{required}"
     assert len(module.CHECKS) >= 14
+
+
+def test_p17_done_audit_in_sweep_and_passes():
+    """P17 不变量：done 内每个 Feature 要么可关单、要么在受控例外内。"""
+    import importlib.util
+    import subprocess
+    import sys
+
+    spec = importlib.util.spec_from_file_location("sweep2", ROOT / "scripts/gpcf_full_sweep.py")
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    assert "p17_done_audit" in {name for name, _c, _t in module.CHECKS}
+
+    out = subprocess.run([sys.executable, str(ROOT / "scripts/gpcf_p17_done_audit.py")],
+                         cwd=ROOT, capture_output=True, text=True, check=False)
+    assert out.returncode == 0, out.stdout + out.stderr
+    assert "violations=[]" in out.stdout
