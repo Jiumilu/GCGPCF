@@ -591,7 +591,7 @@ vu_units:
   source_of_record: GPCF runtime + features/active
   acceptor: GPCF 治理 owner
   stage: S2
-  stage_evidence: 23 个活跃 Feature 有 evidence 字段与 gpcf_check_evidence.py 可回放；10/23 blocked、api 仅 1 pass
+  stage_evidence: 19 个活跃 Feature（2026-10-23）可回放；本轮关闭 F-024/F-026/F-027/F-030，ICP/F-019 关闭；api 证据已补 2 项（F-019/F-034）
   data_class: fixture
   inferred: true
   notes: 门禁可跑，但结论不构成真实业务证据
@@ -720,11 +720,11 @@ vu_units:
   object: API 响应与 summary 证据
   source_of_record: ICP API
   acceptor: ICP owner
-  stage: S2
-  stage_evidence: 2026-10-23 实测：gc_icp.api 5/5 GET 200（health/industry-model/resource-pools/scenarios/constitution-governance）、pytest 33 passed；F-019 api/summary=pass（multi_user 仍 pending）
+  stage: S3
+  stage_evidence: F-019 已 closed：gc_icp.api 5/5 GET 200、pytest 33 passed、api/summary=pass、multi_user waived（只读+shell 角色收敛）
   data_class: fixture
   inferred: true
-  notes: 按“tests/build/validator pass = S2”修正；无真实业务源，不升 S4
+  notes: evidence 包 + 关闭复核 = S3；无真实业务源，不升 S4
 - vu_id: Brain-VU-01
   project: Brain
   weight: 5
@@ -889,11 +889,11 @@ vu_units:
   object: 任务队列记录
   source_of_record: XGD 本地
   acceptor: XGD owner
-  stage: S2
-  stage_evidence: F-031 tests/build pass；最小 Loop、结构化任务队列、harness validator 已具备
+  stage: S3
+  stage_evidence: F-031 已 closed：tests/build/screenshots/api/summary pass + human-acceptance-20261022；最小 Loop/任务队列/harness validator 具备
   data_class: fixture
   inferred: true
-  notes: 测试通过，UI/API 证据未过
+  notes: evidence 包 + 人工验收 = S3；真实业务运行未接，不升 S4
 - vu_id: XGD-VU-02
   project: XGD
   weight: 4
@@ -1110,11 +1110,11 @@ vu_units:
   object: Ontology 版本基线
   source_of_record: World 仓
   acceptor: World owner
-  stage: S1
-  stage_evidence: Ontology 0.2.x 与实发 0.2.0 冲突未裁定；方案仍 candidate
+  stage: S3
+  stage_evidence: F-021 已 closed：World okf/ontology.yaml 0.2.0 为基线，总体方案 0.2.x 一致；旧 0.1.0 引用历史豁免
   data_class: fixture
   inferred: true
-  notes: 版本冲突未裁定
+  notes: 裁定+关闭复核 = S3；无真实业务迁移，不升 S4
 - vu_id: World-VU-02
   project: World
   weight: 3
