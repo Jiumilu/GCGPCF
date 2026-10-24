@@ -26,7 +26,7 @@ superseded_by: []
 | 4 | CSP frame-ancestors allow/block | ✅ | csp-20261024（:4300 allow / :4301 block） |
 | 5 | 生产部署 | ❌ | 未部署 |
 | 6 | SSO 正式接入 | ❌ | 仅临时/隔离 IdP；sso-403-design 为方案 |
-| 7 | 401/403 可读降级 | ⚠️ | WAE 已实现 8s 超时 + postMessage 401/403 契约（sso-403-fallback / embed-message-contract）；PKC 侧未实现 |
+| 7 | 401/403 可读降级 | ✅ | WAE 监听 + PKC 上报（pkc-embed-bridge-20261024）；8s 超时兜底 |
 | 8 | WAE 属主签字 | ❌ | 待签 |
 | 9 | PKC 属主签字 | ❌ | 待签 |
 | 10 | 正式评审结论 | ⚠️ | conditional，不批准关闭 |
