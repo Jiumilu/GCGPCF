@@ -65,10 +65,10 @@ jobs:
 3. `standards` job 固定存在（P16-1 已要求）；
 4. 不要求覆盖率阈值、不要求 e2e/browser/a11y（属 P16-3）。
 
-## 3. 覆盖与缺口（按步骤实判，2026-10-24 更正）
+## 3. 覆盖与缺口（按步骤实判，2026-10-24 15:10 更新）
 
-> 更正说明：初版按 job 名关键词判定，把 `repository-checks` 这类命名但实际执行 pytest 的 job 误判为缺失；
-> 现改为解析 `steps[].run` 的命令（pytest/vitest/pnpm test/tsc/compileall 等），数据以下表为准。
+> 判定方式：解析 `steps[].run` 的实际命令（pytest/vitest/pnpm test/tsc/ast.parse 等），不按 job 名猜测。
+> 本轮变化：GPCF 自身新增 AST 语法解析构建自检 → build 由 12/29 升至 **13/29**。
 
 | 仓 | standards | test | build | test 依据 | build 依据 |
 |---|---|---|---|---|---|
@@ -79,7 +79,7 @@ jobs:
 | GlobalCloud WAME | ✓ | ✓ | ✓ | python3 -m unittest | npm run build |
 | GlobalCloud GPC | ✓ | — | ✓ | — | compileall |
 | GlobalCloud Studio | ✓ | — | ✓ | — | npm run build |
-| GlobalCloud GPCF | ✓ | ✓ | — | pytest | — |
+| GlobalCloud GPCF | ✓ | ✓ | ✓ | pytest | ast.parse |
 | GlobalCloud XWAIL | ✓ | — | — | — | — |
 | GlobalCloud GFIS | ✓ | — | ✓ | — | compileall |
 | GlobalCloud MMC | ✓ | ✓ | — | pytest, vitest | — |
@@ -102,9 +102,9 @@ jobs:
 | GlobalCloud DRC | ✓ | — | — | — | — |
 | GlobalCloud FireQuote | ✓ | — | — | — | — |
 
-缺口统计：**test 缺 19 仓、build 缺 17 仓**（两者都缺的仓优先补）。
+缺口统计：**test 缺 19 仓、build 缺 16 仓**（standards 已 29/29）。
 
-复跑命令：`python3 tools/kds-sync/scan_ci_coverage.py --markdown`（扫描 `_governance` 兄弟仓，只读）
+复跑：`python3 tools/kds-sync/scan_ci_coverage.py --markdown`
 
 ## 4. 优先级建议
 
