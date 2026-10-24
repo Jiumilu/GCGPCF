@@ -1,0 +1,33 @@
+schema_version: '1.0'
+source_of_truth: GlobalCloud WAE/packages/ui-tokens/src/tokens.css
+verifier: GlobalCloud WAE/tools/verify-token-sources.py
+updated_at: '2026-10-24'
+exceptions:
+  - id: TOKEN-EXC-PKC-ALIAS
+    project: PKC
+    file: src/styles/theme.css
+    status: candidate
+    reason: >-
+      PKC 76 个变量全部存在，但 34 处以 --gc-* 语义变量别名引用
+      （如 --background: var(--gc-bg-canvas)），属表示层差异而非数值漂移。
+      直接替换为 WAE 原始值会破坏 PKC 主题语义层。
+    requested_disposition: 受控例外（别名层允许）
+    owner: PKC
+    evidence: features/active/F-034-wae-p0-shell-and-role-convergence/evidence/pkc-token-alias-finding-20261024.md
+    reviewer: 待 PKC 属主签字
+  - id: TOKEN-EXC-BRAIN-DIFF
+    project: Brain
+    file: src/styles/theme.css
+    status: unresolved
+    reason: 30 处值不同 + 5 个独有令牌；未确认是否别名层。
+    owner: Brain
+    evidence: features/active/F-034-wae-p0-shell-and-role-convergence/evidence/token-sources-20261024.txt
+    reviewer: 待 Brain 属主复核
+  - id: TOKEN-EXC-PVAOS-MISSING
+    project: PVAOS
+    file: default theme path
+    status: unresolved
+    reason: 目标路径不存在；需属主确认落点。
+    owner: PVAOS
+    evidence: features/active/F-034-wae-p0-shell-and-role-convergence/evidence/token-sources-20261024.txt
+    reviewer: 待 PVAOS 属主确认

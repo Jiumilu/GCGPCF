@@ -1136,11 +1136,11 @@ vu_units:
   object: 门禁结论与验收命令
   source_of_record: GPCF 中央门禁
   acceptor: GPCF owner
-  stage: S1
-  stage_evidence: F-021 tests/build pass，但中央门禁 rework_required、6 项 missing_metadata
+  stage: S3
+  stage_evidence: F-021 已 closed；中央门禁 11/11 pass；F-021 verification（workspace validator/document_control）已声明
   data_class: fixture
   inferred: true
-  notes: 证据存在但门禁退回
+  notes: evidence 包 + 关闭复核 = S3；无真实业务运行，不升 S4
 - vu_id: DRC-VU-01
   project: DRC
   weight: 4
