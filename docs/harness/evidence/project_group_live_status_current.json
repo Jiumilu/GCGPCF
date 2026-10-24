@@ -462,8 +462,8 @@
       "sensitive_paths": []
     },
     "GlobalCloud GPCF": {
-      "dirty_count": 499,
-      "ahead": 9,
+      "dirty_count": 496,
+      "ahead": 10,
       "behind": 0,
       "paths": [
         "$CODEX_HOME/automations/globalcloud-17/README.md",
@@ -788,7 +788,6 @@
         "runtime/logs/F-027.jsonl",
         "runtime/vu-ledger.yaml",
         "templates/README.md",
-        "tests/test_gpcf_governance_remediation.py",
         "third_party/agent-reach/README.md",
         "tools/README.md",
         "tools/kds-sync/README.md",
@@ -869,7 +868,6 @@
         "docs/harness/evidence/wave1-review-pack-20261022.md",
         "docs/harness/evidence/workspace-consistency-20261023.md",
         "docs/reports/README.md",
-        "docs/reports/full-sweep-script-20261024.md",
         "docs/runbooks/README.md",
         "docs/runbooks/runtime-host-v1.0.md",
         "features/active/F-029-hermes-ai-runtime-admission/artifacts/.gitkeep",
@@ -958,7 +956,6 @@
         "runtime/logs/F-035.jsonl",
         "runtime/logs/F-036.jsonl",
         "runtime/plan-20261022/ci-matrix-draft.yaml",
-        "scripts/gpcf_full_sweep.py",
         "templates/authorization-batch-request.md",
         "tools/kds-sync/daily_project_status_audit.py",
         "tools/kds-sync/runtime_health_check.py",
