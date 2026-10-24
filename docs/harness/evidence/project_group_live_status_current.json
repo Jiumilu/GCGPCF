@@ -72,6 +72,7 @@
   "stable_ahead": [
     "GlobalCloud Brain",
     "GlobalCloud GPC",
+    "GlobalCloud GPCF",
     "GlobalCloud MMC",
     "GlobalCloud PKC",
     "GlobalCloud PMC",
@@ -460,8 +461,8 @@
       "sensitive_paths": []
     },
     "GlobalCloud GPCF": {
-      "dirty_count": 449,
-      "ahead": 3,
+      "dirty_count": 447,
+      "ahead": 4,
       "behind": 0,
       "paths": [
         "$CODEX_HOME/automations/globalcloud-17/README.md",
@@ -661,10 +662,10 @@
         "docs/harness/loops/README.md",
         "docs/harness/minimum-closed-loop/README.md",
         "docs/harness/tasks/README.md",
-        "docs/reports/p16-2-ci-workflow-template-20261024.md",
         "docs/standards/README.md",
         "features/active/F-012-icp-sop-foundation-coupling/evidence/plan-20261024.md",
         "features/active/F-022-was-scenario-flow-extension/evidence/was-review-request-20261024.md",
+        "features/active/F-023-was-flow-naming-migration/feature.yaml",
         "features/active/F-025-project-group-arch-iteration/evidence/plan-20261024.md",
         "features/active/F-032-pqc-external-service-via-pvaai/evidence/plan-20261024.md",
         "features/active/F-034-wae-p0-shell-and-role-convergence/evidence/brain-token-diff-20261024.md",
@@ -762,7 +763,6 @@
         "runtime/logs/F-026.jsonl",
         "runtime/logs/F-027.jsonl",
         "templates/README.md",
-        "tests/test_gpcf_governance_remediation.py",
         "third_party/agent-reach/README.md",
         "tools/README.md",
         "tools/kds-sync/README.md",
@@ -909,7 +909,6 @@
         "tools/kds-sync/classify_dirty_paths.py",
         "tools/kds-sync/daily_project_status_audit.py",
         "tools/kds-sync/runtime_health_check.py",
-        "tools/kds-sync/scan_ci_coverage.py",
         "tools/kds-sync/validate_asset_registry.py",
         "tools/kds-sync/validate_contract_matrix.py",
         "tools/kds-sync/validate_gke001_chain_matrix.py"
@@ -7797,10 +7796,11 @@
       "sensitive_paths": []
     },
     "GlobalCloud WAE": {
-      "dirty_count": 86,
+      "dirty_count": 87,
       "ahead": 0,
       "behind": 0,
       "paths": [
+        "apps/wame/src/app/modules/idp-console/IdpConsolePage.tsx",
         "docs/assembly-spec/README.md",
         "\"docs/assembly-spec/manifests/_\\344\\270\\211\\346\\226\\271\\345\\257\\271\\350\\264\\246\\350\\241\\250.md\"",
         "docs/assembly-spec/manifests/aaas-console.yaml",
