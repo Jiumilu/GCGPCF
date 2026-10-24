@@ -51,3 +51,9 @@ superseded_by: []
 - 追加迁移：告警分类、NLU 行/说明、实时流注记、飞行高度/停留选项。
 - SpaceAI 本地提交 `2c292ce`（main，未 push）。
 - 验证：793 tests / tsc 0。
+
+## 阶段 1 批次 3（模板标签，2026-10-24）
+
+- 按钮/选项/placeholder/图例/确认框标签改用 `T()`；
+- SpaceAI 本地提交 `86d742d`（main，未 push）；
+- 验证：793 tests / tsc 0。
