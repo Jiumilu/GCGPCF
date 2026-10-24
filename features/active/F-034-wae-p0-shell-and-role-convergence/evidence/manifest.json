@@ -1,10 +1,10 @@
 {
   "feature": "F-034",
   "name": "wae-p0-shell-and-role-convergence（WAE 侧证据包）",
-  "generated_at": "2026-10-23T01:16:49.745Z",
+  "generated_at": "2026-10-24T14:59:49.533Z",
   "repo": "GlobalCloud WAE",
   "branch": "refactor/ui-spec-wae",
-  "commit": "01741a511ea21d8702ebc0a140197a52aad4f3a7",
+  "commit": "aea0f83f3109f88993d926cf6852b8d5d4696b83",
   "discipline": {
     "status_ceiling": "F-034 至多 ready_for_review；本清单不提升任何状态",
     "replay": "见 docs/evidence/F-034/README.md（采集脚本 + pnpm evidence:collect）"
@@ -12,8 +12,8 @@
   "archive_target": "GlobalCloud GPCF/features/active/F-034-wae-p0-shell-and-role-convergence/evidence/（跨仓写入，待老卢授权；本清单为待复制源）",
   "counts": {
     "total": 19,
-    "pass": 17,
-    "expected_diff": 2,
+    "pass": 19,
+    "expected_diff": 0,
     "skip": 0,
     "fail": 0,
     "missing": 0
@@ -53,7 +53,7 @@
       "result": "pass",
       "artifacts": [],
       "docs": [],
-      "tail": "      Tests  153 passed (153) ⏎    Start at  09:15:04 ⏎    Duration  18.92s (transform 1.31s, setup 743ms, import 3.51s, tests 5.93s, environment 5.11s)"
+      "tail": "      Tests  159 passed (159) ⏎    Start at  22:57:31 ⏎    Duration  14.62s (transform 884ms, setup 694ms, import 2.60s, tests 3.83s, environment 4.33s)"
     },
     {
       "id": "04-wame-build",
@@ -65,7 +65,7 @@
       "result": "pass",
       "artifacts": [],
       "docs": [],
-      "tail": "- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks ⏎ - Adjust chunk size limit for this warning via build.chunkSizeWarningLimit. ⏎ ✓ built in 3.30s"
+      "tail": "- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks ⏎ - Adjust chunk size limit for this warning via build.chunkSizeWarningLimit. ⏎ ✓ built in 3.11s"
     },
     {
       "id": "05-e2e-dual-role",
@@ -162,12 +162,12 @@
       "title": "O2 跨仓令牌一致性（只读）",
       "command": "pnpm check:tokens-parity",
       "log": "docs/evidence/F-034/logs/11-check-tokens-parity.log",
-      "exit": 1,
-      "result": "expected_diff",
+      "exit": 0,
+      "result": "pass",
       "artifacts": [],
       "docs": [],
-      "note": "跨仓比对按设计在\"存在差异\"时退出 1；采集脚本把 1 记为 expected_diff（不计失败，但如实列出）",
-      "tail": " ⏎ 结论：**存在差异**（需按裁定处置，见 docs/plan/O2跨仓令牌一致性比对_20261022.md） ⏎ [ELIFECYCLE] Command failed with exit code 1."
+      "note": "差异存在时退出 1（采集脚本记 expected_diff）；2026-10-24 起 PKC 快照与 WAE 逐字节相同 ⇒ 退出 0 = pass",
+      "tail": "  → 与 F-034 O2 记录的「Brain 30 处 + 5 个独有令牌」核对：独有=5、字面值差异=28 ⏎  ⏎ 结论：**一致**"
     },
     {
       "id": "12-build-packages",
@@ -220,7 +220,7 @@
         {
           "path": "docs/evidence/F-034/visual/fingerprints.json",
           "bytes": 4209,
-          "sha256": "909dca817d9151c51dc912d571136cde5acec5fa78703bae16ae2aa14d3f2708"
+          "sha256": "ee732e92884f446cca248b74e373e886d62973c2d45a0ddd95633cce2eccc1a3"
         },
         {
           "path": "docs/evidence/F-034/visual/home-desktop.png",
@@ -278,21 +278,21 @@
       "title": "O2 偏离登记表判定（实测 vs 登记）",
       "command": "pnpm check:tokens-parity:registry",
       "log": "docs/evidence/F-034/logs/17-check-tokens-registry.log",
-      "exit": 1,
-      "result": "expected_diff",
+      "exit": 0,
+      "result": "pass",
       "artifacts": [
         {
           "path": "docs/evidence/F-034/../token-deviation-registry.json",
-          "bytes": 2835,
-          "sha256": "fcd57df633b8bdc63a2c141d2bc3a5ede8675a5d253a112bcce0bb241dac4c93"
+          "bytes": 3760,
+          "sha256": "f5e6b4ba53e0c2615e787f775ec055ba03895dad824fc379b3ba42a6db52b9f2"
         }
       ],
       "docs": [
         "docs/plan/O2跨仓令牌一致性比对_20261022.md",
         "docs/access/跨仓令牌整改提醒_20261022.md"
       ],
-      "note": "登记表里 PKC 仍 pending_owner（快照过期）⇒ 当前退出 1，按 expected_diff 记录；两仓回执后转 pass",
-      "tail": " ⏎ 结论：**登记表与实测不一致**（未整改或偏离漂移；见 docs/evidence/token-deviation-registry.json） ⏎ [ELIFECYCLE] Command failed with exit code 1."
+      "note": "2026-10-24：PKC status=compliant、Brain=registered_own_theme，登记表判定退出 0 = pass",
+      "tail": "      literal_diffs: 登记=28 ｜ 实测=28 ⏎  ⏎ 结论：**一致**"
     },
     {
       "id": "18-e2e-pixel",

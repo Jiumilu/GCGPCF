@@ -94,8 +94,3 @@ superseded_by: []
 
 1. 未做：PKC/Brain 仓任何改动；GPCF 归档；M3 Studio 例外与 Brain/PVAOS 批次；视觉回归（他仓环境）；
 2. 非声明：不声明 PKC 已接入/已集成/生产就绪/客户验收；不声明 O2 完成；F-034 不提升状态。
-
-## 2026-10-24 O3 进展
-
-- F-035（WAME 侧栏统一）已 closed：app-registry `sidebarContract` 消费、WAME b233438/ea8f321 已 push、E2E 冒烟 pageErrors=0。
-- WAE 项目侧三套侧栏仍未归并；O3 仍为部分完成，F-034 不关闭。

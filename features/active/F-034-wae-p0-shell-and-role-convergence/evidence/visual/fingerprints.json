@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-22T14:50:12.501Z",
-  "git_commit": "6149f54",
+  "generated_at": "2026-10-24T14:59:35.836Z",
+  "git_commit": "aea0f83",
   "note": "结构指纹基线（非像素基线）：mains/buttons/links/overflow/colors/landmarks 可跨次比对；截图存 .e2e-report/visual/",
   "pass": true,
   "fingerprints": [
@@ -9,7 +9,7 @@
       "viewport": "desktop",
       "title": "WAE 世界资产浏览器（Rust + WASM）",
       "mains": 1,
-      "buttons": 31,
+      "buttons": 52,
       "links": 0,
       "overflow": false,
       "colors": {
@@ -18,9 +18,9 @@
         "sidebar": "oklch(0.215 0.008 260)"
       },
       "landmarks": {
-        "accountMenu": 0,
-        "appRail": 1,
-        "appContent": 1,
+        "accountMenu": 1,
+        "appRail": 0,
+        "appContent": 0,
         "pkcPage": 0
       }
     },
@@ -29,7 +29,7 @@
       "viewport": "desktop",
       "title": "WAE 世界资产浏览器（Rust + WASM）",
       "mains": 1,
-      "buttons": 31,
+      "buttons": 40,
       "links": 0,
       "overflow": false,
       "colors": {
@@ -49,7 +49,7 @@
       "viewport": "desktop",
       "title": "WAE 世界资产浏览器（Rust + WASM）",
       "mains": 1,
-      "buttons": 36,
+      "buttons": 37,
       "links": 0,
       "overflow": false,
       "colors": {
@@ -69,7 +69,7 @@
       "viewport": "desktop",
       "title": "WAE 世界资产浏览器（Rust + WASM）",
       "mains": 1,
-      "buttons": 22,
+      "buttons": 23,
       "links": 0,
       "overflow": false,
       "colors": {
@@ -89,7 +89,7 @@
       "viewport": "narrow",
       "title": "WAE 世界资产浏览器（Rust + WASM）",
       "mains": 1,
-      "buttons": 31,
+      "buttons": 52,
       "links": 0,
       "overflow": false,
       "colors": {
@@ -98,9 +98,9 @@
         "sidebar": "oklch(0.215 0.008 260)"
       },
       "landmarks": {
-        "accountMenu": 0,
-        "appRail": 1,
-        "appContent": 1,
+        "accountMenu": 1,
+        "appRail": 0,
+        "appContent": 0,
         "pkcPage": 0
       }
     },
@@ -109,7 +109,7 @@
       "viewport": "narrow",
       "title": "WAE 世界资产浏览器（Rust + WASM）",
       "mains": 1,
-      "buttons": 31,
+      "buttons": 40,
       "links": 0,
       "overflow": false,
       "colors": {
@@ -129,7 +129,7 @@
       "viewport": "narrow",
       "title": "WAE 世界资产浏览器（Rust + WASM）",
       "mains": 1,
-      "buttons": 36,
+      "buttons": 37,
       "links": 0,
       "overflow": false,
       "colors": {
@@ -149,7 +149,7 @@
       "viewport": "narrow",
       "title": "WAE 世界资产浏览器（Rust + WASM）",
       "mains": 1,
-      "buttons": 22,
+      "buttons": 23,
       "links": 0,
       "overflow": false,
       "colors": {
