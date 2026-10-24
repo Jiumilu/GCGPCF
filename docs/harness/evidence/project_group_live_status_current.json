@@ -482,8 +482,8 @@
       "sensitive_paths": []
     },
     "GlobalCloud GPCF": {
-      "dirty_count": 416,
-      "ahead": 7,
+      "dirty_count": 415,
+      "ahead": 8,
       "behind": 0,
       "paths": [
         "$CODEX_HOME/automations/globalcloud-17/README.md",
@@ -648,7 +648,6 @@
         "docs/harness/loops/README.md",
         "docs/harness/minimum-closed-loop/README.md",
         "docs/harness/tasks/README.md",
-        "docs/reports/governance-coverage-matrix-20261024.md",
         "docs/standards/README.md",
         "features/active/F-012-icp-sop-foundation-coupling/evidence/owner-action-pack-20261024.md",
         "features/active/F-012-icp-sop-foundation-coupling/evidence/plan-20261024.md",
@@ -759,6 +758,7 @@
         "runtime/logs/F-026.jsonl",
         "runtime/logs/F-027.jsonl",
         "runtime/vu-ledger.yaml",
+        "scripts/gpcf_full_sweep.py",
         "templates/README.md",
         "tests/test_gpcf_governance_remediation.py",
         "third_party/agent-reach/README.md",
@@ -895,7 +895,6 @@
         "runtime/logs/F-035.jsonl",
         "runtime/logs/F-036.jsonl",
         "runtime/plan-20261022/ci-matrix-draft.yaml",
-        "scripts/gpcf_governance_matrix.py",
         "templates/authorization-batch-request.md",
         "tools/kds-sync/daily_project_status_audit.py",
         "tools/kds-sync/runtime_health_check.py",
@@ -5488,7 +5487,7 @@
       "sensitive_paths": []
     },
     "GlobalCloud WAE": {
-      "dirty_count": 76,
+      "dirty_count": 77,
       "ahead": 5,
       "behind": 0,
       "paths": [
@@ -5565,6 +5564,7 @@
         "packages/app-registry/src/preflight/types.ts",
         "packages/app-registry/src/sidebarContract.ts",
         "scripts/__repro.mts",
+        "scripts/axe-mobile-workbench.mjs",
         "scripts/check-preflight.mts",
         "scripts/compile-assembly.mts",
         "scripts/diagnose.mts"
