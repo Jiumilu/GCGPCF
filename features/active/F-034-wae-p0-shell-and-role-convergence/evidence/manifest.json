@@ -1,18 +1,18 @@
 {
   "feature": "F-034",
   "name": "wae-p0-shell-and-role-convergence（WAE 侧证据包）",
-  "generated_at": "2026-10-24T14:59:49.533Z",
+  "generated_at": "2026-10-24T22:26:17.497Z",
   "repo": "GlobalCloud WAE",
   "branch": "refactor/ui-spec-wae",
-  "commit": "aea0f83f3109f88993d926cf6852b8d5d4696b83",
+  "commit": "7af0ebcd13ea03b6128284b412fc1e8066cf2ab4",
   "discipline": {
     "status_ceiling": "F-034 至多 ready_for_review；本清单不提升任何状态",
     "replay": "见 docs/evidence/F-034/README.md（采集脚本 + pnpm evidence:collect）"
   },
   "archive_target": "GlobalCloud GPCF/features/active/F-034-wae-p0-shell-and-role-convergence/evidence/（跨仓写入，待老卢授权；本清单为待复制源）",
   "counts": {
-    "total": 19,
-    "pass": 19,
+    "total": 20,
+    "pass": 20,
     "expected_diff": 0,
     "skip": 0,
     "fail": 0,
@@ -53,7 +53,7 @@
       "result": "pass",
       "artifacts": [],
       "docs": [],
-      "tail": "      Tests  159 passed (159) ⏎    Start at  22:57:31 ⏎    Duration  14.62s (transform 884ms, setup 694ms, import 2.60s, tests 3.83s, environment 4.33s)"
+      "tail": "      Tests  163 passed (163) ⏎    Start at  06:16:48 ⏎    Duration  13.08s (transform 1.09s, setup 606ms, import 2.66s, tests 3.22s, environment 3.91s)"
     },
     {
       "id": "04-wame-build",
@@ -65,7 +65,7 @@
       "result": "pass",
       "artifacts": [],
       "docs": [],
-      "tail": "- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks ⏎ - Adjust chunk size limit for this warning via build.chunkSizeWarningLimit. ⏎ ✓ built in 3.11s"
+      "tail": "- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks ⏎ - Adjust chunk size limit for this warning via build.chunkSizeWarningLimit. ⏎ ✓ built in 2.81s"
     },
     {
       "id": "05-e2e-dual-role",
@@ -333,7 +333,7 @@
     {
       "id": "19-e2e-panel-layout",
       "kind": "e2e",
-      "title": "B3 面板布局（默认 off / 启用态 / 键盘 / 持久化）",
+      "title": "B3 面板布局 + M2 第二插件（默认 off / 启用态 / 键盘 / 持久化）",
       "command": "pnpm e2e:panel-layout",
       "log": "docs/evidence/F-034/logs/19-e2e-panel-layout.log",
       "exit": 0,
@@ -348,8 +348,61 @@
       "docs": [
         "docs/design/B3多面板语义设计_v0.1.md"
       ],
-      "note": "自带两个 dev 实例；默认 off 不渲染（零行为变化），启用态 → 拖出右栏 + Home 复位 + 刷新恢复",
+      "note": "自带两个 dev 实例；默认 off 不渲染；启用态 → 拖出右栏 + Home 复位 + 刷新恢复 + PKC 停靠面板在位（13 项）",
       "tail": "✓ S2 pageerror=0 — 0 条 ⏎  ⏎ B3 面板布局 E2E：**全部通过**（报告：.e2e-panel-layout-report.md）"
+    },
+    {
+      "id": "20-m3-b5-visual",
+      "kind": "e2e",
+      "title": "M3 三线 B5 视觉基线（PKC / Brain / PVAOS，10 张）",
+      "command": "pnpm e2e:m3-b5-visual",
+      "log": "docs/evidence/F-034/logs/20-m3-b5-visual.log",
+      "exit": 0,
+      "result": "pass",
+      "artifacts": [
+        {
+          "path": "docs/evidence/F-034/visual/m3-lines/index.json",
+          "bytes": 2185,
+          "sha256": "4303ceaf38c4effe3b76c071d648e512a22eb9c51dfd5b49a72220f8318c8bf0"
+        },
+        {
+          "path": "docs/evidence/F-034/visual/m3-lines/pkc-home.png",
+          "bytes": 170775,
+          "sha256": "bcdc25787107a42060363748bb4f0300dbe11df67be6c4e51cd1bab99a812671"
+        },
+        {
+          "path": "docs/evidence/F-034/visual/m3-lines/pkc-tasks.png",
+          "bytes": 264687,
+          "sha256": "ba67c994d101602af7ae3ccce418b4b992b78c0f7517f545d53d3799b4b82cae"
+        },
+        {
+          "path": "docs/evidence/F-034/visual/m3-lines/pkc-reports.png",
+          "bytes": 163969,
+          "sha256": "3110e4e17573c553c44cb6d55648a2769e05dae47bd4183b60be7567674581f8"
+        },
+        {
+          "path": "docs/evidence/F-034/visual/m3-lines/brain-view-2.png",
+          "bytes": 124163,
+          "sha256": "1ce42acde411637d5c7a8b32a278c205d694ef5301d87925d387737eecda9fd3"
+        },
+        {
+          "path": "docs/evidence/F-034/visual/m3-lines/pvaos-services.png",
+          "bytes": 262894,
+          "sha256": "55005b64f9c43da8952257d8113f5a140c15e31e47da13a92ff5134e5a97d661"
+        },
+        {
+          "path": "docs/evidence/F-034/visual/m3-lines/pvaos-solutions.png",
+          "bytes": 231163,
+          "sha256": "28c0325c85c5d5ca8989d4b76e44bba27a3cb2312be4a30a021f383eb86a88f2"
+        }
+      ],
+      "docs": [
+        "docs/access/PKC接入检查表_v0.1.md",
+        "docs/access/Brain接入检查表_v0.1.md",
+        "docs/access/PVAOS接入检查表_v0.1.md"
+      ],
+      "note": "各仓本地 dev 截图；被嵌应用视觉不因 WAE 嵌入改变（iframe 隔离）；pageerrors 如实记入 index.json，缺 dev 依赖则如实 skip",
+      "tail": "✓ pvaos solutions ← /solutions（226 KB, pageerror=0） ⏎  ⏎ B5 基线：10 张，skip 0 项 → docs/evidence/F-034/visual/m3-lines"
     }
   ]
 }

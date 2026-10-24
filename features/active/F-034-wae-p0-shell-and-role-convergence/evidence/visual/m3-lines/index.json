@@ -1,0 +1,87 @@
+{
+  "generated_at": "2026-10-24T22:26:14.184Z",
+  "note": "M3 三线 B5 现状基线；被嵌应用视觉不因 WAE 嵌入改变（iframe 隔离）；pageerrors 如实记录",
+  "shots": [
+    {
+      "app": "pkc",
+      "page": "home",
+      "path": "/",
+      "file": "docs/evidence/F-034/visual/m3-lines/pkc-home.png",
+      "bytes": 170775,
+      "pageerrors": []
+    },
+    {
+      "app": "pkc",
+      "page": "tasks",
+      "path": "/tasks",
+      "file": "docs/evidence/F-034/visual/m3-lines/pkc-tasks.png",
+      "bytes": 264687,
+      "pageerrors": []
+    },
+    {
+      "app": "pkc",
+      "page": "reports",
+      "path": "/reports",
+      "file": "docs/evidence/F-034/visual/m3-lines/pkc-reports.png",
+      "bytes": 163969,
+      "pageerrors": []
+    },
+    {
+      "app": "brain",
+      "page": "home",
+      "path": "/",
+      "file": "docs/evidence/F-034/visual/m3-lines/brain-home.png",
+      "bytes": 41187,
+      "pageerrors": []
+    },
+    {
+      "app": "brain",
+      "page": "view-1",
+      "path": "/(key 1)",
+      "file": "docs/evidence/F-034/visual/m3-lines/brain-view-1.png",
+      "bytes": 41187,
+      "pageerrors": []
+    },
+    {
+      "app": "brain",
+      "page": "view-2",
+      "path": "/(key 2)",
+      "file": "docs/evidence/F-034/visual/m3-lines/brain-view-2.png",
+      "bytes": 124163,
+      "pageerrors": []
+    },
+    {
+      "app": "brain",
+      "page": "view-3",
+      "path": "/(key 3)",
+      "file": "docs/evidence/F-034/visual/m3-lines/brain-view-3.png",
+      "bytes": 162456,
+      "pageerrors": []
+    },
+    {
+      "app": "pvaos",
+      "page": "home",
+      "path": "/",
+      "file": "docs/evidence/F-034/visual/m3-lines/pvaos-home.png",
+      "bytes": 113915,
+      "pageerrors": []
+    },
+    {
+      "app": "pvaos",
+      "page": "services",
+      "path": "/services",
+      "file": "docs/evidence/F-034/visual/m3-lines/pvaos-services.png",
+      "bytes": 262894,
+      "pageerrors": []
+    },
+    {
+      "app": "pvaos",
+      "page": "solutions",
+      "path": "/solutions",
+      "file": "docs/evidence/F-034/visual/m3-lines/pvaos-solutions.png",
+      "bytes": 231163,
+      "pageerrors": []
+    }
+  ],
+  "skipped": []
+}
