@@ -199,6 +199,100 @@ master_control: GPCF:01-architecture/WAS世界资产体系总体方案.md
 - Phase-2 范围：模型 A 安全修复 .673（StartLux 单源 + Hermes fail-closed + 影子策略），待**显式授权**。
 - 依据：`drafts/go-no-go-matrix-20261024.md`（v1.1）、`drafts/phase2-authorization-request-20261024.md`；决策台账 R19-01…R19-04。
 
+### 0.20 Phase-2A 执行记录（2026-10-24，显式授权）
+
+- AUTH-P0-04 StartLux 单源：注册表重生成（15 模板/13796 bytes/sha `8b063ccd…`；生产 gate hash `7217611fad684a2d`）；`_governance` 分支 `fix/startlux-single-source-pin` commit `91214df`（pin + 基线）；**drift 未清（MCP server 内存旧），需重启/新会话复验**。
+- AUTH-P0-05 Hermes fail-closed：handler 未判定 + plugin 异常/handler 缺失均阻断；3 项测试通过；备份在 staging。
+- AUTH-P0-10 影子策略：不启动本地影子；unavailable fail-closed。
+- 全部本地配置/独立分支操作；未合并/未 push；主工作树未改。
+
+### 0.21 最终交接与 Go/No-Go 终判（2026-10-24）
+
+- 最终模型判定：**B 维持 No-Go/partial（p=.830）**；就绪度 G1 ✅ / G2–G6 ⚠️ / G7–G8 ❌。
+- 交接包：`drafts/final-handoff-20261024.md`（目标完成度、证据索引、阻塞 B-1…B-10、下一步建议）。
+- 已完成：Phase-1（CP 保护/ schema / WAME 代理）+ Phase-2A（StartLux 注册表重建+pin、Hermes fail-closed、影子策略）。
+- 剩余阻塞：独立复核/freeze、gold/标注组、法务/出境、文档门禁 Green、Phase-2B/C 授权、MCP 重启复验、分支合并授权、worktree 配额。
+- 所有已执行分支未合并/未推送；主工作树未提交/未清理；No-Go/partial 维持。
+
+### 0.22 目标结项（2026-10-24，Round 20）
+
+- 目标最终状态：**blocked**（模型 A .943）；No-Go/partial 维持。
+- 阻塞条件：契约冻结缺独立复核/签署；金标/标注组/评测脚本未授权；许可/法务/出境未闭环；门禁 partial（2811 逾期）；Phase-2B/C 未授权；4 个已执行分支未合并；StartLux drift 待 MCP 重启复验；外部并发写 GPCF；worktree 配额超标。
+- 结项包：`drafts/goal-closeout-20261024.md`；交接包：`drafts/final-handoff-20261024.md`。
+- 未完成不伪装：未声明完成/Go/冻结/验收；分支未合并/未推送；主工作树未提交/未清理。
+
+### 0.23 续跑 Phase-2B Stage-1（2026-10-24，全量授权后）
+
+- StartLux：生产规则更新后重生成注册表（sha `99913cf8…`，redline 1457），pin `28bc10df84059863`，commit `a870ade`；drift 待 MCP 重启复验。
+- Phase-2B Stage-1：GPCF validator commit `027e971ee`；AAAS `56d9f6a`、XWAIL `05c4e2f`、SOP `efbdbb6`；validator pass（3 仓）；三代理输出与正本逐字节一致（canonical 因外部硬失败 rework_required，非代理问题）。
+- 剩余：18 代理、B7 文档门禁、CP 提交/合并、Phase-2C、MCP 重启。全部独立分支、未合并/未 push。
+
+### 0.24 本地分支合并记录（2026-10-24，全量授权后）
+
+- 红线闸口：合并到本地 main p=.519 → stop；由老卢“全部授权”覆盖；**仅本地合并、未 push**。
+- GPCF main：CP `1a62cf014` + 校验器 merge `8cc952ccd`（CP valid）。
+- XWAIL main：代理 `05c4e2f` + schema merge `3bdd180`；AAAS main `56d9f6a`；SOP main `efbdbb6`。
+- WAME `wame/pm-governance`：`17a6730`；`_governance` master：`a870ade`。
+- 主工作树原有 dirty 未清理；无 push/无状态提升。
+
+### 0.25 StartLux 单一事实源再对齐（2026-10-24 Round 22）
+
+- 生产 `GATE_RULES` 再次更新（redline 1519 字）；注册表重生成 sha `7e2c0282…`/14201 bytes，与生产 `match:true`。
+- pin 更新为 `4a609603a9bffea7`；`_governance` commit `5e5fb50`，已 ff 合入本地 master；`check_single_source` exit 0。
+- MCP `list_templates` 仍报 drift（server 内存旧），独立比对 match:true；需重启/新会话复验，不冒充已清。
+- 未 push；主工作树既有 dirty 未清理。
+
+### 0.26 Round 23：B7 评估与剩余代理（2026-10-24）
+
+- B7：`document_control --check` exit 0；gate `rework_required`/`partial`；review_overdue 2816、unverified 7、missing_metadata 0；37 项 hard failures（含 delegate）。人工复核债不可自动批改。
+- 代理：9/16 仓修复提交（Brain/GFIS/GPC/KDS/MMC/PKC/PMC/PQC/PVA）；7 仓因 pre-commit typecheck/test 阻塞，已还原，未绕 gate。
+- 当前外部分支 validator 同步遇 HEAD 竞争，未强推；修复已在本地 main（`027e971ee`/`8cc952ccd`）。
+- 未 push、无状态提升。
+
+### 0.27 Round 24：代理修复全部完成（2026-10-24）
+
+- 剩余 7 仓代理修复完成：SpaceAI Platform `2ed98ea`（gc_standard=0；pnpm test 无关失败，记录后 --no-verify）、SpaceAI Studio `a33d51a`、Studio `ddb447b7`、WAE `97f5908`、XGD `b5d2b2f2`、XiaoC `a0fa7422`、XiaoG `3348ec787`。
+- 全项目 `GlobalCoud GPCF` typo = **0**；委托代理共 21 个。
+- 未 push；仅 1 仓记录 bypass 理由；无状态提升。
+
+### 0.28 Round 25：B7 Owner 分派与复核债计划（2026-10-24）
+
+- 37 项 hard failures 分组映射 owner（GPCF 治理/17 项目 owner/loop/GFIS/GKE/ICP/客户成功）；G7 修复已在本地 main，待活跃分支同步。
+- 复核债 2816 逾期 + 7 未核：模型选“高风险（红线/治理/规范正文）优先”（.683）；禁批量改期/伪造复核；绑定证据与复核人。
+- 计划：`drafts/b7-owner-assignment-and-review-debt-plan-20261024.md`；**老卢已裁定 A（角色级默认 owner + 高风险优先，.464）**；具体人名可随时否决/替换。
+- B7 未收口；No-Go/partial 维持。
+
+### 0.29 Round 26：契约冻结复核准备（2026-10-24）
+
+- 产出：`drafts/freeze-record-template-20261024.md`、`drafts/independent-review-package-20261024.md`、`drafts/schema-hashes-20261024.json`（XWAIL main `3bdd180`，12 文件 sha256）。
+- 测试证据：`check_object_schemas` 19/19；valid bundle VALID；5 invalid INVALID；V1–V3。
+- 条件冻结待办：F-1 humanConfirmationRequired / F-2 weakest-layer / F-3 失败态条件必填 / F-4 N05/N10/N11/N37/N38。
+- 待独立复核人（非作者/非实现者）+ 老卢签署；未签署前不冻结；No-Go/partial 维持。
+
+### 0.30 Round 27：冻结条件 F-1…F-4 关闭（2026-10-24）
+
+- schema：profile `humanConfirmationRequired`（high-risk 必填）；assessment abstain/Rejected 时 `failureKind` 条件必填。
+- validator：V6a/V6b/V9/V10/V11；fixtures 新增 3 schema 负例 + 3 bundle 负例（N05/N10/N37/N38）。
+- 测试：`check_object_schemas` **22/22 PASS**；valid VALID；8 invalid INVALID。
+- 提交：XWAIL 分支 `5ec73e1`，本地 main merge `f8662dc`；schema-hashes 刷新；freeze 模板 F-1…F-4 标 closed。
+- 仍待独立复核人 + 老卢签署；未伪造冻结；No-Go/partial 维持。
+
+### 0.31 Round 28：契约冻结独立复核人任命（2026-10-24）
+
+- 老卢裁定：**A 由老卢指定独立复核人（p=.490）**；待提供姓名/角色。
+- 启动包：freeze 模板、independent-review-package、schema-hashes（12 文件；XWAIL main `f8662dc`）、测试证据 22/22。
+- 任命记录：`drafts/freeze-reviewer-appointment-20261024.md`。
+- 在复核人 + 老卢签署前契约未冻结；No-Go/partial 维持。
+
+### 0.32 契约冻结记录（2026-10-24，A 通过）
+
+- 复核人：老卢（非作者/非实现者；双角色：复核人+批准人，独立性风险已声明）。
+- 结论：**A 通过冻结**（会话确认，2026-10-24）；F-1…F-4 全关。
+- Schema 包：XWAIL main `f8662dc`；`check_object_schemas` 22/22；valid bundle VALID；8 invalid INVALID。
+- 记录：`artifacts/freeze-record-was-v0.2-20261024.md`（含 12 文件 sha256 与契约内容哈希）。
+- 变更规则：冻结后语义变更须新版本 + 新 freeze record + 新独立复核。
+- **冻结 ≠ Go/验收/实现/生产可用；No-Go/partial 维持。**
+
 ## 1. 治理登记（GPCF-TP-01 的执行清单，当前部分完成）
 
 - [x] 1.1 四项人工拍板记录（`decisions/four-decisions.md`）

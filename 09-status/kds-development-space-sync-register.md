@@ -19,7 +19,7 @@ superseded_by: []
 
 # KDS 开发空间同步台账
 
-日期：2026-10-23
+日期：2026-10-24
 
 用途：登记 Git 文档与 KDS `开发` 空间的双向同步映射。当前实现包含仓库内 `.kds/development-space/开发` 本地镜像与真实 KDS API 同步工具链；单文档 API 状态以 `kds_api_status` 和真实同步审计流水为准。
 
@@ -37,14 +37,14 @@ superseded_by: []
 | GPC | 02-GPC | 54 | 46 | 已建空间 |
 | PVAOS | 03-PVAOS | 13 | 10 | 已建空间 |
 | WAME | 04-WAME | 195 | 25 | 已建空间 |
-| KDS | 05-KDS | 1019 | 1016 | 已建空间 |
+| KDS | 05-KDS | 1021 | 1018 | 已建空间 |
 | Brain | 06-Brain | 14 | 11 | 已建空间 |
 | PKC | 07-PKC | 10 | 7 | 已建空间 |
 | XiaoC | 08-XiaoC | 68 | 65 | 已建空间 |
 | XGD | 09-XGD | 10 | 7 | 已建空间 |
 | XiaoG | 10-XiaoG | 11 | 8 | 已建空间 |
 | MMC | 11-MMC | 13 | 10 | 已建空间 |
-| GPCF | 12-GPCF | 1973 | 1670 | 已建空间 |
+| GPCF | 12-GPCF | 1974 | 1671 | 已建空间 |
 | Studio | 13-Studio | 5 | 2 | 已建空间 |
 | ICP | 14-ICP | 0 | 0 | 已建空间，暂无直接镜像文档 |
 | SpaceAIStudio | 15-SpaceAIStudio | 0 | 0 | 已建空间，暂无直接镜像文档 |
@@ -56,7 +56,7 @@ superseded_by: []
 | --- | --- | --- |
 | 00-项目群总控 | 项目群总入口与根 README | 1 |
 | 90-跨项目架构 | 跨项目架构、主线、数据/知识跨域文档 | 56 |
-| 91-治理与验收 | 治理、验收、状态、台账与门禁文档 | 377 |
+| 91-治理与验收 | 治理、验收、状态、台账与门禁文档 | 385 |
 | 92-证据与会话归档 | Harness、证据样本、历史会话与归档文档 | 95 |
 | 99-过期文档 | deprecated / superseded 文档 | 0 |
 
@@ -3433,6 +3433,23 @@ superseded_by: []
 | GPCF-DOC-307EB657D0 | openspec/changes/spaceai-was-city-flood-replay/specs/spaceai-city-slice-replay/README.md | 开发/05-KDS/openspec/changes/spaceai-was-city-flood-replay/specs/spaceai-city-slice-replay/README.md | bidirectional | pending_api |
 | GPCF-SPACEAI-FLOOD-SPEC-20261016 | openspec/changes/spaceai-was-city-flood-replay/specs/spaceai-city-slice-replay/spec.md | 开发/12-GPCF/openspec/changes/spaceai-was-city-flood-replay/specs/spaceai-city-slice-replay/spec.md | bidirectional | pending_api |
 | GPCF-SPACEAI-FLOOD-TASKS-20261016 | openspec/changes/spaceai-was-city-flood-replay/tasks.md | 开发/12-GPCF/openspec/changes/spaceai-was-city-flood-replay/tasks.md | bidirectional | pending_api |
+| GPCF-DOC-CANDIDATE-WAS-DECISION-MODEL-ARCH-V01 | openspec/changes/was-decision-model-architecture-v0.1/README.md | 开发/05-WAS/openspec/changes/was-decision-model-architecture-v0.1/README.md | bidirectional | pending_api |
+| GPCF-DOC-CANDIDATE-WAS-DECISION-MODEL-ARCH-ARTIFACTS | openspec/changes/was-decision-model-architecture-v0.1/artifacts/README.md | 开发/05-WAS/openspec/changes/was-decision-model-architecture-v0.1/artifacts/README.md | local_only | pending_api |
+| GPCF-DOC-CANDIDATE-WAS-DECISION-MODEL-ARCH-DESIGN | openspec/changes/was-decision-model-architecture-v0.1/design.md | 开发/05-WAS/openspec/changes/was-decision-model-architecture-v0.1/design.md | local_only | pending_api |
+| GPCF-DOC-CANDIDATE-WAS-DECISION-MODEL-ARCH-PROPOSAL | openspec/changes/was-decision-model-architecture-v0.1/proposal.md | 开发/05-WAS/openspec/changes/was-decision-model-architecture-v0.1/proposal.md | local_only | pending_api |
+| GPCF-DOC-7CA9A86B02 | openspec/changes/was-decision-model-architecture-v0.1/specs/README.md | 开发/05-KDS/openspec/changes/was-decision-model-architecture-v0.1/specs/README.md | bidirectional | pending_api |
+| GPCF-DOC-CE200A6B62 | openspec/changes/was-decision-model-architecture-v0.1/specs/was-decision-governance/README.md | 开发/05-KDS/openspec/changes/was-decision-model-architecture-v0.1/specs/was-decision-governance/README.md | bidirectional | pending_api |
+| GPCF-DOC-CANDIDATE-WAS-DECISION-MODEL-ARCH-SPEC | openspec/changes/was-decision-model-architecture-v0.1/specs/was-decision-governance/spec.md | 开发/05-WAS/openspec/changes/was-decision-model-architecture-v0.1/specs/was-decision-governance/spec.md | local_only | pending_api |
+| GPCF-DOC-CANDIDATE-WAS-DECISION-MODEL-ARCH-TASKS | openspec/changes/was-decision-model-architecture-v0.1/tasks.md | 开发/05-WAS/openspec/changes/was-decision-model-architecture-v0.1/tasks.md | local_only | pending_api |
+| GPCF-DOC-B47AC1B4E7 | openspec/changes/was-decision-platform-v02/README.md | 开发/91-治理与验收/openspec/changes/was-decision-platform-v02/README.md | local_only | pending_api |
+| GPCF-DOC-C237D8B76A | openspec/changes/was-decision-platform-v02/artifacts/README.md | 开发/91-治理与验收/openspec/changes/was-decision-platform-v02/artifacts/README.md | local_only | pending_api |
+| GPCF-DOC-51325B206F | openspec/changes/was-decision-platform-v02/artifacts/freeze-record-was-v0.2-20261024.md | 开发/12-GPCF/openspec/changes/was-decision-platform-v02/artifacts/freeze-record-was-v0.2-20261024.md | bidirectional | pending_api |
+| GPCF-WAS-DECISION-PLATFORM-V02-DESIGN-20261024 | openspec/changes/was-decision-platform-v02/design.md | 开发/91-治理与验收/openspec/changes/was-decision-platform-v02/design.md | local_only | pending_api |
+| GPCF-WAS-DECISION-PLATFORM-V02-PROPOSAL-20261024 | openspec/changes/was-decision-platform-v02/proposal.md | 开发/91-治理与验收/openspec/changes/was-decision-platform-v02/proposal.md | local_only | pending_api |
+| GPCF-DOC-F04E26A1EA | openspec/changes/was-decision-platform-v02/specs/README.md | 开发/91-治理与验收/openspec/changes/was-decision-platform-v02/specs/README.md | local_only | pending_api |
+| GPCF-DOC-6B0AC5B97E | openspec/changes/was-decision-platform-v02/specs/was-decision-platform-v02/README.md | 开发/91-治理与验收/openspec/changes/was-decision-platform-v02/specs/was-decision-platform-v02/README.md | local_only | pending_api |
+| GPCF-WAS-DECISION-PLATFORM-V02-SPEC-20261024 | openspec/changes/was-decision-platform-v02/specs/was-decision-platform-v02/spec.md | 开发/91-治理与验收/openspec/changes/was-decision-platform-v02/specs/was-decision-platform-v02/spec.md | local_only | pending_api |
+| GPCF-WAS-DECISION-PLATFORM-V02-TASKS-20261024 | openspec/changes/was-decision-platform-v02/tasks.md | 开发/91-治理与验收/openspec/changes/was-decision-platform-v02/tasks.md | local_only | pending_api |
 | GPCF-DOC-4C32519F10 | openspec/changes/was-flow-naming-migration/README.md | 开发/05-KDS/openspec/changes/was-flow-naming-migration/README.md | bidirectional | pending_api |
 | GPCF-DOC-3EBD68D2C6 | openspec/changes/was-flow-naming-migration/artifacts/README.md | 开发/05-KDS/openspec/changes/was-flow-naming-migration/artifacts/README.md | bidirectional | pending_api |
 | GPCF-DOC-FCAE31EF6C | openspec/changes/was-flow-naming-migration/design.md | 开发/05-KDS/openspec/changes/was-flow-naming-migration/design.md | bidirectional | pending_api |

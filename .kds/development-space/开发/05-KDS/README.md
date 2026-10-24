@@ -1,6 +1,6 @@
 # KDS 开发文档空间
 
-生成日期：2026-10-23
+生成日期：2026-10-24
 
 用途：KDS `开发` 空间中 `KDS` 项目的受控文档入口。
 
@@ -1002,6 +1002,8 @@
 | GPCF-SPACEAI-FLOOD-PROPOSAL-20261016 | proposal | openspec/changes/spaceai-was-city-flood-replay/proposal.md | implemented |
 | GPCF-DOC-FECC2A4859 | specs | openspec/changes/spaceai-was-city-flood-replay/specs/README.md | implemented |
 | GPCF-DOC-307EB657D0 | spaceai-city-slice-replay | openspec/changes/spaceai-was-city-flood-replay/specs/spaceai-city-slice-replay/README.md | implemented |
+| GPCF-DOC-7CA9A86B02 | specs | openspec/changes/was-decision-model-architecture-v0.1/specs/README.md | draft |
+| GPCF-DOC-CE200A6B62 | was-decision-governance | openspec/changes/was-decision-model-architecture-v0.1/specs/was-decision-governance/README.md | draft |
 | GPCF-DOC-4C32519F10 | was-flow-naming-migration | openspec/changes/was-flow-naming-migration/README.md | draft |
 | GPCF-DOC-3EBD68D2C6 | artifacts | openspec/changes/was-flow-naming-migration/artifacts/README.md | draft |
 | GPCF-DOC-FCAE31EF6C | Design — was-flow-naming-migration | openspec/changes/was-flow-naming-migration/design.md | draft |

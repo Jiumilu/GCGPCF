@@ -14,48 +14,35 @@ sync_direction: bidirectional
 last_reviewed: 2026-10-24
 supersedes: []
 superseded_by: []
-admission_status: skeleton_only
+admission_status: draft_full_cp
 ---
+
 
 # was-decision-model-architecture-v0.1
 
-> 状态：**skeleton_only**（仅有 `.openspec.yaml` + README；没有 proposal/design/tasks/specs）。
-> 非声明：不构成完整 Change Proposal、不构成评审通过、不做状态提升。
+目录：`openspec/changes/was-decision-model-architecture-v0.1`
 
-## 1. 目的
+用途：保存本目录下的受控文档、证据或规格材料。
 
-把「WAS 决策模型体系架构与实施方案 v0.1」登记为 GPCF 可评审变更的**骨架入口**，便于后续按 WP-A…WP-E 增量补齐。
+KDS 空间：`开发`
 
-## 2. 来源与既有候选
+关联项目：KDS, WAS
 
-- 方案：`GlobalCloud WAS/docs/WAS决策模型体系架构与实施方案_v0.1.md`（draft_for_review）
-- WAS WP-A 分支：`feat/was-decision-wp-a`（`f337c61`）
-  - 术语候选、影响矩阵、迁移说明、CP 草案
-- Ontology 准入包：分支 `feat/was-decision-ontology-admission`（`d1ee7b4`）
-- WP-B 契约：分支 `feat/was-decision-wp-b`（`46c6a38`）
-- WP-C 运行时：WAME 分支 `feat/wame-decision-runtime-wp-c`（`4f64781`）
+受控规则：
 
-## 3. 范围（待完整 CP 补齐）
+- 本目录新增 Markdown 文档必须重新运行 `python3 tools/kds-sync/document_control.py`。
+- 当前有效文档使用 `controlled`；草案使用 `draft`；历史证据使用 `archive`。
+- 过期或被替代文档不得删除，必须进入归档台账或保留替代关系。
 
-- 决策域术语候选与状态分离；
-- XWAIL 可选 `DecisionProfile` 与决策对象契约；
-- WAME 登记/预检/授权/审计 no-write 运行时；
-- 隔离试点准备；
-- 兼容/迁移/回滚。
+## 文档清单
 
-## 4. 非目标
-
-- 不新增资产维度或 Flow；
-- 不接生产/客户真实数据；
-- 不将模型概率当作授权/事实；
-- 不做 accepted/integrated/production_ready 提升；
-- 不替代 GPCF/WAME/KDS 权威职责。
-
-## 5. 当前状态
-
-- 本 change **仅有骨架**；`openspec validate` 因缺少 spec deltas 预期为 invalid。
-- 完整 CP（proposal/design/tasks/specs）需后续授权后补齐。
-
-## 6. 非声明
-
-不构成完整 CP、评审通过、契约发布或任何状态提升。
+| doc_id | title | source_path | project | status |
+| --- | --- | --- | --- | --- |
+| GPCF-DOC-CANDIDATE-WAS-DECISION-MODEL-ARCH-V01 | was-decision-model-architecture-v0.1 | openspec/changes/was-decision-model-architecture-v0.1/README.md | WAS | draft |
+| GPCF-DOC-CANDIDATE-WAS-DECISION-MODEL-ARCH-ARTIFACTS | 证据索引 — WAS 决策模型体系架构（候选） | openspec/changes/was-decision-model-architecture-v0.1/artifacts/README.md | WAS | draft |
+| GPCF-DOC-CANDIDATE-WAS-DECISION-MODEL-ARCH-DESIGN | WAS 决策模型体系架构设计（候选） | openspec/changes/was-decision-model-architecture-v0.1/design.md | WAS | draft |
+| GPCF-DOC-CANDIDATE-WAS-DECISION-MODEL-ARCH-PROPOSAL | WAS 决策模型体系架构与实施方案 v0.1 评审与候选契约准入 | openspec/changes/was-decision-model-architecture-v0.1/proposal.md | WAS | draft |
+| GPCF-DOC-7CA9A86B02 | specs | openspec/changes/was-decision-model-architecture-v0.1/specs/README.md | KDS | draft |
+| GPCF-DOC-CE200A6B62 | was-decision-governance | openspec/changes/was-decision-model-architecture-v0.1/specs/was-decision-governance/README.md | KDS | draft |
+| GPCF-DOC-CANDIDATE-WAS-DECISION-MODEL-ARCH-SPEC | 能力规格 — WAS 决策模型体系架构（候选） | openspec/changes/was-decision-model-architecture-v0.1/specs/was-decision-governance/spec.md | WAS | draft |
+| GPCF-DOC-CANDIDATE-WAS-DECISION-MODEL-ARCH-TASKS | WAS 决策模型体系架构实施任务（候选） | openspec/changes/was-decision-model-architecture-v0.1/tasks.md | WAS | draft |

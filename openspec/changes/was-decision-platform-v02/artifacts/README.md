@@ -26,7 +26,7 @@ master_control: GPCF:01-architecture/WAS世界资产体系总体方案.md
 
 KDS 空间：`开发`
 
-关联项目：WAS
+关联项目：GPCF, WAS
 
 受控规则：
 
@@ -39,3 +39,4 @@ KDS 空间：`开发`
 | doc_id | title | source_path | project | status |
 | --- | --- | --- | --- | --- |
 | GPCF-DOC-C237D8B76A | 证据索引（was-decision-platform-v02） | openspec/changes/was-decision-platform-v02/artifacts/README.md | WAS | draft |
+| GPCF-DOC-51325B206F | WAS 决策能力平台 v0.2 契约冻结记录（Freeze Record） | openspec/changes/was-decision-platform-v02/artifacts/freeze-record-was-v0.2-20261024.md | GPCF | draft |

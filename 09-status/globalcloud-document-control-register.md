@@ -19,7 +19,7 @@ superseded_by: []
 
 # GlobalCloud 文档控制总台账
 
-日期：2026-10-23
+日期：2026-10-24
 
 用途：登记 GPCF 仓库内所有 Markdown 文档的受控身份、项目归属、状态、源路径与 KDS 开发空间路径。
 
@@ -33,14 +33,14 @@ superseded_by: []
 | GPC | 02-GPC | 54 | 46 | 已建空间 |
 | PVAOS | 03-PVAOS | 13 | 10 | 已建空间 |
 | WAME | 04-WAME | 195 | 25 | 已建空间 |
-| KDS | 05-KDS | 1019 | 1016 | 已建空间 |
+| KDS | 05-KDS | 1021 | 1018 | 已建空间 |
 | Brain | 06-Brain | 14 | 11 | 已建空间 |
 | PKC | 07-PKC | 10 | 7 | 已建空间 |
 | XiaoC | 08-XiaoC | 68 | 65 | 已建空间 |
 | XGD | 09-XGD | 10 | 7 | 已建空间 |
 | XiaoG | 10-XiaoG | 11 | 8 | 已建空间 |
 | MMC | 11-MMC | 13 | 10 | 已建空间 |
-| GPCF | 12-GPCF | 1973 | 1670 | 已建空间 |
+| GPCF | 12-GPCF | 1974 | 1671 | 已建空间 |
 | Studio | 13-Studio | 5 | 2 | 已建空间 |
 | ICP | 14-ICP | 0 | 0 | 已建空间，暂无直接镜像文档 |
 | SpaceAIStudio | 15-SpaceAIStudio | 0 | 0 | 已建空间，暂无直接镜像文档 |
@@ -52,7 +52,7 @@ superseded_by: []
 | --- | --- | --- |
 | 00-项目群总控 | 项目群总入口与根 README | 1 |
 | 90-跨项目架构 | 跨项目架构、主线、数据/知识跨域文档 | 56 |
-| 91-治理与验收 | 治理、验收、状态、台账与门禁文档 | 377 |
+| 91-治理与验收 | 治理、验收、状态、台账与门禁文档 | 385 |
 | 92-证据与会话归档 | Harness、证据样本、历史会话与归档文档 | 95 |
 | 99-过期文档 | deprecated / superseded 文档 | 0 |
 
@@ -3429,6 +3429,23 @@ superseded_by: []
 | GPCF-DOC-307EB657D0 | spaceai-city-slice-replay | openspec/changes/spaceai-was-city-flood-replay/specs/spaceai-city-slice-replay/README.md | KDS | GPC, WAME, KDS, GPCF | openspec | implemented | 开发/05-KDS/openspec/changes/spaceai-was-city-flood-replay/specs/spaceai-city-slice-replay/README.md |
 | GPCF-SPACEAI-FLOOD-SPEC-20261016 | spec | openspec/changes/spaceai-was-city-flood-replay/specs/spaceai-city-slice-replay/spec.md | GPCF | GPCF, WAME | openspec | implemented | 开发/12-GPCF/openspec/changes/spaceai-was-city-flood-replay/specs/spaceai-city-slice-replay/spec.md |
 | GPCF-SPACEAI-FLOOD-TASKS-20261016 | tasks | openspec/changes/spaceai-was-city-flood-replay/tasks.md | GPCF | WAME, GPCF | openspec | implemented | 开发/12-GPCF/openspec/changes/spaceai-was-city-flood-replay/tasks.md |
+| GPCF-DOC-CANDIDATE-WAS-DECISION-MODEL-ARCH-V01 | was-decision-model-architecture-v0.1 | openspec/changes/was-decision-model-architecture-v0.1/README.md | WAS | GPCF, XWAIL, WAME, Ontology, AaaS, SCaaS | openspec | draft | 开发/05-WAS/openspec/changes/was-decision-model-architecture-v0.1/README.md |
+| GPCF-DOC-CANDIDATE-WAS-DECISION-MODEL-ARCH-ARTIFACTS | 证据索引 — WAS 决策模型体系架构（候选） | openspec/changes/was-decision-model-architecture-v0.1/artifacts/README.md | WAS | GPCF, XWAIL, WAME | openspec | draft | 开发/05-WAS/openspec/changes/was-decision-model-architecture-v0.1/artifacts/README.md |
+| GPCF-DOC-CANDIDATE-WAS-DECISION-MODEL-ARCH-DESIGN | WAS 决策模型体系架构设计（候选） | openspec/changes/was-decision-model-architecture-v0.1/design.md | WAS | GPCF, XWAIL, WAME, Ontology, AaaS | openspec | draft | 开发/05-WAS/openspec/changes/was-decision-model-architecture-v0.1/design.md |
+| GPCF-DOC-CANDIDATE-WAS-DECISION-MODEL-ARCH-PROPOSAL | WAS 决策模型体系架构与实施方案 v0.1 评审与候选契约准入 | openspec/changes/was-decision-model-architecture-v0.1/proposal.md | WAS | GPCF, XWAIL, WAME, Ontology, AaaS, SCaaS | openspec | draft | 开发/05-WAS/openspec/changes/was-decision-model-architecture-v0.1/proposal.md |
+| GPCF-DOC-7CA9A86B02 | specs | openspec/changes/was-decision-model-architecture-v0.1/specs/README.md | KDS | GPC, WAME, KDS, GPCF | openspec | draft | 开发/05-KDS/openspec/changes/was-decision-model-architecture-v0.1/specs/README.md |
+| GPCF-DOC-CE200A6B62 | was-decision-governance | openspec/changes/was-decision-model-architecture-v0.1/specs/was-decision-governance/README.md | KDS | GPC, WAME, KDS, GPCF | openspec | draft | 开发/05-KDS/openspec/changes/was-decision-model-architecture-v0.1/specs/was-decision-governance/README.md |
+| GPCF-DOC-CANDIDATE-WAS-DECISION-MODEL-ARCH-SPEC | 能力规格 — WAS 决策模型体系架构（候选） | openspec/changes/was-decision-model-architecture-v0.1/specs/was-decision-governance/spec.md | WAS | GPCF, XWAIL, WAME, Ontology | openspec | draft | 开发/05-WAS/openspec/changes/was-decision-model-architecture-v0.1/specs/was-decision-governance/spec.md |
+| GPCF-DOC-CANDIDATE-WAS-DECISION-MODEL-ARCH-TASKS | WAS 决策模型体系架构实施任务（候选） | openspec/changes/was-decision-model-architecture-v0.1/tasks.md | WAS | GPCF, XWAIL, WAME, Ontology | openspec | draft | 开发/05-WAS/openspec/changes/was-decision-model-architecture-v0.1/tasks.md |
+| GPCF-DOC-B47AC1B4E7 | WAS 决策能力平台 v0.2 变更包索引（was-decision-platform-v02） | openspec/changes/was-decision-platform-v02/README.md | WAS | WAS, WAES, WAME, GPCF, XWAIL | openspec | draft | 开发/91-治理与验收/openspec/changes/was-decision-platform-v02/README.md |
+| GPCF-DOC-C237D8B76A | 证据索引（was-decision-platform-v02） | openspec/changes/was-decision-platform-v02/artifacts/README.md | WAS | WAS, WAES, WAME, GPCF, XWAIL | openspec | draft | 开发/91-治理与验收/openspec/changes/was-decision-platform-v02/artifacts/README.md |
+| GPCF-DOC-51325B206F | WAS 决策能力平台 v0.2 契约冻结记录（Freeze Record） | openspec/changes/was-decision-platform-v02/artifacts/freeze-record-was-v0.2-20261024.md | GPCF | GPC, WAME, GPCF | openspec | draft | 开发/12-GPCF/openspec/changes/was-decision-platform-v02/artifacts/freeze-record-was-v0.2-20261024.md |
+| GPCF-WAS-DECISION-PLATFORM-V02-DESIGN-20261024 | WAS 决策能力平台 v0.2 设计（was-decision-platform-v02） | openspec/changes/was-decision-platform-v02/design.md | WAS | WAS, WAES, WAME, GPCF, XWAIL | openspec | draft | 开发/91-治理与验收/openspec/changes/was-decision-platform-v02/design.md |
+| GPCF-WAS-DECISION-PLATFORM-V02-PROPOSAL-20261024 | WAS 决策能力平台 v0.2 变更提案（was-decision-platform-v02） | openspec/changes/was-decision-platform-v02/proposal.md | WAS | WAS, WAES, WAME, GPCF, XWAIL | openspec | draft | 开发/91-治理与验收/openspec/changes/was-decision-platform-v02/proposal.md |
+| GPCF-DOC-F04E26A1EA | specs 索引（was-decision-platform-v02） | openspec/changes/was-decision-platform-v02/specs/README.md | WAS | WAS, WAES, WAME, GPCF, XWAIL | openspec | draft | 开发/91-治理与验收/openspec/changes/was-decision-platform-v02/specs/README.md |
+| GPCF-DOC-6B0AC5B97E | 能力目录索引 — was-decision-platform-v02 | openspec/changes/was-decision-platform-v02/specs/was-decision-platform-v02/README.md | WAS | WAS, WAES, WAME, GPCF, XWAIL | openspec | draft | 开发/91-治理与验收/openspec/changes/was-decision-platform-v02/specs/was-decision-platform-v02/README.md |
+| GPCF-WAS-DECISION-PLATFORM-V02-SPEC-20261024 | 能力规格 — WAS 决策能力平台 v0.2（was-decision-platform-v02） | openspec/changes/was-decision-platform-v02/specs/was-decision-platform-v02/spec.md | WAS | WAS, WAES, WAME, GPCF, XWAIL | openspec | draft | 开发/91-治理与验收/openspec/changes/was-decision-platform-v02/specs/was-decision-platform-v02/spec.md |
+| GPCF-WAS-DECISION-PLATFORM-V02-TASKS-20261024 | 任务清单 — WAS 决策能力平台 v0.2（was-decision-platform-v02） | openspec/changes/was-decision-platform-v02/tasks.md | WAS | WAS, WAES, WAME, GPCF, XWAIL | openspec | draft | 开发/91-治理与验收/openspec/changes/was-decision-platform-v02/tasks.md |
 | GPCF-DOC-4C32519F10 | was-flow-naming-migration | openspec/changes/was-flow-naming-migration/README.md | KDS | GPC, WAME, KDS, GPCF | openspec | draft | 开发/05-KDS/openspec/changes/was-flow-naming-migration/README.md |
 | GPCF-DOC-3EBD68D2C6 | artifacts | openspec/changes/was-flow-naming-migration/artifacts/README.md | KDS | GPC, WAME, KDS, GPCF | openspec | draft | 开发/05-KDS/openspec/changes/was-flow-naming-migration/artifacts/README.md |
 | GPCF-DOC-FCAE31EF6C | Design — was-flow-naming-migration | openspec/changes/was-flow-naming-migration/design.md | KDS | GPC, WAME, KDS, GPCF | openspec | draft | 开发/05-KDS/openspec/changes/was-flow-naming-migration/design.md |

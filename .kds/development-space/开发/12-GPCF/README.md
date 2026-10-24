@@ -1,6 +1,6 @@
 # GPCF 开发文档空间
 
-生成日期：2026-10-23
+生成日期：2026-10-24
 
 用途：KDS `开发` 空间中 `GPCF` 项目的受控文档入口。
 
@@ -1654,6 +1654,7 @@
 | GPCF-SPACEAI-FLOOD-DESIGN-20261016 | design | openspec/changes/spaceai-was-city-flood-replay/design.md | implemented |
 | GPCF-SPACEAI-FLOOD-SPEC-20261016 | spec | openspec/changes/spaceai-was-city-flood-replay/specs/spaceai-city-slice-replay/spec.md | implemented |
 | GPCF-SPACEAI-FLOOD-TASKS-20261016 | tasks | openspec/changes/spaceai-was-city-flood-replay/tasks.md | implemented |
+| GPCF-DOC-51325B206F | WAS 决策能力平台 v0.2 契约冻结记录（Freeze Record） | openspec/changes/was-decision-platform-v02/artifacts/freeze-record-was-v0.2-20261024.md | draft |
 | GPCF-DOC-B7F7C251FF | spec | openspec/changes/was-flow-naming-migration/specs/was-flow-naming-migration/spec.md | draft |
 | GPCF-DOC-2FF258337C | XWAIL `flowType` 影响评估说明（场景流扩展·候选） | openspec/changes/was-scenario-flow-extension/artifacts/XWAIL-flowType影响评估说明_20261016.md | draft |
 | GPCF-DOC-5C02110A55 | spec | openspec/changes/was-scenario-flow-extension/specs/was-scenario-flow-extension/spec.md | draft |

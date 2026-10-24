@@ -1,0 +1,41 @@
+---
+doc_id: GPCF-DOC-CE200A6B62
+title: was-decision-governance
+project: KDS
+related_projects: [GPC, WAME, KDS, GPCF]
+domain: openspec
+status: draft
+version: v1.0
+owner: KDS
+kds_space: 开发
+kds_path: 开发/05-KDS/openspec/changes/was-decision-model-architecture-v0.1/specs/was-decision-governance/README.md
+source_path: openspec/changes/was-decision-model-architecture-v0.1/specs/was-decision-governance/README.md
+sync_direction: bidirectional
+last_reviewed: unreviewed
+supersedes: []
+superseded_by: []
+---
+
+
+# was-decision-governance
+
+目录：`openspec/changes/was-decision-model-architecture-v0.1/specs/was-decision-governance`
+
+用途：保存本目录下的受控文档、证据或规格材料。
+
+KDS 空间：`开发`
+
+关联项目：KDS, WAS
+
+受控规则：
+
+- 本目录新增 Markdown 文档必须重新运行 `python3 tools/kds-sync/document_control.py`。
+- 当前有效文档使用 `controlled`；草案使用 `draft`；历史证据使用 `archive`。
+- 过期或被替代文档不得删除，必须进入归档台账或保留替代关系。
+
+## 文档清单
+
+| doc_id | title | source_path | project | status |
+| --- | --- | --- | --- | --- |
+| GPCF-DOC-CE200A6B62 | was-decision-governance | openspec/changes/was-decision-model-architecture-v0.1/specs/was-decision-governance/README.md | KDS | draft |
+| GPCF-DOC-CANDIDATE-WAS-DECISION-MODEL-ARCH-SPEC | 能力规格 — WAS 决策模型体系架构（候选） | openspec/changes/was-decision-model-architecture-v0.1/specs/was-decision-governance/spec.md | WAS | draft |
