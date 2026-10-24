@@ -110,3 +110,8 @@ superseded_by: []
 
 - 面板标题/折叠/停靠/退出、批注/清除/导出 PNG/MD/独立版、回放口径、场景切换、加载/超时/缓存/重试、热力/时点/空态改 T()；
 - 793 tests / tsc 0；SpaceAI main 本地提交（未 push）。
+
+## 阶段 1 批次 14（FloatController，2026-10-24）
+
+- 场景控制器展开/拖动/标题/统计/提示/折叠/隐藏/视频/控制台改 T()；
+- 793 tests / tsc 0；SpaceAI main 本地提交（未 push）。
