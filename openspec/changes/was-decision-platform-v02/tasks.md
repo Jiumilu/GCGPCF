@@ -159,6 +159,14 @@ master_control: GPCF:01-architecture/WAS世界资产体系总体方案.md
 - 模型推荐“提交 CP 到独立分支保护”（p=.593）属**硬边界**，未自动执行；转 **AUTH-CP-COMMIT** 显式授权请求（分支 `docs/was-decision-platform-v02`，精确路径，不合并主干）。
 - 外部成果不记入本目标；提交/实现/清理仍禁止。
 
+### 0.15 Phase-1 显式授权执行记录（2026-10-24）
+
+- 老卢显式授权 Phase-1 最小：AUTH-P0-01 CP 提交保护 + AUTH-P0-02 B2 schema 生产 + AUTH-P0-03 WAME 代理修复（硬边界，预授权不覆盖）。
+- AUTH-P0-01 ✅：分支 `docs/was-decision-platform-v02` commit `8e9a390bc`（17 文件 = 9 CP + 8 `.kds` 镜像）；`openspec validate` valid:true；未合并/未推送。
+- AUTH-P0-03 ✅：分支 `fix/wame-gate-proxy-path` commit `17a6730`（1 行）；代理 `--check-only` exit 0，输出与 GPCF 正本逐字节一致；未合并/未推送。
+- AUTH-P0-02 ⏳ 下一轮；AUTH-P0-04…10 ⏸ 未授权。
+- 纪律：独立 worktree/分支、精确 add、不合并主干、不 push CI；主工作树未提交/未清理。
+
 ## 1. 治理登记（GPCF-TP-01 的执行清单，当前部分完成）
 
 - [x] 1.1 四项人工拍板记录（`decisions/four-decisions.md`）
