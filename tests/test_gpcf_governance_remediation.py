@@ -324,3 +324,28 @@ def test_promote_vu_stage_positive_path_writes_s4(tmp_path):
     assert vu["stage"] == "S4"
     assert vu["inferred"] is False
     assert vu["promoted_at"]
+
+
+def test_pqc_pilot_close_dry_run_never_writes_ledger(tmp_path):
+    """P12/P14 收口脚本：dry-run 必须不写 VU 台账；模板证据必须被拒。"""
+    import hashlib
+    import subprocess
+    import sys
+
+    ledger = ROOT / "runtime" / "vu-ledger.yaml"
+    before = hashlib.sha256(ledger.read_bytes()).hexdigest()
+
+    template = ROOT / "features/active/F-032-pqc-external-service-via-pvaai/evidence/pilot-receipt-template.json"
+    bad = subprocess.run([sys.executable, str(ROOT / "scripts/gpcf_pqc_pilot_close.py"),
+                          "--vu-id", "PQC-VU-01", "--evidence", str(template)],
+                         text=True, capture_output=True, check=False, cwd=ROOT)
+    assert bad.returncode == 1
+
+    good = tmp_path / "receipt.json"
+    good.write_text('{"data_class": "real", "authorization_granted": true, "rollback": "演练通过"}', encoding="utf-8")
+    ok = subprocess.run([sys.executable, str(ROOT / "scripts/gpcf_pqc_pilot_close.py"),
+                         "--vu-id", "PQC-VU-01", "--evidence", str(good)],
+                        text=True, capture_output=True, check=False, cwd=ROOT)
+    assert ok.returncode == 0, ok.stdout + ok.stderr
+    assert '"status": "ready"' in ok.stdout
+    assert hashlib.sha256(ledger.read_bytes()).hexdigest() == before
