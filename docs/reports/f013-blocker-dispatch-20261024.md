@@ -34,7 +34,7 @@ superseded_by: []
 
 | # | blocker | 解除判据 | 状态 |
 |---|---|---|---|
-| 1 | `gpcf_a10r27_current_truth_4file_delta_pending_independent_review_and_separate_commit_push_disposition` | 对 A10R27 的 4 文件 delta 做独立复核并单独提交/推送处置 | 待办（GPCF） |
+| 1 | `gpcf_a10r27_current_truth_4file_delta_pending_independent_review_and_separate_commit_push_disposition` | 对 A10R27 的 4 文件 delta 做独立复核并单独提交/推送处置 | **无法复核**：全项目群检索仅 F-013 journal / LOOP 看板引用该标识，**仓内无 A10R27 评审证据文件**（evidence/ 76 份中无 a10r27）。需老卢裁定为 stale 或提供原始评审包 |
 
 ### 2.2 KDS（4 条）
 
@@ -73,7 +73,7 @@ superseded_by: []
 
 | 归属 | 条数 | 建议动作 |
 |---|---:|---|
-| GPCF | 1 | 我可自行完成（A10R27 四文件 delta 独立复核 + 单独提交） |
+| GPCF | 1 | **不可自行完成**：A10R27 评审证据不在仓内；需你裁定 stale 或提供原始评审包 |
 | KDS | 4 | 属主：2 条需专项授权、1 条治理裁定、1 条补审计关系 |
 | Brain | 2 | 属主：移动端 UI 返工 + A10 控制放开 |
 | Studio | 4 | 属主：治理处置 + fixture 生命周期 + A11/MMC 策略 |

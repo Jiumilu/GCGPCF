@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-10-24T18:52:11.564480+08:00",
+  "generated_at": "2026-10-24T18:59:56.414179+08:00",
   "freshness_hours": 12,
   "freshness_ok": true,
   "project_count": 29,
@@ -129,12 +129,11 @@
   "sensitive_repos": [
     "GlobalCloud XiaoC",
     "GlobalCloud GPCF",
-    "GlobalCloud PKC",
-    "GlobalCloud WAE"
+    "GlobalCloud PKC"
   ],
   "pass_repo_count": 3,
   "bootstrap_window": false,
-  "previous_generated_at": "2026-10-24T18:38:02.494188+08:00",
+  "previous_generated_at": "2026-10-24T18:52:11.564480+08:00",
   "repo_heads": {
     "GlobalCloud AAAS": "56d9f6af0e8097ff75867e8a8bf1325b5023f7e8",
     "GlobalCloud Brain": "84717b7e47f93b5f859ec691543130020154685e",
@@ -159,7 +158,7 @@
     "GlobalCloud SpaceAI Studio": "a33d51add39f74ae305dd15fa9d95a881870d55b",
     "GlobalCloud World": "099a8f2e81ff4a817833b29a1355f82d336ec334",
     "GlobalCloud Mem": "5d143c1006ed1d0c8ee0673087e1a7307472f855",
-    "GlobalCloud WAE": "f221ee104e6d02a0f3cd065fd6cb29dc6dec4e30",
+    "GlobalCloud WAE": "6ff4701123d3c968e2260293cb8be950dfdf223a",
     "GlobalCloud PMC": "aee0434cca99edec438cb021725eb60ca668b20d",
     "GlobalCloud PDC": "dc4f75bd30d92252a7916ff500d5baf28ed6bf4e",
     "GlobalCloud SLC": "93abf9dacab320c65c0fb6400be3b1d46954bf83",
@@ -478,8 +477,8 @@
       "sensitive_paths": []
     },
     "GlobalCloud GPCF": {
-      "dirty_count": 425,
-      "ahead": 9,
+      "dirty_count": 424,
+      "ahead": 10,
       "behind": 0,
       "paths": [
         "$CODEX_HOME/automations/globalcloud-17/README.md",
@@ -638,7 +637,6 @@
         "docs/harness/XiaoG/evidence/README.md",
         "docs/harness/XiaoG/loops/README.md",
         "docs/harness/evidence/README.md",
-        "docs/harness/evidence/active-feature-blockers-20261024.md",
         "docs/harness/evidence/batch2-input-intake-form-20261024.md",
         "docs/harness/evidence/c-real-gap-20261024.md",
         "docs/harness/evidence/goal-blocker-register-20261024.md",
@@ -649,6 +647,7 @@
         "docs/harness/loops/README.md",
         "docs/harness/minimum-closed-loop/README.md",
         "docs/harness/tasks/README.md",
+        "docs/reports/f013-blocker-dispatch-20261024.md",
         "docs/standards/README.md",
         "features/active/F-012-icp-sop-foundation-coupling/evidence/owner-action-pack-20261024.md",
         "features/active/F-012-icp-sop-foundation-coupling/evidence/plan-20261024.md",
@@ -810,7 +809,6 @@
         "docs/harness/evidence/wave1-review-pack-20261022.md",
         "docs/harness/evidence/workspace-consistency-20261023.md",
         "docs/reports/README.md",
-        "docs/reports/f013-blocker-dispatch-20261024.md",
         "docs/runbooks/README.md",
         "docs/runbooks/runtime-host-v1.0.md",
         "features/active/F-029-hermes-ai-runtime-admission/artifacts/.gitkeep",
@@ -1230,22 +1228,16 @@
       "sensitive_paths": []
     },
     "GlobalCloud WAE": {
-      "dirty_count": 37,
-      "ahead": 20,
+      "dirty_count": 30,
+      "ahead": 29,
       "behind": 0,
       "paths": [
         "apps/wame/src/app/apps/AppsShell.tsx",
-        "deploy/macmini/restore-drill-auto.sh",
-        "docs/evidence/R1/supply-chain/sbom.cdx.json",
-        "docs/evidence/R1/supply-chain/secret-scan.json",
-        "package.json",
         "packages/app-registry/src/index.ts",
         "\"docs/analysis/DSH\\345\\200\\237\\351\\211\\264_00_\\346\\200\\273\\346\\212\\245\\345\\221\\212_20261024.md\"",
         "\"docs/analysis/DSH\\345\\200\\237\\351\\211\\264_01_\\346\\241\\206\\346\\236\\266\\344\\270\\216\\345\\267\\245\\347\\250\\213\\346\\262\\273\\347\\220\\206_20261024.md\"",
         "\"docs/analysis/DSH\\345\\200\\237\\351\\211\\264_02_\\347\\225\\214\\351\\235\\242\\350\\256\\276\\350\\256\\241_20261024.md\"",
         "\"docs/analysis/DSH\\345\\200\\237\\351\\211\\264_03_WAE\\347\\216\\260\\347\\212\\266\\345\\237\\272\\347\\272\\277_20261024.md\"",
-        "docs/evidence/R1/verify-release/2026-10-24/artifacts/release-report.json",
-        "\"docs/plan/R1_\\345\\217\\221\\345\\270\\203\\345\\244\\215\\351\\252\\214\\346\\265\\201\\346\\260\\264\\347\\272\\277\\350\\257\\264\\346\\230\\216_20261024.md\"",
         "packages/adopted-dsh/README.md",
         "packages/adopted-dsh/THIRD_PARTY_NOTICES.md",
         "packages/adopted-dsh/package.json",
@@ -1269,12 +1261,9 @@
         "packages/adopted-dsh/src/slots/store.ts",
         "packages/adopted-dsh/src/store/contract.ts",
         "packages/adopted-dsh/third_party/deepseek-harness/LICENSE",
-        "packages/app-registry/src/sidebarContract.ts",
-        "scripts/verify-release.mts"
+        "packages/app-registry/src/sidebarContract.ts"
       ],
-      "sensitive_paths": [
-        "docs/evidence/R1/supply-chain/secret-scan.json"
-      ]
+      "sensitive_paths": []
     },
     "GlobalCloud PMC": {
       "dirty_count": 3,
