@@ -18,14 +18,14 @@ superseded_by: []
 data_layer: derived
 authority_level: A2
 verification_status: source_verified
-generated_at: 2026-10-25 00:36:29 +0800
+generated_at: 2026-10-25 06:13:15 +0800
 ---
 
 # GlobalCloud 项目群当前 Live 状态快照
 
 ## Summary
 
-- generated_at: `2026-10-25T00:36:29.001310+08:00`
+- generated_at: `2026-10-25T06:13:15.125140+08:00`
 - freshness_ok: `true`
 - project_count: `29`
 - pass_repo_count: `4`
@@ -52,7 +52,7 @@ generated_at: 2026-10-25 00:36:29 +0800
 | `GlobalCloud WAME` | 7 | 0 | 0 | `none` |
 | `GlobalCloud GPC` | 1 | 8 | 0 | `none` |
 | `GlobalCloud Studio` | 1 | 1 | 0 | `none` |
-| `GlobalCloud GPCF` | 422 | 15 | 0 | `.harness/runs/kds-real-token-sync-20260613-062146/README.md, .harness/runs/kds-real-token-sync-20260613-062146/evidence/README.md, .harness/runs/kds-real-token-sync-20260613-062146/patches/README.md, .harness/runs/kds-real-token-sync-20260613-062146/workspaces/README.md` |
+| `GlobalCloud GPCF` | 422 | 16 | 0 | `.harness/runs/kds-real-token-sync-20260613-062146/README.md, .harness/runs/kds-real-token-sync-20260613-062146/evidence/README.md, .harness/runs/kds-real-token-sync-20260613-062146/patches/README.md, .harness/runs/kds-real-token-sync-20260613-062146/workspaces/README.md` |
 | `GlobalCloud XWAIL` | 1 | 0 | 0 | `none` |
 | `GlobalCloud GFIS` | 52 | 0 | 0 | `none` |
 | `GlobalCloud MMC` | 2 | 7 | 9 | `none` |
@@ -64,7 +64,7 @@ generated_at: 2026-10-25 00:36:29 +0800
 | `GlobalCloud XGD` | 0 | 0 | 0 | `none` |
 | `GlobalCloud ICP` | 0 | 0 | 0 | `none` |
 | `GlobalCloud PQC` | 34 | 0 | 0 | `none` |
-| `GlobalCloud SpaceAI Platform` | 35 | 1 | 0 | `none` |
+| `GlobalCloud SpaceAI Platform` | 35 | 2 | 0 | `none` |
 | `GlobalCloud SpaceAI Studio` | 0 | 0 | 0 | `none` |
 | `GlobalCloud World` | 1 | 0 | 0 | `none` |
 | `GlobalCloud Mem` | 0 | 23 | 0 | `none` |
