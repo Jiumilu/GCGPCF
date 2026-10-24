@@ -18,6 +18,9 @@ superseded_by: []
 
 # P10 / P11 · 界面分层与双角色权限一致性 · WAE 属主执行包
 
+> ⚠️ **已被取代**（2026-10-24）：本文件保留备查，最新口径见 `docs/reports/INDEX.md` 第 8 节。
+
+
 - 日期：2026-10-22｜依据：计划 P10/P11；UI 硬规则 `LOOP_UI_PRODUCT_FIRST_CONTROL.md`
 - 边界：WAE 仓改动由 WAE 属主执行；GPCF 只出动作与判据（纪律⑤）
 - 现状：`ui_plane` 仅在 `apps/wame/src/app/apps/AppsShell.dom.test.tsx` 有测试侧引用，`placement.city.yaml` 尚无该字段
