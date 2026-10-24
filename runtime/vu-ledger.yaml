@@ -642,11 +642,11 @@ vu_units:
   object: 单次实测口径快照
   source_of_record: runtime/state.json、runtime/queue.json
   acceptor: GPCF owner
-  stage: S1
-  stage_evidence: dirty 仓数并存 3/5/7/21/22 五套、项目群数并存 17/20/28 三套；PG-01 口径基准未落地
+  stage: S2
+  stage_evidence: 2026-10-24 复核：项目注册 29、caliber baseline validator pass、live_status 快照稳定、门禁 12/12
   data_class: fixture
   inferred: true
-  notes: 分母不稳（约束 C-C）
+  notes: 口径已收敛到单一 baseline；历史多套分母仅作沿革
 - vu_id: SOP-VU-01
   project: SOP
   weight: 5
