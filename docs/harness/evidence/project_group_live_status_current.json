@@ -35,6 +35,7 @@
     "GlobalCloud Brain",
     "GlobalCloud XiaoC",
     "GlobalCloud GPC",
+    "GlobalCloud GPCF",
     "GlobalCloud MMC",
     "GlobalCloud XiaoG",
     "GlobalCloud WAE",
@@ -51,6 +52,7 @@
     "GlobalCloud ICP",
     "GlobalCloud KDS",
     "GlobalCloud MMC",
+    "GlobalCloud Mem",
     "GlobalCloud PDC",
     "GlobalCloud PKC",
     "GlobalCloud PMC",
@@ -90,6 +92,7 @@
     "GlobalCloud ICP",
     "GlobalCloud KDS",
     "GlobalCloud MMC",
+    "GlobalCloud Mem",
     "GlobalCloud PDC",
     "GlobalCloud PKC",
     "GlobalCloud PMC",
@@ -138,7 +141,7 @@
     "GlobalCloud SpaceAI Studio": "dd99d4cb1fd63cc782c1802e7337b200a8f51a19",
     "GlobalCloud World": "4c29506acfd0bc47ba657c415e4cbddcc52cda05",
     "GlobalCloud Mem": "c4538820f8354c0bb765d4e4ff430c5f35137639",
-    "GlobalCloud WAE": "114e063a8b43f960503a6a637fbdfbdc040d9b3e",
+    "GlobalCloud WAE": "452cebc9364e4bdad686af0cac1773da03b315e9",
     "GlobalCloud PMC": "7a3633601d52feb81cdeffdf34697a7f065bcda0",
     "GlobalCloud PDC": "21f0de4cccdbeeedd7f6b522fe05aff793606ae4",
     "GlobalCloud SLC": "a866196f2844dce0f98bf2a524d4a6dfcafa3b51",
@@ -457,8 +460,8 @@
       "sensitive_paths": []
     },
     "GlobalCloud GPCF": {
-      "dirty_count": 495,
-      "ahead": 0,
+      "dirty_count": 492,
+      "ahead": 1,
       "behind": 0,
       "paths": [
         "$CODEX_HOME/automations/globalcloud-17/README.md",
@@ -775,8 +778,6 @@
         "projects/studio/STATUS.md",
         "projects/xwail/STATUS.md",
         "runtime/audit/README.md",
-        "runtime/audit/decision-ledger-20261022.jsonl",
-        "runtime/authorization-receipts.yaml",
         "runtime/logs/F-004.jsonl",
         "runtime/logs/F-011.jsonl",
         "runtime/logs/F-015.jsonl",
@@ -861,7 +862,6 @@
         "docs/harness/evidence/wave1-review-pack-20261022.md",
         "docs/harness/evidence/workspace-consistency-20261023.md",
         "docs/reports/README.md",
-        "docs/reports/ci-workflows-sop-kds-trace-20261024.md",
         "docs/runbooks/README.md",
         "docs/runbooks/runtime-host-v1.0.md",
         "features/active/F-029-hermes-ai-runtime-admission/artifacts/.gitkeep",
@@ -5560,22 +5560,23 @@
       "sensitive_paths": []
     },
     "GlobalCloud Mem": {
-      "dirty_count": 2,
+      "dirty_count": 5,
       "ahead": 0,
       "behind": 0,
       "paths": [
+        "README.md",
+        "docs/STATUS.md",
         "src/gcmem.py",
+        "\"docs/GCMEM-\\345\\205\\203\\346\\225\\260\\346\\215\\256\\345\\256\\214\\346\\225\\264\\347\\216\\207\\346\\226\\271\\346\\241\\210.md\"",
         "tests/test_gcmem_meta_v2.py"
       ],
       "sensitive_paths": []
     },
     "GlobalCloud WAE": {
-      "dirty_count": 116,
-      "ahead": 18,
+      "dirty_count": 114,
+      "ahead": 19,
       "behind": 0,
       "paths": [
-        "apps/wame/src/auth/LoginPage.tsx",
-        "apps/wame/src/styles/auth.css",
         "docs/assembly-spec/README.md",
         "\"docs/assembly-spec/manifests/_\\344\\270\\211\\346\\226\\271\\345\\257\\271\\350\\264\\246\\350\\241\\250.md\"",
         "docs/assembly-spec/manifests/aaas-console.yaml",
