@@ -1,0 +1,6 @@
+schema: spec-driven
+created: 2026-10-24
+goal: 把「WAS 决策能力平台 v0.2」的定位、能力边界、跨仓影响矩阵、四项已拍板决策与跨仓任务包登记为可评审变更（规划/治理登记，不实现）
+affected_areas:
+  - governance
+  - openspec
