@@ -51,3 +51,5 @@ superseded_by: []
 
 - 指标已接近真实上限：剩余 test 缺口 3 个、build 缺口 3 个，**都不是"漏配 CI"而是"确无测试/无构建产物或模型裁决不通过"**；
 - 若要让 P16-2 达到 29/29，需要：WAS/XWAIL 补最小测试、MMC/SpaceAI Studio 补 build job、XGD 确认 typecheck 替代、DRC 豁免裁定、PKC 属主自加。
+
+> **口径提醒（2026-10-24 16:20）**：本文件所说的已补/已覆盖均指**工作区口径**。按已跟踪文件口径，真正进 CI 的为 test 18/29、build 16/29；差集是 GPCF 已准备但未提交的 7 个仓（AAAS、KDS、SOP、ICP、PQC、Mem、FireQuote），需属主提交后才生效。

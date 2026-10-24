@@ -12,6 +12,7 @@ from __future__ import annotations
 import argparse
 import json
 import re
+import subprocess
 from pathlib import Path
 
 import yaml
@@ -30,11 +31,22 @@ BUILD_PATTERNS = re.compile(
 STANDARDS_PATTERNS = re.compile(r"gc_standard\.py\"?\s+check", re.I)
 
 
+def tracked_workflow_names(repo: Path) -> set[str]:
+    """已被 git 跟踪（= 会真正在 CI 生效）的 workflow 文件名。"""
+    try:
+        out = subprocess.run(["git", "--no-optional-locks", "-C", str(repo), "ls-files", ".github/workflows"],
+                             capture_output=True, text=True, timeout=30)
+    except Exception:
+        return set()
+    return {Path(line).name for line in out.stdout.splitlines() if line.strip()}
+
+
 def workflow_steps(repo: Path) -> list[dict]:
     items: list[dict] = []
     wf_dir = repo / ".github" / "workflows"
     if not wf_dir.is_dir():
         return items
+    tracked = tracked_workflow_names(repo)
     for wf in sorted(wf_dir.glob("*")):
         if wf.suffix not in (".yml", ".yaml"):
             continue
@@ -49,7 +61,8 @@ def workflow_steps(repo: Path) -> list[dict]:
             for step in job.get("steps") or []:
                 if isinstance(step, dict) and isinstance(step.get("run"), str):
                     runs.append(step["run"])
-            items.append({"file": wf.name, "job": job_name, "runs": runs})
+            items.append({"file": wf.name, "job": job_name, "runs": runs,
+                          "tracked": wf.name in tracked})
     return items
 
 
@@ -101,10 +114,16 @@ def resolve_npm_scripts(repo: Path, runs_text: str, depth: int = 3) -> str:
 
 def classify(repo: Path) -> dict:
     steps = workflow_steps(repo)
+    tracked_steps = [s for s in steps if s.get("tracked")]
     runs_text = "\n".join(r for s in steps for r in s["runs"])
     text = runs_text + "\n" + resolve_scripts(repo, runs_text) + "\n" + resolve_npm_scripts(repo, runs_text)
+    tracked_text = "\n".join(r for s in tracked_steps for r in s["runs"])
+    tracked_text += "\n" + resolve_scripts(repo, tracked_text) + "\n" + resolve_npm_scripts(repo, tracked_text)
     return {
         "repo": repo.name,
+        "active_test": bool(TEST_PATTERNS.search(tracked_text)),
+        "active_build": bool(BUILD_PATTERNS.search(tracked_text)),
+        "prepared_only": bool((TEST_PATTERNS.search(text) or BUILD_PATTERNS.search(text)) and not tracked_steps),
         "workflow_files": sorted({s["file"] for s in steps}),
         "jobs": sorted({s["job"] for s in steps}),
         "standards": bool(STANDARDS_PATTERNS.search(text)),
@@ -130,11 +149,13 @@ def main() -> int:
         "build": sum(r["build"] for r in rows),
     }
     if args.markdown:
-        print("| 仓 | standards | test | build | test 依据 | build 依据 |")
-        print("|---|---|---|---|---|---|")
+        print("| 仓 | standards | test | build | active test | active build | test 依据 | build 依据 |")
+        print("|---|---|---|---|---|---|---|---|")
         for r in rows:
             print(f"| {r['repo']} | {'✓' if r['standards'] else '—'} | {'✓' if r['test'] else '—'} | "
-                  f"{'✓' if r['build'] else '—'} | {', '.join(r['test_evidence']) or '—'} | {', '.join(r['build_evidence']) or '—'} |")
+                  f"{'✓' if r['build'] else '—'} | {'✓' if r.get('active_test') else '—'} | "
+                  f"{'✓' if r.get('active_build') else '—'} | {', '.join(r['test_evidence']) or '—'} | "
+                  f"{', '.join(r['build_evidence']) or '—'} |")
         print()
     print(json.dumps({"summary": summary, "rows": rows}, ensure_ascii=False, indent=1))
     return 0

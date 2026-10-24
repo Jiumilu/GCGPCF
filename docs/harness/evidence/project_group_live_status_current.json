@@ -142,7 +142,7 @@
     "GlobalCloud SpaceAI Studio": "dd99d4cb1fd63cc782c1802e7337b200a8f51a19",
     "GlobalCloud World": "4c29506acfd0bc47ba657c415e4cbddcc52cda05",
     "GlobalCloud Mem": "5a7b2c649bf2f695b62739b72fa394ba22e8c65e",
-    "GlobalCloud WAE": "39010214ba9ec89bb05bcefad1b664d157e6fb1c",
+    "GlobalCloud WAE": "0b0f9951ba84ebc0e24e5706351d1c218113d92e",
     "GlobalCloud PMC": "7a3633601d52feb81cdeffdf34697a7f065bcda0",
     "GlobalCloud PDC": "21f0de4cccdbeeedd7f6b522fe05aff793606ae4",
     "GlobalCloud SLC": "a866196f2844dce0f98bf2a524d4a6dfcafa3b51",
@@ -462,8 +462,8 @@
       "sensitive_paths": []
     },
     "GlobalCloud GPCF": {
-      "dirty_count": 502,
-      "ahead": 15,
+      "dirty_count": 506,
+      "ahead": 16,
       "behind": 0,
       "paths": [
         "$CODEX_HOME/automations/globalcloud-17/README.md",
@@ -688,6 +688,8 @@
         "docs/harness/loops/README.md",
         "docs/harness/minimum-closed-loop/README.md",
         "docs/harness/tasks/README.md",
+        "docs/reports/p16-2-ci-workflow-template-20261024.md",
+        "docs/reports/p16-2-remaining-disposition-20261024.md",
         "docs/standards/README.md",
         "features/active/F-012-icp-sop-foundation-coupling/evidence/plan-20261024.md",
         "features/active/F-022-was-scenario-flow-extension/evidence/was-review-request-20261024.md",
@@ -791,9 +793,11 @@
         "runtime/logs/F-027.jsonl",
         "runtime/vu-ledger.yaml",
         "templates/README.md",
+        "tests/test_gpcf_governance_remediation.py",
         "third_party/agent-reach/README.md",
         "tools/README.md",
         "tools/kds-sync/README.md",
+        "tools/kds-sync/scan_ci_coverage.py",
         "tools/kds-sync/validate_icp_project_registration.py",
         "tools/kds-sync/validate_project_group_external_loop_gate_delegate_baseline_20260627.py",
         "\".kds/development-space/\\345\\274\\200\\345\\217\\221/01-GFIS/GlobalCloud GPCF \\346\\200\\273\\344\\275\\223\\346\\226\\271\\346\\241\\210.md\"",
@@ -5583,11 +5587,13 @@
       "sensitive_paths": []
     },
     "GlobalCloud WAE": {
-      "dirty_count": 115,
-      "ahead": 33,
+      "dirty_count": 117,
+      "ahead": 34,
       "behind": 0,
       "paths": [
-        "apps/wame/src/app/modules/idp-console/IdpConsolePage.tsx",
+        "apps/wame/src/auth/LoginPage.tsx",
+        "apps/wame/src/i18n/messages.zh-CN.ts",
+        "apps/wame/src/styles/auth.css",
         "docs/assembly-spec/README.md",
         "\"docs/assembly-spec/manifests/_\\344\\270\\211\\346\\226\\271\\345\\257\\271\\350\\264\\246\\350\\241\\250.md\"",
         "docs/assembly-spec/manifests/aaas-console.yaml",

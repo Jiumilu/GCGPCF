@@ -428,3 +428,24 @@ def test_p17_done_audit_in_sweep_and_passes():
                          cwd=ROOT, capture_output=True, text=True, check=False)
     assert out.returncode == 0, out.stdout + out.stderr
     assert "violations=[]" in out.stdout
+
+
+def test_scan_ci_coverage_distinguishes_prepared_vs_active(tmp_path):
+    """P16-2 口径：未跟踪的 workflow 只算 prepared，不算 active。"""
+    import importlib.util
+    import subprocess
+    spec = importlib.util.spec_from_file_location(
+        "scan_ci2", ROOT / "tools/kds-sync/scan_ci_coverage.py"
+    )
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+
+    repo = tmp_path / "FakeRepo2"
+    wf = repo / ".github" / "workflows"
+    wf.mkdir(parents=True)
+    (wf / "test-build.yml").write_text(
+        "name: t\njobs:\n  test:\n    steps:\n      - run: python3 -m pytest -q\n", encoding="utf-8")
+    subprocess.run(["git", "init", "-q"], cwd=repo, check=False)
+    prepared = module.classify(repo)
+    assert prepared["test"] is True          # 工作区口径：可见
+    assert prepared["active_test"] is False  # 未跟踪：不生效
