@@ -79,3 +79,8 @@ superseded_by: []
 
 - 新增 `panorama/usePanoPulse.ts`：数值闪动 + 心跳速率外提；
 - script 1222 → **1209** 行；793 tests / tsc 0；SpaceAI main 本地提交（未 push）。
+
+## B5 外提增量 7（2026-10-24）
+
+- 新增 `panorama/usePanoPrefsSync.ts`：D-5 偏好同步/冲突保护外提；
+- script 1209 → **1201** 行；793 tests / tsc 0；SpaceAI main 本地提交（未 push）。
