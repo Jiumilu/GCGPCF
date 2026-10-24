@@ -109,3 +109,17 @@ superseded_by: []
 | `p16-ci-matrix-gap-analysis-20261022.md` | `p16-2-ci-workflow-template-20261024.md` + `standards-sweep-20261024.md` |
 | `p16-test-build-owner-checklist-20261022.md` | `p16-2-ci-workflow-template-20261024.md` + `p16-2-remaining-disposition-20261024.md` |
 | `health-sweep-20261022.md` | `full-sweep-script-20261024.md` |
+
+## 9. 2026-10-24 新增（协同补齐与治理覆盖）
+
+| 文档 | 说明 |
+|---|---|
+| `collab-completion-20261024.md` | 协同补齐 4 项阻塞的完成/未完成记录（7 仓门禁、8 仓继承、KDS 收敛、runner/GFIS 排查） |
+| `governance-coverage-matrix-20261024.md` | 29 仓治理覆盖总矩阵（继承/门禁/CI 三合一，脚本生成） |
+| `inheritance-coverage-audit-20261024.md` | 方案继承覆盖审计（合规/部分/不合规/无文件） |
+| `loop-gate-delegation-audit-20261024.md` | LOOP 门禁委托覆盖审计（委托 21→28、无 gate 7→0） |
+| `validator-typo-fix-20261024.md` | 校验器笔误修复（GlobalCoud→GlobalCloud） |
+| `ci-activation-checklist-20261024.md` | 已准备 CI 的激活前检查与激活步骤 |
+| `ci-activation-result-20261024.md` | 7 仓 CI 激活结果（5 绿）+ 4 条教训 |
+| `ci-queue-root-cause-20261024.md` | Mem/PQC CI 排队根因（runner 离线且不在本机） |
+| `p18-rollback-rehearsal-20261024.md` | P18 CI 资产回滚演练（3 秒恢复）+ 过程失误复盘 |
