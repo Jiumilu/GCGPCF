@@ -95,3 +95,8 @@ superseded_by: []
 
 - 气泡标题按钮/行标签/摄像机/当前画面/AI 输入/派单选项/备注/提交/图片 alt 改 T()；
 - 793 tests / tsc 0；SpaceAI main 本地提交（未 push）。
+
+## 阶段 1 批次 11（PanoramaCardColumn，2026-10-24）
+
+- 摘要标签/按钮、历史、组折叠、翻转/配置标题、指数/评分说明、风险/事件/力量/处置/值守/研判标签改 T()；
+- 793 tests / tsc 0；SpaceAI main 本地提交（未 push）。
