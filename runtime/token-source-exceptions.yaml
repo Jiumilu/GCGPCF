@@ -6,7 +6,9 @@ exceptions:
   - id: TOKEN-EXC-PKC-ALIAS
     project: PKC
     file: src/styles/theme.css
-    status: candidate
+    status: approved
+    approved_at: "2026-10-24"
+    reviewer: 老卢
     reason: >-
       PKC 76 个变量全部存在，但 34 处以 --gc-* 语义变量别名引用
       （如 --background: var(--gc-bg-canvas)），属表示层差异而非数值漂移。
@@ -14,7 +16,6 @@ exceptions:
     requested_disposition: 受控例外（别名层允许）
     owner: PKC
     evidence: features/active/F-034-wae-p0-shell-and-role-convergence/evidence/pkc-token-alias-finding-20261024.md
-    reviewer: 待 PKC 属主签字
   - id: TOKEN-EXC-BRAIN-DIFF
     project: Brain
     file: src/styles/theme.css

@@ -47,12 +47,12 @@ generated_at: 2026-10-24 11:56:05 +0800
 |---|---:|---:|---:|---|
 | `GlobalCloud AAAS` | 17 | 0 | 0 | `none` |
 | `GlobalCloud Brain` | 1 | 2 | 0 | `none` |
-| `GlobalCloud WAS` | 3 | 0 | 0 | `none` |
+| `GlobalCloud WAS` | 8 | 0 | 0 | `none` |
 | `GlobalCloud XiaoC` | 209 | 5 | 0 | `.env.bak-20261020-hermes-key, .harness/evidence/xiaoc-feishu-20261022/10-credentials.md, .harness/evidence/xiaoc-feishu-20261022/74-verification-token-wired.md, .harness/evidence/xiaoc-mcp-skill-20261020/23-real-smoke-hermes-credential.md, .harness/evidence/xiaoc-mcp-skill-20261020/37-caller-token-audit.jsonl, .harness/evidence/xiaoc-mcp-skill-20261020/37-caller-token-auth.md, .harness/evidence/xiaoc-mcp-skill-20261020/37-caller-token-health.json, packages/feishu-bridge/.env.example` |
 | `GlobalCloud WAME` | 7 | 0 | 0 | `none` |
 | `GlobalCloud GPC` | 1 | 5 | 0 | `none` |
 | `GlobalCloud Studio` | 1 | 0 | 0 | `none` |
-| `GlobalCloud GPCF` | 415 | 0 | 0 | `.harness/runs/kds-real-token-sync-20260613-062146/README.md, .harness/runs/kds-real-token-sync-20260613-062146/evidence/README.md, .harness/runs/kds-real-token-sync-20260613-062146/patches/README.md, .harness/runs/kds-real-token-sync-20260613-062146/workspaces/README.md, features/active/F-034-wae-p0-shell-and-role-convergence/evidence/brain-token-diff-20261024.md, features/active/F-034-wae-p0-shell-and-role-convergence/evidence/token-consolidation-request-20261024.md, runtime/token-source-exceptions.yaml` |
+| `GlobalCloud GPCF` | 424 | 0 | 0 | `.harness/runs/kds-real-token-sync-20260613-062146/README.md, .harness/runs/kds-real-token-sync-20260613-062146/evidence/README.md, .harness/runs/kds-real-token-sync-20260613-062146/patches/README.md, .harness/runs/kds-real-token-sync-20260613-062146/workspaces/README.md, features/active/F-034-wae-p0-shell-and-role-convergence/evidence/token-consolidation-request-20261024.md` |
 | `GlobalCloud XWAIL` | 1 | 0 | 0 | `none` |
 | `GlobalCloud GFIS` | 52 | 0 | 0 | `none` |
 | `GlobalCloud MMC` | 1 | 13 | 7 | `none` |
@@ -68,7 +68,7 @@ generated_at: 2026-10-24 11:56:05 +0800
 | `GlobalCloud SpaceAI Studio` | 0 | 0 | 0 | `none` |
 | `GlobalCloud World` | 1 | 0 | 0 | `none` |
 | `GlobalCloud Mem` | 0 | 1 | 0 | `none` |
-| `GlobalCloud WAE` | 31 | 0 | 0 | `none` |
+| `GlobalCloud WAE` | 72 | 0 | 0 | `none` |
 | `GlobalCloud PMC` | 3 | 5 | 0 | `none` |
 | `GlobalCloud PDC` | 2 | 0 | 0 | `none` |
 | `GlobalCloud SLC` | 0 | 5 | 0 | `none` |
