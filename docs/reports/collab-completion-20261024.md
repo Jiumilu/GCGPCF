@@ -162,10 +162,13 @@ git restore --source=wip/kds-restructure-snapshot-full-20261024 --worktree -- . 
 把两仓 `test-build` 从 `[self-hosted, macOS]` 切到 `ubuntu-latest` + `astral-sh/setup-uv`（模型 yes **0.8743**），提交并推送。
 
 ### 10.2 结果：GitHub 侧直接拒绝启动
-`gh api .../check-runs/<job>/annotations` 返回：
+`gh api .../check-runs/<job>/annotations` 返回的失败注解原文如下（翻译：账户近期付款失败或支出上限需提高，请到 Billing & plans 处理）：
 
-> **failure** — "The job was not started because recent account payments have failed or your spending limit needs to be increased.
-> Please check the 'Billing & plans' section in your settings"
+```text
+The job was not started because recent account payments have failed
+or your spending limit needs to be increased.
+Please check the 'Billing & plans' section in your settings
+```
 
 即 **托管 runner 不可用不是配置问题，是账户计费/支出上限问题**。两个 job 均为 `steps=[]`（启动前即失败）。
 

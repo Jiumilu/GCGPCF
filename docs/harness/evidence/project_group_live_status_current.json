@@ -158,7 +158,7 @@
     "GlobalCloud SpaceAI Studio": "a33d51add39f74ae305dd15fa9d95a881870d55b",
     "GlobalCloud World": "099a8f2e81ff4a817833b29a1355f82d336ec334",
     "GlobalCloud Mem": "5d143c1006ed1d0c8ee0673087e1a7307472f855",
-    "GlobalCloud WAE": "a2f610fae102bd9942d2f823e384592fd5529c5b",
+    "GlobalCloud WAE": "63eceaa8e27ec4827996c946052e264df2a3da1f",
     "GlobalCloud PMC": "aee0434cca99edec438cb021725eb60ca668b20d",
     "GlobalCloud PDC": "dc4f75bd30d92252a7916ff500d5baf28ed6bf4e",
     "GlobalCloud SLC": "93abf9dacab320c65c0fb6400be3b1d46954bf83",
@@ -477,8 +477,8 @@
       "sensitive_paths": []
     },
     "GlobalCloud GPCF": {
-      "dirty_count": 423,
-      "ahead": 6,
+      "dirty_count": 422,
+      "ahead": 7,
       "behind": 0,
       "paths": [
         "$CODEX_HOME/automations/globalcloud-17/README.md",
@@ -751,7 +751,6 @@
         "projects/studio/STATUS.md",
         "projects/xwail/STATUS.md",
         "runtime/audit/README.md",
-        "runtime/audit/decision-ledger-20261022.jsonl",
         "runtime/logs/F-004.jsonl",
         "runtime/logs/F-011.jsonl",
         "runtime/logs/F-015.jsonl",
@@ -1224,13 +1223,13 @@
     },
     "GlobalCloud WAE": {
       "dirty_count": 32,
-      "ahead": 9,
+      "ahead": 11,
       "behind": 0,
       "paths": [
         "apps/wame/src/app/apps/AppsShell.tsx",
-        "deploy/macmini/shadow-review.py",
         "packages/app-registry/src/index.ts",
-        "services/feedback-hub/src/server.ts",
+        "deploy/macmini/daily-inspect.sh",
+        "deploy/macmini/launchd/com.csydsc.wae-inspect.plist",
         "\"docs/analysis/DSH\\345\\200\\237\\351\\211\\264_00_\\346\\200\\273\\346\\212\\245\\345\\221\\212_20261024.md\"",
         "\"docs/analysis/DSH\\345\\200\\237\\351\\211\\264_01_\\346\\241\\206\\346\\236\\266\\344\\270\\216\\345\\267\\245\\347\\250\\213\\346\\262\\273\\347\\220\\206_20261024.md\"",
         "\"docs/analysis/DSH\\345\\200\\237\\351\\211\\264_02_\\347\\225\\214\\351\\235\\242\\350\\256\\276\\350\\256\\241_20261024.md\"",
