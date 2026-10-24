@@ -59,3 +59,8 @@ superseded_by: []
 
 - 新增 `panorama/useCardFocus.ts`：A4/A5 聚焦与双击快捷动作外提；
 - script 1254 → **1246** 行；793 tests / tsc 0；SpaceAI main 本地提交（未 push）。
+
+## B5 外提增量 3（2026-10-24）
+
+- 新增 `panorama/usePanoLayers.ts`：图层状态/ID/开关外提；
+- script 1246 → **1238** 行；793 tests / tsc 0；SpaceAI main 本地提交（未 push）。
