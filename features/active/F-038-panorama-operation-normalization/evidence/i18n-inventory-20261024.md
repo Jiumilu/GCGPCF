@@ -57,3 +57,9 @@ superseded_by: []
 - 按钮/选项/placeholder/图例/确认框标签改用 `T()`；
 - SpaceAI 本地提交 `86d742d`（main，未 push）；
 - 验证：793 tests / tsc 0。
+
+## 阶段 1 批次 4（长文案，2026-10-24）
+
+- 相机/工具提示、NLU placeholder、品牌/大屏、派单/回投确认文案改 T()；
+- SpaceAI 本地提交 `06be37a`（main，未 push）；
+- 验证：793 tests / tsc 0。
