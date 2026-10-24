@@ -52,7 +52,7 @@ generated_at: 2026-10-24 15:39:10 +0800
 | `GlobalCloud WAME` | 7 | 0 | 0 | `none` |
 | `GlobalCloud GPC` | 1 | 5 | 0 | `none` |
 | `GlobalCloud Studio` | 1 | 0 | 0 | `none` |
-| `GlobalCloud GPCF` | 497 | 2 | 0 | `".kds/development-space/\345\274\200\345\217\221/91-\346\262\273\347\220\206\344\270\216\351\252\214\346\224\266/features/active/F-034-wae-p0-shell-and-role-convergence/evidence/brain-token-diff-20261024.md", ".kds/development-space/\345\274\200\345\217\221/91-\346\262\273\347\220\206\344\270\216\351\252\214\346\224\266/features/active/F-034-wae-p0-shell-and-role-convergence/evidence/pkc-token-alias-finding-20261024.md", ".kds/development-space/\345\274\200\345\217\221/91-\346\262\273\347\220\206\344\270\216\351\252\214\346\224\266/features/active/F-034-wae-p0-shell-and-role-convergence/evidence/pva-token-diff-20261024.md", .harness/runs/kds-real-token-sync-20260613-062146/README.md, .harness/runs/kds-real-token-sync-20260613-062146/evidence/README.md, .harness/runs/kds-real-token-sync-20260613-062146/patches/README.md, .harness/runs/kds-real-token-sync-20260613-062146/workspaces/README.md, features/active/F-034-wae-p0-shell-and-role-convergence/evidence/brain-token-diff-20261024.md, features/active/F-034-wae-p0-shell-and-role-convergence/evidence/pkc-token-alias-finding-20261024.md, features/active/F-034-wae-p0-shell-and-role-convergence/evidence/token-consolidation-request-20261024.md` |
+| `GlobalCloud GPCF` | 495 | 3 | 0 | `".kds/development-space/\345\274\200\345\217\221/91-\346\262\273\347\220\206\344\270\216\351\252\214\346\224\266/features/active/F-034-wae-p0-shell-and-role-convergence/evidence/brain-token-diff-20261024.md", ".kds/development-space/\345\274\200\345\217\221/91-\346\262\273\347\220\206\344\270\216\351\252\214\346\224\266/features/active/F-034-wae-p0-shell-and-role-convergence/evidence/pkc-token-alias-finding-20261024.md", ".kds/development-space/\345\274\200\345\217\221/91-\346\262\273\347\220\206\344\270\216\351\252\214\346\224\266/features/active/F-034-wae-p0-shell-and-role-convergence/evidence/pva-token-diff-20261024.md", .harness/runs/kds-real-token-sync-20260613-062146/README.md, .harness/runs/kds-real-token-sync-20260613-062146/evidence/README.md, .harness/runs/kds-real-token-sync-20260613-062146/patches/README.md, .harness/runs/kds-real-token-sync-20260613-062146/workspaces/README.md, features/active/F-034-wae-p0-shell-and-role-convergence/evidence/brain-token-diff-20261024.md, features/active/F-034-wae-p0-shell-and-role-convergence/evidence/pkc-token-alias-finding-20261024.md, features/active/F-034-wae-p0-shell-and-role-convergence/evidence/token-consolidation-request-20261024.md` |
 | `GlobalCloud XWAIL` | 1 | 0 | 0 | `none` |
 | `GlobalCloud GFIS` | 52 | 0 | 0 | `none` |
 | `GlobalCloud MMC` | 1 | 13 | 7 | `none` |
@@ -67,10 +67,10 @@ generated_at: 2026-10-24 15:39:10 +0800
 | `GlobalCloud SpaceAI Platform` | 38 | 0 | 0 | `none` |
 | `GlobalCloud SpaceAI Studio` | 0 | 0 | 0 | `none` |
 | `GlobalCloud World` | 1 | 0 | 0 | `none` |
-| `GlobalCloud Mem` | 3 | 0 | 0 | `none` |
-| `GlobalCloud WAE` | 114 | 20 | 0 | `none` |
+| `GlobalCloud Mem` | 1 | 0 | 0 | `none` |
+| `GlobalCloud WAE` | 116 | 21 | 0 | `none` |
 | `GlobalCloud PMC` | 3 | 5 | 0 | `none` |
 | `GlobalCloud PDC` | 2 | 0 | 0 | `none` |
 | `GlobalCloud SLC` | 0 | 5 | 0 | `none` |
 | `GlobalCloud DRC` | 0 | 0 | 0 | `none` |
-| `GlobalCloud FireQuote` | 38 | 0 | 0 | `none` |
+| `GlobalCloud FireQuote` | 39 | 0 | 0 | `none` |

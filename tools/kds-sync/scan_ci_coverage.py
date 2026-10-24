@@ -26,7 +26,7 @@ TEST_PATTERNS = re.compile(
 BUILD_PATTERNS = re.compile(
     r"(npm\s+run\s+build|pnpm\s+(-r\s+)?(run\s+)?build|yarn\s+build|tsc(\s|$)|vite\s+build|"
     r"webpack|cargo\s+build|go\s+build|mvn\s+package|gradle\s+build|python\s+-m\s+build|"
-    r"compileall|ast\.parse|make\s+build|dotnet\s+build)", re.I)
+    r"compileall|ast\.parse|make\s+build|dotnet\s+build|turbo\s+run\s+build)", re.I)
 STANDARDS_PATTERNS = re.compile(r"gc_standard\.py\"?\s+check", re.I)
 
 
