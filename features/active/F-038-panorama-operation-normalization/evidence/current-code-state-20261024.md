@@ -90,3 +90,8 @@ superseded_by: []
 - 已外提 7 个组合式：usePanoNlu / useCardFocus / usePanoLayers / usePanoSceneCards / usePanoHud / usePanoPulse / usePanoPrefsSync；
 - PanoramaDeep script：1273 → **1201** 行（目标 <800）；
 - 793 map-3d tests / tsc 0；全部 SpaceAI main 本地提交（未 push）。
+
+## B5 外提增量 8（2026-10-24）
+
+- 新增 `panorama/usePanoGroups.ts`：巡演键/历史模式/卡组折叠外提；
+- script 1201 → **1198** 行；793 tests / tsc 0；SpaceAI main 本地提交（未 push）。
