@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-10-24T18:14:20.799610+08:00",
+  "generated_at": "2026-10-24T18:31:33.644102+08:00",
   "freshness_hours": 12,
   "freshness_ok": true,
   "project_count": 29,
@@ -49,6 +49,7 @@
     "GlobalCloud PQC",
     "GlobalCloud SpaceAI Platform",
     "GlobalCloud SpaceAI Studio",
+    "GlobalCloud WAE",
     "GlobalCloud PMC",
     "GlobalCloud SLC"
   ],
@@ -132,11 +133,12 @@
   "sensitive_repos": [
     "GlobalCloud XiaoC",
     "GlobalCloud GPCF",
-    "GlobalCloud PKC"
+    "GlobalCloud PKC",
+    "GlobalCloud WAE"
   ],
   "pass_repo_count": 2,
   "bootstrap_window": false,
-  "previous_generated_at": "2026-10-24T17:41:30.640949+08:00",
+  "previous_generated_at": "2026-10-24T18:14:20.799610+08:00",
   "repo_heads": {
     "GlobalCloud AAAS": "56d9f6af0e8097ff75867e8a8bf1325b5023f7e8",
     "GlobalCloud Brain": "84717b7e47f93b5f859ec691543130020154685e",
@@ -160,8 +162,8 @@
     "GlobalCloud SpaceAI Platform": "4e6e95d49b7217e0d26c0d9a66b8d7db59a1a522",
     "GlobalCloud SpaceAI Studio": "a33d51add39f74ae305dd15fa9d95a881870d55b",
     "GlobalCloud World": "099a8f2e81ff4a817833b29a1355f82d336ec334",
-    "GlobalCloud Mem": "c03f2f70f4f085806991a6eb423e5258ba05c063",
-    "GlobalCloud WAE": "28daa3df0cc854fad32b499532fd63d4b4f61294",
+    "GlobalCloud Mem": "36c58851167335b1465d406058b34f623f3eeb68",
+    "GlobalCloud WAE": "87f81ae255af81748c93d150e3ef7a1c6bbeeaa4",
     "GlobalCloud PMC": "aee0434cca99edec438cb021725eb60ca668b20d",
     "GlobalCloud PDC": "dc4f75bd30d92252a7916ff500d5baf28ed6bf4e",
     "GlobalCloud SLC": "93abf9dacab320c65c0fb6400be3b1d46954bf83",
@@ -481,7 +483,7 @@
     },
     "GlobalCloud GPCF": {
       "dirty_count": 423,
-      "ahead": 2,
+      "ahead": 3,
       "behind": 0,
       "paths": [
         "$CODEX_HOME/automations/globalcloud-17/README.md",
@@ -649,6 +651,7 @@
         "docs/harness/loops/README.md",
         "docs/harness/minimum-closed-loop/README.md",
         "docs/harness/tasks/README.md",
+        "docs/reports/collab-completion-20261024.md",
         "docs/standards/README.md",
         "features/active/F-012-icp-sop-foundation-coupling/evidence/owner-action-pack-20261024.md",
         "features/active/F-012-icp-sop-foundation-coupling/evidence/plan-20261024.md",
@@ -754,7 +757,6 @@
         "projects/xwail/STATUS.md",
         "runtime/audit/README.md",
         "runtime/audit/decision-ledger-20261022.jsonl",
-        "runtime/authorization-receipts.yaml",
         "runtime/logs/F-004.jsonl",
         "runtime/logs/F-011.jsonl",
         "runtime/logs/F-015.jsonl",
@@ -5488,27 +5490,29 @@
       "ahead": 0,
       "behind": 0,
       "paths": [
-        "scripts/calibrate_refusal.py",
-        "tests/test_calibrate_refusal.py"
+        "\"docs/GCMEM-rerank\\344\\270\\212\\347\\272\\277\\350\\247\\202\\345\\257\\237.md\"",
+        "docs/STATUS.md"
       ],
       "sensitive_paths": []
     },
     "GlobalCloud WAE": {
-      "dirty_count": 40,
-      "ahead": 0,
+      "dirty_count": 44,
+      "ahead": 2,
       "behind": 0,
       "paths": [
         "apps/wame/src/app/apps/AppsShell.tsx",
         "package.json",
         "packages/app-registry/src/index.ts",
-        "packages/host-kit/src/host/idpRoutes.ts",
-        "packages/host-kit/src/idp/service.ts",
         "scripts/gate-ci.sh",
         "scripts/gate.sh",
         "\"docs/analysis/DSH\\345\\200\\237\\351\\211\\264_00_\\346\\200\\273\\346\\212\\245\\345\\221\\212_20261024.md\"",
         "\"docs/analysis/DSH\\345\\200\\237\\351\\211\\264_01_\\346\\241\\206\\346\\236\\266\\344\\270\\216\\345\\267\\245\\347\\250\\213\\346\\262\\273\\347\\220\\206_20261024.md\"",
         "\"docs/analysis/DSH\\345\\200\\237\\351\\211\\264_02_\\347\\225\\214\\351\\235\\242\\350\\256\\276\\350\\256\\241_20261024.md\"",
         "\"docs/analysis/DSH\\345\\200\\237\\351\\211\\264_03_WAE\\347\\216\\260\\347\\212\\266\\345\\237\\272\\347\\272\\277_20261024.md\"",
+        "docs/evidence/R1/supply-chain/audit.json",
+        "docs/evidence/R1/supply-chain/sbom.cdx.json",
+        "docs/evidence/R1/supply-chain/secret-scan.json",
+        "\"docs/plan/R1_\\344\\276\\233\\345\\272\\224\\351\\223\\276\\346\\212\\245\\345\\221\\212_20261024.md\"",
         "packages/adopted-dsh/README.md",
         "packages/adopted-dsh/THIRD_PARTY_NOTICES.md",
         "packages/adopted-dsh/package.json",
@@ -5536,10 +5540,14 @@
         "packages/app-registry/src/supplychain/index.ts",
         "packages/app-registry/src/supplychain/sbom.ts",
         "packages/app-registry/src/supplychain/scan.ts",
+        "packages/app-registry/src/supplychain/supplychain.test.ts",
         "packages/app-registry/src/supplychain/types.ts",
-        "scripts/check-runtime-neutral.mts"
+        "scripts/check-runtime-neutral.mts",
+        "scripts/supply-chain.mts"
       ],
-      "sensitive_paths": []
+      "sensitive_paths": [
+        "docs/evidence/R1/supply-chain/secret-scan.json"
+      ]
     },
     "GlobalCloud PMC": {
       "dirty_count": 3,

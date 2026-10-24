@@ -98,3 +98,26 @@ queue-long 连不上 `redis-queue` 服务。**重启生产容器属红线，未�
 | KDS 4266 条脏树 | 内容级重构进行中（3029 改/1213 删），代提交等于替属主决定知识库内容；且其工作区仍在变动（本轮复查仍 4266 条、无新提交） |
 | F-036 部署/正式 SSO/签字 | 部署=生产红线；SSO 需 IdP 配置；签字为人工动作 |
 | GCMEM/GCPQC runner | 不在本机（见 5.1） |
+
+## 7. KDS 重构留档（2026-10-24 18:40，零风险动作）
+
+- 决策模型：`decide` 三选一 → **WIP 快照分支 99.4%**（派单 0.5% / 代提交 main 0.1%）
+- 执行：`git stash create` 生成快照提交 **`e913acd0af1d687646cbec548b2075c3ee40b8b1`**，再以分支指针保存：
+  **`wip/kds-restructure-snapshot-20261024`**（4242 文件变更：+15042 / −94620）
+- **未触碰工作树、未改 main、未推送**：操作前后 dirty 计数均为 4266、当前分支仍为 `main`
+- 价值：属主重构成果已被 git 对象固化，可随时 `git diff main wip/kds-restructure-snapshot-20261024` 审阅、`git restore --source` 取回
+- F-013 仍未解除：脏树仍在工作区（4266 条），需属主决定「提交 / 回滚 / 分批收敛」
+
+## 8. GFIS 生产栈修复：红线，停等授权
+
+`gate(rule=production)` → **action_code=stop（0.7708）**：停下来列明细等老卢确认，未执行任何重启。
+
+拟执行清单（**待授权**）：
+| # | 动作 | 风险 | 回滚 |
+|---|---|---|---|
+| 1 | `docker start gcfis-backend-1`（7 天前退出） | 生产服务恢复；若镜像/配置已变可能起不来 | `docker stop gcfis-backend-1` |
+| 2 | 补起 `redis-queue` 服务（当前完全缺失） | 需原始 compose 定义 | 停容器 |
+| 3 | 观察 `gcfis-frontend-1`、`gcfis-queue-long-1` 是否停止崩溃循环 | 依赖 1、2 | 无状态变更 |
+
+**阻碍**：容器标签显示 compose 项目 `gcfis` 的工作目录为 `/private/tmp`，该目录下**没有 compose 文件**（临时部署后未保留），
+因此无法按原定义重建缺失的 `redis-queue`；只能凭现有容器标签推断，风险较高。建议由 GFIS 属主用其部署仓库的 compose 文件恢复。
