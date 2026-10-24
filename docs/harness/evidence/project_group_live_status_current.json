@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-10-24T15:23:47.755086+08:00",
+  "generated_at": "2026-10-24T15:39:10.542230+08:00",
   "freshness_hours": 12,
   "freshness_ok": true,
   "project_count": 29,
@@ -51,7 +51,6 @@
     "GlobalCloud ICP",
     "GlobalCloud KDS",
     "GlobalCloud MMC",
-    "GlobalCloud Mem",
     "GlobalCloud PDC",
     "GlobalCloud PKC",
     "GlobalCloud PMC",
@@ -91,7 +90,6 @@
     "GlobalCloud ICP",
     "GlobalCloud KDS",
     "GlobalCloud MMC",
-    "GlobalCloud Mem",
     "GlobalCloud PDC",
     "GlobalCloud PKC",
     "GlobalCloud PMC",
@@ -115,7 +113,7 @@
   ],
   "pass_repo_count": 3,
   "bootstrap_window": false,
-  "previous_generated_at": "2026-10-24T15:07:41.679215+08:00",
+  "previous_generated_at": "2026-10-24T15:23:47.755086+08:00",
   "repo_heads": {
     "GlobalCloud AAAS": "f6da33ae462a784b2779311781eba6a588a1eaf0",
     "GlobalCloud Brain": "8edd9b2ec06eec25658e62703c4d251fbff6530a",
@@ -139,8 +137,8 @@
     "GlobalCloud SpaceAI Platform": "dd4d2e0517bdfab25f97777391481f0b1a40f893",
     "GlobalCloud SpaceAI Studio": "dd99d4cb1fd63cc782c1802e7337b200a8f51a19",
     "GlobalCloud World": "4c29506acfd0bc47ba657c415e4cbddcc52cda05",
-    "GlobalCloud Mem": "c8cd183f8fd534f7adf3cc7fa74a0edc7716948f",
-    "GlobalCloud WAE": "95c4f66a796b8dcc9decf9eab33236cd90709be1",
+    "GlobalCloud Mem": "c4538820f8354c0bb765d4e4ff430c5f35137639",
+    "GlobalCloud WAE": "114e063a8b43f960503a6a637fbdfbdc040d9b3e",
     "GlobalCloud PMC": "7a3633601d52feb81cdeffdf34697a7f065bcda0",
     "GlobalCloud PDC": "21f0de4cccdbeeedd7f6b522fe05aff793606ae4",
     "GlobalCloud SLC": "a866196f2844dce0f98bf2a524d4a6dfcafa3b51",
@@ -459,7 +457,7 @@
       "sensitive_paths": []
     },
     "GlobalCloud GPCF": {
-      "dirty_count": 497,
+      "dirty_count": 495,
       "ahead": 0,
       "behind": 0,
       "paths": [
@@ -572,6 +570,7 @@
         "\".kds/development-space/\\345\\274\\200\\345\\217\\221/91-\\346\\262\\273\\347\\220\\206\\344\\270\\216\\351\\252\\214\\346\\224\\266/09-status/kds-development-space-sync-register.md\"",
         "\".kds/development-space/\\345\\274\\200\\345\\217\\221/91-\\346\\262\\273\\347\\220\\206\\344\\270\\216\\351\\252\\214\\346\\224\\266/docs/harness/evidence/batch2-tracking-20261022.md\"",
         "\".kds/development-space/\\345\\274\\200\\345\\217\\221/91-\\346\\262\\273\\347\\220\\206\\344\\270\\216\\351\\252\\214\\346\\224\\266/docs/harness/evidence/cleanup-delete-batch-20261022.md\"",
+        "\".kds/development-space/\\345\\274\\200\\345\\217\\221/91-\\346\\262\\273\\347\\220\\206\\344\\270\\216\\351\\252\\214\\346\\224\\266/docs/harness/evidence/goal-round-300-final-review-20261024.md\"",
         "\".kds/development-space/\\345\\274\\200\\345\\217\\221/91-\\346\\262\\273\\347\\220\\206\\344\\270\\216\\351\\252\\214\\346\\224\\266/docs/harness/evidence/pj12-f017-attribution-20261022.md\"",
         "\".kds/development-space/\\345\\274\\200\\345\\217\\221/91-\\346\\262\\273\\347\\220\\206\\344\\270\\216\\351\\252\\214\\346\\224\\266/docs/harness/evidence/pre-wave1-review-pack-20261022.md\"",
         "\".kds/development-space/\\345\\274\\200\\345\\217\\221/91-\\346\\262\\273\\347\\220\\206\\344\\270\\216\\351\\252\\214\\346\\224\\266/docs/harness/evidence/wave1-review-pack-20261022.md\"",
@@ -618,7 +617,6 @@
         "08-evidence-samples/README.md",
         "08-evidence-samples/session-archives/README.md",
         "09-status/README.md",
-        "09-status/document-deprecation-register.md",
         "09-status/globalcloud-document-control-register.md",
         "09-status/kds-development-space-sync-register.md",
         "10-archive/README.md",
@@ -675,17 +673,14 @@
         "docs/harness/evidence/batch2-input-intake-form-20261024.md",
         "docs/harness/evidence/c-real-gap-20261024.md",
         "docs/harness/evidence/goal-blocker-register-20261024.md",
+        "docs/harness/evidence/goal-health-20261024.json",
         "docs/harness/evidence/loop-gate-gfis-hang-20261023.md",
-        "docs/harness/evidence/owner-action-tracker-20261024.md",
         "docs/harness/evidence/vu-integrity-audit-20261024.md",
         "docs/harness/evidence/wame-f035-handoff-20261023.md",
         "docs/harness/loops/README.md",
         "docs/harness/minimum-closed-loop/README.md",
         "docs/harness/tasks/README.md",
-        "docs/reports/p16-2-ci-workflow-template-20261024.md",
-        "docs/reports/pqc-ci-workflow-trace-20261024.md",
         "docs/standards/README.md",
-        "features/active/F-012-icp-sop-foundation-coupling/evidence/icp-sop-reference-checklist-20261024.md",
         "features/active/F-012-icp-sop-foundation-coupling/evidence/plan-20261024.md",
         "features/active/F-022-was-scenario-flow-extension/evidence/was-review-request-20261024.md",
         "features/active/F-025-project-group-arch-iteration/evidence/plan-20261024.md",
@@ -702,7 +697,6 @@
         "features/active/F-036-wae-pkc-intake-integration/evidence/prod-build-20261024.md",
         "features/active/F-036-wae-pkc-intake-integration/evidence/sso-403-design-20261024.md",
         "features/active/F-036-wae-pkc-intake-integration/evidence/sso-403-fallback-20261024.md",
-        "features/done/F-019-icp-industry-console/feature.yaml",
         "features/done/F-023-was-flow-naming-migration/evidence/compatibility-window-decision-20261024.md",
         "features/done/F-035-wame-sidebar-unification/evidence/e2e-20261023/README.md",
         "features/done/F-035-wame-sidebar-unification/evidence/visual-20261023/README.md",
@@ -789,15 +783,16 @@
         "runtime/logs/F-021.jsonl",
         "runtime/logs/F-026.jsonl",
         "runtime/logs/F-027.jsonl",
-        "runtime/queue.json",
         "runtime/vu-ledger.yaml",
         "templates/README.md",
         "third_party/agent-reach/README.md",
         "tools/README.md",
         "tools/kds-sync/README.md",
+        "tools/kds-sync/scan_ci_coverage.py",
         "tools/kds-sync/validate_icp_project_registration.py",
         "tools/kds-sync/validate_project_group_external_loop_gate_delegate_baseline_20260627.py",
         "\".kds/development-space/\\345\\274\\200\\345\\217\\221/01-GFIS/GlobalCloud GPCF \\346\\200\\273\\344\\275\\223\\346\\226\\271\\346\\241\\210.md\"",
+        "\".kds/development-space/\\345\\274\\200\\345\\217\\221/05-KDS/docs/reports/ci-workflows-sop-kds-trace-20261024.md\"",
         "\".kds/development-space/\\345\\274\\200\\345\\217\\221/05-KDS/docs/reports/f013-kds-dirty-inventory-20261024.md\"",
         "\".kds/development-space/\\345\\274\\200\\345\\217\\221/05-KDS/docs/reports/kds-whitespace-cleanup-trace-20261024.md\"",
         "\".kds/development-space/\\345\\274\\200\\345\\217\\221/05-KDS/docs/reports/p16-2-ci-workflow-template-20261024.md\"",
@@ -866,6 +861,7 @@
         "docs/harness/evidence/wave1-review-pack-20261022.md",
         "docs/harness/evidence/workspace-consistency-20261023.md",
         "docs/reports/README.md",
+        "docs/reports/ci-workflows-sop-kds-trace-20261024.md",
         "docs/runbooks/README.md",
         "docs/runbooks/runtime-host-v1.0.md",
         "features/active/F-029-hermes-ai-runtime-admission/artifacts/.gitkeep",
@@ -1053,7 +1049,7 @@
       "sensitive_paths": []
     },
     "GlobalCloud KDS": {
-      "dirty_count": 4266,
+      "dirty_count": 4267,
       "ahead": 0,
       "behind": 0,
       "paths": [
@@ -5303,6 +5299,7 @@
         ".githooks/post-commit",
         ".githooks/post-merge",
         ".githooks/pre-push",
+        ".github/workflows/test-build.yml",
         "99_Reports/daily-mining-2026-10-22.md",
         "99_Reports/daily-mining-2026-10-23.md",
         "\"99_Reports/\\345\\267\\245\\344\\275\\234\\346\\250\\241\\345\\274\\217/\\345\\267\\245\\344\\275\\234\\346\\250\\241\\345\\274\\217\\346\\212\\245\\345\\221\\212_2026-10-22.md\"",
@@ -5385,7 +5382,7 @@
       "sensitive_paths": []
     },
     "GlobalCloud SOP": {
-      "dirty_count": 21,
+      "dirty_count": 22,
       "ahead": 0,
       "behind": 0,
       "paths": [
@@ -5409,7 +5406,8 @@
         "sop/flows/harness-engineering-flow.json",
         "sop/flows/loop-governance-flow.json",
         "sop/flows/openspec-change-flow.json",
-        "templates/sop-change-proposal-template.md"
+        "templates/sop-change-proposal-template.md",
+        ".github/workflows/test-build.yml"
       ],
       "sensitive_paths": []
     },
@@ -5562,25 +5560,22 @@
       "sensitive_paths": []
     },
     "GlobalCloud Mem": {
-      "dirty_count": 6,
+      "dirty_count": 2,
       "ahead": 0,
       "behind": 0,
       "paths": [
-        "README.md",
-        "\"docs/GCMEM-D4c-\\346\\234\\252\\347\\231\\273\\345\\275\\225\\350\\257\\215\\344\\277\\241\\345\\217\\267.md\"",
-        "docs/STATUS.md",
         "src/gcmem.py",
-        "src/gcmem_flags.py",
-        "tests/test_gcmem_refusal.py"
+        "tests/test_gcmem_meta_v2.py"
       ],
       "sensitive_paths": []
     },
     "GlobalCloud WAE": {
-      "dirty_count": 112,
-      "ahead": 16,
+      "dirty_count": 116,
+      "ahead": 18,
       "behind": 0,
       "paths": [
-        "apps/wame/src/app/App.tsx",
+        "apps/wame/src/auth/LoginPage.tsx",
+        "apps/wame/src/styles/auth.css",
         "docs/assembly-spec/README.md",
         "\"docs/assembly-spec/manifests/_\\344\\270\\211\\346\\226\\271\\345\\257\\271\\350\\264\\246\\350\\241\\250.md\"",
         "docs/assembly-spec/manifests/aaas-console.yaml",
@@ -5633,6 +5628,8 @@
         "docs/evidence/R1/G-MANIFEST/2026-10-24/summary.md",
         "docs/evidence/R1/P2-consumer-compat/2026-10-24/08-city-ts-sha.txt",
         "docs/evidence/R1/P2-consumer-compat/2026-10-24/summary.md",
+        "docs/evidence/R1/apply/batch-1/11-city-sha.txt",
+        "docs/evidence/R1/apply/batch-1/artifacts/check-manifest-v1.json",
         "docs/evidence/R1/apply/batch-1/receipts/aaas-console.json",
         "docs/evidence/R1/apply/batch-1/receipts/feedback-center.json",
         "docs/evidence/R1/apply/batch-1/receipts/gcas-console.json",
@@ -5647,6 +5644,7 @@
         "docs/evidence/R1/apply/batch-1/receipts/spaceai-home.json",
         "docs/evidence/R1/apply/batch-1/receipts/spaceai-logviewer.json",
         "docs/evidence/R1/apply/batch-1/receipts/spaceai-message-dispatch.json",
+        "docs/evidence/R1/apply/batch-1/summary.md",
         "docs/evidence/R1/schema-finalize/2026-10-24/06-city-sha.txt",
         "docs/evidence/R1/schema-finalize/2026-10-24/summary.md",
         "\"docs/plan/DSH\\345\\244\\215\\347\\224\\250\\346\\226\\271\\346\\241\\210_v1.0_20261024.md\"",
