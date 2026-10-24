@@ -349,3 +349,26 @@ def test_pqc_pilot_close_dry_run_never_writes_ledger(tmp_path):
     assert ok.returncode == 0, ok.stdout + ok.stderr
     assert '"status": "ready"' in ok.stdout
     assert hashlib.sha256(ledger.read_bytes()).hexdigest() == before
+
+
+def test_scan_ci_coverage_detects_steps_not_job_names(tmp_path):
+    """P16-2：覆盖判定应看步骤命令，而不是 job 名。"""
+    import importlib.util
+    spec = importlib.util.spec_from_file_location(
+        "scan_ci", ROOT / "tools/kds-sync/scan_ci_coverage.py"
+    )
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+
+    repo = tmp_path / "FakeRepo"
+    wf = repo / ".github" / "workflows"
+    wf.mkdir(parents=True)
+    (wf / "governance.yml").write_text(
+        "name: gov\njobs:\n"
+        "  repository-checks:\n    runs-on: ubuntu-latest\n    steps:\n"
+        "      - run: python -m pytest tests/ -q\n"
+        "  build-job:\n    runs-on: ubuntu-latest\n    steps:\n"
+        "      - run: npm run build\n", encoding="utf-8")
+    result = module.classify(repo)
+    assert result["test"] is True and result["build"] is True
+    assert result["standards"] is False

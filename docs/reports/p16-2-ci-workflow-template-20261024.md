@@ -16,13 +16,13 @@ supersedes: []
 superseded_by: []
 ---
 
-# P16-2 · test/build CI 模板（供 25 仓属主复制）
+# P16-2 · test/build CI 模板与覆盖实判（2026-10-24 更正）
 
 - 日期：2026-10-24｜依据：P16-1+2 裁定（standards 强制、test/build 属主补齐）
-- 实测覆盖：29 仓中 test 仅 6、build 仅 6（截至 2026-10-24），缺口 25 仓
+- 实测覆盖（**按 workflow 步骤实际命令判定**，2026-10-24 更正）：standards **29/29**、test **10/29**、build **12/29**
 - 本文件只给模板与判据，GPCF 不代写各仓 workflow（纪律⑤）
 
-## 1. 模板（`.github/workflows/test-build.yml`）
+## 1. 模板（`.github/workflows/test-build.yml`，属主复制用）
 
 ```yaml
 name: test-build
@@ -65,39 +65,46 @@ jobs:
 3. `standards` job 固定存在（P16-1 已要求）；
 4. 不要求覆盖率阈值、不要求 e2e/browser/a11y（属 P16-3）。
 
-## 3. 缺口仓清单（25 个，截至 2026-10-24）
+## 3. 覆盖与缺口（按步骤实判，2026-10-24 更正）
 
-下表逐仓列出待补项；「缺测试/缺构建」表示该仓 CI 尚无对应 job。
+> 更正说明：初版按 job 名关键词判定，把 `repository-checks` 这类命名但实际执行 pytest 的 job 误判为缺失；
+> 现改为解析 `steps[].run` 的命令（pytest/vitest/pnpm test/tsc/compileall 等），数据以下表为准。
 
-| 仓 | 缺测试 | 缺构建 | 建议优先级 |
-|---|---|---|---|
-| GlobalCloud PQC | 是 | 是 | 高（真实试点相关） |
-| GlobalCloud PVA | 是 | 是 | 高（真实试点相关） |
-| GlobalCloud WAE | 是 | 是 | 高（统一壳） |
-| GlobalCloud WAME | 是 | 是 | 高（主链裁决） |
-| GlobalCloud GPC | 是 | 是 | 高（主链消费端） |
-| GlobalCloud GFIS | 是 | 是 | 高（真实事实源） |
-| GlobalCloud KDS | 是 | 是 | 高（知识主存） |
-| GlobalCloud GPCF | 是 | 是 | 中（治理仓，pytest 已在钩子） |
-| GlobalCloud XWAIL | 是 | 是 | 中（契约层） |
-| GlobalCloud WAS | 是 | 是 | 中（语义底座） |
-| GlobalCloud Brain | 是 | 是 | 中（知识编制） |
-| GlobalCloud SOP | 是 | 是 | 中（流引擎） |
-| GlobalCloud ICP | 是 | 是 | 中（产业控制台） |
-| GlobalCloud PKC | 是 | 是 | 中（并入 WAE 路线） |
-| GlobalCloud XGD | 是 | 是 | 中（已关单，补基线） |
-| GlobalCloud World | 是 | 是 | 中（世界资产） |
-| GlobalCloud SpaceAI Platform | 是 | 是 | 中（全景平台） |
-| GlobalCloud Mem（GCMEM） | 是 | 是 | 低（长期记忆，运行态为主） |
-| GlobalCloud AAAS | 是 | 是 | 低（已暂停） |
-| GlobalCloud DRC | 是 | 是 | 低（新纳管） |
-| GlobalCloud FireQuote | 是 | 是 | 低（新纳管，后端测试已有） |
-| GlobalCloud SLC | 是 | 是 | 低（运力） |
-| GlobalCloud Studio | 是 | 是 | 暂不补（已退役） |
-| GlobalCloud MMC | 否 | 是 | 中（已有测试，缺构建） |
-| GlobalCloud SpaceAI Studio | 否 | 是 | 低（legacy 三平台） |
+| 仓 | standards | test | build | test 依据 | build 依据 |
+|---|---|---|---|---|---|
+| GlobalCloud AAAS | ✓ | — | — | — | — |
+| GlobalCloud Brain | ✓ | ✓ | ✓ | pnpm test | pnpm build |
+| GlobalCloud WAS | ✓ | — | — | — | — |
+| GlobalCloud XiaoC | ✓ | ✓ | ✓ | pnpm test | pnpm build |
+| GlobalCloud WAME | ✓ | ✓ | ✓ | python3 -m unittest | npm run build |
+| GlobalCloud GPC | ✓ | — | ✓ | — | compileall |
+| GlobalCloud Studio | ✓ | — | ✓ | — | npm run build |
+| GlobalCloud GPCF | ✓ | ✓ | — | pytest | — |
+| GlobalCloud XWAIL | ✓ | — | — | — | — |
+| GlobalCloud GFIS | ✓ | — | ✓ | — | compileall |
+| GlobalCloud MMC | ✓ | ✓ | — | pytest, vitest | — |
+| GlobalCloud KDS | ✓ | — | — | — | — |
+| GlobalCloud XiaoG | ✓ | — | ✓ | — | npm run build |
+| GlobalCloud PVA | ✓ | ✓ | ✓ | npm test | npm run build |
+| GlobalCloud SOP | ✓ | — | — | — | — |
+| GlobalCloud PKC | ✓ | — | — | — | — |
+| GlobalCloud XGD | ✓ | — | — | — | — |
+| GlobalCloud ICP | ✓ | — | — | — | — |
+| GlobalCloud PQC | ✓ | — | — | — | — |
+| GlobalCloud SpaceAI Platform | ✓ | ✓ | — | vitest | — |
+| GlobalCloud SpaceAI Studio | ✓ | ✓ | — | cargo test, pnpm test | — |
+| GlobalCloud World | ✓ | — | ✓ | — | npm run build |
+| GlobalCloud Mem | ✓ | — | — | — | — |
+| GlobalCloud WAE | ✓ | ✓ | ✓ | pnpm test | pnpm build |
+| GlobalCloud PMC | ✓ | ✓ | — | pytest | — |
+| GlobalCloud PDC | ✓ | — | ✓ | — | npm run build |
+| GlobalCloud SLC | ✓ | — | ✓ | — | npm run build |
+| GlobalCloud DRC | ✓ | — | — | — | — |
+| GlobalCloud FireQuote | ✓ | — | — | — | — |
 
-已齐备（测试+构建均有）4 个：XiaoC、XiaoG、PMC、PDC。
+缺口统计：**test 缺 19 仓、build 缺 17 仓**（两者都缺的仓优先补）。
+
+复跑命令：`python3 tools/kds-sync/scan_ci_coverage.py --markdown`（扫描 `_governance` 兄弟仓，只读）
 
 ## 4. 优先级建议
 
