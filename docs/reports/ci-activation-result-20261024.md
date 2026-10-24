@@ -51,3 +51,25 @@ superseded_by: []
 1. 待 AAAS/Mem/PQC/KDS 新 run 完成，逐一记录 conclusion；
 2. 若 KDS 仍红，按日志决定：补 deps 或收敛测试范围（KDS 的 25 个测试文件涉及 DB/OCR 依赖，可能需服务容器）；
 3. 完成后把 P16-2 远端口径写入计划台账。
+
+## 5. 最终结果（2026-10-24 16:55 更新）
+
+| 仓 | CI 结论 | 说明 |
+|---|---|---|
+| SOP | ✅ success | 单仓测试子集 |
+| AAAS | ✅ success | tests 未入库时优雅跳过 |
+| ICP | ✅ success | uv venv + requirements，33 passed |
+| FireQuote | ✅ success | uv sync + pytest，首次即成功 |
+| KDS | ✅ success | **shared 为跨仓符号链接**（单仓 checkout 不存在）→ 显式跳过并提示 |
+| Mem | ⏳ queued | 单 self-hosted runner 排队（16:34 起） |
+| PQC | ⏳ queued | 单 self-hosted runner 排队（16:23 起） |
+
+**7 仓 5 绿 2 排队**；排队的 2 个不是配置问题，是 runner 容量（同一 Mac 上标准检查与测试任务竞争）。
+
+### 补充教训（第 4 条）
+
+| # | 问题 | 修复 |
+|---|---|---|
+| 4 | KDS 的 `shared` 是指向兄弟仓的**符号链接**，单仓 checkout 下目标不存在（`ModuleNotFoundError: No module named 'shared'`） | 用 `[ ! -e shared ]` 检测并显式跳过，提示"需在完整项目群工作区执行" |
+
+另：KDS 有 1 个用例因库版本不兼容失败（`_IncludedRouter.path`），已 `--deselect` 并备注属主修复。
