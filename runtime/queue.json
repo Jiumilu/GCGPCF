@@ -380,11 +380,11 @@
       "name": "was-flow-naming-migration",
       "project": "was",
       "priority": "P2",
-      "status": "queued",
-      "current_role": "Dispatcher",
-      "workspace": "features/active/F-023-was-flow-naming-migration",
+      "status": "closed",
+      "current_role": "Recorder",
+      "workspace": "features/done/F-023-was-flow-naming-migration",
       "created_at": "2026-10-16T04:15:00+00:00",
-      "updated_at": "2026-10-16T04:15:00+00:00"
+      "updated_at": "2026-10-24T07:17:29+00:00"
     },
     {
       "id": "F-026",
