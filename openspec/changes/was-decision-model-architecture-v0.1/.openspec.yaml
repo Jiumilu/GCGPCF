@@ -1,0 +1,8 @@
+schema: spec-driven
+created: 2026-10-24
+goal: 登记「WAS 决策模型体系架构与实施方案 v0.1」为可评审变更（骨架；不实现、不提升状态）
+affected_areas:
+  - architecture
+  - governance
+  - contracts
+  - runtime
