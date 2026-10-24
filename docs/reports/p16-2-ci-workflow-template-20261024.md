@@ -65,12 +65,39 @@ jobs:
 3. `standards` job 固定存在（P16-1 已要求）；
 4. 不要求覆盖率阈值、不要求 e2e/browser/a11y（属 P16-3）。
 
-## 3. 缺口仓清单（25，截至 2026-10-24）
+## 3. 缺口仓清单（25 个，截至 2026-10-24）
 
-AAAS、Brain、WAS、WAME、GPC、Studio、GPCF、XWAIL、GFIS、KDS、PVA、SOP、PKC、XGD、ICP、PQC、
-SpaceAI Platform、World、Mem(GCMEM)、WAE、SLC、DRC、FireQuote、MMC（仅 test）、SpaceAI Studio（仅 test）
+下表逐仓列出待补项；「缺测试/缺构建」表示该仓 CI 尚无对应 job。
 
-> 6 仓已具备：XiaoC、XiaoG、PMC、PDC（test+build）、MMC、SpaceAI Studio（仅 test）
+| 仓 | 缺测试 | 缺构建 | 建议优先级 |
+|---|---|---|---|
+| GlobalCloud PQC | 是 | 是 | 高（真实试点相关） |
+| GlobalCloud PVA | 是 | 是 | 高（真实试点相关） |
+| GlobalCloud WAE | 是 | 是 | 高（统一壳） |
+| GlobalCloud WAME | 是 | 是 | 高（主链裁决） |
+| GlobalCloud GPC | 是 | 是 | 高（主链消费端） |
+| GlobalCloud GFIS | 是 | 是 | 高（真实事实源） |
+| GlobalCloud KDS | 是 | 是 | 高（知识主存） |
+| GlobalCloud GPCF | 是 | 是 | 中（治理仓，pytest 已在钩子） |
+| GlobalCloud XWAIL | 是 | 是 | 中（契约层） |
+| GlobalCloud WAS | 是 | 是 | 中（语义底座） |
+| GlobalCloud Brain | 是 | 是 | 中（知识编制） |
+| GlobalCloud SOP | 是 | 是 | 中（流引擎） |
+| GlobalCloud ICP | 是 | 是 | 中（产业控制台） |
+| GlobalCloud PKC | 是 | 是 | 中（并入 WAE 路线） |
+| GlobalCloud XGD | 是 | 是 | 中（已关单，补基线） |
+| GlobalCloud World | 是 | 是 | 中（世界资产） |
+| GlobalCloud SpaceAI Platform | 是 | 是 | 中（全景平台） |
+| GlobalCloud Mem（GCMEM） | 是 | 是 | 低（长期记忆，运行态为主） |
+| GlobalCloud AAAS | 是 | 是 | 低（已暂停） |
+| GlobalCloud DRC | 是 | 是 | 低（新纳管） |
+| GlobalCloud FireQuote | 是 | 是 | 低（新纳管，后端测试已有） |
+| GlobalCloud SLC | 是 | 是 | 低（运力） |
+| GlobalCloud Studio | 是 | 是 | 暂不补（已退役） |
+| GlobalCloud MMC | 否 | 是 | 中（已有测试，缺构建） |
+| GlobalCloud SpaceAI Studio | 否 | 是 | 低（legacy 三平台） |
+
+已齐备（测试+构建均有）4 个：XiaoC、XiaoG、PMC、PDC。
 
 ## 4. 优先级建议
 
