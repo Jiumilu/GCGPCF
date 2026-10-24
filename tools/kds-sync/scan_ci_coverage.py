@@ -41,6 +41,39 @@ def tracked_workflow_names(repo: Path) -> set[str]:
     return {Path(line).name for line in out.stdout.splitlines() if line.strip()}
 
 
+def push_pending(repo: Path) -> bool:
+    """本地 HEAD 是否领先远端（= 已提交但未推送，CI 尚未生效）。"""
+    try:
+        out = subprocess.run(["git", "--no-optional-locks", "-C", str(repo), "status", "-sb"],
+                             capture_output=True, text=True, timeout=30)
+    except Exception:
+        return False
+    first = out.stdout.splitlines()[0] if out.stdout else ""
+    return "ahead" in first
+
+
+def remote_workflow_text(repo: Path) -> str:
+    """远端默认分支上的 workflow 文本（= 真正会触发 CI 的定义）。"""
+    for ref in ("origin/main", "origin/master", "origin/HEAD"):
+        try:
+            ls = subprocess.run(["git", "--no-optional-locks", "-C", str(repo), "ls-tree", "-r", "--name-only",
+                                 ref, "--", ".github/workflows"], capture_output=True, text=True, timeout=30)
+        except Exception:
+            continue
+        if ls.returncode != 0 or not ls.stdout.strip():
+            continue
+        chunks = []
+        for path in ls.stdout.splitlines():
+            if not path.endswith((".yml", ".yaml")):
+                continue
+            show = subprocess.run(["git", "--no-optional-locks", "-C", str(repo), "show", f"{ref}:{path}"],
+                                  capture_output=True, text=True, timeout=30)
+            if show.returncode == 0:
+                chunks.append(show.stdout)
+        return "\n".join(chunks)
+    return ""
+
+
 def workflow_steps(repo: Path) -> list[dict]:
     items: list[dict] = []
     wf_dir = repo / ".github" / "workflows"
@@ -119,10 +152,15 @@ def classify(repo: Path) -> dict:
     text = runs_text + "\n" + resolve_scripts(repo, runs_text) + "\n" + resolve_npm_scripts(repo, runs_text)
     tracked_text = "\n".join(r for s in tracked_steps for r in s["runs"])
     tracked_text += "\n" + resolve_scripts(repo, tracked_text) + "\n" + resolve_npm_scripts(repo, tracked_text)
+    remote_text = remote_workflow_text(repo)
+    remote_text += "\n" + resolve_scripts(repo, remote_text) + "\n" + resolve_npm_scripts(repo, remote_text)
     return {
         "repo": repo.name,
         "active_test": bool(TEST_PATTERNS.search(tracked_text)),
         "active_build": bool(BUILD_PATTERNS.search(tracked_text)),
+        "push_pending": push_pending(repo),
+        "remote_test": bool(TEST_PATTERNS.search(remote_text)),
+        "remote_build": bool(BUILD_PATTERNS.search(remote_text)),
         "prepared_only": bool((TEST_PATTERNS.search(text) or BUILD_PATTERNS.search(text)) and not tracked_steps),
         "workflow_files": sorted({s["file"] for s in steps}),
         "jobs": sorted({s["job"] for s in steps}),

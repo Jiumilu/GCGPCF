@@ -22,24 +22,18 @@ superseded_by: []
 - 实测覆盖（**按 workflow 步骤实际命令判定**，2026-10-24 更正）：standards **29/29**、test **10/29**、build **12/29**
 - 本文件只给模板与判据，GPCF 不代写各仓 workflow（纪律⑤）
 
-## 0. 口径说明（2026-10-24 16:20 更正）
-
-覆盖有两个口径，**不可混用**：
+## 0. 口径说明（2026-10-24 16:45 三口径）
 
 | 口径 | test | build | 含义 |
 |---|---:|---:|---|
-| 工作区口径（含未提交新增文件） | 25/29 | 23/29 | 本地工作树有 CI 定义，未提交则不生效 |
-| **已跟踪文件口径（真正进 CI）** | **18/29** | **16/29** | git 已跟踪文件中的命令；MMC 的 build 属已跟踪文件改动 |
+| 工作区 | 25/29 | 23/29 | 本地工作树有定义 |
+| 已跟踪 | 25/29 | 23/29 | 已 git 提交（本地） |
+| **远端生效** | **17/29** | **14/29** | 远端默认分支上已有，**GitHub CI 真正会跑** |
 
-差异 7 仓：AAAS、KDS、SOP、ICP、PQC、Mem、FireQuote——GPCF 已准备 `test-build.yml` 但**未经属主提交，尚不生效**。
+差异说明：7 仓（PQC/SOP/KDS/ICP/AAAS/Mem/FireQuote）已本地提交但**未 push**；MMC 的 build job 是已跟踪文件的本地改动，尚未提交。因此远端生效口径低于前两档。
 
-**激活方式（属主）**：
-```bash
-cd "GlobalCloud <仓>"
-git add .github/workflows/test-build.yml
-git commit -m "ci: 新增 test-build 工作流（P16-2）"
-git push
-```
+**激活方式（属主）**：`git push` 即可（文件已随本地提交就绪）。
+
 
 ## 1. 模板（`.github/workflows/test-build.yml`，属主复制用）
 

@@ -81,3 +81,11 @@ git rm .github/workflows/test-build.yml && git commit -m "revert: 移除 test-bu
 **但 GitHub CI 仍未运行**——需属主 `git push` 后才在远端生效。属主下次推送会自然带上这些 commit。
 
 回滚：`cd "GlobalCloud <仓>" && git reset --soft HEAD~1 && git rm --cached .github/workflows/test-build.yml`
+
+## 7. 三口径现状（2026-10-24 16:45）
+
+- 工作区：test 25/29、build 23/29
+- 已跟踪（本地提交）：test 25/29、build 23/29
+- **远端生效（真正会跑 CI）**：test 17/29、build 14/29
+
+→ 7 仓 push 后，远端口径将升至 25/23（MMC 需先提交本地 build 改动）。
