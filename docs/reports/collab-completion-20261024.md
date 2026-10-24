@@ -155,3 +155,27 @@ git diff main wip/kds-restructure-snapshot-full-20261024      # 审阅全部重�
 git restore --source=wip/kds-restructure-snapshot-full-20261024 --worktree -- .   # 整体恢复（可选）
 # 或按目录分批取回
 ```
+
+## 10. GCMEM / GCPQC CI：托管 runner 也不行（计费阻塞）· 2026-10-24 18:55
+
+### 10.1 尝试
+把两仓 `test-build` 从 `[self-hosted, macOS]` 切到 `ubuntu-latest` + `astral-sh/setup-uv`（模型 yes **0.8743**），提交并推送。
+
+### 10.2 结果：GitHub 侧直接拒绝启动
+`gh api .../check-runs/<job>/annotations` 返回：
+
+> **failure** — "The job was not started because recent account payments have failed or your spending limit needs to be increased.
+> Please check the 'Billing & plans' section in your settings"
+
+即 **托管 runner 不可用不是配置问题，是账户计费/支出上限问题**。两个 job 均为 `steps=[]`（启动前即失败）。
+
+### 10.3 处理
+已回退为 `[self-hosted, macOS]` 并推送（避免留下"必然失败"的托管配置）。当前两仓 CI 恢复为"排队等 self-hosted runner"状态。
+
+### 10.4 结论：两条路都需要人
+| 路线 | 需要谁 |
+|---|---|
+| 启动 `gc-macmini-GCMem` / `gc-macmini-GCPQC`（在 runner 实际主机） | 运维/老卢 |
+| 修复 GitHub 账户付款/提高 spending limit，再切托管 runner | 老卢（结算） |
+
+PQC 工作流保留了 `astral-sh/setup-uv@v5`（在 self-hosted 上同样可用，解决 uv 不在 PATH 的问题）。
