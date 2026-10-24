@@ -58,6 +58,8 @@ superseded_by: []
 | F-032 接口清单 | GC-365 | PQC/PVA |
 | F-025 架构迭代 | GC-366 | WAME/SpaceAI/World |
 
+状态（2026-10-24）：10 个子项均已从 Backlog 置为 **Todo**；仍不替代属主签署。
+
 说明：PMC 子项为路由/跟踪，不替代属主签署；完成后回传证据路径，GPCF 再清 blocker。
 
 ## 回执登记
