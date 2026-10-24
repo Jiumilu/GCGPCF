@@ -5,8 +5,8 @@
 schema_version: "1.0"
 generated_at: "2026-10-22T05:40:00+08:00"
 ledger_ref: "09-status/globalcloud-project-group-single-authorization-ledger-v1.0.md"
-authorization_granted_count: 37
-action_executed_count: 29
+authorization_granted_count: 38
+action_executed_count: 30
 pending_execution_count: 8
 receipts:
   - auth_id: AUTH-GPCF-SCHEME-REVIEW-20260626
@@ -457,4 +457,16 @@ receipts:
     expires_at: "2026-11-07T23:59:59+08:00"
     evidence: "docs/reports/mmc-build-job-trace-20261024.md"
     review_conclusion: "mmc-ci.yml 追加 build job（AST 解析 73 文件 0 失败）；build 覆盖 22→23"
+    revoked_at: null
+  - auth_id: AUTH-PG-GATE-EXPAND-20261024
+    granted_at: "2026-10-24T16:10:00+08:00"
+    granted_by: "老卢（授权自动按模型采纳）"
+    grant_basis: "decide_template(authorization_qa) probability_yes=0.8573 verdict=yes"
+    repo: "GlobalCloud GPCF"
+    scope: "gate_check_expansion"
+    actions_allowed: ["read", "modify_gate_check_list", "verify_docs"]
+    actions_forbidden: ["commit_cross_repo", "production_deploy", "status_promotion"]
+    expires_at: "2027-01-20T23:59:59+08:00"
+    evidence: "docs/reports/gate-check-expansion-20261024.md"
+    review_conclusion: "门禁新增 inheritance/contract_matrix/master_plan_register 三项；反向验证可拦截 token 回退；caliber 因 GFIS guard 元检查不纳入（不造假）"
     revoked_at: null

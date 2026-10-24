@@ -376,6 +376,10 @@ def main() -> int:
         "project_group_dev_task_queue": run([sys.executable, "tools/kds-sync/validate_project_group_dev_task_queue_20260626.py"]),
         "project_group_real_execution_metadata_coverage": run([sys.executable, "tools/kds-sync/validate_project_group_real_execution_metadata_coverage_20260626.py"]),
         "project_group_live_status_snapshot": run([sys.executable, "tools/kds-sync/validate_project_group_live_status_snapshot_20260626.py"]),
+        # 2026-10-24：把 4 项"曾人工发现回归"的校验并入门禁（并发编辑回退关键声明时自动拦截）
+        "project_group_plan_inheritance": run([sys.executable, "tools/kds-sync/validate_project_plan_inheritance.py"]),
+        "project_group_contract_matrix": run([sys.executable, "tools/kds-sync/validate_contract_matrix.py"]),
+        "project_group_master_plan_register": run([sys.executable, "tools/kds-sync/validate_project_master_plan_register.py"]),
         "project_group_real_execution_governance_board": run([sys.executable, "tools/kds-sync/validate_project_group_real_execution_governance_board.py"]),
         "project_group_status_advancement_matrix": run([sys.executable, "tools/kds-sync/validate_project_group_status_advancement_matrix.py"]),
         "project_group_ready_for_review_advancement_queue": run([sys.executable, "tools/kds-sync/validate_project_group_ready_for_review_advancement_queue_20260626.py"]),
