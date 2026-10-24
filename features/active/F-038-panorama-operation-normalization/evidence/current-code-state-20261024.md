@@ -95,3 +95,8 @@ superseded_by: []
 
 - 新增 `panorama/usePanoGroups.ts`：巡演键/历史模式/卡组折叠外提；
 - script 1201 → **1198** 行；793 tests / tsc 0；SpaceAI main 本地提交（未 push）。
+
+## B5 外提增量 9（2026-10-24）
+
+- 新增 `panorama/usePanoReplayWindow.ts`：回放窗口/排序/密度外提；
+- script 1198 → **1195** 行；793 tests / tsc 0；SpaceAI main 本地提交（未 push）。
