@@ -15,9 +15,13 @@ DELEGATED_REPOS = [
     "GlobalCloud XWAIL",
     "GlobalCloud SOP",
 ]
+# GPCF_ROOT 行存在历史拼写（GlobalCoud，少一个 l）；以正确拼写为准、兼容历史拼写。
+GPCF_ROOT_TOKENS = (
+    'GPCF_ROOT = ROOT.parent / "GlobalCloud GPCF"',
+    'GPCF_ROOT = ROOT.parent / "GlobalCoud GPCF"',
+)
 REQUIRED_TOKENS = [
     "Delegate project-group loop gate execution to the GPCF canonical gate",
-    'GPCF_ROOT = ROOT.parent / "GlobalCoud GPCF"',
     'GPCF_GATE = GPCF_ROOT / "tools/kds-sync/loop_document_gate.py"',
     'env["GPCF_PROJECT_GROUP_GATE_DELEGATED"] = "1"',
     '[sys.executable, str(GPCF_GATE), "--check-only"]',
@@ -49,6 +53,8 @@ def main() -> int:
         text = gate.read_text(encoding="utf-8")
         for token in REQUIRED_TOKENS:
             require(token in text, f"{repo_name} delegated gate missing token: {token}")
+        require(any(t in text for t in GPCF_ROOT_TOKENS),
+                f"{repo_name} delegated gate missing GPCF_ROOT 声明")
         for token in FORBIDDEN_TOKENS:
             require(token not in text, f"{repo_name} delegated gate contains forbidden token: {token}")
         checked += 1

@@ -34,7 +34,7 @@ generated_at: 2026-10-24 17:12:48 +0800
 ## Current sets
 
 - observed_dirty: `GlobalCloud AAAS, GlobalCloud Brain, GlobalCloud WAS, GlobalCloud XiaoC, GlobalCloud WAME, GlobalCloud GPC, GlobalCloud Studio, GlobalCloud GPCF, GlobalCloud XWAIL, GlobalCloud GFIS, GlobalCloud MMC, GlobalCloud KDS, GlobalCloud XiaoG, GlobalCloud PVA, GlobalCloud SOP, GlobalCloud PKC, GlobalCloud ICP, GlobalCloud PQC, GlobalCloud SpaceAI Platform, GlobalCloud World, GlobalCloud WAE, GlobalCloud PMC, GlobalCloud PDC, GlobalCloud FireQuote`
-- observed_ahead: `GlobalCloud AAAS, GlobalCloud Brain, GlobalCloud XiaoC, GlobalCloud WAME, GlobalCloud GPC, GlobalCloud Studio, GlobalCloud XWAIL, GlobalCloud GFIS, GlobalCloud MMC, GlobalCloud XiaoG, GlobalCloud PVA, GlobalCloud SOP, GlobalCloud PKC, GlobalCloud XGD, GlobalCloud PQC, GlobalCloud SpaceAI Platform, GlobalCloud SpaceAI Studio, GlobalCloud PMC, GlobalCloud SLC`
+- observed_ahead: `GlobalCloud AAAS, GlobalCloud Brain, GlobalCloud XiaoC, GlobalCloud WAME, GlobalCloud GPC, GlobalCloud Studio, GlobalCloud XWAIL, GlobalCloud GFIS, GlobalCloud MMC, GlobalCloud XiaoG, GlobalCloud PVA, GlobalCloud SOP, GlobalCloud PKC, GlobalCloud XGD, GlobalCloud PQC, GlobalCloud SpaceAI Platform, GlobalCloud SpaceAI Studio, GlobalCloud WAE, GlobalCloud PMC, GlobalCloud SLC`
 - stable_dirty: `GlobalCloud AAAS, GlobalCloud Brain, GlobalCloud FireQuote, GlobalCloud GFIS, GlobalCloud GPC, GlobalCloud GPCF, GlobalCloud ICP, GlobalCloud KDS, GlobalCloud MMC, GlobalCloud PDC, GlobalCloud PKC, GlobalCloud PMC, GlobalCloud PQC, GlobalCloud PVA, GlobalCloud SOP, GlobalCloud SpaceAI Platform, GlobalCloud Studio, GlobalCloud WAE, GlobalCloud WAME, GlobalCloud WAS, GlobalCloud World, GlobalCloud XWAIL, GlobalCloud XiaoC, GlobalCloud XiaoG`
 - stable_ahead: `GlobalCloud AAAS, GlobalCloud Brain, GlobalCloud GFIS, GlobalCloud GPC, GlobalCloud MMC, GlobalCloud PKC, GlobalCloud PMC, GlobalCloud PQC, GlobalCloud PVA, GlobalCloud SLC, GlobalCloud SOP, GlobalCloud SpaceAI Platform, GlobalCloud SpaceAI Studio, GlobalCloud Studio, GlobalCloud WAME, GlobalCloud XGD, GlobalCloud XWAIL, GlobalCloud XiaoC, GlobalCloud XiaoG`
 - volatile_dirty: `GlobalCloud GPCF`
@@ -52,7 +52,7 @@ generated_at: 2026-10-24 17:12:48 +0800
 | `GlobalCloud WAME` | 7 | 1 | 0 | `none` |
 | `GlobalCloud GPC` | 1 | 6 | 0 | `none` |
 | `GlobalCloud Studio` | 1 | 1 | 0 | `none` |
-| `GlobalCloud GPCF` | 398 | 0 | 0 | `.harness/runs/kds-real-token-sync-20260613-062146/README.md, .harness/runs/kds-real-token-sync-20260613-062146/evidence/README.md, .harness/runs/kds-real-token-sync-20260613-062146/patches/README.md, .harness/runs/kds-real-token-sync-20260613-062146/workspaces/README.md, features/active/F-034-wae-p0-shell-and-role-convergence/evidence/brain-token-diff-20261024.md, features/active/F-034-wae-p0-shell-and-role-convergence/evidence/pkc-token-alias-finding-20261024.md, features/active/F-034-wae-p0-shell-and-role-convergence/evidence/token-consolidation-request-20261024.md` |
+| `GlobalCloud GPCF` | 406 | 0 | 0 | `.harness/runs/kds-real-token-sync-20260613-062146/README.md, .harness/runs/kds-real-token-sync-20260613-062146/evidence/README.md, .harness/runs/kds-real-token-sync-20260613-062146/patches/README.md, .harness/runs/kds-real-token-sync-20260613-062146/workspaces/README.md, features/active/F-034-wae-p0-shell-and-role-convergence/evidence/brain-token-diff-20261024.md, features/active/F-034-wae-p0-shell-and-role-convergence/evidence/pkc-token-alias-finding-20261024.md, features/active/F-034-wae-p0-shell-and-role-convergence/evidence/token-consolidation-request-20261024.md` |
 | `GlobalCloud XWAIL` | 1 | 4 | 0 | `none` |
 | `GlobalCloud GFIS` | 52 | 1 | 0 | `none` |
 | `GlobalCloud MMC` | 2 | 14 | 7 | `none` |
@@ -64,11 +64,11 @@ generated_at: 2026-10-24 17:12:48 +0800
 | `GlobalCloud XGD` | 0 | 1 | 0 | `none` |
 | `GlobalCloud ICP` | 1 | 0 | 0 | `none` |
 | `GlobalCloud PQC` | 34 | 1 | 0 | `none` |
-| `GlobalCloud SpaceAI Platform` | 38 | 21 | 0 | `none` |
+| `GlobalCloud SpaceAI Platform` | 38 | 24 | 0 | `none` |
 | `GlobalCloud SpaceAI Studio` | 0 | 1 | 0 | `none` |
 | `GlobalCloud World` | 1 | 0 | 0 | `none` |
 | `GlobalCloud Mem` | 0 | 0 | 0 | `none` |
-| `GlobalCloud WAE` | 139 | 0 | 0 | `none` |
+| `GlobalCloud WAE` | 140 | 1 | 0 | `none` |
 | `GlobalCloud PMC` | 3 | 6 | 0 | `none` |
 | `GlobalCloud PDC` | 2 | 0 | 0 | `none` |
 | `GlobalCloud SLC` | 0 | 5 | 0 | `none` |
