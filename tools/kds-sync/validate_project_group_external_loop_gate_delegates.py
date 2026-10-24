@@ -17,7 +17,7 @@ DELEGATED_REPOS = [
 ]
 REQUIRED_TOKENS = [
     "Delegate project-group loop gate execution to the GPCF canonical gate",
-    'GPCF_ROOT = ROOT.parent / "GlobalCoud GPCF"',
+    'GPCF_ROOT = ROOT.parent / "GlobalCloud GPCF"',
     'GPCF_GATE = GPCF_ROOT / "tools/kds-sync/loop_document_gate.py"',
     'env["GPCF_PROJECT_GROUP_GATE_DELEGATED"] = "1"',
     '[sys.executable, str(GPCF_GATE), "--check-only"]',
