@@ -187,6 +187,7 @@ KDS 空间：`开发`
 | GPCF-SPACEAI-FLOOD-TASKS-20261016 | tasks | openspec/changes/spaceai-was-city-flood-replay/tasks.md | GPCF | implemented |
 | GPCF-DOC-CANDIDATE-WAS-DECISION-MODEL-ARCH-V01 | was-decision-model-architecture-v0.1 | openspec/changes/was-decision-model-architecture-v0.1/README.md | WAS | draft |
 | GPCF-DOC-CANDIDATE-WAS-DECISION-MODEL-ARCH-ARTIFACTS | 证据索引 — WAS 决策模型体系架构（候选） | openspec/changes/was-decision-model-architecture-v0.1/artifacts/README.md | WAS | draft |
+| GPCF-DOC-E2CA70136C | WAS 决策契约 v0.3 冻结与发布记录（进度同步） | openspec/changes/was-decision-model-architecture-v0.1/artifacts/v03-freeze-and-release-record.md | WAS | draft |
 | GPCF-DOC-CANDIDATE-WAS-DECISION-MODEL-ARCH-DESIGN | WAS 决策模型体系架构设计（候选） | openspec/changes/was-decision-model-architecture-v0.1/design.md | WAS | draft |
 | GPCF-DOC-CANDIDATE-WAS-DECISION-MODEL-ARCH-PROPOSAL | WAS 决策模型体系架构与实施方案 v0.1 评审与候选契约准入 | openspec/changes/was-decision-model-architecture-v0.1/proposal.md | WAS | draft |
 | GPCF-DOC-7CA9A86B02 | specs | openspec/changes/was-decision-model-architecture-v0.1/specs/README.md | KDS | draft |

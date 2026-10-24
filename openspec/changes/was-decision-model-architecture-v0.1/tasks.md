@@ -27,11 +27,17 @@ superseded_by: []
 - [x] GPCF CP 骨架 → 完整 CP（本次）
 
 ## Phase B 契约与 Validator
-- [x] DecisionProfile 候选 Schema（对象 `$defs`）
-- [x] 正例 1 + 负例 15
-- [x] Schema/Ontology-aware/Policy/Evidence Validator
-- [x] `validate_all` 18 PASS（本地）
-- [ ] 独立复核/兼容矩阵签署
+- [x] DecisionProfile 候选 Schema（WP-B，2026-10-24）
+- [x] 对象独立 Schema 7 + 兼容矩阵（WP-B 加固）
+- [x] 正例/负例（WP-B：1 正例 + 15 负例；v0.3：1 正例 + **16 负例**）
+- [x] Schema/Ontology-aware/Policy/Evidence Validator（v0.3：`validate_decision_v03.py`，8 类结构规则含 `R-CONFIRMATION`）
+- [x] `validate_all` 56 PASS（本地，含决策校验器）
+- [x] **v0.3.0 契约冻结**（11 对象 + common + manifest；content_hash `1640dcd0…`；独立复核通过 A .868；冻结确认 A .616；2026-10-24）
+- [x] 映射矩阵/迁移测试集（Gen1 v0.2→v0.3；对账 mapped 107 / derived 72 / unmapped 0；迁移 bundle VALID）
+- [x] 独立复核/冻结签署（复核人=老卢，本人兼任，双角色已声明；仍在 GPCF 治理侧留下评审待办）
+- [x] XWAIL 本地发布（`feat/xwail-decision-schemas-v03` @ `3c934d5`；13 文件哈希复现；43 PASS；bundle VALID；**未 push/未合并**）
+- [ ] GPCF 门禁清障（37 外部 hard failures，非本 CP 可修）
+- [ ] CP 评审/批准/合并（需 GPCF owner + 门禁清障）
 
 ## Phase C WAME no-write 运行时
 - [x] 模型登记/版本状态机
@@ -39,8 +45,11 @@ superseded_by: []
 - [x] 适配器协议（注入 transport；fail-closed）
 - [x] Assessment/授权回执/执行门禁/审计
 - [x] 暂停→恢复/版本回退选版/Scorecard 骨架
+- [x] WAME 决策运行时 v0.3 适配性复核（只读：9/9 映射对象缺必填；枚举 5/9 不一致；世界层/contentHash 全缺）
+- [x] WAME v0.3 适配规格（candidate：mapper/枚举收敛/回执映射/BLOCKED 清单/Q-W3 输入扩展草案/Q-W6…W8 开放问题）
 - [ ] 真实外部 transport（需数据边界/凭据授权）
 - [ ] 服务化接线/双钥匙恢复/事故流程
+- [ ] WAME 跨仓实施（Q-W3/Q-W7 输入扩展+mapper；需 WAME owner 授权）
 
 ## Phase D 隔离试点准备
 - [ ] 候选场景硬门槛评分表
@@ -53,4 +62,4 @@ superseded_by: []
 - [ ] 法律审查与专项人工确认
 
 ## 非声明
-任务未派发实现；勾选为本地候选证据，不构成验收或状态提升。
+任务勾选为本地候选证据（含 WAS 冻结/发布与只读复核进展），**不构成验收、合并或状态提升**；外部 hard failures 不由本 CP 修复；v0.3 FROZEN/发布 ≠ 生产可用。
