@@ -114,6 +114,7 @@ superseded_by: []
 
 | 文档 | 说明 |
 |---|---|
+| `handover-kit-20261024.md` | **当前有效**待外部动作清单（PQC 客户单 / F-013 13 条 / F-036 / runner·计费 / GFIS） |
 | `collab-completion-20261024.md` | 协同补齐 4 项阻塞的完成/未完成记录（7 仓门禁、8 仓继承、KDS 收敛、runner/GFIS 排查） |
 | `governance-coverage-matrix-20261024.md` | 29 仓治理覆盖总矩阵（继承/门禁/CI 三合一，脚本生成） |
 | `inheritance-coverage-audit-20261024.md` | 方案继承覆盖审计（合规/部分/不合规/无文件） |
