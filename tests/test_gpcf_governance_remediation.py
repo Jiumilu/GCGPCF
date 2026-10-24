@@ -391,3 +391,23 @@ def test_pqc_pilot_close_script_present():
     path = ROOT / "scripts/gpcf_pqc_pilot_close.py"
     assert path.is_file()
     assert os.access(path, os.X_OK)
+
+
+def test_full_sweep_covers_key_validators():
+    """全量体检脚本必须持续覆盖关键校验器（防被并回退）。"""
+    import importlib.util
+    spec = importlib.util.spec_from_file_location("sweep", ROOT / "scripts/gpcf_full_sweep.py")
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    names = {name for name, _cmd, _t in module.CHECKS}
+    for required in (
+        "loop_document_gate",
+        "caliber_baseline",
+        "plan_inheritance",
+        "contract_matrix",
+        "master_plan_register",
+        "derive_status",
+        "pytest",
+    ):
+        assert required in names, f"全量体检缺项：{required}"
+    assert len(module.CHECKS) >= 14
