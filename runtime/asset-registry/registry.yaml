@@ -656,3 +656,74 @@ entries:
       - 仅类型契约，不替代运行时实现
       - 消费方需安装 tgz 或私有 registry 包
       - 不声明任何项目状态提升
+
+  - id: component.close-candidate-scanner
+    title: Feature 关闭候选扫描器
+    version: v1.0
+    type: component
+    owner: GPCF
+    governor: GPCF
+    scope:
+      - 遍历 features/active，调用 gpcf_check_evidence --check-only，输出 JSON
+      - 消费方：GPCF 治理轮次
+    access: read-only
+    license: 项目群内部使用（自研，不对外分发）
+    source_path: tools/kds-sync/scan_feature_close_candidates.py
+    evidence:
+      - source_path 存在性核对（2026-10-24）
+      - 实跑 --candidates-only：count=0（2026-10-24）
+    reused_by: [GPCF]
+    reuse_count: 1
+    reuse_basis: verified_reference
+    status: active
+    notes: 只读扫描，不关闭 Feature
+    constraints:
+      - 输出候选不等于可关闭
+      - 关闭仍需 gates + 授权
+
+  - id: component.goal-health-reporter
+    title: 目标健康快照（门禁+指标）
+    version: v1.0
+    type: component
+    owner: GPCF
+    governor: GPCF
+    scope:
+      - 运行门禁清单并输出 active/closed/C_dev JSON
+      - 消费方：GPCF 每轮巡检
+    access: read-only
+    license: 项目群内部使用（自研，不对外分发）
+    source_path: tools/kds-sync/report_goal_health.py
+    evidence:
+      - 实跑 12/12 pass（2026-10-24）
+    reused_by: [GPCF]
+    reuse_count: 1
+    reuse_basis: verified_reference
+    status: active
+    notes: 不写项目状态
+    constraints:
+      - loop gate 需先重建 live_status 快照
+      - 门禁 pass 不等于业务完成
+
+  - id: component.token-exception-validator
+    title: 设计令牌例外校验器
+    version: v1.0
+    type: component
+    owner: GPCF
+    governor: GPCF
+    scope:
+      - 校验 token-source-exceptions.yaml 的字段/状态/证据存在性
+      - 消费方：CI gpcf-gates、治理巡检
+    access: read-only
+    license: 项目群内部使用（自研，不对外分发）
+    source_path: tools/kds-sync/validate_token_source_exceptions.py
+    evidence:
+      - 实跑 pass count=3（2026-10-24）
+      - CI gpcf-gates 已接入（2026-10-24）
+    reused_by: [GPCF]
+    reuse_count: 1
+    reuse_basis: verified_reference
+    status: active
+    notes: token=CSS 设计令牌，非凭据
+    constraints:
+      - 例外登记不等于差异已消除
+      - 需属主 reviewer 签字

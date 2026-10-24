@@ -21,7 +21,7 @@ exceptions:
     status: unresolved
     reason: 30 处值不同 + 5 个独有令牌；未确认是否别名层。
     owner: Brain
-    evidence: features/active/F-034-wae-p0-shell-and-role-convergence/evidence/token-sources-20261024.txt
+    evidence: features/active/F-034-wae-p0-shell-and-role-convergence/evidence/brain-token-diff-20261024.md
     reviewer: 待 Brain 属主复核
   - id: TOKEN-EXC-PVAOS-MISSING
     project: PVAOS

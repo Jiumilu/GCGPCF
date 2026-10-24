@@ -1,7 +1,7 @@
 schema_version: 2
-generated_at: '2026-10-23T06:15:37+08:00'
+generated_at: '2026-10-24T12:03:28+08:00'
 source_registry: runtime/asset-registry/registry.yaml
-entries_total: 26
+entries_total: 29
 entries_with_cross_repo_reuse: 5
 entries:
 - id: startlux-decision
@@ -247,3 +247,30 @@ entries:
   cross_repo_files: 1
   cross_repo_projects:
   - runtime
+- id: component.close-candidate-scanner
+  type: component
+  owner: GPCF
+  reused_by_declared: 1
+  files_total: 0
+  projects_total: 0
+  gcpf_files: 0
+  cross_repo_files: 0
+  cross_repo_projects: []
+- id: component.goal-health-reporter
+  type: component
+  owner: GPCF
+  reused_by_declared: 1
+  files_total: 0
+  projects_total: 0
+  gcpf_files: 0
+  cross_repo_files: 0
+  cross_repo_projects: []
+- id: component.token-exception-validator
+  type: component
+  owner: GPCF
+  reused_by_declared: 1
+  files_total: 0
+  projects_total: 0
+  gcpf_files: 0
+  cross_repo_files: 0
+  cross_repo_projects: []

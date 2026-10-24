@@ -36,6 +36,7 @@ jobs:
       - run: python tools/kds-sync/measure_asset_reuse.py
         continue-on-error: true   # CI 无兄弟仓，跨仓计数为 0；本地运行才有跨仓
       - run: python tools/kds-sync/validate_asset_reuse.py
+      - run: python tools/kds-sync/validate_token_source_exceptions.py
         continue-on-error: true   # 首次进 CI：依赖项目群口径文件，先观察
       - run: python tools/kds-sync/validate_project_group_single_authorization_ledger.py
       - run: python tools/kds-sync/validate_contract_matrix.py
