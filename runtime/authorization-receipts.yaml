@@ -5,8 +5,8 @@
 schema_version: "1.0"
 generated_at: "2026-10-22T05:40:00+08:00"
 ledger_ref: "09-status/globalcloud-project-group-single-authorization-ledger-v1.0.md"
-authorization_granted_count: 36
-action_executed_count: 28
+authorization_granted_count: 37
+action_executed_count: 29
 pending_execution_count: 8
 receipts:
   - auth_id: AUTH-GPCF-SCHEME-REVIEW-20260626
@@ -445,4 +445,16 @@ receipts:
     expires_at: "2026-11-07T23:59:59+08:00"
     evidence: "docs/reports/ci-workflows-icp-aaas-mem-trace-20261024.md"
     review_conclusion: "新增 test-build.yml；本地 pytest 通过；覆盖 test/build 各 +1"
+    revoked_at: null
+  - auth_id: AUTH-PG-MMC-BUILD-20261024
+    granted_at: "2026-10-24T15:55:00+08:00"
+    granted_by: "老卢（授权自动按模型采纳）"
+    grant_basis: "decide_template(authorization_qa) probability_yes=0.6207 verdict=yes"
+    repo: "GlobalCloud MMC"
+    scope: "cross_repo_ci_build_job"
+    actions_allowed: ["read", "append_workflow_job"]
+    actions_forbidden: ["commit", "push", "business_code_change", "remove_files"]
+    expires_at: "2026-11-07T23:59:59+08:00"
+    evidence: "docs/reports/mmc-build-job-trace-20261024.md"
+    review_conclusion: "mmc-ci.yml 追加 build job（AST 解析 73 文件 0 失败）；build 覆盖 22→23"
     revoked_at: null

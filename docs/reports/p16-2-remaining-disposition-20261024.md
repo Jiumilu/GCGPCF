@@ -30,11 +30,11 @@ superseded_by: []
 | GlobalCloud XWAIL | 同上；有 `scripts/verify_xap.py`、`xap_verify.py` 但无测试框架 | **无真实测试套件** | 属主可把 verify 脚本包装成 pytest 用例（低成本） |
 | GlobalCloud DRC | 仅有 docs 与占位 Makefile 目标 | **无代码可测** | 建议登记 P16-2 豁免（文档仓） |
 
-## 2. 缺 build 的仓（4）
+## 2. 缺 build 的仓（3，MMC 已闭环）
 
 | 仓 | 现状 | 判定 | 建议 |
 |---|---|---|---|
-| GlobalCloud MMC | 已有 `mmc-ci.yml`（pytest 23 文件 + 契约脚本 + sdk vitest） | Python runtime，无"构建"产物 | 建议在既有 mmc-ci.yml 增 AST 语法解析 job（属主执行） |
+| GlobalCloud MMC | 已有 `mmc-ci.yml`（pytest 23 文件 + 契约脚本 + sdk vitest） | ✅ **已补**：2026-10-24 追加 AST 解析 build job（模型 yes 0.621） | 无需属主动作；如不喜欢可回滚 |
 | GlobalCloud XGD | `npm run quality:ci` 已含 typecheck + 多个 test/smoke | `build` = electron-builder 三平台打包（重） | 建议以 `npm run typecheck` 作为 build 替代判定，属主确认 |
 | GlobalCloud SpaceAI Studio | 无任何构建命令；`node --test` 有测试 | 缺构建 | 属主补 `pnpm -r build` 或声明 legacy 豁免 |
 | GlobalCloud PKC | 本地 `npm test` 151 passed、`npm run build` 可用 | 模型裁决 **no 0.455**，按授权边界未执行 | 交属主自行添加（GPCF 不越权） |
@@ -49,5 +49,5 @@ superseded_by: []
 
 ## 4. 结论
 
-- 指标已接近真实上限：剩余 test 缺口 3 个、build 缺口 4 个，**都不是"漏配 CI"而是"确无测试/无构建产物或模型裁决不通过"**；
+- 指标已接近真实上限：剩余 test 缺口 3 个、build 缺口 3 个，**都不是"漏配 CI"而是"确无测试/无构建产物或模型裁决不通过"**；
 - 若要让 P16-2 达到 29/29，需要：WAS/XWAIL 补最小测试、MMC/SpaceAI Studio 补 build job、XGD 确认 typecheck 替代、DRC 豁免裁定、PKC 属主自加。

@@ -56,3 +56,4 @@
 {"id": "d056", "time": "2026-10-24T15:50:00+08:00", "kind": "authorize", "question": "ICP 新增 test-build CI", "answer": "authorization_qa yes 0.576", "none": 0.0, "adopted": "已按模型采纳", "auth_id": "AUTH-PG-ICP-CI-20261024"}
 {"id": "d057", "time": "2026-10-24T15:50:00+08:00", "kind": "authorize", "question": "AAAS 新增 test-build CI", "answer": "authorization_qa yes 0.640", "none": 0.0, "adopted": "已按模型采纳", "auth_id": "AUTH-PG-AAAS-CI-20261024"}
 {"id": "d058", "time": "2026-10-24T15:50:00+08:00", "kind": "authorize", "question": "Mem 新增 test-build CI", "answer": "authorization_qa yes 0.627", "none": 0.0, "adopted": "已按模型采纳", "auth_id": "AUTH-PG-MEM-CI-20261024"}
+{"id": "d059", "time": "2026-10-24T15:55:00+08:00", "kind": "authorize", "question": "MMC mmc-ci.yml 追加 build job（跨仓）", "answer": "authorization_qa yes 0.6207", "none": 0.0, "adopted": "已按模型采纳", "auth_id": "AUTH-PG-MMC-BUILD-20261024"}

@@ -142,7 +142,7 @@
     "GlobalCloud SpaceAI Studio": "dd99d4cb1fd63cc782c1802e7337b200a8f51a19",
     "GlobalCloud World": "4c29506acfd0bc47ba657c415e4cbddcc52cda05",
     "GlobalCloud Mem": "5a7b2c649bf2f695b62739b72fa394ba22e8c65e",
-    "GlobalCloud WAE": "1503035ff75dec86b95bd0c81338de67ab2df3e1",
+    "GlobalCloud WAE": "f2def2184153e5a7f6c72b5c5f363dda692757c9",
     "GlobalCloud PMC": "7a3633601d52feb81cdeffdf34697a7f065bcda0",
     "GlobalCloud PDC": "21f0de4cccdbeeedd7f6b522fe05aff793606ae4",
     "GlobalCloud SLC": "a866196f2844dce0f98bf2a524d4a6dfcafa3b51",
@@ -462,8 +462,8 @@
       "sensitive_paths": []
     },
     "GlobalCloud GPCF": {
-      "dirty_count": 495,
-      "ahead": 3,
+      "dirty_count": 498,
+      "ahead": 4,
       "behind": 0,
       "paths": [
         "$CODEX_HOME/automations/globalcloud-17/README.md",
@@ -685,6 +685,7 @@
         "docs/harness/loops/README.md",
         "docs/harness/minimum-closed-loop/README.md",
         "docs/harness/tasks/README.md",
+        "docs/reports/p16-2-remaining-disposition-20261024.md",
         "docs/standards/README.md",
         "features/active/F-012-icp-sop-foundation-coupling/evidence/plan-20261024.md",
         "features/active/F-022-was-scenario-flow-extension/evidence/was-review-request-20261024.md",
@@ -780,6 +781,8 @@
         "projects/studio/STATUS.md",
         "projects/xwail/STATUS.md",
         "runtime/audit/README.md",
+        "runtime/audit/decision-ledger-20261022.jsonl",
+        "runtime/authorization-receipts.yaml",
         "runtime/logs/F-004.jsonl",
         "runtime/logs/F-011.jsonl",
         "runtime/logs/F-015.jsonl",
@@ -791,7 +794,6 @@
         "third_party/agent-reach/README.md",
         "tools/README.md",
         "tools/kds-sync/README.md",
-        "tools/kds-sync/scan_ci_coverage.py",
         "tools/kds-sync/validate_icp_project_registration.py",
         "tools/kds-sync/validate_project_group_external_loop_gate_delegate_baseline_20260627.py",
         "\".kds/development-space/\\345\\274\\200\\345\\217\\221/01-GFIS/GlobalCloud GPCF \\346\\200\\273\\344\\275\\223\\346\\226\\271\\346\\241\\210.md\"",
@@ -806,6 +808,7 @@
         "\".kds/development-space/\\345\\274\\200\\345\\217\\221/12-GPCF/docs/reports/ci-workflows-icp-aaas-mem-trace-20261024.md\"",
         "\".kds/development-space/\\345\\274\\200\\345\\217\\221/12-GPCF/docs/reports/f032-direction-ruling-20261024.md\"",
         "\".kds/development-space/\\345\\274\\200\\345\\217\\221/12-GPCF/docs/reports/f032-m0-review-ruling-20261024.md\"",
+        "\".kds/development-space/\\345\\274\\200\\345\\217\\221/12-GPCF/docs/reports/mmc-build-job-trace-20261024.md\"",
         "\".kds/development-space/\\345\\274\\200\\345\\217\\221/12-GPCF/docs/reports/p06-inheritance-line-trace-20261024.md\"",
         "\".kds/development-space/\\345\\274\\200\\345\\217\\221/12-GPCF/docs/reports/p10-p11-wae-owner-packet-20261024.md\"",
         "\".kds/development-space/\\345\\274\\200\\345\\217\\221/12-GPCF/docs/reports/pqc-ci-workflow-trace-20261024.md\"",
@@ -866,7 +869,7 @@
         "docs/harness/evidence/wave1-review-pack-20261022.md",
         "docs/harness/evidence/workspace-consistency-20261023.md",
         "docs/reports/README.md",
-        "docs/reports/p16-2-remaining-disposition-20261024.md",
+        "docs/reports/mmc-build-job-trace-20261024.md",
         "docs/runbooks/README.md",
         "docs/runbooks/runtime-host-v1.0.md",
         "features/active/F-029-hermes-ai-runtime-admission/artifacts/.gitkeep",
@@ -1045,10 +1048,11 @@
       "sensitive_paths": []
     },
     "GlobalCloud MMC": {
-      "dirty_count": 1,
+      "dirty_count": 2,
       "ahead": 13,
       "behind": 7,
       "paths": [
+        ".github/workflows/mmc-ci.yml",
         "\"GlobalCloud MMC \\346\\200\\273\\344\\275\\223\\346\\226\\271\\346\\241\\210.md\""
       ],
       "sensitive_paths": []
@@ -5575,8 +5579,8 @@
       "sensitive_paths": []
     },
     "GlobalCloud WAE": {
-      "dirty_count": 116,
-      "ahead": 21,
+      "dirty_count": 115,
+      "ahead": 23,
       "behind": 0,
       "paths": [
         "docs/assembly-spec/README.md",
@@ -5621,8 +5625,7 @@
         "scripts/gate.sh",
         "scripts/gen-assembly.mts",
         "scripts/gen-module.mts",
-        "deploy/macmini/release-snapshot.sh",
-        "deploy/macmini/rollback.sh",
+        "deploy/macmini/retention.sh",
         "\"docs/analysis/DSH\\345\\200\\237\\351\\211\\264_00_\\346\\200\\273\\346\\212\\245\\345\\221\\212_20261024.md\"",
         "\"docs/analysis/DSH\\345\\200\\237\\351\\211\\264_01_\\346\\241\\206\\346\\236\\266\\344\\270\\216\\345\\267\\245\\347\\250\\213\\346\\262\\273\\347\\220\\206_20261024.md\"",
         "\"docs/analysis/DSH\\345\\200\\237\\351\\211\\264_02_\\347\\225\\214\\351\\235\\242\\350\\256\\276\\350\\256\\241_20261024.md\"",
