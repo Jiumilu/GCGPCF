@@ -110,3 +110,8 @@ superseded_by: []
 
 - 新增 `panorama/usePanoMode.ts`：CWME 页签 / panoMode / 持久化外提；
 - script 1178 → **1163** 行；793 tests / tsc 0；SpaceAI main 本地提交（未 push）。
+
+## 全仓测试（2026-10-24）
+
+- SpaceAI Platform 全量：**1535 passed**（含 map-3d 793）。
+- 结论：F-038 改动无跨插件回归。
