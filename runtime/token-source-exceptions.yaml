@@ -26,9 +26,9 @@ exceptions:
     reviewer: 待 Brain 属主复核
   - id: TOKEN-EXC-PVAOS-MISSING
     project: PVAOS
-    file: default theme path
-    status: unresolved
-    reason: 目标路径不存在；需属主确认落点。
-    owner: PVAOS
-    evidence: features/active/F-034-wae-p0-shell-and-role-convergence/evidence/token-sources-20261024.txt
-    reviewer: 待 PVAOS 属主确认
+    file: src/styles/default_theme.css
+    status: candidate
+    reason: verifier 期望 PVAOS 路径，实际仓为 GlobalCloud PVA；76 变量齐全，仅 --muted-foreground 1 处不同（0.708 vs 0.78）。
+    owner: PVA
+    evidence: features/active/F-034-wae-p0-shell-and-role-convergence/evidence/pva-token-diff-20261024.md
+    reviewer: 待 PVA 属主确认
