@@ -1,6 +1,6 @@
 ---
 doc_id: GPCF-DOC-GOAL-ROUND300-FINAL-REVIEW-20261024
-title: 长期目标 300 轮终评（草稿，2026-10-24）
+title: 长期目标 300 轮终评（2026-10-24）
 project: GPCF
 related_projects: [KDS, GPC, WAME, Brain, PKC, GPCF]
 domain: governance
@@ -18,7 +18,7 @@ superseded_by: []
 
 # 长期目标 300 轮终评（草稿）
 
-## 1. 指标（Round 281）
+## 1. 指标（Round 300 终值）
 
 | 指标 | 值 | 90 天目标 |
 |---|---:|---:|
