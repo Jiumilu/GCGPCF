@@ -372,3 +372,22 @@ def test_scan_ci_coverage_detects_steps_not_job_names(tmp_path):
     result = module.classify(repo)
     assert result["test"] is True and result["build"] is True
     assert result["standards"] is False
+
+
+def test_document_gate_keeps_regression_checks():
+    """门禁必须持续包含 3 项回归拦截校验（2026-10-24 扩充，防被并回退）。"""
+    src = (ROOT / "tools/kds-sync/loop_document_gate.py").read_text(encoding="utf-8")
+    for name in (
+        "validate_project_plan_inheritance.py",
+        "validate_contract_matrix.py",
+        "validate_project_master_plan_register.py",
+    ):
+        assert name in src, f"门禁缺少回归拦截校验：{name}"
+
+
+def test_pqc_pilot_close_script_present():
+    """P14 一键收口脚本必须存在且可执行（真实回执到达后的唯一执行入口）。"""
+    import os
+    path = ROOT / "scripts/gpcf_pqc_pilot_close.py"
+    assert path.is_file()
+    assert os.access(path, os.X_OK)

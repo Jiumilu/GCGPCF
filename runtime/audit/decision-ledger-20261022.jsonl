@@ -58,3 +58,4 @@
 {"id": "d058", "time": "2026-10-24T15:50:00+08:00", "kind": "authorize", "question": "Mem 新增 test-build CI", "answer": "authorization_qa yes 0.627", "none": 0.0, "adopted": "已按模型采纳", "auth_id": "AUTH-PG-MEM-CI-20261024"}
 {"id": "d059", "time": "2026-10-24T15:55:00+08:00", "kind": "authorize", "question": "MMC mmc-ci.yml 追加 build job（跨仓）", "answer": "authorization_qa yes 0.6207", "none": 0.0, "adopted": "已按模型采纳", "auth_id": "AUTH-PG-MMC-BUILD-20261024"}
 {"id": "d060", "time": "2026-10-24T16:10:00+08:00", "kind": "authorize", "question": "门禁扩充 3 项校验（方案继承/契约矩阵/主方案台账）", "answer": "authorization_qa yes 0.8573", "none": 0.0, "adopted": "已按模型采纳；reverse test 证明可拦截回归", "auth_id": "AUTH-PG-GATE-EXPAND-20261024"}
+{"id": "d061", "time": "2026-10-24T16:15:00+08:00", "kind": "authorize", "question": "derive_status_views --check 加入门禁", "answer": "authorization_qa no 0.1998", "none": 0.0, "adopted": "模型判 no，未执行（保持每轮人工体检）", "auth_id": "AUTH-PG-GATE-EXPAND-20261024"}
