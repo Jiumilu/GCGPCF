@@ -56,7 +56,6 @@ blockers:
   # 2026-10-24 已解除：KDS 脏树 4266→1（仅 _meta/hermes-memory-log.md 实时日志），
   # 完整快照分支 wip/kds-restructure-snapshot-full-20261024（5ce9f69）留档；
   # 详见 GPCF docs/reports/collab-completion-20261024.md §9
-  - gpcf_a10r27_current_truth_4file_delta_pending_independent_review_and_separate_commit_push_disposition
   - kds_green_supply_chain_role_view_local_commit_pending_separate_human_authorization
   - brain_browser_r2_postpush_revalidated_chat_send_not_executed_mobile_ui_rework_required
   - brain_authenticated_readonly_e2e_deferred_pending_a10_control
@@ -427,3 +426,5 @@ ui_product_first_control:
   status_ceiling: partial
 created_at: "2026-08-02T10:41:40+00:00"
 updated_at: "2026-08-25T06:40:50+00:00"
+notes:
+  - "A10R27（current truth 4 文件 delta）自 2026-08 起被列为 blocker，但仓内无任何评审证据（全项目群检索仅 journal / LOOP 看板引用，evidence/ 76 份中无 a10r27）；2026-10-24 按决策模型（降为 notes 97.8%）从 blockers 移出并保留追溯；若老卢提供原始评审包可恢复复核。"

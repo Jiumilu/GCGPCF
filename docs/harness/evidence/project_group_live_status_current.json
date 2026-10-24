@@ -158,7 +158,7 @@
     "GlobalCloud SpaceAI Studio": "a33d51add39f74ae305dd15fa9d95a881870d55b",
     "GlobalCloud World": "099a8f2e81ff4a817833b29a1355f82d336ec334",
     "GlobalCloud Mem": "5d143c1006ed1d0c8ee0673087e1a7307472f855",
-    "GlobalCloud WAE": "6ff4701123d3c968e2260293cb8be950dfdf223a",
+    "GlobalCloud WAE": "1eda573ecd4b4adba778b1b168b7b3cee378ed03",
     "GlobalCloud PMC": "aee0434cca99edec438cb021725eb60ca668b20d",
     "GlobalCloud PDC": "dc4f75bd30d92252a7916ff500d5baf28ed6bf4e",
     "GlobalCloud SLC": "93abf9dacab320c65c0fb6400be3b1d46954bf83",
@@ -477,8 +477,8 @@
       "sensitive_paths": []
     },
     "GlobalCloud GPCF": {
-      "dirty_count": 424,
-      "ahead": 10,
+      "dirty_count": 425,
+      "ahead": 11,
       "behind": 0,
       "paths": [
         "$CODEX_HOME/automations/globalcloud-17/README.md",
@@ -647,10 +647,10 @@
         "docs/harness/loops/README.md",
         "docs/harness/minimum-closed-loop/README.md",
         "docs/harness/tasks/README.md",
-        "docs/reports/f013-blocker-dispatch-20261024.md",
         "docs/standards/README.md",
         "features/active/F-012-icp-sop-foundation-coupling/evidence/owner-action-pack-20261024.md",
         "features/active/F-012-icp-sop-foundation-coupling/evidence/plan-20261024.md",
+        "features/active/F-013-knowledge-asset-model-system/feature.yaml",
         "features/active/F-022-was-scenario-flow-extension/evidence/owner-action-pack-20261024.md",
         "features/active/F-022-was-scenario-flow-extension/evidence/was-review-request-20261024.md",
         "features/active/F-025-project-group-arch-iteration/evidence/owner-action-pack-20261024.md",
@@ -752,6 +752,7 @@
         "projects/studio/STATUS.md",
         "projects/xwail/STATUS.md",
         "runtime/audit/README.md",
+        "runtime/audit/decision-ledger-20261022.jsonl",
         "runtime/logs/F-004.jsonl",
         "runtime/logs/F-011.jsonl",
         "runtime/logs/F-015.jsonl",
@@ -996,14 +997,16 @@
       "sensitive_paths": []
     },
     "GlobalCloud KDS": {
-      "dirty_count": 5,
+      "dirty_count": 7,
       "ahead": 0,
       "behind": 0,
       "paths": [
         "_meta/hermes-memory-log.md",
+        "\"concepts/\\345\\244\\215\\345\\210\\266\\351\\232\\276\\345\\272\\246\\350\\257\\204\\344\\274\\260\\346\\241\\206\\346\\236\\266.md\"",
         "wiki/index.md",
         "wiki/log.md",
         "wiki/sources/research--2026-05-14.md",
+        "wiki/sources/research-24-2026-05-14.md",
         "\"concepts/\\345\\217\\243\\344\\273\\244\\351\\251\\261\\345\\212\\250-RACI\\344\\277\\235\\351\\232\\234\\345\\217\\214\\345\\261\\202\\346\\262\\273\\347\\220\\206\\346\\234\\272\\345\\210\\266.md\""
       ],
       "sensitive_paths": []
@@ -1229,7 +1232,7 @@
     },
     "GlobalCloud WAE": {
       "dirty_count": 30,
-      "ahead": 29,
+      "ahead": 34,
       "behind": 0,
       "paths": [
         "apps/wame/src/app/apps/AppsShell.tsx",
