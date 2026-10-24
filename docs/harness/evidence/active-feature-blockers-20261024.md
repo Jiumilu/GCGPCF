@@ -2,11 +2,18 @@
 doc_id: GPCF-DOC-ACTIVE-FEATURE-BLOCKERS-20261024
 title: 活跃 Feature 阻塞清单（2026-10-24）
 project: GPCF
+related_projects: [GPC, PVAOS, WAME, KDS, Brain, PKC, XGD, XiaoG, MMC, GPCF, Studio]
 domain: governance
 status: draft
 version: v1.0
 owner: GPCF
+kds_space: 开发
+kds_path: 开发/91-治理与验收/docs/harness/evidence/active-feature-blockers-20261024.md
+source_path: docs/harness/evidence/active-feature-blockers-20261024.md
+sync_direction: bidirectional
 last_reviewed: 2026-10-24
+supersedes: []
+superseded_by: []
 ---
 
 # 活跃 Feature 阻塞清单（2026-10-24）
@@ -15,7 +22,7 @@ last_reviewed: 2026-10-24
 |---|---|---|---|---|
 | F-005 | factory-exception-intake-dry-run | active | false | — |
 | F-012 | icp-sop-foundation-coupling | active | false | — |
-| F-013 | knowledge-asset-model-system | active | false | kds_p1_apply_blocked_by_dirty_worktree; gpcf_a10r27_current_truth_4file_delta_pending_independent_review_and_separate_commit_push_disposition; kds_green_supply_chain_role_view_local_commit_pending_separate_human_authorization; brain_browser_r2_postpush_revalidated_chat_send_not_executed_mobile_ui_rework_required; brain_authenticated_readonly_e2e_deferred_pending_a10_control; studio_release0_external_daily_sync_post_sync_governance_disposition_pending; kds_release0_runtime_activation_independently_verified_local_gbrain_missing_knowledge_intake_audit_relation; kds_local_gbrain_schema_inventory_and_separate_migration_fixture_authorization_required; studio_gehua_authoritative_project_session_target_fixture_lifecycle_not_executed; kds_stage_b_read_admission_technical_verified_governance_blocked; studio_intake_phase1_authorized_phase2_blocked_by_mmc_prepare_retry_policy_review; studio_a6_external_daily_sync_commit_push_requires_governance_disposition; unexpected_external_kds_local_mirror_write_requires_review; mmc_a9_bounded_read_subset_technical_verified_global_policy_not_narrowed; mmc_delegation_and_human_confirmation_pending |
+| F-013 | knowledge-asset-model-system | active | false | ~~kds_p1_apply_blocked_by_dirty_worktree~~（2026-10-24 已解除：KDS 脏树 4266→1，见 docs/reports/collab-completion-20261024.md §9）; gpcf_a10r27_current_truth_4file_delta_pending_independent_review_and_separate_commit_push_disposition; kds_green_supply_chain_role_view_local_commit_pending_separate_human_authorization; brain_browser_r2_postpush_revalidated_chat_send_not_executed_mobile_ui_rework_required; brain_authenticated_readonly_e2e_deferred_pending_a10_control; studio_release0_external_daily_sync_post_sync_governance_disposition_pending; kds_release0_runtime_activation_independently_verified_local_gbrain_missing_knowledge_intake_audit_relation; kds_local_gbrain_schema_inventory_and_separate_migration_fixture_authorization_required; studio_gehua_authoritative_project_session_target_fixture_lifecycle_not_executed; kds_stage_b_read_admission_technical_verified_governance_blocked; studio_intake_phase1_authorized_phase2_blocked_by_mmc_prepare_retry_policy_review; studio_a6_external_daily_sync_commit_push_requires_governance_disposition; unexpected_external_kds_local_mirror_write_requires_review; mmc_a9_bounded_read_subset_technical_verified_global_policy_not_narrowed; mmc_delegation_and_human_confirmation_pending |
 | F-014 | industrial-meeting-to-project-control-loop | active | false | B3 KDS/MMC 运行配置边界变更未授权（跨项目运行态配置，需属主执行）；真实试点已获批 B1+B2，执行回执待回填 |
 | F-016 | industrial-green-chain-graph-readonly-pilot | active | false | 业务确认人、来源读取权限、正式 SOP 版本、试点验收人待落实（不虚构任命）; B2—B5 放行依赖 B1 完成与各自授权流程 |
 | F-017 | cwme-city-world-model-engine | active | false | D1 命名已确认「万象引擎」；D6 首个演示对象＝光谷（2026-10-11 按建议；如调整请指出）; GPU 验证环境与光谷/黄梅数据场地接触待排期; B4-1—B4-5 首月件已完成（2026-10-11；见 evidence/summary.md）；申请一（域包登记）已提交，decision 待治理方 |
