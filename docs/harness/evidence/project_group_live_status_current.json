@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-10-24T16:55:01.842558+08:00",
+  "generated_at": "2026-10-24T17:12:48.537216+08:00",
   "freshness_hours": 12,
   "freshness_ok": true,
   "project_count": 29,
@@ -40,7 +40,6 @@
     "GlobalCloud XWAIL",
     "GlobalCloud GFIS",
     "GlobalCloud MMC",
-    "GlobalCloud KDS",
     "GlobalCloud XiaoG",
     "GlobalCloud PVA",
     "GlobalCloud SOP",
@@ -49,7 +48,6 @@
     "GlobalCloud PQC",
     "GlobalCloud SpaceAI Platform",
     "GlobalCloud SpaceAI Studio",
-    "GlobalCloud WAE",
     "GlobalCloud PMC",
     "GlobalCloud SLC"
   ],
@@ -84,7 +82,6 @@
     "GlobalCloud Brain",
     "GlobalCloud GFIS",
     "GlobalCloud GPC",
-    "GlobalCloud KDS",
     "GlobalCloud MMC",
     "GlobalCloud PKC",
     "GlobalCloud PMC",
@@ -95,7 +92,6 @@
     "GlobalCloud SpaceAI Platform",
     "GlobalCloud SpaceAI Studio",
     "GlobalCloud Studio",
-    "GlobalCloud WAE",
     "GlobalCloud WAME",
     "GlobalCloud XGD",
     "GlobalCloud XWAIL",
@@ -138,7 +134,7 @@
   ],
   "pass_repo_count": 2,
   "bootstrap_window": false,
-  "previous_generated_at": "2026-10-24T16:37:54.975801+08:00",
+  "previous_generated_at": "2026-10-24T16:55:01.842558+08:00",
   "repo_heads": {
     "GlobalCloud AAAS": "56d9f6af0e8097ff75867e8a8bf1325b5023f7e8",
     "GlobalCloud Brain": "84717b7e47f93b5f859ec691543130020154685e",
@@ -159,11 +155,11 @@
     "GlobalCloud XGD": "b5d2b2f253da26ee56394de61cbcb4e678aeee51",
     "GlobalCloud ICP": "00a9440a37b6a5da6bee7a622616914e983518d2",
     "GlobalCloud PQC": "af29bad85b8b6a58c82aadf8ce0bd97231813cc7",
-    "GlobalCloud SpaceAI Platform": "846c3f0ff725b6957b0ed76d0ed860b6ae33fc4d",
+    "GlobalCloud SpaceAI Platform": "4c1ab5fef3cb5f303db788a6db2271359360cc27",
     "GlobalCloud SpaceAI Studio": "a33d51add39f74ae305dd15fa9d95a881870d55b",
     "GlobalCloud World": "4c29506acfd0bc47ba657c415e4cbddcc52cda05",
     "GlobalCloud Mem": "2be239d777c79c344cc357cdd4622fd5a0ef52ad",
-    "GlobalCloud WAE": "d100b721a3754eec16507b980acc5aa0f6a7574c",
+    "GlobalCloud WAE": "8d68cacd33af531913b66906f5b90df6b7c301bb",
     "GlobalCloud PMC": "0158c8eaf5bb903b00ec56e9bb30a7b4109311bf",
     "GlobalCloud PDC": "21f0de4cccdbeeedd7f6b522fe05aff793606ae4",
     "GlobalCloud SLC": "a866196f2844dce0f98bf2a524d4a6dfcafa3b51",
@@ -482,7 +478,7 @@
       "sensitive_paths": []
     },
     "GlobalCloud GPCF": {
-      "dirty_count": 400,
+      "dirty_count": 398,
       "ahead": 0,
       "behind": 0,
       "paths": [
@@ -643,7 +639,6 @@
         "docs/harness/loops/README.md",
         "docs/harness/minimum-closed-loop/README.md",
         "docs/harness/tasks/README.md",
-        "docs/reports/ci-activation-result-20261024.md",
         "docs/standards/README.md",
         "features/active/F-012-icp-sop-foundation-coupling/evidence/owner-action-pack-20261024.md",
         "features/active/F-012-icp-sop-foundation-coupling/evidence/plan-20261024.md",
@@ -746,7 +741,6 @@
         "projects/studio/STATUS.md",
         "projects/xwail/STATUS.md",
         "runtime/audit/README.md",
-        "runtime/audit/decision-ledger-20261022.jsonl",
         "runtime/logs/F-004.jsonl",
         "runtime/logs/F-011.jsonl",
         "runtime/logs/F-015.jsonl",
@@ -978,7 +972,7 @@
     },
     "GlobalCloud KDS": {
       "dirty_count": 4266,
-      "ahead": 1,
+      "ahead": 0,
       "behind": 0,
       "paths": [
         "_meta/hermes-memory-log.md",
@@ -5423,8 +5417,8 @@
       "sensitive_paths": []
     },
     "GlobalCloud SpaceAI Platform": {
-      "dirty_count": 40,
-      "ahead": 18,
+      "dirty_count": 38,
+      "ahead": 21,
       "behind": 0,
       "paths": [
         ".gitignore",
@@ -5440,7 +5434,6 @@
         "harness/l4-evidence/05-precision-control.png",
         "harness/l4-evidence/06-l4-closeup.png",
         "harness/l4-evidence/07-whitebox-closeup.png",
-        "plugins/map-3d/src/views/PanoramaDeep.vue",
         "pnpm-workspace.yaml",
         "\"DSH_\\345\\274\\200\\345\\217\\221\\351\\200\\237\\346\\237\\245.md\"",
         "apps/desktop/public/gc-feedback-entry.js",
@@ -5464,7 +5457,6 @@
         "packages/plugin-sdk/tsconfig.tsbuildinfo",
         "packages/protocol/tsconfig.tsbuildinfo",
         "packages/ui-kit/tsconfig.tsbuildinfo",
-        "plugins/map-3d/src/panorama/useCardFocus.ts",
         "test-results/.last-run.json",
         "\"\\351\\227\\256\\351\\242\\230\\346\\212\\245\\345\\221\\212_\\346\\265\\213\\350\\257\\225\\344\\270\\264\\346\\227\\266\\345\\272\\223\\344\\270\\215\\346\\270\\205\\347\\220\\206_20261014.md\""
       ],
@@ -5494,8 +5486,8 @@
       "sensitive_paths": []
     },
     "GlobalCloud WAE": {
-      "dirty_count": 137,
-      "ahead": 4,
+      "dirty_count": 139,
+      "ahead": 0,
       "behind": 0,
       "paths": [
         "apps/wame/src/app/modules/idp-console/IdpConsolePage.tsx",
@@ -5581,6 +5573,9 @@
         "docs/evidence/R1/apply/batch-2/receipts/mmc-console.json",
         "docs/evidence/R1/apply/batch-2/receipts/spaceai-map3d.json",
         "docs/evidence/R1/apply/batch-2/receipts/spaceai-scene-center.json",
+        "docs/evidence/R1/manifest-v1-19of19/2026-10-24/artifacts/assembly-plan.json",
+        "docs/evidence/R1/manifest-v1-19of19/2026-10-24/artifacts/check-manifest-v1.json",
+        "docs/evidence/R1/manifest-v1-19of19/2026-10-24/summary.md",
         "docs/evidence/R1/schema-finalize/2026-10-24/06-city-sha.txt",
         "docs/evidence/R1/schema-finalize/2026-10-24/summary.md",
         "\"docs/plan/DSH\\345\\244\\215\\347\\224\\250\\346\\226\\271\\346\\241\\210_v1.0_20261024.md\"",
@@ -5633,7 +5628,6 @@
         "scripts/__repro.mts",
         "scripts/check-manifest-v1.mts",
         "scripts/compile-assembly.mts",
-        "scripts/gate-ci.sh",
         "scripts/migrate-manifest.mts"
       ],
       "sensitive_paths": []
