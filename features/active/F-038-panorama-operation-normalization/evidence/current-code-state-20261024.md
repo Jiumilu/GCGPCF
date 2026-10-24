@@ -100,3 +100,8 @@ superseded_by: []
 
 - 新增 `panorama/usePanoReplayWindow.ts`：回放窗口/排序/密度外提；
 - script 1198 → **1195** 行；793 tests / tsc 0；SpaceAI main 本地提交（未 push）。
+
+## B5 外提增量 10（2026-10-24）
+
+- 新增 `panorama/usePanoTeamTasks.ts`：团队消息映射与任务入区外提；
+- script 1195 → **1178** 行；793 tests / tsc 0；SpaceAI main 本地提交（未 push）。
