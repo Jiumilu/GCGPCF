@@ -7,7 +7,13 @@ domain: governance
 status: draft
 version: v1.0
 owner: GPCF
+kds_space: 开发
+kds_path: 开发/91-治理与验收/features/active/F-038-panorama-operation-normalization/evidence/current-code-state-20261024.md
+source_path: features/active/F-038-panorama-operation-normalization/evidence/current-code-state-20261024.md
+sync_direction: bidirectional
 last_reviewed: 2026-10-24
+supersedes: []
+superseded_by: []
 ---
 
 # F-038 当前代码状态复核
@@ -42,3 +48,9 @@ last_reviewed: 2026-10-24
 ## 边界
 
 - 本轮未改 SpaceAI Platform 代码。
+
+## B5 外提增量（2026-10-24）
+
+- 新增 `panorama/usePanoNlu.ts`：B7 一句话上屏规则解析外提；
+- `PanoramaDeep.vue` script 1273 → **1254** 行（目标 <800）；
+- 793 tests / tsc 0；SpaceAI main 本地提交（未 push）。
