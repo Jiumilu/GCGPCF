@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-10-24T21:26:45.320722+08:00",
+  "generated_at": "2026-10-24T21:57:27.575327+08:00",
   "freshness_hours": 12,
   "freshness_ok": true,
   "project_count": 29,
@@ -32,6 +32,7 @@
   "observed_ahead": [
     "GlobalCloud AAAS",
     "GlobalCloud Brain",
+    "GlobalCloud WAS",
     "GlobalCloud XiaoC",
     "GlobalCloud WAME",
     "GlobalCloud GPC",
@@ -47,6 +48,7 @@
     "GlobalCloud XGD",
     "GlobalCloud SpaceAI Platform",
     "GlobalCloud SpaceAI Studio",
+    "GlobalCloud Mem",
     "GlobalCloud WAE",
     "GlobalCloud PMC",
     "GlobalCloud SLC"
@@ -91,6 +93,7 @@
     "GlobalCloud SpaceAI Platform",
     "GlobalCloud SpaceAI Studio",
     "GlobalCloud Studio",
+    "GlobalCloud WAE",
     "GlobalCloud WAME",
     "GlobalCloud XGD",
     "GlobalCloud XWAIL",
@@ -130,13 +133,13 @@
     "GlobalCloud GPCF",
     "GlobalCloud PKC"
   ],
-  "pass_repo_count": 3,
+  "pass_repo_count": 2,
   "bootstrap_window": false,
-  "previous_generated_at": "2026-10-24T20:55:50.410468+08:00",
+  "previous_generated_at": "2026-10-24T21:26:45.320722+08:00",
   "repo_heads": {
     "GlobalCloud AAAS": "56d9f6af0e8097ff75867e8a8bf1325b5023f7e8",
     "GlobalCloud Brain": "84717b7e47f93b5f859ec691543130020154685e",
-    "GlobalCloud WAS": "239e5039aa9e791faaab8dc6d21980c413a4eed7",
+    "GlobalCloud WAS": "fdf9a6e4f5afea4ee467bb7a9f594f85ed45c215",
     "GlobalCloud XiaoC": "a0fa7422fba5e4eadf2f342cc02c62754bb4b519",
     "GlobalCloud WAME": "17a67307c5ff18204d5b2183871c5b427c11bcdb",
     "GlobalCloud GPC": "a2def04f28f06a98abba3161a703fe78633f3f0a",
@@ -156,7 +159,7 @@
     "GlobalCloud SpaceAI Platform": "4e6e95d49b7217e0d26c0d9a66b8d7db59a1a522",
     "GlobalCloud SpaceAI Studio": "a33d51add39f74ae305dd15fa9d95a881870d55b",
     "GlobalCloud World": "099a8f2e81ff4a817833b29a1355f82d336ec334",
-    "GlobalCloud Mem": "34215a1a72d77ed7ea1a28318fddbabf073514bb",
+    "GlobalCloud Mem": "b6c71cbef1b5a954a5d5b46a43db9857b5801406",
     "GlobalCloud WAE": "b6c6f909508fdd6092327da7f64d2ee58b453a6a",
     "GlobalCloud PMC": "aee0434cca99edec438cb021725eb60ca668b20d",
     "GlobalCloud PDC": "dc4f75bd30d92252a7916ff500d5baf28ed6bf4e",
@@ -200,11 +203,10 @@
       "sensitive_paths": []
     },
     "GlobalCloud WAS": {
-      "dirty_count": 9,
-      "ahead": 0,
+      "dirty_count": 8,
+      "ahead": 1,
       "behind": 0,
       "paths": [
-        ".DS_Store",
         "\"docs/GlobalCloud WAS \\346\\200\\273\\344\\275\\223\\346\\226\\271\\346\\241\\210.md\"",
         "okf/validators/validate_all.py",
         "tools/kds-sync/loop_document_gate.py",
@@ -477,7 +479,7 @@
     },
     "GlobalCloud GPCF": {
       "dirty_count": 424,
-      "ahead": 17,
+      "ahead": 18,
       "behind": 0,
       "paths": [
         "$CODEX_HOME/automations/globalcloud-17/README.md",
@@ -995,7 +997,7 @@
       "sensitive_paths": []
     },
     "GlobalCloud KDS": {
-      "dirty_count": 36,
+      "dirty_count": 37,
       "ahead": 0,
       "behind": 0,
       "paths": [
@@ -1024,6 +1026,7 @@
         "wiki/sources/research-24kpi-2026-05-14.md",
         "wiki/sources/research-case-009-2026-05-14.md",
         "wiki/sources/research-case-010-2026-05-14.md",
+        "\"99_Reports/\\345\\267\\245\\344\\275\\234\\346\\250\\241\\345\\274\\217/\\345\\267\\245\\344\\275\\234\\346\\250\\241\\345\\274\\217\\346\\212\\245\\345\\221\\212_2026-10-24.md\"",
         "\"concepts/24\\345\\255\\227\\344\\275\\223\\347\\263\\273\\345\\215\\217\\345\\220\\214\\344\\273\\252\\350\\241\\250\\347\\233\\230.md\"",
         "\"concepts/\\345\\205\\255\\345\\255\\227\\345\\267\\245\\344\\275\\234\\346\\265\\201\\344\\270\\216\\345\\217\\214\\345\\271\\263\\351\\235\\242\\346\\230\\240\\345\\260\\204.md\"",
         "\"concepts/\\345\\217\\243\\344\\273\\244\\351\\251\\261\\345\\212\\250-RACI\\344\\277\\235\\351\\232\\234\\345\\217\\214\\345\\261\\202\\346\\262\\273\\347\\220\\206\\346\\234\\272\\345\\210\\266.md\"",
@@ -1252,7 +1255,7 @@
     },
     "GlobalCloud Mem": {
       "dirty_count": 0,
-      "ahead": 0,
+      "ahead": 1,
       "behind": 0,
       "paths": [],
       "sensitive_paths": []

@@ -11,25 +11,6 @@ exceptions:
     until: "2026-12-31"
     approved_by: "laolu"
 
-  # WAES 退役仓：承载双决策模型策略文件（dual-policies.yaml），迁移前不可归档
-  - repo: "GlobalCloud WAES"
-    rule: "R02-registered"
-    reason: "已退役（2026-10-22），但 MCP 决策模型仍读取其 runtime 策略文件；策略迁移后归档进 _archive"
-    until: "2026-12-31"
-    approved_by: "laolu"
-
-  - repo: "GlobalCloud WAES"
-    rule: "R04-required-files"
-    reason: "退役冻结仓，不再补四件套；归档前保持原样"
-    until: "2026-12-31"
-    approved_by: "laolu"
-
-  - repo: "GlobalCloud WAES"
-    rule: "R05-gitignore-coverage"
-    reason: "退役冻结仓，不再维护 .gitignore；归档前保持原样"
-    until: "2026-12-31"
-    approved_by: "laolu"
-
   # SpaceAI Studio：legacy WinForms（.NET）工程，源码在仓库根目录，迁移需同步 .sln/.csproj 并复跑构建
   - repo: "GlobalCloud SpaceAI Studio"
     rule: "R10-docs-layout"
