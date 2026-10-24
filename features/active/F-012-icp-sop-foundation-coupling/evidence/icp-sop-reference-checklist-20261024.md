@@ -7,7 +7,13 @@ domain: governance
 status: draft
 version: v1.0
 owner: GPCF
+kds_space: 开发
+kds_path: 开发/91-治理与验收/features/active/F-012-icp-sop-foundation-coupling/evidence/icp-sop-reference-checklist-20261024.md
+source_path: features/active/F-012-icp-sop-foundation-coupling/evidence/icp-sop-reference-checklist-20261024.md
+sync_direction: bidirectional
 last_reviewed: 2026-10-24
+supersedes: []
+superseded_by: []
 ---
 
 # ICP→SOP 版本化引用清单（M1）

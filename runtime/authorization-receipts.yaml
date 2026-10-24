@@ -5,8 +5,8 @@
 schema_version: "1.0"
 generated_at: "2026-10-22T05:40:00+08:00"
 ledger_ref: "09-status/globalcloud-project-group-single-authorization-ledger-v1.0.md"
-authorization_granted_count: 30
-action_executed_count: 22
+authorization_granted_count: 31
+action_executed_count: 23
 pending_execution_count: 8
 receipts:
   - auth_id: AUTH-GPCF-SCHEME-REVIEW-20260626
@@ -373,4 +373,16 @@ receipts:
     expires_at: "2026-11-07T23:59:59+08:00"
     evidence: "docs/reports/spaceai-gitignore-trace-20261024.md"
     review_conclusion: "追加 data/ 与 .harness/runs/ 两条忽略；dirty 2311→38；standards error 1→0"
+    revoked_at: null
+  - auth_id: AUTH-PG-PQC-CI-20261024
+    granted_at: "2026-10-24T15:28:00+08:00"
+    granted_by: "老卢（授权自动按模型采纳）"
+    grant_basis: "decide_template(authorization_qa) probability_yes=0.839 verdict=yes"
+    repo: "GlobalCloud PQC"
+    scope: "cross_repo_ci_test_build_workflow"
+    actions_allowed: ["read", "add_workflow_file"]
+    actions_forbidden: ["commit", "push", "business_code_change", "remove_files"]
+    expires_at: "2026-11-07T23:59:59+08:00"
+    evidence: "docs/reports/pqc-ci-workflow-trace-20261024.md"
+    review_conclusion: "新增 test-build.yml（test 契约 39 passed；build AST 128 文件 0 失败）；覆盖 test 10→11、build 13→14"
     revoked_at: null

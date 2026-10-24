@@ -65,10 +65,9 @@ jobs:
 3. `standards` job 固定存在（P16-1 已要求）；
 4. 不要求覆盖率阈值、不要求 e2e/browser/a11y（属 P16-3）。
 
-## 3. 覆盖与缺口（按步骤实判，2026-10-24 15:10 更新）
+## 3. 覆盖与缺口（按步骤实判，2026-10-24 15:28 更新）
 
-> 判定方式：解析 `steps[].run` 的实际命令（pytest/vitest/pnpm test/tsc/ast.parse 等），不按 job 名猜测。
-> 本轮变化：GPCF 自身新增 AST 语法解析构建自检 → build 由 12/29 升至 **13/29**。
+> 判定方式：解析 `steps[].run` 实际命令。本轮：PQC 新增 test-build 工作流（模型授权），test 11/29、build 14/29。
 
 | 仓 | standards | test | build | test 依据 | build 依据 |
 |---|---|---|---|---|---|
@@ -90,7 +89,7 @@ jobs:
 | GlobalCloud PKC | ✓ | — | — | — | — |
 | GlobalCloud XGD | ✓ | — | — | — | — |
 | GlobalCloud ICP | ✓ | — | — | — | — |
-| GlobalCloud PQC | ✓ | — | — | — | — |
+| GlobalCloud PQC | ✓ | ✓ | ✓ | pytest | ast.parse |
 | GlobalCloud SpaceAI Platform | ✓ | ✓ | — | vitest | — |
 | GlobalCloud SpaceAI Studio | ✓ | ✓ | — | cargo test, pnpm test | — |
 | GlobalCloud World | ✓ | — | ✓ | — | npm run build |
@@ -102,7 +101,7 @@ jobs:
 | GlobalCloud DRC | ✓ | — | — | — | — |
 | GlobalCloud FireQuote | ✓ | — | — | — | — |
 
-缺口统计：**test 缺 19 仓、build 缺 16 仓**（standards 已 29/29）。
+缺口统计：**test 缺 18 仓、build 缺 15 仓**（standards 29/29）。
 
 复跑：`python3 tools/kds-sync/scan_ci_coverage.py --markdown`
 

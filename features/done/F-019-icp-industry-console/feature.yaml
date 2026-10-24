@@ -1,7 +1,7 @@
 id: F-019
 name: icp-industry-console
 project: icp
-status: active
+status: done
 goal: "ICP 产业控制台：把产业模型（24 节点/11 资源池/3 受控场景/宪法治理矩阵）以产业业务控制台呈现，装配进 WAE 门面（母本第 7 项『ICP 产业台』）。一期只读（5 GET·直连 :8091）；候选态如实标注。规划：KDS 体系《ICP产业控制台_全量规划_v0.1》。"
 owner: agent-dev-01
 priority: P1
