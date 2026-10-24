@@ -1,18 +1,18 @@
 {
   "feature": "F-034",
   "name": "wae-p0-shell-and-role-convergence（WAE 侧证据包）",
-  "generated_at": "2026-10-24T22:26:17.497Z",
+  "generated_at": "2026-10-24T22:31:21.436Z",
   "repo": "GlobalCloud WAE",
   "branch": "refactor/ui-spec-wae",
-  "commit": "7af0ebcd13ea03b6128284b412fc1e8066cf2ab4",
+  "commit": "622e942b82818eaed150e6d4f03a9da2f8396769",
   "discipline": {
     "status_ceiling": "F-034 至多 ready_for_review；本清单不提升任何状态",
     "replay": "见 docs/evidence/F-034/README.md（采集脚本 + pnpm evidence:collect）"
   },
   "archive_target": "GlobalCloud GPCF/features/active/F-034-wae-p0-shell-and-role-convergence/evidence/（跨仓写入，待老卢授权；本清单为待复制源）",
   "counts": {
-    "total": 20,
-    "pass": 20,
+    "total": 21,
+    "pass": 21,
     "expected_diff": 0,
     "skip": 0,
     "fail": 0,
@@ -403,6 +403,26 @@
       ],
       "note": "各仓本地 dev 截图；被嵌应用视觉不因 WAE 嵌入改变（iframe 隔离）；pageerrors 如实记入 index.json，缺 dev 依赖则如实 skip",
       "tail": "✓ pvaos solutions ← /solutions（226 KB, pageerror=0） ⏎  ⏎ B5 基线：10 张，skip 0 项 → docs/evidence/F-034/visual/m3-lines"
+    },
+    {
+      "id": "21-e2e-task-flow",
+      "kind": "e2e",
+      "title": "端到端任务流（GPCF task_flow_e2e_status 运行时证据）",
+      "command": "pnpm e2e:task-flow",
+      "log": "docs/evidence/F-034/logs/21-e2e-task-flow.log",
+      "exit": 0,
+      "result": "pass",
+      "artifacts": [
+        {
+          "path": "docs/evidence/F-034/../logs/21-e2e-task-flow.log",
+          "missing": true
+        }
+      ],
+      "docs": [
+        "docs/plan/F-034_ready_for_review_评估_20261025.md"
+      ],
+      "note": "真实 dev + 临时身份：登录→统一工作台→PKC 候选页→服务控制台→回 PKC 页，8 步 + pageerror=0",
+      "tail": "✓ ⑤ 全流程 pageerror=0 — 0 条 ⏎  ⏎ 端到端任务流：**全部通过**（报告：.e2e-task-flow-report.md）"
     }
   ]
 }
