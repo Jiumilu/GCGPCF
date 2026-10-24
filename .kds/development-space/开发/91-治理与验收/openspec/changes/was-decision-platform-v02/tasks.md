@@ -159,6 +159,46 @@ master_control: GPCF:01-architecture/WAS世界资产体系总体方案.md
 - 模型推荐“提交 CP 到独立分支保护”（p=.593）属**硬边界**，未自动执行；转 **AUTH-CP-COMMIT** 显式授权请求（分支 `docs/was-decision-platform-v02`，精确路径，不合并主干）。
 - 外部成果不记入本目标；提交/实现/清理仍禁止。
 
+### 0.15 Phase-1 显式授权执行记录（2026-10-24）
+
+- 老卢显式授权 Phase-1 最小：AUTH-P0-01 CP 提交保护 + AUTH-P0-02 B2 schema 生产 + AUTH-P0-03 WAME 代理修复（硬边界，预授权不覆盖）。
+- AUTH-P0-01 ✅：分支 `docs/was-decision-platform-v02` commit `8e9a390bc`（17 文件 = 9 CP + 8 `.kds` 镜像）；`openspec validate` valid:true；未合并/未推送。
+- AUTH-P0-03 ✅：分支 `fix/wame-gate-proxy-path` commit `17a6730`（1 行）；代理 `--check-only` exit 0，输出与 GPCF 正本逐字节一致；未合并/未推送。
+- AUTH-P0-02 ⏳ 下一轮；AUTH-P0-04…10 ⏸ 未授权。
+- 纪律：独立 worktree/分支、精确 add、不合并主干、不 push CI；主工作树未提交/未清理。
+
+### 0.16 AUTH-P0-02 执行记录（2026-10-24，B2 schema 生产）
+
+- 授权：Phase-1 显式授权（老卢 2026-10-24）。
+- 落点：XWAIL 独立 worktree/分支 `feat/xwail-decision-schemas-v02`，commit `d9dd9d6`：
+  - `schemas-json/decision/v0.2/`：8 对象 schema + common + manifest + README
+  - `testcases/`：8 正例 + 11 反例
+  - `tools/decision-validator/validate_bundle.py`：schema + 跨对象校验
+  - `fixtures/decision/bundles/`：1 正例 + 2 反例
+- 验证：`scripts/check_object_schemas.py schemas-json/decision/v0.2` → **PASS 19 / FAIL 0**；bundle 正例 VALID、反例 INVALID。
+- 状态：**draft_for_review**，未合并/未推送；待独立复核 + 字段卡逐项对照 + freeze record；G2 仍未满足（评审/签署未完成）。
+
+### 0.17 Phase-1 复核结论（2026-10-24）
+
+- 复核对象：AUTH-P0-01/02/03。执行合规（独立 worktree/分支、未 push/未合并）。
+- B2 schema `d9dd9d6`：19/19 测试通过，但存在 **P0 缺口**：V1 裁定依据须 Verified/Trusted；V2 授权 Granted/未过期/未撤销；V3 E6 外部执行须 formal 签名。另有字段卡 P1 项（`humanConfirmationRequired`、weakest-link、失败态条件必填）与负例覆盖不足（N05/N10/N11/N37/N38 等）。
+- 结论：**不可 freeze**；G2 仍 ⚠️ 部分。补丁需显式授权（同 XWAIL 分支，不合并/不推送）。
+- 依据：`drafts/phase1-review-20261024.md`；决策台账 R17-01…R17-02。
+
+### 0.18 B2 P0 缺口修补（2026-10-24，AUTH-P0-02 范围内）
+
+- 在 XWAIL 分支 `feat/xwail-decision-schemas-v02` 追加 commit：Validator V1（裁定依据须 Verified/Trusted）、V2（授权 Granted 且未撤销）、V3（prod/外部执行须 formal 签名，E6 近似）+ 3 个反例 bundle。
+- 验证：`check_object_schemas` 19/19 PASS；valid bundle VALID；5 个反例均 INVALID 且错误码符合预期。
+- 未补：字段卡 P1 项（humanConfirmationRequired、weakest-link、失败态条件必填）与 N05/N10/N11/N37/N38 覆盖；G2 仍 ⚠️ 部分。
+- 未合并/未推送；补丁在既有 B2 生产授权范围内。
+
+### 0.19 Go/No-Go 复评 v1.1 与 Phase-2 授权请求（2026-10-24）
+
+- Go/No-Go 复评：模型 B 维持 No-Go/partial（p=.762），预授权自动确认；就绪度 1 满（G1）/ 6 部分（G2–G6）/ 1 未满（G7–G8）。
+- Phase-1 证据：CP 保护分支 2 commits；XWAIL schema 分支 2 commits（19/19 + V1–V3）；WAME 代理分支 1 commit；均未合并/未推送。
+- Phase-2 范围：模型 A 安全修复 .673（StartLux 单源 + Hermes fail-closed + 影子策略），待**显式授权**。
+- 依据：`drafts/go-no-go-matrix-20261024.md`（v1.1）、`drafts/phase2-authorization-request-20261024.md`；决策台账 R19-01…R19-04。
+
 ## 1. 治理登记（GPCF-TP-01 的执行清单，当前部分完成）
 
 - [x] 1.1 四项人工拍板记录（`decisions/four-decisions.md`）

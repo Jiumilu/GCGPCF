@@ -167,6 +167,66 @@ master_control: GPCF:01-architecture/WAS世界资产体系总体方案.md
 - AUTH-P0-02 ⏳ 下一轮；AUTH-P0-04…10 ⏸ 未授权。
 - 纪律：独立 worktree/分支、精确 add、不合并主干、不 push CI；主工作树未提交/未清理。
 
+### 0.16 AUTH-P0-02 执行记录（2026-10-24，B2 schema 生产）
+
+- 授权：Phase-1 显式授权（老卢 2026-10-24）。
+- 落点：XWAIL 独立 worktree/分支 `feat/xwail-decision-schemas-v02`，commit `d9dd9d6`：
+  - `schemas-json/decision/v0.2/`：8 对象 schema + common + manifest + README
+  - `testcases/`：8 正例 + 11 反例
+  - `tools/decision-validator/validate_bundle.py`：schema + 跨对象校验
+  - `fixtures/decision/bundles/`：1 正例 + 2 反例
+- 验证：`scripts/check_object_schemas.py schemas-json/decision/v0.2` → **PASS 19 / FAIL 0**；bundle 正例 VALID、反例 INVALID。
+- 状态：**draft_for_review**，未合并/未推送；待独立复核 + 字段卡逐项对照 + freeze record；G2 仍未满足（评审/签署未完成）。
+
+### 0.17 Phase-1 复核结论（2026-10-24）
+
+- 复核对象：AUTH-P0-01/02/03。执行合规（独立 worktree/分支、未 push/未合并）。
+- B2 schema `d9dd9d6`：19/19 测试通过，但存在 **P0 缺口**：V1 裁定依据须 Verified/Trusted；V2 授权 Granted/未过期/未撤销；V3 E6 外部执行须 formal 签名。另有字段卡 P1 项（`humanConfirmationRequired`、weakest-link、失败态条件必填）与负例覆盖不足（N05/N10/N11/N37/N38 等）。
+- 结论：**不可 freeze**；G2 仍 ⚠️ 部分。补丁需显式授权（同 XWAIL 分支，不合并/不推送）。
+- 依据：`drafts/phase1-review-20261024.md`；决策台账 R17-01…R17-02。
+
+### 0.18 B2 P0 缺口修补（2026-10-24，AUTH-P0-02 范围内）
+
+- 在 XWAIL 分支 `feat/xwail-decision-schemas-v02` 追加 commit：Validator V1（裁定依据须 Verified/Trusted）、V2（授权 Granted 且未撤销）、V3（prod/外部执行须 formal 签名，E6 近似）+ 3 个反例 bundle。
+- 验证：`check_object_schemas` 19/19 PASS；valid bundle VALID；5 个反例均 INVALID 且错误码符合预期。
+- 未补：字段卡 P1 项（humanConfirmationRequired、weakest-link、失败态条件必填）与 N05/N10/N11/N37/N38 覆盖；G2 仍 ⚠️ 部分。
+- 未合并/未推送；补丁在既有 B2 生产授权范围内。
+
+### 0.19 Go/No-Go 复评 v1.1 与 Phase-2 授权请求（2026-10-24）
+
+- Go/No-Go 复评：模型 B 维持 No-Go/partial（p=.762），预授权自动确认；就绪度 1 满（G1）/ 6 部分（G2–G6）/ 1 未满（G7–G8）。
+- Phase-1 证据：CP 保护分支 2 commits；XWAIL schema 分支 2 commits（19/19 + V1–V3）；WAME 代理分支 1 commit；均未合并/未推送。
+- Phase-2 范围：模型 A 安全修复 .673（StartLux 单源 + Hermes fail-closed + 影子策略），待**显式授权**。
+- 依据：`drafts/go-no-go-matrix-20261024.md`（v1.1）、`drafts/phase2-authorization-request-20261024.md`；决策台账 R19-01…R19-04。
+
+### 0.20 Phase-2A 执行记录（2026-10-24，显式授权）
+
+- AUTH-P0-04 StartLux 单源：注册表重生成（15 模板/13796 bytes/sha `8b063ccd…`；生产 gate hash `7217611fad684a2d`）；`_governance` 分支 `fix/startlux-single-source-pin` commit `91214df`（pin + 基线）；**drift 未清（MCP server 内存旧），需重启/新会话复验**。
+- AUTH-P0-05 Hermes fail-closed：handler 未判定 + plugin 异常/handler 缺失均阻断；3 项测试通过；备份在 staging。
+- AUTH-P0-10 影子策略：不启动本地影子；unavailable fail-closed。
+- 全部本地配置/独立分支操作；未合并/未 push；主工作树未改。
+
+### 0.21 最终交接与 Go/No-Go 终判（2026-10-24）
+
+- 最终模型判定：**B 维持 No-Go/partial（p=.830）**；就绪度 G1 ✅ / G2–G6 ⚠️ / G7–G8 ❌。
+- 交接包：`drafts/final-handoff-20261024.md`（目标完成度、证据索引、阻塞 B-1…B-10、下一步建议）。
+- 已完成：Phase-1（CP 保护/ schema / WAME 代理）+ Phase-2A（StartLux 注册表重建+pin、Hermes fail-closed、影子策略）。
+- 剩余阻塞：独立复核/freeze、gold/标注组、法务/出境、文档门禁 Green、Phase-2B/C 授权、MCP 重启复验、分支合并授权、worktree 配额。
+- 所有已执行分支未合并/未推送；主工作树未提交/未清理；No-Go/partial 维持。
+
+### 0.22 目标结项（2026-10-24，Round 20）
+
+- 目标最终状态：**blocked**（模型 A .943）；No-Go/partial 维持。
+- 阻塞条件：契约冻结缺独立复核/签署；金标/标注组/评测脚本未授权；许可/法务/出境未闭环；门禁 partial（2811 逾期）；Phase-2B/C 未授权；4 个已执行分支未合并；StartLux drift 待 MCP 重启复验；外部并发写 GPCF；worktree 配额超标。
+- 结项包：`drafts/goal-closeout-20261024.md`；交接包：`drafts/final-handoff-20261024.md`。
+- 未完成不伪装：未声明完成/Go/冻结/验收；分支未合并/未推送；主工作树未提交/未清理。
+
+### 0.23 续跑 Phase-2B Stage-1（2026-10-24，全量授权后）
+
+- StartLux：生产规则更新后重生成注册表（sha `99913cf8…`，redline 1457），pin `28bc10df84059863`，commit `a870ade`；drift 待 MCP 重启复验。
+- Phase-2B Stage-1：GPCF validator commit `027e971ee`；AAAS `56d9f6a`、XWAIL `05c4e2f`、SOP `efbdbb6`；validator pass（3 仓）；三代理输出与正本逐字节一致（canonical 因外部硬失败 rework_required，非代理问题）。
+- 剩余：18 代理、B7 文档门禁、CP 提交/合并、Phase-2C、MCP 重启。全部独立分支、未合并/未 push。
+
 ## 1. 治理登记（GPCF-TP-01 的执行清单，当前部分完成）
 
 - [x] 1.1 四项人工拍板记录（`decisions/four-decisions.md`）
