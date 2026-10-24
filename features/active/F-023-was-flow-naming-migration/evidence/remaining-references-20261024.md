@@ -64,7 +64,7 @@ superseded_by: []
   - `capital_flow` → `FinancialFlow`（1 个 wrong-dimension 负例）
 - `validate_was_real_source_record_candidate_precheck.py` 接受集合改为 `{ServiceFlow, commerce_flow}`。
 - 该 validator 复跑 pass（positive 1 / negative 4）。
-- 剩余：2 文件 / 16 处（scenario matrix validator 8 + positive fixture 8）；loop context 已迁 ServiceFlow。
+- 剩余：**0**（GPCF tools/scripts/tests/fixtures 已无旧流名）。
 - 注意：admission/submission 两个 validator 当前因旧路径 `WAS世界资产体系` 不存在而 fail（既有问题，与本次改动无关）。
 
 ## 2026-10-24 批 2 兼容层收紧
@@ -76,3 +76,11 @@ superseded_by: []
 
 - 13 个 covered loop 文档的 `loop_was_context.related_flows` 由 `commerce_flow` 改为 `ServiceFlow`；
 - `validate_was_loop_context_coverage.py` 期望与输出同步；validator pass。
+
+## 2026-10-24 批 1 完成（场景矩阵 V1.2 九流）
+
+- `FLOWS` 改为 Logistics/Information/Financial/Energy/Service/Control/Value/Credit/Scenario；
+- evidence JSON + positive fixture 的 required_flows 全部迁移；GFIS profile 增补 ValueFlow/CreditFlow；
+- loop round `related_flows` 同步；validator pass（flows=9/9）；
+- 旧流名扫描（tools/scripts/tests/fixtures）：**0 文件 / 0 处**；
+- 历史 docs 仍有 54 文件引用（沿革证据，不阻断代码门禁）。

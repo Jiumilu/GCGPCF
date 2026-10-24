@@ -16,7 +16,7 @@ FIXTURE_DIR = ROOT / "fixtures/was"
 
 PROJECT_GROUP = ["GFIS", "GPC", "PVAOS", "WAME", "KDS", "Brain", "PKC", "XiaoC", "XGD", "XiaoG", "MMC", "GPCF", "Studio", "WAS"]
 DIMENSIONS = ["physical_asset", "rule_asset", "intelligence_asset", "data_asset", "economic_asset", "energy_asset", "organization_asset", "spacetime_asset"]
-FLOWS = ["material_flow", "information_flow", "capital_flow", "spacetime_flow", "energy_flow", "commerce_flow", "knowledge_flow", "rule_flow"]
+FLOWS = ["LogisticsFlow", "InformationFlow", "FinancialFlow", "EnergyFlow", "ServiceFlow", "ControlFlow", "ValueFlow", "CreditFlow", "ScenarioFlow"]
 CHAIN_LINKS = ["customer_order", "supplier_procurement", "production_work_order", "quality_inspection", "logistics_delivery", "energy_consumption", "carbon_footprint", "settlement_profit", "knowledge_reference", "recycling_circular"]
 PROFILE_REQUIRED_KEYS = ["profile_id", "projects", "business_chain_links", "required_asset_dimensions", "required_flows", "source_of_record", "wame_gate", "kds_backlink_policy", "rag_reference_policy", "writeback_policy", "pool_link_policy", "blockers", "closure_policy"]
 
@@ -155,7 +155,7 @@ def main() -> int:
 
     print(
         "was_scenario_profile_matrix=pass "
-        "project_group_scope=14/14 scenario_profiles=10 asset_dimensions=8/8 flows=8/8 "
+        "project_group_scope=14/14 scenario_profiles=10 asset_dimensions=8/8 flows=9/9 "
         "green_supply_chain_links=10/10 positive_fixtures=1 negative_fixtures=3 "
         "real_source_records=0 valid_source_records=0 runtime_primary_key_ready=0 wame_review=0 "
         "accepted=false integrated=false production_ready=false "

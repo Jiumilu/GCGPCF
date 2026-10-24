@@ -41,7 +41,7 @@ verification:
     api: "F-023 不提供 HTTP API，仅契约/夹具/文档迁移。"
 blockers:
   - 兼容窗口关闭时点（另行版本发布）待定
-  - 存量引用切换批次：GPCF 残余 11 文件/28 处已盘点；批 1/2 依赖 WAS profile/evidence，需 WAS 属主共同排期；批 3 的 p4 fixtures 已迁（ServiceFlow/FinancialFlow）；残余 2 文件/16 处（evidence/remaining-references-20261024.md）
+  - 存量引用切换批次：GPCF 残余 11 文件/28 处已盘点；批 1/2 依赖 WAS profile/evidence，需 WAS 属主共同排期；批 3 的 p4 fixtures 已迁（ServiceFlow/FinancialFlow）；GPCF 工具/夹具 0 旧名；历史文档沿革 54 文件（evidence/remaining-references-20261024.md）
 created_at: "2026-10-16T04:15:00+00:00"
 updated_at: "2026-10-16T04:15:00+00:00"
 ui_product_first_control:
