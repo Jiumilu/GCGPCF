@@ -34,7 +34,7 @@ evidence:
 blockers:
 - "2026-10-22 回滚：状态提升未经老卢确认（WAE 侧长期目标纪律：F-034 至多 ready_for_review）。原 status: done 由另一 Agent 依据其 2026-10-22 18:02 自建证据置位，未覆盖 WAE 主线后续证据（O1 因 A2 删框架壳已改述、O3 项目侧未归并、PKC/Brain/PVAOS 未接入）。"
 - "O2 跨仓令牌（2026-10-24 复核）：WAE 单一来源 76 令牌 sha=54729cdf；PKC theme.css 34 处差异经查为 `--gc-*` 语义别名层（非数值漂移），不得直接替换；需受控例外或解析值比较（见 evidence/pkc-token-alias-finding-20261024.md）；Brain 30 处不同+5 独有；PVAOS 目标路径不存在；整改属 PKC/Brain/PVAOS 属主"
-- "O3 侧栏统一：WAE 产品壳首例已落（WameSidebarPlugin + capability）；WAME 侧 F-035 已 closed（app-registry 契约消费 + E2E 冒烟）；WAE 项目侧三套仍未归并"
+- "O3 侧栏统一：WAE/WAME 已统一为插件+契约；Studio/PKC/Brain 仍自有实现、未消费 sidebarContract（见 evidence/project-side-sidebar-inventory-20261024.md），整改属各项目属主"
 - "M3 首批接入（Studio 例外→PKC→Brain→PVAOS）：Studio 例外材料待三方签；PKC 侧 7 项待属主"
 - "task_flow_e2e_status / evidence_overexposure_gate：仍待运行时证据"
 verification:
