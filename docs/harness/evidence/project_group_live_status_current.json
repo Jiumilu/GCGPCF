@@ -127,7 +127,7 @@
     "GlobalCloud XWAIL": "ea09cdb91decfd3eaef9d3500a8667c902d034f2",
     "GlobalCloud GFIS": "683ff0e62af2f68367e2ffb138b7a0e727b2c420",
     "GlobalCloud MMC": "663831d40e606057ba1e3104333cb2261e100eb7",
-    "GlobalCloud KDS": "947bd77da4ee1f723ba2a68ee0508e50f70d5d3e",
+    "GlobalCloud KDS": "9c003d6463465491e6a3f6b702a0dc4c6e5cb997",
     "GlobalCloud XiaoG": "6ed744d6db45c512cd809762420e16eeb36709ed",
     "GlobalCloud PVA": "0f2474750fe750d6056d026da2f426300d70dc4b",
     "GlobalCloud SOP": "24176ec779460ccca139acd8fa4ac9b231252bd9",
@@ -458,8 +458,8 @@
       "sensitive_paths": []
     },
     "GlobalCloud GPCF": {
-      "dirty_count": 506,
-      "ahead": 21,
+      "dirty_count": 504,
+      "ahead": 22,
       "behind": 0,
       "paths": [
         "$CODEX_HOME/automations/globalcloud-17/README.md",
@@ -779,7 +779,6 @@
         "projects/studio/STATUS.md",
         "projects/xwail/STATUS.md",
         "runtime/audit/README.md",
-        "runtime/audit/decision-ledger-20261022.jsonl",
         "runtime/logs/F-004.jsonl",
         "runtime/logs/F-011.jsonl",
         "runtime/logs/F-015.jsonl",
@@ -873,7 +872,6 @@
         "docs/harness/evidence/wave1-review-pack-20261022.md",
         "docs/harness/evidence/workspace-consistency-20261023.md",
         "docs/reports/README.md",
-        "docs/reports/ci-activation-result-20261024.md",
         "docs/runbooks/README.md",
         "docs/runbooks/runtime-host-v1.0.md",
         "features/active/F-029-hermes-ai-runtime-admission/artifacts/.gitkeep",
