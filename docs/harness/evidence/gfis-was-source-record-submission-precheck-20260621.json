@@ -9,8 +9,8 @@
     "precheck_type": "read_only_directory_scan_and_future_submission_gate"
   },
   "sources": {
-    "was_profile": "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/WAS世界资产体系/okf/examples/gfis-runtime-sop-e2e-was-profile.yaml",
-    "admission_gate": "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCoud GPCF/docs/harness/evidence/gfis-was-source-record-admission-gate-20260621.json",
+    "was_profile": "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud WAS/okf/examples/gfis-runtime-sop-e2e-was-profile.yaml",
+    "admission_gate": "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GPCF/docs/harness/evidence/gfis-was-source-record-admission-gate-20260621.json",
     "gfis_receiving_directory": "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GFIS/docs/harness/sop-e2e/intake-submissions/runtime-primary-key-source-records/customer-requirement-or-platform-order",
     "gfis_receiving_readme": "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GFIS/docs/harness/sop-e2e/intake-submissions/runtime-primary-key-source-records/customer-requirement-or-platform-order/README.md",
     "gfis_source_record_template": "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GFIS/docs/harness/sop-e2e/intake-submissions/runtime-primary-key-source-records/customer-requirement-or-platform-order/customer-requirement-platform-order.source-record.template.json",

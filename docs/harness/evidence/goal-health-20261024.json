@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-10-24T11:56:28+0800",
+  "generated_at": "2026-10-24T14:44:28+0800",
   "gates": [
     {
       "gate": "loop_document_gate.py",
       "ok": true,
-      "seconds": 20.5
+      "seconds": 47.2
     },
     {
       "gate": "validate_contract_matrix.py",
@@ -19,17 +19,17 @@
     {
       "gate": "validate_contract_version_drift.py",
       "ok": true,
-      "seconds": 0.0
+      "seconds": 0.1
     },
     {
       "gate": "validate_event_package_ref.py",
       "ok": true,
-      "seconds": 0.0
+      "seconds": 0.1
     },
     {
       "gate": "validate_gpcf_2_feature_workspace.py",
       "ok": true,
-      "seconds": 0.3
+      "seconds": 0.8
     },
     {
       "gate": "validate_project_group_caliber_baseline.py",

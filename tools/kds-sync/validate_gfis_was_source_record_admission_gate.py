@@ -12,7 +12,9 @@ import yaml
 
 ROOT = Path(__file__).resolve().parents[2]
 BASE = ROOT.parent
-WAS_ROOT = BASE / "WAS世界资产体系"
+WAS_ROOT = BASE / "GlobalCloud WAS"
+if not WAS_ROOT.exists():
+    WAS_ROOT = BASE / "WAS世界资产体系"
 GFIS_ROOT = BASE / "GlobalCloud GFIS"
 
 EVIDENCE_JSON = ROOT / "docs/harness/evidence/gfis-was-source-record-admission-gate-20260621.json"

@@ -9,7 +9,7 @@
     "gate_type": "read_only_source_record_admission_gate"
   },
   "sources": {
-    "was_profile": "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/WAS世界资产体系/okf/examples/gfis-runtime-sop-e2e-was-profile.yaml",
+    "was_profile": "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud WAS/okf/examples/gfis-runtime-sop-e2e-was-profile.yaml",
     "gfis_real_source_record_intake_gate": "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GFIS/docs/harness/sop-e2e/evidence/gfis-real-source-record-intake-gate.json",
     "gfis_source_record_structure_readiness": "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GFIS/docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-structure-readiness.json",
     "gfis_valid_source_record_eligibility_gate": "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GFIS/docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-valid-source-record-eligibility-gate.json"
