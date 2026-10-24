@@ -53,7 +53,9 @@ verification:
   waivers:
     api: 本 Feature 为知识资产模型与 KDS 侧建模，无独立可调用 HTTP 接口面；api 证据不适用，改以 tests/build 与文档门禁为准（范围理由：无服务端入口）。
 blockers:
-  - kds_p1_apply_blocked_by_dirty_worktree
+  # 2026-10-24 已解除：KDS 脏树 4266→1（仅 _meta/hermes-memory-log.md 实时日志），
+  # 完整快照分支 wip/kds-restructure-snapshot-full-20261024（5ce9f69）留档；
+  # 详见 GPCF docs/reports/collab-completion-20261024.md §9
   - gpcf_a10r27_current_truth_4file_delta_pending_independent_review_and_separate_commit_push_disposition
   - kds_green_supply_chain_role_view_local_commit_pending_separate_human_authorization
   - brain_browser_r2_postpush_revalidated_chat_send_not_executed_mobile_ui_rework_required

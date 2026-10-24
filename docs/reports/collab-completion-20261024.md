@@ -121,3 +121,37 @@ queue-long 连不上 `redis-queue` 服务。**重启生产容器属红线，未�
 
 **阻碍**：容器标签显示 compose 项目 `gcfis` 的工作目录为 `/private/tmp`，该目录下**没有 compose 文件**（临时部署后未保留），
 因此无法按原定义重建缺失的 `redis-queue`；只能凭现有容器标签推断，风险较高。建议由 GFIS 属主用其部署仓库的 compose 文件恢复。
+
+## 9. KDS 脏树收敛执行（2026-10-24 18:50，模型 96.9% 采纳）
+
+### 9.1 安全网（先建后动）
+| 层 | 内容 |
+|---|---|
+| 完整快照分支 | `wip/kds-restructure-snapshot-full-20261024`（`5ce9f69`）**含 24 个未跟踪文件**：4266 文件 / +16889 / −94620 |
+| 部分快照分支 | `wip/kds-restructure-snapshot-20261024`（`e913acd`，仅已跟踪变更） |
+| 未跟踪打包 | `/tmp/kds_untracked_backup/untracked-20261024.tar`（59,392 B） |
+| 本地钩子保留 | `.githooks/`（6 个）已还原，并写入 `.git/info/exclude` 使其不产生脏项；`core.hooksPath=.githooks` 不变 |
+
+### 9.2 执行结果
+
+| 指标 | 前 | 后 |
+|---|---:|---:|
+| KDS dirty 条目 | **4266** | **1**（仅 `_meta/hermes-memory-log.md` 实时日志写入） |
+| `gc_standard check --repo "GlobalCloud KDS"` | error 1（R14） | **error 0 → PASS** |
+| 工作树分支 / HEAD | main / fc78a1ec1 | main / fc78a1ec1（未改历史） |
+
+命令：`git restore --source=main --worktree --staged .` + `git clean -fd`（未跟踪文件已先入快照与 tar）。
+
+### 9.3 对 F-013 的影响
+
+F-013 共 15 条 blocker，其中第 1 条 `kds_p1_apply_blocked_by_dirty_worktree` **已客观解除**（在 feature.yaml 中改为注释留痕）。
+其余 14 条（Brain/MMC/Studio/KDS 治理与人工授权项）**仍在**，因此 F-013 仍为 blocked（`close_candidate=false`）——不虚报解除。
+
+### 9.4 属主恢复路径
+
+```bash
+cd "GlobalCloud KDS"
+git diff main wip/kds-restructure-snapshot-full-20261024      # 审阅全部重构
+git restore --source=wip/kds-restructure-snapshot-full-20261024 --worktree -- .   # 整体恢复（可选）
+# 或按目录分批取回
+```
