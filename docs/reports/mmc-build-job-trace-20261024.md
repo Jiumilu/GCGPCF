@@ -41,3 +41,5 @@ git checkout -- .github/workflows/mmc-ci.yml
 ## 4. 边界
 
 仅追加 CI job，未改业务代码；不构成任何状态提升。
+
+> **激活状态（2026-10-24 16:25 更正）**：本文件所述为**工作区口径**（文件已准备）。该文件在属主仓内仍是未跟踪状态、尚未在 CI 生效；激活与回滚步骤见 `ci-activation-checklist-20261024.md`。

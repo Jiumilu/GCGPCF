@@ -49,3 +49,5 @@ cd "GlobalCloud ICP" && rm .github/workflows/test-build.yml
 cd "GlobalCloud AAAS" && rm .github/workflows/test-build.yml
 cd "GlobalCloud Mem" && rm .github/workflows/test-build.yml
 ```
+
+> **激活状态（2026-10-24 16:25 更正）**：本文件所述为**工作区口径**（文件已准备）。该文件在属主仓内仍是未跟踪状态、尚未在 CI 生效；激活与回滚步骤见 `ci-activation-checklist-20261024.md`。
