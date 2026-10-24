@@ -25,7 +25,7 @@ acceptance:
 - 证据：.harness/evidence/xiaoc-vision-r1-ecosystem-20261021/
 loop:
   dispatched: false
-  current_step: evidence
+  current_step: implement
   iteration: 1
 evidence:
   tests: pass

@@ -28,6 +28,11 @@ evidence:
   screenshots: pending
   api: pending
   summary: pending
+verification:
+  tests:
+  - bash scripts/verify_external_service.sh --fast
+  build:
+  - python3 tools/kds-sync/check_python_bytecode.py
 blockers:
 ui_product_first_control:
   version: v1.1
