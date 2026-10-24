@@ -23,13 +23,13 @@ superseded_by: []
 
 ## 1. 结果
 
-| 状态 | 仓数 | 仓 |
+| 状态 | 仓数 | 仓（精确列表，2026-10-24 17:35 复算） |
 |---|---:|---|
-| ✅ 委托到 GPCF 正本 | **21** | WAME、WAS、WAE、GPC、GFIS、KDS、XWAIL、Brain、XiaoC、XiaoG、AAAS、PKC、XGD、PDC?、MMC、SOP、PVA、SpaceAI、SpaceAI Studio、Studio、World? |
-| 🟡 正本本身（GPCF） | 1 | GlobalCloud GPCF（455 行，它就是被委托方） |
+| ✅ 委托到 GPCF 正本 | **21** | AAAS、Brain、WAS、XiaoC、WAME、GPC、Studio、XWAIL、GFIS、MMC、KDS、XiaoG、PVAOS、SOP、PKC、XGD、**PQC**、SpaceAI、SpaceAIStudio、WAE、Project(PMC) |
+| 🟡 正本本身（GPCF） | 1 | GlobalCloud GPCF（455 行，被委托方） |
 | ❌ **无 gate** | **7** | **ICP、World、GCMEM、PDC、SLC、DRC、FireQuote** |
 
-> 说明：`World`/`PDC` 在同一次扫描中未检出 gate 文件（上表口径以文件是否存在为准）。
+> 上次表格把 World/PDC 误列入"委托"列并加问号；本轮逐仓复算后已更正：二者确为**无 gate**。
 
 ## 2. 校验器覆盖缺口
 
