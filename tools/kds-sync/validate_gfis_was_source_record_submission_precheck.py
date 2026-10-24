@@ -176,7 +176,7 @@ def main() -> int:
     required_values = evidence.get("required_was_values", {})
     require(required_values.get("objectFamily") == "CustomerRequirementOrPlatformOrder", "required objectFamily mismatch")
     require(required_values.get("assetDimension") == s01.get("assetDimension") == "data_asset", "required assetDimension mismatch")
-    require(required_values.get("flowType") == s01.get("flowType") in {"ServiceFlow", "commerce_flow"}, "required flowType mismatch")
+    require(required_values.get("flowType") == s01.get("flowType") == "ServiceFlow", "required flowType mismatch")
     require(required_values.get("lifecycle") == s01.get("lifecycle") == "pending_business_verification", "required lifecycle mismatch")
     require(required_values.get("trustLevel") == s01.get("trustLevel") == "T4", "required trustLevel mismatch")
 

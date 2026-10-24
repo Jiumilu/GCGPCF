@@ -115,7 +115,7 @@ def main() -> int:
     require(target.get("was_stage_id") == s01.get("stageId"), "target WAS stage mismatch")
     require(target.get("gfis_object_family") == "CustomerRequirementOrPlatformOrder", "target object family mismatch")
     require(target.get("asset_dimension") == s01.get("assetDimension") == "data_asset", "asset dimension mismatch")
-    require(target.get("flow_type") == s01.get("flowType") in {"ServiceFlow", "commerce_flow"}, "flow type mismatch")
+    require(target.get("flow_type") == s01.get("flowType") == "ServiceFlow", "flow type mismatch")
     require(target.get("lifecycle") == s01.get("lifecycle") == "pending_business_verification", "lifecycle mismatch")
     require(target.get("trust_level") == s01.get("trustLevel") == "T4", "trust level mismatch")
     require(target.get("source_refs") == s01.get("sourceRefs"), "source refs mismatch")
@@ -175,7 +175,7 @@ def main() -> int:
     print(
         "gfis_was_source_record_admission_gate=pass "
         "required_was_fields=12 object_family=CustomerRequirementOrPlatformOrder "
-        "asset_dimension=data_asset flow_type=commerce_flow lifecycle=pending_business_verification "
+        "asset_dimension=data_asset flow_type=ServiceFlow lifecycle=pending_business_verification "
         "real_source_records=0 valid_source_records=0 runtime_primary_key_ready=0 "
         "review_queue=0 runtime_intake=0 wame_review=0 verified=0 "
         "accepted=false integrated=false production_ready=false"
