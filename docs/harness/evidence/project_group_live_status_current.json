@@ -142,7 +142,7 @@
     "GlobalCloud SpaceAI Studio": "dd99d4cb1fd63cc782c1802e7337b200a8f51a19",
     "GlobalCloud World": "4c29506acfd0bc47ba657c415e4cbddcc52cda05",
     "GlobalCloud Mem": "5a7b2c649bf2f695b62739b72fa394ba22e8c65e",
-    "GlobalCloud WAE": "1e0093222a8ed99237ccff0a7d9cab0fcf486b68",
+    "GlobalCloud WAE": "a002ed05197e78df0912a21af5d4627ce23d2776",
     "GlobalCloud PMC": "7a3633601d52feb81cdeffdf34697a7f065bcda0",
     "GlobalCloud PDC": "21f0de4cccdbeeedd7f6b522fe05aff793606ae4",
     "GlobalCloud SLC": "a866196f2844dce0f98bf2a524d4a6dfcafa3b51",
@@ -462,8 +462,8 @@
       "sensitive_paths": []
     },
     "GlobalCloud GPCF": {
-      "dirty_count": 496,
-      "ahead": 11,
+      "dirty_count": 498,
+      "ahead": 12,
       "behind": 0,
       "paths": [
         "$CODEX_HOME/automations/globalcloud-17/README.md",
@@ -808,6 +808,7 @@
         "\".kds/development-space/\\345\\274\\200\\345\\217\\221/12-GPCF/docs/reports/f032-m0-review-ruling-20261024.md\"",
         "\".kds/development-space/\\345\\274\\200\\345\\217\\221/12-GPCF/docs/reports/gate-check-expansion-20261024.md\"",
         "\".kds/development-space/\\345\\274\\200\\345\\217\\221/12-GPCF/docs/reports/mmc-build-job-trace-20261024.md\"",
+        "\".kds/development-space/\\345\\274\\200\\345\\217\\221/12-GPCF/docs/reports/p02-snapshot-convention-evidence-20261024.md\"",
         "\".kds/development-space/\\345\\274\\200\\345\\217\\221/12-GPCF/docs/reports/p06-inheritance-line-trace-20261024.md\"",
         "\".kds/development-space/\\345\\274\\200\\345\\217\\221/12-GPCF/docs/reports/p10-p11-wae-owner-packet-20261024.md\"",
         "\".kds/development-space/\\345\\274\\200\\345\\217\\221/12-GPCF/docs/reports/pqc-ci-workflow-trace-20261024.md\"",
@@ -868,6 +869,7 @@
         "docs/harness/evidence/wave1-review-pack-20261022.md",
         "docs/harness/evidence/workspace-consistency-20261023.md",
         "docs/reports/README.md",
+        "docs/reports/p02-snapshot-convention-evidence-20261024.md",
         "docs/runbooks/README.md",
         "docs/runbooks/runtime-host-v1.0.md",
         "features/active/F-029-hermes-ai-runtime-admission/artifacts/.gitkeep",
@@ -5577,10 +5579,11 @@
       "sensitive_paths": []
     },
     "GlobalCloud WAE": {
-      "dirty_count": 116,
-      "ahead": 30,
+      "dirty_count": 115,
+      "ahead": 31,
       "behind": 0,
       "paths": [
+        "apps/wame/src/app/modules/idp-console/IdpConsolePage.tsx",
         "docs/assembly-spec/README.md",
         "\"docs/assembly-spec/manifests/_\\344\\270\\211\\346\\226\\271\\345\\257\\271\\350\\264\\246\\350\\241\\250.md\"",
         "docs/assembly-spec/manifests/aaas-console.yaml",
@@ -5602,8 +5605,6 @@
         "docs/assembly-spec/manifests/spaceai-story-map.yaml",
         "packages/app-registry/src/generated/city.ts",
         "packages/app-registry/src/index.ts",
-        "packages/host-kit/src/host/idpRoutes.ts",
-        "packages/host-kit/src/host/publicStatus.test.ts",
         "packages/modules/module-aaas-console/manifest.yaml",
         "packages/modules/module-feedback-center/manifest.yaml",
         "packages/modules/module-gcas-console/manifest.yaml",
