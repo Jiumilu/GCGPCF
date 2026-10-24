@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-10-24T14:44:28+0800",
+  "generated_at": "2026-10-24T15:11:23+0800",
   "gates": [
     {
       "gate": "loop_document_gate.py",
       "ok": true,
-      "seconds": 47.2
+      "seconds": 18.1
     },
     {
       "gate": "validate_contract_matrix.py",
@@ -19,17 +19,17 @@
     {
       "gate": "validate_contract_version_drift.py",
       "ok": true,
-      "seconds": 0.1
+      "seconds": 0.0
     },
     {
       "gate": "validate_event_package_ref.py",
       "ok": true,
-      "seconds": 0.1
+      "seconds": 0.0
     },
     {
       "gate": "validate_gpcf_2_feature_workspace.py",
       "ok": true,
-      "seconds": 0.8
+      "seconds": 0.4
     },
     {
       "gate": "validate_project_group_caliber_baseline.py",
@@ -59,12 +59,12 @@
     {
       "gate": "validate_token_source_exceptions.py",
       "ok": true,
-      "seconds": 0.0
+      "seconds": 0.1
     }
   ],
   "gates_pass": 12,
   "gates_total": 12,
   "active_feature_count": 17,
   "closed_feature_count": 20,
-  "C_dev": 39.42
+  "C_dev": 41.29
 }

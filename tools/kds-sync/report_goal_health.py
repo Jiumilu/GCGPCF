@@ -32,6 +32,11 @@ def main() -> int:
     parser.add_argument("--out", default="")
     args = parser.parse_args()
 
+    # loop gate 依赖 live_status 快照；先重建，避免首跑竞态误报
+    snapshot_script = ROOT / "tools/kds-sync/build_project_group_live_status_current.py"
+    for _ in range(2):
+        subprocess.run([sys.executable, str(snapshot_script)], cwd=ROOT, capture_output=True, check=False)
+
     gate_rows = []
     for name in GATES:
         started = time.time()

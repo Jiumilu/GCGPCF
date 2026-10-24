@@ -1095,11 +1095,11 @@ vu_units:
   scene: 首批项目界面纳入（PKC/Brain/PVAOS）
   authority: WAE + 首批项目
   object: 界面接入记录
-  source_of_record: 无
+  source_of_record: WAE + PKC 证据链
   acceptor: 首批项目 owner
-  stage: S0
-  stage_evidence: 首批纳入未做
-  data_class: none
+  stage: S1
+  stage_evidence: PKC 候选嵌入已具备（生产构建/CSP/401-403 双端消息链）；Brain/PVAOS 未接
+  data_class: fixture
   inferred: true
   notes: 零接入
 - vu_id: World-VU-01
