@@ -34,3 +34,10 @@ last_reviewed: 2026-10-24
 ## 非声明
 
 - 不声明人工验收已完成；不声明 F-038 可关闭。
+
+## 真实浏览器 e2e（2026-10-24）
+
+- `pnpm e2e:smoke`：**5 passed**（首页 4 + 全景态势冒烟 1）。
+- `pnpm exec playwright test e2e/panorama-operate.spec.ts`：**5 passed**
+  - ⌘K 命令面板、? 帮助、卡片配置无假字段、演示态互斥、小应用去重。
+- 结论：F-038 相关操作契约在真实 Chrome 下通过；仍待属主视觉确认与签字。
