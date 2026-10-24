@@ -325,13 +325,13 @@
     },
     {
       "path": "manifest-20261024.json",
-      "sha256": "44b824f80a225837348a8fea3b6981cb52ae42e2009b3faecb6638baa0b2dd5e",
-      "bytes": 14893
+      "sha256": "6a2e06e27bb0683223e5965bd12624b45c0df6aad1818b4982d15bec25465346",
+      "bytes": 15051
     },
     {
       "path": "pkc-embed-bridge-20261024.md",
-      "sha256": "ec0197c9dce39aa4f1a464e0966a7363fa4ea7e39732b367dffc24c55a803345",
-      "bytes": 1577
+      "sha256": "c217f784bc322a8f73d07e9d9aae635d54d85a9a0ac3d8642e9b6d03d4e03a98",
+      "bytes": 1759
     },
     {
       "path": "prod-build-20261024.md",

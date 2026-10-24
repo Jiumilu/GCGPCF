@@ -47,3 +47,8 @@ PKC 新增 `src/lib/embedBridge.ts`：
 - WAE iframe 使用 `referrerPolicy="no-referrer"`，PKC 内 `document.referrer` 可能为空；
 - PKC `resolveParentOrigin` 增加 `location.ancestorOrigins[0]` 兜底，避免 401/403 消息因无 targetOrigin 而不发送；
 - PKC 提交 6daf867e；bridge 4/4、全量 151、build pass。
+
+## 2026-10-24 补：ready 消息
+
+- PKC App 挂载时调用 `notifyParentReady()` → `pkc:embed-ready`；独立打开时 no-op。
+- PKC 提交 e74c12ce；151 tests、build pass。
