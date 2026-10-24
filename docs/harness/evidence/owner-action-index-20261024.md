@@ -2,11 +2,18 @@
 doc_id: GPCF-DOC-OWNER-ACTION-INDEX-20261024
 title: 属主动作包索引（2026-10-24）
 project: GPCF
+related_projects: [KDS, GFIS, GPC, WAME, Brain, PKC, GPCF, Studio, ICP]
 domain: governance
 status: draft
 version: v1.0
 owner: GPCF
+kds_space: 开发
+kds_path: 开发/91-治理与验收/docs/harness/evidence/owner-action-index-20261024.md
+source_path: docs/harness/evidence/owner-action-index-20261024.md
+sync_direction: bidirectional
 last_reviewed: 2026-10-24
+supersedes: []
+superseded_by: []
 ---
 
 # 属主动作包索引
@@ -33,3 +40,22 @@ last_reviewed: 2026-10-24
 ## 非声明
 
 - 本索引不构成授权；不声明任何事项已完成。
+
+## PMC 路由（2026-10-24）
+
+父项：**GC-356**（[GPCF] 属主待办：F-022/F-034/F-036/批次2）
+
+| 子项 | Ref | 属主 |
+|---|---|---|
+| F-022 场景流复核 | GC-357 | WAS |
+| F-034 Brain 令牌 | GC-358 | Brain |
+| F-034 侧栏/M3 | GC-359 | Studio/PKC |
+| F-036 部署/SSO/签字 | GC-360 | WAE/PKC |
+| 批次2 GFIS 单据 | GC-361 | GFIS |
+| 批次2 GPC PG-11 | GC-362 | GPC |
+| F-038 人工验收 | GC-363 | SpaceAI |
+| F-012 引用清单 | GC-364 | SOP/ICP |
+| F-032 接口清单 | GC-365 | PQC/PVA |
+| F-025 架构迭代 | GC-366 | WAME/SpaceAI/World |
+
+说明：PMC 子项为路由/跟踪，不替代属主签署；完成后回传证据路径，GPCF 再清 blocker。
