@@ -24,13 +24,13 @@ superseded_by: []
 ## 1. 结果总览
 
 ```text
-done_feature_count = 16
-pass_count = 12
+done_feature_count = 22
+pass_count = 18
 exception_count = 4
 fail_count = 0
 audit_rule_version = GCPF-EVIDENCE-RULE-1.0
 auto_close = false
-updated_at = 2026-10-22T21:36:00+08:00
+updated_at = 2026-10-24T11:45:00+08:00
 update_basis = 老卢 2026-10-22 21:24 裁定「P17 现在做：能补的补验，不能补的登受控例外」
 ```
 
@@ -83,6 +83,17 @@ update_basis = 老卢 2026-10-22 21:24 裁定「P17 现在做：能补的补验�
 
 > 受控例外登记于 `runtime/exceptions.yaml`（approved_by=laolu，until=2027-01-20，到期转 warn，不得自动续期）。
 > 补验只补"命令与豁免理由"声明，未改写任何历史证据本体。
+
+## 2.2 P17 复检（2026-10-24 11:45，分母 22）
+
+| 结果 | 数量 | Feature |
+|---|---:|---|
+| close_candidate=true | **18** | F-002/003/004/009/010/011/015/018/019/020/021/024/026/027/028/030/031/**035** |
+| 受控例外（不变） | **4** | F-001 / F-006 / F-007 / F-008（`runtime/exceptions.yaml`，until 2027-01-20） |
+| 合计 | **22** | 与 `features/done` 实际数量一致 |
+
+复跑命令与判据：`for f in $(ls features/done | grep -oE '^F-[0-9]+'); do python3 scripts/gpcf_check_evidence.py $f --check-only; done`
+—— 18 项 `close_candidate=true`，4 项仍 false 且全部落在已登记的受控例外内（无未登记例外项）。
 
 ## 4. 复跑命令
 

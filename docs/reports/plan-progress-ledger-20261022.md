@@ -19,7 +19,7 @@ superseded_by: []
 # 90 天计划执行台账（P01–P19）· 2026-10-22 23:10 快照
 
 - 依据：《GlobalCloud 项目群后续工作计划（决策模型辅助版）2026-10-22》
-- 最近刷新：2026-10-24 11:40（C_dev 37.53%、C_real 0.00%、blocked 1、done 20；0–30 天 P01–P07 全部收口）
+- 最近刷新：2026-10-24 11:45（C_dev 37.53%、C_real 0.00%、blocked 1、done **22**（P17 复检 18 pass + 4 例外）；0–30 天 P01–P07 全部收口；P08 已由属主闭环）
 - 口径：只写"可验证事实"；`✅ 完成 / 🟡 部分 / ⏳ 待外部 / ⛔ 未启动`
 - 复跑命令见各行；汇总指标：projects=29、C_dev=35.5756%、C_real=0.00%、blocked=2、done=19、回执 25 条、决策台账 42 行
 
@@ -39,8 +39,8 @@ superseded_by: []
 
 | 项 | 状态 | 证据 / 复跑 |
 |---|---|---|
-| P08 WAE F-035 侧栏归并 | ⏳ | 证据六类 pass；blockers 3 条（WAME 属主应用依赖、FunctionPanel 产品设计、task-flow E2E）；属主包已出 |
-| P09 PKC 首接入 | ⏳ | 证据六类 pass；blockers 3 条（VITE_PKC_EMBED_URL、正式评审 conditional、非真实包消费）；属主包已出 |
+| P08 WAE F-035 侧栏归并 | ✅ | **F-035 已 closed**（属主应用 architecture-contracts 依赖并回填证据，2026-10-24 前完成）；证据 `features/done/F-035-*` |
+| P09 PKC 首接入 | ⏳ | F-036 仍 `queued`（dispatched=false）；属主包已出（embed URL/正式评审/菜单收敛）；证据六类此前 pass |
 | P10 界面与治理分层 | ⏳ | 属主包已出（`p10-p11-wae-owner-packet`）：ui_plane 字段 + /governance/* + 403 断言判据 |
 | P11 双角色权限测试 | ⏳ | 属主包已出：29 entries × admin/viewer 矩阵 + diff_declared 判据 |
 | P12 PQC 真实试点 | 🟡 | **已授权 A1–A4**（回执 AUTH-PG-PQC-REAL-PILOT-20261022）；执行手册已出；**等真实客户一单（PQC 属主选单→老卢确认）** |
