@@ -53,3 +53,6 @@
 {"id": "d053", "time": "2026-10-24T15:40:00+08:00", "kind": "authorize", "question": "SOP 新增 test-build CI", "answer": "authorization_qa yes 0.610", "none": 0.0, "adopted": "已按模型采纳", "auth_id": "AUTH-PG-SOP-CI-20261024"}
 {"id": "d054", "time": "2026-10-24T15:40:00+08:00", "kind": "authorize", "question": "KDS 新增 test-build CI", "answer": "authorization_qa yes 0.542", "none": 0.0, "adopted": "已按模型采纳", "auth_id": "AUTH-PG-KDS-CI-20261024"}
 {"id": "d055", "time": "2026-10-24T15:40:00+08:00", "kind": "authorize", "question": "PKC 新增 test-build CI", "answer": "authorization_qa no 0.455", "none": 0.0, "adopted": "模型判 no，未执行，交属主", "auth_id": ""}
+{"id": "d056", "time": "2026-10-24T15:50:00+08:00", "kind": "authorize", "question": "ICP 新增 test-build CI", "answer": "authorization_qa yes 0.576", "none": 0.0, "adopted": "已按模型采纳", "auth_id": "AUTH-PG-ICP-CI-20261024"}
+{"id": "d057", "time": "2026-10-24T15:50:00+08:00", "kind": "authorize", "question": "AAAS 新增 test-build CI", "answer": "authorization_qa yes 0.640", "none": 0.0, "adopted": "已按模型采纳", "auth_id": "AUTH-PG-AAAS-CI-20261024"}
+{"id": "d058", "time": "2026-10-24T15:50:00+08:00", "kind": "authorize", "question": "Mem 新增 test-build CI", "answer": "authorization_qa yes 0.627", "none": 0.0, "adopted": "已按模型采纳", "auth_id": "AUTH-PG-MEM-CI-20261024"}

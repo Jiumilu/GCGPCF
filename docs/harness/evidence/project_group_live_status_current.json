@@ -72,6 +72,7 @@
   "stable_ahead": [
     "GlobalCloud Brain",
     "GlobalCloud GPC",
+    "GlobalCloud GPCF",
     "GlobalCloud MMC",
     "GlobalCloud PMC",
     "GlobalCloud SLC",
@@ -140,8 +141,8 @@
     "GlobalCloud SpaceAI Platform": "dd4d2e0517bdfab25f97777391481f0b1a40f893",
     "GlobalCloud SpaceAI Studio": "dd99d4cb1fd63cc782c1802e7337b200a8f51a19",
     "GlobalCloud World": "4c29506acfd0bc47ba657c415e4cbddcc52cda05",
-    "GlobalCloud Mem": "c4538820f8354c0bb765d4e4ff430c5f35137639",
-    "GlobalCloud WAE": "452cebc9364e4bdad686af0cac1773da03b315e9",
+    "GlobalCloud Mem": "9f4bc7d0affc13203a18a80c806ff4cb566f15c8",
+    "GlobalCloud WAE": "d073c9ac9f0ebbf2c54f30c553fcde2682553c23",
     "GlobalCloud PMC": "7a3633601d52feb81cdeffdf34697a7f065bcda0",
     "GlobalCloud PDC": "21f0de4cccdbeeedd7f6b522fe05aff793606ae4",
     "GlobalCloud SLC": "a866196f2844dce0f98bf2a524d4a6dfcafa3b51",
@@ -150,7 +151,7 @@
   },
   "dirty_details": {
     "GlobalCloud AAAS": {
-      "dirty_count": 17,
+      "dirty_count": 18,
       "ahead": 0,
       "behind": 0,
       "paths": [
@@ -161,6 +162,7 @@
         "scripts/aaas_common.py",
         "scripts/validate_service_package.py",
         "tools/export_aaas_state.py",
+        ".github/workflows/test-build.yml",
         "\"docs/GlobalCloud AaaS FDE \\344\\270\\232\\345\\212\\241\\344\\270\\223\\351\\241\\271\\346\\226\\271\\346\\241\\210_v1.0.md\"",
         "\"docs/GlobalCloud AaaS \\345\\271\\263\\345\\217\\260+\\350\\277\\220\\350\\220\\245+FDE \\344\\270\\232\\345\\212\\241\\346\\250\\241\\345\\274\\217\\345\\210\\206\\346\\236\\220_v1.1.md\"",
         "research/aaas-business-evidence.md",
@@ -460,8 +462,8 @@
       "sensitive_paths": []
     },
     "GlobalCloud GPCF": {
-      "dirty_count": 492,
-      "ahead": 1,
+      "dirty_count": 497,
+      "ahead": 2,
       "behind": 0,
       "paths": [
         "$CODEX_HOME/automations/globalcloud-17/README.md",
@@ -683,6 +685,7 @@
         "docs/harness/loops/README.md",
         "docs/harness/minimum-closed-loop/README.md",
         "docs/harness/tasks/README.md",
+        "docs/reports/p16-2-ci-workflow-template-20261024.md",
         "docs/standards/README.md",
         "features/active/F-012-icp-sop-foundation-coupling/evidence/plan-20261024.md",
         "features/active/F-022-was-scenario-flow-extension/evidence/was-review-request-20261024.md",
@@ -778,6 +781,8 @@
         "projects/studio/STATUS.md",
         "projects/xwail/STATUS.md",
         "runtime/audit/README.md",
+        "runtime/audit/decision-ledger-20261022.jsonl",
+        "runtime/authorization-receipts.yaml",
         "runtime/logs/F-004.jsonl",
         "runtime/logs/F-011.jsonl",
         "runtime/logs/F-015.jsonl",
@@ -800,6 +805,7 @@
         "\".kds/development-space/\\345\\274\\200\\345\\217\\221/05-KDS/docs/reports/p19-day90-candidate-table-20261024.md\"",
         "\".kds/development-space/\\345\\274\\200\\345\\217\\221/05-KDS/docs/reports/spaceai-gitignore-trace-20261024.md\"",
         "\".kds/development-space/\\345\\274\\200\\345\\217\\221/05-KDS/docs/reports/standards-sweep-20261024.md\"",
+        "\".kds/development-space/\\345\\274\\200\\345\\217\\221/12-GPCF/docs/reports/ci-workflows-icp-aaas-mem-trace-20261024.md\"",
         "\".kds/development-space/\\345\\274\\200\\345\\217\\221/12-GPCF/docs/reports/f032-direction-ruling-20261024.md\"",
         "\".kds/development-space/\\345\\274\\200\\345\\217\\221/12-GPCF/docs/reports/f032-m0-review-ruling-20261024.md\"",
         "\".kds/development-space/\\345\\274\\200\\345\\217\\221/12-GPCF/docs/reports/p06-inheritance-line-trace-20261024.md\"",
@@ -862,6 +868,7 @@
         "docs/harness/evidence/wave1-review-pack-20261022.md",
         "docs/harness/evidence/workspace-consistency-20261023.md",
         "docs/reports/README.md",
+        "docs/reports/ci-workflows-icp-aaas-mem-trace-20261024.md",
         "docs/runbooks/README.md",
         "docs/runbooks/runtime-host-v1.0.md",
         "features/active/F-029-hermes-ai-runtime-admission/artifacts/.gitkeep",
@@ -5446,11 +5453,12 @@
       "sensitive_paths": []
     },
     "GlobalCloud ICP": {
-      "dirty_count": 1,
+      "dirty_count": 2,
       "ahead": 0,
       "behind": 0,
       "paths": [
-        "\"GlobalCloud ICP \\346\\200\\273\\344\\275\\223\\346\\226\\271\\346\\241\\210.md\""
+        "\"GlobalCloud ICP \\346\\200\\273\\344\\275\\223\\346\\226\\271\\346\\241\\210.md\"",
+        ".github/workflows/test-build.yml"
       ],
       "sensitive_paths": []
     },
@@ -5560,21 +5568,19 @@
       "sensitive_paths": []
     },
     "GlobalCloud Mem": {
-      "dirty_count": 5,
+      "dirty_count": 3,
       "ahead": 0,
       "behind": 0,
       "paths": [
-        "README.md",
-        "docs/STATUS.md",
         "src/gcmem.py",
-        "\"docs/GCMEM-\\345\\205\\203\\346\\225\\260\\346\\215\\256\\345\\256\\214\\346\\225\\264\\347\\216\\207\\346\\226\\271\\346\\241\\210.md\"",
-        "tests/test_gcmem_meta_v2.py"
+        "tests/test_gcmem_refusal.py",
+        ".github/workflows/test-build.yml"
       ],
       "sensitive_paths": []
     },
     "GlobalCloud WAE": {
       "dirty_count": 114,
-      "ahead": 19,
+      "ahead": 20,
       "behind": 0,
       "paths": [
         "docs/assembly-spec/README.md",

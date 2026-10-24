@@ -21,10 +21,10 @@ PROJECT_ROOT = ROOT.parent
 REGISTRY = ROOT / "config" / "project-group-projects.yaml"
 
 TEST_PATTERNS = re.compile(
-    r"(pytest|vitest|jest|mocha|npm\s+test|pnpm\s+test|yarn\s+test|go\s+test|cargo\s+test|"
+    r"(pytest|vitest|jest|mocha|npm\s+(run\s+)?test|pnpm\s+(-s\s+)?(run\s+)?test|yarn\s+test|go\s+test|cargo\s+test|"
     r"python[0-9.]*\s+-m\s+unittest|tox|nox|make\s+test|ctest)", re.I)
 BUILD_PATTERNS = re.compile(
-    r"(npm\s+run\s+build|pnpm\s+build|pnpm\s+-r\s+build|yarn\s+build|tsc(\s|$)|vite\s+build|"
+    r"(npm\s+run\s+build|pnpm\s+(-r\s+)?(run\s+)?build|yarn\s+build|tsc(\s|$)|vite\s+build|"
     r"webpack|cargo\s+build|go\s+build|mvn\s+package|gradle\s+build|python\s+-m\s+build|"
     r"compileall|ast\.parse|make\s+build|dotnet\s+build)", re.I)
 STANDARDS_PATTERNS = re.compile(r"gc_standard\.py\"?\s+check", re.I)
@@ -53,9 +53,56 @@ def workflow_steps(repo: Path) -> list[dict]:
     return items
 
 
+SCRIPT_REF = re.compile(r"(?:bash|sh|node|python3?)\s+([\w./-]+\.(?:sh|mjs|js|py))")
+
+
+def resolve_scripts(repo: Path, runs_text: str) -> str:
+    """把 run 中引用的本地脚本内容一并纳入判定（gate.sh 这类封装脚本很常见）。"""
+    chunks: list[str] = []
+    for ref in sorted(set(SCRIPT_REF.findall(runs_text))):
+        path = repo / ref
+        if path.is_file() and path.stat().st_size < 200_000:
+            try:
+                chunks.append(path.read_text(encoding="utf-8", errors="ignore"))
+            except OSError:
+                continue
+    return "\n".join(chunks)
+
+
+NPM_RUN = re.compile(r"\b(?:npm|pnpm|yarn)\s+(?:-s\s+)?(?:run\s+)?([\w:.-]+)")
+
+
+def resolve_npm_scripts(repo: Path, runs_text: str, depth: int = 3) -> str:
+    """展开 npm/pnpm/yarn 脚本体（quality:ci 这类封装很常见），递归 depth 层。"""
+    pkg = repo / "package.json"
+    if not pkg.is_file():
+        return ""
+    try:
+        scripts = json.loads(pkg.read_text(encoding="utf-8")).get("scripts") or {}
+    except Exception:
+        return ""
+    seen: set[str] = set()
+    chunks: list[str] = []
+    queue = [name for name in NPM_RUN.findall(runs_text) if name in scripts]
+    for _ in range(depth):
+        nxt: list[str] = []
+        for name in queue:
+            if name in seen:
+                continue
+            seen.add(name)
+            body = str(scripts.get(name, ""))
+            chunks.append(body)
+            nxt.extend([n for n in NPM_RUN.findall(body) if n in scripts and n not in seen])
+        queue = nxt
+        if not queue:
+            break
+    return "\n".join(chunks)
+
+
 def classify(repo: Path) -> dict:
     steps = workflow_steps(repo)
-    text = "\n".join(r for s in steps for r in s["runs"])
+    runs_text = "\n".join(r for s in steps for r in s["runs"])
+    text = runs_text + "\n" + resolve_scripts(repo, runs_text) + "\n" + resolve_npm_scripts(repo, runs_text)
     return {
         "repo": repo.name,
         "workflow_files": sorted({s["file"] for s in steps}),

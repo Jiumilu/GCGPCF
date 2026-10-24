@@ -5,8 +5,8 @@
 schema_version: "1.0"
 generated_at: "2026-10-22T05:40:00+08:00"
 ledger_ref: "09-status/globalcloud-project-group-single-authorization-ledger-v1.0.md"
-authorization_granted_count: 33
-action_executed_count: 25
+authorization_granted_count: 36
+action_executed_count: 28
 pending_execution_count: 8
 receipts:
   - auth_id: AUTH-GPCF-SCHEME-REVIEW-20260626
@@ -409,4 +409,40 @@ receipts:
     expires_at: "2026-11-07T23:59:59+08:00"
     evidence: "docs/reports/ci-workflows-sop-kds-trace-20261024.md"
     review_conclusion: "KDS 新增 test-build.yml；本地测试通过；覆盖 test/build 各 +1"
+    revoked_at: null
+  - auth_id: AUTH-PG-ICP-CI-20261024
+    granted_at: "2026-10-24T15:50:00+08:00"
+    granted_by: "老卢（授权自动按模型采纳）"
+    grant_basis: "decide_template(authorization_qa) probability_yes=0.576 verdict=yes"
+    repo: "GlobalCloud ICP"
+    scope: "cross_repo_ci_test_build_workflow"
+    actions_allowed: ["read", "add_workflow_file"]
+    actions_forbidden: ["commit", "push", "business_code_change", "remove_files"]
+    expires_at: "2026-11-07T23:59:59+08:00"
+    evidence: "docs/reports/ci-workflows-icp-aaas-mem-trace-20261024.md"
+    review_conclusion: "新增 test-build.yml；本地 pytest 通过；覆盖 test/build 各 +1"
+    revoked_at: null
+  - auth_id: AUTH-PG-AAAS-CI-20261024
+    granted_at: "2026-10-24T15:50:00+08:00"
+    granted_by: "老卢（授权自动按模型采纳）"
+    grant_basis: "decide_template(authorization_qa) probability_yes=0.64 verdict=yes"
+    repo: "GlobalCloud AAAS"
+    scope: "cross_repo_ci_test_build_workflow"
+    actions_allowed: ["read", "add_workflow_file"]
+    actions_forbidden: ["commit", "push", "business_code_change", "remove_files"]
+    expires_at: "2026-11-07T23:59:59+08:00"
+    evidence: "docs/reports/ci-workflows-icp-aaas-mem-trace-20261024.md"
+    review_conclusion: "新增 test-build.yml；本地 pytest 通过；覆盖 test/build 各 +1"
+    revoked_at: null
+  - auth_id: AUTH-PG-MEM-CI-20261024
+    granted_at: "2026-10-24T15:50:00+08:00"
+    granted_by: "老卢（授权自动按模型采纳）"
+    grant_basis: "decide_template(authorization_qa) probability_yes=0.627 verdict=yes"
+    repo: "GlobalCloud Mem"
+    scope: "cross_repo_ci_test_build_workflow"
+    actions_allowed: ["read", "add_workflow_file"]
+    actions_forbidden: ["commit", "push", "business_code_change", "remove_files"]
+    expires_at: "2026-11-07T23:59:59+08:00"
+    evidence: "docs/reports/ci-workflows-icp-aaas-mem-trace-20261024.md"
+    review_conclusion: "新增 test-build.yml；本地 pytest 通过；覆盖 test/build 各 +1"
     revoked_at: null

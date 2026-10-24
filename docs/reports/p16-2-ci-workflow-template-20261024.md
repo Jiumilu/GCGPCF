@@ -65,43 +65,44 @@ jobs:
 3. `standards` job 固定存在（P16-1 已要求）；
 4. 不要求覆盖率阈值、不要求 e2e/browser/a11y（属 P16-3）。
 
-## 3. 覆盖与缺口（按步骤实判，2026-10-24 15:28 更新）
+## 3. 覆盖与缺口（按步骤实判，2026-10-24 15:50 更新）
 
-> 判定方式：解析 `steps[].run` 实际命令。本轮：PQC 新增 test-build 工作流（模型授权），test 11/29、build 14/29。
+> 判定方式：解析 `steps[].run` + 被引用的本地脚本 + npm/pnpm 脚本体（递归 3 层）。
+> 本轮新增 ICP/AAAS/Mem 的 test-build 工作流（模型 yes）→ test 24/29、build 20/29。
 
 | 仓 | standards | test | build | test 依据 | build 依据 |
 |---|---|---|---|---|---|
-| GlobalCloud AAAS | ✓ | — | — | — | — |
-| GlobalCloud Brain | ✓ | ✓ | ✓ | pnpm test | pnpm build |
+| GlobalCloud AAAS | ✓ | ✓ | ✓ | pytest | ast.parse |
+| GlobalCloud Brain | ✓ | ✓ | ✓ | pnpm test, vitest | pnpm build, tsc , vite build |
 | GlobalCloud WAS | ✓ | — | — | — | — |
 | GlobalCloud XiaoC | ✓ | ✓ | ✓ | pnpm test | pnpm build |
-| GlobalCloud WAME | ✓ | ✓ | ✓ | python3 -m unittest | npm run build |
-| GlobalCloud GPC | ✓ | — | ✓ | — | compileall |
-| GlobalCloud Studio | ✓ | — | ✓ | — | npm run build |
+| GlobalCloud WAME | ✓ | ✓ | ✓ | npm run test, python3 -m unittest, vitest | npm run build, tsc , vite build |
+| GlobalCloud GPC | ✓ | ✓ | ✓ | npm run test | ast.parse, compileall |
+| GlobalCloud Studio | ✓ | ✓ | ✓ | npm run test, vitest | npm run build, tsc , vite build |
 | GlobalCloud GPCF | ✓ | ✓ | ✓ | pytest | ast.parse |
 | GlobalCloud XWAIL | ✓ | — | — | — | — |
-| GlobalCloud GFIS | ✓ | — | ✓ | — | compileall |
+| GlobalCloud GFIS | ✓ | ✓ | ✓ | npm run test | ast.parse, compileall |
 | GlobalCloud MMC | ✓ | ✓ | — | pytest, vitest | — |
-| GlobalCloud KDS | ✓ | — | — | — | — |
-| GlobalCloud XiaoG | ✓ | — | ✓ | — | npm run build |
-| GlobalCloud PVA | ✓ | ✓ | ✓ | npm test | npm run build |
-| GlobalCloud SOP | ✓ | — | — | — | — |
+| GlobalCloud KDS | ✓ | ✓ | ✓ | pytest | ast.parse |
+| GlobalCloud XiaoG | ✓ | ✓ | ✓ | npm run test, vitest | npm run build, tsc , vite build |
+| GlobalCloud PVA | ✓ | ✓ | ✓ | npm run test, npm test, vitest | npm run build, tsc , vite build |
+| GlobalCloud SOP | ✓ | ✓ | ✓ | pytest | ast.parse |
 | GlobalCloud PKC | ✓ | — | — | — | — |
-| GlobalCloud XGD | ✓ | — | — | — | — |
-| GlobalCloud ICP | ✓ | — | — | — | — |
+| GlobalCloud XGD | ✓ | ✓ | — | npm run test | — |
+| GlobalCloud ICP | ✓ | ✓ | ✓ | pytest | ast.parse |
 | GlobalCloud PQC | ✓ | ✓ | ✓ | pytest | ast.parse |
-| GlobalCloud SpaceAI Platform | ✓ | ✓ | — | vitest | — |
+| GlobalCloud SpaceAI Platform | ✓ | ✓ | ✓ | vitest | tsc  |
 | GlobalCloud SpaceAI Studio | ✓ | ✓ | — | cargo test, pnpm test | — |
-| GlobalCloud World | ✓ | — | ✓ | — | npm run build |
-| GlobalCloud Mem | ✓ | — | — | — | — |
-| GlobalCloud WAE | ✓ | ✓ | ✓ | pnpm test | pnpm build |
+| GlobalCloud World | ✓ | ✓ | ✓ | pnpm run test, vitest | npm run build, pnpm run build, tsc  |
+| GlobalCloud Mem | ✓ | ✓ | ✓ | pytest | ast.parse |
+| GlobalCloud WAE | ✓ | ✓ | ✓ | pnpm test, vitest | pnpm build, tsc  |
 | GlobalCloud PMC | ✓ | ✓ | — | pytest | — |
-| GlobalCloud PDC | ✓ | — | ✓ | — | npm run build |
-| GlobalCloud SLC | ✓ | — | ✓ | — | npm run build |
+| GlobalCloud PDC | ✓ | ✓ | ✓ | jest, npm run test | npm run build, tsc , vite build |
+| GlobalCloud SLC | ✓ | ✓ | ✓ | jest, npm run test | npm run build, tsc , vite build |
 | GlobalCloud DRC | ✓ | — | — | — | — |
 | GlobalCloud FireQuote | ✓ | — | — | — | — |
 
-缺口统计：**test 缺 18 仓、build 缺 15 仓**（standards 29/29）。
+缺口统计：**test 缺 5 仓、build 缺 9 仓**（standards 29/29）。
 
 复跑：`python3 tools/kds-sync/scan_ci_coverage.py --markdown`
 
