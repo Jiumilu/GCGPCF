@@ -2,83 +2,109 @@ schema_version: '1.0'
 parent_pmc: GC-356
 updated_at: '2026-10-24'
 receipts:
-  - ref: GC-357
-    feature: F-022
-    owner: WAS
-    status: pending
-    required: [signed_declarations, flow_mapping_decision, wame_registration]
-    evidence_paths: []
-    signed_by: ''
-    signed_at: ''
-  - ref: GC-358
-    feature: F-034
-    owner: Brain
-    status: pending
-    required: [token_disposition, evidence_path]
-    evidence_paths: []
-    signed_by: ''
-    signed_at: ''
-  - ref: GC-359
-    feature: F-034
-    owner: Studio/PKC
-    status: pending
-    required: [sidebar_contract_or_exception, m3_signoff]
-    evidence_paths: []
-    signed_by: ''
-    signed_at: ''
-  - ref: GC-360
-    feature: F-036
-    owner: WAE/PKC
-    status: pending
-    required: [deploy_evidence, sso_evidence, owner_signoff]
-    evidence_paths: []
-    signed_by: ''
-    signed_at: ''
-  - ref: GC-361
-    feature: BATCH2-GFIS
-    owner: GFIS
-    status: pending
-    required: [five_documents, customer_confirmation]
-    evidence_paths: []
-    signed_by: ''
-    signed_at: ''
-  - ref: GC-362
-    feature: BATCH2-GPC
-    owner: GPC
-    status: pending
-    required: [pg11_location, external_runtime_check, port_ownership]
-    evidence_paths: []
-    signed_by: ''
-    signed_at: ''
-  - ref: GC-363
-    feature: F-038
-    owner: SpaceAI
-    status: pending
-    required: [dispatch_acceptance, cwme_backfill_acceptance]
-    evidence_paths: []
-    signed_by: ''
-    signed_at: ''
-  - ref: GC-364
-    feature: F-012
-    owner: SOP/ICP
-    status: pending
-    required: [checklist_review, tests_build_commands]
-    evidence_paths: []
-    signed_by: ''
-    signed_at: ''
-  - ref: GC-365
-    feature: F-032
-    owner: PQC/PVA
-    status: pending
-    required: [interface_review, contract_freeze]
-    evidence_paths: []
-    signed_by: ''
-    signed_at: ''
-  - ref: GC-366
-    feature: F-025
-    owner: WAME/SpaceAI/World
-    status: pending
-    required: [o1_plan, o7_alignment, o8_evidence]
-    evidence_paths: []
-    signed_by: ''
-    signed_at: ''
+- ref: GC-357
+  feature: F-022
+  owner: WAS
+  status: pending
+  required:
+  - signed_declarations
+  - flow_mapping_decision
+  - wame_registration
+  evidence_paths: []
+  signed_by: ''
+  signed_at: ''
+- ref: GC-358
+  feature: F-034
+  owner: Brain
+  status: pending
+  required:
+  - token_disposition
+  - evidence_path
+  evidence_paths: []
+  signed_by: ''
+  signed_at: ''
+- ref: GC-359
+  feature: F-034
+  owner: Studio/PKC
+  status: pending
+  required:
+  - sidebar_contract_or_exception
+  - m3_signoff
+  evidence_paths: []
+  signed_by: ''
+  signed_at: ''
+- ref: GC-360
+  feature: F-036
+  owner: WAE/PKC
+  status: pending
+  required:
+  - deploy_evidence
+  - sso_evidence
+  - owner_signoff
+  evidence_paths: []
+  signed_by: ''
+  signed_at: ''
+- ref: GC-361
+  feature: BATCH2-GFIS
+  owner: GFIS
+  status: pending
+  required:
+  - five_documents
+  - customer_confirmation
+  evidence_paths: []
+  signed_by: ''
+  signed_at: ''
+- ref: GC-362
+  feature: BATCH2-GPC
+  owner: GPC
+  status: pending
+  required:
+  - pg11_location
+  - external_runtime_check
+  - port_ownership
+  evidence_paths: []
+  signed_by: ''
+  signed_at: ''
+- ref: GC-363
+  feature: F-038
+  owner: SpaceAI
+  status: pending
+  required:
+  - dispatch_acceptance
+  - cwme_backfill_acceptance
+  evidence_paths:
+  - features/active/F-038-panorama-operation-normalization/evidence/acceptance-coverage-20261024.md
+  signed_by: ''
+  signed_at: ''
+  note: 自动化 18 tests + e2e smoke 5/5 + panorama-operate 5/5；仅待属主视觉确认与签字
+- ref: GC-364
+  feature: F-012
+  owner: SOP/ICP
+  status: pending
+  required:
+  - checklist_review
+  - tests_build_commands
+  evidence_paths: []
+  signed_by: ''
+  signed_at: ''
+- ref: GC-365
+  feature: F-032
+  owner: PQC/PVA
+  status: pending
+  required:
+  - interface_review
+  - contract_freeze
+  evidence_paths: []
+  signed_by: ''
+  signed_at: ''
+- ref: GC-366
+  feature: F-025
+  owner: WAME/SpaceAI/World
+  status: pending
+  required:
+  - o1_plan
+  - o7_alignment
+  - o8_evidence
+  evidence_paths: []
+  signed_by: ''
+  signed_at: ''
