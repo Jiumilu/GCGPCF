@@ -85,3 +85,8 @@ superseded_by: []
 - 工厂/低空/空间检索、快照保存/空态、数据说明、检索空态/覆盖、底图标签改 `ctx.T()`；
 - 测试 mock 补 `T`（fallback）以符合 `CtrlCtx` 契约；
 - 793 tests / tsc 0；SpaceAI main 本地提交（未 push）。
+
+## 阶段 1 批次 9（PanoramaCtrl 弹层/工具条，2026-10-24）
+
+- 关闭/搜索 placeholder/精度/图层提示/收藏空态/场景过滤/小应用/实时流/语音/CWME 控制台与按钮改 `ctx.T()`；
+- 793 tests / tsc 0；SpaceAI main 本地提交（未 push）。
