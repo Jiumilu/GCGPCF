@@ -63,3 +63,8 @@ superseded_by: []
 - 相机/工具提示、NLU placeholder、品牌/大屏、派单/回投确认文案改 T()；
 - SpaceAI 本地提交 `06be37a`（main，未 push）；
 - 验证：793 tests / tsc 0。
+
+## 阶段 1 批次 5（大屏/最新流，2026-10-24）
+
+- 大屏 ticker、对象/重点/活跃事件/设备、最新事件文案改 T()。
+- SpaceAI 本地提交（main，未 push）；793 tests / tsc 0。
