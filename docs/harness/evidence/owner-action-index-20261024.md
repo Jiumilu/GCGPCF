@@ -67,3 +67,18 @@ superseded_by: []
 - `runtime/owner-receipts.yaml`：10 个属主回执（GC-357..GC-366），当前 10 pending。
 - 校验：`python3 tools/kds-sync/validate_owner_receipts.py`。
 - approved 必须填 signed_by/signed_at/evidence_paths，且 evidence 文件存在。
+
+## 回执录入命令
+
+```bash
+python3 tools/kds-sync/record_owner_receipt.py \
+  --ref GC-357 --status approved \
+  --signed-by WAS --signed-at 2026-10-24 \
+  --evidence path/to/receipt.md \
+  --note "六项声明已签"
+```
+
+- 默认写 `runtime/owner-receipts.yaml` 并自动跑校验；
+- `approved` 必须带签署人/日期/证据路径；
+- 可先加 `--dry-run` 预览。
+\n
