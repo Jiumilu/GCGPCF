@@ -115,3 +115,8 @@ superseded_by: []
 
 - 场景控制器展开/拖动/标题/统计/提示/折叠/隐藏/视频/控制台改 T()；
 - 793 tests / tsc 0；SpaceAI main 本地提交（未 push）。
+
+## 阶段 1 批次 15（PanoramaHelp / PanoramaPalette，2026-10-24）
+
+- 快捷键帮助标题/说明/aria、命令面板 placeholder/空态/说明改 T()；
+- 793 tests / tsc 0；SpaceAI main 本地提交（未 push）。
