@@ -53,7 +53,7 @@ verification:
     screenshots: 本轮以交互行为改造为主，零回归判定用操作契约测试 + e2e 断言 + DOM 结构指标；未另做视觉截图对照。视觉与人工验收（派单/CWME 回投真实状态）明确留待下一轮，不以本 Feature 证据替代。
 blockers:
 - B5 剩余五大块（卡片列 / 气泡 / 飞翔 / CWME / 控制器）仍在内联，PanoramaDeep.vue script 目标未达
-- i18n 约 600 行与人工验收未完成，属下一轮范围
+- i18n：Panorama 组件用户可见文案已迁 T()（见 evidence/i18n-inventory-20261024.md）；人工验收（派单/CWME 回投）仍未完成
 - 工作区仍有并行会话 WIP（apps/desktop、pnpm-workspace.yaml 等），本 Feature 未纳入
 ui_product_first_control:
   version: v1.1
