@@ -37,7 +37,6 @@ blockers:
 - "三条线 B5 视觉对照（≥3 页、接入前后）未做：PKC 仅 2 页截图（无前后对照）、Brain/PVAOS 无截图。"
 - "WAE 侧 Brain/PVAOS 候选入口页（A 表 A1）未落；批次 2/3 的 A 表其余项已就绪。"
 - "PVA 仓既有问题（属 PVA 属主）：button.tsx 1 处既有类型错误；pnpm-lock.yaml 与 manifest 三处漂移（hono/react-router/react-router-dom）。"
-- "GPCF 记录的 task_flow_e2e_status / evidence_overexposure_gate 运行时证据仍为待补（已由 G8 与无机器字段扫描部分覆盖）。"
 verification:
   tests:
   - python3 -c "import subprocess,sys; r=subprocess.run(['pnpm','test'],cwd='../GlobalCloud
@@ -93,4 +92,4 @@ ui_product_first_control:
     evidence_overexposure_gate: pass
   status_ceiling: partial
 created_at: "2026-10-22T10:02:42+00:00"
-updated_at: "2026-10-25T06:20:00+00:00"
+updated_at: "2026-10-25T06:35:00+00:00"

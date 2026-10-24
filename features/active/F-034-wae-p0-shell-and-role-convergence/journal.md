@@ -78,3 +78,11 @@ superseded_by: []
    - 是（状态提升已获老卢确认，仅至 `ready_for_review`；不声明 done/accepted/生产就绪）。
 
 > 授权记录：老卢 2026-10-25，问答选「现在提 ready_for_review」（决策模型 `raise_now` 0.622）。
+
+## 2026-10-25 运行时证据补充（task_flow_e2e_status / evidence_overexposure_gate）
+
+1. **这轮做什么？** 补齐两项 gate 的可回放运行时证据，移除对应 blocker。
+2. **改了什么？** evidence/`runtime-evidence-20261025.md`（两项证据与回放命令）；`feature.yaml` 移除"运行时证据待补" blocker、更新 updated_at；状态不变（仍 ready_for_review）。
+3. **怎么验证？** WAE `pnpm e2e:task-flow` **8/8 步通过**（登录→工作台→PKC 候选页→服务控制台→回 PKC 页，pageerror=0）；`pnpm e2e:machine-fields` 5 页 0 命中 + 金丝雀 6/6；证据包新增第 21 项（21/21 pass）。
+4. **发现什么问题？** 无新增阻塞；此前 gate 标 pass 但缺运行时证据，属记录不全，本次补齐。
+5. **是否可以提交？** 是（补证据 + 移除过期 blocker；不提升状态）。
