@@ -55,3 +55,11 @@ cd "GlobalCloud PVA"  && git checkout -- "GlobalCloud PVA 总体方案.md"
 
 - 两份文档原有 `master_control: GPCF:01-architecture/WAS世界资产体系总体方案.md`（旧路径）未改：它指向 WAS 专项语义基线，与新加的项目群主方案声明不冲突；
 - 若后续要统一 `master_control` 口径，属主可在提交时一并调整。
+
+## 5. 追加（2026-10-24 17:30）：SOP 总体方案补行
+
+- 触发：本轮全量体检发现 `validate_project_plan_inheritance` 再次失败，缺 token 的是 **GlobalCloud SOP 总体方案**
+- 决策模型：`authorization_qa` → **yes 0.9594**
+- 改动：同一处理方式，在「项目群主方案继承声明」章节 +1 行主控方案声明（未改正文、未提交跨仓、未推送）
+- 结果：`validate_project_plan_inheritance` exit 0；门禁 pass
+- 说明：这正是第 37 轮把该检查并入**门禁**的价值——该类漂移现在提交时即被拦截，不再靠人工体检发现

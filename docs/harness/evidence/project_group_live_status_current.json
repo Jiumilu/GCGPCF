@@ -19,6 +19,7 @@
     "GlobalCloud KDS",
     "GlobalCloud XiaoG",
     "GlobalCloud PVA",
+    "GlobalCloud SOP",
     "GlobalCloud PKC",
     "GlobalCloud ICP",
     "GlobalCloud PQC",
@@ -82,6 +83,7 @@
     "GlobalCloud Brain",
     "GlobalCloud GFIS",
     "GlobalCloud GPC",
+    "GlobalCloud GPCF",
     "GlobalCloud MMC",
     "GlobalCloud PKC",
     "GlobalCloud PMC",
@@ -478,8 +480,8 @@
       "sensitive_paths": []
     },
     "GlobalCloud GPCF": {
-      "dirty_count": 410,
-      "ahead": 1,
+      "dirty_count": 411,
+      "ahead": 2,
       "behind": 0,
       "paths": [
         "$CODEX_HOME/automations/globalcloud-17/README.md",
@@ -544,6 +546,7 @@
         "\".kds/development-space/\\345\\274\\200\\345\\217\\221/05-KDS/docs/reports/ci-activation-result-20261024.md\"",
         "\".kds/development-space/\\345\\274\\200\\345\\217\\221/12-GPCF/README.md\"",
         "\".kds/development-space/\\345\\274\\200\\345\\217\\221/12-GPCF/docs/harness/evidence/project_group_live_status_current.md\"",
+        "\".kds/development-space/\\345\\274\\200\\345\\217\\221/12-GPCF/docs/reports/p06-inheritance-line-trace-20261024.md\"",
         "\".kds/development-space/\\345\\274\\200\\345\\217\\221/91-\\346\\262\\273\\347\\220\\206\\344\\270\\216\\351\\252\\214\\346\\224\\266/09-status/globalcloud-document-control-register.md\"",
         "\".kds/development-space/\\345\\274\\200\\345\\217\\221/91-\\346\\262\\273\\347\\220\\206\\344\\270\\216\\351\\252\\214\\346\\224\\266/09-status/kds-development-space-sync-register.md\"",
         "\".kds/development-space/\\345\\274\\200\\345\\217\\221/91-\\346\\262\\273\\347\\220\\206\\344\\270\\216\\351\\252\\214\\346\\224\\266/openspec/changes/was-decision-platform-v02/tasks.md\"",
@@ -642,6 +645,7 @@
         "docs/harness/loops/README.md",
         "docs/harness/minimum-closed-loop/README.md",
         "docs/harness/tasks/README.md",
+        "docs/reports/p06-inheritance-line-trace-20261024.md",
         "docs/standards/README.md",
         "features/active/F-012-icp-sop-foundation-coupling/evidence/owner-action-pack-20261024.md",
         "features/active/F-012-icp-sop-foundation-coupling/evidence/plan-20261024.md",
@@ -796,7 +800,6 @@
         "docs/harness/evidence/wave1-review-pack-20261022.md",
         "docs/harness/evidence/workspace-consistency-20261023.md",
         "docs/reports/README.md",
-        "docs/reports/p18-rollback-rehearsal-20261024.md",
         "docs/runbooks/README.md",
         "docs/runbooks/runtime-host-v1.0.md",
         "features/active/F-029-hermes-ai-runtime-admission/artifacts/.gitkeep",
@@ -5315,10 +5318,12 @@
       "sensitive_paths": []
     },
     "GlobalCloud SOP": {
-      "dirty_count": 0,
+      "dirty_count": 1,
       "ahead": 1,
       "behind": 0,
-      "paths": [],
+      "paths": [
+        "\"GlobalCloud SOP \\346\\200\\273\\344\\275\\223\\346\\226\\271\\346\\241\\210.md\""
+      ],
       "sensitive_paths": []
     },
     "GlobalCloud PKC": {
@@ -5476,10 +5481,12 @@
       "sensitive_paths": []
     },
     "GlobalCloud WAE": {
-      "dirty_count": 152,
+      "dirty_count": 154,
       "ahead": 1,
       "behind": 0,
       "paths": [
+        "apps/wame/src/app/apps/AppsShell.tsx",
+        "apps/wame/src/app/modules/idp-console/IdpConsolePage.tsx",
         "docs/assembly-spec/README.md",
         "\"docs/assembly-spec/manifests/_\\344\\270\\211\\346\\226\\271\\345\\257\\271\\350\\264\\246\\350\\241\\250.md\"",
         "docs/assembly-spec/manifests/aaas-console.yaml",
