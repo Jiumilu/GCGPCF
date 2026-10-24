@@ -482,8 +482,8 @@
       "sensitive_paths": []
     },
     "GlobalCloud GPCF": {
-      "dirty_count": 415,
-      "ahead": 8,
+      "dirty_count": 416,
+      "ahead": 9,
       "behind": 0,
       "paths": [
         "$CODEX_HOME/automations/globalcloud-17/README.md",
@@ -751,6 +751,7 @@
         "projects/studio/STATUS.md",
         "projects/xwail/STATUS.md",
         "runtime/audit/README.md",
+        "runtime/audit/decision-ledger-20261022.jsonl",
         "runtime/logs/F-004.jsonl",
         "runtime/logs/F-011.jsonl",
         "runtime/logs/F-015.jsonl",
@@ -5487,7 +5488,7 @@
       "sensitive_paths": []
     },
     "GlobalCloud WAE": {
-      "dirty_count": 77,
+      "dirty_count": 78,
       "ahead": 5,
       "behind": 0,
       "paths": [
@@ -5562,6 +5563,7 @@
         "packages/app-registry/src/preflight/preflight.test.ts",
         "packages/app-registry/src/preflight/preflight.ts",
         "packages/app-registry/src/preflight/types.ts",
+        "packages/app-registry/src/shadow/types.ts",
         "packages/app-registry/src/sidebarContract.ts",
         "scripts/__repro.mts",
         "scripts/axe-mobile-workbench.mjs",

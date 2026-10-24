@@ -467,3 +467,13 @@ def test_governance_matrix_script_consistent():
     gates = {"委托", "正本", "无", "自实现/缺"}
     assert {r["gate"] for r in rows} <= gates
     assert sum(1 for r in rows if r["gate"] == "正本") == 1  # 只有 GPCF 自己是正本
+
+
+def test_full_sweep_includes_exceptions_expiry():
+    """受控例外到期监控必须在全量体检里（P17 纪律：到期自动失效）。"""
+    import importlib.util
+    spec = importlib.util.spec_from_file_location("sweep3", ROOT / "scripts/gpcf_full_sweep.py")
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    names = {n for n, _c, _t in module.CHECKS}
+    assert "exceptions_expiry" in names
