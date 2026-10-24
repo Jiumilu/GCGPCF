@@ -56,7 +56,7 @@ P3 已完成下一步决策边界收口，推荐下一轮为 `GPCF-ONTOLOGY-WAS-
 ```yaml
 project_scope: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio, WAS]
 related_asset_dimensions: [data_asset]
-related_flows: [commerce_flow]
+related_flows: [ServiceFlow]
 related_objects: [CustomerRequirementOrPlatformOrder]
 related_events: [ontology_was_real_source_record_intake_package]
 source_refs: [was://scenario/gfis-runtime-sop-e2e/S01-customer-requirement-or-platform-order]

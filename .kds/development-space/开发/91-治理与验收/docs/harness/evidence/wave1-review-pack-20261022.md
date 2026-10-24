@@ -28,7 +28,7 @@ superseded_by: []
 |---:|---|---|---|---|
 | 1 | `AUTH-WAVE1-WAME-LINT-RUNTIME-20260626` | GlobalCloud WAME | A | **pass**（lint 0 findings；typecheck/check 全绿；runtime smoke 2/2；0 源码改动） |
 | 2 | `AUTH-WAVE1-BRAIN-HUMAN-REVIEW-20260626` | GlobalCloud Brain | B | review 门禁 pass |
-| 3 | `AUTH-WAVE1-GPCF-POST-SCHEME-REVIEW-20260626` | GlobalCoud GPCF | B | review 门禁 pass |
+| 3 | `AUTH-WAVE1-GPCF-POST-SCHEME-REVIEW-20260626` | GlobalCloud GPCF | B | review 门禁 pass |
 | 4 | `AUTH-AAAS-LOOP-GATE-DELEGATE-REVIEW-20260627` | GlobalCloud AAAS | B | review 门禁 pass |
 | 5 | `AUTH-XWAIL-LOOP-GATE-DELEGATE-REVIEW-20260627` | GlobalCloud XWAIL | B | review 门禁 pass |
 

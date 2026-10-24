@@ -26,7 +26,7 @@ superseded_by: []
 
 | auth_id | 仓 | 授权范围 |
 |---|---|---|
-| `AUTH-GPCF-SCHEME-REVIEW-20260626` | GlobalCoud GPCF | 只读 review + 结论登记 |
+| `AUTH-GPCF-SCHEME-REVIEW-20260626` | GlobalCloud GPCF | 只读 review + 结论登记 |
 | `AUTH-GFIS-SCHEME-REVIEW-20260626` | GlobalCloud GFIS | 只读 review + 结论登记 |
 | `AUTH-SOP-LOOP-GATE-DELEGATE-REVIEW-20260627` | GlobalCloud SOP | 只读 review + 结论登记 |
 

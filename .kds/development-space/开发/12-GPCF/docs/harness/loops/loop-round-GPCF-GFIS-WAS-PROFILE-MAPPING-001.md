@@ -47,7 +47,7 @@ python3 tools/kds-sync/validate_gfis_was_profile_runtime_gate_mapping.py
 ```yaml
 project_scope: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio, WAS]
 related_asset_dimensions: [data_asset]
-related_flows: [commerce_flow]
+related_flows: [ServiceFlow]
 related_objects: [CustomerRequirementOrPlatformOrder]
 related_events: [gfis_runtime_sop_e2e_profile_mapping]
 source_refs: [was://scenario/gfis-runtime-sop-e2e/S01-customer-requirement-or-platform-order]

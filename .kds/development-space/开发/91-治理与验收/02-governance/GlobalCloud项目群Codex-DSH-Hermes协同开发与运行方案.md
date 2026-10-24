@@ -2,10 +2,10 @@
 doc_id: GPCF-DOC-C60B81A4D2
 title: GlobalCloud 项目群 Codex-DSH-Hermes 协同开发与运行方案
 project: WAME
-related_projects: [AAAS, Brain, WAS, XiaoC, WAME, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP, PQC, SpaceAI, SpaceAIStudio, World, GCMEM, WAE, Project]
+related_projects: [GPC, PVAOS, WAME, KDS, Brain, XiaoC, XGD, XiaoG, MMC, GPCF, Studio, SpaceAI, GCMEM]
 domain: governance
 status: controlled
-version: v1.6
+version: v1.3
 owner: WAME
 kds_space: 开发
 kds_path: 开发/91-治理与验收/02-governance/GlobalCloud项目群Codex-DSH-Hermes协同开发与运行方案.md

@@ -18,6 +18,9 @@ superseded_by: []
 
 # P16-2 · test/build 属主补齐清单（29 仓实测）
 
+> ⚠️ **已被取代**（2026-10-24）：本文件保留备查，最新口径见 `docs/reports/INDEX.md` 第 8 节。
+
+
 - 依据：老卢 2026-10-22 22:21 裁定「P16-1+2」；矩阵 `_governance/ci-matrix.yaml`
 - 现状：`standards` 29/29 已具备（CI 中已是 required）；`test` 6/29、`build` 6/29
 - 本单只列缺口与判据，GPCF 不代写各仓 workflow

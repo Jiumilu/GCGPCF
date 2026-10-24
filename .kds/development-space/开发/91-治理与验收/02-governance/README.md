@@ -70,6 +70,7 @@ KDS 路径前缀：`开发/12-GPCF/02-governance/`
 | GPCF-DOC-B8ADFA9E30 | GlobalCloud 项目群文档综合治理规范 | 02-governance/GlobalCloud项目群文档综合治理规范.md | WAME | controlled |
 | GPCF-DOC-87DD7D79CD | GlobalCloud 项目群文档防污染规则 | 02-governance/GlobalCloud项目群文档防污染规则.md | WAME | controlled |
 | GPCF-DOC-F949595C37 | 治理规范 | 02-governance/README.md | WAME | controlled |
+| GPCF-DOC-00AB870B42 | GlobalCloud 项目群决策分类与路由规范 | 02-governance/_draft_v1.1-GlobalCloud项目群决策分类与路由规范.md | WAME | controlled |
 | GPCF-DOC-CONSTITUTION-GOVERNANCE-RESPONSIBILITY-20260712 | GlobalCloud 宪法治理责任与 G00 门禁 | 02-governance/constitution-governance-responsibility.md | WAME | controlled |
 | GPCF-DOC-F3EADEE56A | GPCF Agent 架构六要素 — 顶层设计总纲 | 02-governance/gpcf-agent-architecture-six-elements.md | WAME | controlled |
 | GPCF-DOC-F113DF5034 | GPCF Loop Engineering 证据分类体系 | 02-governance/gpcf-evidence-taxonomy.md | WAME | controlled |

@@ -1,6 +1,6 @@
 # KDS 开发文档空间
 
-生成日期：2026-10-23
+生成日期：2026-10-24
 
 用途：KDS `开发` 空间中 `KDS` 项目的受控文档入口。
 
@@ -886,16 +886,28 @@
 | GPCF-DOC-27101F3BEB | GBrain 多租户知识库权限体系 — v3.1 Hardening | docs/harness/multi-tenant-permission-design.md | controlled |
 | GPCF-DOC-4ED15E157A | GFIS-RUNTIME-SOP-E2E-DEV-COMPLETION-001 多智能体执行包 | docs/harness/tasks/GFIS-RUNTIME-SOP-E2E-DEV-COMPLETION-001.multi-agent.md | controlled |
 | GPCF-DOC-5FE5ED4E8B | tasks | docs/harness/tasks/README.md | controlled |
+| GPCF-DOC-ADE9044229 | docs/reports 索引（2026-10-24） | docs/reports/INDEX.md | controlled |
 | GPCF-DOC-446E3B40D1 | reports | docs/reports/README.md | controlled |
+| GPCF-DOC-C4E8E450FB | 已准备 CI 工作流：激活前检查与激活步骤（2026-10-24） | docs/reports/ci-activation-checklist-20261024.md | controlled |
+| GPCF-DOC-41DC2DCB9E | 7 仓 CI 激活结果（2026-10-24 16:40） | docs/reports/ci-activation-result-20261024.md | controlled |
+| GPCF-DOC-13707BF76C | SOP / KDS CI test-build 工作流留痕（跨仓，模型授权分批裁决） | docs/reports/ci-workflows-sop-kds-trace-20261024.md | controlled |
 | GPCF-DOC-0A89D098E8 | Day-1 收口报告（2026-10-22 期间执行，23:45 定稿） | docs/reports/day1-closeout-20261022.md | controlled |
+| GPCF-DOC-0CB7CDB808 | F-013 · KDS 脏工作树分类清单（只读盘点，交 KDS 属主收敛） | docs/reports/f013-kds-dirty-inventory-20261024.md | controlled |
 | GPCF-DOC-AE6A14367C | F-013 · KDS 脏工作树收敛请求（交 KDS 属主） | docs/reports/f013-kds-dirty-worktree-request-20261022.md | controlled |
 | GPCF-DOC-D2B0AFA74D | F-014 权威接收台账 owner、scope 重定与留存策略（老卢裁定记录） | docs/reports/f014-ledger-owner-and-retention-20261022.md | controlled |
 | GPCF-DOC-9CD0369F87 | F-014 · 真实会议数据试点授权申请包（待老卢签发） | docs/reports/f014-real-data-pilot-authorization-request-20261022.md | controlled |
+| GPCF-DOC-72F18A4F4A | 全量体检脚本（门禁之外的校验一次跑完，2026-10-24） | docs/reports/full-sweep-script-20261024.md | controlled |
 | GPCF-DOC-7DBC7397B6 | 目标判据证据：「≥3 个项目解除门禁阻塞」已达成（可审计） | docs/reports/goal-criterion-evidence-unblocked-20261022.md | controlled |
 | GPCF-DOC-39A3AA5F3D | 交接包：需要外部动作才能闭环的 5 项（2026-10-22 23:25） | docs/reports/handover-kit-20261022.md | controlled |
+| GPCF-DOC-BC568CA7FF | KDS 工作树空白清理留痕（跨仓，老卢授权） | docs/reports/kds-whitespace-cleanup-trace-20261024.md | controlled |
 | GPCF-DOC-D0D0365291 | P05 · 7 个 blocked Feature 分类与处理（2026-10-22） | docs/reports/p05-blocked-classification-20261022.md | controlled |
 | GPCF-DOC-5E62A3403A | 0–30 天尾巴清理包：剩余 4 个 blocked（交属主/上级裁定） | docs/reports/p05-tail-clearance-packet-20261022.md | controlled |
+| GPCF-DOC-A718A6E63A | P16-2 · test/build CI 模板（供 25 仓属主复制） | docs/reports/p16-2-ci-workflow-template-20261024.md | controlled |
+| GPCF-DOC-8686649F2F | P16-2 剩余缺口逐仓判定（2026-10-24 15:50） | docs/reports/p16-2-remaining-disposition-20261024.md | controlled |
 | GPCF-DOC-748674198C | P16-2 · test/build 属主补齐清单（29 仓实测） | docs/reports/p16-test-build-owner-checklist-20261022.md | controlled |
+| GPCF-DOC-3CE1BDF7EA | P19 · 90 天组合决策试算表（2026-10-24 15:20 刷新） | docs/reports/p19-day90-candidate-table-20261024.md | controlled |
+| GPCF-DOC-3176540E62 | SpaceAI Platform 脏树治理留痕（跨仓，模型授权） | docs/reports/spaceai-gitignore-trace-20261024.md | controlled |
+| GPCF-DOC-6784A73289 | 29 仓统一规范检查（standards）全量体检（2026-10-24） | docs/reports/standards-sweep-20261024.md | controlled |
 | GPCF-DOC-0BFC37D7C2 | 0–30 天尾巴 4 项 · 催办单（2026-10-22 22:12） | docs/reports/tail-4-followup-20261022.md | controlled |
 | GPCF-DOC-07D122376C | runbooks | docs/runbooks/README.md | controlled |
 | GPCF-DOC-AE29585A23 | standards | docs/standards/README.md | controlled |

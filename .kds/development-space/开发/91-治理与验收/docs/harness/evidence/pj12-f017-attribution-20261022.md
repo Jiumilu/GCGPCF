@@ -137,7 +137,7 @@ screenshots/api=waived）、`acceptance`、`blockers`、`owner`、`priority`；�
 ## 8. 复核命令
 
 ```bash
-cd "GlobalCoud GPCF"
+cd "GlobalCloud GPCF"
 grep -n "^project:" features/active/F-017-cwme-city-world-model-engine/feature.yaml          # → 3:project: spaceai
 grep -n "attribution_note" features/active/F-017-cwme-city-world-model-engine/feature.yaml   # → 第 4 行
 python3 -c "import json;q=json.load(open('runtime/queue.json'));print([f for f in q['queue'] if f['id']=='F-017'])"

@@ -26,16 +26,16 @@ superseded_by: []
 | auth_id | 仓 | 结果 | 说明 |
 |---|---|---|---|
 | `AUTH-KDS-DIFFCHECK-CLEANUP-20260626` | GlobalCloud KDS | **no-op** | `git diff --check` 输出 0 行，无 whitespace 错误；未修改任何文件 |
-| `AUTH-WAS-DELETE-DS-STORE-20260626` | WAS世界资产体系 | **executed** | 归档副本后删除 `.DS_Store`；工作树显示 `D .DS_Store` |
+| `AUTH-WAS-DELETE-DS-STORE-20260626` | GlobalCloud WAS | **executed** | 归档副本后删除 `.DS_Store`；工作树显示 `D .DS_Store` |
 
 ## 2. 证据
 
 - KDS：`git -C "GlobalCloud KDS" diff --check` → 0 行；`git diff --check` 无输出。
-- WAS：删除前 `WAS世界资产体系/.DS_Store`（tracked）；归档副本 `runtime/plan-20261022/archive/WAS-DS_Store-20261022.bak`（10244 bytes）；删除后 `git status` → `D .DS_Store`。
+- WAS：删除前 `GlobalCloud WAS/.DS_Store`（tracked）；归档副本 `runtime/plan-20261022/archive/WAS-DS_Store-20261022.bak`（10244 bytes）；删除后 `git status` → `D .DS_Store`。
 
 ## 3. 回滚
 
-- WAS：`cp runtime/plan-20261022/archive/WAS-DS_Store-20261022.bak "WAS世界资产体系/.DS_Store"`。
+- WAS：`cp runtime/plan-20261022/archive/WAS-DS_Store-20261022.bak "GlobalCloud WAS/.DS_Store"`。
 - KDS：无需回滚（未修改）。
 
 ## 4. 非声明

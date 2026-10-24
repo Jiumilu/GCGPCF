@@ -55,7 +55,7 @@ P0 启动校准和 baseline validator replay 已通过。P1 目标是形成未�
 ```yaml
 project_scope: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio, WAS]
 related_asset_dimensions: [data_asset]
-related_flows: [commerce_flow]
+related_flows: [ServiceFlow]
 related_objects: [CustomerRequirementOrPlatformOrder]
 related_events: [ontology_was_p1_source_record_readiness]
 source_refs: [was://scenario/gfis-runtime-sop-e2e/S01-customer-requirement-or-platform-order]

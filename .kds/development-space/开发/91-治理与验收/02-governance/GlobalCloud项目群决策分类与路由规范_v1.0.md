@@ -9,7 +9,7 @@ version: v1.1
 owner: WAME
 kds_space: 开发
 kds_path: 开发/91-治理与验收/02-governance/GlobalCloud项目群决策分类与路由规范_v1.0.md
-source_path: 02-governance/GlobalCloud项目群决策分类与路由规范_v1.0.md
+source_path: 02-governance/_draft_v1.1-GlobalCloud项目群决策分类与路由规范.md
 sync_direction: bidirectional
 last_reviewed: 2026-10-23
 supersedes: []

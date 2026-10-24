@@ -1,6 +1,6 @@
 # GPCF 开发文档空间
 
-生成日期：2026-10-23
+生成日期：2026-10-24
 
 用途：KDS `开发` 空间中 `GPCF` 项目的受控文档入口。
 
@@ -97,7 +97,6 @@
 | GPCF-DOC-9757FCD093 | 链同专项正式只读预检结论 | 06-workstreams/链同专项正式只读预检结论.md | controlled |
 | GPCF-DOC-56B87AF669 | 链同专项首轮实施前验证包 | 06-workstreams/链同专项首轮实施前验证包.md | controlled |
 | GPCF-DOC-F204B84F5B | 链同专项首轮实施前验证执行记录 | 06-workstreams/链同专项首轮实施前验证执行记录.md | controlled |
-| GPCF-DOC-GLOBALCLOUD-GPCF-MASTER-PLAN-20260624 | GlobalCloud GPCF 总体方案 | GlobalCloud GPCF 总体方案.md | controlled |
 | GPCF-DOC-GLOBALCLOUD-PROJECT-GROUP-IMPLEMENTATION-PLAN-20260624 | GlobalCloud 项目群实施方案 | GlobalCloud 项目群实施方案.md | controlled |
 | GPCF-DOC-990EE0035A | CodeGraph 业务开发执行层准入规则 | docs/codegraph/codegraph-dev-execution-admission.md | controlled |
 | GPCF-DOC-E1D4339FD6 | CodeGraph 业务开发执行 Harness 门禁 | docs/codegraph/codegraph-dev-execution-harness-gate.md | controlled |
@@ -1613,23 +1612,35 @@
 | GPCF-DOC-9126B167F5 | GFIS 运行时 SOP 端到端开发完成 001 执行台账 | docs/harness/tasks/GFIS-RUNTIME-SOP-E2E-DEV-COMPLETION-001.execution-ledger.md | controlled |
 | GPCF-DOC-15B317110B | GFIS-RUNTIME-SOP-E2E-DEV-COMPLETION-001 | docs/harness/tasks/GFIS-RUNTIME-SOP-E2E-DEV-COMPLETION-001.md | controlled |
 | GPCF-DOC-GFIS-RUNTIME-SOP-E2E-MIN-001 | GFIS-RUNTIME-SOP-E2E-MIN-001 | docs/harness/tasks/GFIS-RUNTIME-SOP-E2E-MIN-001.md | controlled |
+| GPCF-DOC-0F9C2C3BD9 | ICP / AAAS / Mem CI test-build 工作流留痕（跨仓，模型逐仓裁决） | docs/reports/ci-workflows-icp-aaas-mem-trace-20261024.md | controlled |
 | GPCF-DOC-102B1BBB47 | F-021 · WAS Ontology 基线裁定请求（交 WAS 属主） | docs/reports/f021-was-ontology-ruling-request-20261022.md | controlled |
+| GPCF-DOC-F4E22D8C24 | F-032 方向裁定（2026-10-24） | docs/reports/f032-direction-ruling-20261024.md | controlled |
+| GPCF-DOC-7A1535F943 | F-032 / PQC 对外服务 · M0 设计评审裁定（2026-10-24） | docs/reports/f032-m0-review-ruling-20261024.md | controlled |
+| GPCF-DOC-63A3055B85 | 门禁检查扩充：把曾人工发现的回归纳入自动拦截（2026-10-24） | docs/reports/gate-check-expansion-20261024.md | controlled |
 | GPCF-DOC-7C0B5F0FD1 | 门禁与证据体检（2026-10-22 23:35） | docs/reports/health-sweep-20261022.md | controlled |
+| GPCF-DOC-6A1EA019E6 | MMC 补 build job 留痕（跨仓，模型授权） | docs/reports/mmc-build-job-trace-20261024.md | controlled |
+| GPCF-DOC-CDEC3636A1 | P02 快照重建口径：运维实证（2026-10-24 16:05） | docs/reports/p02-snapshot-convention-evidence-20261024.md | controlled |
 | GPCF-DOC-86E433AAA5 | F-030（PDC 纳管）重采清单（交 PDC 属主执行） | docs/reports/p05-pdc-f030-resample-checklist-20261022.md | controlled |
 | GPCF-DOC-F2B6092574 | P06 跨仓收尾清单：WAME / PVA 总体方案补继承声明（交属主执行） | docs/reports/p06-cross-repo-plan-inheritance-checklist-20261022.md | controlled |
+| GPCF-DOC-05E2ED78B7 | P06 收尾留痕：WAME / PVA 总体方案继承声明补行（跨仓，老卢授权） | docs/reports/p06-inheritance-line-trace-20261024.md | controlled |
 | GPCF-DOC-0D0FBC993C | P07 · 29 项目处置台账 · 完成证据（2026-10-22） | docs/reports/p07-disposition-ledger-evidence-20261022.md | controlled |
 | GPCF-DOC-58DD3BDFFC | P08 / P09 属主执行包（31–60 天：统一壳 + 首条接入） | docs/reports/p08-p09-owner-execution-packets-20261022.md | controlled |
 | GPCF-DOC-E31E79A62B | P10 / P11 · 界面分层与双角色权限一致性 · WAE 属主执行包 | docs/reports/p10-p11-wae-owner-packet-20261022.md | controlled |
+| GPCF-DOC-A50103148C | P10 / P11 · 界面分层与双角色权限一致性 · WAE 属主执行包（2026-10-24 更正版） | docs/reports/p10-p11-wae-owner-packet-20261024.md | controlled |
 | GPCF-DOC-E011AE8A70 | P12 · PQC 首条真实业务链试点 · 授权申请包（待老卢签发） | docs/reports/p12-pqc-real-pilot-authorization-request-20261022.md | controlled |
 | GPCF-DOC-A1B1103B05 | P14 · PQC 首条真实业务链执行手册（A1–A4 范围内） | docs/reports/p14-pqc-pilot-execution-runbook-20261022.md | controlled |
 | GPCF-DOC-04CECBF090 | P14 · VU 进入 S4 的机检工具（防合成数据抬 C_real） | docs/reports/p14-s4-promotion-tooling-20261022.md | controlled |
 | GPCF-DOC-CD4AF0C1EA | P16-3 · UI 仓 e2e / browser / a11y 验收草案 | docs/reports/p16-3-ui-acceptance-draft-20261022.md | controlled |
 | GPCF-DOC-5D1F7E0305 | P16 · 跨项目 CI/验收矩阵 · 现状盘点与分阶段建议（2026-10-22） | docs/reports/p16-ci-matrix-gap-analysis-20261022.md | controlled |
+| GPCF-DOC-F0B444F390 | P17 done 不变量审计脚本（2026-10-24） | docs/reports/p17-done-audit-script-20261024.md | controlled |
 | GPCF-DOC-8B424ACBF2 | P18 · 发布 / 回滚 / 监控 / 归档 Runbook 模板（草案，未执行） | docs/reports/p18-release-rollback-runbook-template-20261022.md | controlled |
 | GPCF-DOC-0A8D4A5642 | P19 · 29 项目组合决策模板（90 天末执行） | docs/reports/p19-combination-decision-template-20261022.md | controlled |
 | GPCF-DOC-22940E5C06 | 90 天计划执行台账（P01–P19）· 2026-10-22 23:10 快照 | docs/reports/plan-progress-ledger-20261022.md | controlled |
+| GPCF-DOC-F63BAE8881 | PQC CI test/build 工作流留痕（跨仓，模型授权） | docs/reports/pqc-ci-workflow-trace-20261024.md | controlled |
 | GPCF-DOC-A3D4097C4E | PQC 真实试点数据接入清单（客户确认后按此一次性执行） | docs/reports/pqc-pilot-intake-checklist-20261022.md | controlled |
+| GPCF-DOC-F9B1DDF847 | PQC 真实试点最后一段：一键收口脚本（2026-10-24） | docs/reports/pqc-pilot-last-mile-20261024.md | controlled |
 | GPCF-DOC-3A7F6FA260 | 唯一状态事实源（P03）落地发现与阻塞项 | docs/reports/status-source-of-truth-findings-20261022.md | controlled |
+| GPCF-DOC-CC8241B09C | 状态步骤词表归一（P03 延伸，2026-10-24） | docs/reports/step-vocabulary-normalization-20261024.md | controlled |
 | GPCF-DOC-8A36559878 | World 仓 F-021 归属同步清单（交属主执行） | docs/reports/world-f021-attribution-sync-checklist-20261022.md | controlled |
 | GPCF-DOC-E6A5B97688 | Feature Workspace 标准 | docs/standards/feature-workspace.md | controlled |
 | GPCF-DOC-GKE001-OPENSPEC-CODEGRAPH-EVIDENCE-20260811 | GKE-001 OpenSpec 与 CodeGraph 纳管证据 | features/active/F-013-knowledge-asset-model-system/evidence/gke-001-openspec-codegraph-binding-20260811.md | controlled |

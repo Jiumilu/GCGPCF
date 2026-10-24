@@ -1,6 +1,6 @@
 # GFIS 开发文档空间
 
-生成日期：2026-10-23
+生成日期：2026-10-24
 
 用途：KDS `开发` 空间中 `GFIS` 项目的受控文档入口。
 
@@ -82,6 +82,7 @@
 | GPCF-DOC-36C5892CB8 | GFIS-RUNTIME-SOP-E2E-DEV-003 | 08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-DEV-003.md | controlled |
 | GPCF-DOC-E574C9CB52 | Loop Round GPCF-GF-LR-001 | 08-evidence-samples/GFIS/loops/loop-round-GPCF-GF-LR-001.md | controlled |
 | GPCF-DOC-94C5F5E540 | 现代精工工厂岗位培训资料结构化分析 | 08-evidence-samples/GFIS/modern-jinggong-training-analysis.md | controlled |
+| GPCF-DOC-GLOBALCLOUD-GPCF-MASTER-PLAN-20260624 | GlobalCloud GPCF 总体方案 | GlobalCloud GPCF 总体方案.md | controlled |
 | GPCF-DOC-16DD6DC90F | GPCF 项目 Harness Manifest | PROJECT_HARNESS_MANIFEST.md | controlled |
 | GPCF-DOC-D375EBD5DA | GFIS | docs/harness/GFIS/README.md | controlled |
 | GPCF-DOC-9BF6A3D875 | evidence | docs/harness/GFIS/evidence/README.md | controlled |

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-C436DDB0F6
 title: GlobalCloud 文档健康报告
 project: GPCF
-related_projects: [AAAS, Brain, WAS, XiaoC, WAME, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP, PQC, SpaceAI, SpaceAIStudio, World, GCMEM, WAE, Project]
+related_projects: [AAAS, Brain, WAS, XiaoC, WAME, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP, PQC, SpaceAI, SpaceAIStudio, World, GCMEM, WAE]
 domain: status
 status: controlled
 version: v1.0
@@ -20,41 +20,41 @@ superseded_by: []
 
 本报告用于记录项目群文档门禁、镜像覆盖、状态分布和命令证据的当前健康状态。文中的英文项目名、脚本名、字段名和命令输出均为机器可回放证据，不代表业务事实完成、状态升级、客户验收、生产发布或真实外部写入。当前报告只作为受控治理快照，所有 accepted、integrated、production_ready、customer_accepted 等状态仍必须等待人工确认、真实 source-of-record 或等效正式确认文件、人工业务核验、运行层主键、review queue、runtime intake、WAME review 和 verified artifact 全部满足后才能重新评估。
 
-生成时间：2026-10-18T06:28:54.779965+00:00
+生成时间：2026-10-18T02:13:02.340691+00:00
 
 Loop 文档门禁：`pass`
 
 ## 总览
 
-- 仓库 Markdown：3563
-- KDS 镜像 Markdown：3596
-- KDS 本地镜像流水：3470
-- KDS 本地镜像唯一文档：3470
+- 仓库 Markdown：3543
+- KDS 镜像 Markdown：3575
+- KDS 本地镜像流水：3450
+- KDS 本地镜像唯一文档：3450
 - KDS API 同步流水：141
 - 元数据缺失：0
 - README 缺失目录：0
 - 中文本地化债务：False
 - 固定 doc_id 漂移：False
-- 受控文档复核逾期（>90 天）：2821
-- 受控文档复核日期缺失或无效：2
+- 受控文档复核逾期（>90 天）：2824
+- 受控文档复核日期缺失或无效：1
 - 治理状态上限：partial
 - 门禁原因：无
 
 ## 状态分布
 
 - archive: 97
-- controlled: 3145
-- draft: 159
+- controlled: 3134
+- draft: 150
 - okf_derived: 99
 
 ## 项目分布
 
 - AAAS: 3
 - Brain: 14
-- GFIS: 116
+- GFIS: 117
 - GPC: 54
-- GPCF: 1869
-- KDS: 1111
+- GPCF: 1852
+- KDS: 1107
 - MMC: 13
 - PKC: 10
 - PVAOS: 13
@@ -72,9 +72,8 @@ Loop 文档门禁：`pass`
 ### project_group_live_status_current
 
 ```text
-{"status": "pass", "project_count": 25, "snapshot_fresh": true, "snapshot_matches": true}
+{"status": "pass", "project_count": 24, "snapshot_fresh": true, "snapshot_matches": true}
 [warn] GlobalCloud ICP: no upstream, ahead/behind treated as 0
-[warn] GlobalCloud Project: no upstream, ahead/behind treated as 0
 ```
 
 ### loop_engineering_five_direction
@@ -128,14 +127,14 @@ loop_delivery_efficiency_control=pass project_group_scope_17_projects=true deliv
 ### gpcf_2_feature_workspace
 
 ```text
-gpcf_2_feature_workspace=pass feature_delivery_center=true project_scope=25 new_feature_entry=enabled close_feature_exit=enabled status_promotion_allowed=false
+gpcf_2_feature_workspace=pass feature_delivery_center=true project_scope=24 new_feature_entry=enabled close_feature_exit=enabled status_promotion_allowed=false
 ```
 
 ### icp_project_registration
 
 ```text
 icp_project_registration=pass
-project_count=25 icp_status=candidate overall_status=partial confirmation_status=human_required
+project_count=24 icp_status=candidate overall_status=partial confirmation_status=human_required
 historical_project_count=17 historical_evidence_rewrite=false
 ```
 
@@ -148,7 +147,7 @@ constitution_g00=pass status=candidate domain_owner=ICP canonical_custodian=KDS 
 ### loop_ui_product_first_control
 
 ```text
-loop_ui_product_first_control=pass studio_control=governance_only product_first_ui_gate=required evidence_overexposure_gate=required debug_details_default_hidden=required task_flow_e2e_required=true human_operable_gate=required multi_user_usability_gate=required project_count=25 active_feature_coverage=19 status_promotion_allowed=false gfis_status_ceiling=repair_required
+loop_ui_product_first_control=pass studio_control=governance_only product_first_ui_gate=required evidence_overexposure_gate=required debug_details_default_hidden=required task_flow_e2e_required=true human_operable_gate=required multi_user_usability_gate=required project_count=24 active_feature_coverage=18 status_promotion_allowed=false gfis_status_ceiling=repair_required
 ```
 
 ### loop_session_mainline_control
@@ -353,51 +352,21 @@ project_group_external_loop_gate_delegates=pass checked_repos=3 delegation_only=
   "project_count": 17,
   "review_boundary": [
     "GlobalCloud AAAS",
-    "GlobalCloud Brain",
-    "GlobalCloud GFIS",
-    "GlobalCloud GPC",
-    "GlobalCloud ICP",
     "GlobalCloud KDS",
-    "GlobalCloud MMC",
-    "GlobalCloud Mem",
-    "GlobalCloud PKC",
     "GlobalCloud PQC",
-    "GlobalCloud Project",
     "GlobalCloud SOP",
     "GlobalCloud SpaceAI Platform",
-    "GlobalCloud Studio",
     "GlobalCloud WAE",
-    "GlobalCloud World",
-    "GlobalCloud XGD",
-    "GlobalCloud XWAIL",
-    "GlobalCloud XiaoC",
-    "GlobalCloud XiaoG",
-    "GlobalCoud GPCF",
-    "WAS世界资产体系"
+    "GlobalCoud GPCF"
   ],
   "observed_dirty": [
     "GlobalCloud AAAS",
-    "GlobalCloud Brain",
-    "WAS世界资产体系",
-    "GlobalCloud XiaoC",
-    "GlobalCloud GPC",
-    "GlobalCloud Studio",
     "GlobalCoud GPCF",
-    "GlobalCloud XWAIL",
-    "GlobalCloud GFIS",
-    "GlobalCloud MMC",
     "GlobalCloud KDS",
-    "GlobalCloud XiaoG",
     "GlobalCloud SOP",
-    "GlobalCloud PKC",
-    "GlobalCloud XGD",
-    "GlobalCloud ICP",
     "GlobalCloud PQC",
     "GlobalCloud SpaceAI Platform",
-    "GlobalCloud World",
-    "GlobalCloud Mem",
-    "GlobalCloud WAE",
-    "GlobalCloud Project"
+    "GlobalCloud WAE"
   ],
   "observed_ahead": [
     "GlobalCloud AAAS",
@@ -489,7 +458,7 @@ project_group_external_loop_gate_delegates=pass checked_repos=3 delegation_only=
   "gate": "project_group_real_execution_metadata_coverage_20260626",
   "status": "pass",
   "key_doc_count": 36,
-  "current_project_count": 25,
+  "current_project_count": 24,
   "historical_expected_project_count": 17,
   "gfis_real_fact_entry": {
     "gfis_real_fact_entry_gate": "pass",
@@ -530,31 +499,16 @@ project_group_external_loop_gate_delegates=pass checked_repos=3 delegation_only=
 {
   "gate": "project_group_live_status_snapshot_20260626",
   "status": "pass",
-  "checked_repo_count": 25,
-  "dirty_repo_count": 22,
+  "checked_repo_count": 24,
+  "dirty_repo_count": 7,
   "dirty_repos": [
     "GlobalCloud AAAS",
-    "GlobalCloud Brain",
-    "WAS世界资产体系",
-    "GlobalCloud XiaoC",
-    "GlobalCloud GPC",
-    "GlobalCloud Studio",
     "GlobalCoud GPCF",
-    "GlobalCloud XWAIL",
-    "GlobalCloud GFIS",
-    "GlobalCloud MMC",
     "GlobalCloud KDS",
-    "GlobalCloud XiaoG",
     "GlobalCloud SOP",
-    "GlobalCloud PKC",
-    "GlobalCloud XGD",
-    "GlobalCloud ICP",
     "GlobalCloud PQC",
     "GlobalCloud SpaceAI Platform",
-    "GlobalCloud World",
-    "GlobalCloud Mem",
-    "GlobalCloud WAE",
-    "GlobalCloud Project"
+    "GlobalCloud WAE"
   ],
   "observed_ahead": [
     "GlobalCloud AAAS",
@@ -567,27 +521,12 @@ project_group_external_loop_gate_delegates=pass checked_repos=3 delegation_only=
   ],
   "stable_dirty_repos": [
     "GlobalCloud AAAS",
-    "GlobalCloud Brain",
-    "GlobalCloud GFIS",
-    "GlobalCloud GPC",
-    "GlobalCloud ICP",
     "GlobalCloud KDS",
-    "GlobalCloud MMC",
-    "GlobalCloud Mem",
-    "GlobalCloud PKC",
     "GlobalCloud PQC",
-    "GlobalCloud Project",
     "GlobalCloud SOP",
     "GlobalCloud SpaceAI Platform",
-    "GlobalCloud Studio",
     "GlobalCloud WAE",
-    "GlobalCloud World",
-    "GlobalCloud XGD",
-    "GlobalCloud XWAIL",
-    "GlobalCloud XiaoC",
-    "GlobalCloud XiaoG",
-    "GlobalCoud GPCF",
-    "WAS世界资产体系"
+    "GlobalCoud GPCF"
   ],
   "stable_ahead_repos": [
     "GlobalCloud AAAS",
@@ -603,54 +542,38 @@ project_group_external_loop_gate_delegates=pass checked_repos=3 delegation_only=
   ],
   "review_boundary": [
     "GlobalCloud AAAS",
-    "GlobalCloud Brain",
-    "GlobalCloud GFIS",
-    "GlobalCloud GPC",
-    "GlobalCloud ICP",
     "GlobalCloud KDS",
-    "GlobalCloud MMC",
-    "GlobalCloud Mem",
-    "GlobalCloud PKC",
     "GlobalCloud PQC",
-    "GlobalCloud Project",
     "GlobalCloud SOP",
     "GlobalCloud SpaceAI Platform",
-    "GlobalCloud Studio",
     "GlobalCloud WAE",
-    "GlobalCloud World",
-    "GlobalCloud XGD",
-    "GlobalCloud XWAIL",
-    "GlobalCloud XiaoC",
-    "GlobalCloud XiaoG",
-    "GlobalCoud GPCF",
-    "WAS世界资产体系"
+    "GlobalCoud GPCF"
   ],
   "live_dirty_counts": {
-    "GlobalCloud AAAS": 9,
-    "GlobalCloud Brain": 1,
-    "WAS世界资产体系": 2,
-    "GlobalCloud XiaoC": 1,
+    "GlobalCloud AAAS": 7,
+    "GlobalCloud Brain": 0,
+    "WAS世界资产体系": 0,
+    "GlobalCloud XiaoC": 0,
     "GlobalCloud WAME": 0,
-    "GlobalCloud GPC": 1,
-    "GlobalCloud Studio": 1,
-    "GlobalCoud GPCF": 192,
-    "GlobalCloud XWAIL": 1,
-    "GlobalCloud GFIS": 1,
-    "GlobalCloud MMC": 1,
-    "GlobalCloud KDS": 54,
-    "GlobalCloud XiaoG": 1,
+    "GlobalCloud GPC": 0,
+    "GlobalCloud Studio": 0,
+    "GlobalCoud GPCF": 248,
+    "GlobalCloud XWAIL": 0,
+    "GlobalCloud GFIS": 0,
+    "GlobalCloud MMC": 0,
+    "GlobalCloud KDS": 52,
+    "GlobalCloud XiaoG": 0,
     "GlobalCloud PVAOS": 0,
-    "GlobalCloud SOP": 15,
-    "GlobalCloud PKC": 1,
-    "GlobalCloud XGD": 1,
-    "GlobalCloud ICP": 1,
+    "GlobalCloud SOP": 14,
+    "GlobalCloud PKC": 0,
+    "GlobalCloud XGD": 0,
+    "GlobalCloud ICP": 0,
     "GlobalCloud PQC": 5,
     "GlobalCloud SpaceAI Platform": 2,
     "GlobalCloud SpaceAI Studio": 0,
-    "GlobalCloud World": 1,
-    "GlobalCloud Mem": 1,
-    "GlobalCloud WAE": 196,
-    "GlobalCloud Project": 7
+    "GlobalCloud World": 0,
+    "GlobalCloud Mem": 0,
+    "GlobalCloud WAE": 91
   },
   "current_snapshot": "docs/harness/evidence/project_group_live_status_current.json",
   "gfis_real_fact_entry": {
@@ -1082,7 +1005,7 @@ execution_mode=read_only_validation
 
 ```text
 localization_gate=pass
-docs_checked=1165
+docs_checked=1146
 software_files_checked=240
 findings=0
 ```

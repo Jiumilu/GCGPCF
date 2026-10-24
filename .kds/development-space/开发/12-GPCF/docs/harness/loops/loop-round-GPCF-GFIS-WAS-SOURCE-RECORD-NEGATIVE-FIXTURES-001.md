@@ -44,7 +44,7 @@ superseded_by: []
 ```yaml
 project_scope: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio, WAS]
 related_asset_dimensions: [data_asset]
-related_flows: [commerce_flow]
+related_flows: [ServiceFlow]
 related_objects: [CustomerRequirementOrPlatformOrder]
 related_events: [gfis_was_source_record_negative_fixture_replay]
 source_refs: [was://scenario/gfis-runtime-sop-e2e/S01-customer-requirement-or-platform-order]

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-KDS-SYNC-PLAN
 title: KDS Development Space Sync Plan
 project: GPCF
-related_projects: [GPCF, KDS, WAME]
+related_projects: [GFIS, GPC, KDS, GPCF]
 domain: status
 status: controlled
 version: v1.0
@@ -11,27 +11,25 @@ kds_space: 开发
 kds_path: 开发/91-治理与验收/09-status/kds-development-space-sync-plan.md
 source_path: 09-status/kds-development-space-sync-plan.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-13
+last_reviewed: 2026-06-24
 supersedes: []
 superseded_by: []
 ---
 
 # KDS Development Space Sync Plan
 
-generated_at: 2026-10-21T22:01:38.579527+00:00
+generated_at: 2026-06-22T01:58:55.984203+00:00
 status: ready
 kds_space: 开发
 token_fingerprint: bfd9553d
-remote_documents: 1197
+remote_documents: 755
 
 ## create
 
-count: 2279
+count: 1244
 
-- `$CODEX_HOME/automations/globalcloud-17/README.md` -> `开发/02-GPC/$CODEX_HOME/automations/globalcloud-17/README.md`
-- `$CODEX_HOME/automations/globalcloud-17/memory.md` -> `开发/02-GPC/$CODEX_HOME/automations/globalcloud-17/memory.md`
-- `.agents/skills/impeccable/README.md` -> `开发/12-GPCF/.agents/skills/impeccable/README.md`
-- `.agents/skills/impeccable/reference/README.md` -> `开发/12-GPCF/.agents/skills/impeccable/reference/README.md`
+- `.agents/skills/impeccable/README.md` -> `开发/02-GPC/.agents/skills/impeccable/README.md`
+- `.agents/skills/impeccable/reference/README.md` -> `开发/02-GPC/.agents/skills/impeccable/reference/README.md`
 - `.agents/skills/impeccable/reference/adapt.md` -> `开发/12-GPCF/.agents/skills/impeccable/reference/adapt.md`
 - `.agents/skills/impeccable/reference/animate.md` -> `开发/12-GPCF/.agents/skills/impeccable/reference/animate.md`
 - `.agents/skills/impeccable/reference/audit.md` -> `开发/12-GPCF/.agents/skills/impeccable/reference/audit.md`
@@ -46,26 +44,22 @@ count: 2279
 - `.agents/skills/impeccable/reference/distill.md` -> `开发/12-GPCF/.agents/skills/impeccable/reference/distill.md`
 - `.agents/skills/impeccable/reference/document.md` -> `开发/12-GPCF/.agents/skills/impeccable/reference/document.md`
 - `.agents/skills/impeccable/reference/extract.md` -> `开发/12-GPCF/.agents/skills/impeccable/reference/extract.md`
-- `.agents/skills/impeccable/reference/harden.md` -> `开发/12-GPCF/.agents/skills/impeccable/reference/harden.md`
+- `.agents/skills/impeccable/reference/harden.md` -> `开发/01-GFIS/.agents/skills/impeccable/reference/harden.md`
 - `.agents/skills/impeccable/reference/hooks.md` -> `开发/12-GPCF/.agents/skills/impeccable/reference/hooks.md`
 - `.agents/skills/impeccable/reference/init.md` -> `开发/12-GPCF/.agents/skills/impeccable/reference/init.md`
-- `.agents/skills/impeccable/reference/interaction-design.md` -> `开发/12-GPCF/.agents/skills/impeccable/reference/interaction-design.md`
+- `.agents/skills/impeccable/reference/interaction-design.md` -> `开发/01-GFIS/.agents/skills/impeccable/reference/interaction-design.md`
 - `.agents/skills/impeccable/reference/layout.md` -> `开发/12-GPCF/.agents/skills/impeccable/reference/layout.md`
 - `.agents/skills/impeccable/reference/live.md` -> `开发/12-GPCF/.agents/skills/impeccable/reference/live.md`
 - `.agents/skills/impeccable/reference/onboard.md` -> `开发/12-GPCF/.agents/skills/impeccable/reference/onboard.md`
 - `.agents/skills/impeccable/reference/optimize.md` -> `开发/12-GPCF/.agents/skills/impeccable/reference/optimize.md`
-- `.agents/skills/impeccable/reference/overdrive.md` -> `开发/12-GPCF/.agents/skills/impeccable/reference/overdrive.md`
-- `.agents/skills/impeccable/reference/polish.md` -> `开发/12-GPCF/.agents/skills/impeccable/reference/polish.md`
+- `.agents/skills/impeccable/reference/overdrive.md` -> `开发/01-GFIS/.agents/skills/impeccable/reference/overdrive.md`
+- `.agents/skills/impeccable/reference/polish.md` -> `开发/01-GFIS/.agents/skills/impeccable/reference/polish.md`
 - `.agents/skills/impeccable/reference/product.md` -> `开发/12-GPCF/.agents/skills/impeccable/reference/product.md`
 - `.agents/skills/impeccable/reference/quieter.md` -> `开发/12-GPCF/.agents/skills/impeccable/reference/quieter.md`
 - `.agents/skills/impeccable/reference/shape.md` -> `开发/12-GPCF/.agents/skills/impeccable/reference/shape.md`
 - `.agents/skills/impeccable/reference/typeset.md` -> `开发/12-GPCF/.agents/skills/impeccable/reference/typeset.md`
 - `.codex/skills/globalcloud-document-governance/SKILL.md` -> `开发/12-GPCF/.codex/skills/globalcloud-document-governance/SKILL.md`
 - `.codex/skills/globalcloud-loop-orchestrator/SKILL.md` -> `开发/12-GPCF/.codex/skills/globalcloud-loop-orchestrator/SKILL.md`
-- `.codex/skills/globalcloud-openspec-governance/README.md` -> `开发/12-GPCF/.codex/skills/globalcloud-openspec-governance/README.md`
-- `.codex/skills/globalcloud-openspec-governance/SKILL.md` -> `开发/12-GPCF/.codex/skills/globalcloud-openspec-governance/SKILL.md`
-- `.codex/skills/globalcloud-project-group-git-clean/README.md` -> `开发/12-GPCF/.codex/skills/globalcloud-project-group-git-clean/README.md`
-- `.codex/skills/globalcloud-project-group-git-clean/SKILL.md` -> `开发/12-GPCF/.codex/skills/globalcloud-project-group-git-clean/SKILL.md`
 - `.codex/skills/globalcloud-ui-quality-gate/README.md` -> `开发/12-GPCF/.codex/skills/globalcloud-ui-quality-gate/README.md`
 - `.codex/skills/globalcloud-ui-quality-gate/SKILL.md` -> `开发/12-GPCF/.codex/skills/globalcloud-ui-quality-gate/SKILL.md`
 - `.codex/skills/globalcloud-ui-quality-gate/references/README.md` -> `开发/12-GPCF/.codex/skills/globalcloud-ui-quality-gate/references/README.md`
@@ -75,64 +69,28 @@ count: 2279
 - `.codex/skills/ui-ux-pro-max/SKILL.md` -> `开发/12-GPCF/.codex/skills/ui-ux-pro-max/SKILL.md`
 - `.kunsdd/draft/f423b226-0141-4aac-8df6-728f615aa3a1/README.md` -> `开发/01-GFIS/.kunsdd/draft/f423b226-0141-4aac-8df6-728f615aa3a1/README.md`
 - `.kunsdd/draft/f423b226-0141-4aac-8df6-728f615aa3a1/requirement.md` -> `开发/01-GFIS/.kunsdd/draft/f423b226-0141-4aac-8df6-728f615aa3a1/requirement.md`
-- `.zcode/commands/README.md` -> `开发/02-GPC/.zcode/commands/README.md`
-- `01-architecture/GlobalCloud 项目群总体方案.md` -> `开发/90-跨项目架构/01-architecture/GlobalCloud 项目群总体方案.md`
 - `01-architecture/GlobalCloud世界资产体系候选范围与门禁边界.md` -> `开发/90-跨项目架构/01-architecture/GlobalCloud世界资产体系候选范围与门禁边界.md`
-- `01-architecture/GlobalCloud世界资产体系正式命名与产品系统架构总纲.md` -> `开发/90-跨项目架构/01-architecture/GlobalCloud世界资产体系正式命名与产品系统架构总纲.md`
-- `01-architecture/GlobalCloud项目群实施方案.md` -> `开发/90-跨项目架构/01-architecture/GlobalCloud项目群实施方案.md`
-- `01-architecture/GlobalCloud项目群总体架构迭代分析_v1.0.md` -> `开发/90-跨项目架构/01-architecture/GlobalCloud项目群总体架构迭代分析_v1.0.md`
-- `01-architecture/GlobalCloud项目群架构深化分析_v1.0.md` -> `开发/90-跨项目架构/01-architecture/GlobalCloud项目群架构深化分析_v1.0.md`
-- `01-architecture/GlobalCloud项目群系统架构图.md` -> `开发/90-跨项目架构/01-architecture/GlobalCloud项目群系统架构图.md`
-- `01-architecture/P1最小受理闭环_验收用例草案_v0.1.md` -> `开发/90-跨项目架构/01-architecture/P1最小受理闭环_验收用例草案_v0.1.md`
-- `01-architecture/WAME统一审核请求机制_v0.1.md` -> `开发/90-跨项目架构/01-architecture/WAME统一审核请求机制_v0.1.md`
-- `01-architecture/WAME请求包制作指南_v0.1.md` -> `开发/90-跨项目架构/01-architecture/WAME请求包制作指南_v0.1.md`
-- `01-architecture/WAS-XWAIL-AaaS三主项目方案协同矩阵与门禁.md` -> `开发/90-跨项目架构/01-architecture/WAS-XWAIL-AaaS三主项目方案协同矩阵与门禁.md`
-- `01-architecture/WAS世界资产体系总体方案.md` -> `开发/90-跨项目架构/01-architecture/WAS世界资产体系总体方案.md`
-- `01-architecture/WAS／Ontology-XWAIL语义契约与映射机制.md` -> `开发/90-跨项目架构/01-architecture/WAS／Ontology-XWAIL语义契约与映射机制.md`
-- `01-architecture/XAP回执与执行报告规格草案_v0.1.md` -> `开发/90-跨项目架构/01-architecture/XAP回执与执行报告规格草案_v0.1.md`
-- `01-architecture/XAP统一治理交换协议_Codex提案采纳意见_v0.1.md` -> `开发/90-跨项目架构/01-architecture/XAP统一治理交换协议_Codex提案采纳意见_v0.1.md`
-- `01-architecture/XWAIL-V1.2-Validator规则清单.md` -> `开发/90-跨项目架构/01-architecture/XWAIL-V1.2-Validator规则清单.md`
-- `01-architecture/XWAIL可扩展世界资产信息建模语言规范V1.2草案.md` -> `开发/90-跨项目架构/01-architecture/XWAIL可扩展世界资产信息建模语言规范V1.2草案.md`
-- `02-governance/GlobalCloud 项目群方案体系识别规则.md` -> `开发/91-治理与验收/02-governance/GlobalCloud 项目群方案体系识别规则.md`
-- `02-governance/GlobalCloud项目群Agent-Reach全量实施方案与执行提示词.md` -> `开发/91-治理与验收/02-governance/GlobalCloud项目群Agent-Reach全量实施方案与执行提示词.md`
-- `02-governance/GlobalCloud项目群Codex-DSH-Hermes协同开发与运行方案.md` -> `开发/91-治理与验收/02-governance/GlobalCloud项目群Codex-DSH-Hermes协同开发与运行方案.md`
-- `02-governance/GlobalCloud项目群Cognee纳入项目群及LOOP工程体系评估与POC方案.md` -> `开发/91-治理与验收/02-governance/GlobalCloud项目群Cognee纳入项目群及LOOP工程体系评估与POC方案.md`
 - `02-governance/GlobalCloud项目群Headroom-LCX全量实施方案与执行提示词.md` -> `开发/91-治理与验收/02-governance/GlobalCloud项目群Headroom-LCX全量实施方案与执行提示词.md`
 - `02-governance/GlobalCloud项目群Headroom接入应用与成本评估模型.md` -> `开发/91-治理与验收/02-governance/GlobalCloud项目群Headroom接入应用与成本评估模型.md`
 - `02-governance/GlobalCloud项目群WAS／Ontology全量实施方案与执行提示词.md` -> `开发/91-治理与验收/02-governance/GlobalCloud项目群WAS／Ontology全量实施方案与执行提示词.md`
-- `02-governance/GlobalCloud项目群总体方案治理专项目标与路线图.md` -> `开发/91-治理与验收/02-governance/GlobalCloud项目群总体方案治理专项目标与路线图.md`
 - `02-governance/GlobalCloud项目群文档与软件中文化治理规范.md` -> `开发/91-治理与验收/02-governance/GlobalCloud项目群文档与软件中文化治理规范.md`
-- `02-governance/loop/GKE-001长期实施调度提示词.md` -> `开发/91-治理与验收/02-governance/loop/GKE-001长期实施调度提示词.md`
 - `02-governance/loop/LOOP_AGENT_REACH_EXA_AUTH_PACK.md` -> `开发/91-治理与验收/02-governance/loop/LOOP_AGENT_REACH_EXA_AUTH_PACK.md`
 - `02-governance/loop/LOOP_AGENT_REACH_L3_CANDIDATE_PIPELINE.md` -> `开发/91-治理与验收/02-governance/loop/LOOP_AGENT_REACH_L3_CANDIDATE_PIPELINE.md`
 - `02-governance/loop/LOOP_CAPABILITY_REGISTRY.md` -> `开发/91-治理与验收/02-governance/loop/LOOP_CAPABILITY_REGISTRY.md`
-- `02-governance/loop/LOOP_CAPABILITY_USAGE_MATRIX.md` -> `开发/91-治理与验收/02-governance/loop/LOOP_CAPABILITY_USAGE_MATRIX.md`
 - `02-governance/loop/LOOP_CODEGRAPH_GOAL_OPTIMIZATION_PLAN.md` -> `开发/91-治理与验收/02-governance/loop/LOOP_CODEGRAPH_GOAL_OPTIMIZATION_PLAN.md`
 - `02-governance/loop/LOOP_CODEGRAPH_LARGE_FILE_POLICY.md` -> `开发/91-治理与验收/02-governance/loop/LOOP_CODEGRAPH_LARGE_FILE_POLICY.md`
-- `02-governance/loop/LOOP_CODEGRAPH_NORMALIZATION_CHECKLIST.md` -> `开发/91-治理与验收/02-governance/loop/LOOP_CODEGRAPH_NORMALIZATION_CHECKLIST.md`
 - `02-governance/loop/LOOP_CODEGRAPH_P1_PILOT_ADMISSION.md` -> `开发/91-治理与验收/02-governance/loop/LOOP_CODEGRAPH_P1_PILOT_ADMISSION.md`
 - `02-governance/loop/LOOP_CODEGRAPH_PROJECT_GROUP_COVERAGE.md` -> `开发/91-治理与验收/02-governance/loop/LOOP_CODEGRAPH_PROJECT_GROUP_COVERAGE.md`
-- `02-governance/loop/LOOP_DELIVERY_EFFICIENCY_CONTROL.md` -> `开发/91-治理与验收/02-governance/loop/LOOP_DELIVERY_EFFICIENCY_CONTROL.md`
 - `02-governance/loop/LOOP_ENGINEERING_FIVE_DIRECTION_IMPLEMENTATION.md` -> `开发/91-治理与验收/02-governance/loop/LOOP_ENGINEERING_FIVE_DIRECTION_IMPLEMENTATION.md`
 - `02-governance/loop/LOOP_ENGINEERING_MASTER_IMPLEMENTATION_PLAN.md` -> `开发/91-治理与验收/02-governance/loop/LOOP_ENGINEERING_MASTER_IMPLEMENTATION_PLAN.md`
-- `02-governance/loop/LOOP_GATE_CLASSIFICATION.md` -> `开发/91-治理与验收/02-governance/loop/LOOP_GATE_CLASSIFICATION.md`
 - `02-governance/loop/LOOP_GOVERNANCE_ROUND_REVIEW_PLAN.md` -> `开发/91-治理与验收/02-governance/loop/LOOP_GOVERNANCE_ROUND_REVIEW_PLAN.md`
-- `02-governance/loop/LOOP_GOVERNANCE_SLIMMING_AND_DELIVERY_RECOVERY.md` -> `开发/91-治理与验收/02-governance/loop/LOOP_GOVERNANCE_SLIMMING_AND_DELIVERY_RECOVERY.md`
-- `02-governance/loop/LOOP_MULTI_AGENT_EXECUTION_POLICY.md` -> `开发/91-治理与验收/02-governance/loop/LOOP_MULTI_AGENT_EXECUTION_POLICY.md`
-- `02-governance/loop/LOOP_SESSION_MAINLINE_CONTROL_PACK.md` -> `开发/91-治理与验收/02-governance/loop/LOOP_SESSION_MAINLINE_CONTROL_PACK.md`
-- `02-governance/loop/LOOP_SESSION_REGISTRY.md` -> `开发/91-治理与验收/02-governance/loop/LOOP_SESSION_REGISTRY.md`
-- `02-governance/loop/LOOP_UI_PRODUCT_FIRST_CONTROL.md` -> `开发/91-治理与验收/02-governance/loop/LOOP_UI_PRODUCT_FIRST_CONTROL.md`
 - `02-governance/loop/studio/LOOP-STUDIO-INITIALIZATION.md` -> `开发/91-治理与验收/02-governance/loop/studio/LOOP-STUDIO-INITIALIZATION.md`
 - `02-governance/loop/studio/README.md` -> `开发/91-治理与验收/02-governance/loop/studio/README.md`
-- `02-governance/project-implementation-plan-change-propagation-template.md` -> `开发/91-治理与验收/02-governance/project-implementation-plan-change-propagation-template.md`
-- `02-governance/project-master-plan-batch-1-authorization-request.md` -> `开发/91-治理与验收/02-governance/project-master-plan-batch-1-authorization-request.md`
-- `02-governance/project-master-plan-batch-2-authorization-request.md` -> `开发/91-治理与验收/02-governance/project-master-plan-batch-2-authorization-request.md`
-- `02-governance/project-master-plan-change-propagation-template.md` -> `开发/91-治理与验收/02-governance/project-master-plan-change-propagation-template.md`
 - `03-data-ai-knowledge/GC-Knowledge-Fabric-KDS十一池挂接规则.md` -> `开发/05-KDS/03-data-ai-knowledge/GC-Knowledge-Fabric-KDS十一池挂接规则.md`
 - `03-data-ai-knowledge/GC-Knowledge-Fabric-LOOP跟踪模板.md` -> `开发/05-KDS/03-data-ai-knowledge/GC-Knowledge-Fabric-LOOP跟踪模板.md`
 - `03-data-ai-knowledge/GC-Knowledge-Fabric-P0-11受控文档包实施清单.md` -> `开发/05-KDS/03-data-ai-knowledge/GC-Knowledge-Fabric-P0-11受控文档包实施清单.md`
 - `03-data-ai-knowledge/GC-Knowledge-Fabric-RAG准入与引用强度规则.md` -> `开发/05-KDS/03-data-ai-knowledge/GC-Knowledge-Fabric-RAG准入与引用强度规则.md`
-- `03-data-ai-knowledge/GC-Knowledge-Fabric-WAME门禁规则.md` -> `开发/05-KDS/03-data-ai-knowledge/GC-Knowledge-Fabric-WAME门禁规则.md`
+- `03-data-ai-knowledge/GC-Knowledge-Fabric-WAES门禁规则.md` -> `开发/05-KDS/03-data-ai-knowledge/GC-Knowledge-Fabric-WAES门禁规则.md`
 - `03-data-ai-knowledge/GC-Knowledge-Fabric-敏感资料入库规则.md` -> `开发/05-KDS/03-data-ai-knowledge/GC-Knowledge-Fabric-敏感资料入库规则.md`
 - `03-data-ai-knowledge/GC-Knowledge-Fabric-核心对象关系与最小字段契约.md` -> `开发/05-KDS/03-data-ai-knowledge/GC-Knowledge-Fabric-核心对象关系与最小字段契约.md`
 - `03-data-ai-knowledge/GC-Knowledge-Fabric-湖北磷材知识库目录.md` -> `开发/05-KDS/03-data-ai-knowledge/GC-Knowledge-Fabric-湖北磷材知识库目录.md`
@@ -156,41 +114,47 @@ count: 2279
 - `03-data-ai-knowledge/GlobalCloud湖北磷材缺口悬赏与人工确认任务包首批虚拟填报演练.md` -> `开发/05-KDS/03-data-ai-knowledge/GlobalCloud湖北磷材缺口悬赏与人工确认任务包首批虚拟填报演练.md`
 - `03-data-ai-knowledge/GlobalCloud湖北磷材评测运行记录首批空白台账.md` -> `开发/05-KDS/03-data-ai-knowledge/GlobalCloud湖北磷材评测运行记录首批空白台账.md`
 - `03-data-ai-knowledge/GlobalCloud湖北磷材首批知识对象运行空白台账.md` -> `开发/05-KDS/03-data-ai-knowledge/GlobalCloud湖北磷材首批知识对象运行空白台账.md`
-- `03-data-ai-knowledge/GlobalCloud知识工程应用体系实施方案.md` -> `开发/90-跨项目架构/03-data-ai-knowledge/GlobalCloud知识工程应用体系实施方案.md`
 - `03-data-ai-knowledge/GlobalCloud知识缺口悬赏与真实资料回收跟踪台账.md` -> `开发/05-KDS/03-data-ai-knowledge/GlobalCloud知识缺口悬赏与真实资料回收跟踪台账.md`
-- `03-data-ai-knowledge/GlobalCloud知识资产概念模型白皮书.md` -> `开发/90-跨项目架构/03-data-ai-knowledge/GlobalCloud知识资产概念模型白皮书.md`
-- `03-data-ai-knowledge/GlobalCloud知识资产模型体系综合方案.md` -> `开发/90-跨项目架构/03-data-ai-knowledge/GlobalCloud知识资产模型体系综合方案.md`
 - `03-data-ai-knowledge/GlobalCloud积分收益额度悬赏争议联动规则.md` -> `开发/05-KDS/03-data-ai-knowledge/GlobalCloud积分收益额度悬赏争议联动规则.md`
-- `03-data-ai-knowledge/GlobalCloud绿色供应链体系事件合同.md` -> `开发/05-KDS/03-data-ai-knowledge/GlobalCloud绿色供应链体系事件合同.md`
-- `03-data-ai-knowledge/GlobalCloud绿色供应链体系数据治理模型.md` -> `开发/05-KDS/03-data-ai-knowledge/GlobalCloud绿色供应链体系数据治理模型.md`
+- `03-data-ai-knowledge/GlobalCloud统一模型配置体系方案.md` -> `开发/90-跨项目架构/03-data-ai-knowledge/GlobalCloud统一模型配置体系方案.md`
+- `03-data-ai-knowledge/GlobalCloud绿色供应链体系全局初始化SOP方案.md` -> `开发/90-跨项目架构/03-data-ai-knowledge/GlobalCloud绿色供应链体系全局初始化SOP方案.md`
+- `03-data-ai-knowledge/GlobalCloud绿色供应链体系对象目录.md` -> `开发/90-跨项目架构/03-data-ai-knowledge/GlobalCloud绿色供应链体系对象目录.md`
 - `03-data-ai-knowledge/GlobalCloud绿色供应链分布式知识系统当前实施分析与下一阶段推进.md` -> `开发/05-KDS/03-data-ai-knowledge/GlobalCloud绿色供应链分布式知识系统当前实施分析与下一阶段推进.md`
-- `03-data-ai-knowledge/GlobalCloud绿色供应链角色视图KDS实体产物.md` -> `开发/05-KDS/03-data-ai-knowledge/GlobalCloud绿色供应链角色视图KDS实体产物.md`
 - `03-data-ai-knowledge/GlobalCloud葛化DKS052填报包dry-run验收与人工确认队列视图.md` -> `开发/05-KDS/03-data-ai-knowledge/GlobalCloud葛化DKS052填报包dry-run验收与人工确认队列视图.md`
-- `03-data-ai-knowledge/GlobalCloud葛化DKS053dry-run结果可填写执行包与责任方说明.md` -> `开发/05-KDS/03-data-ai-knowledge/GlobalCloud葛化DKS053dry-run结果可填写执行包与责任方说明.md`
-- `03-data-ai-knowledge/GlobalCloud葛化DKS054执行包派发授权信封与负例拒收门禁.md` -> `开发/05-KDS/03-data-ai-knowledge/GlobalCloud葛化DKS054执行包派发授权信封与负例拒收门禁.md`
-- `03-data-ai-knowledge/GlobalCloud葛化DKS055派发授权信封接收目录空状态hold队列与补证提醒门禁.md` -> `开发/05-KDS/03-data-ai-knowledge/GlobalCloud葛化DKS055派发授权信封接收目录空状态hold队列与补证提醒门禁.md`
+- `03-data-ai-knowledge/GlobalCloud葛化DKS053dry-run结果可填写执行包与责任方说明.md` -> `开发/90-跨项目架构/03-data-ai-knowledge/GlobalCloud葛化DKS053dry-run结果可填写执行包与责任方说明.md`
+- `03-data-ai-knowledge/GlobalCloud葛化DKS054执行包派发授权信封与负例拒收门禁.md` -> `开发/90-跨项目架构/03-data-ai-knowledge/GlobalCloud葛化DKS054执行包派发授权信封与负例拒收门禁.md`
+- `03-data-ai-knowledge/GlobalCloud葛化DKS055派发授权信封接收目录空状态hold队列与补证提醒门禁.md` -> `开发/90-跨项目架构/03-data-ai-knowledge/GlobalCloud葛化DKS055派发授权信封接收目录空状态hold队列与补证提醒门禁.md`
 - `03-data-ai-knowledge/GlobalCloud葛化DKS056补证提醒发送授权包与回执字段模板.md` -> `开发/05-KDS/03-data-ai-knowledge/GlobalCloud葛化DKS056补证提醒发送授权包与回执字段模板.md`
-- `03-data-ai-knowledge/GlobalCloud葛化DKS057发送授权包人工确认接收扫描空状态与授权缺口台账.md` -> `开发/05-KDS/03-data-ai-knowledge/GlobalCloud葛化DKS057发送授权包人工确认接收扫描空状态与授权缺口台账.md`
+- `03-data-ai-knowledge/GlobalCloud葛化DKS057发送授权包人工确认接收扫描空状态与授权缺口台账.md` -> `开发/90-跨项目架构/03-data-ai-knowledge/GlobalCloud葛化DKS057发送授权包人工确认接收扫描空状态与授权缺口台账.md`
 - `03-data-ai-knowledge/GlobalCloud葛化DKS060GFIS三助手NoWrite评测与人工发送授权补证执行包.md` -> `开发/05-KDS/03-data-ai-knowledge/GlobalCloud葛化DKS060GFIS三助手NoWrite评测与人工发送授权补证执行包.md`
 - `03-data-ai-knowledge/GlobalCloud葛化GFISAI助手三件套首批dry-run评测运行记录.md` -> `开发/05-KDS/03-data-ai-knowledge/GlobalCloud葛化GFISAI助手三件套首批dry-run评测运行记录.md`
 - `03-data-ai-knowledge/GlobalCloud葛化GFISAI助手内测运行记录首批空白台账.md` -> `开发/05-KDS/03-data-ai-knowledge/GlobalCloud葛化GFISAI助手内测运行记录首批空白台账.md`
 - `03-data-ai-knowledge/GlobalCloud葛化GFISAI助手内测问答与资料回收包联动规则.md` -> `开发/05-KDS/03-data-ai-knowledge/GlobalCloud葛化GFISAI助手内测问答与资料回收包联动规则.md`
 - `03-data-ai-knowledge/GlobalCloud葛化GFISAI助手首批问答与文档验收评测集.md` -> `开发/05-KDS/03-data-ai-knowledge/GlobalCloud葛化GFISAI助手首批问答与文档验收评测集.md`
 - `03-data-ai-knowledge/GlobalCloud葛化湖北磷材提交前审核清单与人工确认工作台.md` -> `开发/90-跨项目架构/03-data-ai-knowledge/GlobalCloud葛化湖北磷材提交前审核清单与人工确认工作台.md`
-- `03-data-ai-knowledge/GlobalCloud葛化湖北磷材真实脱敏资料接收任务包与首批人工审核演练.md` -> `开发/05-KDS/03-data-ai-knowledge/GlobalCloud葛化湖北磷材真实脱敏资料接收任务包与首批人工审核演练.md`
+- `03-data-ai-knowledge/GlobalCloud葛化湖北磷材真实脱敏资料接收任务包与首批人工审核演练.md` -> `开发/90-跨项目架构/03-data-ai-knowledge/GlobalCloud葛化湖北磷材真实脱敏资料接收任务包与首批人工审核演练.md`
 - `03-data-ai-knowledge/GlobalCloud葛化湖北磷材试点样本表与MMC参数基线落地包.md` -> `开发/90-跨项目架构/03-data-ai-knowledge/GlobalCloud葛化湖北磷材试点样本表与MMC参数基线落地包.md`
-- `03-data-ai-knowledge/GlobalCloud葛化湖北磷材首批填报实例包与提交门禁.md` -> `开发/05-KDS/03-data-ai-knowledge/GlobalCloud葛化湖北磷材首批填报实例包与提交门禁.md`
+- `03-data-ai-knowledge/GlobalCloud葛化湖北磷材首批填报实例包与提交门禁.md` -> `开发/90-跨项目架构/03-data-ai-knowledge/GlobalCloud葛化湖北磷材首批填报实例包与提交门禁.md`
+- `03-data-ai-knowledge/GlobalCloud葛化第一阶段GFISAI助手三件套实施清单.md` -> `开发/90-跨项目架构/03-data-ai-knowledge/GlobalCloud葛化第一阶段GFISAI助手三件套实施清单.md`
 - `03-data-ai-knowledge/GlobalCloud葛化订单运行母版字段与单据映射专项清单.md` -> `开发/05-KDS/03-data-ai-knowledge/GlobalCloud葛化订单运行母版字段与单据映射专项清单.md`
 - `03-data-ai-knowledge/GlobalCloud葛化辽宁远航与金融凭证缺口专项台账.md` -> `开发/05-KDS/03-data-ai-knowledge/GlobalCloud葛化辽宁远航与金融凭证缺口专项台账.md`
 - `03-data-ai-knowledge/GlobalCloud葛化辽宁远航补证请求包与金融凭证脱敏索引空白填报包.md` -> `开发/05-KDS/03-data-ai-knowledge/GlobalCloud葛化辽宁远航补证请求包与金融凭证脱敏索引空白填报包.md`
 - `03-data-ai-knowledge/GlobalCloud葛化首批资料包入库验收与GFISAI助手试运行任务书.md` -> `开发/90-跨项目架构/03-data-ai-knowledge/GlobalCloud葛化首批资料包入库验收与GFISAI助手试运行任务书.md`
-- `03-data-ai-knowledge/GlobalCloud项目群知识工程规范.md` -> `开发/90-跨项目架构/03-data-ai-knowledge/GlobalCloud项目群知识工程规范.md`
 - `03-data-ai-knowledge/GlobalCloud首批资料回收包字段验收与候选SOP写回建议.md` -> `开发/05-KDS/03-data-ai-knowledge/GlobalCloud首批资料回收包字段验收与候选SOP写回建议.md`
-- `04-ui-delivery/GlobalCloud项目群UI设计开发治理与评估统一规范.md` -> `开发/02-GPC/04-ui-delivery/GlobalCloud项目群UI设计开发治理与评估统一规范.md`
-- `04-ui-delivery/GlobalCloud项目群界面工程整体实施方案.md` -> `开发/02-GPC/04-ui-delivery/GlobalCloud项目群界面工程整体实施方案.md`
-- `04-ui-delivery/Studio操作工作台验证方案.md` -> `开发/12-GPCF/04-ui-delivery/Studio操作工作台验证方案.md`
-- `04-ui-delivery/WAME专业工作台母框架升级方案.md` -> `开发/02-GPC/04-ui-delivery/WAME专业工作台母框架升级方案.md`
-- `04-ui-delivery/WAME专业工作台母框架差距评估.md` -> `开发/02-GPC/04-ui-delivery/WAME专业工作台母框架差距评估.md`
+- `05-agent-team/GlobalCloud智能体团队Loop Engineering全面改进方案.md` -> `开发/12-GPCF/05-agent-team/GlobalCloud智能体团队Loop Engineering全面改进方案.md`
+- `05-agent-team/GlobalCloud智能体团队侧边聊天10条主线-团队责任分配总表.md` -> `开发/12-GPCF/05-agent-team/GlobalCloud智能体团队侧边聊天10条主线-团队责任分配总表.md`
+- `05-agent-team/GlobalCloud智能体团队总体规划与行动计划.md` -> `开发/12-GPCF/05-agent-team/GlobalCloud智能体团队总体规划与行动计划.md`
+- `05-agent-team/GlobalCloud智能体团队控制塔与周报机制.md` -> `开发/12-GPCF/05-agent-team/GlobalCloud智能体团队控制塔与周报机制.md`
+- `05-agent-team/GlobalCloud智能体团队显性智能体名录与可见机制.md` -> `开发/12-GPCF/05-agent-team/GlobalCloud智能体团队显性智能体名录与可见机制.md`
+- `05-agent-team/GlobalCloud智能体团队正式实施开发前准备100分量化评分提示词.md` -> `开发/12-GPCF/05-agent-team/GlobalCloud智能体团队正式实施开发前准备100分量化评分提示词.md`
+- `05-agent-team/GlobalCloud智能体团队正式实施开发前缺口关闭清单.md` -> `开发/12-GPCF/05-agent-team/GlobalCloud智能体团队正式实施开发前缺口关闭清单.md`
+- `05-agent-team/GlobalCloud智能体团队真实项目仓库映射与只读预检计划.md` -> `开发/12-GPCF/05-agent-team/GlobalCloud智能体团队真实项目仓库映射与只读预检计划.md`
+- `05-agent-team/GlobalCloud智能体团队阶段-工作-工具-技能-方法-效率-成本执行矩阵.md` -> `开发/12-GPCF/05-agent-team/GlobalCloud智能体团队阶段-工作-工具-技能-方法-效率-成本执行矩阵.md`
+- `05-agent-team/GlobalCloud智能体团队首版周报.md` -> `开发/12-GPCF/05-agent-team/GlobalCloud智能体团队首版周报.md`
+- `05-agent-team/GlobalCloud智能体团队首轮实施前验证入口判断.md` -> `开发/12-GPCF/05-agent-team/GlobalCloud智能体团队首轮实施前验证入口判断.md`
+- `05-agent-team/GlobalCloud智能体团队首轮实施前验证包总表.md` -> `开发/12-GPCF/05-agent-team/GlobalCloud智能体团队首轮实施前验证包总表.md`
+- `06-workstreams/宪衡专项会话状态报告.md` -> `开发/12-GPCF/06-workstreams/宪衡专项会话状态报告.md`
+- `06-workstreams/宪衡专项执行版包-侧线程草案.md` -> `开发/12-GPCF/06-workstreams/宪衡专项执行版包-侧线程草案.md`
 - `08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-219.md` -> `开发/01-GFIS/08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-219.md`
 - `08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-220.md` -> `开发/01-GFIS/08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-220.md`
 - `08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-221.md` -> `开发/01-GFIS/08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-221.md`
@@ -228,30 +192,48 @@ count: 2279
 - `08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-253.md` -> `开发/01-GFIS/08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-253.md`
 - `08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-254.md` -> `开发/01-GFIS/08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-254.md`
 - `08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-255.md` -> `开发/01-GFIS/08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-255.md`
+- `08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-256.md` -> `开发/01-GFIS/08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-256.md`
+- `08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-257.md` -> `开发/01-GFIS/08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-257.md`
+- `08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-258.md` -> `开发/01-GFIS/08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-258.md`
+- `08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-259.md` -> `开发/01-GFIS/08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-259.md`
+- `08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-260.md` -> `开发/01-GFIS/08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-260.md`
+- `08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-261.md` -> `开发/01-GFIS/08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-261.md`
+- `08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-262.md` -> `开发/01-GFIS/08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-262.md`
+- `08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-263.md` -> `开发/01-GFIS/08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-263.md`
+- `08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-264.md` -> `开发/01-GFIS/08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-264.md`
+- `08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-265.md` -> `开发/01-GFIS/08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-265.md`
+- `08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-266.md` -> `开发/01-GFIS/08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-266.md`
+- `08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-267.md` -> `开发/01-GFIS/08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-267.md`
+- `08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-268.md` -> `开发/01-GFIS/08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-268.md`
+- `08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-269.md` -> `开发/01-GFIS/08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-269.md`
+- `08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-DEV-001.md` -> `开发/01-GFIS/08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-DEV-001.md`
+- `08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-DEV-002.md` -> `开发/01-GFIS/08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-DEV-002.md`
+- `08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-DEV-003.md` -> `开发/01-GFIS/08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-DEV-003.md`
+- `09-status/globalcloud-chinese-localization-governance-report.md` -> `开发/91-治理与验收/09-status/globalcloud-chinese-localization-governance-report.md`
+- `09-status/session-main-task-summary-and-statement-control-boundary-20260622.md` -> `开发/91-治理与验收/09-status/session-main-task-summary-and-statement-control-boundary-20260622.md`
+- `AGENTS.md` -> `开发/12-GPCF/AGENTS.md`
+- `docs/codegraph/README.md` -> `开发/05-KDS/docs/codegraph/README.md`
+- `docs/codegraph/codegraph-authorization-model.md` -> `开发/05-KDS/docs/codegraph/codegraph-authorization-model.md`
+- `docs/codegraph/codegraph-dev-execution-admission.md` -> `开发/12-GPCF/docs/codegraph/codegraph-dev-execution-admission.md`
+- `docs/codegraph/codegraph-dev-execution-harness-gate.md` -> `开发/12-GPCF/docs/codegraph/codegraph-dev-execution-harness-gate.md`
+- `docs/codegraph/codegraph-kds-okf-mapping.md` -> `开发/05-KDS/docs/codegraph/codegraph-kds-okf-mapping.md`
+- `docs/codegraph/codegraph-loop-integration.md` -> `开发/05-KDS/docs/codegraph/codegraph-loop-integration.md`
+- `docs/codegraph/codegraph-positioning.md` -> `开发/05-KDS/docs/codegraph/codegraph-positioning.md`
+- `docs/codegraph/codegraph-waes-gate.md` -> `开发/05-KDS/docs/codegraph/codegraph-waes-gate.md`
+- `docs/gc-knowledge-fabric/README.md` -> `开发/05-KDS/docs/gc-knowledge-fabric/README.md`
+- `docs/gc-knowledge-fabric/acceptance-packet-dry-run-v0.1.md` -> `开发/05-KDS/docs/gc-knowledge-fabric/acceptance-packet-dry-run-v0.1.md`
+- `docs/gc-knowledge-fabric/acceptance-packet-ledger-dry-run-v0.1.md` -> `开发/05-KDS/docs/gc-knowledge-fabric/acceptance-packet-ledger-dry-run-v0.1.md`
+- `docs/gc-knowledge-fabric/agent-used-knowledge-policy.md` -> `开发/05-KDS/docs/gc-knowledge-fabric/agent-used-knowledge-policy.md`
+- `docs/gc-knowledge-fabric/api-skeleton-input-matrix-v0.1.md` -> `开发/05-KDS/docs/gc-knowledge-fabric/api-skeleton-input-matrix-v0.1.md`
+- `docs/gc-knowledge-fabric/approval-formal-evidence-preflight-dry-run-v0.1.md` -> `开发/05-KDS/docs/gc-knowledge-fabric/approval-formal-evidence-preflight-dry-run-v0.1.md`
+- `docs/gc-knowledge-fabric/brain-pkc-kwe-queue-read-model-policy.md` -> `开发/05-KDS/docs/gc-knowledge-fabric/brain-pkc-kwe-queue-read-model-policy.md`
+- `docs/gc-knowledge-fabric/brain-pkc-revenue-attribution-read-model-policy.md` -> `开发/05-KDS/docs/gc-knowledge-fabric/brain-pkc-revenue-attribution-read-model-policy.md`
 
 ## update
 
-count: 728
+count: 682
 
-- `.codex/README.md` -> `开发/12-GPCF/.codex/README.md`
-- `.codex/skills/README.md` -> `开发/12-GPCF/.codex/skills/README.md`
-- `.codex/skills/globalcloud-document-governance/README.md` -> `开发/12-GPCF/.codex/skills/globalcloud-document-governance/README.md`
-- `.codex/skills/globalcloud-document-governance/references/README.md` -> `开发/12-GPCF/.codex/skills/globalcloud-document-governance/references/README.md`
-- `.codex/skills/globalcloud-document-governance/references/anti-pollution-rules.md` -> `开发/12-GPCF/.codex/skills/globalcloud-document-governance/references/anti-pollution-rules.md`
-- `.codex/skills/globalcloud-document-governance/references/document-control-policy.md` -> `开发/12-GPCF/.codex/skills/globalcloud-document-governance/references/document-control-policy.md`
-- `.codex/skills/globalcloud-document-governance/references/kds-security-policy.md` -> `开发/12-GPCF/.codex/skills/globalcloud-document-governance/references/kds-security-policy.md`
-- `.codex/skills/globalcloud-document-governance/references/loop-integration-policy.md` -> `开发/12-GPCF/.codex/skills/globalcloud-document-governance/references/loop-integration-policy.md`
-- `.codex/skills/globalcloud-loop-orchestrator/README.md` -> `开发/12-GPCF/.codex/skills/globalcloud-loop-orchestrator/README.md`
-- `.codex/skills/globalcloud-loop-orchestrator/references/README.md` -> `开发/12-GPCF/.codex/skills/globalcloud-loop-orchestrator/references/README.md`
-- `.codex/skills/globalcloud-loop-orchestrator/references/customer-satisfaction-gates.md` -> `开发/12-GPCF/.codex/skills/globalcloud-loop-orchestrator/references/customer-satisfaction-gates.md`
-- `.codex/skills/globalcloud-loop-orchestrator/references/dependency-gates.md` -> `开发/12-GPCF/.codex/skills/globalcloud-loop-orchestrator/references/dependency-gates.md`
-- `.codex/skills/globalcloud-loop-orchestrator/references/evolution-gates.md` -> `开发/12-GPCF/.codex/skills/globalcloud-loop-orchestrator/references/evolution-gates.md`
-- `.codex/skills/globalcloud-loop-orchestrator/references/git-version-gates.md` -> `开发/12-GPCF/.codex/skills/globalcloud-loop-orchestrator/references/git-version-gates.md`
-- `.codex/skills/globalcloud-loop-orchestrator/references/quality-gates.md` -> `开发/12-GPCF/.codex/skills/globalcloud-loop-orchestrator/references/quality-gates.md`
-- `.codex/skills/globalcloud-loop-orchestrator/references/risk-rollback-gates.md` -> `开发/12-GPCF/.codex/skills/globalcloud-loop-orchestrator/references/risk-rollback-gates.md`
-- `.codex/skills/globalcloud-loop-orchestrator/references/stage-gates.md` -> `开发/12-GPCF/.codex/skills/globalcloud-loop-orchestrator/references/stage-gates.md`
 - `.codex/skills/globalcloud-loop-orchestrator/references/usability-gates.md` -> `开发/12-GPCF/.codex/skills/globalcloud-loop-orchestrator/references/usability-gates.md`
-- `.codex/skills/ui-ux-pro-max/README.md` -> `开发/12-GPCF/.codex/skills/ui-ux-pro-max/README.md`
 - `.okf/README.md` -> `开发/12-GPCF/.okf/README.md`
 - `.okf/architecture/README.md` -> `开发/12-GPCF/.okf/architecture/README.md`
 - `.okf/architecture/index.md` -> `开发/12-GPCF/.okf/architecture/index.md`
@@ -270,6 +252,7 @@ count: 728
 - `01-architecture/GlobalCloud智慧工厂专项架构图集.md` -> `开发/90-跨项目架构/01-architecture/GlobalCloud智慧工厂专项架构图集.md`
 - `01-architecture/GlobalCloud智慧工厂进一步梳理与提示词库.md` -> `开发/90-跨项目架构/01-architecture/GlobalCloud智慧工厂进一步梳理与提示词库.md`
 - `01-architecture/GlobalCloud智慧工厂项目群控制表.md` -> `开发/90-跨项目架构/01-architecture/GlobalCloud智慧工厂项目群控制表.md`
+- `01-architecture/GlobalCloud智慧工厂项目群架构图.md` -> `开发/90-跨项目架构/01-architecture/GlobalCloud智慧工厂项目群架构图.md`
 - `01-architecture/GlobalCloud绿色供应链体系-WIKI宪法体系与葛化项目映射分析.md` -> `开发/90-跨项目架构/01-architecture/GlobalCloud绿色供应链体系-WIKI宪法体系与葛化项目映射分析.md`
 - `01-architecture/GlobalCloud绿色供应链体系WAME控制塔与治理门禁图.md` -> `开发/90-跨项目架构/01-architecture/GlobalCloud绿色供应链体系WAME控制塔与治理门禁图.md`
 - `01-architecture/GlobalCloud绿色供应链体系WAME控制塔治理架构图.md` -> `开发/90-跨项目架构/01-architecture/GlobalCloud绿色供应链体系WAME控制塔治理架构图.md`
@@ -281,6 +264,7 @@ count: 728
 - `01-architecture/GlobalCloud绿色供应链体系总体实施路线与交付保障方案.md` -> `开发/90-跨项目架构/01-architecture/GlobalCloud绿色供应链体系总体实施路线与交付保障方案.md`
 - `01-architecture/GlobalCloud绿色供应链体系总架构.md` -> `开发/90-跨项目架构/01-architecture/GlobalCloud绿色供应链体系总架构.md`
 - `01-architecture/GlobalCloud绿色供应链体系整体评估模型与100分优化方案.md` -> `开发/90-跨项目架构/01-architecture/GlobalCloud绿色供应链体系整体评估模型与100分优化方案.md`
+- `01-architecture/GlobalCloud绿色供应链体系最新架构图.md` -> `开发/90-跨项目架构/01-architecture/GlobalCloud绿色供应链体系最新架构图.md`
 - `01-architecture/GlobalCloud绿色供应链体系真实层次架构图.md` -> `开发/90-跨项目架构/01-architecture/GlobalCloud绿色供应链体系真实层次架构图.md`
 - `01-architecture/GlobalCloud绿色供应链平台业务流架构图.md` -> `开发/90-跨项目架构/01-architecture/GlobalCloud绿色供应链平台业务流架构图.md`
 - `01-architecture/GlobalCloud绿色供应链平台主架构与宪法约束融合建议.md` -> `开发/90-跨项目架构/01-architecture/GlobalCloud绿色供应链平台主架构与宪法约束融合建议.md`
@@ -329,7 +313,7 @@ count: 728
 - `02-governance/loop/README.md` -> `开发/91-治理与验收/02-governance/loop/README.md`
 - `02-governance/ops/README.md` -> `开发/91-治理与验收/02-governance/ops/README.md`
 - `02-governance/ops/ecs-access-control-and-network-boundary.md` -> `开发/91-治理与验收/02-governance/ops/ecs-access-control-and-network-boundary.md`
-- `03-data-ai-knowledge/GPC 绿色供应链公共服务平台总体方案.md` -> `开发/05-KDS/03-data-ai-knowledge/GPC 绿色供应链公共服务平台总体方案.md`
+- `03-data-ai-knowledge/GPC 绿色供应链公共服务平台总体方案.md` -> `开发/90-跨项目架构/03-data-ai-knowledge/GPC 绿色供应链公共服务平台总体方案.md`
 - `03-data-ai-knowledge/GlobalCloud Loop开发KDS关联数据检索机制.md` -> `开发/05-KDS/03-data-ai-knowledge/GlobalCloud Loop开发KDS关联数据检索机制.md`
 - `03-data-ai-knowledge/GlobalCloudBrain-KDS知识编制与知识UI边界清单.md` -> `开发/05-KDS/03-data-ai-knowledge/GlobalCloudBrain-KDS知识编制与知识UI边界清单.md`
 - `03-data-ai-knowledge/GlobalCloudKDS11池与增强治理账本项目群级映射.md` -> `开发/05-KDS/03-data-ai-knowledge/GlobalCloudKDS11池与增强治理账本项目群级映射.md`
@@ -341,20 +325,19 @@ count: 728
 - `03-data-ai-knowledge/GlobalCloud模型授权审计计量与分期结算规划.md` -> `开发/90-跨项目架构/03-data-ai-knowledge/GlobalCloud模型授权审计计量与分期结算规划.md`
 - `03-data-ai-knowledge/GlobalCloud湖北磷材拓厂项目知识库与新工厂复制模板.md` -> `开发/05-KDS/03-data-ai-knowledge/GlobalCloud湖北磷材拓厂项目知识库与新工厂复制模板.md`
 - `03-data-ai-knowledge/GlobalCloud知识收益治理委员会DecisionRecord与争议处理模板.md` -> `开发/05-KDS/03-data-ai-knowledge/GlobalCloud知识收益治理委员会DecisionRecord与争议处理模板.md`
-- `03-data-ai-knowledge/GlobalCloud统一模型配置体系方案.md` -> `开发/05-KDS/03-data-ai-knowledge/GlobalCloud统一模型配置体系方案.md`
 - `03-data-ai-knowledge/GlobalCloud绿色供应链体系AI服务模型.md` -> `开发/05-KDS/03-data-ai-knowledge/GlobalCloud绿色供应链体系AI服务模型.md`
 - `03-data-ai-knowledge/GlobalCloud绿色供应链体系Edge接入与安全模型.md` -> `开发/90-跨项目架构/03-data-ai-knowledge/GlobalCloud绿色供应链体系Edge接入与安全模型.md`
 - `03-data-ai-knowledge/GlobalCloud绿色供应链体系LLM Wiki与Brain测试评估矩阵.md` -> `开发/05-KDS/03-data-ai-knowledge/GlobalCloud绿色供应链体系LLM Wiki与Brain测试评估矩阵.md`
 - `03-data-ai-knowledge/GlobalCloud绿色供应链体系SOP模板库.md` -> `开发/05-KDS/03-data-ai-knowledge/GlobalCloud绿色供应链体系SOP模板库.md`
+- `03-data-ai-knowledge/GlobalCloud绿色供应链体系事件合同.md` -> `开发/90-跨项目架构/03-data-ai-knowledge/GlobalCloud绿色供应链体系事件合同.md`
 - `03-data-ai-knowledge/GlobalCloud绿色供应链体系企业级知识库主存层与LLM Wiki-Brain升级图.md` -> `开发/05-KDS/03-data-ai-knowledge/GlobalCloud绿色供应链体系企业级知识库主存层与LLM Wiki-Brain升级图.md`
 - `03-data-ai-knowledge/GlobalCloud绿色供应链体系企业级知识库方案.md` -> `开发/05-KDS/03-data-ai-knowledge/GlobalCloud绿色供应链体系企业级知识库方案.md`
-- `03-data-ai-knowledge/GlobalCloud绿色供应链体系全局初始化SOP方案.md` -> `开发/05-KDS/03-data-ai-knowledge/GlobalCloud绿色供应链体系全局初始化SOP方案.md`
-- `03-data-ai-knowledge/GlobalCloud绿色供应链体系对象目录.md` -> `开发/05-KDS/03-data-ai-knowledge/GlobalCloud绿色供应链体系对象目录.md`
+- `03-data-ai-knowledge/GlobalCloud绿色供应链体系数据治理模型.md` -> `开发/90-跨项目架构/03-data-ai-knowledge/GlobalCloud绿色供应链体系数据治理模型.md`
 - `03-data-ai-knowledge/GlobalCloud绿色供应链体系知识与Agent授权治理总表.md` -> `开发/05-KDS/03-data-ai-knowledge/GlobalCloud绿色供应链体系知识与Agent授权治理总表.md`
 - `03-data-ai-knowledge/GlobalCloud绿色供应链体系知识主存层与知识引擎层分层方案.md` -> `开发/05-KDS/03-data-ai-knowledge/GlobalCloud绿色供应链体系知识主存层与知识引擎层分层方案.md`
-- `03-data-ai-knowledge/GlobalCloud绿色供应链体系系统-数据库边界总表.md` -> `开发/05-KDS/03-data-ai-knowledge/GlobalCloud绿色供应链体系系统-数据库边界总表.md`
-- `03-data-ai-knowledge/GlobalCloud绿色供应链体系资源仓库-业务对象映射总表.md` -> `开发/05-KDS/03-data-ai-knowledge/GlobalCloud绿色供应链体系资源仓库-业务对象映射总表.md`
-- `03-data-ai-knowledge/GlobalCloud绿色供应链体系连接器合同.md` -> `开发/05-KDS/03-data-ai-knowledge/GlobalCloud绿色供应链体系连接器合同.md`
+- `03-data-ai-knowledge/GlobalCloud绿色供应链体系系统-数据库边界总表.md` -> `开发/90-跨项目架构/03-data-ai-knowledge/GlobalCloud绿色供应链体系系统-数据库边界总表.md`
+- `03-data-ai-knowledge/GlobalCloud绿色供应链体系资源仓库-业务对象映射总表.md` -> `开发/90-跨项目架构/03-data-ai-knowledge/GlobalCloud绿色供应链体系资源仓库-业务对象映射总表.md`
+- `03-data-ai-knowledge/GlobalCloud绿色供应链体系连接器合同.md` -> `开发/90-跨项目架构/03-data-ai-knowledge/GlobalCloud绿色供应链体系连接器合同.md`
 - `03-data-ai-knowledge/GlobalCloud绿色供应链分布式知识系统完整实施提示词.md` -> `开发/05-KDS/03-data-ai-knowledge/GlobalCloud绿色供应链分布式知识系统完整实施提示词.md`
 - `03-data-ai-knowledge/GlobalCloud绿色供应链分布式知识系统实施治理方案.md` -> `开发/05-KDS/03-data-ai-knowledge/GlobalCloud绿色供应链分布式知识系统实施治理方案.md`
 - `03-data-ai-knowledge/GlobalCloud绿色供应链分布式知识系统对象字段与11池映射清单.md` -> `开发/05-KDS/03-data-ai-knowledge/GlobalCloud绿色供应链分布式知识系统对象字段与11池映射清单.md`
@@ -362,7 +345,6 @@ count: 728
 - `03-data-ai-knowledge/GlobalCloud绿色供应链分布式知识系统权限与密级矩阵.md` -> `开发/05-KDS/03-data-ai-knowledge/GlobalCloud绿色供应链分布式知识系统权限与密级矩阵.md`
 - `03-data-ai-knowledge/GlobalCloud绿色供应链合作单位接入与组织空间初始化清单.md` -> `开发/05-KDS/03-data-ai-knowledge/GlobalCloud绿色供应链合作单位接入与组织空间初始化清单.md`
 - `03-data-ai-knowledge/GlobalCloud葛化GFISAI助手内测运行记录模板.md` -> `开发/05-KDS/03-data-ai-knowledge/GlobalCloud葛化GFISAI助手内测运行记录模板.md`
-- `03-data-ai-knowledge/GlobalCloud葛化第一阶段GFISAI助手三件套实施清单.md` -> `开发/05-KDS/03-data-ai-knowledge/GlobalCloud葛化第一阶段GFISAI助手三件套实施清单.md`
 - `03-data-ai-knowledge/GlobalCloud辽宁远航链路证据缺口请求包与知识悬赏草案.md` -> `开发/05-KDS/03-data-ai-knowledge/GlobalCloud辽宁远航链路证据缺口请求包与知识悬赏草案.md`
 - `03-data-ai-knowledge/GlobalCloud项目模型引用与用户模型偏好方案.md` -> `开发/90-跨项目架构/03-data-ai-knowledge/GlobalCloud项目模型引用与用户模型偏好方案.md`
 - `03-data-ai-knowledge/GlobalCloud项目群与分布式KDS关系总图.md` -> `开发/05-KDS/03-data-ai-knowledge/GlobalCloud项目群与分布式KDS关系总图.md`
@@ -391,35 +373,23 @@ count: 728
 - `05-agent-team/GlobalCloud智能体团队12个交付包责任分解表.md` -> `开发/08-XiaoC/05-agent-team/GlobalCloud智能体团队12个交付包责任分解表.md`
 - `05-agent-team/GlobalCloud智能体团队6个专项首轮实施前验证包执行矩阵.md` -> `开发/08-XiaoC/05-agent-team/GlobalCloud智能体团队6个专项首轮实施前验证包执行矩阵.md`
 - `05-agent-team/GlobalCloud智能体团队6个专项首轮实施前验证执行台账.md` -> `开发/08-XiaoC/05-agent-team/GlobalCloud智能体团队6个专项首轮实施前验证执行台账.md`
-- `05-agent-team/GlobalCloud智能体团队Loop Engineering全面改进方案.md` -> `开发/08-XiaoC/05-agent-team/GlobalCloud智能体团队Loop Engineering全面改进方案.md`
 - `05-agent-team/GlobalCloud智能体团队PMBOK项目管理台账.md` -> `开发/08-XiaoC/05-agent-team/GlobalCloud智能体团队PMBOK项目管理台账.md`
 - `05-agent-team/GlobalCloud智能体团队下一步执行清单.md` -> `开发/08-XiaoC/05-agent-team/GlobalCloud智能体团队下一步执行清单.md`
-- `05-agent-team/GlobalCloud智能体团队专项回报汇总台账.md` -> `开发/08-XiaoC/05-agent-team/GlobalCloud智能体团队专项回报汇总台账.md`
+- `05-agent-team/GlobalCloud智能体团队专项回报汇总台账.md` -> `开发/12-GPCF/05-agent-team/GlobalCloud智能体团队专项回报汇总台账.md`
 - `05-agent-team/GlobalCloud智能体团队专项执行版包模板.md` -> `开发/08-XiaoC/05-agent-team/GlobalCloud智能体团队专项执行版包模板.md`
-- `05-agent-team/GlobalCloud智能体团队侧边聊天10条主线-团队责任分配总表.md` -> `开发/08-XiaoC/05-agent-team/GlobalCloud智能体团队侧边聊天10条主线-团队责任分配总表.md`
 - `05-agent-team/GlobalCloud智能体团队侧边聊天10条主线-当前实施准备完成度总表.md` -> `开发/08-XiaoC/05-agent-team/GlobalCloud智能体团队侧边聊天10条主线-当前实施准备完成度总表.md`
-- `05-agent-team/GlobalCloud智能体团队侧边聊天完整归纳总览.md` -> `开发/08-XiaoC/05-agent-team/GlobalCloud智能体团队侧边聊天完整归纳总览.md`
-- `05-agent-team/GlobalCloud智能体团队实施前准备完成结论.md` -> `开发/08-XiaoC/05-agent-team/GlobalCloud智能体团队实施前准备完成结论.md`
+- `05-agent-team/GlobalCloud智能体团队侧边聊天完整归纳总览.md` -> `开发/12-GPCF/05-agent-team/GlobalCloud智能体团队侧边聊天完整归纳总览.md`
+- `05-agent-team/GlobalCloud智能体团队实施前准备完成结论.md` -> `开发/12-GPCF/05-agent-team/GlobalCloud智能体团队实施前准备完成结论.md`
 - `05-agent-team/GlobalCloud智能体团队实施前准备差距清单.md` -> `开发/08-XiaoC/05-agent-team/GlobalCloud智能体团队实施前准备差距清单.md`
 - `05-agent-team/GlobalCloud智能体团队实施前准备目标模式要求.md` -> `开发/08-XiaoC/05-agent-team/GlobalCloud智能体团队实施前准备目标模式要求.md`
 - `05-agent-team/GlobalCloud智能体团队实施前证据与阻塞总表.md` -> `开发/08-XiaoC/05-agent-team/GlobalCloud智能体团队实施前证据与阻塞总表.md`
-- `05-agent-team/GlobalCloud智能体团队当前总目标.md` -> `开发/08-XiaoC/05-agent-team/GlobalCloud智能体团队当前总目标.md`
-- `05-agent-team/GlobalCloud智能体团队总体规划与行动计划.md` -> `开发/08-XiaoC/05-agent-team/GlobalCloud智能体团队总体规划与行动计划.md`
-- `05-agent-team/GlobalCloud智能体团队控制塔与周报机制.md` -> `开发/08-XiaoC/05-agent-team/GlobalCloud智能体团队控制塔与周报机制.md`
+- `05-agent-team/GlobalCloud智能体团队当前总目标.md` -> `开发/12-GPCF/05-agent-team/GlobalCloud智能体团队当前总目标.md`
 - `05-agent-team/GlobalCloud智能体团队文档全量盘点与分类总表.md` -> `开发/08-XiaoC/05-agent-team/GlobalCloud智能体团队文档全量盘点与分类总表.md`
 - `05-agent-team/GlobalCloud智能体团队文档清理与补充完善建议.md` -> `开发/08-XiaoC/05-agent-team/GlobalCloud智能体团队文档清理与补充完善建议.md`
-- `05-agent-team/GlobalCloud智能体团队文档理解与纳入审计.md` -> `开发/08-XiaoC/05-agent-team/GlobalCloud智能体团队文档理解与纳入审计.md`
-- `05-agent-team/GlobalCloud智能体团队显性智能体名录与可见机制.md` -> `开发/08-XiaoC/05-agent-team/GlobalCloud智能体团队显性智能体名录与可见机制.md`
+- `05-agent-team/GlobalCloud智能体团队文档理解与纳入审计.md` -> `开发/12-GPCF/05-agent-team/GlobalCloud智能体团队文档理解与纳入审计.md`
 - `05-agent-team/GlobalCloud智能体团队本阶段首轮实施前验证目标.md` -> `开发/08-XiaoC/05-agent-team/GlobalCloud智能体团队本阶段首轮实施前验证目标.md`
-- `05-agent-team/GlobalCloud智能体团队正式实施开发前准备100分量化评分提示词.md` -> `开发/08-XiaoC/05-agent-team/GlobalCloud智能体团队正式实施开发前准备100分量化评分提示词.md`
 - `05-agent-team/GlobalCloud智能体团队正式实施开发前准备评分文档纳入覆盖矩阵.md` -> `开发/12-GPCF/05-agent-team/GlobalCloud智能体团队正式实施开发前准备评分文档纳入覆盖矩阵.md`
-- `05-agent-team/GlobalCloud智能体团队正式实施开发前缺口关闭清单.md` -> `开发/08-XiaoC/05-agent-team/GlobalCloud智能体团队正式实施开发前缺口关闭清单.md`
-- `05-agent-team/GlobalCloud智能体团队真实项目仓库映射与只读预检计划.md` -> `开发/08-XiaoC/05-agent-team/GlobalCloud智能体团队真实项目仓库映射与只读预检计划.md`
-- `05-agent-team/GlobalCloud智能体团队阶段-工作-工具-技能-方法-效率-成本执行矩阵.md` -> `开发/08-XiaoC/05-agent-team/GlobalCloud智能体团队阶段-工作-工具-技能-方法-效率-成本执行矩阵.md`
 - `05-agent-team/GlobalCloud智能体团队阶段行动计划.md` -> `开发/08-XiaoC/05-agent-team/GlobalCloud智能体团队阶段行动计划.md`
-- `05-agent-team/GlobalCloud智能体团队首版周报.md` -> `开发/08-XiaoC/05-agent-team/GlobalCloud智能体团队首版周报.md`
-- `05-agent-team/GlobalCloud智能体团队首轮实施前验证入口判断.md` -> `开发/08-XiaoC/05-agent-team/GlobalCloud智能体团队首轮实施前验证入口判断.md`
-- `05-agent-team/GlobalCloud智能体团队首轮实施前验证包总表.md` -> `开发/08-XiaoC/05-agent-team/GlobalCloud智能体团队首轮实施前验证包总表.md`
 - `05-agent-team/GlobalCloud智能体实施团队准备度评估.md` -> `开发/08-XiaoC/05-agent-team/GlobalCloud智能体实施团队准备度评估.md`
 - `05-agent-team/README.md` -> `开发/08-XiaoC/05-agent-team/README.md`
 - `06-workstreams/README.md` -> `开发/08-XiaoC/06-workstreams/README.md`
@@ -429,10 +399,40 @@ count: 728
 - `06-workstreams/厂行专项正式只读预检结论.md` -> `开发/12-GPCF/06-workstreams/厂行专项正式只读预检结论.md`
 - `06-workstreams/厂行专项首轮实施前验证包.md` -> `开发/12-GPCF/06-workstreams/厂行专项首轮实施前验证包.md`
 - `06-workstreams/厂行专项首轮实施前验证执行记录.md` -> `开发/12-GPCF/06-workstreams/厂行专项首轮实施前验证执行记录.md`
-- `06-workstreams/宪衡专项会话状态报告.md` -> `开发/08-XiaoC/06-workstreams/宪衡专项会话状态报告.md`
 - `06-workstreams/宪衡专项可执行验证入口清单.md` -> `开发/12-GPCF/06-workstreams/宪衡专项可执行验证入口清单.md`
-- `06-workstreams/宪衡专项执行版包-侧线程草案.md` -> `开发/08-XiaoC/06-workstreams/宪衡专项执行版包-侧线程草案.md`
 - `06-workstreams/宪衡专项正式只读预检结论.md` -> `开发/12-GPCF/06-workstreams/宪衡专项正式只读预检结论.md`
+- `06-workstreams/宪衡专项首轮实施前验证包.md` -> `开发/12-GPCF/06-workstreams/宪衡专项首轮实施前验证包.md`
+- `06-workstreams/宪衡专项首轮实施前验证执行记录.md` -> `开发/12-GPCF/06-workstreams/宪衡专项首轮实施前验证执行记录.md`
+- `06-workstreams/接稳专项会话状态报告.md` -> `开发/08-XiaoC/06-workstreams/接稳专项会话状态报告.md`
+- `06-workstreams/数枢专项会话状态报告.md` -> `开发/08-XiaoC/06-workstreams/数枢专项会话状态报告.md`
+- `06-workstreams/数枢专项正式只读预检结论.md` -> `开发/12-GPCF/06-workstreams/数枢专项正式只读预检结论.md`
+- `06-workstreams/数枢专项首轮实施前验证包.md` -> `开发/12-GPCF/06-workstreams/数枢专项首轮实施前验证包.md`
+- `06-workstreams/数枢专项首轮实施前验证执行记录.md` -> `开发/12-GPCF/06-workstreams/数枢专项首轮实施前验证执行记录.md`
+- `06-workstreams/灵策与评证专项会话状态报告.md` -> `开发/08-XiaoC/06-workstreams/灵策与评证专项会话状态报告.md`
+- `06-workstreams/灵策与评证专项正式只读预检结论.md` -> `开发/08-XiaoC/06-workstreams/灵策与评证专项正式只读预检结论.md`
+- `06-workstreams/灵策与评证专项首轮实施前验证包.md` -> `开发/08-XiaoC/06-workstreams/灵策与评证专项首轮实施前验证包.md`
+- `06-workstreams/灵策与评证专项首轮实施前验证执行记录.md` -> `开发/08-XiaoC/06-workstreams/灵策与评证专项首轮实施前验证执行记录.md`
+- `06-workstreams/灵策专项会话状态报告.md` -> `开发/08-XiaoC/06-workstreams/灵策专项会话状态报告.md`
+- `06-workstreams/灵策专项首轮实施前执行记录.md` -> `开发/08-XiaoC/06-workstreams/灵策专项首轮实施前执行记录.md`
+- `06-workstreams/灵策专项首轮实施前验证包.md` -> `开发/08-XiaoC/06-workstreams/灵策专项首轮实施前验证包.md`
+- `06-workstreams/知源专项会话状态报告.md` -> `开发/08-XiaoC/06-workstreams/知源专项会话状态报告.md`
+- `06-workstreams/知源专项会话状态报告模板.md` -> `开发/08-XiaoC/06-workstreams/知源专项会话状态报告模板.md`
+- `06-workstreams/知源专项正式只读预检结论.md` -> `开发/12-GPCF/06-workstreams/知源专项正式只读预检结论.md`
+- `06-workstreams/知源专项首轮实施前验证包.md` -> `开发/12-GPCF/06-workstreams/知源专项首轮实施前验证包.md`
+- `06-workstreams/知源专项首轮实施前验证执行记录.md` -> `开发/12-GPCF/06-workstreams/知源专项首轮实施前验证执行记录.md`
+- `06-workstreams/证验专项会话状态报告.md` -> `开发/08-XiaoC/06-workstreams/证验专项会话状态报告.md`
+- `06-workstreams/证验专项首轮实施前执行记录.md` -> `开发/08-XiaoC/06-workstreams/证验专项首轮实施前执行记录.md`
+- `06-workstreams/证验专项首轮实施前验证包.md` -> `开发/08-XiaoC/06-workstreams/证验专项首轮实施前验证包.md`
+- `06-workstreams/评衡专项会话状态报告.md` -> `开发/08-XiaoC/06-workstreams/评衡专项会话状态报告.md`
+- `06-workstreams/评衡专项首轮实施前执行记录.md` -> `开发/08-XiaoC/06-workstreams/评衡专项首轮实施前执行记录.md`
+- `06-workstreams/评衡专项首轮实施前验证包.md` -> `开发/12-GPCF/06-workstreams/评衡专项首轮实施前验证包.md`
+- `06-workstreams/链同专项会话状态报告.md` -> `开发/08-XiaoC/06-workstreams/链同专项会话状态报告.md`
+- `06-workstreams/链同专项会话状态报告模板.md` -> `开发/08-XiaoC/06-workstreams/链同专项会话状态报告模板.md`
+- `06-workstreams/链同专项执行版包-侧线程草案.md` -> `开发/08-XiaoC/06-workstreams/链同专项执行版包-侧线程草案.md`
+- `06-workstreams/链同专项正式只读预检结论.md` -> `开发/12-GPCF/06-workstreams/链同专项正式只读预检结论.md`
+- `06-workstreams/链同专项首轮实施前验证包.md` -> `开发/12-GPCF/06-workstreams/链同专项首轮实施前验证包.md`
+- `06-workstreams/链同专项首轮实施前验证执行记录.md` -> `开发/12-GPCF/06-workstreams/链同专项首轮实施前验证执行记录.md`
+- `07-acceptance/GlobalCloud绿色供应链体系一期验收矩阵.md` -> `开发/91-治理与验收/07-acceptance/GlobalCloud绿色供应链体系一期验收矩阵.md`
 
 ## conflicts
 
@@ -453,20 +453,10 @@ count: 2
 
 ## skip
 
-count: 243
+count: 197
 
 - `.agents/skills/impeccable/SKILL.md` -> `开发/12-GPCF/.agents/skills/impeccable/SKILL.md`
 - `.harness/README.md` -> `开发/92-证据与会话归档/.harness/README.md`
-- `.harness/runs/20260822-235654-gcworld-evidence-twin-foundation/README.md` -> `开发/92-证据与会话归档/.harness/runs/20260822-235654-gcworld-evidence-twin-foundation/README.md`
-- `.harness/runs/20260822-235654-gcworld-evidence-twin-foundation/acceptance-matrix.md` -> `开发/92-证据与会话归档/.harness/runs/20260822-235654-gcworld-evidence-twin-foundation/acceptance-matrix.md`
-- `.harness/runs/20260822-235654-gcworld-evidence-twin-foundation/evidence/README.md` -> `开发/92-证据与会话归档/.harness/runs/20260822-235654-gcworld-evidence-twin-foundation/evidence/README.md`
-- `.harness/runs/20260822-235654-gcworld-evidence-twin-foundation/logs/README.md` -> `开发/92-证据与会话归档/.harness/runs/20260822-235654-gcworld-evidence-twin-foundation/logs/README.md`
-- `.harness/runs/20260822-235654-gcworld-evidence-twin-foundation/patches/README.md` -> `开发/92-证据与会话归档/.harness/runs/20260822-235654-gcworld-evidence-twin-foundation/patches/README.md`
-- `.harness/runs/20260824-092905-gcworld-integration-proposals/README.md` -> `开发/92-证据与会话归档/.harness/runs/20260824-092905-gcworld-integration-proposals/README.md`
-- `.harness/runs/20260824-092905-gcworld-integration-proposals/evidence/README.md` -> `开发/92-证据与会话归档/.harness/runs/20260824-092905-gcworld-integration-proposals/evidence/README.md`
-- `.harness/runs/20260824-094555-gcworld-kds-integration-admission/README.md` -> `开发/92-证据与会话归档/.harness/runs/20260824-094555-gcworld-kds-integration-admission/README.md`
-- `.harness/runs/20260825-004215-gcworld-kds-integration-admission-refresh/README.md` -> `开发/92-证据与会话归档/.harness/runs/20260825-004215-gcworld-kds-integration-admission-refresh/README.md`
-- `.harness/runs/20261010-075917-spaceai-studio-multiplatform-refactor/README.md` -> `开发/92-证据与会话归档/.harness/runs/20261010-075917-spaceai-studio-multiplatform-refactor/README.md`
 - `.harness/runs/README.md` -> `开发/92-证据与会话归档/.harness/runs/README.md`
 - `.harness/runs/gbrain-admin-console-v1-20260610-201442/README.md` -> `开发/92-证据与会话归档/.harness/runs/gbrain-admin-console-v1-20260610-201442/README.md`
 - `.harness/runs/gbrain-admin-console-v1-20260610-201442/acceptance-matrix.md` -> `开发/92-证据与会话归档/.harness/runs/gbrain-admin-console-v1-20260610-201442/acceptance-matrix.md`
@@ -544,114 +534,121 @@ count: 243
 - `.harness/runs/kds-real-token-sync-20260613-062146/patches/README.md` -> `开发/92-证据与会话归档/.harness/runs/kds-real-token-sync-20260613-062146/patches/README.md`
 - `.harness/runs/kds-real-token-sync-20260613-062146/status-audit.md` -> `开发/92-证据与会话归档/.harness/runs/kds-real-token-sync-20260613-062146/status-audit.md`
 - `.harness/runs/kds-real-token-sync-20260613-062146/workspaces/README.md` -> `开发/92-证据与会话归档/.harness/runs/kds-real-token-sync-20260613-062146/workspaces/README.md`
-- `01-architecture/GlobalCloud智慧工厂项目群架构图.md` -> `开发/90-跨项目架构/01-architecture/GlobalCloud智慧工厂项目群架构图.md`
-- `01-architecture/GlobalCloud绿色供应链体系最新架构图.md` -> `开发/90-跨项目架构/01-architecture/GlobalCloud绿色供应链体系最新架构图.md`
+- `.okf/bundles/architecture-v0.1/concepts/01-architecture/AI驱动GFIS与GlobalCloud体系结合分析.md` -> `开发/12-GPCF/.okf/bundles/architecture-v0.1/concepts/01-architecture/AI驱动GFIS与GlobalCloud体系结合分析.md`
+- `.okf/bundles/architecture-v0.1/concepts/01-architecture/GlobalCloud体系最小闭环与三阶段激活深度总表.md` -> `开发/12-GPCF/.okf/bundles/architecture-v0.1/concepts/01-architecture/GlobalCloud体系最小闭环与三阶段激活深度总表.md`
+- `.okf/bundles/architecture-v0.1/concepts/01-architecture/GlobalCloud绿色供应链体系WAME控制塔治理架构图.md` -> `开发/12-GPCF/.okf/bundles/architecture-v0.1/concepts/01-architecture/GlobalCloud绿色供应链体系WAME控制塔治理架构图.md`
+- `.okf/bundles/architecture-v0.1/concepts/01-architecture/GlobalCloud绿色供应链体系总架构.md` -> `开发/12-GPCF/.okf/bundles/architecture-v0.1/concepts/01-architecture/GlobalCloud绿色供应链体系总架构.md`
+- `.okf/bundles/architecture-v0.1/concepts/01-architecture/GlobalCloud项目群交叉分析报告.md` -> `开发/12-GPCF/.okf/bundles/architecture-v0.1/concepts/01-architecture/GlobalCloud项目群交叉分析报告.md`
+- `.okf/bundles/architecture-v0.1/concepts/01-architecture/GlobalCloud项目群最小闭环L4实施方案.md` -> `开发/12-GPCF/.okf/bundles/architecture-v0.1/concepts/01-architecture/GlobalCloud项目群最小闭环L4实施方案.md`
+- `.okf/bundles/architecture-v0.1/concepts/01-architecture/index.md` -> `开发/12-GPCF/.okf/bundles/architecture-v0.1/concepts/01-architecture/index.md`
+- `.okf/bundles/architecture-v0.1/index.md` -> `开发/12-GPCF/.okf/bundles/architecture-v0.1/index.md`
+- `.okf/bundles/architecture-v0.1/log.md` -> `开发/12-GPCF/.okf/bundles/architecture-v0.1/log.md`
+- `.okf/bundles/governance-v0.1/concepts/02-governance/GlobalCloud项目群文档综合治理规范.md` -> `开发/12-GPCF/.okf/bundles/governance-v0.1/concepts/02-governance/GlobalCloud项目群文档综合治理规范.md`
+- `.okf/bundles/governance-v0.1/concepts/02-governance/GlobalCloud项目群文档防污染规则.md` -> `开发/12-GPCF/.okf/bundles/governance-v0.1/concepts/02-governance/GlobalCloud项目群文档防污染规则.md`
+- `.okf/bundles/governance-v0.1/concepts/02-governance/index.md` -> `开发/12-GPCF/.okf/bundles/governance-v0.1/concepts/02-governance/index.md`
+- `.okf/bundles/governance-v0.1/concepts/02-governance/loop/LOOP_CONTROL_BOARD.md` -> `开发/12-GPCF/.okf/bundles/governance-v0.1/concepts/02-governance/loop/LOOP_CONTROL_BOARD.md`
+- `.okf/bundles/governance-v0.1/concepts/02-governance/loop/LOOP_EXECUTION_RULES.md` -> `开发/12-GPCF/.okf/bundles/governance-v0.1/concepts/02-governance/loop/LOOP_EXECUTION_RULES.md`
+- `.okf/bundles/governance-v0.1/concepts/02-governance/loop/LOOP_GOVERNANCE_OPERATING_BOUNDARY.md` -> `开发/12-GPCF/.okf/bundles/governance-v0.1/concepts/02-governance/loop/LOOP_GOVERNANCE_OPERATING_BOUNDARY.md`
+- `.okf/bundles/governance-v0.1/concepts/02-governance/loop/LOOP_GOVERNANCE_PHASE_GOAL.md` -> `开发/12-GPCF/.okf/bundles/governance-v0.1/concepts/02-governance/loop/LOOP_GOVERNANCE_PHASE_GOAL.md`
+- `.okf/bundles/governance-v0.1/concepts/02-governance/loop/index.md` -> `开发/12-GPCF/.okf/bundles/governance-v0.1/concepts/02-governance/loop/index.md`
+- `.okf/bundles/governance-v0.1/concepts/09-status/index.md` -> `开发/12-GPCF/.okf/bundles/governance-v0.1/concepts/09-status/index.md`
+- `.okf/bundles/governance-v0.1/concepts/09-status/kds-phase10-governance-sustainment-plan.md` -> `开发/12-GPCF/.okf/bundles/governance-v0.1/concepts/09-status/kds-phase10-governance-sustainment-plan.md`
+- `.okf/bundles/governance-v0.1/concepts/09-status/odf-introduction-governance-plan.md` -> `开发/12-GPCF/.okf/bundles/governance-v0.1/concepts/09-status/odf-introduction-governance-plan.md`
+- `.okf/bundles/governance-v0.1/concepts/09-status/odf-phase2-expansion-plan.md` -> `开发/12-GPCF/.okf/bundles/governance-v0.1/concepts/09-status/odf-phase2-expansion-plan.md`
+- `.okf/bundles/governance-v0.1/concepts/09-status/odf-phase3-schema-gate-plan.md` -> `开发/12-GPCF/.okf/bundles/governance-v0.1/concepts/09-status/odf-phase3-schema-gate-plan.md`
+- `.okf/bundles/governance-v0.1/concepts/09-status/odf-phase4-small-batch-admission-plan.md` -> `开发/12-GPCF/.okf/bundles/governance-v0.1/concepts/09-status/odf-phase4-small-batch-admission-plan.md`
+- `.okf/bundles/governance-v0.1/concepts/09-status/odf-phase5-change-request-governance-plan.md` -> `开发/12-GPCF/.okf/bundles/governance-v0.1/concepts/09-status/odf-phase5-change-request-governance-plan.md`
+- `.okf/bundles/governance-v0.1/concepts/09-status/odf-phase6-manual-confirmation-workbench-plan.md` -> `开发/12-GPCF/.okf/bundles/governance-v0.1/concepts/09-status/odf-phase6-manual-confirmation-workbench-plan.md`
+- `.okf/bundles/governance-v0.1/concepts/09-status/odf-phase7-small-batch-execution-plan.md` -> `开发/12-GPCF/.okf/bundles/governance-v0.1/concepts/09-status/odf-phase7-small-batch-execution-plan.md`
+- `.okf/bundles/governance-v0.1/concepts/09-status/odf-phase8-drift-monitoring-plan.md` -> `开发/12-GPCF/.okf/bundles/governance-v0.1/concepts/09-status/odf-phase8-drift-monitoring-plan.md`
+- `.okf/bundles/governance-v0.1/concepts/09-status/odf-phase9-dynamic-source-stabilization-plan.md` -> `开发/12-GPCF/.okf/bundles/governance-v0.1/concepts/09-status/odf-phase9-dynamic-source-stabilization-plan.md`
+- `.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/evidence-index.md` -> `开发/12-GPCF/.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/evidence-index.md`
+- `.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/index.md` -> `开发/12-GPCF/.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/index.md`
+- `.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/kds-md-okf-odf-full-closure-report-20260619.md` -> `开发/12-GPCF/.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/kds-md-okf-odf-full-closure-report-20260619.md`
+- `.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/kds-phase10-backlog-triage-20260619.md` -> `开发/12-GPCF/.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/kds-phase10-backlog-triage-20260619.md`
+- `.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/kds-phase10-self-refresh-stabilization-workpack-20260619.md` -> `开发/12-GPCF/.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/kds-phase10-self-refresh-stabilization-workpack-20260619.md`
+- `.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase2-closure-report-20260617.md` -> `开发/12-GPCF/.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase2-closure-report-20260617.md`
+- `.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase2-sample-ledger-20260617.md` -> `开发/12-GPCF/.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase2-sample-ledger-20260617.md`
+- `.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase3-schema-gate-20260617.md` -> `开发/12-GPCF/.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase3-schema-gate-20260617.md`
+- `.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase4-small-batch-closure-20260617.md` -> `开发/12-GPCF/.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase4-small-batch-closure-20260617.md`
+- `.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase4-small-batch-ledger-20260617.md` -> `开发/12-GPCF/.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase4-small-batch-ledger-20260617.md`
+- `.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase5-change-request-closure-20260617.md` -> `开发/12-GPCF/.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase5-change-request-closure-20260617.md`
+- `.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase5-change-request-ledger-20260617.md` -> `开发/12-GPCF/.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase5-change-request-ledger-20260617.md`
+- `.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase6-manual-confirmation-workbench-20260618.md` -> `开发/12-GPCF/.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase6-manual-confirmation-workbench-20260618.md`
+- `.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase6-manual-confirmation-workbench-closure-20260618.md` -> `开发/12-GPCF/.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase6-manual-confirmation-workbench-closure-20260618.md`
+- `.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase7-small-batch-closure-20260619.md` -> `开发/12-GPCF/.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase7-small-batch-closure-20260619.md`
+- `.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase7-small-batch-ledger-20260619.md` -> `开发/12-GPCF/.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase7-small-batch-ledger-20260619.md`
+- `.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase8-drift-monitoring-closure-20260619.md` -> `开发/12-GPCF/.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase8-drift-monitoring-closure-20260619.md`
+- `.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase8-drift-monitoring-report-20260619.md` -> `开发/12-GPCF/.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase8-drift-monitoring-report-20260619.md`
+- `.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase9-dynamic-source-stabilization-closure-20260619.md` -> `开发/12-GPCF/.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase9-dynamic-source-stabilization-closure-20260619.md`
+- `.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase9-dynamic-source-stabilization-report-20260619.md` -> `开发/12-GPCF/.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase9-dynamic-source-stabilization-report-20260619.md`
+- `.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-pilot-closure-report-20260617.md` -> `开发/12-GPCF/.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-pilot-closure-report-20260617.md`
+- `.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-pilot-sample-ledger-20260617.md` -> `开发/12-GPCF/.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-pilot-sample-ledger-20260617.md`
+- `.okf/bundles/governance-v0.1/concepts/docs/harness/index.md` -> `开发/12-GPCF/.okf/bundles/governance-v0.1/concepts/docs/harness/index.md`
+- `.okf/bundles/governance-v0.1/concepts/docs/harness/loop-state.md` -> `开发/12-GPCF/.okf/bundles/governance-v0.1/concepts/docs/harness/loop-state.md`
+- `.okf/bundles/governance-v0.1/concepts/docs/harness/loops/README.md` -> `开发/12-GPCF/.okf/bundles/governance-v0.1/concepts/docs/harness/loops/README.md`
+- `.okf/bundles/governance-v0.1/concepts/docs/harness/loops/index.md` -> `开发/12-GPCF/.okf/bundles/governance-v0.1/concepts/docs/harness/loops/index.md`
+- `.okf/bundles/governance-v0.1/index.md` -> `开发/12-GPCF/.okf/bundles/governance-v0.1/index.md`
+- `.okf/bundles/governance-v0.1/log.md` -> `开发/12-GPCF/.okf/bundles/governance-v0.1/log.md`
+- `.okf/bundles/kds-v0.1/concepts/02-governance/GlobalCloud项目群KDS开发空间安全规范.md` -> `开发/12-GPCF/.okf/bundles/kds-v0.1/concepts/02-governance/GlobalCloud项目群KDS开发空间安全规范.md`
+- `.okf/bundles/kds-v0.1/concepts/02-governance/index.md` -> `开发/12-GPCF/.okf/bundles/kds-v0.1/concepts/02-governance/index.md`
+- `.okf/bundles/kds-v0.1/concepts/03-data-ai-knowledge/GlobalCloud Loop开发KDS关联数据检索机制.md` -> `开发/12-GPCF/.okf/bundles/kds-v0.1/concepts/03-data-ai-knowledge/GlobalCloud Loop开发KDS关联数据检索机制.md`
+- `.okf/bundles/kds-v0.1/concepts/03-data-ai-knowledge/GlobalCloudBrain-KDS知识编制与知识UI边界清单.md` -> `开发/12-GPCF/.okf/bundles/kds-v0.1/concepts/03-data-ai-knowledge/GlobalCloudBrain-KDS知识编制与知识UI边界清单.md`
+- `.okf/bundles/kds-v0.1/concepts/03-data-ai-knowledge/index.md` -> `开发/12-GPCF/.okf/bundles/kds-v0.1/concepts/03-data-ai-knowledge/index.md`
+- `.okf/bundles/kds-v0.1/concepts/09-status/index.md` -> `开发/12-GPCF/.okf/bundles/kds-v0.1/concepts/09-status/index.md`
+- `.okf/bundles/kds-v0.1/concepts/09-status/kds-md-okf-implementation-closure-plan.md` -> `开发/12-GPCF/.okf/bundles/kds-v0.1/concepts/09-status/kds-md-okf-implementation-closure-plan.md`
+- `.okf/bundles/kds-v0.1/concepts/09-status/kds-okf-v01-full-implementation-plan.md` -> `开发/12-GPCF/.okf/bundles/kds-v0.1/concepts/09-status/kds-okf-v01-full-implementation-plan.md`
+- `.okf/bundles/kds-v0.1/concepts/09-status/kds-phase10-governance-sustainment-plan.md` -> `开发/12-GPCF/.okf/bundles/kds-v0.1/concepts/09-status/kds-phase10-governance-sustainment-plan.md`
+- `.okf/bundles/kds-v0.1/concepts/09-status/kds-readonly-probe-report.md` -> `开发/12-GPCF/.okf/bundles/kds-v0.1/concepts/09-status/kds-readonly-probe-report.md`
+- `.okf/bundles/kds-v0.1/concepts/09-status/odf-introduction-governance-plan.md` -> `开发/12-GPCF/.okf/bundles/kds-v0.1/concepts/09-status/odf-introduction-governance-plan.md`
+- `.okf/bundles/kds-v0.1/concepts/09-status/odf-phase2-expansion-plan.md` -> `开发/12-GPCF/.okf/bundles/kds-v0.1/concepts/09-status/odf-phase2-expansion-plan.md`
+- `.okf/bundles/kds-v0.1/concepts/09-status/odf-phase3-schema-gate-plan.md` -> `开发/12-GPCF/.okf/bundles/kds-v0.1/concepts/09-status/odf-phase3-schema-gate-plan.md`
+- `.okf/bundles/kds-v0.1/concepts/09-status/odf-phase4-small-batch-admission-plan.md` -> `开发/12-GPCF/.okf/bundles/kds-v0.1/concepts/09-status/odf-phase4-small-batch-admission-plan.md`
+- `.okf/bundles/kds-v0.1/concepts/09-status/odf-phase5-change-request-governance-plan.md` -> `开发/12-GPCF/.okf/bundles/kds-v0.1/concepts/09-status/odf-phase5-change-request-governance-plan.md`
+- `.okf/bundles/kds-v0.1/concepts/09-status/odf-phase6-manual-confirmation-workbench-plan.md` -> `开发/12-GPCF/.okf/bundles/kds-v0.1/concepts/09-status/odf-phase6-manual-confirmation-workbench-plan.md`
+- `.okf/bundles/kds-v0.1/concepts/09-status/odf-phase7-small-batch-execution-plan.md` -> `开发/12-GPCF/.okf/bundles/kds-v0.1/concepts/09-status/odf-phase7-small-batch-execution-plan.md`
+- `.okf/bundles/kds-v0.1/concepts/09-status/odf-phase8-drift-monitoring-plan.md` -> `开发/12-GPCF/.okf/bundles/kds-v0.1/concepts/09-status/odf-phase8-drift-monitoring-plan.md`
+- `.okf/bundles/kds-v0.1/concepts/09-status/odf-phase9-dynamic-source-stabilization-plan.md` -> `开发/12-GPCF/.okf/bundles/kds-v0.1/concepts/09-status/odf-phase9-dynamic-source-stabilization-plan.md`
+- `.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/index.md` -> `开发/12-GPCF/.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/index.md`
+- `.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/kds-md-okf-odf-full-closure-report-20260619.md` -> `开发/12-GPCF/.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/kds-md-okf-odf-full-closure-report-20260619.md`
+- `.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/kds-phase10-backlog-triage-20260619.md` -> `开发/12-GPCF/.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/kds-phase10-backlog-triage-20260619.md`
+- `.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/kds-phase10-self-refresh-stabilization-workpack-20260619.md` -> `开发/12-GPCF/.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/kds-phase10-self-refresh-stabilization-workpack-20260619.md`
+- `.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase2-closure-report-20260617.md` -> `开发/12-GPCF/.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase2-closure-report-20260617.md`
+- `.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase2-sample-ledger-20260617.md` -> `开发/12-GPCF/.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase2-sample-ledger-20260617.md`
+- `.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase3-schema-gate-20260617.md` -> `开发/12-GPCF/.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase3-schema-gate-20260617.md`
+- `.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase4-small-batch-closure-20260617.md` -> `开发/12-GPCF/.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase4-small-batch-closure-20260617.md`
+- `.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase4-small-batch-ledger-20260617.md` -> `开发/12-GPCF/.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase4-small-batch-ledger-20260617.md`
+- `.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase5-change-request-closure-20260617.md` -> `开发/12-GPCF/.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase5-change-request-closure-20260617.md`
+- `.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase5-change-request-ledger-20260617.md` -> `开发/12-GPCF/.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase5-change-request-ledger-20260617.md`
+- `.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase6-manual-confirmation-workbench-20260618.md` -> `开发/12-GPCF/.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase6-manual-confirmation-workbench-20260618.md`
+- `.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase6-manual-confirmation-workbench-closure-20260618.md` -> `开发/12-GPCF/.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase6-manual-confirmation-workbench-closure-20260618.md`
+- `.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase7-small-batch-closure-20260619.md` -> `开发/12-GPCF/.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase7-small-batch-closure-20260619.md`
+- `.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase7-small-batch-ledger-20260619.md` -> `开发/12-GPCF/.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase7-small-batch-ledger-20260619.md`
+- `.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase8-drift-monitoring-closure-20260619.md` -> `开发/12-GPCF/.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase8-drift-monitoring-closure-20260619.md`
+- `.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase8-drift-monitoring-report-20260619.md` -> `开发/12-GPCF/.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase8-drift-monitoring-report-20260619.md`
+- `.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase9-dynamic-source-stabilization-closure-20260619.md` -> `开发/12-GPCF/.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase9-dynamic-source-stabilization-closure-20260619.md`
+- `.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase9-dynamic-source-stabilization-report-20260619.md` -> `开发/12-GPCF/.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase9-dynamic-source-stabilization-report-20260619.md`
+- `.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-pilot-closure-report-20260617.md` -> `开发/12-GPCF/.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-pilot-closure-report-20260617.md`
+- `.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-pilot-sample-ledger-20260617.md` -> `开发/12-GPCF/.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-pilot-sample-ledger-20260617.md`
+- `.okf/bundles/kds-v0.1/index.md` -> `开发/12-GPCF/.okf/bundles/kds-v0.1/index.md`
+- `.okf/bundles/kds-v0.1/log.md` -> `开发/12-GPCF/.okf/bundles/kds-v0.1/log.md`
 - `08-evidence-samples/session-archives/README.md` -> `开发/92-证据与会话归档/08-evidence-samples/session-archives/README.md`
 - `08-evidence-samples/session-archives/session-019eafc0-ee61-7900-b137-5cf2252bd82f.md` -> `开发/92-证据与会话归档/08-evidence-samples/session-archives/session-019eafc0-ee61-7900-b137-5cf2252bd82f.md`
-- `09-status/globalcloud-project-group-dirty-classification-baseline-v1.0.md` -> `开发/91-治理与验收/09-status/globalcloud-project-group-dirty-classification-baseline-v1.0.md`
-- `09-status/globalcloud-xgd-implementation-report-20261021.md` -> `开发/91-治理与验收/09-status/globalcloud-xgd-implementation-report-20261021.md`
-- `09-status/globalcloud-xgd-upstream-sync-feedback-20261021.md` -> `开发/91-治理与验收/09-status/globalcloud-xgd-upstream-sync-feedback-20261021.md`
 - `10-archive/README.md` -> `开发/92-证据与会话归档/10-archive/README.md`
 - `10-archive/deprecated/README.md` -> `开发/92-证据与会话归档/10-archive/deprecated/README.md`
 - `10-archive/historical-sessions/README.md` -> `开发/92-证据与会话归档/10-archive/historical-sessions/README.md`
 - `10-archive/imported-legacy/README.md` -> `开发/92-证据与会话归档/10-archive/imported-legacy/README.md`
 - `10-archive/superseded/README.md` -> `开发/92-证据与会话归档/10-archive/superseded/README.md`
-- `docs/harness/evidence/pre-wave1-review-pack-20261022.md` -> `开发/91-治理与验收/docs/harness/evidence/pre-wave1-review-pack-20261022.md`
-- `docs/harness/evidence/wave1-review-pack-20261022.md` -> `开发/91-治理与验收/docs/harness/evidence/wave1-review-pack-20261022.md`
-- `features/active/F-031-xgd-dot-alignment/evidence/summary.md` -> `开发/91-治理与验收/features/active/F-031-xgd-dot-alignment/evidence/summary.md`
-- `features/active/F-031-xgd-dot-alignment/evidence/xgd-dot-alignment-baseline.md` -> `开发/91-治理与验收/features/active/F-031-xgd-dot-alignment/evidence/xgd-dot-alignment-baseline.md`
-- `features/active/F-031-xgd-dot-alignment/evidence/xgd-dot-alignment-p0-core.md` -> `开发/91-治理与验收/features/active/F-031-xgd-dot-alignment/evidence/xgd-dot-alignment-p0-core.md`
-- `features/active/F-031-xgd-dot-alignment/evidence/xgd-dot-alignment-p0-full.md` -> `开发/91-治理与验收/features/active/F-031-xgd-dot-alignment/evidence/xgd-dot-alignment-p0-full.md`
-- `features/active/F-031-xgd-dot-alignment/evidence/xgd-dot-alignment-p1p3.md` -> `开发/91-治理与验收/features/active/F-031-xgd-dot-alignment/evidence/xgd-dot-alignment-p1p3.md`
 - `openspec/changes/README.md` -> `开发/05-KDS/openspec/changes/README.md`
 - `openspec/changes/archive/README.md` -> `开发/05-KDS/openspec/changes/archive/README.md`
-- `openspec/changes/enable-project-group-openspec-coverage/README.md` -> `开发/05-KDS/openspec/changes/enable-project-group-openspec-coverage/README.md`
-- `openspec/changes/enable-project-group-openspec-coverage/specs/README.md` -> `开发/05-KDS/openspec/changes/enable-project-group-openspec-coverage/specs/README.md`
-- `openspec/changes/enable-project-group-openspec-coverage/specs/project-group-openspec-coverage/README.md` -> `开发/05-KDS/openspec/changes/enable-project-group-openspec-coverage/specs/project-group-openspec-coverage/README.md`
-- `openspec/changes/gcmem-vision-r0/README.md` -> `开发/05-KDS/openspec/changes/gcmem-vision-r0/README.md`
-- `openspec/changes/gcmem-vision-r0/specs/README.md` -> `开发/05-KDS/openspec/changes/gcmem-vision-r0/specs/README.md`
-- `openspec/changes/gcmem-vision-r0/specs/gcmem-vision-r0/README.md` -> `开发/05-KDS/openspec/changes/gcmem-vision-r0/specs/gcmem-vision-r0/README.md`
-- `openspec/changes/gcworld-controlled-runtime-integration/README.md` -> `开发/05-KDS/openspec/changes/gcworld-controlled-runtime-integration/README.md`
-- `openspec/changes/gcworld-controlled-runtime-integration/design.md` -> `开发/12-GPCF/openspec/changes/gcworld-controlled-runtime-integration/design.md`
-- `openspec/changes/gcworld-controlled-runtime-integration/proposal.md` -> `开发/05-KDS/openspec/changes/gcworld-controlled-runtime-integration/proposal.md`
-- `openspec/changes/gcworld-controlled-runtime-integration/specs/README.md` -> `开发/05-KDS/openspec/changes/gcworld-controlled-runtime-integration/specs/README.md`
-- `openspec/changes/gcworld-controlled-runtime-integration/specs/gcworld-controlled-runtime-integration/README.md` -> `开发/05-KDS/openspec/changes/gcworld-controlled-runtime-integration/specs/gcworld-controlled-runtime-integration/README.md`
-- `openspec/changes/gcworld-controlled-runtime-integration/specs/gcworld-controlled-runtime-integration/spec.md` -> `开发/12-GPCF/openspec/changes/gcworld-controlled-runtime-integration/specs/gcworld-controlled-runtime-integration/spec.md`
-- `openspec/changes/gcworld-controlled-runtime-integration/tasks.md` -> `开发/05-KDS/openspec/changes/gcworld-controlled-runtime-integration/tasks.md`
-- `openspec/changes/gcworld-evidence-twin-foundation/README.md` -> `开发/05-KDS/openspec/changes/gcworld-evidence-twin-foundation/README.md`
-- `openspec/changes/gcworld-evidence-twin-foundation/artifacts/GCWORLD总体架构与能力规划_v1.0.md` -> `开发/05-KDS/openspec/changes/gcworld-evidence-twin-foundation/artifacts/GCWORLD总体架构与能力规划_v1.0.md`
-- `openspec/changes/gcworld-evidence-twin-foundation/artifacts/KDS全量组织资产普查与世界初始化规范_v1.0.md` -> `开发/05-KDS/openspec/changes/gcworld-evidence-twin-foundation/artifacts/KDS全量组织资产普查与世界初始化规范_v1.0.md`
-- `openspec/changes/gcworld-evidence-twin-foundation/artifacts/README.md` -> `开发/05-KDS/openspec/changes/gcworld-evidence-twin-foundation/artifacts/README.md`
-- `openspec/changes/gcworld-evidence-twin-foundation/artifacts/gcworld-kds-controlled-classification-report-20260823.md` -> `开发/05-KDS/openspec/changes/gcworld-evidence-twin-foundation/artifacts/gcworld-kds-controlled-classification-report-20260823.md`
-- `openspec/changes/gcworld-evidence-twin-foundation/artifacts/gcworld-kds-readonly-admission-assessment-20260823.md` -> `开发/05-KDS/openspec/changes/gcworld-evidence-twin-foundation/artifacts/gcworld-kds-readonly-admission-assessment-20260823.md`
-- `openspec/changes/gcworld-evidence-twin-foundation/design.md` -> `开发/05-KDS/openspec/changes/gcworld-evidence-twin-foundation/design.md`
-- `openspec/changes/gcworld-evidence-twin-foundation/proposal.md` -> `开发/05-KDS/openspec/changes/gcworld-evidence-twin-foundation/proposal.md`
-- `openspec/changes/gcworld-evidence-twin-foundation/specs/README.md` -> `开发/05-KDS/openspec/changes/gcworld-evidence-twin-foundation/specs/README.md`
-- `openspec/changes/gcworld-evidence-twin-foundation/specs/gcworld-coverage-assessment/README.md` -> `开发/05-KDS/openspec/changes/gcworld-evidence-twin-foundation/specs/gcworld-coverage-assessment/README.md`
-- `openspec/changes/gcworld-evidence-twin-foundation/specs/gcworld-coverage-assessment/spec.md` -> `开发/05-KDS/openspec/changes/gcworld-evidence-twin-foundation/specs/gcworld-coverage-assessment/spec.md`
-- `openspec/changes/gcworld-evidence-twin-foundation/specs/gcworld-engineering-governance/README.md` -> `开发/05-KDS/openspec/changes/gcworld-evidence-twin-foundation/specs/gcworld-engineering-governance/README.md`
-- `openspec/changes/gcworld-evidence-twin-foundation/specs/gcworld-engineering-governance/spec.md` -> `开发/05-KDS/openspec/changes/gcworld-evidence-twin-foundation/specs/gcworld-engineering-governance/spec.md`
-- `openspec/changes/gcworld-evidence-twin-foundation/specs/gcworld-evidence-twin/README.md` -> `开发/05-KDS/openspec/changes/gcworld-evidence-twin-foundation/specs/gcworld-evidence-twin/README.md`
-- `openspec/changes/gcworld-evidence-twin-foundation/specs/gcworld-evidence-twin/spec.md` -> `开发/05-KDS/openspec/changes/gcworld-evidence-twin-foundation/specs/gcworld-evidence-twin/spec.md`
-- `openspec/changes/gcworld-evidence-twin-foundation/specs/gcworld-role-agent-governance/README.md` -> `开发/05-KDS/openspec/changes/gcworld-evidence-twin-foundation/specs/gcworld-role-agent-governance/README.md`
-- `openspec/changes/gcworld-evidence-twin-foundation/specs/gcworld-role-agent-governance/spec.md` -> `开发/05-KDS/openspec/changes/gcworld-evidence-twin-foundation/specs/gcworld-role-agent-governance/spec.md`
-- `openspec/changes/gcworld-evidence-twin-foundation/specs/gcworld-runtime-boundary/README.md` -> `开发/05-KDS/openspec/changes/gcworld-evidence-twin-foundation/specs/gcworld-runtime-boundary/README.md`
-- `openspec/changes/gcworld-evidence-twin-foundation/specs/gcworld-runtime-boundary/spec.md` -> `开发/05-KDS/openspec/changes/gcworld-evidence-twin-foundation/specs/gcworld-runtime-boundary/spec.md`
-- `openspec/changes/gcworld-evidence-twin-foundation/specs/gcworld-workbench-product/README.md` -> `开发/05-KDS/openspec/changes/gcworld-evidence-twin-foundation/specs/gcworld-workbench-product/README.md`
-- `openspec/changes/gcworld-evidence-twin-foundation/specs/gcworld-workbench-product/spec.md` -> `开发/12-GPCF/openspec/changes/gcworld-evidence-twin-foundation/specs/gcworld-workbench-product/spec.md`
-- `openspec/changes/gcworld-evidence-twin-foundation/specs/gcworld-world-auth/README.md` -> `开发/05-KDS/openspec/changes/gcworld-evidence-twin-foundation/specs/gcworld-world-auth/README.md`
-- `openspec/changes/gcworld-evidence-twin-foundation/specs/gcworld-world-auth/spec.md` -> `开发/05-KDS/openspec/changes/gcworld-evidence-twin-foundation/specs/gcworld-world-auth/spec.md`
-- `openspec/changes/gcworld-evidence-twin-foundation/specs/gcworld-world-runtime/README.md` -> `开发/05-KDS/openspec/changes/gcworld-evidence-twin-foundation/specs/gcworld-world-runtime/README.md`
-- `openspec/changes/gcworld-evidence-twin-foundation/specs/gcworld-world-runtime/spec.md` -> `开发/05-KDS/openspec/changes/gcworld-evidence-twin-foundation/specs/gcworld-world-runtime/spec.md`
-- `openspec/changes/gcworld-evidence-twin-foundation/tasks.md` -> `开发/05-KDS/openspec/changes/gcworld-evidence-twin-foundation/tasks.md`
-- `openspec/changes/gcworld-kds-authoritative-integration/README.md` -> `开发/05-KDS/openspec/changes/gcworld-kds-authoritative-integration/README.md`
-- `openspec/changes/gcworld-kds-authoritative-integration/artifacts/GCWORLD第一批临时责任路由模型批准回执_20260828.md` -> `开发/05-KDS/openspec/changes/gcworld-kds-authoritative-integration/artifacts/GCWORLD第一批临时责任路由模型批准回执_20260828.md`
-- `openspec/changes/gcworld-kds-authoritative-integration/artifacts/GCWORLD第一批主体类型与权威锚点建议说明_20260826.md` -> `开发/05-KDS/openspec/changes/gcworld-kds-authoritative-integration/artifacts/GCWORLD第一批主体类型与权威锚点建议说明_20260826.md`
-- `openspec/changes/gcworld-kds-authoritative-integration/artifacts/GCWORLD第一批人工责任分派与最低证据需求矩阵说明_20260826.md` -> `开发/05-KDS/openspec/changes/gcworld-kds-authoritative-integration/artifacts/GCWORLD第一批人工责任分派与最低证据需求矩阵说明_20260826.md`
-- `openspec/changes/gcworld-kds-authoritative-integration/artifacts/GCWORLD第一批优先人工复核包生成回执_20260828.md` -> `开发/05-KDS/openspec/changes/gcworld-kds-authoritative-integration/artifacts/GCWORLD第一批优先人工复核包生成回执_20260828.md`
-- `openspec/changes/gcworld-kds-authoritative-integration/artifacts/GCWORLD第一批优先人工复核包责任主体接受授权请求_20260828.md` -> `开发/05-KDS/openspec/changes/gcworld-kds-authoritative-integration/artifacts/GCWORLD第一批优先人工复核包责任主体接受授权请求_20260828.md`
-- `openspec/changes/gcworld-kds-authoritative-integration/artifacts/GCWORLD第一批优先人工复核包责任主体核验执行回执_20260828.md` -> `开发/05-KDS/openspec/changes/gcworld-kds-authoritative-integration/artifacts/GCWORLD第一批优先人工复核包责任主体核验执行回执_20260828.md`
-- `openspec/changes/gcworld-kds-authoritative-integration/artifacts/GCWORLD第一批优先人工复核责任席位登记回执_20260903.md` -> `开发/05-KDS/openspec/changes/gcworld-kds-authoritative-integration/artifacts/GCWORLD第一批优先人工复核责任席位登记回执_20260903.md`
-- `openspec/changes/gcworld-kds-authoritative-integration/artifacts/GCWORLD第一批优先人工复核责任席位登记请求_20260828.md` -> `开发/05-KDS/openspec/changes/gcworld-kds-authoritative-integration/artifacts/GCWORLD第一批优先人工复核责任席位登记请求_20260828.md`
-- `openspec/changes/gcworld-kds-authoritative-integration/artifacts/GCWORLD第一批机器归一准备节点回执_20260828.md` -> `开发/05-KDS/openspec/changes/gcworld-kds-authoritative-integration/artifacts/GCWORLD第一批机器归一准备节点回执_20260828.md`
-- `openspec/changes/gcworld-kds-authoritative-integration/artifacts/GCWORLD第一批机器归一建议运行回执_20260828.md` -> `开发/05-KDS/openspec/changes/gcworld-kds-authoritative-integration/artifacts/GCWORLD第一批机器归一建议运行回执_20260828.md`
-- `openspec/changes/gcworld-kds-authoritative-integration/artifacts/GCWORLD第一批机器车道处理优先级分层回执_20260904.md` -> `开发/05-KDS/openspec/changes/gcworld-kds-authoritative-integration/artifacts/GCWORLD第一批机器车道处理优先级分层回执_20260904.md`
-- `openspec/changes/gcworld-kds-authoritative-integration/artifacts/GCWORLD第一批责任主体提名与接受请求_20260826.md` -> `开发/05-KDS/openspec/changes/gcworld-kds-authoritative-integration/artifacts/GCWORLD第一批责任主体提名与接受请求_20260826.md`
-- `openspec/changes/gcworld-kds-authoritative-integration/artifacts/GCWORLD第一批身份复核三车道与证据压缩回执_20260904.md` -> `开发/05-KDS/openspec/changes/gcworld-kds-authoritative-integration/artifacts/GCWORLD第一批身份复核三车道与证据压缩回执_20260904.md`
-- `openspec/changes/gcworld-kds-authoritative-integration/artifacts/GCWORLD第一批高优先级权威锚点需求包回执_20260904.md` -> `开发/05-KDS/openspec/changes/gcworld-kds-authoritative-integration/artifacts/GCWORLD第一批高优先级权威锚点需求包回执_20260904.md`
-- `openspec/changes/gcworld-kds-authoritative-integration/artifacts/GCWORLD第一批高频身份复核视图说明_20260826.md` -> `开发/05-KDS/openspec/changes/gcworld-kds-authoritative-integration/artifacts/GCWORLD第一批高频身份复核视图说明_20260826.md`
-- `openspec/changes/gcworld-kds-authoritative-integration/artifacts/GCWORLD组织资产身份复核队列基线_20260826.md` -> `开发/05-KDS/openspec/changes/gcworld-kds-authoritative-integration/artifacts/GCWORLD组织资产身份复核队列基线_20260826.md`
-- `openspec/changes/gcworld-kds-authoritative-integration/artifacts/README.md` -> `开发/05-KDS/openspec/changes/gcworld-kds-authoritative-integration/artifacts/README.md`
-- `openspec/changes/gcworld-kds-authoritative-integration/artifacts/gcworld-kds-integration-admission-assessment-20260824.md` -> `开发/05-KDS/openspec/changes/gcworld-kds-authoritative-integration/artifacts/gcworld-kds-integration-admission-assessment-20260824.md`
-- `openspec/changes/gcworld-kds-authoritative-integration/artifacts/gcworld-kds-integration-admission-refresh-20260825.md` -> `开发/05-KDS/openspec/changes/gcworld-kds-authoritative-integration/artifacts/gcworld-kds-integration-admission-refresh-20260825.md`
-- `openspec/changes/gcworld-kds-authoritative-integration/artifacts/gcworld-kds-owner-handoff-assessment-20260825.md` -> `开发/05-KDS/openspec/changes/gcworld-kds-authoritative-integration/artifacts/gcworld-kds-owner-handoff-assessment-20260825.md`
-- `openspec/changes/gcworld-kds-authoritative-integration/artifacts/gcworld-kds-post-handoff-drift-assessment-20260825.md` -> `开发/05-KDS/openspec/changes/gcworld-kds-authoritative-integration/artifacts/gcworld-kds-post-handoff-drift-assessment-20260825.md`
-- `openspec/changes/gcworld-kds-authoritative-integration/design.md` -> `开发/05-KDS/openspec/changes/gcworld-kds-authoritative-integration/design.md`
-- `openspec/changes/gcworld-kds-authoritative-integration/proposal.md` -> `开发/05-KDS/openspec/changes/gcworld-kds-authoritative-integration/proposal.md`
-- `openspec/changes/gcworld-kds-authoritative-integration/specs/README.md` -> `开发/05-KDS/openspec/changes/gcworld-kds-authoritative-integration/specs/README.md`
-- `openspec/changes/gcworld-kds-authoritative-integration/specs/gcworld-kds-authoritative-integration/README.md` -> `开发/05-KDS/openspec/changes/gcworld-kds-authoritative-integration/specs/gcworld-kds-authoritative-integration/README.md`
-- `openspec/changes/gcworld-kds-authoritative-integration/specs/gcworld-kds-authoritative-integration/spec.md` -> `开发/05-KDS/openspec/changes/gcworld-kds-authoritative-integration/specs/gcworld-kds-authoritative-integration/spec.md`
-- `openspec/changes/gcworld-kds-authoritative-integration/tasks.md` -> `开发/05-KDS/openspec/changes/gcworld-kds-authoritative-integration/tasks.md`
-- `openspec/changes/gcworld-workbench-ui-foundation/README.md` -> `开发/05-KDS/openspec/changes/gcworld-workbench-ui-foundation/README.md`
-- `openspec/changes/gcworld-workbench-ui-foundation/design.md` -> `开发/05-KDS/openspec/changes/gcworld-workbench-ui-foundation/design.md`
-- `openspec/changes/gcworld-workbench-ui-foundation/proposal.md` -> `开发/05-KDS/openspec/changes/gcworld-workbench-ui-foundation/proposal.md`
-- `openspec/changes/gcworld-workbench-ui-foundation/specs/README.md` -> `开发/05-KDS/openspec/changes/gcworld-workbench-ui-foundation/specs/README.md`
-- `openspec/changes/gcworld-workbench-ui-foundation/specs/gcworld-workbench-ui-foundation/README.md` -> `开发/05-KDS/openspec/changes/gcworld-workbench-ui-foundation/specs/gcworld-workbench-ui-foundation/README.md`
-- `openspec/changes/gcworld-workbench-ui-foundation/specs/gcworld-workbench-ui-foundation/spec.md` -> `开发/05-KDS/openspec/changes/gcworld-workbench-ui-foundation/specs/gcworld-workbench-ui-foundation/spec.md`
-- `openspec/changes/gcworld-workbench-ui-foundation/tasks.md` -> `开发/05-KDS/openspec/changes/gcworld-workbench-ui-foundation/tasks.md`
-- `openspec/changes/integrate-gke001-openspec-codegraph/README.md` -> `开发/12-GPCF/openspec/changes/integrate-gke001-openspec-codegraph/README.md`
-- `openspec/changes/integrate-gke001-openspec-codegraph/design.md` -> `开发/12-GPCF/openspec/changes/integrate-gke001-openspec-codegraph/design.md`
-- `openspec/changes/integrate-gke001-openspec-codegraph/proposal.md` -> `开发/12-GPCF/openspec/changes/integrate-gke001-openspec-codegraph/proposal.md`
-- `openspec/changes/integrate-gke001-openspec-codegraph/specs/README.md` -> `开发/12-GPCF/openspec/changes/integrate-gke001-openspec-codegraph/specs/README.md`
-- `openspec/changes/integrate-gke001-openspec-codegraph/specs/gke001-codegraph-binding/README.md` -> `开发/12-GPCF/openspec/changes/integrate-gke001-openspec-codegraph/specs/gke001-codegraph-binding/README.md`
-- `openspec/changes/integrate-gke001-openspec-codegraph/specs/gke001-codegraph-binding/spec.md` -> `开发/12-GPCF/openspec/changes/integrate-gke001-openspec-codegraph/specs/gke001-codegraph-binding/spec.md`
-- `openspec/changes/integrate-gke001-openspec-codegraph/specs/gke001-program-governance/README.md` -> `开发/12-GPCF/openspec/changes/integrate-gke001-openspec-codegraph/specs/gke001-program-governance/README.md`
-- `openspec/changes/integrate-gke001-openspec-codegraph/specs/gke001-program-governance/spec.md` -> `开发/12-GPCF/openspec/changes/integrate-gke001-openspec-codegraph/specs/gke001-program-governance/spec.md`
-- `openspec/changes/integrate-gke001-openspec-codegraph/tasks.md` -> `开发/12-GPCF/openspec/changes/integrate-gke001-openspec-codegraph/tasks.md`
 - `openspec/changes/kds-production-hardening/README.md` -> `开发/05-KDS/openspec/changes/kds-production-hardening/README.md`
-- `openspec/changes/kds-production-hardening/design.md` -> `开发/05-KDS/openspec/changes/kds-production-hardening/design.md`
-- `openspec/changes/kds-production-hardening/proposal.md` -> `开发/05-KDS/openspec/changes/kds-production-hardening/proposal.md`
+- `openspec/changes/kds-production-hardening/design.md` -> `开发/12-GPCF/openspec/changes/kds-production-hardening/design.md`
+- `openspec/changes/kds-production-hardening/proposal.md` -> `开发/12-GPCF/openspec/changes/kds-production-hardening/proposal.md`
 - `openspec/changes/kds-production-hardening/specs/README.md` -> `开发/05-KDS/openspec/changes/kds-production-hardening/specs/README.md`
 - `openspec/changes/kds-production-hardening/specs/agent-safety-matrix/README.md` -> `开发/05-KDS/openspec/changes/kds-production-hardening/specs/agent-safety-matrix/README.md`
 - `openspec/changes/kds-production-hardening/specs/agent-safety-matrix/spec.md` -> `开发/12-GPCF/openspec/changes/kds-production-hardening/specs/agent-safety-matrix/spec.md`
 - `openspec/changes/kds-production-hardening/specs/session-auth/README.md` -> `开发/05-KDS/openspec/changes/kds-production-hardening/specs/session-auth/README.md`
+- `openspec/changes/kds-production-hardening/specs/session-auth/spec.md` -> `开发/12-GPCF/openspec/changes/kds-production-hardening/specs/session-auth/spec.md`
+- `openspec/changes/kds-production-hardening/specs/unified-permission-middleware/README.md` -> `开发/05-KDS/openspec/changes/kds-production-hardening/specs/unified-permission-middleware/README.md`
+- `openspec/changes/kds-production-hardening/specs/unified-permission-middleware/spec.md` -> `开发/05-KDS/openspec/changes/kds-production-hardening/specs/unified-permission-middleware/spec.md`
+- `openspec/changes/kds-production-hardening/tasks.md` -> `开发/05-KDS/openspec/changes/kds-production-hardening/tasks.md`

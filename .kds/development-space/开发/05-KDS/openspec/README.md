@@ -27,7 +27,7 @@ KDS 空间：`开发`
 
 KDS 路径前缀：`开发/12-GPCF/openspec/`
 
-关联项目：KDS, GPCF
+关联项目：KDS, GPCF, WAS
 
 受控规则：
 
@@ -184,6 +184,14 @@ KDS 路径前缀：`开发/12-GPCF/openspec/`
 | GPCF-DOC-307EB657D0 | spaceai-city-slice-replay | openspec/changes/spaceai-was-city-flood-replay/specs/spaceai-city-slice-replay/README.md | KDS | implemented |
 | GPCF-SPACEAI-FLOOD-SPEC-20261016 | spec | openspec/changes/spaceai-was-city-flood-replay/specs/spaceai-city-slice-replay/spec.md | GPCF | implemented |
 | GPCF-SPACEAI-FLOOD-TASKS-20261016 | tasks | openspec/changes/spaceai-was-city-flood-replay/tasks.md | GPCF | implemented |
+| GPCF-DOC-B47AC1B4E7 | WAS 决策能力平台 v0.2 变更包索引（was-decision-platform-v02） | openspec/changes/was-decision-platform-v02/README.md | WAS | draft |
+| GPCF-DOC-C237D8B76A | 证据索引（was-decision-platform-v02） | openspec/changes/was-decision-platform-v02/artifacts/README.md | WAS | draft |
+| GPCF-WAS-DECISION-PLATFORM-V02-DESIGN-20261024 | WAS 决策能力平台 v0.2 设计（was-decision-platform-v02） | openspec/changes/was-decision-platform-v02/design.md | WAS | draft |
+| GPCF-WAS-DECISION-PLATFORM-V02-PROPOSAL-20261024 | WAS 决策能力平台 v0.2 变更提案（was-decision-platform-v02） | openspec/changes/was-decision-platform-v02/proposal.md | WAS | draft |
+| GPCF-DOC-F04E26A1EA | specs 索引（was-decision-platform-v02） | openspec/changes/was-decision-platform-v02/specs/README.md | WAS | draft |
+| GPCF-DOC-6B0AC5B97E | 能力目录索引 — was-decision-platform-v02 | openspec/changes/was-decision-platform-v02/specs/was-decision-platform-v02/README.md | WAS | draft |
+| GPCF-WAS-DECISION-PLATFORM-V02-SPEC-20261024 | 能力规格 — WAS 决策能力平台 v0.2（was-decision-platform-v02） | openspec/changes/was-decision-platform-v02/specs/was-decision-platform-v02/spec.md | WAS | draft |
+| GPCF-WAS-DECISION-PLATFORM-V02-TASKS-20261024 | 任务清单 — WAS 决策能力平台 v0.2（was-decision-platform-v02） | openspec/changes/was-decision-platform-v02/tasks.md | WAS | draft |
 | GPCF-DOC-4C32519F10 | was-flow-naming-migration | openspec/changes/was-flow-naming-migration/README.md | KDS | draft |
 | GPCF-DOC-3EBD68D2C6 | artifacts | openspec/changes/was-flow-naming-migration/artifacts/README.md | KDS | draft |
 | GPCF-DOC-FCAE31EF6C | Design — was-flow-naming-migration | openspec/changes/was-flow-naming-migration/design.md | KDS | draft |

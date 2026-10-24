@@ -1,17 +1,17 @@
 ---
 doc_id: GPCF-DOC-GLOBALCLOUD-GPCF-MASTER-PLAN-20260624
 title: GlobalCloud GPCF 总体方案
-project: GPCF
-related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio, WAS, XWAIL, AAAS, SOP, ICP, PQC, SpaceAI, SpaceAIStudio, World, GCMEM, WAE, Project]
-domain: architecture
+project: GFIS
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio]
+domain: general
 status: controlled
-version: v1.1
-owner: GPCF
+version: v1.0
+owner: GFIS
 kds_space: 开发
-kds_path: 开发/12-GPCF/GlobalCloud GPCF 总体方案.md
+kds_path: 开发/01-GFIS/GlobalCloud GPCF 总体方案.md
 source_path: GlobalCloud GPCF 总体方案.md
 sync_direction: bidirectional
-last_reviewed: 2026-10-18
+last_reviewed: 2026-06-24
 supersedes: []
 superseded_by: []
 ---
@@ -26,15 +26,15 @@ superseded_by: []
 
 ## 1. 项目定位
 
-GlobalCloud GPCF 是 GlobalCloud 项目群的治理、控制、门禁、文档、LOOP 和证据编排项目。GPCF 负责维护项目群总体方案与实施方案双总控、项目主方案台账、文档门禁、KDS 开发空间镜像、专项验证脚本、LOOP 运行控制闭环和跨项目状态报告。
+GlobalCloud GPCF 是 GlobalCloud WAS 项目群的治理、控制、门禁、文档、LOOP 和证据编排项目。GPCF 负责维护项目群唯一总体控制性文档、项目主方案台账、文档门禁、KDS 开发空间镜像、专项验证脚本、LOOP 运行控制闭环和跨项目状态报告。
 
-本项目不等同于 WAS 世界资产体系本身。WAS 定义资产体系，Ontology 定义语义，XWAIL 定义契约，WAME 持世界资产模型引擎与治理权威，World 持世界运行时，WAE 提供统一界面，AaaS 提供服务化运营。GPCF 负责让 25 个项目的名称、职责、版本、接口、交付、测试和证据保持受控一致。
+本项目不等同于 WAS 世界资产体系本身。WAS 定义资产体系，Ontology 定义语义，XWAIL 定义契约，WAE 提供世界资产运行引擎，WAME 提供基于 WAE 的业务实现和治理入口，AaaS 提供服务化运营。GPCF 负责让这些项目间的名称、职责、版本、接口、交付、测试和证据保持受控一致。
 
 ## 2. 与项目群主方案的继承关系
 
-本方案继承 `GPCF:01-architecture/GlobalCloud 项目群总体方案.md` v1.1；WAS 总体方案是世界资产专项语义基线。本文件是 `GlobalCoud GPCF` 仓内 GPCF 项目的唯一当前有效总体方案。
+本方案继承 `GPCF:01-architecture/GlobalCloud 项目群总体方案.md`（项目群唯一总体控制性文档）；世界资产专项语义基线为 `GPCF:01-architecture/WAS世界资产体系总体方案.md`。本文件是 `GlobalCoud GPCF` 仓内唯一当前有效项目总体方案。
 
-`01-architecture/GlobalCloud 项目群总体方案.md` 是项目群总体架构主文件，根目录 `GlobalCloud 项目群实施方案.md` 是实施控制主文件。本文件是 GPCF 作为治理项目的项目级方案。主方案变化必须经本项目影响评估后传导到所有相关项目方案；本方案变化先回传主方案，再传导受影响项目。未经人工确认不得提升验收或发布状态。
+`01-architecture/WAS世界资产体系总体方案.md` 是项目群唯一总体控制性文档；本文件是 GPCF 作为治理项目的项目级总体方案。主方案变化必须经本项目影响评估后传导到所有相关项目方案。本方案变化必须先回流主方案或 Change Proposal，再传导到受影响项目。未经用户确认的结构性变化只能登记为 `draft`、`candidate`、`partial`、`pending` 或 `repair_required`。
 
 ## 3. 项目群版本基线
 
@@ -42,7 +42,7 @@ GlobalCloud GPCF 是 GlobalCloud 项目群的治理、控制、门禁、文档�
 |---|---|
 | 项目群基线 | `GC-WAS-PG-BASELINE-0.1.0` |
 | GPCF 总体方案 | `v1.0` |
-| 上游控制 | `01-architecture/GlobalCloud 项目群总体方案.md` v1.1；世界资产专项继承 WAS 总体方案 |
+| 上游控制 | `01-architecture/WAS世界资产体系总体方案.md` |
 | 语义来源 | WAS / Ontology |
 | 契约来源 | XWAIL |
 | 治理入口 | WAME |
@@ -50,7 +50,7 @@ GlobalCloud GPCF 是 GlobalCloud 项目群的治理、控制、门禁、文档�
 
 ## 4. 本项目权威职责
 
-1. 维护项目群总体架构主文件、实施主文件的继承关系和治理路线图。
+1. 维护项目群唯一总体控制性文档和项目群总体方案治理路线图。
 2. 维护全项目主方案控制台账，确保每个业务项目只有一个当前有效总体方案。
 3. 维护术语、版本、架构、职责、接口、测试、交付、LOOP 和证据的一致性验证脚本。
 4. 执行文档门禁、污染检查、KDS TOKEN 检查和 LOOP 文档门禁。
@@ -60,11 +60,11 @@ GlobalCloud GPCF 是 GlobalCloud 项目群的治理、控制、门禁、文档�
 
 ## 5. 本项目不承担的职责
 
-1. 不替代 WAS 定义顶层资产理论、三层资产、八维、九流和生命周期。
+1. 不替代 WAS 定义顶层资产理论、三层资产、八维、八流和生命周期。
 2. 不替代 Ontology 定义语义本体、词表、概念关系和推理规则。
 3. 不替代 XWAIL 定义模型契约、Schema、Profile、状态机和 Validator。
-4. 不替代 WAME 的引擎主账、注册、授权、发布和治理职责，也不替代 World 的世界运行时。
-5. 不替代 WAE 的统一界面框架职责。
+4. 不替代 WAE 的世界资产运行引擎职责。
+5. 不替代 WAME 的注册、授权、发布、治理和业务 Explorer 职责。
 6. 不替代 AaaS 服务包、计量、SLA、商业运营和客户交付。
 7. 不替代 GFIS、GPC、PVAOS、KDS、Brain、Studio、MMC、PKC、SOP、XGD、XiaoC、XiaoG 的项目级业务实现。
 
@@ -73,7 +73,7 @@ GlobalCloud GPCF 是 GlobalCloud 项目群的治理、控制、门禁、文档�
 | 交付物 | 说明 | 状态 |
 |---|---|---|
 | GPCF 总体方案 | 本文件 | controlled |
-| 项目群总体架构主文件 | `01-architecture/GlobalCloud 项目群总体方案.md` v1.1 | controlled |
+| 项目群唯一总体控制性文档 | `01-architecture/WAS世界资产体系总体方案.md` | controlled |
 | 项目群主方案控制台账 | `09-status/globalcloud-project-master-plan-control-register.md` | controlled |
 | 项目群总体方案治理路线图 | `02-governance/GlobalCloud项目群总体方案治理专项目标与路线图.md` | controlled |
 | 项目总体方案模板 | `templates/project-master-plan-template.md` | controlled |
@@ -103,14 +103,14 @@ GlobalCloud GPCF 是 GlobalCloud 项目群的治理、控制、门禁、文档�
 目标架构：
 
 ```text
-GlobalCloud Project Group Master Plan
+WAS Master Plan
   -> Project Master Plan Register
   -> Project Master Plans
   -> Validators / Document Gate / KDS Gate / LOOP Gate
   -> Evidence / Status Report / Change Propagation
 ```
 
-中长期应把 GPCF 的治理脚本、文档门禁、KDS 镜像、LOOP 运行控制、Harness evidence 和项目状态矩阵收敛为统一控制平面，并与 WAME、MMC、SOP 和 KDS 形成可审计接口。Project/Plane 只读消费 GPCF Feature 与 Evidence 状态，不能回写交付裁决。
+中长期应把 GPCF 的治理脚本、文档门禁、KDS 镜像、LOOP 运行控制、Harness evidence 和项目状态矩阵收敛为统一控制平面，并与 WAME、MMC、SOP 和 KDS 形成可审计接口。
 
 ## 9. 测试、交付和运行命令
 

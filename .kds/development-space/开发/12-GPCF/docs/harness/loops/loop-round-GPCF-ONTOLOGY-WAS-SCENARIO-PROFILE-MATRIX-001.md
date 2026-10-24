@@ -59,7 +59,7 @@ superseded_by: []
 ```yaml
 project_scope: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio, WAS]
 related_asset_dimensions: [physical_asset, rule_asset, intelligence_asset, data_asset, economic_asset, energy_asset, organization_asset, spacetime_asset]
-related_flows: [material_flow, information_flow, capital_flow, spacetime_flow, energy_flow, commerce_flow, knowledge_flow, rule_flow]
+related_flows: [LogisticsFlow, InformationFlow, FinancialFlow, EnergyFlow, ServiceFlow, ControlFlow, ValueFlow, CreditFlow, ScenarioFlow]
 related_objects: [CustomerRequirementOrPlatformOrder, SupplierQualification, ProcurementOrder, ProductionWorkOrder, QualityInspectionRecord, LogisticsDeliveryRecord, EnergyConsumptionRecord, CarbonFootprintRecord, SettlementAndProfitRecord, RecyclingCircularRecord, RAGStrongReferenceRecord, PoolLinkRecord]
 related_events: [was_scenario_profile_matrix]
 source_refs: [was://scenario/profile-matrix/globalcloud-project-group]
