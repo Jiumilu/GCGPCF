@@ -1,7 +1,7 @@
 {
   "feature": "F-036",
   "generated_at": "2026-10-24",
-  "count": 84,
+  "count": 83,
   "files": [
     {
       "path": ".gitkeep",
@@ -322,11 +322,6 @@
       "path": "formal-review-20261024.md",
       "sha256": "dc1efa33732ef5a3db1d42324834b32b5b88a8ff6d42f14bf2490909b8e7915f",
       "bytes": 2391
-    },
-    {
-      "path": "manifest-20261024.json",
-      "sha256": "6a2e06e27bb0683223e5965bd12624b45c0df6aad1818b4982d15bec25465346",
-      "bytes": 15051
     },
     {
       "path": "pkc-embed-bridge-20261024.md",
