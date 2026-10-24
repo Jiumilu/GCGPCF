@@ -49,7 +49,6 @@
     "GlobalCloud PQC",
     "GlobalCloud SpaceAI Platform",
     "GlobalCloud SpaceAI Studio",
-    "GlobalCloud WAE",
     "GlobalCloud PMC",
     "GlobalCloud SLC"
   ],
@@ -62,6 +61,7 @@
     "GlobalCloud GPCF",
     "GlobalCloud KDS",
     "GlobalCloud MMC",
+    "GlobalCloud Mem",
     "GlobalCloud PDC",
     "GlobalCloud PKC",
     "GlobalCloud PMC",
@@ -83,6 +83,7 @@
     "GlobalCloud Brain",
     "GlobalCloud GFIS",
     "GlobalCloud GPC",
+    "GlobalCloud GPCF",
     "GlobalCloud MMC",
     "GlobalCloud PKC",
     "GlobalCloud PMC",
@@ -93,7 +94,6 @@
     "GlobalCloud SpaceAI Platform",
     "GlobalCloud SpaceAI Studio",
     "GlobalCloud Studio",
-    "GlobalCloud WAE",
     "GlobalCloud WAME",
     "GlobalCloud XGD",
     "GlobalCloud XWAIL",
@@ -112,6 +112,7 @@
     "GlobalCloud GPCF",
     "GlobalCloud KDS",
     "GlobalCloud MMC",
+    "GlobalCloud Mem",
     "GlobalCloud PDC",
     "GlobalCloud PKC",
     "GlobalCloud PMC",
@@ -159,8 +160,8 @@
     "GlobalCloud SpaceAI Platform": "4e6e95d49b7217e0d26c0d9a66b8d7db59a1a522",
     "GlobalCloud SpaceAI Studio": "a33d51add39f74ae305dd15fa9d95a881870d55b",
     "GlobalCloud World": "099a8f2e81ff4a817833b29a1355f82d336ec334",
-    "GlobalCloud Mem": "7cd30d967a3107be272c6c8c8c6b106187782df5",
-    "GlobalCloud WAE": "66b7dac78ac140a788814fc4ebdc8156b70ca052",
+    "GlobalCloud Mem": "c03f2f70f4f085806991a6eb423e5258ba05c063",
+    "GlobalCloud WAE": "28daa3df0cc854fad32b499532fd63d4b4f61294",
     "GlobalCloud PMC": "aee0434cca99edec438cb021725eb60ca668b20d",
     "GlobalCloud PDC": "dc4f75bd30d92252a7916ff500d5baf28ed6bf4e",
     "GlobalCloud SLC": "93abf9dacab320c65c0fb6400be3b1d46954bf83",
@@ -479,8 +480,8 @@
       "sensitive_paths": []
     },
     "GlobalCloud GPCF": {
-      "dirty_count": 422,
-      "ahead": 1,
+      "dirty_count": 423,
+      "ahead": 2,
       "behind": 0,
       "paths": [
         "$CODEX_HOME/automations/globalcloud-17/README.md",
@@ -648,7 +649,6 @@
         "docs/harness/loops/README.md",
         "docs/harness/minimum-closed-loop/README.md",
         "docs/harness/tasks/README.md",
-        "docs/reports/collab-completion-20261024.md",
         "docs/standards/README.md",
         "features/active/F-012-icp-sop-foundation-coupling/evidence/owner-action-pack-20261024.md",
         "features/active/F-012-icp-sop-foundation-coupling/evidence/plan-20261024.md",
@@ -753,6 +753,8 @@
         "projects/studio/STATUS.md",
         "projects/xwail/STATUS.md",
         "runtime/audit/README.md",
+        "runtime/audit/decision-ledger-20261022.jsonl",
+        "runtime/authorization-receipts.yaml",
         "runtime/logs/F-004.jsonl",
         "runtime/logs/F-011.jsonl",
         "runtime/logs/F-015.jsonl",
@@ -5482,26 +5484,25 @@
       "sensitive_paths": []
     },
     "GlobalCloud Mem": {
-      "dirty_count": 5,
+      "dirty_count": 2,
       "ahead": 0,
       "behind": 0,
       "paths": [
-        "README.md",
-        "docs/STATUS.md",
-        "src/gcmem_context.py",
-        "\"docs/GCMEM-rerank\\350\\201\\224\\345\\220\\210\\351\\252\\214\\350\\257\\201.md\"",
-        "tests/test_gcmem_context_refusal.py"
+        "scripts/calibrate_refusal.py",
+        "tests/test_calibrate_refusal.py"
       ],
       "sensitive_paths": []
     },
     "GlobalCloud WAE": {
-      "dirty_count": 35,
-      "ahead": 1,
+      "dirty_count": 40,
+      "ahead": 0,
       "behind": 0,
       "paths": [
         "apps/wame/src/app/apps/AppsShell.tsx",
         "package.json",
         "packages/app-registry/src/index.ts",
+        "packages/host-kit/src/host/idpRoutes.ts",
+        "packages/host-kit/src/idp/service.ts",
         "scripts/gate-ci.sh",
         "scripts/gate.sh",
         "\"docs/analysis/DSH\\345\\200\\237\\351\\211\\264_00_\\346\\200\\273\\346\\212\\245\\345\\221\\212_20261024.md\"",
@@ -5532,7 +5533,10 @@
         "packages/adopted-dsh/src/store/contract.ts",
         "packages/adopted-dsh/third_party/deepseek-harness/LICENSE",
         "packages/app-registry/src/sidebarContract.ts",
-        "scripts/check-prod-provenance.py",
+        "packages/app-registry/src/supplychain/index.ts",
+        "packages/app-registry/src/supplychain/sbom.ts",
+        "packages/app-registry/src/supplychain/scan.ts",
+        "packages/app-registry/src/supplychain/types.ts",
         "scripts/check-runtime-neutral.mts"
       ],
       "sensitive_paths": []

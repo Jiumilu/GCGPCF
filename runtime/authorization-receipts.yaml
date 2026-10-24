@@ -5,8 +5,8 @@
 schema_version: "1.0"
 generated_at: "2026-10-22T05:40:00+08:00"
 ledger_ref: "09-status/globalcloud-project-group-single-authorization-ledger-v1.0.md"
-authorization_granted_count: 39
-action_executed_count: 31
+authorization_granted_count: 40
+action_executed_count: 32
 pending_execution_count: 8
 receipts:
   - auth_id: AUTH-GPCF-SCHEME-REVIEW-20260626
@@ -481,4 +481,16 @@ receipts:
     expires_at: "2026-11-07T23:59:59+08:00"
     evidence: "docs/reports/ci-activation-checklist-20261024.md"
     review_conclusion: "7 仓各本地提交 1 个 test-build.yml（未 push）；已跟踪口径 test 18→25、build 16→23；远端 CI 需属主 push 后生效"
+    revoked_at: null
+  - auth_id: AUTH-PG-COLLAB-20261024
+    granted_at: "2026-10-24T18:15:00+08:00"
+    granted_by: "老卢"
+    grant_basis: "2026-10-24 18:15 指令：授权协同完成 4 项阻塞（KDS 脏树 / F-036 / 两个 runner / 7 仓门禁 + 8 仓继承）"
+    repo: "多仓（ICP/World/Mem/PDC/SLC/DRC/FireQuote/GPC/PMC/WAE）"
+    scope: "cross_repo_governance_gap_close"
+    actions_allowed: ["read", "add_gate_script", "append_inheritance_declaration", "local_commit", "push_own_commit"]
+    actions_forbidden: ["commit_others_unpushed", "production_change", "delete_content", "rewrite_history"]
+    expires_at: "2027-01-20T23:59:59+08:00"
+    evidence: "docs/reports/collab-completion-20261024.md"
+    review_conclusion: "7 仓门禁已加（6 推送、SLC 本地）；8 仓继承声明已加（4 推送、GPC/PMC 本地、WAE 分支推送）；KDS/F-036/runner 未完成（属主/运维）"
     revoked_at: null
