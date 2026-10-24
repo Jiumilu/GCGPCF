@@ -4,7 +4,7 @@ title: GPCF 状态
 project: GPCF
 related_projects: [GPCF]
 domain: governance
-status: controlled
+status: draft
 version: v1.0
 owner: GPCF
 kds_space: 开发
@@ -30,11 +30,7 @@ superseded_by: []
 
 ## 当前状态
 
-- GPCF 2.0 已进入 Feature 运行态。
-- 当前出口验证 Feature：`F-002` 关闭到 `features/done/`。
-- 第二个出口验证 Feature：`F-003` 关闭到 `features/done/`。
-- 当前 active Feature：`F-004`、`F-005`。
-- 调度状态写入 `runtime/queue.json` 和 `runtime/state.json`。
-- 角色流转日志写入 `runtime/logs/F-xxx.jsonl`。
-- `F-005` 已作为 GFIS 业务样本跑通完整角色链。
-- 本阶段不授权自动 commit、push、deploy、真实 API、真实 KDS API 或状态提升。
+- GPCF 2.0 已进入 Feature 运行态。当前 Feature 和关闭状态以 `features/active/`、`features/done/` 与 `runtime/queue.json` 为准；本页不复制动态清单。
+- 当前调度对象以 `runtime/state.json` 为准，角色流转记录在 `runtime/logs/F-xxx.jsonl`。
+- 项目群纳管范围以 `config/project-group-projects.yaml` 为准。
+- 发布、生产操作和业务状态提升遵循 `AGENTS.md` 的人工授权边界。
