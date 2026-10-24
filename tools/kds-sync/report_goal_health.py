@@ -23,6 +23,7 @@ GATES = [
     "validate_evidence_rule_version.py",
     "validate_vu_ledger.py",
     "validate_asset_reuse.py",
+    "validate_token_source_exceptions.py",
 ]
 
 
