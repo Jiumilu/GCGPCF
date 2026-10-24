@@ -19,7 +19,7 @@ superseded_by: []
 
 # KDS 开发空间同步台账
 
-日期：2026-10-24
+日期：2026-10-25
 
 用途：登记 Git 文档与 KDS `开发` 空间的双向同步映射。当前实现包含仓库内 `.kds/development-space/开发` 本地镜像与真实 KDS API 同步工具链；单文档 API 状态以 `kds_api_status` 和真实同步审计流水为准。
 
@@ -3436,6 +3436,7 @@ superseded_by: []
 | GPCF-DOC-CANDIDATE-WAS-DECISION-MODEL-ARCH-V01 | openspec/changes/was-decision-model-architecture-v0.1/README.md | 开发/05-WAS/openspec/changes/was-decision-model-architecture-v0.1/README.md | bidirectional | pending_api |
 | GPCF-DOC-CANDIDATE-WAS-DECISION-MODEL-ARCH-ARTIFACTS | openspec/changes/was-decision-model-architecture-v0.1/artifacts/README.md | 开发/05-WAS/openspec/changes/was-decision-model-architecture-v0.1/artifacts/README.md | local_only | pending_api |
 | GPCF-DOC-E2CA70136C | openspec/changes/was-decision-model-architecture-v0.1/artifacts/v03-freeze-and-release-record.md | 开发/05-WAS/openspec/changes/was-decision-model-architecture-v0.1/artifacts/v03-freeze-and-release-record.md | local_only | pending_api |
+| GPCF-DOC-0FAEA2D5B2 | openspec/changes/was-decision-model-architecture-v0.1/artifacts/v031-freeze-and-release-record.md | 开发/05-WAS/openspec/changes/was-decision-model-architecture-v0.1/artifacts/v031-freeze-and-release-record.md | local_only | pending_api |
 | GPCF-DOC-CANDIDATE-WAS-DECISION-MODEL-ARCH-DESIGN | openspec/changes/was-decision-model-architecture-v0.1/design.md | 开发/05-WAS/openspec/changes/was-decision-model-architecture-v0.1/design.md | local_only | pending_api |
 | GPCF-DOC-CANDIDATE-WAS-DECISION-MODEL-ARCH-PROPOSAL | openspec/changes/was-decision-model-architecture-v0.1/proposal.md | 开发/05-WAS/openspec/changes/was-decision-model-architecture-v0.1/proposal.md | local_only | pending_api |
 | GPCF-DOC-7CA9A86B02 | openspec/changes/was-decision-model-architecture-v0.1/specs/README.md | 开发/05-KDS/openspec/changes/was-decision-model-architecture-v0.1/specs/README.md | bidirectional | pending_api |

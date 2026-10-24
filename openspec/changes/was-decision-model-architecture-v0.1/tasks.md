@@ -51,6 +51,17 @@ superseded_by: []
 - [ ] 服务化接线/双钥匙恢复/事故流程
 - [ ] WAME 跨仓实施（Q-W3/Q-W7 输入扩展+mapper；需 WAME owner 授权）
 
+## Phase D/E 与 v0.3.1（2026-10-25 更新）
+- [x] 候选场景硬门槛评分表（docs/decision/pilot-candidate-scenarios-v0.1.md）
+- [x] 回放/影子对照模板（pilot-c-evidence-templates / runbooks）
+- [x] 零生产写回证据模板（pilot-evidence-templates-v0.1.md）
+- [x] 许可证/商业权利证据包模板（serviceization-license-evidence-v0.1.md）
+- [x] ServicePackage/SLA/责任矩阵模板（service-package-template-v0.1.md）
+- [x] 法律审查清单模板（serviceization-legal-review-checklist-v0.1.md）
+- [x] v0.3.1 契约冻结（content_hash c243f6aa…；复核通过 A .740；冻结确认 A .927）
+- [x] XWAIL v0.3.1 发布（d9647e7；PR #4 已合并 main bfd7595）
+- [x] WAME v0.3.1 capability mapper（1975b96；main 合并 1b227b2）
+
 ## Phase D 隔离试点准备
 - [ ] 候选场景硬门槛评分表
 - [ ] 回放/影子对照模板

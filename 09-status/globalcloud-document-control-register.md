@@ -19,7 +19,7 @@ superseded_by: []
 
 # GlobalCloud 文档控制总台账
 
-日期：2026-10-24
+日期：2026-10-25
 
 用途：登记 GPCF 仓库内所有 Markdown 文档的受控身份、项目归属、状态、源路径与 KDS 开发空间路径。
 
@@ -3432,6 +3432,7 @@ superseded_by: []
 | GPCF-DOC-CANDIDATE-WAS-DECISION-MODEL-ARCH-V01 | was-decision-model-architecture-v0.1 | openspec/changes/was-decision-model-architecture-v0.1/README.md | WAS | GPCF, XWAIL, WAME, Ontology, AaaS, SCaaS | openspec | draft | 开发/05-WAS/openspec/changes/was-decision-model-architecture-v0.1/README.md |
 | GPCF-DOC-CANDIDATE-WAS-DECISION-MODEL-ARCH-ARTIFACTS | 证据索引 — WAS 决策模型体系架构（候选） | openspec/changes/was-decision-model-architecture-v0.1/artifacts/README.md | WAS | GPCF, XWAIL, WAME | openspec | draft | 开发/05-WAS/openspec/changes/was-decision-model-architecture-v0.1/artifacts/README.md |
 | GPCF-DOC-E2CA70136C | WAS 决策契约 v0.3 冻结与发布记录（进度同步） | openspec/changes/was-decision-model-architecture-v0.1/artifacts/v03-freeze-and-release-record.md | WAS | GPCF, XWAIL, WAME | openspec | draft | 开发/05-WAS/openspec/changes/was-decision-model-architecture-v0.1/artifacts/v03-freeze-and-release-record.md |
+| GPCF-DOC-0FAEA2D5B2 | WAS 决策契约 v0.3.1 冻结与发布记录（进度同步） | openspec/changes/was-decision-model-architecture-v0.1/artifacts/v031-freeze-and-release-record.md | WAS | GPCF, XWAIL, WAME | openspec | draft | 开发/05-WAS/openspec/changes/was-decision-model-architecture-v0.1/artifacts/v031-freeze-and-release-record.md |
 | GPCF-DOC-CANDIDATE-WAS-DECISION-MODEL-ARCH-DESIGN | WAS 决策模型体系架构设计（候选） | openspec/changes/was-decision-model-architecture-v0.1/design.md | WAS | GPCF, XWAIL, WAME, Ontology, AaaS | openspec | draft | 开发/05-WAS/openspec/changes/was-decision-model-architecture-v0.1/design.md |
 | GPCF-DOC-CANDIDATE-WAS-DECISION-MODEL-ARCH-PROPOSAL | WAS 决策模型体系架构与实施方案 v0.1 评审与候选契约准入 | openspec/changes/was-decision-model-architecture-v0.1/proposal.md | WAS | GPCF, XWAIL, WAME, Ontology, AaaS, SCaaS | openspec | draft | 开发/05-WAS/openspec/changes/was-decision-model-architecture-v0.1/proposal.md |
 | GPCF-DOC-7CA9A86B02 | specs | openspec/changes/was-decision-model-architecture-v0.1/specs/README.md | KDS | GPC, WAME, KDS, GPCF | openspec | draft | 开发/05-KDS/openspec/changes/was-decision-model-architecture-v0.1/specs/README.md |

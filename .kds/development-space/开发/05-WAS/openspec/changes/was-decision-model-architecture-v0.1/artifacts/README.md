@@ -39,3 +39,4 @@ KDS 空间：`开发`
 | --- | --- | --- | --- | --- |
 | GPCF-DOC-CANDIDATE-WAS-DECISION-MODEL-ARCH-ARTIFACTS | 证据索引 — WAS 决策模型体系架构（候选） | openspec/changes/was-decision-model-architecture-v0.1/artifacts/README.md | WAS | draft |
 | GPCF-DOC-E2CA70136C | WAS 决策契约 v0.3 冻结与发布记录（进度同步） | openspec/changes/was-decision-model-architecture-v0.1/artifacts/v03-freeze-and-release-record.md | WAS | draft |
+| GPCF-DOC-0FAEA2D5B2 | WAS 决策契约 v0.3.1 冻结与发布记录（进度同步） | openspec/changes/was-decision-model-architecture-v0.1/artifacts/v031-freeze-and-release-record.md | WAS | draft |
