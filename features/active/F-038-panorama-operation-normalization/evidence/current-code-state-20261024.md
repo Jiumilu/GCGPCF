@@ -105,3 +105,8 @@ superseded_by: []
 
 - 新增 `panorama/usePanoTeamTasks.ts`：团队消息映射与任务入区外提；
 - script 1195 → **1178** 行；793 tests / tsc 0；SpaceAI main 本地提交（未 push）。
+
+## B5 外提增量 11（2026-10-24）
+
+- 新增 `panorama/usePanoMode.ts`：CWME 页签 / panoMode / 持久化外提；
+- script 1178 → **1163** 行；793 tests / tsc 0；SpaceAI main 本地提交（未 push）。
