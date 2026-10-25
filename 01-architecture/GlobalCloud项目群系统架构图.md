@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/90-跨项目架构/01-architecture/GlobalCloud项目群系统架构图.md
 source_path: 01-architecture/GlobalCloud项目群系统架构图.md
 sync_direction: bidirectional
-last_reviewed: 2026-10-21
+last_reviewed: 2026-10-25
 supersedes: []
 superseded_by: []
 ---
@@ -453,6 +453,16 @@ DRC 当前仅有候选方案，图中交换和读模型是目标协作方式，�
 6. **ICP 固定 candidate/partial/human_required**：不拥有业务事实写入权、治理批准权或生产执行权。
 7. **WAE 只统一界面层**：不接管任何项目的业务主账、治理裁决权或事实源；写门禁默认关闭。
 8. **非声明边界**：本文不声明任一系统已实现、已集成、已交付或已验收；不声明 XWAIL/WAME/WAE 达到 `production_ready`；不声明真实业务闭环、客户验收或商业上线完成。未经人工确认，不得声明 `accepted`、`integrated`、`production_ready` 或 `customer_accepted`。
+
+## 9.1 外部接入系统（非注册项目）
+
+> **口径（2026-10-25 CHG-10）**：以下系统**以外部开源/自托管件接入**，**不是注册项目**，不进 §8 矩阵、不占 `current_project_count` 分母。
+
+| 系统 | 性质 | 接入层级 | 数据路径披露 | 备注 |
+|---|---|---|---|---|
+| **Paperclip**（paperclipai/paperclip，MIT，自托管） | AI 组织控制平面（公司/员工/预算/审批/审计） | WAE L2 受控嵌入（Q28=.759） | prompts/文件发所配 provider（遥测可关）；不对外产品化 | 2026-10-25 老卢「全面引入」+ Q24–Q33；接入中，**非注册项目**（本单只登记，不代表生产部署授权） |
+
+**登记规则**：新增外部接入系统需在 `_governance/` 外部件登记位登记（层级/数据路径/版本冻结/非产品化声明）；不修改注册表分母。
 
 ## 10. 承接关系与裁定记录
 
