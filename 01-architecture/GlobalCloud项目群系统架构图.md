@@ -5,7 +5,7 @@ project: GPCF
 related_projects: [WAS, XWAIL, AAAS, WAME, WAE, GFIS, GPC, PVAOS, PQC, KDS, GCMEM, Brain, PKC, MMC, XiaoC, XiaoG, XGD, SOP, ICP, SpaceAI, SpaceAIStudio, World, GPCF, Project, PDC, SLC, DRC]
 domain: architecture
 status: controlled
-version: v1.2
+version: v1.3
 owner: GPCF
 kds_space: 开发
 kds_path: 开发/90-跨项目架构/01-architecture/GlobalCloud项目群系统架构图.md
@@ -463,6 +463,73 @@ DRC 当前仅有候选方案，图中交换和读模型是目标协作方式，�
 | **Paperclip**（paperclipai/paperclip，MIT，自托管） | AI 组织控制平面（公司/员工/预算/审批/审计） | WAE L2 受控嵌入（Q28=.759） | prompts/文件发所配 provider（遥测可关）；不对外产品化 | 2026-10-25 老卢「全面引入」+ Q24–Q33；接入中，**非注册项目**（本单只登记，不代表生产部署授权） |
 
 **登记规则**：新增外部接入系统需在 `_governance/` 外部件登记位登记（层级/数据路径/版本冻结/非产品化声明）；不修改注册表分母。
+
+## 9.2 研发自洽体系视图（2026-10-25 新增 · 规划域 candidate）
+
+> **口径**：本节是 session `3f718d6e` 全量方案（`runtime/plan-20261025/rnd-self-consistent-system/`）的架构视图登记。**不新增项目、不新增方案层级、不改 L0–L7 与 §8 矩阵**；研发自洽体系是横跨既有项目的**研发运营闭环**，不是第 30/31 个项目。
+> 体系定位与主框架见《GlobalCloud 项目群总体方案》§7（v1.4）。
+
+```mermaid
+flowchart TB
+  subgraph LOOP["三条环（节拍）"]
+    D1["发现环<br/>反馈→需求候选（周/双周）"]
+    D2["交付环<br/>Feature→构建/测试/证据（2 周建议）"]
+    D3["运营环<br/>交付→运营结果→复盘（月/季）"]
+  end
+
+  subgraph LAYERS["六层结构"]
+    L1["L1 客户触点<br/>WAE 反馈中心 · 飞书 13 群 · FDE 前哨"]
+    L2["L2 发现与决策<br/>特性广场 · 需求候选 · StartLux + G5"]
+    L3["L3 规划与编排<br/>GPCF 2.0 Program/Project/Feature · PMC"]
+    L4["L4 构建与交付<br/>MMC Harness · GCToken 模型链 · DSH/Hermes · Evidence Gate"]
+    L5["L5 运营与反馈<br/>四账/对账/工单/SLA · 反馈落实"]
+    L6["L6 治理与度量<br/>五道门 · StartLux · DORA/Flow · Team Topologies"]
+  end
+
+  subgraph EXEC["执行与供给"]
+    X1["GCToken 统一网关<br/>注册/路由/计量（Agent 不直连 provider）"]
+    X2["MMC 注册 + WAME 授权<br/>模型/工具/Agent 注册与证据"]
+    X3["角色化 Agent 小队<br/>编码 · 评审 · 测试（首期三角色）"]
+    X4["AAAS 计量与结算<br/>四本账 · 对账 48h · T+10"]
+  end
+
+  subgraph BILL["项目群级支付结算（P1 边界）"]
+    B1["成本账<br/>人力/算力/Token/第三方"]
+    B2["计价账<br/>规则/价格/折扣/审批"]
+    B3["结算账<br/>内部结算/对客账单/对账"]
+    B4["收入对账账<br/>开票/回款/账龄/收入确认"]
+  end
+
+  D1 --> L2
+  D2 --> L4
+  D3 --> L5
+  L2 --> L3
+  L3 --> L4
+  L4 --> L5
+  L4 --> X1
+  X1 --> X3
+  X3 --> X2
+  L5 --> X4
+  X4 --> B1
+  X4 --> B3
+  B1 --> B2
+  B3 --> B4
+  L6 -. "门禁/度量/护栏" .-> LOOP
+```
+
+> 可交互图：[研发自洽体系架构图](<../../.archify/architecture-rnd-selfconsistent-20261025-1545/rnd-selfconsistent.html>)
+
+**读图口径**：
+
+1. 研发自洽体系横跨 L2–L6，**不改变 L0–L7 分层**；其 SSOT 与既有架构一致（交付=GPCF、任务=PMC、知识=KDS、授权=WAME、界面=WAE、计量=AAAS、决策=StartLux）。
+2. 三条环驱动六层；**L6 只加护栏与度量，不改既有门禁**（五道门 + StartLux + Evidence Gate）。
+3. 模型/Agent 侧硬规则：**Agent 不直连 provider**（GCToken 统一网关 0.978）；编码与评审用不同模型；城市层只走本地模型；未过评估不得进生产。
+4. 结算边界 P1：内部结算 + 开票/回款；第三方支付、自动分账后置。
+5. 现状：GCToken 为 MVP、Paperclip 验证态、AAAS 计费约 5%、`realBillingEnabled=false`——首期用**规则表 + 人工台账**兜底，不依赖未就绪系统。
+
+**决策模型推荐（2026-10-25）**：FDE 驱动 BizDevOps 0.818 · 合同/保修优先 0.832 · 统一网关 0.978 · 角色化 Agent 小队 0.927 · 现有资产扩展 0.992 · 首期三角色 0.983 · 结算落点 AAAS 0.735 · 支付边界 P1 0.950 · D4 价格口径先对齐 0.974 · D9 首期客户=葛化首客（弱偏好 0.431，须老卢定）· D10 先登记候选不转受控 0.813。
+
+**非声明**：本节为规划域登记，不声明研发自洽体系已实现/已运行/已验收；不声明任何客户签约或资金发生。
 
 ## 10. 承接关系与裁定记录
 
