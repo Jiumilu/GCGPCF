@@ -1,3 +1,10 @@
+# 历史例外（2026-10-25 CHG-09，老卢 S-4=A）：Studio 已于 2026-10-25 退出项目群，
+# F-015 不再交付；状态保持 done（2026-10-22 随 Studio 退役结项），保留证据不迁移。
+history_exception:
+  recorded_on: 2026-10-25
+  reason: "Studio 退出项目群（2026-10-25 老卢裁定）；Feature 不再交付"
+  evidence_retained: true
+  no_migration: true
 id: F-015
 name: gcworld-organization-readonly-vertical-slice
 project: studio

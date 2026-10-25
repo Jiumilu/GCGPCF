@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-GROUP-SYSTEM-ARCHITECTURE-20261017
 title: GlobalCloud 项目群系统架构图
 project: GPCF
-related_projects: [WAS, XWAIL, AAAS, WAME, WAE, GFIS, GPC, PVAOS, PQC, KDS, GCMEM, Brain, PKC, MMC, XiaoC, XiaoG, XGD, SOP, ICP, SpaceAI, SpaceAIStudio, World, Studio, GPCF, Project, PDC, SLC, DRC]
+related_projects: [WAS, XWAIL, AAAS, WAME, WAE, GFIS, GPC, PVAOS, PQC, KDS, GCMEM, Brain, PKC, MMC, XiaoC, XiaoG, XGD, SOP, ICP, SpaceAI, SpaceAIStudio, World, GPCF, Project, PDC, SLC, DRC]
 domain: architecture
 status: controlled
 version: v1.2
@@ -39,7 +39,7 @@ superseded_by: []
 | L4 | 生产执行层 | GFIS、Edge/OT | 单厂事实源与现场接入 |
 | L5 | 知识与数据层 | KDS、GCMEM、Brain、PKC、DRC、结构化 DB 域 | 知识主存、长期记忆、知识 UI、各域结构化数据与 DRC 资源元数据目录；不集中业务主账 |
 | L6 | AI 能力层 | XiaoC（蚁后）、XGD（大象）、XiaoG（蚂蚁/Hermes） | AI 能力生产、编排路由与受权执行 |
-| L7 | 工程研发底座 | Studio、Project/Plane、Harness Engineering（规范仓 MMC） | 研发、协作只读投影、治理、发布与验收纪律 |
+| L7 | 工程研发底座 | Project/Plane、Harness Engineering（规范仓 MMC） | 研发、协作只读投影、治理、发布与验收纪律（Studio 2026-10-25 已退出项目群） |
 | — | 横切面 A | WAS/Ontology/XWAIL | 语义契约体系：定义体系 → 定义语义 → 定义契约 |
 | — | 横切面 B | WAME（引擎面）、World、CWME | WAS 运行时链：引擎 → 世界运行时 → 域实现 |
 | — | 横切面 C | 四流（治理流/业务流/数据流/AI 服务流） | 跨层交互约束模型 |
@@ -95,7 +95,7 @@ flowchart TB
   end
 
   subgraph L7["L7 工程研发底座"]
-    STUDIO["Studio 研发治理发布工作台<br/>Vue·Koa·Electron"]
+    STUDIO["Studio（已退出项目群<br/>2026-10-25）"]
     PROJECT["Project / Plane 协作入口<br/>工作项·GPCF Feature/Evidence 只读投影"]
     HARNESS["Harness Engineering<br/>Manifest·验收·状态纪律<br/>规范仓 MMC"]
   end
@@ -271,7 +271,7 @@ flowchart LR
   KDS -->|"RAG 导出·证据检索"| BRAIN["Brain 受控分析与候选<br/>WiIKI 工作台"]
   MMC["MMC<br/>可信身份·跨服务授权"] --> BRAIN
   KDS --> PKC["PKC 个人工作台<br/>任务·通知·协同"]
-  BRAIN -->|"候选结果"| STUDIO["Studio 用户任务·人工复核"]
+  BRAIN -->|"候选结果"| STUDIO["Studio（已退出；历史）"]
   STUDIO -->|"确认后按授权写回"| KDS
   WAME["WAME / 人工<br/>授权与状态裁决"] -. "授权门" .-> BRAIN
   WAME -. "授权门" .-> STUDIO
@@ -411,7 +411,9 @@ DRC 当前仅有候选方案，图中交换和读模型是目标协作方式，�
 | # | 项目 | 架构层 | 主责 | 关键模块 | 对外数据流 | 状态口径（各项登记时点，非统一验收） |
 |---|---|---|---|---|---|---|
 | 1 | WAS | 横切 A·语义基座 | 总体语义、架构与治理基线 | 三层资产·八维·九流·生命周期；OKF 契约层 + 11 validator | 读 KDS/GPCF；输出语义边界 → XWAIL/WAME/RAG | controlled，治理准入中；P0 落地，P1-P3 骨架 |
-| 2 | XWAIL | 横切 A·契约 | 机器建模语言、契约、验证 | Schema·Profile·Validator·XAP 包·CLI 校核 | 读 WAS/Ontology；契约 → WAME 受理器/AAAS/Studio | draft/in_progress；V1.2 规则 PoC |
+> **口径（2026-10-25 CHG-09）**：Studio 已于 2026-10-25 退出项目群（老卢裁定），§8 中保留 retired 行仅作历史；WAES 确认作废。
+
+| 2 | XWAIL | 横切 A·契约 | 机器建模语言、契约、验证 | Schema·Profile·Validator·XAP 包·CLI 校核 | 读 WAS/Ontology；契约 → WAME 受理器/AAAS（Studio 已退出，历史） | draft/in_progress；V1.2 规则 PoC |
 | 3 | AAAS | L3·商业交付 | 资产服务化、计量、SLA、证据要求 | ServicePackage·Metering·SLA/SLO·EvidenceRequirement·商业状态机 | 读 XWAIL/WAME 状态；服务包 → WAME 治理入口/SCaaS | baseline；服务包定义与样例 |
 | 4 | WAME | L2 平台面 + 横切 B 引擎面 | 资产主账、运行引擎、治理执行、授权发布 | 受理器 xap-intake·主账·模型注册状态机·事件·关系·策略·证据·计量·Agent Desktop | 读 WAS/XWAIL/各业务只读；发布签名制品 → PVAOS | 引擎面 not_implemented；平台面 partial（受理器参考实现可用） |
 | 5 | WAE | L1·统一入口 | 项目群统一界面框架与入口 | ui-tokens·ui-kit·app-registry·app-shell·host-kit 写门禁/idp/装配态 | 界面承载各项目；写门禁默认关闭 | in_progress；框架实施中 |
@@ -433,7 +435,7 @@ DRC 当前仅有候选方案，图中交换和读模型是目标协作方式，�
 | 21 | SpaceAI | 旁挂域 | 安防监控平台统一重构 + CWME 场景运营应用 | apps/desktop（Tauri2+Vue3）·apps/server（Koa BFF·SSE）·packages/protocol（52 端点）·domain（32 模型）·plugin-sdk·plugins（设备/报警/巡更/门禁）·mobile-shell·apps/city-model | ↔ World（CWME 空间域）；BFF 注册 MMC 能力目录；契约归 XWAIL；ONVIF/RTSP/GB28181 设备接入 | partial/in_progress（BFF :39010 运行；业务验收未确认） |
 | 22 | SpaceAIStudio | 旁挂域 | 空间智能工作台（与 Studio 平行，不合并） | 遗留 C# WinForms 宿主（12 模块）；重构 apps/desktop（Vue3+Tauri2+Cesium 三维 GIS） | 独立边界；与 SpaceAI/Studio 互不写入 | partial（registered；P0-P5 已交付，待人工验收） |
 | 23 | World | 横切 B·世界运行时 | 世界状态、投影、授权上下文、模拟推演 | 世界模型投影·组织与 Agent·动态授权上下文·模拟实验室·统一工作台 | ← WAME 引擎能力；← KDS 事实；→ WAE 封装；↔ CWME | partial；中央文档门禁 rework_required |
-| 24 | Studio | L7·工程研发底座 | 研发、治理和发布工作台（Hermes Web UI 形态） | Vue3 client（:8649）·Koa server（:8647）·Electron·features 管理·kds-sync LOOP 门禁 | 读 KDS（真实写需显式授权）；LOOP 证据经 WAME/GPCF 门禁；gcworld 模块 2026-10-17 已迁出至 World | LOOP 驱动，无静态状态 |
+| 24 | ~~Studio~~ | ~~L7·工程研发底座~~ | **已退出项目群（2026-10-25，老卢 S-1=A 裁定）** | 已归档 `_archive/2026-10-25-studio-retired/` | 不再活跃；F-015 记历史例外 | retired |
 | 25 | Project | L7·研发协作入口 | Plane 工作项与 GPCF Feature/Evidence 只读投影 | Plane Community Edition·稳定外部 ID·来源回链 | ← GPCF 只读状态；不得回写 GPCF 交付/验收结论 | partial；F-028 关闭不代表项目群集成验收 |
 | 26 | PDC | L3·独立包装设计工具 | 包装箱展开、用料计算、参数验证与 3D 预览 | Web/Electron·本地 SQLite | 经确认契约与 PQC/GPC 引用；不改平台或工厂主账 | partial/rework；当前版本关键任务与装配待验证 |
 | 27 | SLC | L3·独立运力测算工具 | 运力测算与本地应用数据 | Vite/Electron/Express | 与 GPC 等的上下游对象及权限契约待定义 | partial/rework；项目级双方案与验证待补 |

@@ -1,5 +1,5 @@
 schema_version: 1
-current_project_count: 30
+current_project_count: 29
 scope_decision:
   confirmed_on: 2026-10-21
   decision: WAE, Project, PDC, SLC and DRC are included in the current 28-project scope;
@@ -26,7 +26,6 @@ projects:
   - {id: XiaoC, slug: xiaoc, repo: "GlobalCloud XiaoC"}
   - {id: WAME, slug: wame, repo: "GlobalCloud WAME"}
   - {id: GPC, slug: gpc, repo: "GlobalCloud GPC"}
-  - {id: Studio, slug: studio, repo: "GlobalCloud Studio", retired: true, retired_on: 2026-10-22, denominator_retained: true}
   - {id: GPCF, slug: gpcf, repo: "GlobalCloud GPCF"}
   - {id: XWAIL, slug: xwail, repo: "GlobalCloud XWAIL"}
   - {id: GFIS, slug: gfis, repo: "GlobalCloud GFIS"}
@@ -51,5 +50,6 @@ projects:
   - {id: FireQuote, slug: firequote, repo: "GlobalCloud FireQuote"}
   - {id: GCToken, slug: gctoken, repo: "GlobalCloud Token"}
 
-# 2026-10-22 Q6 裁定：Studio 已退出（disposition=exit）但保留在 29 分母内，
-# 故仍以 retired 字段保留在 projects 列表中（结构上不另设 retired_projects 段，避免破坏 4 个门禁校验器的分母解析）。
+# 2026-10-25 CHG-09（老卢 S-1=A 裁定）：Studio 退出项目群，条目已从 projects 列表移除；
+# 项目目录已归档 _archive/2026-10-25-studio-retired/；WAES 确认作废（2026-10-22 退役、2026-10-24 归档）。
+# 当前分母 29 = 28 个活跃项目 + GCToken（2026-10-25 CHG-12 登记）。
