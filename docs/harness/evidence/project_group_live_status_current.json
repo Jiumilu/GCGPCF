@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-10-25T12:49:02.231196+08:00",
+  "generated_at": "2026-10-25T13:19:43.925649+08:00",
   "freshness_hours": 12,
   "freshness_ok": true,
   "project_count": 29,
@@ -40,7 +40,8 @@
     "GlobalCloud PKC",
     "GlobalCloud WAE",
     "GlobalCloud PMC",
-    "GlobalCloud SLC"
+    "GlobalCloud SLC",
+    "GlobalCloud Token"
   ],
   "stable_dirty": [
     "GlobalCloud AAAS",
@@ -51,6 +52,7 @@
     "GlobalCloud GPCF",
     "GlobalCloud KDS",
     "GlobalCloud MMC",
+    "GlobalCloud Mem",
     "GlobalCloud PDC",
     "GlobalCloud PMC",
     "GlobalCloud PQC",
@@ -64,6 +66,7 @@
     "GlobalCloud XiaoG"
   ],
   "stable_ahead": [
+    "GlobalCloud AAAS",
     "GlobalCloud Brain",
     "GlobalCloud GPC",
     "GlobalCloud GPCF",
@@ -72,6 +75,9 @@
     "GlobalCloud PMC",
     "GlobalCloud PVA",
     "GlobalCloud SLC",
+    "GlobalCloud SOP",
+    "GlobalCloud WAE",
+    "GlobalCloud WAME",
     "GlobalCloud XiaoC",
     "GlobalCloud XiaoG"
   ],
@@ -87,6 +93,7 @@
     "GlobalCloud GPCF",
     "GlobalCloud KDS",
     "GlobalCloud MMC",
+    "GlobalCloud Mem",
     "GlobalCloud PDC",
     "GlobalCloud PMC",
     "GlobalCloud PQC",
@@ -104,9 +111,9 @@
     "GlobalCloud GPCF",
     "GlobalCloud WAE"
   ],
-  "pass_repo_count": 6,
+  "pass_repo_count": 5,
   "bootstrap_window": false,
-  "previous_generated_at": "2026-10-25T08:48:17.910092+08:00",
+  "previous_generated_at": "2026-10-25T12:49:02.231196+08:00",
   "repo_heads": {
     "GlobalCloud AAAS": "fb0ab7eefca543334a565efbccedf8f1baadf37d",
     "GlobalCloud Brain": "d266e49a9535bce0ec0525d2831391437e115028",
@@ -125,7 +132,7 @@
     "GlobalCloud PKC": "2a64a71656143ee21c3ef3d07d6f8144e5527a40",
     "GlobalCloud XGD": "95126a7ffd72eed65dbb7d1b2e5a78874a59baaf",
     "GlobalCloud ICP": "2c93394336486e778dbbaacfe463d326d2298721",
-    "GlobalCloud PQC": "54a24a1c4fb0a7923fe867ca28541461e7e3498f",
+    "GlobalCloud PQC": "e0638d16b4dafb8ca548503c94600478e732b24f",
     "GlobalCloud SpaceAI Platform": "0212def2c00c041541f81053d8f62e98ae0af638",
     "GlobalCloud SpaceAI Studio": "0ca7c857e306598a8c6ec591ab54b8fe55bae8b0",
     "GlobalCloud World": "b2d639787aa4ca5194cec8269ad19c4180415001",
@@ -136,7 +143,7 @@
     "GlobalCloud SLC": "811f5a323b1a750e69864518dfeb7339e0c0c9c6",
     "GlobalCloud DRC": "1ae8431e8d941ea35358512e73d9494c13a0cb5e",
     "GlobalCloud FireQuote": "21d6d35266858914c7f0aa2e7a4792089abe5641",
-    "GlobalCloud Token": "f897958eee7ea9299c7b939cc82bc7d8e0979cd9"
+    "GlobalCloud Token": "27e3bc72e5592dc1dbdc14de7369156f394f1262"
   },
   "dirty_details": {
     "GlobalCloud AAAS": {
@@ -426,7 +433,7 @@
     },
     "GlobalCloud GPCF": {
       "dirty_count": 439,
-      "ahead": 34,
+      "ahead": 35,
       "behind": 0,
       "paths": [
         "$CODEX_HOME/automations/globalcloud-17/README.md",
@@ -1088,12 +1095,11 @@
       "sensitive_paths": []
     },
     "GlobalCloud PQC": {
-      "dirty_count": 34,
+      "dirty_count": 33,
       "ahead": 0,
       "behind": 0,
       "paths": [
-        "frontend/app/orders/[id]/page.tsx",
-        "frontend/components/ext-ops/MetricsPanel.tsx",
+        "frontend/app/quotes/page.tsx",
         "frontend/e2e/helpers.ts",
         "frontend/e2e/tests/blindspot-guards.spec.ts",
         "frontend/e2e/tests/quote-lifecycle.spec.ts",
@@ -1423,7 +1429,7 @@
     },
     "GlobalCloud Token": {
       "dirty_count": 0,
-      "ahead": 0,
+      "ahead": 2,
       "behind": 0,
       "paths": [],
       "sensitive_paths": []
