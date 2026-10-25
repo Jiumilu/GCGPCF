@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-10-25T08:48:17.910092+08:00",
+  "generated_at": "2026-10-25T12:49:02.231196+08:00",
   "freshness_hours": 12,
   "freshness_ok": true,
   "project_count": 29,
@@ -10,7 +10,6 @@
     "GlobalCloud XiaoC",
     "GlobalCloud WAME",
     "GlobalCloud GPC",
-    "GlobalCloud Studio",
     "GlobalCloud GPCF",
     "GlobalCloud XWAIL",
     "GlobalCloud GFIS",
@@ -18,27 +17,28 @@
     "GlobalCloud KDS",
     "GlobalCloud XiaoG",
     "GlobalCloud PVA",
-    "GlobalCloud SOP",
-    "GlobalCloud XGD",
     "GlobalCloud PQC",
     "GlobalCloud SpaceAI Platform",
     "GlobalCloud World",
+    "GlobalCloud Mem",
     "GlobalCloud WAE",
     "GlobalCloud PMC",
     "GlobalCloud PDC",
     "GlobalCloud FireQuote"
   ],
   "observed_ahead": [
+    "GlobalCloud AAAS",
     "GlobalCloud Brain",
     "GlobalCloud XiaoC",
+    "GlobalCloud WAME",
     "GlobalCloud GPC",
-    "GlobalCloud Studio",
     "GlobalCloud GPCF",
     "GlobalCloud MMC",
     "GlobalCloud XiaoG",
     "GlobalCloud PVA",
+    "GlobalCloud SOP",
     "GlobalCloud PKC",
-    "GlobalCloud Mem",
+    "GlobalCloud WAE",
     "GlobalCloud PMC",
     "GlobalCloud SLC"
   ],
@@ -55,9 +55,7 @@
     "GlobalCloud PMC",
     "GlobalCloud PQC",
     "GlobalCloud PVA",
-    "GlobalCloud SOP",
     "GlobalCloud SpaceAI Platform",
-    "GlobalCloud Studio",
     "GlobalCloud WAE",
     "GlobalCloud WAME",
     "GlobalCloud World",
@@ -70,12 +68,10 @@
     "GlobalCloud GPC",
     "GlobalCloud GPCF",
     "GlobalCloud MMC",
-    "GlobalCloud Mem",
     "GlobalCloud PKC",
     "GlobalCloud PMC",
     "GlobalCloud PVA",
     "GlobalCloud SLC",
-    "GlobalCloud Studio",
     "GlobalCloud XiaoC",
     "GlobalCloud XiaoG"
   ],
@@ -95,9 +91,7 @@
     "GlobalCloud PMC",
     "GlobalCloud PQC",
     "GlobalCloud PVA",
-    "GlobalCloud SOP",
     "GlobalCloud SpaceAI Platform",
-    "GlobalCloud Studio",
     "GlobalCloud WAE",
     "GlobalCloud WAME",
     "GlobalCloud World",
@@ -110,55 +104,50 @@
     "GlobalCloud GPCF",
     "GlobalCloud WAE"
   ],
-  "pass_repo_count": 4,
+  "pass_repo_count": 6,
   "bootstrap_window": false,
-  "previous_generated_at": "2026-10-25T08:17:28.505357+08:00",
+  "previous_generated_at": "2026-10-25T08:48:17.910092+08:00",
   "repo_heads": {
-    "GlobalCloud AAAS": "2d88e17f229ec53867a2890b72ece3e1c27cd1c2",
+    "GlobalCloud AAAS": "fb0ab7eefca543334a565efbccedf8f1baadf37d",
     "GlobalCloud Brain": "d266e49a9535bce0ec0525d2831391437e115028",
     "GlobalCloud WAS": "76559f70bb3f4953500c3607ca70073f56e4e467",
     "GlobalCloud XiaoC": "a6cd9c96a3c61d5cd51f9da6e50c6b0cfd514064",
-    "GlobalCloud WAME": "d56d09a48c36fdf8c40c01c43a3ad50eb8a7c1f3",
+    "GlobalCloud WAME": "778fa39d08176f240c2eab1d41624208d41d87b6",
     "GlobalCloud GPC": "ee92bdb5baba938ed2f450505ddfab82b1dc9ee0",
-    "GlobalCloud Studio": "bed04bdcb75c08c866f26eac0935f92e1bc9a1ca",
     "GlobalCloud GPCF": "",
     "GlobalCloud XWAIL": "29c6669020bbb3e6bf47e748b917cf818a5800c6",
     "GlobalCloud GFIS": "3a18efbec321851395c311ce215784186b27ad15",
     "GlobalCloud MMC": "1f3803995d8f0a1969c8aaabca3b3a0217e2362e",
-    "GlobalCloud KDS": "79431f7afd1a1a8f157e2de00de6316328b35f17",
-    "GlobalCloud XiaoG": "2edbea3891933ee3ee89ece1f4975e547fe9ab16",
-    "GlobalCloud PVA": "31baaf34ef10ab898d623216b03b83b6e8a9cb91",
-    "GlobalCloud SOP": "0a82e687dc891d05d2f541717aedca955c907132",
+    "GlobalCloud KDS": "5bc5c0284bab2ce4c9367ec57431f052f1a0eec7",
+    "GlobalCloud XiaoG": "e8c953ae0e12574c52024c060ddf9e68b00c08af",
+    "GlobalCloud PVA": "14849fa858e4d4e880e2738f1d5f7d32f745e408",
+    "GlobalCloud SOP": "80aa900d1b8963157f410f8099511e988cdc3a1e",
     "GlobalCloud PKC": "2a64a71656143ee21c3ef3d07d6f8144e5527a40",
-    "GlobalCloud XGD": "6ed0bfcfcf6f964e209b898e08b94f2ac87fd5ca",
+    "GlobalCloud XGD": "95126a7ffd72eed65dbb7d1b2e5a78874a59baaf",
     "GlobalCloud ICP": "2c93394336486e778dbbaacfe463d326d2298721",
-    "GlobalCloud PQC": "e9edb69b6ddcd4b4942c147e35976222bff3e379",
-    "GlobalCloud SpaceAI Platform": "96c0bcf7a69a0a057750b50b2c26b9a7a2b48730",
+    "GlobalCloud PQC": "54a24a1c4fb0a7923fe867ca28541461e7e3498f",
+    "GlobalCloud SpaceAI Platform": "0212def2c00c041541f81053d8f62e98ae0af638",
     "GlobalCloud SpaceAI Studio": "0ca7c857e306598a8c6ec591ab54b8fe55bae8b0",
     "GlobalCloud World": "b2d639787aa4ca5194cec8269ad19c4180415001",
-    "GlobalCloud Mem": "4989b39ac3ca2d9fd2ab405a3daf9046ad55f61e",
-    "GlobalCloud WAE": "483406a835623b91bad078acf9c9c7521cdd1142",
-    "GlobalCloud PMC": "5b25c32186853e9ea466a11015591e7049411a55",
+    "GlobalCloud Mem": "61304c6606360a14aa5a0001127d4166060032f2",
+    "GlobalCloud WAE": "806b631f858ceb2283884d47c67fc6562d29d4b7",
+    "GlobalCloud PMC": "8222fd5e340c7bea82825b7ddc7ccf454571662b",
     "GlobalCloud PDC": "76311da1080e5a70ca6d25026555fe02f0b8894a",
     "GlobalCloud SLC": "811f5a323b1a750e69864518dfeb7339e0c0c9c6",
     "GlobalCloud DRC": "1ae8431e8d941ea35358512e73d9494c13a0cb5e",
-    "GlobalCloud FireQuote": "21d6d35266858914c7f0aa2e7a4792089abe5641"
+    "GlobalCloud FireQuote": "21d6d35266858914c7f0aa2e7a4792089abe5641",
+    "GlobalCloud Token": "f897958eee7ea9299c7b939cc82bc7d8e0979cd9"
   },
   "dirty_details": {
     "GlobalCloud AAAS": {
-      "dirty_count": 17,
-      "ahead": 0,
+      "dirty_count": 12,
+      "ahead": 2,
       "behind": 0,
       "paths": [
-        "\"docs/GlobalCloud AaaS DoDAF\\346\\236\\266\\346\\236\\204\\350\\247\\204\\345\\210\\222_v0.1.md\"",
-        "\"docs/GlobalCloud AaaS \\345\\256\\236\\346\\226\\275\\346\\226\\271\\346\\241\\210.md\"",
-        "\"docs/GlobalCloud AaaS \\346\\200\\273\\344\\275\\223\\346\\226\\271\\346\\241\\210.md\"",
         "schemas-json/aaas-service-package.schema.json",
         "scripts/aaas_common.py",
         "scripts/validate_service_package.py",
         "tools/export_aaas_state.py",
-        "\"docs/GlobalCloud AaaS FDE \\344\\270\\232\\345\\212\\241\\344\\270\\223\\351\\241\\271\\346\\226\\271\\346\\241\\210_v1.0.md\"",
-        "\"docs/GlobalCloud AaaS \\345\\271\\263\\345\\217\\260+\\350\\277\\220\\350\\220\\245+FDE \\344\\270\\232\\345\\212\\241\\346\\250\\241\\345\\274\\217\\345\\210\\206\\346\\236\\220_v1.1.md\"",
         "research/aaas-business-evidence.md",
         "research/benchmark-fde-platform-ops.md",
         "review/fde-plan-review.md",
@@ -413,11 +402,10 @@
       ]
     },
     "GlobalCloud WAME": {
-      "dirty_count": 7,
-      "ahead": 0,
-      "behind": 15,
+      "dirty_count": 6,
+      "ahead": 1,
+      "behind": 26,
       "paths": [
-        "\"GlobalCloud WAME \\346\\200\\273\\344\\275\\223\\346\\226\\271\\346\\241\\210.md\"",
         "src/app/components/FunctionPanel.tsx",
         "src/app/components/Sidebar.tsx",
         "src/app/layout/GlobalCloudShell.tsx",
@@ -436,18 +424,9 @@
       ],
       "sensitive_paths": []
     },
-    "GlobalCloud Studio": {
-      "dirty_count": 1,
-      "ahead": 1,
-      "behind": 0,
-      "paths": [
-        "\"GlobalCloud Studio \\346\\200\\273\\344\\275\\223\\346\\226\\271\\346\\241\\210.md\""
-      ],
-      "sensitive_paths": []
-    },
     "GlobalCloud GPCF": {
-      "dirty_count": 444,
-      "ahead": 26,
+      "dirty_count": 439,
+      "ahead": 34,
       "behind": 0,
       "paths": [
         "$CODEX_HOME/automations/globalcloud-17/README.md",
@@ -552,8 +531,6 @@
         "00-index/README.md",
         "\"01-architecture/GlobalCloud\\351\\241\\271\\347\\233\\256\\347\\276\\244\\346\\200\\273\\344\\275\\223\\346\\236\\266\\346\\236\\204\\350\\277\\255\\344\\273\\243\\345\\210\\206\\346\\236\\220_v1.0.md\"",
         "\"01-architecture/GlobalCloud\\351\\241\\271\\347\\233\\256\\347\\276\\244\\346\\236\\266\\346\\236\\204\\346\\267\\261\\345\\214\\226\\345\\210\\206\\346\\236\\220_v1.0.md\"",
-        "\"01-architecture/GlobalCloud\\351\\241\\271\\347\\233\\256\\347\\276\\244\\347\\263\\273\\347\\273\\237\\346\\236\\266\\346\\236\\204\\345\\233\\276.md\"",
-        "01-architecture/README.md",
         "\"02-governance/GlobalCloud\\351\\241\\271\\347\\233\\256\\347\\276\\244Codex-DSH-Hermes\\345\\215\\217\\345\\220\\214\\345\\274\\200\\345\\217\\221\\344\\270\\216\\350\\277\\220\\350\\241\\214\\346\\226\\271\\346\\241\\210.md\"",
         "02-governance/README.md",
         "02-governance/loop/README.md",
@@ -573,7 +550,6 @@
         "08-evidence-samples/session-archives/README.md",
         "09-status/README.md",
         "09-status/document-deprecation-register.md",
-        "09-status/globalcloud-document-control-register.md",
         "09-status/kds-development-space-sync-register.md",
         "10-archive/README.md",
         "10-archive/deprecated/README.md",
@@ -731,7 +707,6 @@
         "projects/mmc/STATUS.md",
         "projects/pqc/STATUS.md",
         "projects/spaceai-studio/STATUS.md",
-        "projects/studio/STATUS.md",
         "projects/xwail/STATUS.md",
         "runtime/audit/README.md",
         "runtime/logs/F-004.jsonl",
@@ -774,8 +749,7 @@
         "\".kds/development-space/\\345\\274\\200\\345\\217\\221/91-\\346\\262\\273\\347\\220\\206\\344\\270\\216\\351\\252\\214\\346\\224\\266/features/active/F-038-panorama-operation-normalization/evidence/current-code-state-20261024.md\"",
         "\".kds/development-space/\\345\\274\\200\\345\\217\\221/91-\\346\\262\\273\\347\\220\\206\\344\\270\\216\\351\\252\\214\\346\\224\\266/features/active/F-038-panorama-operation-normalization/evidence/i18n-inventory-20261024.md\"",
         "\".kds/development-space/\\345\\274\\200\\345\\217\\221/91-\\346\\262\\273\\347\\220\\206\\344\\270\\216\\351\\252\\214\\346\\224\\266/features/active/F-038-panorama-operation-normalization/evidence/owner-action-pack-20261024.md\"",
-        "\"01-architecture/GlobalCloud\\351\\241\\271\\347\\233\\256\\347\\276\\244\\344\\270\\232\\345\\212\\241\\345\\261\\202\\345\\210\\206\\346\\236\\220_v1.0.md\"",
-        "\"01-architecture/GlobalCloud\\351\\241\\271\\347\\233\\256\\347\\276\\244\\346\\200\\273\\344\\275\\223\\346\\236\\266\\346\\236\\204\\351\\207\\215\\346\\236\\204_v0.1.md\"",
+        "\"01-architecture/GlobalCloud\\351\\241\\271\\347\\233\\256\\347\\276\\244\\347\\273\\223\\346\\236\\204\\346\\200\\247\\347\\274\\272\\345\\217\\243\\345\\210\\206\\346\\236\\220\\344\\270\\216ADR\\350\\215\\211\\346\\241\\210_v1.0.md\"",
         "\"02-governance/GlobalCloud\\351\\241\\271\\347\\233\\256\\347\\276\\244\\345\\206\\263\\347\\255\\226\\345\\210\\206\\347\\261\\273\\344\\270\\216\\350\\267\\257\\347\\224\\261\\350\\247\\204\\350\\214\\203_v1.0.md\"",
         "\"02-governance/_draft_v1.1-GlobalCloud\\351\\241\\271\\347\\233\\256\\347\\276\\244\\345\\206\\263\\347\\255\\226\\345\\210\\206\\347\\261\\273\\344\\270\\216\\350\\267\\257\\347\\224\\261\\350\\247\\204\\350\\214\\203.md\"",
         "09-status/globalcloud-capability-reuse-report-20261022.md",
@@ -905,7 +879,7 @@
     "GlobalCloud XWAIL": {
       "dirty_count": 1,
       "ahead": 0,
-      "behind": 0,
+      "behind": 20,
       "paths": [
         "\"GlobalCloud XWAIL \\346\\200\\273\\344\\275\\223\\346\\226\\271\\346\\241\\210.md\""
       ],
@@ -982,7 +956,7 @@
       "sensitive_paths": []
     },
     "GlobalCloud KDS": {
-      "dirty_count": 38,
+      "dirty_count": 39,
       "ahead": 0,
       "behind": 0,
       "paths": [
@@ -1012,6 +986,7 @@
         "wiki/sources/research-case-009-2026-05-14.md",
         "wiki/sources/research-case-010-2026-05-14.md",
         "99_Reports/daily-mining-2026-10-24.md",
+        "99_Reports/health-2026-10-25.md",
         "\"99_Reports/\\345\\267\\245\\344\\275\\234\\346\\250\\241\\345\\274\\217/\\345\\267\\245\\344\\275\\234\\346\\250\\241\\345\\274\\217\\346\\212\\245\\345\\221\\212_2026-10-24.md\"",
         "\"concepts/24\\345\\255\\227\\344\\275\\223\\347\\263\\273\\345\\215\\217\\345\\220\\214\\344\\273\\252\\350\\241\\250\\347\\233\\230.md\"",
         "\"concepts/\\345\\205\\255\\345\\255\\227\\345\\267\\245\\344\\275\\234\\346\\265\\201\\344\\270\\216\\345\\217\\214\\345\\271\\263\\351\\235\\242\\346\\230\\240\\345\\260\\204.md\"",
@@ -1029,7 +1004,7 @@
     },
     "GlobalCloud XiaoG": {
       "dirty_count": 1,
-      "ahead": 1081,
+      "ahead": 1082,
       "behind": 16,
       "paths": [
         "\"GlobalCloud XiaoG \\346\\200\\273\\344\\275\\223\\346\\226\\271\\346\\241\\210.md\""
@@ -1037,8 +1012,8 @@
       "sensitive_paths": []
     },
     "GlobalCloud PVA": {
-      "dirty_count": 41,
-      "ahead": 2,
+      "dirty_count": 40,
+      "ahead": 3,
       "behind": 0,
       "paths": [
         "\"GlobalCloud PVAOS \\345\\256\\236\\346\\226\\275\\346\\226\\271\\346\\241\\210.md\"",
@@ -1080,18 +1055,15 @@
         "scripts/v20_writeback.py",
         ".codex/tasks/task-pva-project-rename-001.json",
         "\"GlobalCloud PVA \\345\\256\\236\\346\\226\\275\\346\\226\\271\\346\\241\\210.md\"",
-        "\"GlobalCloud PVA \\346\\200\\273\\344\\275\\223\\346\\226\\271\\346\\241\\210.md\"",
         "scripts/.rt.mjs"
       ],
       "sensitive_paths": []
     },
     "GlobalCloud SOP": {
-      "dirty_count": 1,
-      "ahead": 0,
+      "dirty_count": 0,
+      "ahead": 1,
       "behind": 0,
-      "paths": [
-        "\"GlobalCloud SOP \\346\\200\\273\\344\\275\\223\\346\\226\\271\\346\\241\\210.md\""
-      ],
+      "paths": [],
       "sensitive_paths": []
     },
     "GlobalCloud PKC": {
@@ -1102,12 +1074,10 @@
       "sensitive_paths": []
     },
     "GlobalCloud XGD": {
-      "dirty_count": 1,
+      "dirty_count": 0,
       "ahead": 0,
       "behind": 0,
-      "paths": [
-        "README.md"
-      ],
+      "paths": [],
       "sensitive_paths": []
     },
     "GlobalCloud ICP": {
@@ -1122,7 +1092,8 @@
       "ahead": 0,
       "behind": 0,
       "paths": [
-        "frontend/app/layout.tsx",
+        "frontend/app/orders/[id]/page.tsx",
+        "frontend/components/ext-ops/MetricsPanel.tsx",
         "frontend/e2e/helpers.ts",
         "frontend/e2e/tests/blindspot-guards.spec.ts",
         "frontend/e2e/tests/quote-lifecycle.spec.ts",
@@ -1153,7 +1124,6 @@
         "\"docs/business/2026-10-24_\\351\\270\\241\\350\\233\\213\\350\\241\\214\\344\\270\\232\\345\\256\\232\\344\\273\\267\\344\\270\\216\\351\\205\\215\\346\\226\\271\\345\\267\\245\\350\\211\\272\\346\\225\\260\\346\\215\\256\\345\\272\\223_v0.1.xlsx\"",
         "\"docs/business/2026-10-24_\\351\\270\\241\\350\\233\\213\\350\\241\\214\\344\\270\\232\\345\\256\\232\\344\\273\\267\\344\\270\\216\\351\\205\\215\\346\\226\\271\\345\\267\\245\\350\\211\\272\\347\\262\\276\\350\\257\\273_v0.1.md\"",
         "\"docs/\\351\\241\\271\\347\\233\\256\\350\\247\\204\\345\\210\\231v1.1_\\345\\256\\214\\346\\225\\264\\347\\211\\210_20261016.md\"",
-        "frontend/components/FeedbackEntryMount.tsx",
         "frontend/e2e/repro6.mjs",
         "frontend/public/gc-feedback-entry.js"
       ],
@@ -1222,19 +1192,106 @@
       "sensitive_paths": []
     },
     "GlobalCloud Mem": {
-      "dirty_count": 0,
-      "ahead": 34,
-      "behind": 0,
-      "paths": [],
-      "sensitive_paths": []
-    },
-    "GlobalCloud WAE": {
-      "dirty_count": 45,
+      "dirty_count": 2,
       "ahead": 0,
       "behind": 0,
       "paths": [
+        "DESIGN.md",
+        "design-md-map.yaml"
+      ],
+      "sensitive_paths": []
+    },
+    "GlobalCloud WAE": {
+      "dirty_count": 129,
+      "ahead": 2,
+      "behind": 44,
+      "paths": [
         ".gitignore",
+        "apps/wame/.env.example",
+        "apps/wame/package.json",
+        "apps/wame/scripts/verify-wasset-m0.mts",
+        "apps/wame/src/app/modules/was-browse/WasAssetListPage.tsx",
+        "apps/wame/src/app/modules/was-browse/WasAssetPage.tsx",
+        "apps/wame/src/app/modules/was-browse/assetViews.test.ts",
+        "apps/wame/src/app/modules/was-browse/assetViews.ts",
+        "apps/wame/src/app/modules/was-browse/views.tsx",
+        "apps/wame/src/app/modules/wasset/IntakeLedger.tsx",
+        "apps/wame/src/app/modules/wasset/WassetA11yList.tsx",
+        "apps/wame/src/app/modules/wasset/WassetCanvas.tsx",
+        "apps/wame/src/app/modules/wasset/WassetDerivedViews.tsx",
+        "apps/wame/src/app/modules/wasset/WassetEdgeInspector.dom.test.tsx",
+        "apps/wame/src/app/modules/wasset/WassetEdgeList.tsx",
+        "apps/wame/src/app/modules/wasset/WassetEditor.dom.test.tsx",
+        "apps/wame/src/app/modules/wasset/WassetEditor.tsx",
+        "apps/wame/src/app/modules/wasset/WassetFilter.dom.test.tsx",
+        "apps/wame/src/app/modules/wasset/WassetFilterBar.tsx",
+        "apps/wame/src/app/modules/wasset/WassetHistory.dom.test.tsx",
+        "apps/wame/src/app/modules/wasset/WassetInspector.tsx",
+        "apps/wame/src/app/modules/wasset/WassetIntakeTimeline.tsx",
+        "apps/wame/src/app/modules/wasset/WassetLocate.dom.test.tsx",
+        "apps/wame/src/app/modules/wasset/WassetPhysicalSource.dom.test.tsx",
+        "apps/wame/src/app/modules/wasset/WassetPublish.dom.test.tsx",
+        "apps/wame/src/app/modules/wasset/WassetPublishPanel.tsx",
+        "apps/wame/src/app/modules/wasset/WassetSimPanel.tsx",
+        "apps/wame/src/app/modules/wasset/WassetValidationPanel.dom.test.tsx",
+        "apps/wame/src/app/modules/wasset/WassetValidationPanel.tsx",
+        "apps/wame/src/app/modules/wasset/WassetVersionPanel.tsx",
+        "apps/wame/src/app/modules/wasset/WassetVersions.dom.test.tsx",
+        "apps/wame/src/app/modules/wasset/WassetViews.dom.test.tsx",
+        "apps/wame/src/app/modules/wasset/WassetViews.tsx",
+        "apps/wame/src/app/modules/wasset/WorldAssetStudio.tsx",
+        "apps/wame/src/app/modules/wasset/__fixtures__/README.md",
+        "apps/wame/src/app/modules/wasset/__fixtures__/canonical-int-model.xwail.json",
+        "apps/wame/src/app/modules/wasset/__fixtures__/canonical-int-view.view.json",
+        "apps/wame/src/app/modules/wasset/__fixtures__/spaceai-port-table/README.md",
+        "apps/wame/src/app/modules/wasset/__fixtures__/spaceai-port-table/all-ports.ok.json",
+        "apps/wame/src/app/modules/wasset/__fixtures__/spaceai-port-table/city-ports.ok.json",
+        "apps/wame/src/app/modules/wasset/__fixtures__/spaceai-port-table/cwme-snapshot.ok.json",
+        "apps/wame/src/app/modules/wasset/__fixtures__/spaceai-port-table/cwme-status.ok.json",
+        "apps/wame/src/app/modules/wasset/__fixtures__/spaceai-port-table/error-envelope.json",
+        "apps/wame/src/app/modules/wasset/__fixtures__/spaceai-port-table/interfaces-E01.conflict.json",
+        "apps/wame/src/app/modules/wasset/__fixtures__/spaceai-port-table/interfaces-E01.ok.json",
+        "apps/wame/src/app/modules/wasset/__fixtures__/wame-m2-endpoint-samples.json",
+        "apps/wame/src/app/modules/wasset/__testsupport__/fixtures.ts",
+        "apps/wame/src/app/modules/wasset/derived.test.ts",
+        "apps/wame/src/app/modules/wasset/derived.ts",
+        "apps/wame/src/app/modules/wasset/diff.test.ts",
+        "apps/wame/src/app/modules/wasset/diff.ts",
+        "apps/wame/src/app/modules/wasset/edges.test.ts",
+        "apps/wame/src/app/modules/wasset/edges.ts",
+        "apps/wame/src/app/modules/wasset/evolve.ts",
+        "apps/wame/src/app/modules/wasset/filters.test.ts",
+        "apps/wame/src/app/modules/wasset/filters.ts",
+        "apps/wame/src/app/modules/wasset/hash.test.ts",
+        "apps/wame/src/app/modules/wasset/hash.ts",
+        "apps/wame/src/app/modules/wasset/history.test.ts",
+        "apps/wame/src/app/modules/wasset/history.ts",
+        "apps/wame/src/app/modules/wasset/intakeClient.test.ts",
+        "apps/wame/src/app/modules/wasset/intakeClient.ts",
+        "apps/wame/src/app/modules/wasset/intakeStore.ts",
+        "apps/wame/src/app/modules/wasset/modelFiles.test.ts",
+        "apps/wame/src/app/modules/wasset/modelFiles.ts",
+        "apps/wame/src/app/modules/wasset/palette.ts",
+        "apps/wame/src/app/modules/wasset/physicalSource.test.ts",
+        "apps/wame/src/app/modules/wasset/physicalSource.ts",
+        "apps/wame/src/app/modules/wasset/publishIntake.integration.test.ts",
+        "apps/wame/src/app/modules/wasset/publishModel.test.ts",
+        "apps/wame/src/app/modules/wasset/publishModel.ts",
+        "apps/wame/src/app/modules/wasset/samples.ts",
+        "apps/wame/src/app/modules/wasset/simulator.ts",
+        "apps/wame/src/app/modules/wasset/store.test.ts",
+        "apps/wame/src/app/modules/wasset/store.ts",
+        "apps/wame/src/app/modules/wasset/types.ts",
+        "apps/wame/src/app/modules/wasset/validate.test.ts",
+        "apps/wame/src/app/modules/wasset/validate.ts",
+        "apps/wame/src/app/modules/wasset/wassetLabels.ts",
+        "apps/wame/src/app/modules/wasset/xwailCompat.test.ts",
+        "apps/wame/src/app/modules/wasset/xwailCompat.ts",
+        "apps/wame/src/app/modules/wasset/xwailContract.ts",
+        "apps/wame/src/i18n/messages.zh-CN.ts",
+        "apps/wame/tsconfig.wasset.json",
         "docs/evidence/R1/supply-chain/secret-scan.json",
+        "package.json",
         "packages/app-registry/src/index.ts",
         "scripts/collect-f034-evidence.mts",
         "\"docs/analysis/DSH\\345\\200\\237\\351\\211\\264_00_\\346\\200\\273\\346\\212\\245\\345\\221\\212_20261024.md\"",
@@ -1280,12 +1337,13 @@
         "packages/app-registry/src/sidebarContract.ts"
       ],
       "sensitive_paths": [
+        "apps/wame/.env.example",
         "docs/evidence/R1/supply-chain/secret-scan.json"
       ]
     },
     "GlobalCloud PMC": {
       "dirty_count": 3,
-      "ahead": 1,
+      "ahead": 3,
       "behind": 0,
       "paths": [
         "PROJECT_HARNESS_MANIFEST.md",
@@ -1361,6 +1419,13 @@
         "frontend/src/auth.ts",
         "scripts/gate.sh"
       ],
+      "sensitive_paths": []
+    },
+    "GlobalCloud Token": {
+      "dirty_count": 0,
+      "ahead": 0,
+      "behind": 0,
+      "paths": [],
       "sensitive_paths": []
     }
   }
