@@ -448,7 +448,7 @@
     },
     "GlobalCloud GPCF": {
       "dirty_count": 439,
-      "ahead": 45,
+      "ahead": 46,
       "behind": 0,
       "paths": [
         "$CODEX_HOME/automations/globalcloud-17/README.md",
@@ -1198,7 +1198,7 @@
       "sensitive_paths": []
     },
     "GlobalCloud WAE": {
-      "dirty_count": 260,
+      "dirty_count": 261,
       "ahead": 5,
       "behind": 67,
       "paths": [
@@ -1311,6 +1311,7 @@
         "scripts/collect-f034-evidence.mts",
         "scripts/gen-apps.mts",
         "scripts/gen-assembly.mts",
+        "apps/wame/src/app/apps/AppPlazaPage.tsx",
         "apps/wame/src/app/apps/StandaloneAppPage.tsx",
         "apps/wame/src/app/apps/generated.aaas.loaders.ts",
         "apps/wame/src/app/apps/generated.aaas.ts",
