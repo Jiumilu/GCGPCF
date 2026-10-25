@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-10-25T08:17:28.505357+08:00",
+  "generated_at": "2026-10-25T08:48:17.910092+08:00",
   "freshness_hours": 12,
   "freshness_ok": true,
   "project_count": 29,
@@ -19,6 +19,7 @@
     "GlobalCloud XiaoG",
     "GlobalCloud PVA",
     "GlobalCloud SOP",
+    "GlobalCloud XGD",
     "GlobalCloud PQC",
     "GlobalCloud SpaceAI Platform",
     "GlobalCloud World",
@@ -109,9 +110,9 @@
     "GlobalCloud GPCF",
     "GlobalCloud WAE"
   ],
-  "pass_repo_count": 5,
+  "pass_repo_count": 4,
   "bootstrap_window": false,
-  "previous_generated_at": "2026-10-25T07:46:41.648430+08:00",
+  "previous_generated_at": "2026-10-25T08:17:28.505357+08:00",
   "repo_heads": {
     "GlobalCloud AAAS": "2d88e17f229ec53867a2890b72ece3e1c27cd1c2",
     "GlobalCloud Brain": "d266e49a9535bce0ec0525d2831391437e115028",
@@ -135,7 +136,7 @@
     "GlobalCloud SpaceAI Platform": "96c0bcf7a69a0a057750b50b2c26b9a7a2b48730",
     "GlobalCloud SpaceAI Studio": "0ca7c857e306598a8c6ec591ab54b8fe55bae8b0",
     "GlobalCloud World": "b2d639787aa4ca5194cec8269ad19c4180415001",
-    "GlobalCloud Mem": "5844cd93a0ba79d6f21a5ee60b286cbd07e61ef9",
+    "GlobalCloud Mem": "4989b39ac3ca2d9fd2ab405a3daf9046ad55f61e",
     "GlobalCloud WAE": "483406a835623b91bad078acf9c9c7521cdd1142",
     "GlobalCloud PMC": "5b25c32186853e9ea466a11015591e7049411a55",
     "GlobalCloud PDC": "76311da1080e5a70ca6d25026555fe02f0b8894a",
@@ -445,8 +446,8 @@
       "sensitive_paths": []
     },
     "GlobalCloud GPCF": {
-      "dirty_count": 443,
-      "ahead": 25,
+      "dirty_count": 444,
+      "ahead": 26,
       "behind": 0,
       "paths": [
         "$CODEX_HOME/automations/globalcloud-17/README.md",
@@ -774,6 +775,7 @@
         "\".kds/development-space/\\345\\274\\200\\345\\217\\221/91-\\346\\262\\273\\347\\220\\206\\344\\270\\216\\351\\252\\214\\346\\224\\266/features/active/F-038-panorama-operation-normalization/evidence/i18n-inventory-20261024.md\"",
         "\".kds/development-space/\\345\\274\\200\\345\\217\\221/91-\\346\\262\\273\\347\\220\\206\\344\\270\\216\\351\\252\\214\\346\\224\\266/features/active/F-038-panorama-operation-normalization/evidence/owner-action-pack-20261024.md\"",
         "\"01-architecture/GlobalCloud\\351\\241\\271\\347\\233\\256\\347\\276\\244\\344\\270\\232\\345\\212\\241\\345\\261\\202\\345\\210\\206\\346\\236\\220_v1.0.md\"",
+        "\"01-architecture/GlobalCloud\\351\\241\\271\\347\\233\\256\\347\\276\\244\\346\\200\\273\\344\\275\\223\\346\\236\\266\\346\\236\\204\\351\\207\\215\\346\\236\\204_v0.1.md\"",
         "\"02-governance/GlobalCloud\\351\\241\\271\\347\\233\\256\\347\\276\\244\\345\\206\\263\\347\\255\\226\\345\\210\\206\\347\\261\\273\\344\\270\\216\\350\\267\\257\\347\\224\\261\\350\\247\\204\\350\\214\\203_v1.0.md\"",
         "\"02-governance/_draft_v1.1-GlobalCloud\\351\\241\\271\\347\\233\\256\\347\\276\\244\\345\\206\\263\\347\\255\\226\\345\\210\\206\\347\\261\\273\\344\\270\\216\\350\\267\\257\\347\\224\\261\\350\\247\\204\\350\\214\\203.md\"",
         "09-status/globalcloud-capability-reuse-report-20261022.md",
@@ -1100,10 +1102,12 @@
       "sensitive_paths": []
     },
     "GlobalCloud XGD": {
-      "dirty_count": 0,
+      "dirty_count": 1,
       "ahead": 0,
       "behind": 0,
-      "paths": [],
+      "paths": [
+        "README.md"
+      ],
       "sensitive_paths": []
     },
     "GlobalCloud ICP": {
@@ -1219,7 +1223,7 @@
     },
     "GlobalCloud Mem": {
       "dirty_count": 0,
-      "ahead": 32,
+      "ahead": 34,
       "behind": 0,
       "paths": [],
       "sensitive_paths": []
