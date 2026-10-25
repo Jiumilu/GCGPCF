@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-10-25T16:55:03.168625+08:00",
+  "generated_at": "2026-10-25T19:29:48.920610+08:00",
   "freshness_hours": 12,
   "freshness_ok": true,
   "project_count": 29,
@@ -116,7 +116,7 @@
   ],
   "pass_repo_count": 5,
   "bootstrap_window": false,
-  "previous_generated_at": "2026-10-25T16:24:07.107215+08:00",
+  "previous_generated_at": "2026-10-25T16:55:03.168625+08:00",
   "repo_heads": {
     "GlobalCloud AAAS": "fb0ab7eefca543334a565efbccedf8f1baadf37d",
     "GlobalCloud Brain": "d266e49a9535bce0ec0525d2831391437e115028",
@@ -140,7 +140,7 @@
     "GlobalCloud SpaceAI Studio": "0ca7c857e306598a8c6ec591ab54b8fe55bae8b0",
     "GlobalCloud World": "b2d639787aa4ca5194cec8269ad19c4180415001",
     "GlobalCloud Mem": "c00bb7f4299ee40cc73d7ffc0d7b19acd8776c1f",
-    "GlobalCloud WAE": "9538db9315d0c6750048caa9a1b5e001ec669d1a",
+    "GlobalCloud WAE": "79636926b74b2857a78d7449af46c00ac62f5cad",
     "GlobalCloud PMC": "8222fd5e340c7bea82825b7ddc7ccf454571662b",
     "GlobalCloud PDC": "76311da1080e5a70ca6d25026555fe02f0b8894a",
     "GlobalCloud SLC": "811f5a323b1a750e69864518dfeb7339e0c0c9c6",
@@ -448,7 +448,7 @@
     },
     "GlobalCloud GPCF": {
       "dirty_count": 439,
-      "ahead": 47,
+      "ahead": 48,
       "behind": 0,
       "paths": [
         "$CODEX_HOME/automations/globalcloud-17/README.md",
@@ -1198,8 +1198,8 @@
       "sensitive_paths": []
     },
     "GlobalCloud WAE": {
-      "dirty_count": 261,
-      "ahead": 5,
+      "dirty_count": 260,
+      "ahead": 9,
       "behind": 67,
       "paths": [
         ".gitignore",
@@ -1210,7 +1210,6 @@
         "apps/wame/src/app/apps/generated.loaders.ts",
         "apps/wame/src/app/apps/generated.ts",
         "apps/wame/src/app/components/FunctionPanel.tsx",
-        "apps/wame/src/app/components/MainContent.tsx",
         "apps/wame/src/app/domain/project.ts",
         "apps/wame/src/app/hooks/useAppContent.ts",
         "apps/wame/src/app/modules/was-browse/WasAssetListPage.tsx",
