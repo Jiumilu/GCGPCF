@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-10-25T21:33:30.607891+08:00",
+  "generated_at": "2026-10-26T00:06:42.558881+08:00",
   "freshness_hours": 12,
   "freshness_ok": true,
   "project_count": 29,
@@ -116,7 +116,7 @@
   ],
   "pass_repo_count": 5,
   "bootstrap_window": false,
-  "previous_generated_at": "2026-10-25T21:02:32.240853+08:00",
+  "previous_generated_at": "2026-10-25T21:33:30.607891+08:00",
   "repo_heads": {
     "GlobalCloud AAAS": "fb0ab7eefca543334a565efbccedf8f1baadf37d",
     "GlobalCloud Brain": "d266e49a9535bce0ec0525d2831391437e115028",
@@ -128,7 +128,7 @@
     "GlobalCloud XWAIL": "29c6669020bbb3e6bf47e748b917cf818a5800c6",
     "GlobalCloud GFIS": "3a18efbec321851395c311ce215784186b27ad15",
     "GlobalCloud MMC": "1f3803995d8f0a1969c8aaabca3b3a0217e2362e",
-    "GlobalCloud KDS": "5bc5c0284bab2ce4c9367ec57431f052f1a0eec7",
+    "GlobalCloud KDS": "eeca13e46bdde948f1e1f3b820e619e4b84e98e5",
     "GlobalCloud XiaoG": "e8c953ae0e12574c52024c060ddf9e68b00c08af",
     "GlobalCloud PVA": "11de53c57b736a677f3b97d256b8cc11014eb306",
     "GlobalCloud SOP": "80aa900d1b8963157f410f8099511e988cdc3a1e",
@@ -448,7 +448,7 @@
     },
     "GlobalCloud GPCF": {
       "dirty_count": 439,
-      "ahead": 56,
+      "ahead": 57,
       "behind": 0,
       "paths": [
         "$CODEX_HOME/automations/globalcloud-17/README.md",
@@ -978,11 +978,10 @@
       "sensitive_paths": []
     },
     "GlobalCloud KDS": {
-      "dirty_count": 40,
+      "dirty_count": 39,
       "ahead": 0,
       "behind": 0,
       "paths": [
-        "_meta/hermes-memory-log.md",
         "\"concepts/24\\345\\255\\227\\344\\275\\223\\347\\263\\273\\350\\212\\202\\347\\202\\271\\345\\244\\215\\345\\210\\266\\351\\232\\276\\345\\272\\246\\350\\257\\204\\344\\274\\260.md\"",
         "\"concepts/\\344\\270\\200\\345\\271\\263\\345\\217\\260\\345\\217\\214\\351\\227\\255\\347\\216\\257\\344\\270\\211\\351\\223\\276\\345\\215\\217\\345\\220\\214.md\"",
         "\"concepts/\\344\\272\\224\\347\\273\\264\\350\\257\\204\\344\\274\\260\\346\\250\\241\\345\\236\\213.md\"",
