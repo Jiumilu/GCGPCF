@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-10-25T14:51:58.352845+08:00",
+  "generated_at": "2026-10-25T15:22:40.055940+08:00",
   "freshness_hours": 12,
   "freshness_ok": true,
   "project_count": 29,
@@ -77,6 +77,7 @@
     "GlobalCloud PVA",
     "GlobalCloud SLC",
     "GlobalCloud SOP",
+    "GlobalCloud SpaceAI Platform",
     "GlobalCloud Token",
     "GlobalCloud WAE",
     "GlobalCloud WAME",
@@ -115,7 +116,7 @@
   ],
   "pass_repo_count": 5,
   "bootstrap_window": false,
-  "previous_generated_at": "2026-10-25T14:21:07.499360+08:00",
+  "previous_generated_at": "2026-10-25T14:51:58.352845+08:00",
   "repo_heads": {
     "GlobalCloud AAAS": "fb0ab7eefca543334a565efbccedf8f1baadf37d",
     "GlobalCloud Brain": "d266e49a9535bce0ec0525d2831391437e115028",
@@ -138,7 +139,7 @@
     "GlobalCloud SpaceAI Platform": "1bbc94de72fc979561667470a05855561a55546c",
     "GlobalCloud SpaceAI Studio": "0ca7c857e306598a8c6ec591ab54b8fe55bae8b0",
     "GlobalCloud World": "b2d639787aa4ca5194cec8269ad19c4180415001",
-    "GlobalCloud Mem": "61304c6606360a14aa5a0001127d4166060032f2",
+    "GlobalCloud Mem": "c00bb7f4299ee40cc73d7ffc0d7b19acd8776c1f",
     "GlobalCloud WAE": "9538db9315d0c6750048caa9a1b5e001ec669d1a",
     "GlobalCloud PMC": "8222fd5e340c7bea82825b7ddc7ccf454571662b",
     "GlobalCloud PDC": "76311da1080e5a70ca6d25026555fe02f0b8894a",
@@ -149,10 +150,13 @@
   },
   "dirty_details": {
     "GlobalCloud AAAS": {
-      "dirty_count": 12,
+      "dirty_count": 15,
       "ahead": 2,
       "behind": 0,
       "paths": [
+        "\"docs/GlobalCloud AaaS DoDAF\\346\\236\\266\\346\\236\\204\\350\\247\\204\\345\\210\\222_v0.1.md\"",
+        "\"docs/GlobalCloud AaaS \\345\\271\\263\\345\\217\\260+\\350\\277\\220\\350\\220\\245+FDE \\344\\270\\232\\345\\212\\241\\346\\250\\241\\345\\274\\217\\345\\210\\206\\346\\236\\220_v1.1.md\"",
+        "\"docs/GlobalCloud AaaS \\346\\200\\273\\344\\275\\223\\346\\226\\271\\346\\241\\210.md\"",
         "schemas-json/aaas-service-package.schema.json",
         "scripts/aaas_common.py",
         "scripts/validate_service_package.py",
@@ -435,7 +439,7 @@
     },
     "GlobalCloud GPCF": {
       "dirty_count": 439,
-      "ahead": 38,
+      "ahead": 39,
       "behind": 0,
       "paths": [
         "$CODEX_HOME/automations/globalcloud-17/README.md",
@@ -1208,7 +1212,7 @@
     "GlobalCloud WAE": {
       "dirty_count": 129,
       "ahead": 5,
-      "behind": 44,
+      "behind": 65,
       "paths": [
         ".gitignore",
         "apps/wame/.env.example",
