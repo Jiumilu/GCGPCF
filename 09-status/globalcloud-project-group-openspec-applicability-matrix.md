@@ -54,10 +54,11 @@ superseded_by: []
 | SLC | slc | conditional | `openspec/changes/slc-<change>/` | `gpcf_new_feature --project slc` | Delivery | required | required |
 | DRC | drc | required | `openspec/changes/drc-<change>/` | `gpcf_new_feature --project drc` | Governance | required | required |
 | FireQuote | firequote | required | `openspec/changes/firequote-<change>/` | `gpcf_new_feature --project firequote` | Delivery | required | required |
+| GCToken | gctoken | required | `openspec/changes/gctoken-<change>/` | `gpcf_new_feature --project gctoken` | Governance | required | required |
 
 ## 状态边界
 
-- 当前 29 项目均有中央入口，`waived=0`；因此无豁免债务。
+- 当前 30 个注册记录均有中央入口，`waived=0`；因此无豁免债务。
 - 中央入口不表示已向各独立项目仓安装 OpenSpec。
 - apply 前必须创建或绑定 Feature；归档前必须通过 Evidence 与文档门禁。
 - Harness 保留最终裁决权；未经人工确认不得提升验收或生产状态。
