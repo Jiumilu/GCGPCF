@@ -150,7 +150,7 @@
   },
   "dirty_details": {
     "GlobalCloud AAAS": {
-      "dirty_count": 22,
+      "dirty_count": 24,
       "ahead": 2,
       "behind": 0,
       "paths": [
@@ -169,9 +169,11 @@
         "scripts/validate_aaas_binding.py",
         "services/idp/package-lock.json",
         "services/idp/package.json",
+        "services/idp/src/approvals.ts",
         "services/idp/src/billing.ts",
         "services/idp/src/catalog.ts",
         "services/idp/src/oidc.ts",
+        "services/idp/src/ops.ts",
         "services/idp/src/rbac.ts",
         "services/idp/src/server.ts",
         "tests/test_local_gates.py",
@@ -446,7 +448,7 @@
     },
     "GlobalCloud GPCF": {
       "dirty_count": 439,
-      "ahead": 43,
+      "ahead": 44,
       "behind": 0,
       "paths": [
         "$CODEX_HOME/automations/globalcloud-17/README.md",
@@ -1196,7 +1198,7 @@
       "sensitive_paths": []
     },
     "GlobalCloud WAE": {
-      "dirty_count": 250,
+      "dirty_count": 253,
       "ahead": 5,
       "behind": 67,
       "paths": [
@@ -1366,6 +1368,8 @@
         "packages/app-registry/src/generated/personal.ts",
         "packages/app-registry/src/generated/team.ts",
         "packages/app-registry/src/sidebarContract.ts",
+        "packages/modules/module-aaas-api/package.json",
+        "packages/modules/module-aaas-api/src/index.ts",
         "packages/modules/module-aaas-approvals/manifest.yaml",
         "packages/modules/module-aaas-approvals/package.json",
         "packages/modules/module-aaas-approvals/src/index.tsx",
@@ -1383,6 +1387,7 @@
         "packages/modules/module-aaas-operations/src/index.tsx",
         "packages/modules/module-aaas-overview/manifest.yaml",
         "packages/modules/module-aaas-overview/package.json",
+        "packages/modules/module-aaas-overview/src/api.ts",
         "packages/modules/module-aaas-overview/src/index.tsx",
         "packages/modules/module-aaas-roles/manifest.yaml",
         "packages/modules/module-aaas-roles/package.json",
