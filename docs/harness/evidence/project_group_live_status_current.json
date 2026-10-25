@@ -448,7 +448,7 @@
     },
     "GlobalCloud GPCF": {
       "dirty_count": 439,
-      "ahead": 44,
+      "ahead": 45,
       "behind": 0,
       "paths": [
         "$CODEX_HOME/automations/globalcloud-17/README.md",
@@ -1198,7 +1198,7 @@
       "sensitive_paths": []
     },
     "GlobalCloud WAE": {
-      "dirty_count": 253,
+      "dirty_count": 260,
       "ahead": 5,
       "behind": 67,
       "paths": [
@@ -1209,6 +1209,10 @@
         "apps/wame/src/app/App.tsx",
         "apps/wame/src/app/apps/generated.loaders.ts",
         "apps/wame/src/app/apps/generated.ts",
+        "apps/wame/src/app/components/FunctionPanel.tsx",
+        "apps/wame/src/app/components/MainContent.tsx",
+        "apps/wame/src/app/domain/project.ts",
+        "apps/wame/src/app/hooks/useAppContent.ts",
         "apps/wame/src/app/modules/was-browse/WasAssetListPage.tsx",
         "apps/wame/src/app/modules/was-browse/WasAssetPage.tsx",
         "apps/wame/src/app/modules/was-browse/assetViews.test.ts",
@@ -1296,15 +1300,18 @@
         "package.json",
         "packages/app-registry/src/generated/city.ts",
         "packages/app-registry/src/index.ts",
+        "packages/app-registry/src/placement.ts",
         "packages/host-kit/src/host/idpRoutes.ts",
         "packages/host-kit/src/idp/service.ts",
         "packages/host-kit/src/idp/store.ts",
         "packages/module-frame/src/index.tsx",
         "packages/module-frame/src/protocol.ts",
         "pnpm-lock.yaml",
+        "scripts/check-apps.mts",
         "scripts/collect-f034-evidence.mts",
         "scripts/gen-apps.mts",
         "scripts/gen-assembly.mts",
+        "apps/wame/src/app/apps/StandaloneAppPage.tsx",
         "apps/wame/src/app/apps/generated.aaas.loaders.ts",
         "apps/wame/src/app/apps/generated.aaas.ts",
         "apps/wame/src/app/apps/generated.enterprise.loaders.ts",
