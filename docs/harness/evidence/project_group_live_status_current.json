@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-10-25T13:19:43.925649+08:00",
+  "generated_at": "2026-10-25T13:50:20.698503+08:00",
   "freshness_hours": 12,
   "freshness_ok": true,
   "project_count": 29,
@@ -76,6 +76,7 @@
     "GlobalCloud PVA",
     "GlobalCloud SLC",
     "GlobalCloud SOP",
+    "GlobalCloud Token",
     "GlobalCloud WAE",
     "GlobalCloud WAME",
     "GlobalCloud XiaoC",
@@ -113,7 +114,7 @@
   ],
   "pass_repo_count": 5,
   "bootstrap_window": false,
-  "previous_generated_at": "2026-10-25T12:49:02.231196+08:00",
+  "previous_generated_at": "2026-10-25T13:19:43.925649+08:00",
   "repo_heads": {
     "GlobalCloud AAAS": "fb0ab7eefca543334a565efbccedf8f1baadf37d",
     "GlobalCloud Brain": "d266e49a9535bce0ec0525d2831391437e115028",
@@ -132,12 +133,12 @@
     "GlobalCloud PKC": "2a64a71656143ee21c3ef3d07d6f8144e5527a40",
     "GlobalCloud XGD": "95126a7ffd72eed65dbb7d1b2e5a78874a59baaf",
     "GlobalCloud ICP": "2c93394336486e778dbbaacfe463d326d2298721",
-    "GlobalCloud PQC": "e0638d16b4dafb8ca548503c94600478e732b24f",
+    "GlobalCloud PQC": "b65427bdf4c183bde6904159b997990b7feb70c5",
     "GlobalCloud SpaceAI Platform": "0212def2c00c041541f81053d8f62e98ae0af638",
     "GlobalCloud SpaceAI Studio": "0ca7c857e306598a8c6ec591ab54b8fe55bae8b0",
     "GlobalCloud World": "b2d639787aa4ca5194cec8269ad19c4180415001",
     "GlobalCloud Mem": "61304c6606360a14aa5a0001127d4166060032f2",
-    "GlobalCloud WAE": "806b631f858ceb2283884d47c67fc6562d29d4b7",
+    "GlobalCloud WAE": "c0f1d9c485f3eb96cc49433353d650276c5d0081",
     "GlobalCloud PMC": "8222fd5e340c7bea82825b7ddc7ccf454571662b",
     "GlobalCloud PDC": "76311da1080e5a70ca6d25026555fe02f0b8894a",
     "GlobalCloud SLC": "811f5a323b1a750e69864518dfeb7339e0c0c9c6",
@@ -433,7 +434,7 @@
     },
     "GlobalCloud GPCF": {
       "dirty_count": 439,
-      "ahead": 35,
+      "ahead": 36,
       "behind": 0,
       "paths": [
         "$CODEX_HOME/automations/globalcloud-17/README.md",
@@ -1095,11 +1096,10 @@
       "sensitive_paths": []
     },
     "GlobalCloud PQC": {
-      "dirty_count": 33,
+      "dirty_count": 32,
       "ahead": 0,
       "behind": 0,
       "paths": [
-        "frontend/app/quotes/page.tsx",
         "frontend/e2e/helpers.ts",
         "frontend/e2e/tests/blindspot-guards.spec.ts",
         "frontend/e2e/tests/quote-lifecycle.spec.ts",
@@ -1209,7 +1209,7 @@
     },
     "GlobalCloud WAE": {
       "dirty_count": 129,
-      "ahead": 2,
+      "ahead": 3,
       "behind": 44,
       "paths": [
         ".gitignore",
