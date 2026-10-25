@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-10-25T13:50:20.698503+08:00",
+  "generated_at": "2026-10-25T14:21:07.499360+08:00",
   "freshness_hours": 12,
   "freshness_ok": true,
   "project_count": 29,
@@ -114,7 +114,7 @@
   ],
   "pass_repo_count": 5,
   "bootstrap_window": false,
-  "previous_generated_at": "2026-10-25T13:19:43.925649+08:00",
+  "previous_generated_at": "2026-10-25T13:50:20.698503+08:00",
   "repo_heads": {
     "GlobalCloud AAAS": "fb0ab7eefca543334a565efbccedf8f1baadf37d",
     "GlobalCloud Brain": "d266e49a9535bce0ec0525d2831391437e115028",
@@ -133,12 +133,12 @@
     "GlobalCloud PKC": "2a64a71656143ee21c3ef3d07d6f8144e5527a40",
     "GlobalCloud XGD": "95126a7ffd72eed65dbb7d1b2e5a78874a59baaf",
     "GlobalCloud ICP": "2c93394336486e778dbbaacfe463d326d2298721",
-    "GlobalCloud PQC": "b65427bdf4c183bde6904159b997990b7feb70c5",
+    "GlobalCloud PQC": "65fd84ab828eceed86b7845bf962491c7c6d092a",
     "GlobalCloud SpaceAI Platform": "0212def2c00c041541f81053d8f62e98ae0af638",
     "GlobalCloud SpaceAI Studio": "0ca7c857e306598a8c6ec591ab54b8fe55bae8b0",
     "GlobalCloud World": "b2d639787aa4ca5194cec8269ad19c4180415001",
     "GlobalCloud Mem": "61304c6606360a14aa5a0001127d4166060032f2",
-    "GlobalCloud WAE": "c0f1d9c485f3eb96cc49433353d650276c5d0081",
+    "GlobalCloud WAE": "9538db9315d0c6750048caa9a1b5e001ec669d1a",
     "GlobalCloud PMC": "8222fd5e340c7bea82825b7ddc7ccf454571662b",
     "GlobalCloud PDC": "76311da1080e5a70ca6d25026555fe02f0b8894a",
     "GlobalCloud SLC": "811f5a323b1a750e69864518dfeb7339e0c0c9c6",
@@ -434,7 +434,7 @@
     },
     "GlobalCloud GPCF": {
       "dirty_count": 439,
-      "ahead": 36,
+      "ahead": 37,
       "behind": 0,
       "paths": [
         "$CODEX_HOME/automations/globalcloud-17/README.md",
@@ -1096,13 +1096,11 @@
       "sensitive_paths": []
     },
     "GlobalCloud PQC": {
-      "dirty_count": 32,
+      "dirty_count": 30,
       "ahead": 0,
       "behind": 0,
       "paths": [
-        "frontend/e2e/helpers.ts",
-        "frontend/e2e/tests/blindspot-guards.spec.ts",
-        "frontend/e2e/tests/quote-lifecycle.spec.ts",
+        "frontend/app/parameters/page.tsx",
         "\"docs/business/2026-10-23_\\346\\265\\240\\346\\260\\264\\350\\233\\213\\345\\244\\232\\345\\244\\232-\\345\\256\\234\\345\\214\\226\\344\\273\\243\\345\\212\\240\\345\\267\\245\\350\\264\\271\\347\\224\\250\\346\\265\\213\\347\\256\\227_v0.3_\\351\\200\\240\\347\\262\\222\\346\\213\\211\\346\\235\\277\\344\\277\\256\\350\\256\\242.md\"",
         "\"docs/business/2026-10-23_\\346\\265\\240\\346\\260\\264\\350\\233\\213\\345\\244\\232\\345\\244\\232-\\345\\256\\234\\345\\214\\226\\344\\273\\243\\345\\212\\240\\345\\267\\245\\350\\264\\271\\347\\224\\250\\346\\265\\213\\347\\256\\227\\344\\270\\216\\346\\226\\271\\346\\241\\210_v0.2.md\"",
         "\"docs/business/2026-10-24_\\344\\270\\255\\347\\251\\272\\346\\235\\277\\350\\256\\276\\345\\244\\207\\344\\270\\211\\350\\267\\257\\347\\272\\277\\345\\257\\271\\346\\257\\224\\350\\257\\204\\346\\265\\213_v0.1.md\"",
@@ -1209,7 +1207,7 @@
     },
     "GlobalCloud WAE": {
       "dirty_count": 129,
-      "ahead": 3,
+      "ahead": 5,
       "behind": 44,
       "paths": [
         ".gitignore",
