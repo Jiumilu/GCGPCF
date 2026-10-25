@@ -53,7 +53,7 @@ superseded_by: []
 - 策略：`required`
 - 中央入口：`openspec/changes/gctoken-<change>/`
 - Feature：`python scripts/gpcf_new_feature.py --project gctoken`
-- 默认 Loop：`Delivery`
+- 默认 Loop：`Governance`
 - Evidence/Harness：`required/required`
 
 ## 状态边界
