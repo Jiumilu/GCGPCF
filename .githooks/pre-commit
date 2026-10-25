@@ -1,6 +1,14 @@
 #!/bin/sh
 # 项目群标准检查（_governance）
 python3 "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/_governance/tools/gc_standard.py" check --repo "GlobalCloud GPCF" --staged-only --fail-on error || exit 1
+# 分层 DESIGN.md 一致性（2026-10-25 追加；仓内有 profile/map 才跑，失败阻断）
+REPO_ROOT="$(git rev-parse --show-toplevel 2>/dev/null || pwd)"
+if [ -f "$REPO_ROOT/design/project.design.md" ]; then
+  python3 "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/_governance/tools/design_md_compose.py" --project "$REPO_ROOT" --check || exit 1
+fi
+if [ -f "$REPO_ROOT/design-md-map.yaml" ]; then
+  python3 "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/_governance/tools/design_md_sync.py" check --map "$REPO_ROOT/design-md-map.yaml" --fail-on drift || exit 1
+fi
 # 原有检查
 [ -x "$(dirname "$0")/pre-commit.local" ] && exec "$(dirname "$0")/pre-commit.local" "$@"
 exit 0
