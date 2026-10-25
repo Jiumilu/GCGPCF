@@ -452,7 +452,7 @@ def test_scan_ci_coverage_distinguishes_prepared_vs_active(tmp_path):
 
 
 def test_governance_matrix_script_consistent():
-    """覆盖矩阵脚本：29 仓分类齐全、统计自洽。"""
+    """覆盖矩阵脚本：全部注册仓分类齐全、统计自洽（2026-10-25 CHG-12：29→30 仓）。"""
     import importlib.util
     spec = importlib.util.spec_from_file_location(
         "gov_matrix", ROOT / "scripts/gpcf_governance_matrix.py"
@@ -461,7 +461,8 @@ def test_governance_matrix_script_consistent():
     spec.loader.exec_module(module)
 
     rows = module.build_rows()
-    assert len(rows) == 29, len(rows)
+    registry = yaml.safe_load((ROOT / "config/project-group-projects.yaml").read_text(encoding="utf-8"))
+    assert len(rows) == len(registry["projects"]), len(rows)
     cats = {"合规", "部分", "不合规", "无文件"}
     assert {r["inheritance"] for r in rows} <= cats
     gates = {"委托", "正本", "无", "自实现/缺"}

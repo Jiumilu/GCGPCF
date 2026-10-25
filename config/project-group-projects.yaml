@@ -1,9 +1,10 @@
 schema_version: 1
-current_project_count: 29
+current_project_count: 30
 scope_decision:
   confirmed_on: 2026-10-21
   decision: WAE, Project, PDC, SLC and DRC are included in the current 28-project scope;
-    FireQuote is added on 2026-10-22 (first commit 19:11) -> current 29-project scope.
+    FireQuote is added on 2026-10-22 (first commit 19:11) -> current 29-project scope;
+    GCToken is added on 2026-10-25 (project created, B9 model supply plane) -> current 30-project scope.
   source: Prior WAE, Project, PDC and SLC decisions; DRC explicitly requested for project-group onboarding and Git remote on 2026-10-21.
 historical_baselines:
   - count: 17
@@ -48,6 +49,7 @@ projects:
   - {id: SLC, slug: slc, repo: "GlobalCloud SLC"}
   - {id: DRC, slug: drc, repo: "GlobalCloud DRC"}
   - {id: FireQuote, slug: firequote, repo: "GlobalCloud FireQuote"}
+  - {id: GCToken, slug: gctoken, repo: "GlobalCloud Token"}
 
 # 2026-10-22 Q6 裁定：Studio 已退出（disposition=exit）但保留在 29 分母内，
 # 故仍以 retired 字段保留在 projects 列表中（结构上不另设 retired_projects 段，避免破坏 4 个门禁校验器的分母解析）。
