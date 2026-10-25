@@ -31,7 +31,7 @@ superseded_by: []
 
 ## 2. 项目群范围
 
-项目群当前纳入 29 个项目，以 `config/project-group-projects.yaml` 为当前范围事实源（2026-10-10 新增 PQC、SpaceAI、SpaceAIStudio；2026-10-12 新增 WAE 世界资产浏览器；2026-10-16 新增 GCMEM 长期记忆服务；2026-10-18 新增 GlobalCloud PMC〔原 GlobalCloud Project〕、GlobalCloud PDC、GlobalCloud SLC；2026-10-21 新增 GlobalCloud DRC；2026-10-22 新增 GlobalCloud FireQuote 消防定额测算平台）。2026-10-18 用户明确确认 WAE 纳入此前 24 项目范围；此项仅确认项目范围，不提升 WAE 方案、运行或交付状态。18 项目及更早证据保持历史范围，不因纳管重算。2026-06-28 以前形成的17项目证据继续作为历史基线，不因新增 ICP 回写或重算：
+项目群当前纳入 30 个注册记录，以 `config/project-group-projects.yaml` 为当前范围事实源（2026-10-10 新增 PQC、SpaceAI、SpaceAIStudio；2026-10-12 新增 WAE 世界资产浏览器；2026-10-16 新增 GCMEM 长期记忆服务；2026-10-18 新增 GlobalCloud PMC〔原 GlobalCloud Project〕、GlobalCloud PDC、GlobalCloud SLC；2026-10-21 新增 GlobalCloud DRC；2026-10-22 新增 GlobalCloud FireQuote 消防定额测算平台；2026-10-25 新增 GCToken 模型供给面）。2026-10-18 用户明确确认 WAE 纳入此前 24 项目范围；此项仅确认项目范围，不提升 WAE 方案、运行或交付状态。18 项目及更早证据保持历史范围，不因纳管重算。2026-06-28 以前形成的17项目证据继续作为历史基线，不因新增 ICP 回写或重算：
 
 | 项目 | 主职责 |
 |---|---|
@@ -64,6 +64,7 @@ superseded_by: []
 | SLC | 运力测算应用；独立 Vite/Electron/Express 项目，项目级双方案与关键任务验证待补（2026-10-18 纳管；保持 partial/rework） |
 | DRC | 项目群数据资源中心；项目群级数据库与数据资源登记、目录、生命周期及访问边界治理（2026-10-21 纳管；bootstrap/partial） |
 | FireQuote | 消防定额测算平台；消防工程造价与定额测算能力纳管（2026-10-22 纳管；bootstrap/partial） |
+| GCToken | 多家大模型、决策模型与本地模型的统一供给、配电、计量与治理面（B9）；Hermes 保持执行引擎职责（2026-10-25 候选纳管；partial/rework） |
 
 ## 2.1 GC-ICP 产业控制平面边界
 
