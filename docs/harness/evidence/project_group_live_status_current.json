@@ -30,6 +30,7 @@
     "GlobalCloud XiaoC",
     "GlobalCloud WAME",
     "GlobalCloud GPC",
+    "GlobalCloud GPCF",
     "GlobalCloud MMC",
     "GlobalCloud XiaoG",
     "GlobalCloud SOP",
@@ -436,7 +437,7 @@
     },
     "GlobalCloud GPCF": {
       "dirty_count": 453,
-      "ahead": 0,
+      "ahead": 1,
       "behind": 0,
       "paths": [
         "$CODEX_HOME/automations/globalcloud-17/README.md",
