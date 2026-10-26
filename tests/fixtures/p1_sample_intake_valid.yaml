@@ -1,0 +1,22 @@
+# C1 fixture: valid (synthetic)
+sample_id: SAMPLE-20261026-901
+type: demand
+source_system: feedback-center
+source_ref_alias: REF-ALIAS-901
+date: 2026-10-26
+customer_alias: CUST-A
+layer: enterprise
+stage: formal
+contract_alias: HT-A
+warranty: true
+scope: out
+level: R3
+priority: P1
+evidence_grade: E2
+redaction_level: R1
+authorization:
+  approved_by: 老卢
+  date: 2026-10-26
+  scope: P1-B trial
+owner: DSH Lead
+notes: synthetic fixture only; no real customer data

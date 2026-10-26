@@ -1,0 +1,10 @@
+{
+  "case_id": "ENG-DEM-TRIAL",
+  "type": "demand",
+  "customer_alias": "CUST-R",
+  "layer": "team",
+  "stage": "trial",
+  "requirement_level": "R2",
+  "priority": "P2",
+  "acceptance_criteria": ["demo acceptance"]
+}

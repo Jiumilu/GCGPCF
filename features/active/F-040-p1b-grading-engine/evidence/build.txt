@@ -1,0 +1,25 @@
+# Build And Lint Evidence
+
+## py_compile_gpcf_scripts
+
+status: pass
+
+```text
+(no output)
+```
+
+## git_diff_check
+
+status: pass
+
+```text
+(no output)
+```
+
+## python3 -m py_compile scripts/p1b_grading_engine.py scripts/p1b_pipeline.py tests/test_p1b_grading_engine.py tests/test_p1b_pipeline.py
+
+status: pass
+
+```text
+(no output)
+```

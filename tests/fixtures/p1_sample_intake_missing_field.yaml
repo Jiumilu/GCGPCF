@@ -1,0 +1,20 @@
+# C1 fixture: missing fields (synthetic)
+sample_id: SAMPLE-20261026-902
+type: demand
+source_system: feedback-center
+source_ref_alias: REF-ALIAS-902
+date: 2026-10-26
+customer_alias: CUST-B
+layer: enterprise
+stage: formal
+contract_alias: HT-B
+warranty: true
+scope: out
+level: R3
+priority: P1
+evidence_grade: E2
+authorization:
+  approved_by: 老卢
+  date: 2026-10-26
+  scope: P1-B trial
+notes: synthetic fixture only; missing redaction_level and owner

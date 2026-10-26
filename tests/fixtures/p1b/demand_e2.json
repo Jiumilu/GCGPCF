@@ -1,0 +1,16 @@
+{
+  "case_id": "ENG-DEM-E2",
+  "type": "demand",
+  "customer_alias": "CUST-A",
+  "layer": "enterprise",
+  "stage": "formal",
+  "contract_alias": "HT-A",
+  "scope": "out",
+  "requirement_level": "R3",
+  "priority": "P1",
+  "acceptance_criteria": ["demo acceptance"],
+  "evidence_refs": {
+    "contract_clause": "HT-A §3.2",
+    "change_request": "CR-ENG-1"
+  }
+}
