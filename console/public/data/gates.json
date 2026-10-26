@@ -1,0 +1,60 @@
+{
+  "count": 6,
+  "items": [
+    {
+      "id": "document",
+      "name": "文档门禁",
+      "scope": "Markdown 元数据 / KDS 镜像",
+      "command": "python3 tools/kds-sync/loop_document_gate.py --check-only",
+      "script": "tools/kds-sync/loop_document_gate.py",
+      "script_exists": true,
+      "last_result": "pass"
+    },
+    {
+      "id": "pollution",
+      "name": "污染检查",
+      "scope": "旧命名、旧口径回流",
+      "command": "python3 tools/kds-sync/check_document_pollution.py",
+      "script": "tools/kds-sync/check_document_pollution.py",
+      "script_exists": true,
+      "last_result": null
+    },
+    {
+      "id": "kds_token",
+      "name": "KDS TOKEN",
+      "scope": "镜像写入鉴权",
+      "command": "python3 tools/kds-sync/validate_kds_token.py",
+      "script": "tools/kds-sync/validate_kds_token.py",
+      "script_exists": true,
+      "last_result": null
+    },
+    {
+      "id": "workspace",
+      "name": "工作区校验",
+      "scope": "Feature 结构与命名",
+      "command": "python3 tools/kds-sync/validate_gpcf_2_feature_workspace.py",
+      "script": "tools/kds-sync/validate_gpcf_2_feature_workspace.py",
+      "script_exists": true,
+      "last_result": null
+    },
+    {
+      "id": "contract",
+      "name": "契约矩阵",
+      "scope": "跨项目契约一致性",
+      "command": "python3 tools/kds-sync/validate_contract_matrix.py",
+      "script": "tools/kds-sync/validate_contract_matrix.py",
+      "script_exists": true,
+      "last_result": null
+    },
+    {
+      "id": "evidence",
+      "name": "证据门禁",
+      "scope": "证据五件套完整性",
+      "command": "python3 scripts/gpcf_check_evidence.py <F>",
+      "script": "scripts/gpcf_check_evidence.py",
+      "script_exists": true,
+      "last_result": null
+    }
+  ],
+  "last_result_source": "09-status/globalcloud-document-health-report.md"
+}

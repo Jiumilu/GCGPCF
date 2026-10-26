@@ -1,0 +1,298 @@
+{
+  "count": 29,
+  "items": [
+    {
+      "slug": "aaas",
+      "id": "AAAS",
+      "repo": "GlobalCloud AAAS",
+      "active_features": 0,
+      "total_features": 1,
+      "has_status": true,
+      "has_roadmap": true,
+      "has_risk": true
+    },
+    {
+      "slug": "brain",
+      "id": "Brain",
+      "repo": "GlobalCloud Brain",
+      "active_features": 0,
+      "total_features": 2,
+      "has_status": true,
+      "has_roadmap": true,
+      "has_risk": true
+    },
+    {
+      "slug": "drc",
+      "id": "DRC",
+      "repo": "GlobalCloud DRC",
+      "active_features": 0,
+      "total_features": 0,
+      "has_status": true,
+      "has_roadmap": true,
+      "has_risk": true
+    },
+    {
+      "slug": "firequote",
+      "id": "FireQuote",
+      "repo": "GlobalCloud FireQuote",
+      "active_features": 0,
+      "total_features": 0,
+      "has_status": true,
+      "has_roadmap": true,
+      "has_risk": true
+    },
+    {
+      "slug": "gcmem",
+      "id": "GCMEM",
+      "repo": "GlobalCloud Mem",
+      "active_features": 0,
+      "total_features": 1,
+      "has_status": true,
+      "has_roadmap": true,
+      "has_risk": true
+    },
+    {
+      "slug": "gctoken",
+      "id": "GCToken",
+      "repo": "GlobalCloud Token",
+      "active_features": 0,
+      "total_features": 0,
+      "has_status": true,
+      "has_roadmap": true,
+      "has_risk": true
+    },
+    {
+      "slug": "gfis",
+      "id": "GFIS",
+      "repo": "GlobalCloud GFIS",
+      "active_features": 1,
+      "total_features": 1,
+      "has_status": true,
+      "has_roadmap": true,
+      "has_risk": true
+    },
+    {
+      "slug": "gpc",
+      "id": "GPC",
+      "repo": "GlobalCloud GPC",
+      "active_features": 0,
+      "total_features": 0,
+      "has_status": true,
+      "has_roadmap": true,
+      "has_risk": true
+    },
+    {
+      "slug": "gpcf",
+      "id": "GPCF",
+      "repo": "GlobalCloud GPCF",
+      "active_features": 5,
+      "total_features": 13,
+      "has_status": true,
+      "has_roadmap": true,
+      "has_risk": true
+    },
+    {
+      "slug": "icp",
+      "id": "ICP",
+      "repo": "GlobalCloud ICP",
+      "active_features": 0,
+      "total_features": 2,
+      "has_status": true,
+      "has_roadmap": true,
+      "has_risk": true
+    },
+    {
+      "slug": "kds",
+      "id": "KDS",
+      "repo": "GlobalCloud KDS",
+      "active_features": 0,
+      "total_features": 0,
+      "has_status": true,
+      "has_roadmap": true,
+      "has_risk": true
+    },
+    {
+      "slug": "mmc",
+      "id": "MMC",
+      "repo": "GlobalCloud MMC",
+      "active_features": 0,
+      "total_features": 0,
+      "has_status": true,
+      "has_roadmap": true,
+      "has_risk": true
+    },
+    {
+      "slug": "pdc",
+      "id": "PDC",
+      "repo": "GlobalCloud PDC",
+      "active_features": 0,
+      "total_features": 1,
+      "has_status": true,
+      "has_roadmap": true,
+      "has_risk": true
+    },
+    {
+      "slug": "pkc",
+      "id": "PKC",
+      "repo": "GlobalCloud PKC",
+      "active_features": 0,
+      "total_features": 0,
+      "has_status": true,
+      "has_roadmap": true,
+      "has_risk": true
+    },
+    {
+      "slug": "pqc",
+      "id": "PQC",
+      "repo": "GlobalCloud PQC",
+      "active_features": 1,
+      "total_features": 1,
+      "has_status": true,
+      "has_roadmap": true,
+      "has_risk": true
+    },
+    {
+      "slug": "project",
+      "id": "Project",
+      "repo": "GlobalCloud PMC",
+      "active_features": 0,
+      "total_features": 1,
+      "has_status": true,
+      "has_roadmap": true,
+      "has_risk": true
+    },
+    {
+      "slug": "pvaos",
+      "id": "PVAOS",
+      "repo": "GlobalCloud PVA",
+      "active_features": 0,
+      "total_features": 0,
+      "has_status": true,
+      "has_roadmap": true,
+      "has_risk": true
+    },
+    {
+      "slug": "slc",
+      "id": "SLC",
+      "repo": "GlobalCloud SLC",
+      "active_features": 0,
+      "total_features": 0,
+      "has_status": true,
+      "has_roadmap": true,
+      "has_risk": true
+    },
+    {
+      "slug": "sop",
+      "id": "SOP",
+      "repo": "GlobalCloud SOP",
+      "active_features": 1,
+      "total_features": 1,
+      "has_status": true,
+      "has_roadmap": true,
+      "has_risk": true
+    },
+    {
+      "slug": "spaceai",
+      "id": "SpaceAI",
+      "repo": "GlobalCloud SpaceAI Platform",
+      "active_features": 3,
+      "total_features": 4,
+      "has_status": true,
+      "has_roadmap": true,
+      "has_risk": true
+    },
+    {
+      "slug": "spaceai-studio",
+      "id": "SpaceAIStudio",
+      "repo": "GlobalCloud SpaceAI Studio",
+      "active_features": 0,
+      "total_features": 0,
+      "has_status": true,
+      "has_roadmap": true,
+      "has_risk": true
+    },
+    {
+      "slug": "wae",
+      "id": "WAE",
+      "repo": "GlobalCloud WAE",
+      "active_features": 2,
+      "total_features": 2,
+      "has_status": true,
+      "has_roadmap": true,
+      "has_risk": true
+    },
+    {
+      "slug": "wame",
+      "id": "WAME",
+      "repo": "GlobalCloud WAME",
+      "active_features": 0,
+      "total_features": 1,
+      "has_status": true,
+      "has_roadmap": true,
+      "has_risk": true
+    },
+    {
+      "slug": "was",
+      "id": "WAS",
+      "repo": "GlobalCloud WAS",
+      "active_features": 1,
+      "total_features": 2,
+      "has_status": true,
+      "has_roadmap": true,
+      "has_risk": true
+    },
+    {
+      "slug": "world",
+      "id": "World",
+      "repo": "GlobalCloud World",
+      "active_features": 0,
+      "total_features": 1,
+      "has_status": true,
+      "has_roadmap": true,
+      "has_risk": true
+    },
+    {
+      "slug": "xgd",
+      "id": "XGD",
+      "repo": "GlobalCloud XGD",
+      "active_features": 0,
+      "total_features": 1,
+      "has_status": true,
+      "has_roadmap": true,
+      "has_risk": true
+    },
+    {
+      "slug": "xiaoc",
+      "id": "XiaoC",
+      "repo": "GlobalCloud XiaoC",
+      "active_features": 1,
+      "total_features": 1,
+      "has_status": true,
+      "has_roadmap": true,
+      "has_risk": true
+    },
+    {
+      "slug": "xiaog",
+      "id": "XiaoG",
+      "repo": "GlobalCloud XiaoG",
+      "active_features": 0,
+      "total_features": 0,
+      "has_status": true,
+      "has_roadmap": true,
+      "has_risk": true
+    },
+    {
+      "slug": "xwail",
+      "id": "XWAIL",
+      "repo": "GlobalCloud XWAIL",
+      "active_features": 0,
+      "total_features": 0,
+      "has_status": true,
+      "has_roadmap": true,
+      "has_risk": true
+    }
+  ],
+  "unregistered_attribution": [
+    "studio"
+  ]
+}

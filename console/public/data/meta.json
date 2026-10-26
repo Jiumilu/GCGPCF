@@ -1,0 +1,206 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-10-26T13:09:31+00:00",
+  "source_sha": "725415cefb22eecee0e73dda95708b1a4fbb2c2b",
+  "source_branch": "ci/gpcf-gates",
+  "repo": "GlobalCloud GPCF",
+  "counts": {
+    "projects": 29,
+    "features": 38,
+    "active": 15,
+    "done": 23,
+    "queue": 37,
+    "blockers": 39,
+    "features_with_blockers": 12
+  },
+  "runtime": {
+    "current_feature": "F-036",
+    "queue_length": 37,
+    "active_feature_count": 15,
+    "mode": "feature_delivery"
+  },
+  "drift": {
+    "total": 18,
+    "distinct_features": 10,
+    "by_kind": {
+      "missing_in_queue": 1,
+      "mapping_gap": 8,
+      "drift": 9
+    },
+    "true_drift_features": [
+      "F-013",
+      "F-033",
+      "F-036",
+      "F-037",
+      "F-038"
+    ],
+    "mapping_gap_features": [
+      "F-012",
+      "F-022",
+      "F-025",
+      "F-032"
+    ],
+    "items": [
+      {
+        "feature": "F-001",
+        "kind": "missing_in_queue",
+        "field": "queue.entry",
+        "truth": "workspace exists",
+        "derived": "absent"
+      },
+      {
+        "feature": "F-012",
+        "kind": "mapping_gap",
+        "field": "queue.current_role",
+        "truth": "Planner",
+        "derived": "Dispatcher"
+      },
+      {
+        "feature": "F-012",
+        "kind": "mapping_gap",
+        "field": "queue.status",
+        "truth": "plan",
+        "derived": "queued"
+      },
+      {
+        "feature": "F-013",
+        "kind": "drift",
+        "field": "queue.status",
+        "truth": "evaluated",
+        "derived": "blocked"
+      },
+      {
+        "feature": "F-022",
+        "kind": "mapping_gap",
+        "field": "queue.current_role",
+        "truth": "Planner",
+        "derived": "Dispatcher"
+      },
+      {
+        "feature": "F-022",
+        "kind": "mapping_gap",
+        "field": "queue.status",
+        "truth": "plan",
+        "derived": "queued"
+      },
+      {
+        "feature": "F-025",
+        "kind": "mapping_gap",
+        "field": "queue.current_role",
+        "truth": "Planner",
+        "derived": "Dispatcher"
+      },
+      {
+        "feature": "F-025",
+        "kind": "mapping_gap",
+        "field": "queue.status",
+        "truth": "plan",
+        "derived": "queued"
+      },
+      {
+        "feature": "F-032",
+        "kind": "mapping_gap",
+        "field": "queue.current_role",
+        "truth": "Planner",
+        "derived": "Dispatcher"
+      },
+      {
+        "feature": "F-032",
+        "kind": "mapping_gap",
+        "field": "queue.status",
+        "truth": "plan",
+        "derived": "queued"
+      },
+      {
+        "feature": "F-033",
+        "kind": "drift",
+        "field": "queue.current_role",
+        "truth": "Builder",
+        "derived": "Dispatcher"
+      },
+      {
+        "feature": "F-033",
+        "kind": "drift",
+        "field": "queue.status",
+        "truth": "implement",
+        "derived": "queued"
+      },
+      {
+        "feature": "F-036",
+        "kind": "drift",
+        "field": "queue.current_role",
+        "truth": "Evaluator",
+        "derived": "Dispatcher"
+      },
+      {
+        "feature": "F-036",
+        "kind": "drift",
+        "field": "queue.status",
+        "truth": "evaluated",
+        "derived": "queued"
+      },
+      {
+        "feature": "F-037",
+        "kind": "drift",
+        "field": "queue.current_role",
+        "truth": "Recorder",
+        "derived": "Dispatcher"
+      },
+      {
+        "feature": "F-037",
+        "kind": "drift",
+        "field": "queue.status",
+        "truth": "commit",
+        "derived": "queued"
+      },
+      {
+        "feature": "F-038",
+        "kind": "drift",
+        "field": "queue.current_role",
+        "truth": "Recorder",
+        "derived": "Dispatcher"
+      },
+      {
+        "feature": "F-038",
+        "kind": "drift",
+        "field": "queue.status",
+        "truth": "commit",
+        "derived": "queued"
+      }
+    ],
+    "policy": "以 feature.yaml 为准；派生视图不一致时阻断，禁止人工改派生侧对齐"
+  },
+  "roadmap": {
+    "source": "projects/gpcf/ROADMAP.md",
+    "items": [
+      {
+        "phase": 1,
+        "text": "保持历史文档受控，停止新增重复治理过程文档"
+      },
+      {
+        "phase": 2,
+        "text": "所有新开发从 `features/active/F-xxx/` 进入"
+      },
+      {
+        "phase": 3,
+        "text": "以 `runtime/queue.json` 驱动 Dispatcher 到 Recorder 的轻量流转"
+      },
+      {
+        "phase": 4,
+        "text": "Evidence Gate 以本地可回放结果决定 Feature 是否可关闭"
+      },
+      {
+        "phase": 5,
+        "text": "通过 `gpcf_dispatch.py` 推进角色状态机，并用 `runtime/logs/F-xxx.jsonl` 记录每轮角色输入、输出和证据"
+      }
+    ]
+  },
+  "truth_source": {
+    "feature": "features/{active|done}/F-*/feature.yaml",
+    "mapping": "runtime/status-source-of-truth.yaml"
+  },
+  "non_claims": [
+    "只读快照，不代表业务实现完成或客户交付",
+    "不声明 accepted / integrated / production_ready"
+  ]
+}

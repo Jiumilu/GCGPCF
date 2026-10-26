@@ -1,0 +1,38 @@
+/* Design tokens · utility family (Linear lineage)
+   Source: _governance/profiles/family/utility.design.md
+   Raw color literals live only here; every other stylesheet consumes var(--*). */
+
+:root,
+[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #08090a;
+  --surface: #0f1011;
+  --alt: #191a1b;
+  --border: #1c1d1e;
+  --ink: #f7f8f8;
+  --dim: #8a8f98;
+  --accent: #7170ff;
+  --accent-strong: #828fff;
+  --ok: #4ade80;
+  --warn: #fbbf24;
+  --bad: #f87171;
+  --shadow-color: rgba(0, 0, 0, 0.6);
+  --scrim: rgba(0, 0, 0, 0.5);
+}
+
+[data-theme="light"] {
+  color-scheme: light;
+  --bg: #f7f8f8;
+  --surface: #ffffff;
+  --alt: #f3f4f5;
+  --border: #e6e6e6;
+  --ink: #282a30;
+  --dim: #6b6f76;
+  --accent: #5e6ad2;
+  --accent-strong: #4f5bc4;
+  --ok: #00793d;
+  --warn: #9d6400;
+  --bad: #b71824;
+  --shadow-color: rgba(15, 16, 17, 0.16);
+  --scrim: rgba(24, 26, 30, 0.32);
+}

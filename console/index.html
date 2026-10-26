@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>治理控制仓 · GPCF</title>
+<meta name="description" content="GlobalCloud GPCF 只读治理快照：交付进度、卡点、待裁、路线、议题、门禁与台账。">
+<!-- 本地预览： python3 -m http.server 4173 --directory console -->
+<link rel="stylesheet" href="./assets/tokens.css">
+<link rel="stylesheet" href="./assets/styles.css">
+<script>
+  // 首屏前同步主题，避免闪白（v1.4 E1）
+  (function () {
+    try {
+      var forced = new URLSearchParams(location.search).get("theme");
+      var saved = localStorage.getItem("gpcf-theme");
+      var system = window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+      document.documentElement.dataset.theme =
+        forced === "light" || forced === "dark" ? forced
+        : saved === "light" || saved === "dark" ? saved
+        : system;
+    } catch (error) {
+      document.documentElement.dataset.theme = "dark";
+    }
+  })();
+</script>
+</head>
+<body>
+<a class="skip" href="#app">跳到主内容</a>
+<main class="page">
+  <header class="masthead">
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true">◧</span>
+      <span class="brand-name">GlobalCloud GPCF</span>
+      <span class="brand-sub">治理控制仓 · 只读快照</span>
+    </div>
+    <nav class="topnav" aria-label="主导航">
+      <a href="#/" data-route="home">主页</a>
+      <a href="#/features" data-route="features">议题</a>
+      <a href="#/projects" data-route="projects">项目</a>
+      <a href="#/gates" data-route="gates">门禁</a>
+      <a href="#/docs" data-route="docs">台账</a>
+    </nav>
+    <button class="icon" id="palette-trigger" data-open-palette aria-label="打开命令面板（⌘K）" title="命令面板 ⌘K">⌘K</button>
+    <button class="icon" id="theme-toggle" aria-label="切换主题" title="切换主题">☀</button>
+    <div class="masthead-meta" id="masthead-meta"></div>
+  </header>
+
+  <div id="app" class="app" tabindex="-1" aria-busy="true">
+    <section class="skeleton" aria-hidden="true">
+      <div class="sk sk-title"></div>
+      <div class="sk sk-line"></div>
+      <div class="sk sk-line short"></div>
+    </section>
+  </div>
+
+  <footer class="pagefoot" id="pagefoot"></footer>
+</main>
+
+<dialog class="palette" id="palette" aria-label="命令面板">
+  <div class="palette-search">
+    <input id="palette-input" type="text" placeholder="搜索议题或跳转…" aria-label="搜索议题或跳转" autocomplete="off" spellcheck="false">
+  </div>
+  <ul class="palette-list" id="palette-list"></ul>
+  <div class="palette-foot">↑↓ 选择 · Enter 执行 · Esc 关闭</div>
+</dialog>
+
+<script type="module" src="./assets/app.js"></script>
+</body>
+</html>

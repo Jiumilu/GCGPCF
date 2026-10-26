@@ -1,0 +1,1746 @@
+{
+  "items": [
+    {
+      "id": "F-001",
+      "name": "supplier-onboarding",
+      "project": "gpcf",
+      "project_retired": false,
+      "priority": "P0",
+      "status": "done",
+      "owner": "agent-dev-01",
+      "goal": "完成供应商入驻主流程",
+      "step": "commit",
+      "iteration": 2,
+      "workspace": "features/done/F-001-supplier-onboarding",
+      "acceptance_count": 0,
+      "scope_in_count": 0,
+      "evidence": {
+        "tests": "pass",
+        "build": "not_required",
+        "api": "not_required",
+        "screenshots": "not_required",
+        "summary": "pass"
+      },
+      "gates": {
+        "functional_completeness": "",
+        "quality_baseline": "",
+        "multi_user_usability": "",
+        "task_flow_e2e_status": "",
+        "accessibility_status": "",
+        "evidence_overexposure_gate": ""
+      },
+      "status_ceiling": "",
+      "review_status": null,
+      "blockers": [],
+      "blocker_count": 0,
+      "updated_at": "2026-07-07T22:40:31+00:00",
+      "drift": [
+        {
+          "feature": "F-001",
+          "kind": "missing_in_queue",
+          "field": "queue.entry",
+          "truth": "workspace exists",
+          "derived": "absent"
+        }
+      ],
+      "derived_queue": null
+    },
+    {
+      "id": "F-002",
+      "name": "project-group-feature-queue",
+      "project": "gpcf",
+      "project_retired": false,
+      "priority": "P0",
+      "status": "done",
+      "owner": "agent-dev-01",
+      "goal": "建立项目群 Feature 队列样本，验证 Dispatcher 到 Feature Workspace 的真实入口",
+      "step": "commit",
+      "iteration": 6,
+      "workspace": "features/done/F-002-project-group-feature-queue",
+      "acceptance_count": 3,
+      "scope_in_count": 3,
+      "evidence": {
+        "tests": "pass",
+        "build": "pass",
+        "api": "waived",
+        "screenshots": "waived",
+        "summary": "pass"
+      },
+      "gates": {
+        "functional_completeness": "",
+        "quality_baseline": "",
+        "multi_user_usability": "",
+        "task_flow_e2e_status": "",
+        "accessibility_status": "",
+        "evidence_overexposure_gate": ""
+      },
+      "status_ceiling": "",
+      "review_status": null,
+      "blockers": [],
+      "blocker_count": 0,
+      "updated_at": "2026-07-08T00:02:28+00:00",
+      "drift": [],
+      "derived_queue": {
+        "status": "closed",
+        "current_role": "Recorder",
+        "updated_at": "2026-07-08T00:02:28+00:00"
+      }
+    },
+    {
+      "id": "F-003",
+      "name": "evidence-gate-profile",
+      "project": "gpcf",
+      "project_retired": false,
+      "priority": "P0",
+      "status": "done",
+      "owner": "agent-dev-01",
+      "goal": "增强 Evidence Gate，使测试、构建、lint 和范围证据按项目类型检查",
+      "step": "commit",
+      "iteration": 7,
+      "workspace": "features/done/F-003-evidence-gate-profile",
+      "acceptance_count": 3,
+      "scope_in_count": 4,
+      "evidence": {
+        "tests": "pass",
+        "build": "pass",
+        "api": "waived",
+        "screenshots": "waived",
+        "summary": "pass"
+      },
+      "gates": {
+        "functional_completeness": "",
+        "quality_baseline": "",
+        "multi_user_usability": "",
+        "task_flow_e2e_status": "",
+        "accessibility_status": "",
+        "evidence_overexposure_gate": ""
+      },
+      "status_ceiling": "",
+      "review_status": null,
+      "blockers": [],
+      "blocker_count": 0,
+      "updated_at": "2026-07-08T02:42:07+00:00",
+      "drift": [],
+      "derived_queue": {
+        "status": "closed",
+        "current_role": "Recorder",
+        "updated_at": "2026-07-08T02:42:07+00:00"
+      }
+    },
+    {
+      "id": "F-004",
+      "name": "loop-governance-slimming",
+      "project": "gpcf",
+      "project_retired": false,
+      "priority": "P1",
+      "status": "done",
+      "owner": "agent-dev-01",
+      "goal": "将历史 LOOP 治理结果降级归档为参考，不再主导 Feature 开发节奏",
+      "step": "commit",
+      "iteration": 7,
+      "workspace": "features/done/F-004-loop-governance-slimming",
+      "acceptance_count": 3,
+      "scope_in_count": 3,
+      "evidence": {
+        "tests": "pass",
+        "build": "pass",
+        "api": "waived",
+        "screenshots": "waived",
+        "summary": "pass"
+      },
+      "gates": {
+        "functional_completeness": "pass",
+        "quality_baseline": "pass",
+        "multi_user_usability": "waived",
+        "task_flow_e2e_status": "waived",
+        "accessibility_status": "waived",
+        "evidence_overexposure_gate": "pass"
+      },
+      "status_ceiling": "partial",
+      "review_status": null,
+      "blockers": [],
+      "blocker_count": 0,
+      "updated_at": "2026-10-23T01:47:11+00:00",
+      "drift": [],
+      "derived_queue": {
+        "status": "closed",
+        "current_role": "Recorder",
+        "updated_at": "2026-10-23T01:47:11+00:00"
+      }
+    },
+    {
+      "id": "F-005",
+      "name": "factory-exception-intake-dry-run",
+      "project": "gfis",
+      "project_retired": false,
+      "priority": "P0",
+      "status": "active",
+      "owner": "agent-dev-01",
+      "goal": "建立 GFIS 生产异常接入 dry-run Feature，验证业务 Feature 可通过 GPCF 2.0 Runtime 完整角色链推进",
+      "step": "commit",
+      "iteration": 13,
+      "workspace": "features/active/F-005-factory-exception-intake-dry-run",
+      "acceptance_count": 3,
+      "scope_in_count": 3,
+      "evidence": {
+        "tests": "pass",
+        "build": "pass",
+        "api": "waived",
+        "screenshots": "waived",
+        "summary": "pass"
+      },
+      "gates": {
+        "functional_completeness": "pass",
+        "quality_baseline": "pass",
+        "multi_user_usability": "pending",
+        "task_flow_e2e_status": "pending",
+        "accessibility_status": "waived",
+        "evidence_overexposure_gate": "pending"
+      },
+      "status_ceiling": "partial",
+      "review_status": null,
+      "blockers": [],
+      "blocker_count": 0,
+      "updated_at": "2026-07-16T00:00:00+08:00",
+      "drift": [],
+      "derived_queue": {
+        "status": "commit",
+        "current_role": "Recorder",
+        "updated_at": "2026-07-16T00:00:00+08:00"
+      }
+    },
+    {
+      "id": "F-006",
+      "name": "knowledge-e2e-flow",
+      "project": "brain",
+      "project_retired": false,
+      "priority": "P1",
+      "status": "done",
+      "owner": "agent-dev-01",
+      "goal": "完成 Brain 知识治理端到端产品功能闭环：搜索→WikiPreview→Review/Tasks 派生→Reports 生成",
+      "step": "commit",
+      "iteration": 4,
+      "workspace": "features/done/F-006-knowledge-e2e-flow",
+      "acceptance_count": 0,
+      "scope_in_count": 0,
+      "evidence": {
+        "tests": "pass",
+        "build": "pass",
+        "api": "waived",
+        "screenshots": "waived",
+        "summary": "pass"
+      },
+      "gates": {
+        "functional_completeness": "",
+        "quality_baseline": "",
+        "multi_user_usability": "",
+        "task_flow_e2e_status": "",
+        "accessibility_status": "",
+        "evidence_overexposure_gate": ""
+      },
+      "status_ceiling": "",
+      "review_status": null,
+      "blockers": [],
+      "blocker_count": 0,
+      "updated_at": "2026-07-09T16:28:16+00:00",
+      "drift": [],
+      "derived_queue": {
+        "status": "closed",
+        "current_role": "Recorder",
+        "updated_at": "2026-07-09T16:28:16+00:00"
+      }
+    },
+    {
+      "id": "F-007",
+      "name": "reports-data-flow",
+      "project": "brain",
+      "project_retired": false,
+      "priority": "P1",
+      "status": "done",
+      "owner": "agent-dev-01",
+      "goal": "打通 ReportsPanel 与 Review/Tasks 数据流断点，形成完整知识治理端到端闭环",
+      "step": "commit",
+      "iteration": 4,
+      "workspace": "features/done/F-007-reports-data-flow",
+      "acceptance_count": 0,
+      "scope_in_count": 0,
+      "evidence": {
+        "tests": "pass",
+        "build": "pass",
+        "api": "waived",
+        "screenshots": "waived",
+        "summary": "pass"
+      },
+      "gates": {
+        "functional_completeness": "",
+        "quality_baseline": "",
+        "multi_user_usability": "",
+        "task_flow_e2e_status": "",
+        "accessibility_status": "",
+        "evidence_overexposure_gate": ""
+      },
+      "status_ceiling": "",
+      "review_status": null,
+      "blockers": [],
+      "blocker_count": 0,
+      "updated_at": "2026-07-09T23:30:09+00:00",
+      "drift": [],
+      "derived_queue": {
+        "status": "closed",
+        "current_role": "Recorder",
+        "updated_at": "2026-07-09T23:30:09+00:00"
+      }
+    },
+    {
+      "id": "F-008",
+      "name": "icp-project-group-admission",
+      "project": "icp",
+      "project_retired": false,
+      "priority": "P0",
+      "status": "done",
+      "owner": "agent-dev-01",
+      "goal": "将 ICP 以 candidate/partial/human_required 边界纳入 GlobalCloud 项目群当前 18 项范围",
+      "step": "commit",
+      "iteration": 9,
+      "workspace": "features/done/F-008-icp-project-group-admission",
+      "acceptance_count": 4,
+      "scope_in_count": 4,
+      "evidence": {
+        "tests": "pass",
+        "build": "pass",
+        "api": "waived",
+        "screenshots": "waived",
+        "summary": "pass"
+      },
+      "gates": {
+        "functional_completeness": "",
+        "quality_baseline": "",
+        "multi_user_usability": "",
+        "task_flow_e2e_status": "",
+        "accessibility_status": "",
+        "evidence_overexposure_gate": ""
+      },
+      "status_ceiling": "",
+      "review_status": null,
+      "blockers": [],
+      "blocker_count": 0,
+      "updated_at": "2026-07-12T06:08:37+00:00",
+      "drift": [],
+      "derived_queue": {
+        "status": "closed",
+        "current_role": "Recorder",
+        "updated_at": "2026-07-12T06:08:37+00:00"
+      }
+    },
+    {
+      "id": "F-009",
+      "name": "project-group-openspec-coverage",
+      "project": "gpcf",
+      "project_retired": false,
+      "priority": "P0",
+      "status": "done",
+      "owner": "codex",
+      "goal": "为 GlobalCloud 18 个项目建立 OpenSpec 适用性矩阵、入口或豁免、Feature/Loop 映射，并统一当前项目门禁为18项目口径",
+      "step": "commit",
+      "iteration": 11,
+      "workspace": "features/done/F-009-project-group-openspec-coverage",
+      "acceptance_count": 4,
+      "scope_in_count": 4,
+      "evidence": {
+        "tests": "pass",
+        "build": "pass",
+        "api": "waived",
+        "screenshots": "waived",
+        "summary": "pass"
+      },
+      "gates": {
+        "functional_completeness": "",
+        "quality_baseline": "",
+        "multi_user_usability": "",
+        "task_flow_e2e_status": "",
+        "accessibility_status": "",
+        "evidence_overexposure_gate": ""
+      },
+      "status_ceiling": "",
+      "review_status": null,
+      "blockers": [],
+      "blocker_count": 0,
+      "updated_at": "2026-07-12T06:07:06+00:00",
+      "drift": [],
+      "derived_queue": {
+        "status": "closed",
+        "current_role": "Recorder",
+        "updated_at": "2026-07-12T06:07:06+00:00"
+      }
+    },
+    {
+      "id": "F-010",
+      "name": "project-group-ui-engineering-coverage",
+      "project": "gpcf",
+      "project_retired": false,
+      "priority": "P0",
+      "status": "done",
+      "owner": "agent-dev-01",
+      "goal": "提升项目群闭环开发的界面实际开发、效果、体验及质量，补齐18项目UI工程覆盖并建立可机器校验门禁",
+      "step": "commit",
+      "iteration": 3,
+      "workspace": "features/done/F-010-project-group-ui-engineering-coverage",
+      "acceptance_count": 3,
+      "scope_in_count": 3,
+      "evidence": {
+        "tests": "pass",
+        "build": "pass",
+        "api": "waived",
+        "screenshots": "pass",
+        "summary": "pass"
+      },
+      "gates": {
+        "functional_completeness": "pass",
+        "quality_baseline": "pass",
+        "multi_user_usability": "pass",
+        "task_flow_e2e_status": "pass",
+        "accessibility_status": "pass",
+        "evidence_overexposure_gate": "pass"
+      },
+      "status_ceiling": "partial",
+      "review_status": null,
+      "blockers": [],
+      "blocker_count": 0,
+      "updated_at": "2026-10-22T09:16:24+00:00",
+      "drift": [],
+      "derived_queue": {
+        "status": "closed",
+        "current_role": "Recorder",
+        "updated_at": "2026-10-22T09:16:24+00:00"
+      }
+    },
+    {
+      "id": "F-011",
+      "name": "studio-workbench-ui-runtime-closure",
+      "project": "studio",
+      "project_retired": true,
+      "priority": "P0",
+      "status": "done",
+      "owner": "agent-dev-01",
+      "goal": "对 Studio 真实工作台页面执行界面开发与运行验证闭环，补齐截图/浏览器证据并提升实际效果、体验与质量",
+      "step": "commit",
+      "iteration": 3,
+      "workspace": "features/done/F-011-studio-workbench-ui-runtime-closure",
+      "acceptance_count": 4,
+      "scope_in_count": 4,
+      "evidence": {
+        "tests": "pass",
+        "build": "pass",
+        "api": "waived",
+        "screenshots": "pass",
+        "summary": "pass"
+      },
+      "gates": {
+        "functional_completeness": "pass",
+        "quality_baseline": "pass",
+        "multi_user_usability": "pending",
+        "task_flow_e2e_status": "fail",
+        "accessibility_status": "pending",
+        "evidence_overexposure_gate": "pass"
+      },
+      "status_ceiling": "partial",
+      "review_status": null,
+      "blockers": [],
+      "blocker_count": 0,
+      "updated_at": "2026-10-21T23:19:05+00:00",
+      "drift": [],
+      "derived_queue": {
+        "status": "closed",
+        "current_role": "Recorder",
+        "updated_at": "2026-10-21T23:19:05+00:00"
+      }
+    },
+    {
+      "id": "F-012",
+      "name": "icp-sop-foundation-coupling",
+      "project": "sop",
+      "project_retired": false,
+      "priority": "P0",
+      "status": "active",
+      "owner": "SOP",
+      "goal": "建立 ICP→SOP 单向强依赖：SOP 矩阵必须消费版本化 ICP 规则、产业模型、场景模板与约束清单，且不得复制或弱化 ICP 基线。",
+      "step": "plan",
+      "iteration": 0,
+      "workspace": "features/active/F-012-icp-sop-foundation-coupling",
+      "acceptance_count": 3,
+      "scope_in_count": 3,
+      "evidence": {
+        "tests": "pending",
+        "build": "pending",
+        "api": "pending",
+        "screenshots": "pending",
+        "summary": "pending"
+      },
+      "gates": {
+        "functional_completeness": "pending",
+        "quality_baseline": "pending",
+        "multi_user_usability": "pending",
+        "task_flow_e2e_status": "pending",
+        "accessibility_status": "waived",
+        "evidence_overexposure_gate": "pending"
+      },
+      "status_ceiling": "partial",
+      "review_status": null,
+      "blockers": [],
+      "blocker_count": 0,
+      "updated_at": "2026-07-16T00:00:00+08:00",
+      "drift": [
+        {
+          "feature": "F-012",
+          "kind": "mapping_gap",
+          "field": "queue.current_role",
+          "truth": "Planner",
+          "derived": "Dispatcher"
+        },
+        {
+          "feature": "F-012",
+          "kind": "mapping_gap",
+          "field": "queue.status",
+          "truth": "plan",
+          "derived": "queued"
+        }
+      ],
+      "derived_queue": {
+        "status": "queued",
+        "current_role": "Dispatcher",
+        "updated_at": "2026-07-16T00:00:00+08:00"
+      }
+    },
+    {
+      "id": "F-013",
+      "name": "knowledge-asset-model-system",
+      "project": "gpcf",
+      "project_retired": false,
+      "priority": "P1",
+      "status": "active",
+      "owner": "agent-dev-01",
+      "goal": "作为 GKE-001 的 canonical 契约与独立验收工作包，建立兼容 OKF、KDS、Brain、MMC、Studio 与业务主数据边界的知识资产模型体系",
+      "step": "evaluate",
+      "iteration": 330,
+      "workspace": "features/active/F-013-knowledge-asset-model-system",
+      "acceptance_count": 13,
+      "scope_in_count": 9,
+      "evidence": {
+        "tests": "pass",
+        "build": "pass",
+        "api": "waived",
+        "screenshots": "pass",
+        "summary": "pass"
+      },
+      "gates": {
+        "functional_completeness": "pending",
+        "quality_baseline": "pending",
+        "multi_user_usability": "pending",
+        "task_flow_e2e_status": "pending",
+        "accessibility_status": "pending",
+        "evidence_overexposure_gate": "pending"
+      },
+      "status_ceiling": "partial",
+      "review_status": null,
+      "blockers": [
+        "kds_green_supply_chain_role_view_local_commit_pending_separate_human_authorization",
+        "brain_browser_r2_postpush_revalidated_chat_send_not_executed_mobile_ui_rework_required",
+        "brain_authenticated_readonly_e2e_deferred_pending_a10_control",
+        "studio_release0_external_daily_sync_post_sync_governance_disposition_pending",
+        "kds_release0_runtime_activation_independently_verified_local_gbrain_missing_knowledge_intake_audit_relation",
+        "kds_local_gbrain_schema_inventory_and_separate_migration_fixture_authorization_required",
+        "studio_gehua_authoritative_project_session_target_fixture_lifecycle_not_executed",
+        "kds_stage_b_read_admission_technical_verified_governance_blocked",
+        "studio_intake_phase1_authorized_phase2_blocked_by_mmc_prepare_retry_policy_review",
+        "studio_a6_external_daily_sync_commit_push_requires_governance_disposition",
+        "unexpected_external_kds_local_mirror_write_requires_review",
+        "mmc_a9_bounded_read_subset_technical_verified_global_policy_not_narrowed",
+        "mmc_delegation_and_human_confirmation_pending"
+      ],
+      "blocker_count": 13,
+      "updated_at": "2026-08-25T06:40:50+00:00",
+      "drift": [
+        {
+          "feature": "F-013",
+          "kind": "drift",
+          "field": "queue.status",
+          "truth": "evaluated",
+          "derived": "blocked"
+        }
+      ],
+      "derived_queue": {
+        "status": "blocked",
+        "current_role": "Evaluator",
+        "updated_at": "2026-08-25T06:40:50+00:00"
+      }
+    },
+    {
+      "id": "F-014",
+      "name": "industrial-meeting-to-project-control-loop",
+      "project": "gpcf",
+      "project_retired": false,
+      "priority": "P1",
+      "status": "active",
+      "owner": "GPCF",
+      "goal": "Establish the phased Industrial Green Chain meeting-to-project-control loop: KDS canonical evidence-linked candidates, MMC delegation, PMC/Plane authoritative project-ledger intake, human/object-owner approval without automatic business-state changes.",
+      "step": "evaluate",
+      "iteration": 27,
+      "workspace": "features/active/F-014-industrial-meeting-to-project-control-loop",
+      "acceptance_count": 4,
+      "scope_in_count": 3,
+      "evidence": {
+        "tests": "pass",
+        "build": "pass",
+        "api": "waived",
+        "screenshots": "pass",
+        "summary": "pass"
+      },
+      "gates": {
+        "functional_completeness": "pending",
+        "quality_baseline": "pending",
+        "multi_user_usability": "pending",
+        "task_flow_e2e_status": "pending",
+        "accessibility_status": "pending",
+        "evidence_overexposure_gate": "pending"
+      },
+      "status_ceiling": "partial",
+      "review_status": null,
+      "blockers": [
+        "B3 KDS/MMC 运行配置边界变更未授权（跨项目运行态配置，需属主执行）；真实试点已获批 B1+B2，执行回执待回填"
+      ],
+      "blocker_count": 1,
+      "updated_at": "2026-08-23T02:03:35+00:00",
+      "drift": [],
+      "derived_queue": {
+        "status": "evaluated",
+        "current_role": "Evaluator",
+        "updated_at": "2026-08-23T02:03:35+00:00"
+      }
+    },
+    {
+      "id": "F-015",
+      "name": "gcworld-organization-readonly-vertical-slice",
+      "project": "studio",
+      "project_retired": true,
+      "priority": "P0",
+      "status": "done",
+      "owner": "Studio",
+      "goal": "基于版本化KDS快照交付GCWORLD组织资产总览、资产详情、关系图谱和项目运行事项只读闭环",
+      "step": "commit",
+      "iteration": 36,
+      "workspace": "features/done/F-015-gcworld-organization-readonly-vertical-slice",
+      "acceptance_count": 28,
+      "scope_in_count": 28,
+      "evidence": {
+        "tests": "pass",
+        "build": "pass",
+        "api": "waived",
+        "screenshots": "pass",
+        "summary": "waived"
+      },
+      "gates": {
+        "functional_completeness": "pending",
+        "quality_baseline": "pending",
+        "multi_user_usability": "pending",
+        "task_flow_e2e_status": "pass",
+        "accessibility_status": "pending",
+        "evidence_overexposure_gate": "pass"
+      },
+      "status_ceiling": "partial",
+      "review_status": null,
+      "blockers": [],
+      "blocker_count": 0,
+      "updated_at": "2026-10-22T13:17:52+00:00",
+      "drift": [],
+      "derived_queue": {
+        "status": "closed",
+        "current_role": "Recorder",
+        "updated_at": "2026-10-22T13:17:52+00:00"
+      }
+    },
+    {
+      "id": "F-016",
+      "name": "industrial-green-chain-graph-readonly-pilot",
+      "project": "gpcf",
+      "project_retired": false,
+      "priority": "P1",
+      "status": "active",
+      "owner": "GPCF",
+      "goal": "以三链（宝马包装/葛化建设/黄梅枢纽）只读试点贯通『来源—主体—业务对象—SOP—执行—验收』声明链：确定性生成、逐条对账、缺口显式；不自动变更任何业务状态。",
+      "step": "commit",
+      "iteration": 1,
+      "workspace": "features/active/F-016-industrial-green-chain-graph-readonly-pilot",
+      "acceptance_count": 4,
+      "scope_in_count": 4,
+      "evidence": {
+        "tests": "pass",
+        "build": "pass",
+        "api": "waived",
+        "screenshots": "waived",
+        "summary": "pass"
+      },
+      "gates": {
+        "functional_completeness": "pending",
+        "quality_baseline": "pending",
+        "multi_user_usability": "pending",
+        "task_flow_e2e_status": "pending",
+        "accessibility_status": "pending",
+        "evidence_overexposure_gate": "pending"
+      },
+      "status_ceiling": "partial",
+      "review_status": null,
+      "blockers": [
+        "业务确认人、来源读取权限、正式 SOP 版本、试点验收人待落实（不虚构任命）",
+        "B2—B5 放行依赖 B1 完成与各自授权流程"
+      ],
+      "blocker_count": 2,
+      "updated_at": "2026-10-11T07:20:58+00:00",
+      "drift": [],
+      "derived_queue": {
+        "status": "commit",
+        "current_role": "Recorder",
+        "updated_at": "2026-10-11T07:20:58+00:00"
+      }
+    },
+    {
+      "id": "F-017",
+      "name": "cwme-city-world-model-engine",
+      "project": "spaceai",
+      "project_retired": false,
+      "priority": "P1",
+      "status": "active",
+      "owner": "GPCF",
+      "goal": "城市级世界模型引擎（CWME，WCM 世界城市模型的引擎实现）：以 SpaceAI+Cesium 为孪生基座、Neo4j 为图存储、Protégé/pySHACL 为本体工具链，先交付内核化最小闭环与城市/园区样板；与 WAS 语义底座及绿链图谱（WAM）协同，遵守 GCWORLD 四世界隔离与 WAME 治理边界。",
+      "step": "evaluate",
+      "iteration": 1,
+      "workspace": "features/active/F-017-cwme-city-world-model-engine",
+      "acceptance_count": 5,
+      "scope_in_count": 4,
+      "evidence": {
+        "tests": "pass",
+        "build": "pass",
+        "api": "waived",
+        "screenshots": "waived",
+        "summary": "pass"
+      },
+      "gates": {
+        "functional_completeness": "pending",
+        "quality_baseline": "pending",
+        "multi_user_usability": "pending",
+        "task_flow_e2e_status": "pending",
+        "accessibility_status": "pending",
+        "evidence_overexposure_gate": "pending"
+      },
+      "status_ceiling": "partial",
+      "review_status": null,
+      "blockers": [
+        "D1 命名已确认「万象引擎」；D6 首个演示对象＝光谷（2026-10-11 按建议；如调整请指出）",
+        "GPU 验证环境与光谷/黄梅数据场地接触待排期",
+        "B4-1—B4-5 首月件已完成（2026-10-11；见 evidence/summary.md）；申请一（域包登记）已提交，decision 待治理方"
+      ],
+      "blocker_count": 3,
+      "updated_at": "2026-10-21T23:24:11+00:00",
+      "drift": [],
+      "derived_queue": {
+        "status": "evaluated",
+        "current_role": "Evaluator",
+        "updated_at": "2026-10-21T23:24:11+00:00"
+      }
+    },
+    {
+      "id": "F-018",
+      "name": "gpcf-governance-console",
+      "project": "gpcf",
+      "project_retired": false,
+      "priority": "P1",
+      "status": "done",
+      "owner": "GPCF",
+      "goal": "GPCF 治理控制台：把治理资产（Feature 交付队列/三闭环/文档控制/门禁/证据/主方案台账）以控制台应用形式呈现，装配进 WAE 门面（母本第 6 项导航『GPCF 治理台』）。一期只读先行（零写操作）；数据面=GPCF tools/ 三导出物经 WAE dev 只读代理。规划：KDS 体系《GPCF治理控制台_全量规划_v0.1》（五域 16 工作包·八视图·覆盖自查=总体方案 §4 七职责全数在案）。",
+      "step": "commit",
+      "iteration": 6,
+      "workspace": "features/done/F-018-gpcf-governance-console",
+      "acceptance_count": 4,
+      "scope_in_count": 4,
+      "evidence": {
+        "tests": "pass",
+        "build": "pass",
+        "api": "waived",
+        "screenshots": "pass",
+        "summary": "pass"
+      },
+      "gates": {
+        "functional_completeness": "pass",
+        "quality_baseline": "pass",
+        "multi_user_usability": "pending",
+        "task_flow_e2e_status": "pass",
+        "accessibility_status": "pending",
+        "evidence_overexposure_gate": "pass"
+      },
+      "status_ceiling": "partial",
+      "review_status": null,
+      "blockers": [],
+      "blocker_count": 0,
+      "updated_at": "2026-10-14T02:21:05+00:00",
+      "drift": [],
+      "derived_queue": {
+        "status": "closed",
+        "current_role": "Recorder",
+        "updated_at": "2026-10-14T02:21:05+00:00"
+      }
+    },
+    {
+      "id": "F-019",
+      "name": "icp-industry-console",
+      "project": "icp",
+      "project_retired": false,
+      "priority": "P1",
+      "status": "done",
+      "owner": "agent-dev-01",
+      "goal": "ICP 产业控制台：把产业模型（24 节点/11 资源池/3 受控场景/宪法治理矩阵）以产业业务控制台呈现，装配进 WAE 门面（母本第 7 项『ICP 产业台』）。一期只读（5 GET·直连 :8091）；候选态如实标注。规划：KDS 体系《ICP产业控制台_全量规划_v0.1》。",
+      "step": "evaluate",
+      "iteration": 3,
+      "workspace": "features/done/F-019-icp-industry-console",
+      "acceptance_count": 4,
+      "scope_in_count": 4,
+      "evidence": {
+        "tests": "pass",
+        "build": "pass",
+        "api": "pass",
+        "screenshots": "pass",
+        "summary": "pass"
+      },
+      "gates": {
+        "functional_completeness": "pass",
+        "quality_baseline": "pass",
+        "multi_user_usability": "waived",
+        "task_flow_e2e_status": "pass",
+        "accessibility_status": "waived",
+        "evidence_overexposure_gate": "pass"
+      },
+      "status_ceiling": "partial",
+      "review_status": null,
+      "blockers": [],
+      "blocker_count": 0,
+      "updated_at": "2026-10-14T02:06:34+00:00",
+      "drift": [],
+      "derived_queue": {
+        "status": "closed",
+        "current_role": "Recorder",
+        "updated_at": "2026-10-14T02:06:34+00:00"
+      }
+    },
+    {
+      "id": "F-020",
+      "name": "aaas-service-console",
+      "project": "aaas",
+      "project_retired": false,
+      "priority": "P1",
+      "status": "done",
+      "owner": "agent-dev-01",
+      "goal": "AaaS 服务商业控制台：把服务包（ServicePackage）/计量/SLA/证据与退出条款/校验器运行面以服务化商业运营工作台呈现，装配进 WAE 门面（母本第 8 项『AaaS 服务台』）。一期只读（导出物模式）；商业候选态如实标注。规划：KDS 体系《AaaS服务商业控制台_全量规划_v0.1》。",
+      "step": "commit",
+      "iteration": 4,
+      "workspace": "features/done/F-020-aaas-service-console",
+      "acceptance_count": 4,
+      "scope_in_count": 4,
+      "evidence": {
+        "tests": "pass",
+        "build": "pass",
+        "api": "waived",
+        "screenshots": "pass",
+        "summary": "pass"
+      },
+      "gates": {
+        "functional_completeness": "",
+        "quality_baseline": "",
+        "multi_user_usability": "",
+        "task_flow_e2e_status": "",
+        "accessibility_status": "",
+        "evidence_overexposure_gate": ""
+      },
+      "status_ceiling": "",
+      "review_status": null,
+      "blockers": [],
+      "blocker_count": 0,
+      "updated_at": "2026-10-14T02:21:05+00:00",
+      "drift": [],
+      "derived_queue": {
+        "status": "closed",
+        "current_role": "Recorder",
+        "updated_at": "2026-10-14T02:21:05+00:00"
+      }
+    },
+    {
+      "id": "F-021",
+      "name": "world-project-onboarding",
+      "project": "world",
+      "project_retired": false,
+      "priority": "P2",
+      "status": "done",
+      "owner": "World",
+      "goal": "将 GlobalCloud World 登记为独立受管项目，建立本地 Git 与私有远端，验证纳管基线并保留既有门禁阻塞",
+      "step": "commit",
+      "iteration": 3,
+      "workspace": "features/done/F-021-world-project-onboarding",
+      "acceptance_count": 3,
+      "scope_in_count": 2,
+      "evidence": {
+        "tests": "pass",
+        "build": "pass",
+        "api": "waived",
+        "screenshots": "waived",
+        "summary": "pass"
+      },
+      "gates": {
+        "functional_completeness": "pass",
+        "quality_baseline": "pass",
+        "multi_user_usability": "waived",
+        "task_flow_e2e_status": "waived",
+        "accessibility_status": "waived",
+        "evidence_overexposure_gate": "pass"
+      },
+      "status_ceiling": "partial",
+      "review_status": null,
+      "blockers": [],
+      "blocker_count": 0,
+      "updated_at": "2026-10-23T09:29:44+00:00",
+      "drift": [],
+      "derived_queue": {
+        "status": "closed",
+        "current_role": "Recorder",
+        "updated_at": "2026-10-23T09:29:44+00:00"
+      }
+    },
+    {
+      "id": "F-022",
+      "name": "was-scenario-flow-extension",
+      "project": "was",
+      "project_retired": false,
+      "priority": "P2",
+      "status": "active",
+      "owner": "WAS",
+      "goal": "把「场景流 ScenarioFlow」（2026-10-16 老卢裁定）按 WAS 总体方案 v1.3.0 U16 版本化路径受控承接进 WAS 体系——候选扩展登记 → 治理复核 → 版本发布纳入；闭合 GCWORLD V1.0.1 与 WAS 契约层之间的未闭合项，不改变八流基线。",
+      "step": "plan",
+      "iteration": 1,
+      "workspace": "features/active/F-022-was-scenario-flow-extension",
+      "acceptance_count": 3,
+      "scope_in_count": 3,
+      "evidence": {
+        "tests": "pass",
+        "build": "pass",
+        "api": "waived",
+        "screenshots": "waived",
+        "summary": "pass"
+      },
+      "gates": {
+        "functional_completeness": "pass",
+        "quality_baseline": "pass",
+        "multi_user_usability": "waived",
+        "task_flow_e2e_status": "waived",
+        "accessibility_status": "waived",
+        "evidence_overexposure_gate": "pass"
+      },
+      "status_ceiling": "partial",
+      "review_status": null,
+      "blockers": [
+        "WAS 侧治理复核（承接方式与六项声明）待进行；请求件见 evidence/was-review-request-20261024.md"
+      ],
+      "blocker_count": 1,
+      "updated_at": "2026-10-16T03:47:28+00:00",
+      "drift": [
+        {
+          "feature": "F-022",
+          "kind": "mapping_gap",
+          "field": "queue.current_role",
+          "truth": "Planner",
+          "derived": "Dispatcher"
+        },
+        {
+          "feature": "F-022",
+          "kind": "mapping_gap",
+          "field": "queue.status",
+          "truth": "plan",
+          "derived": "queued"
+        }
+      ],
+      "derived_queue": {
+        "status": "queued",
+        "current_role": "Dispatcher",
+        "updated_at": "2026-10-16T03:47:28+00:00"
+      }
+    },
+    {
+      "id": "F-023",
+      "name": "was-flow-naming-migration",
+      "project": "was",
+      "project_retired": false,
+      "priority": "P2",
+      "status": "done",
+      "owner": "WAS",
+      "goal": "按《WAS 总体方案 v1.3.0》§19/§21 建立《WAS-V1.2 术语迁移表》并执行八流命名迁移——WAS 仓 okf 基线（was-flows.yaml／schemas／validator／examples）从 OKF P0 旧名切换至 V1.2 规范名；旧名进入兼容窗口（deprecated）；不含任何编造实例与状态提升。",
+      "step": "commit",
+      "iteration": 2,
+      "workspace": "features/done/F-023-was-flow-naming-migration",
+      "acceptance_count": 4,
+      "scope_in_count": 4,
+      "evidence": {
+        "tests": "pass",
+        "build": "pass",
+        "api": "waived",
+        "screenshots": "waived",
+        "summary": "pass"
+      },
+      "gates": {
+        "functional_completeness": "pass",
+        "quality_baseline": "pass",
+        "multi_user_usability": "pending",
+        "task_flow_e2e_status": "pass",
+        "accessibility_status": "waived",
+        "evidence_overexposure_gate": "pass"
+      },
+      "status_ceiling": "partial",
+      "review_status": null,
+      "blockers": [],
+      "blocker_count": 0,
+      "updated_at": "2026-10-24T07:17:29+00:00",
+      "drift": [],
+      "derived_queue": {
+        "status": "closed",
+        "current_role": "Recorder",
+        "updated_at": "2026-10-24T07:17:29+00:00"
+      }
+    },
+    {
+      "id": "F-024",
+      "name": "panorama-engineering-convergence",
+      "project": "spaceai",
+      "project_retired": false,
+      "priority": "P1",
+      "status": "done",
+      "owner": "agent-dev-01",
+      "goal": "全景态势工程收敛：PanoramaDeep 3351 行单文件、410 函数、0 专项测试；按域拆分 composable 并建立行为基线测试，界面功能零变化；交付结构须支撑后续无 GPU 环境性能优化",
+      "step": "commit",
+      "iteration": 3,
+      "workspace": "features/done/F-024-panorama-engineering-convergence",
+      "acceptance_count": 6,
+      "scope_in_count": 5,
+      "evidence": {
+        "tests": "pass",
+        "build": "pass",
+        "api": "pass",
+        "screenshots": "waived",
+        "summary": "pass"
+      },
+      "gates": {
+        "functional_completeness": "pass",
+        "quality_baseline": "pass",
+        "multi_user_usability": "pending",
+        "task_flow_e2e_status": "pass",
+        "accessibility_status": "waived",
+        "evidence_overexposure_gate": "pass"
+      },
+      "status_ceiling": "partial",
+      "review_status": null,
+      "blockers": [],
+      "blocker_count": 0,
+      "updated_at": "2026-10-22T14:52:26+00:00",
+      "drift": [],
+      "derived_queue": {
+        "status": "closed",
+        "current_role": "Recorder",
+        "updated_at": "2026-10-22T14:52:26+00:00"
+      }
+    },
+    {
+      "id": "F-025",
+      "name": "project-group-arch-iteration",
+      "project": "gpcf",
+      "project_retired": false,
+      "priority": "P0",
+      "status": "active",
+      "owner": "agent-dev-01",
+      "goal": "总体架构迭代排期执行（老卢 2026-10-17 批准）：P0 落实 O1 WAME 引擎 E1 分期规划（资产主账+模型注册最小集，World 线 A 共建）与 O7 CWME 归位逻辑层口径统一传导；O8 图面重叠修复已完成。P1/P2 项由《GlobalCloud项目群总体架构迭代分析》v1.0 §3 排期表跟踪。",
+      "step": "plan",
+      "iteration": 0,
+      "workspace": "features/active/F-025-project-group-arch-iteration",
+      "acceptance_count": 4,
+      "scope_in_count": 3,
+      "evidence": {
+        "tests": "pending",
+        "build": "pending",
+        "api": "pending",
+        "screenshots": "pending",
+        "summary": "pending"
+      },
+      "gates": {
+        "functional_completeness": "pending",
+        "quality_baseline": "pending",
+        "multi_user_usability": "waived",
+        "task_flow_e2e_status": "pending",
+        "accessibility_status": "waived",
+        "evidence_overexposure_gate": "pending"
+      },
+      "status_ceiling": "partial",
+      "review_status": null,
+      "blockers": [
+        "架构迭代分析与分期规划尚需逐项复核；本 Feature 不代表真实开发完成"
+      ],
+      "blocker_count": 1,
+      "updated_at": "2026-10-17T08:55:27+00:00",
+      "drift": [
+        {
+          "feature": "F-025",
+          "kind": "mapping_gap",
+          "field": "queue.current_role",
+          "truth": "Planner",
+          "derived": "Dispatcher"
+        },
+        {
+          "feature": "F-025",
+          "kind": "mapping_gap",
+          "field": "queue.status",
+          "truth": "plan",
+          "derived": "queued"
+        }
+      ],
+      "derived_queue": {
+        "status": "queued",
+        "current_role": "Dispatcher",
+        "updated_at": "2026-10-17T08:55:27+00:00"
+      }
+    },
+    {
+      "id": "F-026",
+      "name": "gcmem-governance-onboarding",
+      "project": "gcmem",
+      "project_retired": false,
+      "priority": "P2",
+      "status": "done",
+      "owner": "GCMEM",
+      "goal": "核验 GCMEM 独立私有仓并补齐项目群 OpenSpec、技能链与 Harness 纳管证据",
+      "step": "commit",
+      "iteration": 5,
+      "workspace": "features/done/F-026-gcmem-governance-onboarding",
+      "acceptance_count": 4,
+      "scope_in_count": 3,
+      "evidence": {
+        "tests": "pass",
+        "build": "pass",
+        "api": "waived",
+        "screenshots": "waived",
+        "summary": "pass"
+      },
+      "gates": {
+        "functional_completeness": "pass",
+        "quality_baseline": "pass",
+        "multi_user_usability": "waived",
+        "task_flow_e2e_status": "pending",
+        "accessibility_status": "waived",
+        "evidence_overexposure_gate": "pass"
+      },
+      "status_ceiling": "partial",
+      "review_status": null,
+      "blockers": [],
+      "blocker_count": 0,
+      "updated_at": "2026-10-22T14:52:26+00:00",
+      "drift": [],
+      "derived_queue": {
+        "status": "closed",
+        "current_role": "Recorder",
+        "updated_at": "2026-10-22T14:52:26+00:00"
+      }
+    },
+    {
+      "id": "F-027",
+      "name": "governance-remediation",
+      "project": "gpcf",
+      "project_retired": false,
+      "priority": "P0",
+      "status": "done",
+      "owner": "GPCF",
+      "goal": "修复 GPCF 项目范围、文档生成器、门禁和 Feature 证据闭环，并保留未获人工验收的状态边界",
+      "step": "commit",
+      "iteration": 5,
+      "workspace": "features/done/F-027-governance-remediation",
+      "acceptance_count": 4,
+      "scope_in_count": 4,
+      "evidence": {
+        "tests": "pass",
+        "build": "pass",
+        "api": "waived",
+        "screenshots": "waived",
+        "summary": "pass"
+      },
+      "gates": {
+        "functional_completeness": "pending",
+        "quality_baseline": "pending",
+        "multi_user_usability": "waived",
+        "task_flow_e2e_status": "pending",
+        "accessibility_status": "waived",
+        "evidence_overexposure_gate": "pending"
+      },
+      "status_ceiling": "partial",
+      "review_status": null,
+      "blockers": [],
+      "blocker_count": 0,
+      "updated_at": "2026-10-22T14:52:26+00:00",
+      "drift": [],
+      "derived_queue": {
+        "status": "closed",
+        "current_role": "Recorder",
+        "updated_at": "2026-10-22T14:52:26+00:00"
+      }
+    },
+    {
+      "id": "F-028",
+      "name": "plane-gpcf-feature-evidence-integration",
+      "project": "project",
+      "project_retired": false,
+      "priority": "P1",
+      "status": "done",
+      "owner": "GPCF",
+      "goal": "建立 GlobalCloud Project 独立项目，并以 Plane 社区版只读对接 GPCF Feature 与 Evidence 状态",
+      "step": "commit",
+      "iteration": 4,
+      "workspace": "features/done/F-028-plane-gpcf-feature-evidence-integration",
+      "acceptance_count": 4,
+      "scope_in_count": 3,
+      "evidence": {
+        "tests": "pass",
+        "build": "pass",
+        "api": "pass",
+        "screenshots": "waived",
+        "summary": "pass"
+      },
+      "gates": {
+        "functional_completeness": "pending",
+        "quality_baseline": "pending",
+        "multi_user_usability": "waived",
+        "task_flow_e2e_status": "pending",
+        "accessibility_status": "waived",
+        "evidence_overexposure_gate": "pending"
+      },
+      "status_ceiling": "partial",
+      "review_status": null,
+      "blockers": [],
+      "blocker_count": 0,
+      "updated_at": "2026-10-18T03:23:13+00:00",
+      "drift": [],
+      "derived_queue": {
+        "status": "closed",
+        "current_role": "Recorder",
+        "updated_at": "2026-10-18T03:23:13+00:00"
+      }
+    },
+    {
+      "id": "F-029",
+      "name": "hermes-ai-runtime-admission",
+      "project": "gpcf",
+      "project_retired": false,
+      "priority": "P0",
+      "status": "active",
+      "owner": "GPCF",
+      "goal": "验证 Hermes 项目群 AI 底座准入，定位技能接口与对外 Web UI 故障，建立 DSH 交接和试点前置证据",
+      "step": "plan",
+      "iteration": 1,
+      "workspace": "features/active/F-029-hermes-ai-runtime-admission",
+      "acceptance_count": 4,
+      "scope_in_count": 3,
+      "evidence": {
+        "tests": "pending",
+        "build": "pending",
+        "api": "pending",
+        "screenshots": "pending",
+        "summary": "pending"
+      },
+      "gates": {
+        "functional_completeness": "pending",
+        "quality_baseline": "pending",
+        "multi_user_usability": "waived",
+        "task_flow_e2e_status": "pending",
+        "accessibility_status": "waived",
+        "evidence_overexposure_gate": "pending"
+      },
+      "status_ceiling": "partial",
+      "review_status": null,
+      "blockers": [
+        "Hermes /v1/skills 已修复；同一完整接口测试文件在独立临时克隆中 114 项通过，原安装路径的 16 项失败已定位为测试隔离守卫冲突；跨模块完整套件未运行",
+        "对外 Hermes Web UI 返回 502，本机 8648 未监听；恢复前须核实访问控制，恢复动作待授权",
+        "DSH headless 已完成限定任务包及隔离测试补充材料的只读复核；未执行完整源码审查或完整 Hermes 测试套件",
+        "主值守为用户本人；用户确认暂无替补，告警通道未指定，试点项目恢复责任人与权限隔离证据仍待核实"
+      ],
+      "blocker_count": 4,
+      "updated_at": "2026-10-18T07:32:44+00:00",
+      "drift": [],
+      "derived_queue": {
+        "status": "plan",
+        "current_role": "Planner",
+        "updated_at": "2026-10-18T07:32:44+00:00"
+      }
+    },
+    {
+      "id": "F-030",
+      "name": "pdc-project-group-onboarding",
+      "project": "pdc",
+      "project_retired": false,
+      "priority": "P1",
+      "status": "done",
+      "owner": "GPCF",
+      "goal": "将 GlobalCloud PDC 登记到项目群治理清单，核实 Git 私有远端并保留验收与发布边界",
+      "step": "commit",
+      "iteration": 4,
+      "workspace": "features/done/F-030-pdc-project-group-onboarding",
+      "acceptance_count": 4,
+      "scope_in_count": 4,
+      "evidence": {
+        "tests": "pass",
+        "build": "pass",
+        "api": "waived",
+        "screenshots": "waived",
+        "summary": "pass"
+      },
+      "gates": {
+        "functional_completeness": "pass",
+        "quality_baseline": "pass",
+        "multi_user_usability": "waived",
+        "task_flow_e2e_status": "waived",
+        "accessibility_status": "waived",
+        "evidence_overexposure_gate": "pass"
+      },
+      "status_ceiling": "partial",
+      "review_status": null,
+      "blockers": [],
+      "blocker_count": 0,
+      "updated_at": "2026-10-22T15:06:49+00:00",
+      "drift": [],
+      "derived_queue": {
+        "status": "closed",
+        "current_role": "Recorder",
+        "updated_at": "2026-10-22T15:06:49+00:00"
+      }
+    },
+    {
+      "id": "F-031",
+      "name": "xgd-dot-alignment",
+      "project": "xgd",
+      "project_retired": false,
+      "priority": "P1",
+      "status": "done",
+      "owner": "GPCF",
+      "goal": "对齐 ChatGPT dots 常驻智能体能力模型，先以候选 Feature 落地 XGD dot 档案、常驻职责、Activity 与分层停止 P0 核心闭环，后续阶段保留 P1-P3 路线",
+      "step": "commit",
+      "iteration": 2,
+      "workspace": "features/done/F-031-xgd-dot-alignment",
+      "acceptance_count": 6,
+      "scope_in_count": 6,
+      "evidence": {
+        "tests": "pass",
+        "build": "pass",
+        "api": "pass",
+        "screenshots": "pass",
+        "summary": "pass"
+      },
+      "gates": {
+        "functional_completeness": "pending",
+        "quality_baseline": "pending",
+        "multi_user_usability": "waived",
+        "task_flow_e2e_status": "pending",
+        "accessibility_status": "waived",
+        "evidence_overexposure_gate": "pending"
+      },
+      "status_ceiling": "partial",
+      "review_status": null,
+      "blockers": [],
+      "blocker_count": 0,
+      "updated_at": "2026-10-22T13:06:10+00:00",
+      "drift": [],
+      "derived_queue": {
+        "status": "closed",
+        "current_role": "Recorder",
+        "updated_at": "2026-10-22T13:06:10+00:00"
+      }
+    },
+    {
+      "id": "F-032",
+      "name": "pqc-external-service-via-pvaai",
+      "project": "pqc",
+      "project_retired": false,
+      "priority": "P2",
+      "status": "active",
+      "owner": "agent-dev-01",
+      "goal": "设计并落地 PQC 对外询价、测算、订单服务能力：经 PVA PVAAI 对话与应用模块承载，数据在 PQC 正常执行；完成设计评审、契约冻结与分阶段试点后，按门禁另行确认发布。",
+      "step": "plan",
+      "iteration": 0,
+      "workspace": "features/active/F-032-pqc-external-service-via-pvaai",
+      "acceptance_count": 4,
+      "scope_in_count": 3,
+      "evidence": {
+        "tests": "pending",
+        "build": "pending",
+        "api": "pending",
+        "screenshots": "pending",
+        "summary": "pending"
+      },
+      "gates": {
+        "functional_completeness": "pending",
+        "quality_baseline": "pending",
+        "multi_user_usability": "waived",
+        "task_flow_e2e_status": "pending",
+        "accessibility_status": "waived",
+        "evidence_overexposure_gate": "pending"
+      },
+      "status_ceiling": "partial",
+      "review_status": null,
+      "blockers": [],
+      "blocker_count": 0,
+      "updated_at": "2026-10-20T04:03:58+00:00",
+      "drift": [
+        {
+          "feature": "F-032",
+          "kind": "mapping_gap",
+          "field": "queue.current_role",
+          "truth": "Planner",
+          "derived": "Dispatcher"
+        },
+        {
+          "feature": "F-032",
+          "kind": "mapping_gap",
+          "field": "queue.status",
+          "truth": "plan",
+          "derived": "queued"
+        }
+      ],
+      "derived_queue": {
+        "status": "queued",
+        "current_role": "Dispatcher",
+        "updated_at": "2026-10-20T04:03:58+00:00"
+      }
+    },
+    {
+      "id": "F-033",
+      "name": "r1-ecosystem-integration",
+      "project": "xiaoc",
+      "project_retired": false,
+      "priority": "P0",
+      "status": "active",
+      "owner": "lead",
+      "goal": "R1 生态接入与治理联调：WAME 受理/裁定/发布、XWAIL 打包验包、AaaS 复核、消费方任务包与就绪检查、GPCF 回传",
+      "step": "implement",
+      "iteration": 1,
+      "workspace": "features/active/F-033-r1-ecosystem-integration",
+      "acceptance_count": 5,
+      "scope_in_count": 5,
+      "evidence": {
+        "tests": "pass",
+        "build": "pass",
+        "api": "waived",
+        "screenshots": "waived",
+        "summary": "pending"
+      },
+      "gates": {
+        "functional_completeness": "pending",
+        "quality_baseline": "pending",
+        "multi_user_usability": "waived",
+        "task_flow_e2e_status": "pending",
+        "accessibility_status": "waived",
+        "evidence_overexposure_gate": "pending"
+      },
+      "status_ceiling": "partial",
+      "review_status": null,
+      "blockers": [
+        "WAME 正式治理裁定/发布（本轮为 PoC governor，scope 限定联调）",
+        "消费方实际联调（XiaoG 会话验证、PKC 浏览器联调、XGD/飞书 工具范围）",
+        "GPCF 状态复核（本 feature 处于 evidence 步，未 done）"
+      ],
+      "blocker_count": 3,
+      "updated_at": "2026-10-21T05:00:33+00:00",
+      "drift": [
+        {
+          "feature": "F-033",
+          "kind": "drift",
+          "field": "queue.current_role",
+          "truth": "Builder",
+          "derived": "Dispatcher"
+        },
+        {
+          "feature": "F-033",
+          "kind": "drift",
+          "field": "queue.status",
+          "truth": "implement",
+          "derived": "queued"
+        }
+      ],
+      "derived_queue": {
+        "status": "queued",
+        "current_role": "Dispatcher",
+        "updated_at": "2026-10-21T05:00:33+00:00"
+      }
+    },
+    {
+      "id": "F-034",
+      "name": "wae-p0-shell-and-role-convergence",
+      "project": "wae",
+      "project_retired": false,
+      "priority": "P1",
+      "status": "ready_for_review",
+      "owner": "agent-dev-01",
+      "goal": "落地 WAE P0 四项（外壳解耦/令牌收口/侧栏统一/状态语义层）并修复 AppsShell 导航角色收敛缺陷（generated.ts 缺 requires），为 PKC/Brain/PVAOS 首批接入提供可回放载体；不声明项目状态提升。",
+      "step": "evaluate",
+      "iteration": 2,
+      "workspace": "features/active/F-034-wae-p0-shell-and-role-convergence",
+      "acceptance_count": 4,
+      "scope_in_count": 6,
+      "evidence": {
+        "tests": "pass",
+        "build": "pass",
+        "api": "waived",
+        "screenshots": "pass",
+        "summary": "pass"
+      },
+      "gates": {
+        "functional_completeness": "pass",
+        "quality_baseline": "pass",
+        "multi_user_usability": "waived",
+        "task_flow_e2e_status": "pass",
+        "accessibility_status": "waived",
+        "evidence_overexposure_gate": "pass"
+      },
+      "status_ceiling": "partial",
+      "review_status": null,
+      "blockers": [
+        "状态提升授权：老卢 2026-10-25 问答确认提升至 ready_for_review（决策模型 raise_now 0.622）；仅此一档，更高状态须另行人工确认。",
+        "验收条 5 部分：PKC 首个接入演练的协议/检查表/状态机（12/12）/嵌入 E2E（13/13）已完成，但真实跨域嵌入待生产域名与 TLS（PKC/Brain/PVAOS 的 pkc/brain/pva.csydsc.com 与 frame-ancestors 托管头，运维未落）。",
+        "三条线 B5 视觉对照（≥3 页、接入前后）未做：PKC 仅 2 页截图（无前后对照）、Brain/PVAOS 无截图。",
+        "WAE 侧 Brain/PVAOS 候选入口页（A 表 A1）未落；批次 2/3 的 A 表其余项已就绪。",
+        "PVA 仓既有问题（属 PVA 属主）：button.tsx 1 处既有类型错误；pnpm-lock.yaml 与 manifest 三处漂移（hono/react-router/react-router-dom）。"
+      ],
+      "blocker_count": 5,
+      "updated_at": "2026-10-25T06:35:00+00:00",
+      "drift": [],
+      "derived_queue": {
+        "status": "evaluated",
+        "current_role": "Evaluator",
+        "updated_at": "2026-10-22T14:10:00+00:00"
+      }
+    },
+    {
+      "id": "F-035",
+      "name": "wame-sidebar-unification",
+      "project": "wame",
+      "project_retired": false,
+      "priority": "P1",
+      "status": "done",
+      "owner": "agent-dev-01",
+      "goal": "把 WAME 三套侧栏（layout/GlobalCloudSidebar 49 行、components/Sidebar 114 行、FunctionPanel 1557 行）归并到 @globalcloud/app-shell 唯一侧栏；跨仓改动由 WAME 属主执行，不声明状态提升。",
+      "step": "commit",
+      "iteration": 2,
+      "workspace": "features/done/F-035-wame-sidebar-unification",
+      "acceptance_count": 4,
+      "scope_in_count": 4,
+      "evidence": {
+        "tests": "pass",
+        "build": "pass",
+        "api": "waived",
+        "screenshots": "waived",
+        "summary": "pass"
+      },
+      "gates": {
+        "functional_completeness": "pass",
+        "quality_baseline": "pass",
+        "multi_user_usability": "waived",
+        "task_flow_e2e_status": "pass",
+        "accessibility_status": "waived",
+        "evidence_overexposure_gate": "pass"
+      },
+      "status_ceiling": "partial",
+      "review_status": null,
+      "blockers": [],
+      "blocker_count": 0,
+      "updated_at": "2026-10-23T01:19:32+00:00",
+      "drift": [],
+      "derived_queue": {
+        "status": "closed",
+        "current_role": "Recorder",
+        "updated_at": "2026-10-23T01:19:32+00:00"
+      }
+    },
+    {
+      "id": "F-036",
+      "name": "wae-pkc-intake-integration",
+      "project": "wae",
+      "project_retired": false,
+      "priority": "P1",
+      "status": "active",
+      "owner": "agent-dev-01",
+      "goal": "完成 PKC 在 WAE 的注册与首批接入演练：placement/manifests/menus 注册、UI gate 六件套、令牌与状态语义接入、回滚；由 WAE/PKC 属主执行，不声明已接入。",
+      "step": "evaluate",
+      "iteration": 1,
+      "workspace": "features/active/F-036-wae-pkc-intake-integration",
+      "acceptance_count": 5,
+      "scope_in_count": 5,
+      "evidence": {
+        "tests": "pass",
+        "build": "pass",
+        "api": "waived",
+        "screenshots": "pass",
+        "summary": "pass"
+      },
+      "gates": {
+        "functional_completeness": "pass",
+        "quality_baseline": "pass",
+        "multi_user_usability": "pass",
+        "task_flow_e2e_status": "pass",
+        "accessibility_status": "pass",
+        "evidence_overexposure_gate": "pass"
+      },
+      "status_ceiling": "partial",
+      "review_status": "conditional",
+      "blockers": [
+        "PKC P4/P5 已最小接入：gc 令牌快照 + theme 映射（C6 0→117）、7 值状态字典 + StatusBadge（C5 存在）；残留=非真实包消费、部分页面未迁移、C1/C4/C10 既有项",
+        "PKC 真实运行时受控嵌入：dev bypass 与登录态（system-admin + 隔离 IdP）均已验证点击后 iframe 加载 PKC Home（evidence/embed-20261023、embed-auth-20261023）；WAE 修复已 push（d9d9ee9/3247e53）；生产构建/CSP/SSO/403 未验证",
+        "正式评审已做（evidence/formal-review-20261024.md）：conditional，不批准关闭；WAE 生产构建已验证（prod-build-20261024）；CSP 已验证；部署/正式 SSO/属主签字未满足；401/403 双端消息链已实现（见 pkc-embed-bridge-20261024）"
+      ],
+      "blocker_count": 3,
+      "updated_at": "2026-10-22T20:50:00+00:00",
+      "drift": [
+        {
+          "feature": "F-036",
+          "kind": "drift",
+          "field": "queue.current_role",
+          "truth": "Evaluator",
+          "derived": "Dispatcher"
+        },
+        {
+          "feature": "F-036",
+          "kind": "drift",
+          "field": "queue.status",
+          "truth": "evaluated",
+          "derived": "queued"
+        }
+      ],
+      "derived_queue": {
+        "status": "queued",
+        "current_role": "Dispatcher",
+        "updated_at": "2026-10-22T20:50:00+00:00"
+      }
+    },
+    {
+      "id": "F-037",
+      "name": "map-3d-l4-precision-model",
+      "project": "spaceai",
+      "project_retired": false,
+      "priority": "P1",
+      "status": "active",
+      "owner": "agent-dev-01",
+      "goal": "三维地图 L4 精模升级：三园区优先、真实/占位资产三处标注、白盒模型可切换；资产规范/清单/BFF、引擎能力、精度模型与切换回落、接入工具链、一键验收、SIMULATED 演练、CI 门禁全部落地。真实 L4 资产待授权接入；仅本地开发，不 push 不部署。",
+      "step": "commit",
+      "iteration": 1,
+      "workspace": "features/active/F-037-map-3d-l4-precision-model",
+      "acceptance_count": 7,
+      "scope_in_count": 9,
+      "evidence": {
+        "tests": "pass",
+        "build": "pass",
+        "api": "pass",
+        "screenshots": "waived",
+        "summary": "pass"
+      },
+      "gates": {
+        "functional_completeness": "pass",
+        "quality_baseline": "pass",
+        "multi_user_usability": "pending",
+        "task_flow_e2e_status": "pass",
+        "accessibility_status": "waived",
+        "evidence_overexposure_gate": "pass"
+      },
+      "status_ceiling": "partial",
+      "review_status": null,
+      "blockers": [
+        "真实 L4 资产未接入：采购、自采、合规外部数据三条路径均未授权（2026-10-22 决定暂停自采）；真实几何精度需供应商质检或实测后方可验收"
+      ],
+      "blocker_count": 1,
+      "updated_at": "2026-10-22T11:30:00+00:00",
+      "drift": [
+        {
+          "feature": "F-037",
+          "kind": "drift",
+          "field": "queue.current_role",
+          "truth": "Recorder",
+          "derived": "Dispatcher"
+        },
+        {
+          "feature": "F-037",
+          "kind": "drift",
+          "field": "queue.status",
+          "truth": "commit",
+          "derived": "queued"
+        }
+      ],
+      "derived_queue": {
+        "status": "queued",
+        "current_role": "Dispatcher",
+        "updated_at": "2026-10-22T11:30:00+00:00"
+      }
+    },
+    {
+      "id": "F-038",
+      "name": "panorama-operation-normalization",
+      "project": "spaceai",
+      "project_retired": false,
+      "priority": "P1",
+      "status": "active",
+      "owner": "agent-dev-01",
+      "goal": "全景态势所有操作流程规范化、合理化并落地：143 项操作 / 106 条问题审计 → N1–N12 规范 → B0–B5 批次改造；决策模型辅助 23 项判定、Q1–Q8 授权问答；执行到 B5e，B5 剩余五大块、i18n 与人工验收留待下一轮。",
+      "step": "commit",
+      "iteration": 1,
+      "workspace": "features/active/F-038-panorama-operation-normalization",
+      "acceptance_count": 6,
+      "scope_in_count": 9,
+      "evidence": {
+        "tests": "pass",
+        "build": "pass",
+        "api": "pass",
+        "screenshots": "waived",
+        "summary": "pass"
+      },
+      "gates": {
+        "functional_completeness": "pass",
+        "quality_baseline": "pass",
+        "multi_user_usability": "pending",
+        "task_flow_e2e_status": "pass",
+        "accessibility_status": "pass",
+        "evidence_overexposure_gate": "pass"
+      },
+      "status_ceiling": "partial",
+      "review_status": null,
+      "blockers": [
+        "人工验收：派单失败保留、CWME 回投失败/30s 幂等已由 18 个自动化测试覆盖（见 evidence/acceptance-coverage-20261024.md）；仍待 SpaceAI 属主真实浏览器视觉确认与签字",
+        "工作区仍有并行会话 WIP（apps/desktop、pnpm-workspace.yaml 等），本 Feature 未纳入"
+      ],
+      "blocker_count": 2,
+      "updated_at": "2026-10-22T11:30:00+00:00",
+      "drift": [
+        {
+          "feature": "F-038",
+          "kind": "drift",
+          "field": "queue.current_role",
+          "truth": "Recorder",
+          "derived": "Dispatcher"
+        },
+        {
+          "feature": "F-038",
+          "kind": "drift",
+          "field": "queue.status",
+          "truth": "commit",
+          "derived": "queued"
+        }
+      ],
+      "derived_queue": {
+        "status": "queued",
+        "current_role": "Dispatcher",
+        "updated_at": "2026-10-22T11:30:00+00:00"
+      }
+    }
+  ],
+  "count": 38
+}

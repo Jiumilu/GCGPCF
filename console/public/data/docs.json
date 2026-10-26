@@ -1,0 +1,23 @@
+{
+  "repo_markdown": 3815,
+  "registered_docs": 3462,
+  "health": {
+    "generated_at": "2026-10-18T02:13:02.340691+00:00",
+    "loop_gate": "pass",
+    "repo_markdown": "3543",
+    "metadata_missing": "0",
+    "readme_missing_dirs": "0",
+    "review_overdue_90d": "2824",
+    "status_ceiling": "partial",
+    "status_counts": {
+      "archive": 97,
+      "controlled": 3134,
+      "draft": 150,
+      "okf_derived": 99
+    }
+  },
+  "sources": [
+    "09-status/globalcloud-document-control-register.md",
+    "09-status/globalcloud-document-health-report.md"
+  ]
+}
