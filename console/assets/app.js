@@ -11,6 +11,7 @@ import {
   filterFeatures,
   gatesPage,
   home,
+  loopsPage,
   projectsPage,
 } from "./views.js";
 
@@ -30,6 +31,7 @@ function parseHash() {
   const match = hash.match(/^\/features(?:\/(F-\d{3}))?$/);
   if (match) return { name: "features", id: match[1] || null };
   if (hash === "/projects") return { name: "projects", id: null };
+  if (hash === "/loops") return { name: "loops", id: null };
   if (hash === "/gates") return { name: "gates", id: null };
   if (hash === "/docs") return { name: "docs", id: null };
   return { name: "home", id: null };
@@ -164,6 +166,7 @@ function paletteEntries() {
     { label: "主页", hint: "总览", run: () => { location.hash = "#/"; } },
     { label: "议题", hint: "features", run: () => { location.hash = "#/features"; } },
     { label: "项目", hint: "projects", run: () => { location.hash = "#/projects"; } },
+    { label: "循环", hint: "loops", run: () => { location.hash = "#/loops"; } },
     { label: "门禁", hint: "gates", run: () => { location.hash = "#/gates"; } },
     { label: "台账", hint: "docs", run: () => { location.hash = "#/docs"; } },
     { label: "切换主题", hint: "theme", run: toggleTheme },
@@ -266,6 +269,8 @@ function renderRoute() {
     paintFeatures();
   } else if (route.name === "projects") {
     app.innerHTML = projectsPage(state.data);
+  } else if (route.name === "loops") {
+    app.innerHTML = loopsPage(state.data);
   } else if (route.name === "gates") {
     app.innerHTML = gatesPage(state.data);
     bindGates();
@@ -277,7 +282,7 @@ function renderRoute() {
     link.setAttribute("aria-current", link.dataset.route === route.name ? "page" : "false");
   });
 
-  const titles = { home: "治理控制仓", features: "议题", projects: "项目", gates: "门禁", docs: "台账" };
+  const titles = { home: "治理控制仓", features: "议题", projects: "项目", loops: "循环", gates: "门禁", docs: "台账" };
   document.title = `${titles[route.name]} · GPCF`;
   window.scrollTo({ top: 0, behavior: "auto" });
   if (route.name === "features" && focusList) {
@@ -314,7 +319,7 @@ function onKeydown(event) {
   }
   if (isTyping(event.target) || event.metaKey || event.ctrlKey || event.altKey) return;
 
-  if (["g", "h", "f", "p", "d"].includes(key)) {
+  if (["g", "h", "f", "p", "l", "d"].includes(key)) {
     sequence = (sequence + key).slice(-2);
     if (sequence === "gh") {
       location.hash = "#/";
@@ -325,6 +330,9 @@ function onKeydown(event) {
       sequence = "";
     } else if (sequence === "gp") {
       location.hash = "#/projects";
+      sequence = "";
+    } else if (sequence === "gl") {
+      location.hash = "#/loops";
       sequence = "";
     } else if (sequence === "gg") {
       location.hash = "#/gates";
@@ -341,7 +349,7 @@ function onKeydown(event) {
 /* ---------- boot ---------- */
 
 async function loadData() {
-  const names = ["features", "projects", "gates", "docs", "meta"];
+  const names = ["features", "projects", "gates", "docs", "loops", "meta"];
   const payloads = await Promise.all(
     names.map(async (name) => {
       const response = await fetch(`${DATA}/${name}.json`, { cache: "no-store" });

@@ -91,7 +91,7 @@ def test_export_is_deterministic_except_timestamp(tmp_path):
     module.export(first)
     module.export(second)
 
-    names = ["features.json", "projects.json", "gates.json", "docs.json", "meta.json"]
+    names = ["features.json", "projects.json", "gates.json", "docs.json", "loops.json", "meta.json"]
     for name in names:
         assert (first / name).is_file(), name
         left = json.loads((first / name).read_text(encoding="utf-8"))

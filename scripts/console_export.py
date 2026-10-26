@@ -32,6 +32,7 @@ HEALTH_REPORT = ROOT / "09-status/globalcloud-document-health-report.md"
 DOC_REGISTER = ROOT / "09-status/globalcloud-document-control-register.md"
 TRUTH_SOURCE_FILE = ROOT / "runtime/status-source-of-truth.yaml"
 ROADMAP_FILE = ROOT / "projects/gpcf/ROADMAP.md"
+LOGS_DIR = ROOT / "runtime/logs"
 FEATURE_ID_RE = re.compile(r"^(F-\d{3})")
 SKIP_PARTS = {".git", ".kds", ".zcode", "node_modules", "dist", "tmp", ".pytest_cache", "__pycache__"}
 
@@ -394,6 +395,45 @@ def parse_roadmap() -> dict[str, Any]:
     return {"source": rel(ROADMAP_FILE), "items": sorted(items, key=lambda item: item["phase"])}
 
 
+def load_loops() -> dict[str, Any]:
+    """Role transitions recorded by gpcf_dispatch.py in runtime/logs/F-*.jsonl."""
+    items: list[dict[str, Any]] = []
+    if LOGS_DIR.is_dir():
+        for path in sorted(LOGS_DIR.glob("F-*.jsonl")):
+            fallback = path.stem
+            for line in path.read_text(encoding="utf-8").splitlines():
+                line = line.strip()
+                if not line:
+                    continue
+                try:
+                    row = json.loads(line)
+                except json.JSONDecodeError:
+                    continue
+                if not isinstance(row, dict):
+                    continue
+                items.append(
+                    {
+                        "feature": str(row.get("feature_id") or fallback),
+                        "role": str(row.get("role") or ""),
+                        "status": str(row.get("status") or ""),
+                        "at": row.get("timestamp"),
+                        "input": str(row.get("input") or ""),
+                        "output": str(row.get("output") or ""),
+                        "evidence": str(row.get("evidence") or ""),
+                    }
+                )
+    items.sort(key=lambda item: (str(item["at"] or ""), item["feature"], item["role"]))
+    by_role: dict[str, int] = {}
+    for item in items:
+        by_role[item["role"]] = by_role.get(item["role"], 0) + 1
+    return {
+        "count": len(items),
+        "features": len({item["feature"] for item in items}),
+        "by_role": dict(sorted(by_role.items())),
+        "items": items,
+    }
+
+
 def build_gates(health: dict[str, Any]) -> dict[str, Any]:
     items = []
     for gate in GATES:
@@ -521,11 +561,12 @@ def export(out_dir: Path) -> dict[str, Any]:
     write_json(out_dir / "projects.json", project_payload)
     write_json(out_dir / "gates.json", build_gates(health))
     write_json(out_dir / "docs.json", build_docs(health))
+    write_json(out_dir / "loops.json", load_loops())
     write_json(out_dir / "meta.json", meta)
     return meta
 
 
-FILES = ("features.json", "projects.json", "gates.json", "docs.json", "meta.json")
+FILES = ("features.json", "projects.json", "gates.json", "docs.json", "loops.json", "meta.json")
 
 
 def compare_snapshots(fresh_dir: Path, current_dir: Path) -> list[dict[str, str]]:

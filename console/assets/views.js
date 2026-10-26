@@ -423,4 +423,48 @@ export function projectsPage(data) {
   `;
 }
 
+export function loopsPage(data) {
+  const loops = data.loops || { count: 0, features: 0, by_role: {}, items: [] };
+  const items = (loops.items || []).slice().reverse();
+  const roles = Object.entries(loops.by_role || {}).sort((a, b) => b[1] - a[1]);
+  const peak = roles.length ? roles[0][1] : 1;
+  const roleRows = roles
+    .map(([role, count]) => `<div class="status-row">
+      <span class="k">${esc(role)}</span>
+      <div class="bar"><div class="bar-fill" style="width:${((count / peak) * 100).toFixed(1)}%"></div></div>
+      <span class="count">${num(count)}</span>
+    </div>`)
+    .join("");
+  const recent = items.slice(0, 24)
+    .map((item) => `<div class="row loop-row">
+      <span class="id">${esc(shortTime(item.at))}</span>
+      <span class="id">${esc(item.feature)}</span>
+      <span><span class="tag">${esc(item.role)}</span></span>
+      <span class="note">${esc(item.status)}</span>
+      <span class="title" title="${esc(item.output || item.input)}">${esc(item.output || item.input)}</span>
+    </div>`)
+    .join("");
+
+  return `
+    <section class="hero compact">
+      <h1>循环</h1>
+      <p class="lede">来自 <code>runtime/logs/F-*.jsonl</code> 的角色流转：Dispatcher → Planner → Builder → Evaluator → Repair → Recorder。这里只回放已经落盘的事实，不做推断。</p>
+      <div class="facts">
+        <span><b>${num(loops.count)}</b> 条流转</span>
+        <span><b>${num(loops.features)}</b> 个 Feature</span>
+        <span>${roles.length} 个角色有记录</span>
+      </div>
+    </section>
+    ${band("角色分布", `${num(loops.count)} 条`, `<div class="status-list">${roleRows || empty("没有流转记录。")}</div>`)}
+    ${band("最近流转", `最新 ${Math.min(24, loops.count)} 条`, `<div class="list">${recent || empty("没有流转记录。")}</div>`)}
+  `;
+}
+
+function shortTime(iso) {
+  if (!iso) return "—";
+  const date = new Date(iso);
+  if (Number.isNaN(date.valueOf())) return String(iso).slice(5, 16);
+  return date.toLocaleString("zh-CN", { month: "2-digit", day: "2-digit", hour: "2-digit", minute: "2-digit", hour12: false });
+}
+
 export { short };

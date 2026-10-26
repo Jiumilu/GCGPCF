@@ -290,6 +290,13 @@ kbd {
 }
 
 .entry.is-missing { color: var(--warn); }
+
+.loop-row {
+  display: grid;
+  grid-template-columns: 92px 62px 92px 72px minmax(0, 1fr);
+  gap: 10px;
+  align-items: center;
+}
 .matrix .dot { margin: 0; }
 
 /* ---------- roadmap ---------- */
