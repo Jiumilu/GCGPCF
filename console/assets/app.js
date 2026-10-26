@@ -2,7 +2,7 @@
 // Data: console/public/data/*.json written by scripts/console_export.py (read-only).
 // Serve with: python3 -m http.server 4173 --directory console
 
-import { esc, num, short, time } from "./ui.js";
+import { age, esc, num, short, time } from "./ui.js";
 import {
   docsPage,
   featurePanel,
@@ -407,7 +407,8 @@ async function main() {
   try {
     await loadData();
     renderRoute();
-    $("#masthead-meta").textContent = `快照 ${time(state.data.meta.generated_at)} · ${short(state.data.meta.source_sha, 9)}`;
+    const snapshot = age(state.data.meta.generated_at);
+    $("#masthead-meta").innerHTML = `快照 ${esc(snapshot.label)} · ${esc(short(state.data.meta.source_sha, 9))} · ${esc(state.data.meta.source_branch || "—")}${snapshot.stale ? ' <span class="stale">已过期</span>' : ""}`;
     const foot = $("#pagefoot");
     if (foot) {
       const meta = state.data.meta;

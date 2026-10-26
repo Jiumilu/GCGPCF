@@ -20,6 +20,18 @@ export const time = (iso) => {
   return date.toLocaleString("zh-CN", { hour12: false });
 };
 
+export function age(iso) {
+  if (!iso) return { label: "—", stale: true };
+  const stamp = new Date(iso).valueOf();
+  if (Number.isNaN(stamp)) return { label: "—", stale: true };
+  const minutes = Math.max(0, Math.round((Date.now() - stamp) / 60000));
+  const label = minutes < 1 ? "刚刚"
+    : minutes < 60 ? `${minutes} 分钟前`
+    : minutes < 1440 ? `${Math.round(minutes / 60)} 小时前`
+    : `${Math.round(minutes / 1440)} 天前`;
+  return { label, stale: minutes > 1440 };
+}
+
 export const row = (cells, className = "") =>
   `<div class="row ${className}">${cells.join("")}</div>`;
 

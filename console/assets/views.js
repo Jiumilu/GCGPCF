@@ -23,12 +23,16 @@ function progressCell(label, value, total, caption, tone) {
   </div>`;
 }
 
-function facts(counts, gates, docs) {
+function facts(counts, gates, docs, loops) {
+  const loop = loops
+    ? `<span><a class="factlink" href="#/loops"><b>${num(loops.count)}</b> 条角色流转</a></span>`
+    : "";
   return `<div class="facts">
-    <span><b>${num(counts.projects)}</b> 项目</span>
-    <span><b>${num(counts.features)}</b> Feature（<b>${num(counts.active)}</b> 活跃 · ${num(counts.done)} 已关闭）</span>
-    <span><b>${num(gates.count)}</b> 门禁</span>
-    <span><b>${num(docs.registered_docs)}</b> 登记文档 · 仓内 ${num(docs.repo_markdown)} 篇 Markdown</span>
+    <a class="factlink" href="#/projects"><b>${num(counts.projects)}</b> 项目</a>
+    <a class="factlink" href="#/features"><b>${num(counts.features)}</b> Feature（<b>${num(counts.active)}</b> 活跃 · ${num(counts.done)} 已关闭）</a>
+    ${loop}
+    <a class="factlink" href="#/gates"><b>${num(gates.count)}</b> 门禁</a>
+    <a class="factlink" href="#/docs"><b>${num(docs.registered_docs)}</b> 登记文档 · 仓内 ${num(docs.repo_markdown)} 篇 Markdown</a>
   </div>`;
 }
 
@@ -118,7 +122,7 @@ export function home(data) {
     <section class="hero">
       <h1>项目群的交付调度台</h1>
       <p class="lede">Feature 进，证据出，门禁判。这一页只回答三件事：现在推进什么、卡在哪道门禁、要谁裁定；每个数字都来自仓库快照，可回溯到文件。</p>
-      ${facts(meta.counts, gates, docs)}
+      ${facts(meta.counts, gates, docs, data.loops)}
     </section>
     ${band("进度", `活跃 ${num(meta.counts.active)} · 队列 ${num(meta.counts.queue)}`, `<div class="progress-grid">
       ${progressCell("已关闭", meta.counts.done, meta.counts.features, `完成率 ${doneRatio.toFixed(0)}%`, "")}

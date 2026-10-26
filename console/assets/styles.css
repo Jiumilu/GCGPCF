@@ -129,6 +129,16 @@ kbd {
 
 .facts b { color: var(--ink); font-weight: 510; }
 
+.factlink { color: inherit; text-decoration: none; border-bottom: 1px solid transparent; }
+
+.stale {
+  font-size: 10px;
+  padding: 1px 6px;
+  border-radius: 999px;
+  color: var(--warn);
+  background: color-mix(in srgb, var(--warn) 14%, transparent);
+}
+
 /* ---------- band shell ---------- */
 
 .band { padding: 24px 0; border-bottom: 1px solid var(--border); }
@@ -570,6 +580,7 @@ kbd {
   .topnav a:hover { color: var(--ink); }
   .palette-item:hover { background: var(--alt); }
   .seg button:hover { color: var(--ink); }
+  .factlink:hover { border-bottom-color: var(--dim); }
   .icon:hover { color: var(--ink); background: var(--alt); }
   .cmd .copy:hover { color: var(--ink); }
 }
@@ -602,9 +613,13 @@ kbd {
 
 @media (max-width: 900px) {
   .page { padding: 18px 18px 44px; }
-  .masthead { flex-wrap: wrap; gap: 8px; }
+  .masthead { flex-wrap: wrap; gap: 6px 8px; }
+  .brand { order: 1; }
+  .brand-sub { display: none; }
+  #palette-trigger { order: 2; margin-left: auto; }
+  #theme-toggle { order: 2; }
   .topnav { order: 3; width: 100%; margin-left: 0; }
-  .masthead-meta { margin-left: auto; }
+  .masthead-meta { order: 4; width: 100%; margin-left: 0; }
   .hero h1 { font-size: 23px; }
   .progress-grid, .docs-grid { grid-template-columns: 1fr; }
   .split { grid-template-columns: minmax(0, 1fr); }
