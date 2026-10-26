@@ -34,5 +34,5 @@ superseded_by: []
 - 实施状态：H1 5 完成/3 部分/1 阻塞；H2 后端+独立 Web 控制台 v0；H3 长程分析模型+持久化/API v0。
 - 证据：`GlobalCloud XGD/docs/IMPLEMENTATION_STATUS_2026-10-21.md`、`GlobalCloud XGD/docs/harness/evidence/xgd-h1-baseline-2026-10-21.json`。
 - 2026-10-21 晚补充：XiaoG BFF v0 已按当前架构合并（PR #6 / `3fac5734`）；语音完整 E2E live PASS；GPCF 本回传 PR #49 已合并（`c2330dc8`）。
-- 2026-10-24 更新：24h 多宿主观测完成（0 inconsistent）；72h 观测继续；H2 内测进行中；D10 blocked。
+- 2026-10-26 更新：24h 多宿主 + 72h 运行时观测均完成；H2 内测进行中；D10 blocked。
 - 未声明 `accepted`/`integrated`/`production_ready`/`customer_accepted`；仍缺 D10 公开发布签名/公证、72h 观测完成与其余登记点。
