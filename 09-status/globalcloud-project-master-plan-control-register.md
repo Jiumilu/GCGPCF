@@ -88,6 +88,7 @@ superseded_by: []
 | GlobalCloud SLC | `GlobalCloud SLC` | 待建立 | `projects/slc/STATUS.md` | `missing` | 独立源码与私有远端已建立；唯一总体方案及双主控继承待核验 | 建立项目总体方案并核对职责、接口与版本基线 |
 | GlobalCloud DRC | `GlobalCloud DRC` | `GlobalCloud DRC 总体方案.md` | `projects/drc/STATUS.md` | `candidate` | 项目级职责与主账边界已记录；项目群 §3.3.1 已给出目录、质量、血缘、权限和生命周期边界，项目继承待核验 | 以脱敏元数据与离线样例核验资源模型和接口；真实连接及授权另行确认 |
 | GlobalCloud FireQuote | `GlobalCloud FireQuote` | 待核验 | `README.md`, `PROJECT_HARNESS_MANIFEST.md` | `missing` | 第 29 项于 2026-10-22 19:11 纳管；仓内已有后端 89 测试与前端构建证据，但未见项目级总体方案与双总控继承声明 | 核验并补《GlobalCloud FireQuote 总体方案》与项目群继承链后再判定权威性 |
+| GlobalCloud GCToken | `GlobalCloud GCToken` | `docs/GCToken总体方案.md`（候选） | `README.md`, `PROJECT_HARNESS_MANIFEST.md`, `docs/GCToken实施方案.md` | `candidate` | 第 30 个注册记录；仓库与候选双方案已建立，模型适配、运行证据和双总控继承仍未验证 | 核验项目职责、统一模型契约与继承链后再判定权威性 |
 | shared/python_utils | `shared` | 不适用 | `shared/python_utils/` | `not_project` | 共享工具目录，不是业务项目 | 保留为共享库，受导入可用性和依赖治理控制 |
 
 ## 5. 当前结论

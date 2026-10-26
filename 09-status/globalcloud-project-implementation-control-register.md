@@ -85,6 +85,7 @@ superseded_by: []
 | GlobalCloud PMC | `GlobalCloud Project 总体方案.md` | `GlobalCloud Project 实施方案.md` | `in_progress` | `local_dev_dryrun_boundary` | F-028 GPCF Feature／Evidence 只读投影 | 本地代码测试和真实队列预览已执行；Plane 实例 API 与界面运行未验证 | 完成证据门禁，并在获授权开发实例中验证幂等同步 |
 | GlobalCloud DRC | 待建立 | 待建立 | `planned` | `project_plan_boundary` | 项目群数据资源中心已纳管（2026-10-21）；bootstrap/partial | `projects/drc/STATUS.md` 已登记项目级职责与主账边界；资源模型与接口未核验 | 核验资源模型与接口（脱敏元数据/离线样例）；真实连接另授权 |
 | GlobalCloud FireQuote | 待建立 | 待建立 | `planned` | `project_plan_boundary` | 消防定额测算平台已纳管（2026-10-22 19:11，第 29 项） | 仓内已有后端 89 测试与前端构建证据；未见项目级总体方案与双总控继承声明 | 核验并补《GlobalCloud FireQuote 总体方案》与项目群继承链 |
+| GlobalCloud GCToken | `docs/GCToken总体方案.md`（候选） | `docs/GCToken实施方案.md`（候选） | `planned` | `project_plan_boundary` | B9 模型供给面候选纳管 | 私有远端、四件套与候选双方案已建立；无模型调用、路由、计量或真实运行证据 | 建立首个受控 Feature，核验统一契约、真实适配器与双总控继承 |
 | GlobalCloud PDC | `GlobalCloud PDC 总体方案.md`（候选） | `GlobalCloud PDC 实施方案.md`（候选） | `in_progress` | `project_plan_boundary` | 独立应用完成 Git 与私有远端核验，双方案候选已形成 | Node 22 类型检查、37/37 套件与 471/471 用例、Lint 0 error；浏览器关键任务和方案继承待核验 | 核验双方案继承并重跑当前版本关键任务 |
 | GlobalCloud SLC | 待建立 | 待建立 | `planned` | `project_plan_boundary` | 独立应用完成 Git 与私有远端建立，进入项目群治理清单 | `projects/slc/STATUS.md` 与独立仓纳管记录；本轮未重跑应用门禁 | 建立双方案继承并重跑当前版本关键任务验证 |
 | shared/python_utils | 不适用 | 不适用 | `not_project` | `not_project_boundary` | 共享工具目录治理 | 导入可用性待验证 | 纳入依赖检查 |
@@ -93,7 +94,7 @@ superseded_by: []
 
 ```text
 implementation_plan_previous_governance_baseline = phase_3_all_project_plans_controlled
-implementation_plan_governance = repair_required_for_current_29_project_scope
+implementation_plan_governance = repair_required_for_current_30_project_scope
 current_live_project_group_git_gate = see_project_group_live_status_current_snapshot
 current_live_dirty_repos = see_project_group_live_status_current_snapshot
 current_live_sensitive_repos = see_project_group_live_status_current_snapshot
@@ -103,7 +104,7 @@ development_queue_ready = true
 reason = 历史 17 项目方案证据保留；当前 27 项目尚有新增项目的实施方案待核验或建立
 ```
 
-可以声明当前 27 项目均已进入实施方案盘点；不得声明全部项目唯一实施方案已建立。新增项目保持 planned/in_progress 与 partial 边界，真实研发、运行、集成、交付和客户验收仍需逐项证据。
+可以声明当前 30 个注册记录均已进入实施方案盘点；不得声明全部项目唯一实施方案已建立。新增项目保持 planned/in_progress 与 partial 边界，真实研发、运行、集成、交付和客户验收仍需逐项证据。
 2026-10-18 用户确认 WAE 纳入项目群当前范围；WAE 实施方案仍待建立，交付状态保持 `planned`。
 
 ## 6. 传导确认清单
