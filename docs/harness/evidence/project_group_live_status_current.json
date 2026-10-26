@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-10-26T09:47:57.693226+08:00",
+  "generated_at": "2026-10-26T17:57:15.650240+08:00",
   "freshness_hours": 12,
   "freshness_ok": true,
   "project_count": 29,
@@ -116,7 +116,7 @@
   ],
   "pass_repo_count": 5,
   "bootstrap_window": false,
-  "previous_generated_at": "2026-10-26T09:17:20.678415+08:00",
+  "previous_generated_at": "2026-10-26T09:47:57.693226+08:00",
   "repo_heads": {
     "GlobalCloud AAAS": "fb0ab7eefca543334a565efbccedf8f1baadf37d",
     "GlobalCloud Brain": "d266e49a9535bce0ec0525d2831391437e115028",
@@ -140,7 +140,7 @@
     "GlobalCloud SpaceAI Studio": "0ca7c857e306598a8c6ec591ab54b8fe55bae8b0",
     "GlobalCloud World": "b2d639787aa4ca5194cec8269ad19c4180415001",
     "GlobalCloud Mem": "78485207effdee8cf3fa6773ba775b44ad558aa7",
-    "GlobalCloud WAE": "645e45ea2fe6a0b4f5618d831c9a50c0ab5ca668",
+    "GlobalCloud WAE": "7a5d26fb8442bbe20768ac3b21f5593e5741ca22",
     "GlobalCloud PMC": "8222fd5e340c7bea82825b7ddc7ccf454571662b",
     "GlobalCloud PDC": "76311da1080e5a70ca6d25026555fe02f0b8894a",
     "GlobalCloud SLC": "811f5a323b1a750e69864518dfeb7339e0c0c9c6",
@@ -448,7 +448,7 @@
     },
     "GlobalCloud GPCF": {
       "dirty_count": 439,
-      "ahead": 91,
+      "ahead": 92,
       "behind": 0,
       "paths": [
         "$CODEX_HOME/automations/globalcloud-17/README.md",
@@ -1203,14 +1203,15 @@
       "sensitive_paths": []
     },
     "GlobalCloud WAE": {
-      "dirty_count": 258,
-      "ahead": 37,
+      "dirty_count": 259,
+      "ahead": 39,
       "behind": 67,
       "paths": [
         ".gitignore",
         "apps/wame/.env.example",
         "apps/wame/package.json",
         "apps/wame/scripts/verify-wasset-m0.mts",
+        "apps/wame/src/app/App.tsx",
         "apps/wame/src/app/apps/generated.loaders.ts",
         "apps/wame/src/app/apps/generated.ts",
         "apps/wame/src/app/domain/project.ts",
