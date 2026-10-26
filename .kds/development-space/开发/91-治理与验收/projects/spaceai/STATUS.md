@@ -5,13 +5,13 @@ project: GPCF
 related_projects: [GPCF]
 domain: governance
 status: controlled
-version: v1.12
+version: v1.13
 owner: GPCF
 kds_space: 开发
 kds_path: 开发/91-治理与验收/projects/spaceai/STATUS.md
 source_path: projects/spaceai/STATUS.md
 sync_direction: bidirectional
-last_reviewed: '2026-10-22'
+last_reviewed: '2026-10-24'
 supersedes: []
 superseded_by: []
 ---
@@ -150,12 +150,14 @@ superseded_by: []
 |---|---|---|
 | D-1 | 测试临时库不清理致磁盘两次写满；`db.test.ts` 偶发失败（DB_PATH 于 import 期冻结 + worker 模块缓存跨文件存活） | **已大幅收敛**：T4 + D-8 后实拷贝消除；2026-10-22 小种子库把基库 160.3MB → **18.9MB**、峰值临时占用 4.15GB → **0.4–0.5GB**、构建 ~11s → **0.5s**；`db.test.ts` 仍有意直读运行库（未改语义），偶发未复现 |
 | D-7 | 全量套件偶发单文件失败（2026-10-20 出现 2 次，重跑即绿） | **已定位并修复**：5 轮循环捕获现场，为 `world-axis.test.ts > W1-1 时空检索` **默认 5s 超时**（实测 5004ms），非此前的克隆内容猜测；已给该文件 20 个用例显式 30s 超时（与 ingest-bus 同法）。克隆完整性校验保留（解决另一类问题）。修复后连续三轮全量 99 文件 / 905 项全过 |
-| D-10 | 追加表无保留策略；库 2.17GB 中 1905.9MB 是历史归档表（2196 万行），追加表数据仅约 10 天 | **压缩 + 时间索引均已完成**（2026-10-22）：2069.5MB → 160.5MB（归档表外置 + 备份 + manifest）；新增 `idx_ingest_createdat` / `idx_obol_at`（库 181.3MB，近 1 天查询提升 100–180× / 20–40×，4 例查询计划守卫）；**剩余**：时间窗归档待数据变旧（当前 0 行到期）、`(Result, Id)` 查询型索引未做（不在本次范围） |
+| D-10 | 追加表无保留策略；库 2.17GB 中 1905.9MB 是历史归档表（2196 万行），追加表数据仅约 10 天 | **压缩 + 时间索引均已完成**（2026-10-22）：2069.5MB → 160.5MB（归档表外置 + 备份 + manifest）；新增 `idx_ingest_createdat` / `idx_obol_at`（库 181.3MB，近 1 天查询提升 100–180× / 20–40×，4 例查询计划守卫）；**剩余**：时间窗归档待数据变旧（当前 0 行到期）、`(Result, Id)` 查询型索引未做（不在本次范围） |；**2026-10-25 补充**：时间窗归档机制已就绪（`tools/db/archive-window.mjs`，dry-run/copy/move 三档 + 安全门 + 8 例单测；当前 0 行到期，证据 `harness/data-retention/archive-window-plan-20261025.json`），等数据变旧后按需执行
 | D-11 | KDS 镜像与源码差异 | **已关闭（2026-10-22）**：`document_control.py --apply-full` 全量重建并提交（PR #57，484 文件 / +8845−4338：213 个目录 README 补 frontmatter、3 个台账重算、270 个镜像文件重写）；重建后 `--check` 幂等为 0；repository-only 门禁 pass（kds_md 3612）。真实 KDS API 写入未做（另需授权） |
 | D-12 | e2e 基座缺 `webServer`：`playwright.config.ts` 无自启，9 个 spec 需手工先起 dev 5273 + BFF 39010 | **已修复（2026-10-22）**：`webServer` 自起 BFF+dev、`reuseExistingServer`、`e2e:smoke` 一条命令；Lead 复跑 panorama-smoke 1 passed 33.2s |
 | D-13 | 提交与远端同步 | **已关闭（2026-10-22 20:09）**：老卢「继续」授权推送；main 推送到私有远端（46 本地提交 + 远端 1 个 CI 提交合并，含冲突解决：`.github/workflows/standards.yml` 采用远端 self-hosted runner 方案）；远端 `070a778`，本地/远端 0/0。历史备注：推送前修正了 `b9236aa` 的提交信息错位（索引工作被冠以 pano 信息），改写为 `e239242`（仅本地未推送历史）；未 force push |
 | D-14 | 写路径「失败仍报成功」类缺陷（审计发现；T2 后残留） | **已修复并已推送（2026-10-22 深夜）**：只读审计（`tools/audit/contract-write-audit.mjs` + `.harness/runs/20261022-contract-write-audit/report.md`）定位 P0 原子性 1 个（`commitDraft` 两写无 tx）、P1 真值上报 31 个单写、P2 播种 5 个；分四轮修复：P0 `8a913a0`、P1 高价值 11 `a669722`、P1 其余 17 `9506f70`、P2 `d1fc01a`；配套统一错误出口 + 44 例注入测试。扫描口径 `run()` 吞异常写 63 函数 → **17（剩余均为启动播种或已核实例外/误报）** |
 | D-15 | 契约登记滞后：25 条实现先行端点未进协议（Demo/Focus/Scene 等）；31 条 bridged 无元数据标注 | **已关闭（2026-10-22 深夜，`5bd911b`）**：登记 263 → **288**，25 条补登（Demo 标 `demo:true` 非对外契约），31 条标 `coverage:'bridged'`；`/__contract__` 与 mock 兜底参数形态泛化为 `\{param\}`；棘轮 `unregistered 26 → 0`，新增 bridged 双向一致断言。实测：显式实现 **226/280 = 80.7%**、仅样例 23（逐条例外）、bridged 31、**未登记 0** |
+
+| D-16 | L4 真实资产缺口（公开源已排除；园区合作待对外授权） | **缺口仍在（2026-10-24）**：L4 精模链路已闭环（验收 PASS / 全链路演练 / 验包入口），但几何精度必须由真实资产+控制点实测证明。公开源调研（`docs/3d/l4-open-dataset-research.md`）结论：OSM/Google 实景三维/天地图/实景三维中国等均不满足 L4 精度或许可/境内合规；园区既有成果合作备料已就绪（`docs/3d/l4-park-cooperation-package.md` + `harness/l4-park-coop/` 三份模板），**未联系、未发送、未签约**。对外动作待老卢逐项授权；F-037 保持 active/partial |
 
 
 ## 前端持续重构（第 37–43 轮续）
@@ -333,3 +335,18 @@ SpaceAI Platform 是安防统一重构主工作区，CWME 是城市/空间域实
 3. **运行状态**：全仓 **158 文件 / 1447 例**通过、typecheck 0（本轮收尾实测）；审计工具可复跑并已在报告中固化口径。
 4. **缺陷台账**：新增 D-14（写可靠缺陷，已修复）、D-15（契约登记滞后，已关闭）。
 5. 边界不变：**partial**、未部署、未接真实设备/生产数据、不提升任何验收状态；并行会话 pano 重构 WIP（脏树）不在本轮范围内。
+
+## 变更说明（v1.12 → v1.13，2026-10-24 晚）
+
+1. **L4 精模主线闭环（会话纠偏后 7 轮）**：
+   - 真实资产验收入口：`docs/3d/l4-vendor-dataset-spec.md` + `tools/l4/verify-vendor-package.mjs`（pass/needs_human/fail，不宣称精度达标）+ 9 例新测试；
+   - 全链路演练：`tools/l4/chain-dryrun.mjs`（生成→验包→导入→校验→切换→回滚，9 步/10 断言 PASS，临时 manifest 不触线上）；
+   - **一键验收复跑 PASS**（2026-10-23 09:07）：贴地 0m、切白盒/回切、画面差异 3.28% ≥1%、清单 500→fallback/whitebox、页面错误 0、控制台错误 0、FPS 55.7；证据 `harness/l4-acceptance/2026-10-23T01-07-31-373Z/`；
+   - 卡点根因更正：侧栏 DOM 契约变更致测试选择器过期（非 UI 回归）+ `PanoramaDeep.vue` `isFavoLite` 运行时缺陷（随 B5-R2 `d4a2bcc` 修复）+ 引擎就绪时序；证据 `harness/coordination/ui-regression-20261023/`。
+2. **e2e 基座恢复**：全量从 14 passed / 11 failed → **18 passed / 7 skipped / 0 failed**（1.3 分钟）；7 条跳过均写明「能力移除/视图合并/外部产物缺失」，未放宽断言；新增菜单映射/命令面板探针。
+3. **真实资产路径**：老卢选定「园区既有成果合作」（决策模型 80.3%）；备料包与三份模板已入库，均标注未发送/未签署；公开数据源调研结论为「不满足 L4 精度」。
+4. **缺陷台账**：新增 D-16（L4 真实资产缺口，待对外授权）。
+5. **发布**：Platform PR #4/#5/#6/#7、GPCF #62/#64/#65/#66 均已合并；两仓本地/远端 0/0；CI 全绿。
+6. **运行状态（2026-10-24 实测）**：Platform 全仓 **175 文件 / 1535 例**通过；e2e **18 passed / 7 skipped / 0 failed**；typecheck 0。
+7. **D-10 剩余项**：时间窗归档机制就绪（`tools/db/archive-window.mjs`：默认 dry-run；`--copy` 只写归档库；`--move --yes --backup` 才删在线旧行，需 BFF 停机+授权；8 例单测）；当前 0 行到期（2026-10-25 复核）。
+8. 边界不变：**partial**、未部署、未接真实资产、不提升任何验收状态；对外联系/发送/签约均未执行。

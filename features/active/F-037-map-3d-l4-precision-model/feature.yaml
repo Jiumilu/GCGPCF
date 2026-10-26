@@ -61,6 +61,7 @@ verification:
   - node tools/l4/chain-dryrun.mjs（全链路演练；证据 harness/l4-acceptance/vendor-chain-dryrun/）
   - node tools/e2e/probe-ui-nav.mjs / probe-pano-state.mjs / probe-precision.mjs（回归探针：DOM 契约/引擎就绪/精度面板）
   - npx playwright test（e2e 全量：18 passed / 7 skipped / 0 failed，2026-10-23）
+  - pnpm e2e:run（常态化：一条命令 + 证据归档 harness/e2e-runs/；2026-10-25 实测 18 passed / 0 failed / 7 skipped，65.3s）
   waivers:
     screenshots: 截图二进制归档在主项目仓库 harness/l4-acceptance/{smoke-sim,smoke-demo}/ 与 harness/l4-evidence/（report.md / report.json 同为证据），GPCF 只登记路径与判定口径，不重复存二进制；占位资产截图的精度含义以三处标注为准。
 blockers:
@@ -82,4 +83,4 @@ ui_product_first_control:
     evidence_overexposure_gate: pass
   status_ceiling: partial
 created_at: "2026-10-22T11:04:30+00:00"
-updated_at: "2026-10-23T13:00:00+00:00"
+updated_at: "2026-10-24T22:40:00+00:00"
