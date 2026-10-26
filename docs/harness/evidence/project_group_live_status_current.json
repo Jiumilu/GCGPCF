@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-10-26T08:16:11.141602+08:00",
+  "generated_at": "2026-10-26T09:17:20.678415+08:00",
   "freshness_hours": 12,
   "freshness_ok": true,
   "project_count": 29,
@@ -116,7 +116,7 @@
   ],
   "pass_repo_count": 5,
   "bootstrap_window": false,
-  "previous_generated_at": "2026-10-26T07:45:35.835647+08:00",
+  "previous_generated_at": "2026-10-26T08:16:11.141602+08:00",
   "repo_heads": {
     "GlobalCloud AAAS": "fb0ab7eefca543334a565efbccedf8f1baadf37d",
     "GlobalCloud Brain": "d266e49a9535bce0ec0525d2831391437e115028",
@@ -133,13 +133,13 @@
     "GlobalCloud PVA": "11de53c57b736a677f3b97d256b8cc11014eb306",
     "GlobalCloud SOP": "80aa900d1b8963157f410f8099511e988cdc3a1e",
     "GlobalCloud PKC": "2a64a71656143ee21c3ef3d07d6f8144e5527a40",
-    "GlobalCloud XGD": "95126a7ffd72eed65dbb7d1b2e5a78874a59baaf",
+    "GlobalCloud XGD": "381e83a8545d331230f884bd57b2053ef7642545",
     "GlobalCloud ICP": "2c93394336486e778dbbaacfe463d326d2298721",
     "GlobalCloud PQC": "d28d050e3edc5d19f8f5b7d0ed25ee35c6901f0e",
     "GlobalCloud SpaceAI Platform": "1bbc94de72fc979561667470a05855561a55546c",
     "GlobalCloud SpaceAI Studio": "0ca7c857e306598a8c6ec591ab54b8fe55bae8b0",
     "GlobalCloud World": "b2d639787aa4ca5194cec8269ad19c4180415001",
-    "GlobalCloud Mem": "c00bb7f4299ee40cc73d7ffc0d7b19acd8776c1f",
+    "GlobalCloud Mem": "78485207effdee8cf3fa6773ba775b44ad558aa7",
     "GlobalCloud WAE": "645e45ea2fe6a0b4f5618d831c9a50c0ab5ca668",
     "GlobalCloud PMC": "8222fd5e340c7bea82825b7ddc7ccf454571662b",
     "GlobalCloud PDC": "76311da1080e5a70ca6d25026555fe02f0b8894a",
@@ -448,7 +448,7 @@
     },
     "GlobalCloud GPCF": {
       "dirty_count": 439,
-      "ahead": 74,
+      "ahead": 75,
       "behind": 0,
       "paths": [
         "$CODEX_HOME/automations/globalcloud-17/README.md",
@@ -978,10 +978,11 @@
       "sensitive_paths": []
     },
     "GlobalCloud KDS": {
-      "dirty_count": 39,
+      "dirty_count": 41,
       "ahead": 0,
       "behind": 0,
       "paths": [
+        "_meta/hermes-memory-log.md",
         "\"concepts/24\\345\\255\\227\\344\\275\\223\\347\\263\\273\\350\\212\\202\\347\\202\\271\\345\\244\\215\\345\\210\\266\\351\\232\\276\\345\\272\\246\\350\\257\\204\\344\\274\\260.md\"",
         "\"concepts/\\344\\270\\200\\345\\271\\263\\345\\217\\260\\345\\217\\214\\351\\227\\255\\347\\216\\257\\344\\270\\211\\351\\223\\276\\345\\215\\217\\345\\220\\214.md\"",
         "\"concepts/\\344\\272\\224\\347\\273\\264\\350\\257\\204\\344\\274\\260\\346\\250\\241\\345\\236\\213.md\"",
@@ -1008,6 +1009,7 @@
         "wiki/sources/research-case-010-2026-05-14.md",
         "99_Reports/daily-mining-2026-10-24.md",
         "99_Reports/health-2026-10-25.md",
+        "99_Reports/health-2026-10-26.md",
         "\"99_Reports/\\345\\267\\245\\344\\275\\234\\346\\250\\241\\345\\274\\217/\\345\\267\\245\\344\\275\\234\\346\\250\\241\\345\\274\\217\\346\\212\\245\\345\\221\\212_2026-10-24.md\"",
         "\"99_Reports/\\345\\267\\245\\344\\275\\234\\346\\250\\241\\345\\274\\217/\\345\\267\\245\\344\\275\\234\\346\\250\\241\\345\\274\\217\\346\\212\\245\\345\\221\\212_2026-10-25.md\"",
         "\"concepts/24\\345\\255\\227\\344\\275\\223\\347\\263\\273\\345\\215\\217\\345\\220\\214\\344\\273\\252\\350\\241\\250\\347\\233\\230.md\"",
