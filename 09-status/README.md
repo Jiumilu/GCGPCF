@@ -16,6 +16,7 @@ supersedes: []
 superseded_by: []
 ---
 
+
 # 状态与控制台账
 
 目录：`09-status`
@@ -42,18 +43,31 @@ KDS 路径前缀：`开发/12-GPCF/09-status/`
 | GPCF-DOC-D77EFFB8F7 | 状态与控制台账 | 09-status/README.md | GPCF | controlled |
 | GPCF-DOC-CODEGRAPH-DEVELOPMENT-STATE-CONTROL-MEMORY-20260626 | CodeGraph 开发态控制记忆 2026-06-26 | 09-status/codegraph-development-state-control-memory-20260626.md | GPCF | controlled |
 | GPCF-DOC-0295C05F40 | 文档过期与归档台账 | 09-status/document-deprecation-register.md | GPCF | controlled |
+| GPCF-DOC-CAPABILITY-REUSE-REPORT-20261022 | 项目群能力复用报告（2026-10-22） | 09-status/globalcloud-capability-reuse-report-20261022.md | GPCF | draft |
 | GPCF-DOC-6630DBEA9D | GlobalCloud 项目群中文化治理报告 | 09-status/globalcloud-chinese-localization-governance-report.md | GPCF | controlled |
 | GPCF-DOC-CORE-CHAIN-REAL-EVIDENCE-REGISTER-20260624 | GlobalCloud 核心链路真实证据台账 | 09-status/globalcloud-core-chain-real-evidence-register.md | GPCF | controlled |
+| GPCF-DOC-CROSS-PROJECT-CONTRACT-MATRIX-20261022 | 项目群跨项目契约矩阵 v1.0（PG-12 inventory） | 09-status/globalcloud-cross-project-contract-matrix-v1.0.md | GPCF | draft |
 | GPCF-DOC-5EF9F8EE5D | GlobalCloud 文档控制总台账 | 09-status/globalcloud-document-control-register.md | GPCF | controlled |
 | GPCF-DOC-71779DF3C3 | GlobalCloud 文档治理 Loop 门禁 | 09-status/globalcloud-document-governance-loop-gate.md | GPCF | controlled |
 | GPCF-DOC-C436DDB0F6 | GlobalCloud 文档健康报告 | 09-status/globalcloud-document-health-report.md | GPCF | controlled |
+| GPCF-DOC-DONE-FEATURE-AUDIT-20261022 | 项目群历史 done Feature 证据审计（2026-10-22） | 09-status/globalcloud-done-feature-audit-20261022.md | GPCF | draft |
+| GPCF-DOC-EVIDENCE-RULE-VERSION-20261022 | 项目群关闭证据规则版本 v1.0（冻结） | 09-status/globalcloud-evidence-rule-version-v1.0.md | GPCF | controlled |
+| GPCF-DOC-EXTERNAL-AUTHORIZATION-LIST-20261022 | 项目群外部授权清单 v1.0（2026-10-22） | 09-status/globalcloud-external-authorization-list-v1.0.md | GPCF | draft |
+| GPCF-DOC-GKE001-CHAIN-MATRIX-20261022 | GKE-001 知识工程链路矩阵 v1.0（PG-13 inventory） | 09-status/globalcloud-gke001-chain-matrix-v1.0.md | GPCF | draft |
 | GPCF-DOC-C582EFCACE | GlobalCloud L3 Admission Matrix | 09-status/globalcloud-l3-admission-matrix.md | GPCF | controlled |
 | GPCF-DOC-C10C271958 | GlobalCloud 项目文档完整度与 Loop 成熟度量化矩阵 | 09-status/globalcloud-project-document-loop-maturity-matrix.md | GPCF | controlled |
+| GPCF-DOC-PROJECT-GROUP-CALIBER-BASELINE-20261022 | GlobalCloud 项目群口径基准 v1.0 | 09-status/globalcloud-project-group-caliber-baseline-v1.0.md | GPCF | controlled |
+| GPCF-DOC-D914A0DA14 | GlobalCloud 项目群完成度双账本首版基线 v1.0 | 09-status/globalcloud-project-group-completion-baseline-v1.0.md | GPCF | controlled |
+| GPCF-DOC-F8471AE0DA | GlobalCloud 项目群 dirty 分类基线 v1.0（PG-04 自指 dirty 治理·分类部分） | 09-status/globalcloud-project-group-dirty-classification-baseline-v1.0.md | GPCF | draft |
 | GPCF-DOC-OPEN-SPEC-18-PROJECT-MATRIX-20260712 | GlobalCloud 项目群 OpenSpec 适用性矩阵 | 09-status/globalcloud-project-group-openspec-applicability-matrix.md | GPCF | controlled |
 | GPCF-DOC-PROJECT-GROUP-REAL-EXECUTION-GOVERNANCE-BOARD-20260625 | GlobalCloud 项目群真实执行治理总控板 | 09-status/globalcloud-project-group-real-execution-governance-board.md | GPCF | controlled |
+| GPCF-DOC-PROJECT-GROUP-SINGLE-AUTHORIZATION-LEDGER-20261022 | GlobalCloud 项目群单一授权清单 v1.0 | 09-status/globalcloud-project-group-single-authorization-ledger-v1.0.md | GPCF | controlled |
 | GPCF-DOC-PROJECT-IMPLEMENTATION-CONTROL-REGISTER-20260624 | GlobalCloud 项目群实施方案控制台账 | 09-status/globalcloud-project-implementation-control-register.md | GPCF | controlled |
 | GPCF-DOC-6CE17269E9 | GlobalCloud 项目群项目主线对齐矩阵 | 09-status/globalcloud-project-mainline-alignment-matrix.md | GPCF | controlled |
 | GPCF-DOC-WAS-PROJECT-MASTER-PLAN-REGISTER-20260624 | GlobalCloud 项目群主方案控制台账 | 09-status/globalcloud-project-master-plan-control-register.md | GPCF | controlled |
+| GPCF-DOC-WEEKLY-BOTTLENECK-REVIEW-TEMPLATE-20261022 | 项目群周度瓶颈评审模板 v1.0 | 09-status/globalcloud-weekly-bottleneck-review-template.md | GPCF | draft |
+| GPCF-DOC-XGD-IMPLEMENTATION-REPORT-20261021 | GlobalCloud XGD 实施回传（2026-10-21） | 09-status/globalcloud-xgd-implementation-report-20261021.md | GPCF | draft |
+| GPCF-DOC-XGD-UPSTREAM-SYNC-FEEDBACK-20261021 | XGD 上游同步回传（2026-10-21） | 09-status/globalcloud-xgd-upstream-sync-feedback-20261021.md | GPCF | draft |
 | GPCF-DOC-C586488E67 | GPCF Project Status Matrix | 09-status/gpcf-project-status-matrix.md | GPCF | controlled |
 | GPCF-DOC-B1085FD000 | KDS API 同步流水覆盖事件记录 | 09-status/kds-api-sync-ledger-incident-20260617.md | GPCF | controlled |
 | GPCF-DOC-KDS-SYNC-PLAN | KDS Development Space Sync Plan | 09-status/kds-development-space-sync-plan.md | GPCF | controlled |

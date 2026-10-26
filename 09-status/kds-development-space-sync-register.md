@@ -44,7 +44,7 @@ superseded_by: []
 | XGD | 09-XGD | 10 | 7 | 已建空间 |
 | XiaoG | 10-XiaoG | 11 | 8 | 已建空间 |
 | MMC | 11-MMC | 13 | 10 | 已建空间 |
-| GPCF | 12-GPCF | 2128 | 1693 | 已建空间 |
+| GPCF | 12-GPCF | 2129 | 1693 | 已建空间 |
 | Studio | 13-Studio | 2 | 2 | 已建空间 |
 | ICP | 14-ICP | 0 | 0 | 已建空间，暂无直接镜像文档 |
 | SpaceAIStudio | 15-SpaceAIStudio | 0 | 0 | 已建空间，暂无直接镜像文档 |
@@ -56,7 +56,7 @@ superseded_by: []
 | --- | --- | --- |
 | 00-项目群总控 | 项目群总入口与根 README | 1 |
 | 90-跨项目架构 | 跨项目架构、主线、数据/知识跨域文档 | 59 |
-| 91-治理与验收 | 治理、验收、状态、台账与门禁文档 | 522 |
+| 91-治理与验收 | 治理、验收、状态、台账与门禁文档 | 523 |
 | 92-证据与会话归档 | Harness、证据样本、历史会话与归档文档 | 95 |
 | 99-过期文档 | deprecated / superseded 文档 | 0 |
 
@@ -705,6 +705,7 @@ superseded_by: []
 | GPCF-DOC-GLOBALCLOUD-PROJECT-GROUP-IMPLEMENTATION-PLAN-20260624 | GlobalCloud 项目群实施方案.md | 开发/12-GPCF/GlobalCloud 项目群实施方案.md | bidirectional | pending_api |
 | GPCF-DOC-16DD6DC90F | PROJECT_HARNESS_MANIFEST.md | 开发/01-GFIS/PROJECT_HARNESS_MANIFEST.md | bidirectional | pending_api |
 | GPCF-DOC-8EC9A00BFD | README.md | 开发/00-项目群总控/README.md | bidirectional | pending_api |
+| GPCF-DOC-ACC977D1A6 | console/GUIDE.md | 开发/91-治理与验收/console/GUIDE.md | bidirectional | pending_api |
 | GPCF-DOC-FDED2B52DE | console/README.md | 开发/91-治理与验收/console/README.md | bidirectional | pending_api |
 | GPCF-DOC-A2F5EC5E20 | docs/GCBrain-Development-Manual.md | 开发/05-KDS/docs/GCBrain-Development-Manual.md | bidirectional | pending_api |
 | GPCF-DOC-9F7CBCE127 | docs/README.md | 开发/05-KDS/docs/README.md | bidirectional | pending_api |

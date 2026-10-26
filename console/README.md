@@ -37,4 +37,5 @@ KDS 空间：`开发`
 
 | doc_id | title | source_path | project | status |
 | --- | --- | --- | --- | --- |
+| GPCF-DOC-ACC977D1A6 | GPCF 控制台使用说明 | console/GUIDE.md | GPCF | controlled |
 | GPCF-DOC-FDED2B52DE | GPCF 控制台（只读治理快照） | console/README.md | GPCF | controlled |
