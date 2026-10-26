@@ -20,21 +20,21 @@ scope:
   out:
     - 不接真实数据/网络/模型/价格
     - 不改 C1 校验器与 GPCF 既有脚本/配置
-    - 不 commit/push/发布/合并 main
+    - 不 push/发布；commit/merge 按老卢授权
     - 不建其他 Feature
 acceptance:
-  - 85 tests 通过（F-040 30 + F-039 55；组合）
+  - 90 tests 通过（F-040 35 + F-039 55；组合）
   - 6 fixture 结果符合 initial/final 预期
   - C1 字段映射（sample_id/level/source_ref_alias/warranty 字符串）
   - pipeline 复用 C1 枚举/敏感校验；缺 acceptance/env/impact/scope/warranty/quota 等 fail；CLI 0/1/2
-  - R1 formal in/out 均 pending FP-00I；R2 quota true/false/缺失
+  - R1/S4 → free/FP-07（final_eligible=false）；R2 quota true/false/缺失
+  - test/trial 超限 pending；FP-08 third_party_cost pending；FP-09 strategic_request pending
   - warranty 1/0 拒绝，不静默按 paid
   - evidence_refs 非 mapping 不崩溃
-  - test/trial final_eligible=false
   - diff 仅限 scope.in；F-039 依赖见 depends_on
 loop:
   current_step: evaluate
-  iteration: 5
+  iteration: 6
 evidence:
   tests: pass
   build: pass
@@ -71,4 +71,4 @@ ui_product_first_control:
     evidence_overexposure_gate: pending
   status_ceiling: partial
 created_at: "2026-10-26T13:17:28+00:00"
-updated_at: "2026-10-26T13:37:10+00:00"
+updated_at: "2026-10-26T21:44:54+00:00"

@@ -101,5 +101,24 @@ superseded_by: []
 ## 评审与依赖（2026-10-26）
 
 - reviewer B1–B4：R1 formal in/out 均 pending FP-00I；R2 quota_remaining；pipeline 复用 C1；非法 type→intake fail；F-040 scope split。
-- B5：F-040 pipeline import F-039 `p1_sample_intake_validator`；已声明 `depends_on: [F-039]`，组合 85 tests。
+- B5：F-040 pipeline import F-039 `p1_sample_intake_validator`；已声明 `depends_on: [F-039]`，组合 90 tests。
 - 未合并/未发布；FP-04/05/06/07/09、S3/S4、layer 矩阵仍待裁定。
+
+### Iteration 6
+
+1. 这轮做什么？
+   - 采集本地可回放证据。
+2. 改了什么？
+   - 更新 evidence 文件和 feature.yaml 证据状态。
+3. 怎么验证？
+   - 运行工作区 validator、py_compile、git diff --check 和范围证据门禁。
+4. 发现什么问题？
+   - 未发现阻塞项。
+5. 是否可以提交？
+   - 是，前提是 close gate 通过。
+
+## 规则硬化（2026-10-27）
+
+- A 包：R1/S4→free/FP-07；test/trial 超限 pending；FP-08 third_party_cost pending；FP-09 strategic_request pending；layer 仅元数据。
+- 组合 90 tests（F-039 55 + F-040 35）；F-040 gate pass。
+- 未 push/发布；真实样本/A2 后续。
