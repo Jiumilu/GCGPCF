@@ -131,13 +131,25 @@ def initial_demand(doc: Dict[str, Any]) -> Dict[str, Any]:
             unknown.append("contract_alias none/unknown: no purchased quota for FP-02")
     if unknown:
         return _pending("initial", "FP-00I", unknown, "E0")
+    third_party = doc.get("third_party_cost")
+    if isinstance(third_party, (int, float)) and third_party > 0:
+        return _pending("initial", "FP-08",
+                        ["third_party_cost>0; pass-through approval required"], "E1")
+    if doc.get("strategic_request") is True:
+        return _pending("initial", "FP-09",
+                        ["strategic_request; strategic approval required"], "E1")
     if stage == "test":
+        if doc.get("test_quota_remaining") is False:
+            return _pending("initial", "FP-00I",
+                            ["test quota exhausted; conversion required"], "E1")
         return _ok("initial", "free", "FP-04", confidence=0.85)
     if stage == "trial":
+        if doc.get("trial_quota_remaining") is False:
+            return _pending("initial", "FP-00I",
+                            ["trial quota exhausted; conversion required"], "E1")
         return _ok("initial", "included", "FP-05", confidence=0.8)
     if level == "R1":
-        return _pending("initial", "FP-00I",
-                        ["R1 requires FP-07/老卢裁定; not implemented"], "E1")
+        return _ok("initial", "free", "FP-07", confidence=0.8)
     if scope == "out":
         return _ok("initial", "paid", "FP-03", confidence=0.8)
     if level == "R2":
@@ -170,6 +182,15 @@ def initial_defect(doc: Dict[str, Any]) -> Dict[str, Any]:
         unknown.append("impact missing")
     if unknown:
         return _pending("initial", "FP-00I", unknown, "E0")
+    third_party = doc.get("third_party_cost")
+    if isinstance(third_party, (int, float)) and third_party > 0:
+        return _pending("initial", "FP-08",
+                        ["third_party_cost>0; pass-through approval required"], "E1")
+    if doc.get("strategic_request") is True:
+        return _pending("initial", "FP-09",
+                        ["strategic_request; strategic approval required"], "E1")
+    if severity == "S4":
+        return _ok("initial", "free", "FP-07", confidence=0.8)
     if warranty is True:
         return _ok("initial", "free", "FP-01", confidence=0.8)
     return _ok("initial", "paid", "FP-03", confidence=0.75)
@@ -178,6 +199,13 @@ def initial_defect(doc: Dict[str, Any]) -> Dict[str, Any]:
 def final_result(initial: Dict[str, Any], doc: Dict[str, Any]) -> Dict[str, Any]:
     if initial["free_paid"] == "pending":
         return _pending("final", "FP-00F", list(initial["unknown"]), "E1")
+
+    # FP-07 free/small：final 只做成本记账，不进入报价/结算
+    if initial["rule_id"] == "FP-07":
+        result = _ok("final", "free", "FP-07", grade="E1",
+                     final_eligible=False, confidence=0.8)
+        result["unknown"] = ["FP-07 final requires manual cost/approval; not eligible"]
+        return result
 
     case_type = doc.get("type")
     stage = _text(doc, "stage")

@@ -24,9 +24,9 @@ superseded_by: []
 
 | 文件 | SHA-256 |
 |---|---|
-| `scripts/p1b_grading_engine.py` | `150c9dd666c29d1374a1c8db43a32d3b2345abcfb0890fa151f5076454b5e7d4` |
+| `scripts/p1b_grading_engine.py` | `1068401a46327501efa81ddcf214734d3d69a08e9c2bf85a595d998b78331553` |
 | `scripts/p1b_pipeline.py` | `dee99188b90c54de3dfbf58f546d03e0dd725ee2c7de53861201ad0208af92a0` |
-| `tests/test_p1b_grading_engine.py` | `9246343caf32a0d02f774cefa30377da01232038391dd89f9d8a3e2899804692` |
+| `tests/test_p1b_grading_engine.py` | `34fc702b355ba3f661dd985ebb338a017a23fd10139124bc1d3119bd68127f39` |
 | `tests/test_p1b_pipeline.py` | `63dcc402a20d7b42f4640bd5604c65d62a9e0f0c79d1dcea425aae30e04b4b4f` |
 | `tests/fixtures/p1b/demand_e1.json` | `58b5a2e98b6cf2341adb5db86c78c2e22aab60e215cd3966653b55d08b488e4f` |
 | `tests/fixtures/p1b/demand_e2.json` | `52c9a9c1c93092cb0a4fe1bdf6eb8e41fbff07071d696fd7ab9d7dabcd11aaaa` |
@@ -41,7 +41,7 @@ superseded_by: []
 - 该文件属于 F-039，不在 F-040 scope；
 - F-040 `feature.yaml` 已声明 `depends_on: [F-039]`；
 - 合并顺序：F-039 先，或 F-039+F-040 一起；否则 pipeline ImportError；
-- 组合测试：`pytest tests/test_p1_sample_intake_validator.py tests/test_p1b_grading_engine.py tests/test_p1b_pipeline.py -q` → **85 passed**（F-039 55 + F-040 30）。
+- 组合测试：`pytest tests/test_p1_sample_intake_validator.py tests/test_p1b_grading_engine.py tests/test_p1b_pipeline.py -q` → **90 passed**（F-039 55 + F-040 35）。
 
 ## 3. 非 F-040（同 worktree）
 
@@ -51,7 +51,7 @@ superseded_by: []
 
 ## 4. 验证
 
-- 组合 pytest：**85 passed**（F-039 55 + F-040 30）
+- 组合 pytest：**90 passed**（F-039 55 + F-040 35）
 - F-040 Evidence Gate：tests/build/summary pass；screenshots/api waived；close_candidate=true
 - `gpcf_check_evidence.py F-040 --check-only` → close_candidate=true，reasons=none
 - 未 commit/push/merge；未接真实数据/网络/价格

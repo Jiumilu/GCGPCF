@@ -44,7 +44,7 @@ def test_missing_fields_pending_fp00i():
     assert result["final"]["rule_id"] == "FP-00F"
 
 
-def test_formal_scope_in_r1_pending_for_fp07_decision():
+def test_formal_scope_in_r1_free_fp07():
     result = grade_document({
         "case_id": "X",
         "type": "demand",
@@ -57,12 +57,13 @@ def test_formal_scope_in_r1_pending_for_fp07_decision():
         "acceptance_criteria": ["ok"],
         "evidence_refs": {"contract_clause": "HT-A §3.1"},
     })
-    assert result["initial"]["free_paid"] == "pending"
-    assert result["initial"]["rule_id"] == "FP-00I"
-    assert any("R1" in item for item in result["initial"]["unknown"])
+    assert result["initial"]["free_paid"] == "free"
+    assert result["initial"]["rule_id"] == "FP-07"
+    assert result["final"]["rule_id"] == "FP-07"
+    assert result["final"]["final_eligible"] is False
 
 
-def test_formal_scope_out_r1_pending_for_fp07_decision():
+def test_formal_scope_out_r1_free_fp07():
     result = grade_document({
         "case_id": "X",
         "type": "demand",
@@ -74,9 +75,9 @@ def test_formal_scope_out_r1_pending_for_fp07_decision():
         "requirement_level": "R1",
         "acceptance_criteria": ["ok"],
     })
-    assert result["initial"]["free_paid"] == "pending"
-    assert result["initial"]["rule_id"] == "FP-00I"
-    assert any("R1" in item for item in result["initial"]["unknown"])
+    assert result["initial"]["free_paid"] == "free"
+    assert result["initial"]["rule_id"] == "FP-07"
+    assert result["final"]["final_eligible"] is False
 
 
 def test_formal_scope_in_r2_quota_true_included_fp02():
@@ -261,3 +262,84 @@ def test_cli_output_missing_dir_exit_two(tmp_path):
     )
     assert result.returncode == 2
     assert "output directory not found" in result.stderr
+
+
+def test_s4_free_fp07():
+    result = grade_document({
+        "case_id": "X",
+        "type": "defect",
+        "feedback_ref": "FB-1",
+        "env": "formal",
+        "severity": "S4",
+        "warranty": False,
+        "description": "demo",
+        "reproduce": "demo",
+        "impact": "minor",
+    })
+    assert result["initial"]["free_paid"] == "free"
+    assert result["initial"]["rule_id"] == "FP-07"
+    assert result["final"]["final_eligible"] is False
+
+
+def test_test_quota_exhausted_pending():
+    result = grade_document({
+        "case_id": "X",
+        "type": "demand",
+        "customer_alias": "CUST-T",
+        "layer": "team",
+        "stage": "test",
+        "requirement_level": "R2",
+        "acceptance_criteria": ["ok"],
+        "test_quota_remaining": False,
+    })
+    assert result["initial"]["free_paid"] == "pending"
+    assert result["initial"]["rule_id"] == "FP-00I"
+
+
+def test_trial_quota_exhausted_pending():
+    result = grade_document({
+        "case_id": "X",
+        "type": "demand",
+        "customer_alias": "CUST-R",
+        "layer": "team",
+        "stage": "trial",
+        "requirement_level": "R2",
+        "acceptance_criteria": ["ok"],
+        "trial_quota_remaining": False,
+    })
+    assert result["initial"]["free_paid"] == "pending"
+    assert result["initial"]["rule_id"] == "FP-00I"
+
+
+def test_third_party_cost_pending_fp08():
+    result = grade_document({
+        "case_id": "X",
+        "type": "demand",
+        "customer_alias": "CUST-A",
+        "layer": "enterprise",
+        "stage": "formal",
+        "contract_alias": "HT-A",
+        "scope": "out",
+        "requirement_level": "R3",
+        "acceptance_criteria": ["ok"],
+        "third_party_cost": 100,
+    })
+    assert result["initial"]["free_paid"] == "pending"
+    assert result["initial"]["rule_id"] == "FP-08"
+
+
+def test_strategic_request_pending_fp09():
+    result = grade_document({
+        "case_id": "X",
+        "type": "demand",
+        "customer_alias": "CUST-A",
+        "layer": "enterprise",
+        "stage": "formal",
+        "contract_alias": "HT-A",
+        "scope": "out",
+        "requirement_level": "R3",
+        "acceptance_criteria": ["ok"],
+        "strategic_request": True,
+    })
+    assert result["initial"]["free_paid"] == "pending"
+    assert result["initial"]["rule_id"] == "FP-09"

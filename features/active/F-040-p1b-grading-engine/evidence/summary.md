@@ -33,4 +33,4 @@ superseded_by: []
 ## 证据限制（Lead）
 
 - `lint` 行仅指 tracked `git diff --check`；10 个交付文件均为 untracked，不能单独证明 lint；详见 `evidence/g1-scope-split.md` §5。
-- F-040 依赖 F-039；组合 85 tests（F-039 55 + F-040 30）。
+- F-040 依赖 F-039；组合 90 tests（F-039 55 + F-040 35）。
