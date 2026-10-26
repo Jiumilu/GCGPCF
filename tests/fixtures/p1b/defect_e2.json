@@ -1,0 +1,16 @@
+{
+  "case_id": "ENG-DEF-E2",
+  "type": "defect",
+  "feedback_ref": "FB-ENG-1",
+  "env": "formal",
+  "severity": "S2",
+  "warranty": true,
+  "priority": "P1",
+  "description": "demo defect",
+  "reproduce": "open page; export; fail",
+  "impact": "core report unavailable; manual workaround",
+  "evidence_refs": {
+    "warranty_clause": "HT-A §8.1",
+    "ticket": "TK-ENG-1"
+  }
+}

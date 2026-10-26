@@ -1,0 +1,1 @@
+waived: no API scope; local static validation only
