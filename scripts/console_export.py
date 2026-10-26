@@ -579,8 +579,10 @@ def compare_snapshots(fresh_dir: Path, current_dir: Path) -> list[dict[str, str]
         left = json.loads((fresh_dir / name).read_text(encoding="utf-8"))
         right = json.loads(current.read_text(encoding="utf-8"))
         if name == "meta.json":
-            left.pop("generated_at", None)
-            right.pop("generated_at", None)
+            # 身份字段随提交变化（生成时间、生成时的 HEAD），不参与一致性判断
+            for field in ("generated_at", "source_sha"):
+                left.pop(field, None)
+                right.pop(field, None)
         report.append({"file": name, "state": "ok" if left == right else "stale"})
     return report
 
@@ -605,7 +607,7 @@ def main(argv: Iterable[str] | None = None) -> int:
     parser.add_argument(
         "--check",
         action="store_true",
-        help="compare the existing snapshot with a fresh export; exit 1 when stale",
+        help="compare the existing snapshot with a fresh export (ignores generated_at/source_sha); exit 1 when stale",
     )
     args = parser.parse_args(list(argv) if argv is not None else None)
     out_dir = args.out if args.out.is_absolute() else ROOT / args.out

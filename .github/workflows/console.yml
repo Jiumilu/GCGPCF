@@ -1,0 +1,92 @@
+# GPCF 控制台（只读快照 + 静态站）远端门禁
+# 判定口径：快照必须与仓库当前状态一致；console 导出与页面单测必须通过。
+# 生成快照：make console-data（本地）→ 与本次改动同提交。
+name: gpcf-console
+
+on:
+  pull_request:
+    paths:
+      - "console/**"
+      - "scripts/console_export.py"
+      - "tests/test_console_export.py"
+      - "features/**/feature.yaml"
+      - "runtime/queue.json"
+      - "runtime/state.json"
+      - "runtime/logs/**"
+      - "config/project-group-projects.yaml"
+      - "projects/**"
+      - "09-status/globalcloud-document-control-register.md"
+      - "09-status/globalcloud-document-health-report.md"
+      - "Makefile"
+  push:
+    branches: [main, ci/gpcf-gates]
+    paths:
+      - "console/**"
+      - "scripts/console_export.py"
+      - "tests/test_console_export.py"
+      - "features/**/feature.yaml"
+      - "runtime/queue.json"
+      - "runtime/state.json"
+      - "runtime/logs/**"
+      - "config/project-group-projects.yaml"
+      - "projects/**"
+      - "09-status/globalcloud-document-control-register.md"
+      - "09-status/globalcloud-document-health-report.md"
+      - "Makefile"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: console-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  snapshot:
+    name: 快照一致性与 console 单测
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: 安装依赖
+        run: python -m pip install -r requirements-dev.txt
+
+      - name: 快照过期检测（--check 只比对，不写盘）
+        run: python scripts/console_export.py --check
+
+      - name: console 导出与漂移分类单测
+        run: python -m pytest tests/test_console_export.py -q
+
+      - name: 静态站结构自检
+        run: |
+          python - <<'PY'
+          import json
+          import pathlib
+          import sys
+
+          data = pathlib.Path("console/public/data")
+          needed = ["features", "projects", "gates", "docs", "loops", "meta"]
+          missing = [f"{name}.json" for name in needed if not (data / f"{name}.json").is_file()]
+          bad = []
+          for name in needed:
+              path = data / f"{name}.json"
+              if not path.is_file():
+                  continue
+              try:
+                  json.loads(path.read_text(encoding="utf-8"))
+              except json.JSONDecodeError as exc:
+                  bad.append(f"{path}: {exc}")
+          page = pathlib.Path("console/index.html")
+          assets = ["console/assets/app.js", "console/assets/views.js", "console/assets/ui.js",
+                    "console/assets/status.js", "console/assets/tokens.css", "console/assets/styles.css"]
+          missing_assets = [a for a in assets if not pathlib.Path(a).is_file()]
+          print(f"snapshot_files={len(needed)} missing={missing} json_errors={bad} missing_assets={missing_assets}")
+          sys.exit(1 if missing or bad or missing_assets or not page.is_file() else 0)
+          PY
