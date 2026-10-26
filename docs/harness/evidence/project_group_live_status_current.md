@@ -45,13 +45,13 @@ generated_at: 2026-10-26 18:58:58 +0800
 
 | Repo | dirty_count | ahead | behind | sensitive_paths |
 |---|---:|---:|---:|---|
-| `GlobalCloud AAAS` | 24 | 2 | 0 | `none` |
+| `GlobalCloud AAAS` | 26 | 2 | 0 | `none` |
 | `GlobalCloud Brain` | 1 | 3 | 0 | `none` |
 | `GlobalCloud WAS` | 0 | 0 | 0 | `none` |
 | `GlobalCloud XiaoC` | 209 | 7 | 0 | `.env.bak-20261020-hermes-key, .harness/evidence/xiaoc-feishu-20261022/10-credentials.md, .harness/evidence/xiaoc-feishu-20261022/74-verification-token-wired.md, .harness/evidence/xiaoc-mcp-skill-20261020/23-real-smoke-hermes-credential.md, .harness/evidence/xiaoc-mcp-skill-20261020/37-caller-token-audit.jsonl, .harness/evidence/xiaoc-mcp-skill-20261020/37-caller-token-auth.md, .harness/evidence/xiaoc-mcp-skill-20261020/37-caller-token-health.json, packages/feishu-bridge/.env.example` |
 | `GlobalCloud WAME` | 6 | 1 | 26 | `none` |
 | `GlobalCloud GPC` | 1 | 8 | 0 | `none` |
-| `GlobalCloud GPCF` | 439 | 94 | 0 | `.harness/runs/kds-real-token-sync-20260613-062146/README.md, .harness/runs/kds-real-token-sync-20260613-062146/evidence/README.md, .harness/runs/kds-real-token-sync-20260613-062146/patches/README.md, .harness/runs/kds-real-token-sync-20260613-062146/workspaces/README.md` |
+| `GlobalCloud GPCF` | 439 | 95 | 0 | `.harness/runs/kds-real-token-sync-20260613-062146/README.md, .harness/runs/kds-real-token-sync-20260613-062146/evidence/README.md, .harness/runs/kds-real-token-sync-20260613-062146/patches/README.md, .harness/runs/kds-real-token-sync-20260613-062146/workspaces/README.md` |
 | `GlobalCloud XWAIL` | 1 | 0 | 20 | `none` |
 | `GlobalCloud GFIS` | 52 | 0 | 0 | `none` |
 | `GlobalCloud MMC` | 2 | 7 | 9 | `none` |
@@ -67,7 +67,7 @@ generated_at: 2026-10-26 18:58:58 +0800
 | `GlobalCloud SpaceAI Studio` | 0 | 0 | 0 | `none` |
 | `GlobalCloud World` | 1 | 0 | 0 | `none` |
 | `GlobalCloud Mem` | 2 | 0 | 0 | `none` |
-| `GlobalCloud WAE` | 270 | 48 | 69 | `apps/wame/.env.example, docs/evidence/R1/supply-chain/secret-scan.json` |
+| `GlobalCloud WAE` | 284 | 48 | 71 | `apps/wame/.env.example, docs/evidence/R1/supply-chain/secret-scan.json` |
 | `GlobalCloud PMC` | 3 | 3 | 0 | `none` |
 | `GlobalCloud PDC` | 1 | 0 | 0 | `none` |
 | `GlobalCloud SLC` | 0 | 7 | 0 | `none` |

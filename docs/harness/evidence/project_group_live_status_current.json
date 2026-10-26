@@ -150,7 +150,7 @@
   },
   "dirty_details": {
     "GlobalCloud AAAS": {
-      "dirty_count": 24,
+      "dirty_count": 26,
       "ahead": 2,
       "behind": 0,
       "paths": [
@@ -161,6 +161,8 @@
         "scripts/aaas_common.py",
         "scripts/validate_service_package.py",
         "tools/export_aaas_state.py",
+        "\"docs/reports/2026-10-26_\\347\\273\\237\\344\\270\\200\\347\\231\\273\\345\\275\\225\\344\\270\\216\\347\\224\\250\\346\\210\\267\\346\\235\\203\\351\\231\\220\\344\\275\\223\\347\\263\\273_\\347\\216\\260\\347\\212\\266\\345\\256\\241\\350\\256\\241\\344\\270\\216\\351\\207\\215\\346\\236\\204\\346\\226\\271\\346\\241\\210_v0.1.md\"",
+        "\"docs/reports/2026-10-26_\\347\\273\\237\\344\\270\\200\\350\\272\\253\\344\\273\\275\\344\\270\\216\\346\\235\\203\\351\\231\\220_\\344\\274\\230\\345\\214\\226\\346\\217\\220\\347\\244\\272\\350\\257\\215\\345\\214\\205_v0.1.md\"",
         "research/aaas-business-evidence.md",
         "research/benchmark-fde-platform-ops.md",
         "review/fde-plan-review.md",
@@ -448,7 +450,7 @@
     },
     "GlobalCloud GPCF": {
       "dirty_count": 439,
-      "ahead": 94,
+      "ahead": 95,
       "behind": 0,
       "paths": [
         "$CODEX_HOME/automations/globalcloud-17/README.md",
@@ -1203,9 +1205,9 @@
       "sensitive_paths": []
     },
     "GlobalCloud WAE": {
-      "dirty_count": 270,
+      "dirty_count": 284,
       "ahead": 48,
-      "behind": 69,
+      "behind": 71,
       "paths": [
         ".gitignore",
         "apps/wame/.env.example",
@@ -1313,6 +1315,7 @@
         "packages/app-registry/src/generated/city.ts",
         "packages/app-registry/src/index.ts",
         "packages/app-registry/src/placement.ts",
+        "packages/host-kit/src/host/app.test.ts",
         "packages/host-kit/src/host/idpRoutes.ts",
         "packages/host-kit/src/idp/service.ts",
         "packages/host-kit/src/idp/store.ts",
@@ -1323,6 +1326,18 @@
         "scripts/collect-f034-evidence.mts",
         "scripts/gen-apps.mts",
         "scripts/gen-assembly.mts",
+        ".archify/workflow-login-context-20261026-191819/candidate.json",
+        ".archify/workflow-login-context-20261026-191819/login-context.browser-check.json",
+        ".archify/workflow-login-context-20261026-191819/login-context.delivery.json",
+        ".archify/workflow-login-context-20261026-191819/login-context.finalize-summary.json",
+        ".archify/workflow-login-context-20261026-191819/login-context.finalize.json",
+        ".archify/workflow-login-context-20261026-191819/login-context.html",
+        ".archify/workflow-login-context-20261026-191819/preview-final.png",
+        ".archify/workflow-login-context-20261026-191819/preview-tall.png",
+        ".archify/workflow-login-context-20261026-191819/preview.png",
+        ".archify/workflow-login-context-20261026-191819/review-2/login-context.browser-check.json",
+        ".archify/workflow-login-context-20261026-191819/review-2/login-context.finalize-summary.json",
+        ".archify/workflow-login-context-20261026-191819/review-2/login-context.finalize.json",
         "apps/wame/src/app/apps/AppPlazaPage.tsx",
         "apps/wame/src/app/apps/StandaloneAppPage.tsx",
         "apps/wame/src/app/apps/generated.aaas.loaders.ts",
@@ -1361,6 +1376,7 @@
         "docs/assembly-spec/placement.personal.yaml",
         "docs/assembly-spec/placement.team.yaml",
         "\"docs/idp-optimization/\\345\\256\\236\\346\\226\\275/CHG-16_\\347\\231\\273\\345\\275\\225\\347\\225\\214\\351\\235\\242_v3_v1.0.md\"",
+        "\"docs/idp-optimization/\\345\\256\\236\\346\\226\\275/CHG-17_B1.1\\345\\217\\252\\350\\257\\273\\346\\210\\220\\345\\221\\230\\345\\205\\263\\347\\263\\273_v1.0.md\"",
         "\"docs/idp-optimization/\\345\\256\\236\\346\\226\\275/\\347\\231\\273\\345\\275\\225\\344\\270\\212\\344\\270\\213\\346\\226\\207\\344\\270\\216B1\\346\\234\\200\\345\\260\\217\\351\\227\\255\\347\\216\\257_v0.1.md\"",
         "packages/adopted-dsh/README.md",
         "packages/adopted-dsh/THIRD_PARTY_NOTICES.md",
