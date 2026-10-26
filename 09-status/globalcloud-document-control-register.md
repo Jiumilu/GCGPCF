@@ -19,7 +19,7 @@ superseded_by: []
 
 # GlobalCloud 文档控制总台账
 
-日期：2026-10-25
+日期：2026-10-27
 
 用途：登记 GPCF 仓库内所有 Markdown 文档的受控身份、项目归属、状态、源路径与 KDS 开发空间路径。
 
@@ -40,8 +40,8 @@ superseded_by: []
 | XGD | 09-XGD | 10 | 7 | 已建空间 |
 | XiaoG | 10-XiaoG | 11 | 8 | 已建空间 |
 | MMC | 11-MMC | 13 | 10 | 已建空间 |
-| GPCF | 12-GPCF | 2124 | 1693 | 已建空间 |
-| Studio | 13-Studio | 5 | 2 | 已建空间 |
+| GPCF | 12-GPCF | 2128 | 1693 | 已建空间 |
+| Studio | 13-Studio | 2 | 2 | 已建空间 |
 | ICP | 14-ICP | 0 | 0 | 已建空间，暂无直接镜像文档 |
 | SpaceAIStudio | 15-SpaceAIStudio | 0 | 0 | 已建空间，暂无直接镜像文档 |
 | SpaceAI | 16-SpaceAI | 0 | 0 | 已建空间，暂无直接镜像文档 |
@@ -51,8 +51,8 @@ superseded_by: []
 | kds_public_folder | meaning | document_count |
 | --- | --- | --- |
 | 00-项目群总控 | 项目群总入口与根 README | 1 |
-| 90-跨项目架构 | 跨项目架构、主线、数据/知识跨域文档 | 56 |
-| 91-治理与验收 | 治理、验收、状态、台账与门禁文档 | 521 |
+| 90-跨项目架构 | 跨项目架构、主线、数据/知识跨域文档 | 59 |
+| 91-治理与验收 | 治理、验收、状态、台账与门禁文档 | 522 |
 | 92-证据与会话归档 | Harness、证据样本、历史会话与归档文档 | 95 |
 | 99-过期文档 | deprecated / superseded 文档 | 0 |
 
@@ -259,12 +259,15 @@ superseded_by: []
 | GPCF-DOC-5BF9469733 | GlobalCloud 绿色供应链体系真实层次架构图 | 01-architecture/GlobalCloud绿色供应链体系真实层次架构图.md | GPCF | GPCF, GFIS, GPC, PVAOS, WAME, KDS, Brain, XiaoC, XGD, Studio | architecture | controlled | 开发/90-跨项目架构/01-architecture/GlobalCloud绿色供应链体系真实层次架构图.md |
 | GPCF-DOC-3DB47E5509 | GlobalCloud 绿色供应链平台业务流架构图 | 01-architecture/GlobalCloud绿色供应链平台业务流架构图.md | GPCF | GPCF, GFIS, GPC, PVAOS, WAME | architecture | controlled | 开发/90-跨项目架构/01-architecture/GlobalCloud绿色供应链平台业务流架构图.md |
 | GPCF-DOC-AA2468EDC8 | GlobalCloud 绿色供应链平台主架构与宪法约束融合建议 | 01-architecture/GlobalCloud绿色供应链平台主架构与宪法约束融合建议.md | GPCF | GPCF, GFIS, GPC, PVAOS, WAME, KDS, Brain, XiaoC, XGD, Studio | architecture | controlled | 开发/90-跨项目架构/01-architecture/GlobalCloud绿色供应链平台主架构与宪法约束融合建议.md |
+| GPCF-DOC-GROUP-BUSINESS-ANALYSIS-20261025 | GlobalCloud 项目群业务层分析（客户 × 平台 × 业务流程） | 01-architecture/GlobalCloud项目群业务层分析_v1.0.md | GPCF | GFIS, GPC, SOP, PVAOS, PQC, PDC, SLC, AAAS, SpaceAI, FireQuote, KDS, WAME, GPCF, ICP, WAE, DRC, PMC, MMC | business | controlled | 开发/90-跨项目架构/01-architecture/GlobalCloud项目群业务层分析_v1.0.md |
 | GPCF-DOC-535BF5C0CA | GlobalCloud V0.0.1 项目群交叉分析报告 | 01-architecture/GlobalCloud项目群交叉分析报告.md | GPCF | GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF | architecture | controlled | 开发/90-跨项目架构/01-architecture/GlobalCloud项目群交叉分析报告.md |
 | GPCF-DOC-GLOBALCLOUD-PROJECT-GROUP-IMPLEMENTATION-PLAN-20260624 | GlobalCloud 项目群实施方案 | 01-architecture/GlobalCloud项目群实施方案.md | GPCF | GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio | architecture | controlled | 开发/90-跨项目架构/01-architecture/GlobalCloud项目群实施方案.md |
 | GPCF-DOC-GROUP-ARCH-ITERATION-20261017 | GlobalCloud 项目群总体架构迭代分析（合理性与可行性 + 优化方案 + 系统逻辑架构） | 01-architecture/GlobalCloud项目群总体架构迭代分析_v1.0.md | GPCF | WAS, XWAIL, AAAS, WAME, WAE, GFIS, GPC, PVAOS, PQC, KDS, GCMEM, Brain, PKC, MMC, XiaoC, XiaoG, XGD, SOP, ICP, SpaceAI, SpaceAIStudio, World, Studio | architecture | controlled | 开发/90-跨项目架构/01-architecture/GlobalCloud项目群总体架构迭代分析_v1.0.md |
+| GPCF-DOC-GROUP-ARCH-RECONSTRUCT-20261025 | GlobalCloud 项目群总体架构重构（四层体系冻结版融合） | 01-architecture/GlobalCloud项目群总体架构重构_v1.0.md | GPCF | WAE, WAME, WAS, XWAIL, KDS, GCMEM, MMC, PVA, AAAS, GFIS, GPC, SOP, PQC, SLC, PDC, PKC, XGD, XiaoG, XiaoC, World, ICP, SpaceAI, DRC, PMC, FireQuote, GlobalCloud Token | architecture | controlled | 开发/90-跨项目架构/01-architecture/GlobalCloud项目群总体架构重构_v1.0.md |
 | GPCF-DOC-7B5E3B05D7 | GlobalCloud 项目群最小闭环 L4 实施方案 | 01-architecture/GlobalCloud项目群最小闭环L4实施方案.md | GPCF | GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF | architecture | controlled | 开发/90-跨项目架构/01-architecture/GlobalCloud项目群最小闭环L4实施方案.md |
 | GPCF-DOC-GROUP-ARCH-DEEPEN-20261017 | GlobalCloud 项目群架构深化分析（ADR 决策集 · 依赖网络 · 质量属性 · 场景走查 · 风险矩阵） | 01-architecture/GlobalCloud项目群架构深化分析_v1.0.md | GPCF | WAS, XWAIL, AAAS, WAME, WAE, GFIS, GPC, PVAOS, PQC, KDS, GCMEM, Brain, PKC, MMC, XiaoC, XiaoG, XGD, SOP, ICP, SpaceAI, SpaceAIStudio, World, Studio | architecture | controlled | 开发/90-跨项目架构/01-architecture/GlobalCloud项目群架构深化分析_v1.0.md |
-| GPCF-DOC-GROUP-SYSTEM-ARCHITECTURE-20261017 | GlobalCloud 项目群系统架构图 | 01-architecture/GlobalCloud项目群系统架构图.md | GPCF | WAS, XWAIL, AAAS, WAME, WAE, GFIS, GPC, PVAOS, PQC, KDS, GCMEM, Brain, PKC, MMC, XiaoC, XiaoG, XGD, SOP, ICP, SpaceAI, SpaceAIStudio, World, Studio, GPCF, Project, PDC, SLC, DRC | architecture | controlled | 开发/90-跨项目架构/01-architecture/GlobalCloud项目群系统架构图.md |
+| GPCF-DOC-GROUP-SYSTEM-ARCHITECTURE-20261017 | GlobalCloud 项目群系统架构图 | 01-architecture/GlobalCloud项目群系统架构图.md | GPCF | WAS, XWAIL, AAAS, WAME, WAE, GFIS, GPC, PVAOS, PQC, KDS, GCMEM, Brain, PKC, MMC, XiaoC, XiaoG, XGD, SOP, ICP, SpaceAI, SpaceAIStudio, World, GPCF, Project, PDC, SLC, DRC | architecture | controlled | 开发/90-跨项目架构/01-architecture/GlobalCloud项目群系统架构图.md |
+| GPCF-DOC-GROUP-GAP-ADR-20261025 | GlobalCloud 项目群结构性缺口分析与 ADR 草案（SOP 补链 / ICP 城市层 / 场景包接口） | 01-architecture/GlobalCloud项目群结构性缺口分析与ADR草案_v1.0.md | GPCF | SOP, WAME, WAE, PMC, ICP, KDS, AAAS, XWAIL, GFIS, GPC, World, GPCF | architecture | controlled | 开发/90-跨项目架构/01-architecture/GlobalCloud项目群结构性缺口分析与ADR草案_v1.0.md |
 | GPCF-DOC-XAP-P1-ACCEPTANCE-CASES-DRAFT-20261011 | P1 最小受理闭环 · 验收用例草案 v0.1 | 01-architecture/P1最小受理闭环_验收用例草案_v0.1.md | GPCF | GPCF, WAME, KDS | architecture | controlled | 开发/90-跨项目架构/01-architecture/P1最小受理闭环_验收用例草案_v0.1.md |
 | GPCF-DOC-75A25DFFB1 | 架构方案 | 01-architecture/README.md | GPCF | GFIS, GPC, WAME, KDS, GPCF | architecture | controlled | 开发/90-跨项目架构/01-architecture/README.md |
 | GPCF-DOC-WAME-UNIFIED-REQUEST-MECHANISM-20261011 | GlobalCloud 项目群 · WAME 统一审核请求机制 v0.1 | 01-architecture/WAME统一审核请求机制_v0.1.md | GPCF | GFIS, GPC, PVAOS, WAME, KDS, Brain, GPCF, Studio | architecture | controlled | 开发/90-跨项目架构/01-architecture/WAME统一审核请求机制_v0.1.md |
@@ -698,6 +701,7 @@ superseded_by: []
 | GPCF-DOC-GLOBALCLOUD-PROJECT-GROUP-IMPLEMENTATION-PLAN-20260624 | GlobalCloud 项目群实施方案 | GlobalCloud 项目群实施方案.md | GPCF | AAAS, Brain, WAS, XiaoC, WAME, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP, PQC, SpaceAI, SpaceAIStudio, World, GCMEM, WAE, Project, PDC, SLC, DRC, FireQuote | architecture | controlled | 开发/12-GPCF/GlobalCloud 项目群实施方案.md |
 | GPCF-DOC-16DD6DC90F | GPCF 项目 Harness Manifest | PROJECT_HARNESS_MANIFEST.md | GFIS | GFIS, GPC, WAME, KDS, Brain, XiaoC, XGD, XiaoG, GPCF | general | controlled | 开发/01-GFIS/PROJECT_HARNESS_MANIFEST.md |
 | GPCF-DOC-8EC9A00BFD | GlobalCloud GPCF 项目群治理控制仓 | README.md | GPCF | GPC, WAME, KDS, GPCF | general | controlled | 开发/00-项目群总控/README.md |
+| GPCF-DOC-FDED2B52DE | GPCF 控制台（只读治理快照） | console/README.md | GPCF | GPCF | governance | controlled | 开发/91-治理与验收/console/README.md |
 | GPCF-DOC-A2F5EC5E20 | GCBrain 专业版 v3.0 全量开发文档 | docs/GCBrain-Development-Manual.md | KDS | PVAOS, WAME, KDS, Brain | docs | controlled | 开发/05-KDS/docs/GCBrain-Development-Manual.md |
 | GPCF-DOC-9F7CBCE127 | 工程说明 | docs/README.md | KDS | GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio | docs | controlled | 开发/05-KDS/docs/README.md |
 | GPCF-DOC-26EE0B96B8 | architecture | docs/architecture/README.md | KDS | GPC, WAME, KDS, GPCF | docs | controlled | 开发/05-KDS/docs/architecture/README.md |
@@ -1678,7 +1682,7 @@ superseded_by: []
 | GPCF-DOC-PJ24-WAE-P0-PLAN-20261022 | PJ-24 WAE P0 实施计划（2026-10-22） | docs/harness/evidence/pj24-wae-p0-plan-20261022.md | GPCF | WAE, GPCF, PKC, Brain, PVAOS | governance | draft | 开发/91-治理与验收/docs/harness/evidence/pj24-wae-p0-plan-20261022.md |
 | GPCF-DOC-PJ25-PMC-PLANE-VERIFICATION-20261022 | PJ-25 PMC Plane UI/幂等验证（只读优先）2026-10-22 | docs/harness/evidence/pj25-pmc-plane-verification-20261022.md | GPCF | GPCF, Project | governance | draft | 开发/91-治理与验收/docs/harness/evidence/pj25-pmc-plane-verification-20261022.md |
 | GPCF-DOC-PRE-WAVE1-REVIEW-PACK-20261022 | Pre-Wave1 三项只读 review 包（2026-10-22） | docs/harness/evidence/pre-wave1-review-pack-20261022.md | GPCF | GPCF, GFIS, SOP, AAAS, XWAIL | governance | draft | 开发/91-治理与验收/docs/harness/evidence/pre-wave1-review-pack-20261022.md |
-| GPCF-DOC-PROJECTGROUPLIVESTATUSCURRENT20260701 | GlobalCloud 项目群当前 Live 状态快照 | docs/harness/evidence/project_group_live_status_current.md | GPCF | AAAS, Brain, WAS, XiaoC, WAME, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP, PQC, SpaceAI, SpaceAIStudio, World, GCMEM, WAE, Project, PDC, SLC, DRC, FireQuote | harness | controlled | 开发/12-GPCF/docs/harness/evidence/project_group_live_status_current.md |
+| GPCF-DOC-PROJECTGROUPLIVESTATUSCURRENT20260701 | GlobalCloud 项目群当前 Live 状态快照 | docs/harness/evidence/project_group_live_status_current.md | GPCF | AAAS, Brain, WAS, XiaoC, WAME, GPC, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP, PQC, SpaceAI, SpaceAIStudio, World, GCMEM, WAE, Project, PDC, SLC, DRC, FireQuote, GCToken | harness | controlled | 开发/12-GPCF/docs/harness/evidence/project_group_live_status_current.md |
 | GPCF-DOC-FACA370CCA | 会话主任务总结与声明控制边界 | docs/harness/evidence/session-main-task-summary-declaration-boundary-20260622.md | KDS | GFIS, GPC, WAME, KDS, Brain, GPCF, Studio | docs | controlled | 开发/05-KDS/docs/harness/evidence/session-main-task-summary-declaration-boundary-20260622.md |
 | GPCF-DOC-3A9B82D614 | Session Mainline Drift Watch 20260622 | docs/harness/evidence/session-mainline-drift-watch-20260622.md | KDS | GFIS, GPC, WAME, KDS, GPCF | docs | controlled | 开发/05-KDS/docs/harness/evidence/session-mainline-drift-watch-20260622.md |
 | GPCF-DOC-SESSION-HANDOFF-REQUEST-GATE-20260622 | Session Mainline Handoff Request Gate 20260622 | docs/harness/evidence/session-mainline-handoff-request-gate-20260622.md | KDS | GFIS, GPC, WAME, KDS, GPCF | docs | controlled | 开发/05-KDS/docs/harness/evidence/session-mainline-handoff-request-gate-20260622.md |
@@ -3659,6 +3663,9 @@ superseded_by: []
 | GPCF-DOC-CEE8C03181 | GCMEM 风险 | projects/gcmem/RISK.md | GPCF | GCMEM, GPCF | governance | controlled | 开发/91-治理与验收/projects/gcmem/RISK.md |
 | GPCF-DOC-6C2740A26F | GCMEM 路线图 | projects/gcmem/ROADMAP.md | GPCF | GCMEM, GPCF | governance | controlled | 开发/91-治理与验收/projects/gcmem/ROADMAP.md |
 | GPCF-DOC-EAF988D469 | GCMEM 状态 | projects/gcmem/STATUS.md | GPCF | GPCF | governance | controlled | 开发/91-治理与验收/projects/gcmem/STATUS.md |
+| GPCF-DOC-GCTOKEN-RISK-20261025 | GCToken 风险 | projects/gctoken/RISK.md | GCToken | GCToken, GPCF | governance | draft | 开发/91-治理与验收/projects/gctoken/RISK.md |
+| GPCF-DOC-GCTOKEN-ROADMAP-20261025 | GCToken 路线图 | projects/gctoken/ROADMAP.md | GCToken | GCToken, GPCF | governance | draft | 开发/91-治理与验收/projects/gctoken/ROADMAP.md |
+| GPCF-DOC-GCTOKEN-STATUS-20261025 | GCToken 状态 | projects/gctoken/STATUS.md | GCToken | GCToken, GPCF | governance | controlled | 开发/91-治理与验收/projects/gctoken/STATUS.md |
 | GPCF-DOC-2D5F274D6B | GFIS 风险 | projects/gfis/RISK.md | GFIS | GFIS | governance | controlled | 开发/91-治理与验收/projects/gfis/RISK.md |
 | GPCF-DOC-31E1D4AB3F | GFIS 路线图 | projects/gfis/ROADMAP.md | GFIS | GFIS | governance | controlled | 开发/91-治理与验收/projects/gfis/ROADMAP.md |
 | GPCF-DOC-CCEE8B7E4A | GFIS 状态 | projects/gfis/STATUS.md | GFIS | GFIS | governance | controlled | 开发/91-治理与验收/projects/gfis/STATUS.md |
@@ -3707,9 +3714,6 @@ superseded_by: []
 | GPCF-DOC-40D3030FDC | SpaceAI 风险 | projects/spaceai/RISK.md | GPCF | SpaceAI, GPCF | governance | controlled | 开发/91-治理与验收/projects/spaceai/RISK.md |
 | GPCF-DOC-F23FD95D02 | SpaceAI 路线图 | projects/spaceai/ROADMAP.md | GPCF | SpaceAI, GPCF | governance | controlled | 开发/91-治理与验收/projects/spaceai/ROADMAP.md |
 | GPCF-SPACEAI-STATUS-20261010 | SpaceAI 状态 | projects/spaceai/STATUS.md | GPCF | GPCF | governance | controlled | 开发/91-治理与验收/projects/spaceai/STATUS.md |
-| GPCF-DOC-EBFFF7C374 | Studio 风险 | projects/studio/RISK.md | Studio | Studio | governance | controlled | 开发/91-治理与验收/projects/studio/RISK.md |
-| GPCF-DOC-46D1584AC5 | Studio 路线图 | projects/studio/ROADMAP.md | Studio | Studio | governance | controlled | 开发/91-治理与验收/projects/studio/ROADMAP.md |
-| GPCF-DOC-D67FFAE452 | Studio 状态 | projects/studio/STATUS.md | Studio | Studio | governance | controlled | 开发/91-治理与验收/projects/studio/STATUS.md |
 | GPCF-DOC-455691886F | 世界资产浏览器（WAE）统一界面框架总体设计 v0.1 | projects/wae/MASTER-DESIGN.md | GPCF | GPCF | governance | controlled | 开发/91-治理与验收/projects/wae/MASTER-DESIGN.md |
 | GPCF-DOC-WAE-MASTER-DESIGN-V02 | 世界资产浏览器（WAE）统一界面框架总体设计 v0.2 | projects/wae/MASTER-DESIGN_v0.2.md | GPCF | GPCF | governance | controlled | 开发/91-治理与验收/projects/wae/MASTER-DESIGN_v0.2.md |
 | GPCF-DOC-WAE-MASTER-DESIGN-V03 | 世界资产浏览器（WAE）统一界面框架总体设计 v0.3 | projects/wae/MASTER-DESIGN_v0.3.md | GPCF | GPCF | governance | controlled | 开发/91-治理与验收/projects/wae/MASTER-DESIGN_v0.3.md |
@@ -3779,6 +3783,3 @@ superseded_by: []
 | GPCF-DOC-016DDA517E | 工具目录 | tools/README.md | GPCF | GPC, WAME, KDS, GPCF | tools | controlled | 开发/12-GPCF/tools/README.md |
 | GPCF-DOC-C9A7E8D2B1 | Frontmatter 写入权责清单（tools/kds-sync） | tools/kds-sync/FRONTMATTER_OWNERSHIP.md | GPCF | GPC, WAME, KDS, GPCF | tools | controlled | 开发/12-GPCF/tools/kds-sync/FRONTMATTER_OWNERSHIP.md |
 | GPCF-DOC-C039431381 | KDS Sync Tools | tools/kds-sync/README.md | GPCF | GPC, KDS, GPCF | tools | controlled | 开发/12-GPCF/tools/kds-sync/README.md |
-| GPCF-DOC-GROUP-BUSINESS-ANALYSIS-20261025 | GlobalCloud 项目群业务层分析（客户 × 平台 × 业务流程） | 01-architecture/GlobalCloud项目群业务层分析_v1.0.md | GPCF | GFIS, GPC, SOP, PVAOS, PQC, PDC, SLC, AAAS, SpaceAI, FireQuote, KDS, WAME, GPCF, ICP, WAE, DRC, PMC, MMC | business | controlled | 开发/90-跨项目架构/01-architecture/GlobalCloud项目群业务层分析_v1.0.md |
-| GPCF-DOC-GROUP-GAP-ADR-20261025 | GlobalCloud 项目群结构性缺口分析与 ADR 草案（SOP 补链 / ICP 城市层 / 场景包接口） | 01-architecture/GlobalCloud项目群结构性缺口分析与ADR草案_v1.0.md | GPCF | SOP, WAME, WAE, PMC, ICP, KDS, AAAS, XWAIL, GFIS, GPC, World, GPCF | architecture | controlled | 开发/90-跨项目架构/01-architecture/GlobalCloud项目群结构性缺口分析与ADR草案_v1.0.md |
-| GPCF-DOC-GROUP-ARCH-RECONSTRUCT-20261025 | GlobalCloud 项目群总体架构重构（四层体系冻结版融合） | 01-architecture/GlobalCloud项目群总体架构重构_v1.0.md | GPCF | WAE, WAME, WAS, XWAIL, KDS, GCMEM, MMC, PVA, AAAS, GFIS, GPC, SOP, PQC, SLC, PDC, PKC, XGD, XiaoG, XiaoC, World, ICP, SpaceAI, DRC, PMC, FireQuote | architecture | controlled | 开发/90-跨项目架构/01-architecture/GlobalCloud项目群总体架构重构_v1.0.md |
