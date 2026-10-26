@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-10-26T09:17:20.678415+08:00",
+  "generated_at": "2026-10-26T09:47:57.693226+08:00",
   "freshness_hours": 12,
   "freshness_ok": true,
   "project_count": 29,
@@ -116,7 +116,7 @@
   ],
   "pass_repo_count": 5,
   "bootstrap_window": false,
-  "previous_generated_at": "2026-10-26T08:16:11.141602+08:00",
+  "previous_generated_at": "2026-10-26T09:17:20.678415+08:00",
   "repo_heads": {
     "GlobalCloud AAAS": "fb0ab7eefca543334a565efbccedf8f1baadf37d",
     "GlobalCloud Brain": "d266e49a9535bce0ec0525d2831391437e115028",
@@ -133,7 +133,7 @@
     "GlobalCloud PVA": "11de53c57b736a677f3b97d256b8cc11014eb306",
     "GlobalCloud SOP": "80aa900d1b8963157f410f8099511e988cdc3a1e",
     "GlobalCloud PKC": "2a64a71656143ee21c3ef3d07d6f8144e5527a40",
-    "GlobalCloud XGD": "381e83a8545d331230f884bd57b2053ef7642545",
+    "GlobalCloud XGD": "774141be8490fd695b5baf7602480bf284ce259a",
     "GlobalCloud ICP": "2c93394336486e778dbbaacfe463d326d2298721",
     "GlobalCloud PQC": "d28d050e3edc5d19f8f5b7d0ed25ee35c6901f0e",
     "GlobalCloud SpaceAI Platform": "1bbc94de72fc979561667470a05855561a55546c",
@@ -448,7 +448,7 @@
     },
     "GlobalCloud GPCF": {
       "dirty_count": 439,
-      "ahead": 75,
+      "ahead": 76,
       "behind": 0,
       "paths": [
         "$CODEX_HOME/automations/globalcloud-17/README.md",
