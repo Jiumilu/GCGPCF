@@ -1,0 +1,19 @@
+# Tests Evidence
+
+## validate_gpcf_2_feature_workspace
+
+status: pass
+
+```text
+gpcf_2_feature_workspace=pass feature_delivery_center=true project_scope=29 new_feature_entry=enabled close_feature_exit=enabled status_promotion_allowed=false
+```
+
+## python3 -m pytest tests/test_p1_sample_intake_validator.py tests/test_p1b_grading_engine.py tests/test_p1b_pipeline.py -q
+
+status: pass
+
+```text
+........................................................................ [ 80%]
+..................                                                       [100%]
+90 passed in 2.77s
+```

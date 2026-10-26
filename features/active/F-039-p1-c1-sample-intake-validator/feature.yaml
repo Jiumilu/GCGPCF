@@ -1,0 +1,61 @@
+id: F-039
+name: p1-c1-sample-intake-validator
+project: gpcf
+status: active
+goal: 新增 P1 样本接入校验器：校验 sample-intake.yaml 的必填字段/授权/脱敏/证据等级，附 pytest；单仓低风险，不接真实数据。
+owner: 老卢
+priority: P1
+scope:
+  in:
+    - scripts/p1_sample_intake_validator.py
+    - tests/test_p1_sample_intake_validator.py
+    - tests/fixtures/p1_sample_intake_valid.yaml
+    - tests/fixtures/p1_sample_intake_missing_field.yaml
+    - tests/fixtures/p1_sample_intake_unauthorized.yaml
+  out:
+    - 不接收真实样本/不接网络
+    - 不改 GPCF 现有脚本/配置
+    - 不 commit/push/发布/合并 main
+    - 不建其他 Feature
+acceptance:
+  - 合法样例退出码 0
+  - 缺字段样例非 0，并列出 missing redaction_level/owner
+  - 未授权样例非 0，并列出 authorization violation
+  - pytest 通过
+  - 不读取真实数据
+  - diff 仅限 scope.in
+loop:
+  current_step: evaluate
+  iteration: 2
+evidence:
+  tests: pass
+  build: pass
+  screenshots: waived
+  api: waived
+  summary: pass
+blockers:
+verification:
+  tests:
+  - python3 -m pytest tests/test_p1_sample_intake_validator.py -q
+  build:
+  - python3 -m py_compile scripts/p1_sample_intake_validator.py tests/test_p1_sample_intake_validator.py
+  waivers:
+    screenshots: no UI scope; CLI-only validator
+    api: no API scope; local static validation only
+ui_product_first_control:
+  version: v1.1
+  applicability: indirect
+  user_groups:
+  - Feature 负责人
+  primary_human_task: 新增 P1 样本接入校验器：校验 sample-intake.yaml 的必填字段/授权/脱敏/证据等级，附 pytest；单仓低风险，不接真实数据。
+  machine_interface_boundary: 机器字段留在证据中；人类入口展示任务、风险和下一步
+  gates:
+    functional_completeness: pending
+    quality_baseline: pending
+    multi_user_usability: waived
+    task_flow_e2e_status: pending
+    accessibility_status: waived
+    evidence_overexposure_gate: pending
+  status_ceiling: partial
+created_at: "2026-10-26T11:29:06+00:00"
+updated_at: "2026-10-26T12:02:02+00:00"

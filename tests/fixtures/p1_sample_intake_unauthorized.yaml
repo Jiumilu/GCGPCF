@@ -1,0 +1,22 @@
+# C1 fixture: unauthorized (synthetic)
+sample_id: SAMPLE-20261026-903
+type: defect
+source_system: feedback-center
+source_ref_alias: REF-ALIAS-903
+date: 2026-10-26
+customer_alias: CUST-C
+layer: enterprise
+stage: formal
+contract_alias: HT-C
+warranty: unknown
+scope: unknown
+level: S2
+priority: P1
+evidence_grade: E1
+redaction_level: R1
+authorization:
+  approved_by: none
+  date: 2026-10-26
+  scope: P1-B trial
+owner: DSH Lead
+notes: synthetic fixture only; authorization intentionally invalid
