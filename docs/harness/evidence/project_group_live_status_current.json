@@ -541,7 +541,7 @@
     },
     "GlobalCloud GPCF": {
       "dirty_count": 460,
-      "ahead": 101,
+      "ahead": 102,
       "behind": 0,
       "paths": [
         "$CODEX_HOME/automations/globalcloud-17/README.md",
@@ -1184,7 +1184,7 @@
       ]
     },
     "GlobalCloud KDS": {
-      "dirty_count": 46,
+      "dirty_count": 47,
       "ahead": 0,
       "behind": 0,
       "paths": [
@@ -1217,6 +1217,7 @@
         "wiki/sources/research-case-010-2026-05-14.md",
         "99_Reports/daily-2026-10-26.md",
         "99_Reports/daily-mining-2026-10-24.md",
+        "99_Reports/daily-mining-2026-10-26.md",
         "99_Reports/health-2026-10-25.md",
         "99_Reports/health-2026-10-26.md",
         "\"99_Reports/\\345\\267\\245\\344\\275\\234\\346\\250\\241\\345\\274\\217/\\345\\267\\245\\344\\275\\234\\346\\250\\241\\345\\274\\217\\346\\212\\245\\345\\221\\212_2026-10-24.md\"",
