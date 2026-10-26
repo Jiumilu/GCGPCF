@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-10-26T22:18:06.457377+08:00",
+  "generated_at": "2026-10-26T22:48:43.838244+08:00",
   "freshness_hours": 12,
   "freshness_ok": true,
   "project_count": 29,
@@ -73,6 +73,7 @@
     "GlobalCloud PDC",
     "GlobalCloud PKC",
     "GlobalCloud PMC",
+    "GlobalCloud PQC",
     "GlobalCloud SOP",
     "GlobalCloud SpaceAI Platform",
     "GlobalCloud Token",
@@ -115,7 +116,7 @@
   ],
   "pass_repo_count": 6,
   "bootstrap_window": false,
-  "previous_generated_at": "2026-10-26T21:47:25.464355+08:00",
+  "previous_generated_at": "2026-10-26T22:18:06.457377+08:00",
   "repo_heads": {
     "GlobalCloud AAAS": "6d01151a74d94c2cf840d253f1791387a39070d8",
     "GlobalCloud Brain": "d266e49a9535bce0ec0525d2831391437e115028",
@@ -134,7 +135,7 @@
     "GlobalCloud PKC": "2a64a71656143ee21c3ef3d07d6f8144e5527a40",
     "GlobalCloud XGD": "774141be8490fd695b5baf7602480bf284ce259a",
     "GlobalCloud ICP": "2c93394336486e778dbbaacfe463d326d2298721",
-    "GlobalCloud PQC": "f365f2c935c1a018d01a877eebe5c43dd3276be8",
+    "GlobalCloud PQC": "4cb408f79c65da729352b88626399bf5f073dbbd",
     "GlobalCloud SpaceAI Platform": "61fe61b82a77c3d56a0a3739674985f15b11570b",
     "GlobalCloud SpaceAI Studio": "0ca7c857e306598a8c6ec591ab54b8fe55bae8b0",
     "GlobalCloud World": "b2d639787aa4ca5194cec8269ad19c4180415001",
@@ -540,7 +541,7 @@
     },
     "GlobalCloud GPCF": {
       "dirty_count": 460,
-      "ahead": 100,
+      "ahead": 101,
       "behind": 0,
       "paths": [
         "$CODEX_HOME/automations/globalcloud-17/README.md",
@@ -1371,11 +1372,10 @@
       "sensitive_paths": []
     },
     "GlobalCloud PQC": {
-      "dirty_count": 30,
-      "ahead": 7,
+      "dirty_count": 29,
+      "ahead": 8,
       "behind": 0,
       "paths": [
-        "frontend/e2e/tests/quote-lifecycle.spec.ts",
         "\"docs/business/2026-10-23_\\346\\265\\240\\346\\260\\264\\350\\233\\213\\345\\244\\232\\345\\244\\232-\\345\\256\\234\\345\\214\\226\\344\\273\\243\\345\\212\\240\\345\\267\\245\\350\\264\\271\\347\\224\\250\\346\\265\\213\\347\\256\\227_v0.3_\\351\\200\\240\\347\\262\\222\\346\\213\\211\\346\\235\\277\\344\\277\\256\\350\\256\\242.md\"",
         "\"docs/business/2026-10-23_\\346\\265\\240\\346\\260\\264\\350\\233\\213\\345\\244\\232\\345\\244\\232-\\345\\256\\234\\345\\214\\226\\344\\273\\243\\345\\212\\240\\345\\267\\245\\350\\264\\271\\347\\224\\250\\346\\265\\213\\347\\256\\227\\344\\270\\216\\346\\226\\271\\346\\241\\210_v0.2.md\"",
         "\"docs/business/2026-10-24_\\344\\270\\255\\347\\251\\272\\346\\235\\277\\350\\256\\276\\345\\244\\207\\344\\270\\211\\350\\267\\257\\347\\272\\277\\345\\257\\271\\346\\257\\224\\350\\257\\204\\346\\265\\213_v0.1.md\"",
