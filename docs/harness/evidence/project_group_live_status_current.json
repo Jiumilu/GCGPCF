@@ -20,6 +20,7 @@
     "GlobalCloud PQC",
     "GlobalCloud SpaceAI Platform",
     "GlobalCloud World",
+    "GlobalCloud Mem",
     "GlobalCloud WAE",
     "GlobalCloud PMC",
     "GlobalCloud PDC",
@@ -496,7 +497,7 @@
     },
     "GlobalCloud GPCF": {
       "dirty_count": 446,
-      "ahead": 3,
+      "ahead": 4,
       "behind": 0,
       "paths": [
         "$CODEX_HOME/automations/globalcloud-17/README.md",
@@ -1672,14 +1673,16 @@
       ]
     },
     "GlobalCloud Mem": {
-      "dirty_count": 0,
+      "dirty_count": 1,
       "ahead": 8,
       "behind": 0,
-      "paths": [],
+      "paths": [
+        "docs/slo/2026-10-27.md"
+      ],
       "sensitive_paths": []
     },
     "GlobalCloud WAE": {
-      "dirty_count": 426,
+      "dirty_count": 430,
       "ahead": 52,
       "behind": 71,
       "paths": [
@@ -1847,12 +1850,15 @@
         "packages/module-frame/src/index.tsx",
         "packages/module-frame/src/protocol.test.ts",
         "packages/module-frame/src/protocol.ts",
+        "packages/modules/module-gctoken-console/src/index.dom.test.tsx",
+        "packages/modules/module-gctoken-console/src/index.tsx",
         "packages/modules/module-mmc-console/CHANGES.md",
         "packages/modules/module-mmc-console/manifest.yaml",
         "packages/modules/module-mmc-console/package.json",
         "packages/modules/module-mmc-console/src/api.ts",
         "packages/modules/module-mmc-console/src/index.tsx",
         "pnpm-lock.yaml",
+        "scripts/check-app-assembly.mts",
         "scripts/check-apps.mts",
         "scripts/check-manifest-v1.mts",
         "scripts/collect-f034-evidence.mts",
@@ -1976,6 +1982,7 @@
         "packages/adopted-dsh/src/store/contract.ts",
         "packages/adopted-dsh/third_party/deepseek-harness/LICENSE",
         "packages/app-registry/src/externalApps.ts",
+        "packages/app-registry/src/gateSources.ts",
         "packages/app-registry/src/generated/aaas.ts",
         "packages/app-registry/src/generated/enterprise.ts",
         "packages/app-registry/src/generated/personal.ts",
@@ -2122,7 +2129,9 @@
         "packages/embed-token/src/index.test.ts",
         "packages/embed-token/src/index.ts",
         "packages/embed-token/tsconfig.json",
-        "packages/host-kit/src/host/embedTokenRoute.test.ts"
+        "packages/host-kit/src/host/embedTokenRoute.test.ts",
+        "packages/modules/module-gctoken-console/src/index.dom.test.tsx",
+        "packages/modules/module-gctoken-console/src/index.tsx"
       ]
     },
     "GlobalCloud PMC": {
