@@ -16,6 +16,7 @@ supersedes: []
 superseded_by: []
 ---
 
+
 # artifacts
 
 目录：`openspec/changes/gcworld-evidence-twin-foundation/artifacts`
