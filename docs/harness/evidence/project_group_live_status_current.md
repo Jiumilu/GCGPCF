@@ -51,7 +51,7 @@ generated_at: 2026-10-27 08:35:48 +0800
 | `GlobalCloud XiaoC` | 209 | 7 | 0 | `.env.bak-20261020-hermes-key, .harness/evidence/xiaoc-feishu-20261022/10-credentials.md, .harness/evidence/xiaoc-feishu-20261022/74-verification-token-wired.md, .harness/evidence/xiaoc-mcp-skill-20261020/23-real-smoke-hermes-credential.md, .harness/evidence/xiaoc-mcp-skill-20261020/37-caller-token-audit.jsonl, .harness/evidence/xiaoc-mcp-skill-20261020/37-caller-token-auth.md, .harness/evidence/xiaoc-mcp-skill-20261020/37-caller-token-health.json, packages/feishu-bridge/.env.example` |
 | `GlobalCloud WAME` | 6 | 0 | 0 | `none` |
 | `GlobalCloud GPC` | 1 | 8 | 0 | `none` |
-| `GlobalCloud GPCF` | 446 | 2 | 0 | `".kds/development-space/\345\274\200\345\217\221/91-\346\262\273\347\220\206\344\270\216\351\252\214\346\224\266/projects/gctoken/RISK.md", ".kds/development-space/\345\274\200\345\217\221/91-\346\262\273\347\220\206\344\270\216\351\252\214\346\224\266/projects/gctoken/ROADMAP.md", ".kds/development-space/\345\274\200\345\217\221/91-\346\262\273\347\220\206\344\270\216\351\252\214\346\224\266/projects/gctoken/STATUS.md", .harness/runs/kds-real-token-sync-20260613-062146/README.md, .harness/runs/kds-real-token-sync-20260613-062146/evidence/README.md, .harness/runs/kds-real-token-sync-20260613-062146/patches/README.md, .harness/runs/kds-real-token-sync-20260613-062146/workspaces/README.md` |
+| `GlobalCloud GPCF` | 446 | 3 | 0 | `".kds/development-space/\345\274\200\345\217\221/91-\346\262\273\347\220\206\344\270\216\351\252\214\346\224\266/projects/gctoken/RISK.md", ".kds/development-space/\345\274\200\345\217\221/91-\346\262\273\347\220\206\344\270\216\351\252\214\346\224\266/projects/gctoken/ROADMAP.md", ".kds/development-space/\345\274\200\345\217\221/91-\346\262\273\347\220\206\344\270\216\351\252\214\346\224\266/projects/gctoken/STATUS.md", .harness/runs/kds-real-token-sync-20260613-062146/README.md, .harness/runs/kds-real-token-sync-20260613-062146/evidence/README.md, .harness/runs/kds-real-token-sync-20260613-062146/patches/README.md, .harness/runs/kds-real-token-sync-20260613-062146/workspaces/README.md` |
 | `GlobalCloud XWAIL` | 1 | 0 | 20 | `none` |
 | `GlobalCloud GFIS` | 52 | 0 | 0 | `none` |
 | `GlobalCloud MMC` | 137 | 7 | 9 | `console/.env.example` |
@@ -67,8 +67,8 @@ generated_at: 2026-10-27 08:35:48 +0800
 | `GlobalCloud SpaceAI Studio` | 0 | 0 | 0 | `none` |
 | `GlobalCloud World` | 155 | 0 | 0 | `.env.example, docs/architecture/auth-embed-token-handoff.md, docs/harness/evidence/screenshots/phase12/token-handoff-1440.png, packages/server/src/services/embed-token.ts, scripts/mint-embed-token.mjs, tests/server/auth-embed-token.test.ts` |
 | `GlobalCloud Mem` | 0 | 8 | 0 | `none` |
-| `GlobalCloud WAE` | 376 | 52 | 71 | `apps/wame/.env.example, docs/evidence/R1/supply-chain/secret-scan.json, packages/embed-token/README.md, packages/embed-token/package.json, packages/embed-token/src/index.test.ts, packages/embed-token/src/index.ts, packages/embed-token/tsconfig.json, packages/host-kit/src/host/embedTokenRoute.test.ts` |
-| `GlobalCloud PMC` | 3 | 3 | 0 | `none` |
+| `GlobalCloud WAE` | 426 | 52 | 71 | `apps/wame/.env.example, docs/evidence/F-034/logs/11-check-tokens-parity.exit, docs/evidence/F-034/logs/11-check-tokens-parity.log, docs/evidence/F-034/logs/17-check-tokens-registry.exit, docs/evidence/F-034/logs/17-check-tokens-registry.log, docs/evidence/R1/supply-chain/secret-scan.json, packages/embed-token/README.md, packages/embed-token/package.json, packages/embed-token/src/index.test.ts, packages/embed-token/src/index.ts, packages/embed-token/tsconfig.json, packages/host-kit/src/host/embedTokenRoute.test.ts` |
+| `GlobalCloud PMC` | 4 | 3 | 0 | `none` |
 | `GlobalCloud PDC` | 59 | 16 | 0 | `.env.example` |
 | `GlobalCloud SLC` | 0 | 0 | 0 | `none` |
 | `GlobalCloud DRC` | 0 | 0 | 0 | `none` |
