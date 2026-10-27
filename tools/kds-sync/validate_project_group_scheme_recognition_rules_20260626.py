@@ -8,7 +8,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[3]
-GPCF = ROOT / "GlobalCoud GPCF"
+GPCF = ROOT / "GlobalCloud GPCF"
 INDEX = GPCF / "02-governance/GlobalCloud 项目群方案体系识别规则.md"
 MASTER_PLAN = GPCF / "01-architecture/GlobalCloud 项目群总体方案.md"
 IMPLEMENTATION_PLAN = GPCF / "GlobalCloud 项目群实施方案.md"
@@ -89,7 +89,7 @@ PROJECT_FILES = {
         "GlobalCloud XiaoG 总体方案.md",
         "GlobalCloud XiaoG 实施方案.md",
     ),
-    "GlobalCoud GPCF": (
+    "GlobalCloud GPCF": (
         "AGENTS.md",
         "GlobalCloud GPCF 总体方案.md",
         "GlobalCloud GPCF 实施方案.md",

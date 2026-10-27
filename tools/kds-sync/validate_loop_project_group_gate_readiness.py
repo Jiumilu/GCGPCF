@@ -38,7 +38,7 @@ REPOS = [
     ("GlobalCloud XWAIL", PROJECT_GROUP_ROOT / "GlobalCloud XWAIL"),
     ("GlobalCloud XiaoC", PROJECT_GROUP_ROOT / "GlobalCloud XiaoC"),
     ("GlobalCloud XiaoG", PROJECT_GROUP_ROOT / "GlobalCloud XiaoG"),
-    ("GlobalCoud GPCF", PROJECT_GROUP_ROOT / "GlobalCoud GPCF"),
+    ("GlobalCloud GPCF", PROJECT_GROUP_ROOT / "GlobalCloud GPCF"),
     ("WAS世界资产体系", PROJECT_GROUP_ROOT / "WAS世界资产体系"),
 ]
 
