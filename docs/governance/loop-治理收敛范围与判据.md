@@ -174,6 +174,25 @@ grep -rn "validate_cwme_ontology_chain\|validate_cwme_space_domain_extension_reg
 
 **关键区分（防误判）**：A6 那三步在 `governance.yml`，用的是 ubuntu-latest，**不受本机 self-hosted runner 禁用影响**；依赖 self-hosted 的是 `standards.yml`，它的在线性未证实——两者不能混成一句「CI 跑不起来」。
 
+### 4.2.1 「会不会跑」的证据分层（照抄结论前先看这一栏）
+
+判断「这条门禁会不会跑」必须**逐个 workflow 看 `runs-on`**，不许按仓、按人、按本机进程推——同一仓里可能两种 runner 并存。
+
+**已证**
+1. 本机 `Runner.Listener` 进程数 = 0；
+2. 本机唯一 runner `actions.runner.Jiumilu-GCGPCF.mac-mini-gpcf.plist.disabled-20261022` 处于禁用态（10-22）；
+3. `gh api repos/Jiumilu/GCGPCF/actions/runners` 返回 0 个；
+4. `standards.yml` 最近一次运行 `40414681461` = **success / 13s / 2026-10-26 22:44Z**；
+5. `governance.yml`、`console.yml` 的 `runs-on` 均为 `ubuntu-latest`（GitHub 托管，不依赖本机 runner）。
+
+**未证**
+- `standards.yml` 那次 success **是谁执行的**（进程不在、API 报 0，却成功过）。
+
+**推得出来的**：`standards.yml` 的「在线性**未证实**」；A6 所在的 `governance.yml` 不受本机 runner 禁用影响。
+**推不出来的**：「这条门禁是死的」——三个已证事实合起来推不出该结论。
+
+**处置**：runner 健康核**交运维官统一核**（属对外连接与凭据，红线，本仓不碰）；本页只登记状态，标「待运维官核」。
+
 ### 4.3 A6 红路（验在 sweep 上，因为那是当前唯一本地真入口）
 
 ```
