@@ -26,7 +26,7 @@ PROJECT_PLAN_CANDIDATES = {
     "GlobalCloud XGD": [PROJECT_ROOT / "GlobalCloud XGD/GlobalCloud XGD 总体方案.md"],
     "GlobalCloud XiaoC": [PROJECT_ROOT / "GlobalCloud XiaoC/GlobalCloud XiaoC 总体方案.md"],
     "GlobalCloud XiaoG": [PROJECT_ROOT / "GlobalCloud XiaoG/GlobalCloud XiaoG 总体方案.md"],
-    "GlobalCoud GPCF": [PROJECT_ROOT / "GlobalCoud GPCF/GlobalCloud GPCF 总体方案.md"],
+    "GlobalCloud GPCF": [PROJECT_ROOT / "GlobalCloud GPCF/GlobalCloud GPCF 总体方案.md"],
 }
 
 
