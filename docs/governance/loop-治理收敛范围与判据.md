@@ -124,3 +124,4 @@ git log --since="<月初>" --numstat --format="%h %ad" --date=short -- "02-gover
 - **会话 ID**：`session-4acd4b7f-d146-419a-91d8-2e01d7207f52`
 - **关键命令与退出码**：`git log -1` rc=0；基线统计 heredoc（§1）rc=0；`python3 tools/kds-sync/document_control.py --check` rc=0；`python3 tools/kds-sync/loop_document_gate.py --check-only --repository-only` rc=0
 - **复核人**：待 Chief / 运营官按台账核
+- **复核防误判**：`loop_document_gate.py` 的 `check_failures.feature_workspace` 会因**其他属主正在写 `features/*/feature.yaml`** 而瞬时变红（2026-10-27 21:16 实测一次，写入完成后复跑 rc=0）。遇到该红项先看是否跨属主并发写，不要当成 loop 收敛的证据。
