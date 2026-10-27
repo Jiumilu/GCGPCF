@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-10-27T18:20:17.296074+08:00",
+  "generated_at": "2026-10-27T18:50:58.027571+08:00",
   "freshness_hours": 12,
   "freshness_ok": true,
   "project_count": 29,
@@ -118,7 +118,7 @@
   ],
   "pass_repo_count": 6,
   "bootstrap_window": false,
-  "previous_generated_at": "2026-10-27T17:16:55.837735+08:00",
+  "previous_generated_at": "2026-10-27T18:20:17.296074+08:00",
   "repo_heads": {
     "GlobalCloud AAAS": "29d16215b6445385002fb3682626fe17d1feb450",
     "GlobalCloud Brain": "d266e49a9535bce0ec0525d2831391437e115028",
@@ -134,10 +134,10 @@
     "GlobalCloud XiaoG": "e8c953ae0e12574c52024c060ddf9e68b00c08af",
     "GlobalCloud PVA": "647433c40e4da1f85e171d1dceeef1856d724019",
     "GlobalCloud SOP": "80aa900d1b8963157f410f8099511e988cdc3a1e",
-    "GlobalCloud PKC": "1f2025ed1cf9ea147453a1e5aecbd25f943697dd",
+    "GlobalCloud PKC": "e0195048c4ff209b7f691cae73b7df8c47e65f88",
     "GlobalCloud XGD": "774141be8490fd695b5baf7602480bf284ce259a",
     "GlobalCloud ICP": "2c93394336486e778dbbaacfe463d326d2298721",
-    "GlobalCloud PQC": "8de179fd6a7ae9bc97b37ee469598302895e8234",
+    "GlobalCloud PQC": "6505beb276511d3ed88d1673f087d8413a0116da",
     "GlobalCloud SpaceAI Platform": "d459acf2a6a546e5c03c636eb3b7c982b2b5ded8",
     "GlobalCloud SpaceAI Studio": "0ca7c857e306598a8c6ec591ab54b8fe55bae8b0",
     "GlobalCloud World": "b2d639787aa4ca5194cec8269ad19c4180415001",
@@ -498,7 +498,7 @@
     },
     "GlobalCloud GPCF": {
       "dirty_count": 154,
-      "ahead": 66,
+      "ahead": 68,
       "behind": 0,
       "paths": [
         "$CODEX_HOME/automations/globalcloud-17/README.md",
@@ -1085,7 +1085,7 @@
     },
     "GlobalCloud PKC": {
       "dirty_count": 0,
-      "ahead": 8,
+      "ahead": 10,
       "behind": 0,
       "paths": [],
       "sensitive_paths": []
@@ -1105,8 +1105,8 @@
       "sensitive_paths": []
     },
     "GlobalCloud PQC": {
-      "dirty_count": 46,
-      "ahead": 12,
+      "dirty_count": 47,
+      "ahead": 15,
       "behind": 0,
       "paths": [
         "backend/app/auth.py",
@@ -1117,6 +1117,7 @@
         "frontend/app/Chrome.tsx",
         "frontend/e2e/helpers.ts",
         "frontend/lib/api.ts",
+        "frontend/tsconfig.json",
         "scripts/e2e_up.sh",
         "backend/app/api_embed.py",
         "backend/app/embed.py",
@@ -1388,7 +1389,7 @@
       "sensitive_paths": []
     },
     "GlobalCloud WAE": {
-      "dirty_count": 366,
+      "dirty_count": 391,
       "ahead": 77,
       "behind": 71,
       "paths": [
@@ -1431,6 +1432,7 @@
         "apps/wame/src/styles/index.css",
         "\"docs/access/PKC\\346\\216\\245\\345\\205\\245\\345\\215\\217\\350\\256\\256_v0.1.md\"",
         "docs/assembly-spec/assembly.city.yaml",
+        "docs/evidence/F-034/README.md",
         "docs/evidence/F-034/logs/01-test-framework.log",
         "docs/evidence/F-034/logs/02-typecheck.log",
         "docs/evidence/F-034/logs/03-wame-vitest.log",
@@ -1567,6 +1569,22 @@
         "docs/assembly-spec/placement.sop-cockpit.proposal.yaml",
         "docs/assembly-spec/sop-cockpit-four-layer-proposal.md",
         "docs/assembly-spec/sop-embed-handoff.md",
+        "docs/docs/evidence/DEMO/runs/20261027-183249-A.exit",
+        "docs/docs/evidence/DEMO/runs/20261027-183249-B.exit",
+        "docs/docs/evidence/DEMO/runs/20261027-183315-A.exit",
+        "docs/docs/evidence/DEMO/runs/20261027-183315-B.exit",
+        "docs/docs/evidence/DEMO/runs/20261027-183332-post.exit",
+        "docs/docs/evidence/DEMO/runs/20261027-183332-pre.exit",
+        "docs/docs/evidence/DEMO/runs/20261027-184502-A.exit",
+        "docs/docs/evidence/DEMO/runs/20261027-184502-B.exit",
+        "docs/evidence/DEMO/demo-check.sh",
+        "docs/evidence/DEMO/pqc-walkthrough.json",
+        "docs/evidence/DEMO/pqc-walkthrough.md",
+        "docs/evidence/DEMO/walkthrough-post.json",
+        "docs/evidence/DEMO/walkthrough-post.md",
+        "docs/evidence/DEMO/walkthrough-pre.json",
+        "docs/evidence/DEMO/walkthrough-pre.md",
+        "\"docs/evidence/DEMO/\\350\\265\\260\\346\\237\\245\\346\\270\\205\\345\\215\\225-v1.md\"",
         "docs/evidence/F-034/logs/rerun-1011/05-e2e-dual-role.exit",
         "docs/evidence/F-034/logs/rerun-1011/06-e2e-pkc-intake.exit",
         "docs/evidence/F-034/logs/rerun-1011/09-check-app-assembly.exit",
@@ -1592,6 +1610,12 @@
         "docs/evidence/F-034/visual/pixel-archive-20261023/home-1440.png",
         "docs/evidence/F-034/visual/pixel-archive-20261023/pkc-intake-1440.png",
         "docs/evidence/F-034/visual/pixel-archive-20261023/service-hub-1440.png",
+        "docs/evidence/F-034/visual/pixel-archive-20261027a/app-shell-1440.png",
+        "docs/evidence/F-034/visual/pixel-archive-20261027a/home-1440.png",
+        "docs/evidence/F-034/visual/pixel-archive-20261027a/pkc-intake-1440.png",
+        "docs/evidence/F-034/visual/pixel-archive-20261027a/service-hub-1440.png",
+        "docs/evidence/F-034/visual/pixel/SHA256SUMS",
+        "docs/evidence/F-034/visual/pixel/SIGNOFF.md",
         "docs/evidence/F-034/visual/pixel/home-dark-1440.png",
         "docs/evidence/F-034/visual/pixel/home-light-1440.png",
         "docs/evidence/F-034/visual/pixel/idp-console-dark-1440.png",
@@ -1757,6 +1781,8 @@
         "packages/sop-core/src/types.ts",
         "packages/sop-core/tsconfig.json",
         "scripts/check-authz-consistency.mts",
+        "scripts/demo/pqc-walkthrough.mts",
+        "scripts/demo/walkthrough.mts",
         "scripts/qa-probe-dom.mts"
       ],
       "sensitive_paths": [
