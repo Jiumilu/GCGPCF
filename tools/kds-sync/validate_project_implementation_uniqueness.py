@@ -26,7 +26,7 @@ EXPECTED_IMPLEMENTATION_PLANS = {
     "GlobalCloud XGD": [PROJECT_ROOT / "GlobalCloud XGD/GlobalCloud XGD 实施方案.md"],
     "GlobalCloud XiaoC": [PROJECT_ROOT / "GlobalCloud XiaoC/GlobalCloud XiaoC 实施方案.md"],
     "GlobalCloud XiaoG": [PROJECT_ROOT / "GlobalCloud XiaoG/GlobalCloud XiaoG 实施方案.md"],
-    "GlobalCloud GPCF": [PROJECT_ROOT / "GlobalCoud GPCF/GlobalCloud GPCF 实施方案.md"],
+    "GlobalCloud GPCF": [PROJECT_ROOT / "GlobalCloud GPCF/GlobalCloud GPCF 实施方案.md"],
     "GlobalCloud ICP": [PROJECT_ROOT / "GlobalCloud ICP/GlobalCloud ICP 实施方案.md"],
 }
 
