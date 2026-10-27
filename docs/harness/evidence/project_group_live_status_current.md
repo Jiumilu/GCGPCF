@@ -18,14 +18,14 @@ superseded_by: []
 data_layer: derived
 authority_level: A2
 verification_status: source_verified
-generated_at: 2026-10-27 07:29:15 +0800
+generated_at: 2026-10-27 08:00:25 +0800
 ---
 
 # GlobalCloud 项目群当前 Live 状态快照
 
 ## Summary
 
-- generated_at: `2026-10-27T07:29:15.938555+08:00`
+- generated_at: `2026-10-27T08:00:25.980278+08:00`
 - freshness_ok: `true`
 - project_count: `29`
 - pass_repo_count: `6`
@@ -34,43 +34,43 @@ generated_at: 2026-10-27 07:29:15 +0800
 ## Current sets
 
 - observed_dirty: `GlobalCloud AAAS, GlobalCloud Brain, GlobalCloud XiaoC, GlobalCloud WAME, GlobalCloud GPC, GlobalCloud GPCF, GlobalCloud XWAIL, GlobalCloud GFIS, GlobalCloud MMC, GlobalCloud KDS, GlobalCloud XiaoG, GlobalCloud PVA, GlobalCloud PQC, GlobalCloud SpaceAI Platform, GlobalCloud World, GlobalCloud WAE, GlobalCloud PMC, GlobalCloud PDC, GlobalCloud FireQuote`
-- observed_ahead: `GlobalCloud Brain, GlobalCloud XiaoC, GlobalCloud WAME, GlobalCloud GPC, GlobalCloud MMC, GlobalCloud XiaoG, GlobalCloud SOP, GlobalCloud PKC, GlobalCloud PQC, GlobalCloud SpaceAI Platform, GlobalCloud Mem, GlobalCloud WAE, GlobalCloud PMC, GlobalCloud PDC, GlobalCloud Token`
+- observed_ahead: `GlobalCloud Brain, GlobalCloud XiaoC, GlobalCloud GPC, GlobalCloud GPCF, GlobalCloud MMC, GlobalCloud XiaoG, GlobalCloud SOP, GlobalCloud PKC, GlobalCloud PQC, GlobalCloud SpaceAI Platform, GlobalCloud Mem, GlobalCloud WAE, GlobalCloud PMC, GlobalCloud PDC, GlobalCloud Token`
 - stable_dirty: `GlobalCloud AAAS, GlobalCloud Brain, GlobalCloud FireQuote, GlobalCloud GFIS, GlobalCloud GPC, GlobalCloud GPCF, GlobalCloud KDS, GlobalCloud MMC, GlobalCloud PDC, GlobalCloud PMC, GlobalCloud PQC, GlobalCloud PVA, GlobalCloud SpaceAI Platform, GlobalCloud WAE, GlobalCloud WAME, GlobalCloud World, GlobalCloud XWAIL, GlobalCloud XiaoC, GlobalCloud XiaoG`
-- stable_ahead: `GlobalCloud Brain, GlobalCloud GPC, GlobalCloud MMC, GlobalCloud Mem, GlobalCloud PDC, GlobalCloud PKC, GlobalCloud PMC, GlobalCloud PQC, GlobalCloud SOP, GlobalCloud SpaceAI Platform, GlobalCloud Token, GlobalCloud WAE, GlobalCloud WAME, GlobalCloud XiaoC, GlobalCloud XiaoG`
+- stable_ahead: `GlobalCloud Brain, GlobalCloud GPC, GlobalCloud MMC, GlobalCloud Mem, GlobalCloud PDC, GlobalCloud PKC, GlobalCloud PMC, GlobalCloud PQC, GlobalCloud SOP, GlobalCloud SpaceAI Platform, GlobalCloud Token, GlobalCloud WAE, GlobalCloud XiaoC, GlobalCloud XiaoG`
 - volatile_dirty: `GlobalCloud GPCF`
-- sensitive_repos: `GlobalCloud XiaoC, GlobalCloud GPCF, GlobalCloud MMC, GlobalCloud PVA, GlobalCloud World, GlobalCloud WAE`
+- sensitive_repos: `GlobalCloud AAAS, GlobalCloud XiaoC, GlobalCloud GPCF, GlobalCloud MMC, GlobalCloud PVA, GlobalCloud World, GlobalCloud WAE`
 - review_boundary: `GlobalCloud AAAS, GlobalCloud Brain, GlobalCloud FireQuote, GlobalCloud GFIS, GlobalCloud GPC, GlobalCloud GPCF, GlobalCloud KDS, GlobalCloud MMC, GlobalCloud PDC, GlobalCloud PMC, GlobalCloud PQC, GlobalCloud PVA, GlobalCloud SpaceAI Platform, GlobalCloud WAE, GlobalCloud WAME, GlobalCloud World, GlobalCloud XWAIL, GlobalCloud XiaoC, GlobalCloud XiaoG`
 
 ## Repo details
 
 | Repo | dirty_count | ahead | behind | sensitive_paths |
 |---|---:|---:|---:|---|
-| `GlobalCloud AAAS` | 15 | 0 | 0 | `none` |
+| `GlobalCloud AAAS` | 39 | 0 | 0 | `docs/design/aaas-console/prototype/gc.tokens.css` |
 | `GlobalCloud Brain` | 1 | 3 | 0 | `none` |
 | `GlobalCloud WAS` | 0 | 0 | 0 | `none` |
 | `GlobalCloud XiaoC` | 209 | 7 | 0 | `.env.bak-20261020-hermes-key, .harness/evidence/xiaoc-feishu-20261022/10-credentials.md, .harness/evidence/xiaoc-feishu-20261022/74-verification-token-wired.md, .harness/evidence/xiaoc-mcp-skill-20261020/23-real-smoke-hermes-credential.md, .harness/evidence/xiaoc-mcp-skill-20261020/37-caller-token-audit.jsonl, .harness/evidence/xiaoc-mcp-skill-20261020/37-caller-token-auth.md, .harness/evidence/xiaoc-mcp-skill-20261020/37-caller-token-health.json, packages/feishu-bridge/.env.example` |
-| `GlobalCloud WAME` | 6 | 1 | 26 | `none` |
+| `GlobalCloud WAME` | 6 | 0 | 0 | `none` |
 | `GlobalCloud GPC` | 1 | 8 | 0 | `none` |
-| `GlobalCloud GPCF` | 446 | 0 | 0 | `".kds/development-space/\345\274\200\345\217\221/91-\346\262\273\347\220\206\344\270\216\351\252\214\346\224\266/projects/gctoken/RISK.md", ".kds/development-space/\345\274\200\345\217\221/91-\346\262\273\347\220\206\344\270\216\351\252\214\346\224\266/projects/gctoken/ROADMAP.md", ".kds/development-space/\345\274\200\345\217\221/91-\346\262\273\347\220\206\344\270\216\351\252\214\346\224\266/projects/gctoken/STATUS.md", .harness/runs/kds-real-token-sync-20260613-062146/README.md, .harness/runs/kds-real-token-sync-20260613-062146/evidence/README.md, .harness/runs/kds-real-token-sync-20260613-062146/patches/README.md, .harness/runs/kds-real-token-sync-20260613-062146/workspaces/README.md` |
+| `GlobalCloud GPCF` | 446 | 1 | 0 | `".kds/development-space/\345\274\200\345\217\221/91-\346\262\273\347\220\206\344\270\216\351\252\214\346\224\266/projects/gctoken/RISK.md", ".kds/development-space/\345\274\200\345\217\221/91-\346\262\273\347\220\206\344\270\216\351\252\214\346\224\266/projects/gctoken/ROADMAP.md", ".kds/development-space/\345\274\200\345\217\221/91-\346\262\273\347\220\206\344\270\216\351\252\214\346\224\266/projects/gctoken/STATUS.md", .harness/runs/kds-real-token-sync-20260613-062146/README.md, .harness/runs/kds-real-token-sync-20260613-062146/evidence/README.md, .harness/runs/kds-real-token-sync-20260613-062146/patches/README.md, .harness/runs/kds-real-token-sync-20260613-062146/workspaces/README.md` |
 | `GlobalCloud XWAIL` | 1 | 0 | 20 | `none` |
 | `GlobalCloud GFIS` | 52 | 0 | 0 | `none` |
-| `GlobalCloud MMC` | 129 | 7 | 9 | `console/.env.example` |
+| `GlobalCloud MMC` | 137 | 7 | 9 | `console/.env.example` |
 | `GlobalCloud KDS` | 47 | 0 | 0 | `none` |
 | `GlobalCloud XiaoG` | 1 | 1082 | 16 | `none` |
-| `GlobalCloud PVA` | 109 | 0 | 0 | `design/prototype/shots/01-tokens-dark.png, design/prototype/shots/11-tokens-light.png` |
+| `GlobalCloud PVA` | 125 | 0 | 0 | `design/prototype/shots/01-tokens-dark.png, design/prototype/shots/11-tokens-light.png` |
 | `GlobalCloud SOP` | 0 | 1 | 0 | `none` |
 | `GlobalCloud PKC` | 0 | 6 | 0 | `none` |
 | `GlobalCloud XGD` | 0 | 0 | 0 | `none` |
 | `GlobalCloud ICP` | 0 | 0 | 0 | `none` |
-| `GlobalCloud PQC` | 29 | 11 | 0 | `none` |
-| `GlobalCloud SpaceAI Platform` | 35 | 27 | 0 | `none` |
+| `GlobalCloud PQC` | 29 | 12 | 0 | `none` |
+| `GlobalCloud SpaceAI Platform` | 37 | 29 | 0 | `none` |
 | `GlobalCloud SpaceAI Studio` | 0 | 0 | 0 | `none` |
-| `GlobalCloud World` | 73 | 0 | 0 | `.env.example` |
+| `GlobalCloud World` | 150 | 0 | 0 | `.env.example, docs/architecture/auth-embed-token-handoff.md, packages/server/src/services/embed-token.ts, scripts/mint-embed-token.mjs, tests/server/auth-embed-token.test.ts` |
 | `GlobalCloud Mem` | 0 | 8 | 0 | `none` |
-| `GlobalCloud WAE` | 349 | 48 | 71 | `apps/wame/.env.example, docs/evidence/R1/supply-chain/secret-scan.json` |
+| `GlobalCloud WAE` | 371 | 49 | 71 | `apps/wame/.env.example, docs/evidence/R1/supply-chain/secret-scan.json, packages/embed-token/README.md, packages/embed-token/package.json, packages/embed-token/src/index.test.ts, packages/embed-token/src/index.ts, packages/embed-token/tsconfig.json, packages/modules/module-gctoken-console/CHANGES.md, packages/modules/module-gctoken-console/README.md, packages/modules/module-gctoken-console/manifest.yaml, packages/modules/module-gctoken-console/package.json, packages/modules/module-gctoken-console/src/index.dom.test.tsx, packages/modules/module-gctoken-console/src/index.tsx` |
 | `GlobalCloud PMC` | 3 | 3 | 0 | `none` |
-| `GlobalCloud PDC` | 1 | 16 | 0 | `none` |
+| `GlobalCloud PDC` | 29 | 16 | 0 | `none` |
 | `GlobalCloud SLC` | 0 | 0 | 0 | `none` |
 | `GlobalCloud DRC` | 0 | 0 | 0 | `none` |
 | `GlobalCloud FireQuote` | 38 | 0 | 0 | `none` |
-| `GlobalCloud Token` | 0 | 2 | 0 | `none` |
+| `GlobalCloud Token` | 0 | 5 | 0 | `none` |
