@@ -51,7 +51,7 @@ generated_at: 2026-10-27 17:16:55 +0800
 | `GlobalCloud XiaoC` | 209 | 7 | 0 | `.env.bak-20261020-hermes-key, .harness/evidence/xiaoc-feishu-20261022/10-credentials.md, .harness/evidence/xiaoc-feishu-20261022/74-verification-token-wired.md, .harness/evidence/xiaoc-mcp-skill-20261020/23-real-smoke-hermes-credential.md, .harness/evidence/xiaoc-mcp-skill-20261020/37-caller-token-audit.jsonl, .harness/evidence/xiaoc-mcp-skill-20261020/37-caller-token-auth.md, .harness/evidence/xiaoc-mcp-skill-20261020/37-caller-token-health.json, packages/feishu-bridge/.env.example` |
 | `GlobalCloud WAME` | 6 | 0 | 0 | `none` |
 | `GlobalCloud GPC` | 1 | 8 | 0 | `none` |
-| `GlobalCloud GPCF` | 135 | 48 | 0 | `none` |
+| `GlobalCloud GPCF` | 11 | 64 | 0 | `none` |
 | `GlobalCloud XWAIL` | 1 | 0 | 20 | `none` |
 | `GlobalCloud GFIS` | 52 | 0 | 0 | `none` |
 | `GlobalCloud MMC` | 137 | 7 | 9 | `console/.env.example` |
@@ -62,7 +62,7 @@ generated_at: 2026-10-27 17:16:55 +0800
 | `GlobalCloud PKC` | 0 | 8 | 0 | `none` |
 | `GlobalCloud XGD` | 0 | 0 | 0 | `none` |
 | `GlobalCloud ICP` | 0 | 0 | 0 | `none` |
-| `GlobalCloud PQC` | 42 | 12 | 0 | `none` |
+| `GlobalCloud PQC` | 44 | 12 | 0 | `none` |
 | `GlobalCloud SpaceAI Platform` | 35 | 31 | 0 | `none` |
 | `GlobalCloud SpaceAI Studio` | 0 | 0 | 0 | `none` |
 | `GlobalCloud World` | 155 | 0 | 0 | `.env.example, docs/architecture/auth-embed-token-handoff.md, docs/harness/evidence/screenshots/phase12/token-handoff-1440.png, packages/server/src/services/embed-token.ts, scripts/mint-embed-token.mjs, tests/server/auth-embed-token.test.ts` |
