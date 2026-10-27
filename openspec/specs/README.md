@@ -16,7 +16,6 @@ supersedes: []
 superseded_by: []
 ---
 
-
 # OpenSpec 主规格
 
 目录：`openspec/specs`
