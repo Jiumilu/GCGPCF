@@ -107,6 +107,7 @@ PY
 | J2 | 误伤为零 | 「归档建议」集合 ∩ 「T1/T2 读取」集合 = 空 | 会变：把 `LOOP_RISK_GATE` 放进归档建议，交集立即非空 |
 | J3 | 暂停新增可观测 | **J3-a（判据）**：`02-governance/loop/` 连续 2 个完整自然月新增 `.md` 篇数 = 0；**J3-b（仅观测，不作判据）**：净增行数 | 会变：只要当月新增 1 篇，J3-a 立刻从成立变不成立 |
 | J4 | 挂账口径一致 | `features/done/F-004-loop-governance-slimming/feature.yaml` 为**唯一状态源**，PMC #255 为投影（Chief 2026-10-27 裁定） | 会变：feature.yaml 的 `second_round.status` 改一次，口径就变一次 |
+| J5 | 搬迁类改动无旧路径残留 | 可执行代码（`.py`/`.sh`/`.bash`）中旧路径常量命中 = 0；数据/证据/记录文件出现旧路径时，须同文件写明新路径（迁移留痕）；`.md` 不在判据范围 | 会变：新增一处代码硬编码旧路径，命中即从 0 变 1 |
 
 J3 已落地为观测器（只读）：
 
@@ -129,7 +130,39 @@ python3 tools/kds-sync/report_loop_governance_growth.py --strict   # 需要时�
 
 **为什么把规则 2 也纳入观测**：冻结规则 2「暂停新增非 P0 validator」同样没有观测手段，而实测 2026-08 新增 18 个、2026-09 新增 3 个、2026-10 至 27 日已新增 34 个 `.py`。规则没人看，就是口号。
 
-判据使用纪律：以上四条均为可复跑计数，不接受「基本完成」「已收敛」这类口头表述；报数必须同屏给命令与输出。
+### 4.1 J5：搬迁类改动的判据（2026-10-27 实测落地）
+
+事故：KDS `b26fff66a`（2026-10-13 `git mv` 保历史）把 `世界资产/世界模型引擎/ontology` 迁到 `世界资产/引擎/ontology`，同步了活跃区 158 处引用，漏了 GPCF 两个验证器的路径常量 → 两条门禁双双 `exit 1`，静默 14 天无人发现。
+
+修复：`1448f6339`，只改 4 行路径常量、不动逻辑（`validate_cwme_ontology_chain.py` 1 行、`validate_cwme_space_domain_extension_registration_request.py` 3 行）。改前两条 `exit=1`（`FAIL: missing file: cwme-ext.ttl` / `FAIL: attachment missing: …/世界模型引擎/ontology/cwme-ext.ttl`），改后两条 `exit=0`。
+
+判据命令（代码/配置后缀，范围 GPCF + KDS）：
+
+```bash
+OLD="世界模型引擎/ontology"
+grep -rn "$OLD" "GlobalCloud GPCF" "GlobalCloud KDS" \
+  --include=*.py --include=*.sh --include=*.bash --include=*.yaml --include=*.yml \
+  --include=*.json --include=*.toml --include=*.ts --include=*.js \
+  --exclude-dir=node_modules --exclude-dir=.git | wc -l
+```
+
+2026-10-27 实测（改后）：可执行代码命中 **0**；6 个数据/记录文件共 10 行命中，且**全部**同文件内已写明新路径（留痕合格）。改前：两个被改文件分别 1 行 + 3 行。
+
+**为什么判据不是「全仓命中 0」**：历史证据 JSON 里的旧路径是当时的史实，把它改成新路径等于伪造历史并切断血缘；`features/active/F-017…/feature.yaml` 那种「现路径 X；journal 记载为 Y」的写法正是合规留痕。若把判据写成全仓 0，下一次搬迁会逼人改写历史记录——判据反过来伤害证据链。
+
+**为什么 `.md` 不在判据范围**：规则文档必须能写出旧路径才传得下去，纳入就会判据自匹配（本页会命中自己）。
+
+**这条判据必须成对使用**：路径改对 ≠ 门禁修好。本次两条脚本**不在 CI、不在手动入口、不被任何脚本调用**（复核命令见下），所以哪怕路径昨天就改对，14 天里也没有一次运行机会。「修好没人跑」与 §1.1「CI 绿不是判据」是同一个病：门禁的价值等于它的入口覆盖，不等于脚本存在。
+
+```bash
+grep -rn "validate_cwme_ontology_chain\|validate_cwme_space_domain_extension_registration_request" \
+  --include=*.yml --include=*.yaml --include=*.sh --include=*.py \
+  --exclude-dir=node_modules --exclude-dir=.git --exclude-dir=.kds --exclude-dir=.okf . \
+  | grep -v "^./tools/kds-sync/validate_" | grep -v "^./docs/"
+# 期望：无输出（当前实测即无输出 → 两条门禁仍无入口，已列入 §5 A6）
+```
+
+判据使用纪律：以上五条均为可复跑计数，不接受「基本完成」「已收敛」这类口头表述；报数必须同屏给命令与输出。
 
 ## 5. 待裁定（本页只列，不自行执行）
 
@@ -140,12 +173,13 @@ python3 tools/kds-sync/report_loop_governance_growth.py --strict   # 需要时�
 | A3 | 49 个无入口脚本是否批量标 `P2 仅审计` | 未动 | 批量改档需 Chief 书面；且需逐个确认无一被外部定时任务调用 |
 | A4 | F-004 关闭口径与 PMC #255 对齐 | **已裁定（Chief 2026-10-27）**：以仓内 `feature.yaml` 为准，PMC 是投影。首轮 done = 首轮收敛完成，当前为第二轮 | 已在 `feature.yaml` 增 `second_round` 段（`starts: 2026-10-27`、`pmc_ref: PMC #255`、判据 J1–J4、观测值、`explicit_non_actions`） |
 | A5 | PMC 同步器路径 typo（`GlobalCoud GPCF`，缺一个 `l`）导致 `pmc_sync_gpcf` 退出码 1 | 已实测 | 不在本仓写区，Chief 2026-10-27 回复已另转人修，不经本仓 |
+| A6 | 两条 CWME 门禁（`validate_cwme_ontology_chain`、`validate_cwme_space_domain_extension_registration_request`）修好路径后**仍无任何入口**：不在 CI、不在 `gpcf_full_sweep.py`、不被任何脚本调用 | 路径已修（`1448f6339`，两条 exit=0） | 是否纳入 `scripts/gpcf_full_sweep.py` 或 `.github/workflows/governance.yml` 属门禁变更，需 Chief 书面；不加则下一次搬迁仍可能静默 14 天 |
 
 ## 6. 四栏头
 
 - **出具人**：GPCF 属主（Bot）
 - **会话 ID**：`session-4acd4b7f-d146-419a-91d8-2e01d7207f52`
-- **关键命令与退出码**：`git log -1` rc=0；基线统计 heredoc（§1）rc=0；`python3 tools/kds-sync/report_loop_governance_growth.py` rc=0；`python3 tools/kds-sync/document_control.py --check` rc=0；`python3 tools/kds-sync/loop_document_gate.py --check-only --repository-only` rc=0；`python3 tools/kds-sync/validate_gpcf_2_feature_workspace.py` rc=0
+- **关键命令与退出码**：`git log -1` rc=0；基线统计 heredoc（§1）rc=0；`python3 tools/kds-sync/report_loop_governance_growth.py` rc=0；`python3 tools/kds-sync/document_control.py --check` rc=0；`python3 tools/kds-sync/loop_document_gate.py --check-only --repository-only` rc=0；`python3 tools/kds-sync/validate_gpcf_2_feature_workspace.py` rc=0；CWME 两条门禁改前 exit=1 / 改后 exit=0（§4.1，commit `1448f6339`）
 - **配套文件**：`docs/governance/loop-无入口文档引用方确认清单.md`（16 篇逐篇确认）、`features/done/F-004-loop-governance-slimming/feature.yaml` 的 `second_round` 段（唯一状态源）
 - **复核人**：待 Chief / 运营官按台账核
 - **复核防误判**：`loop_document_gate.py` 的 `check_failures.feature_workspace` 会因**其他属主正在写 `features/*/feature.yaml`** 而瞬时变红（2026-10-27 21:16 实测一次，写入完成后复跑 rc=0）。遇到该红项先看是否跨属主并发写，不要当成 loop 收敛的证据。

@@ -305,7 +305,7 @@
       "priority": "P1",
       "status": "evaluated",
       "current_role": "Evaluator",
-      "workspace": "features/done/F-034-wae-p0-shell-and-role-convergence",
+      "workspace": "features/active/F-034-wae-p0-shell-and-role-convergence",
       "created_at": "2026-10-22T10:02:42+00:00",
       "updated_at": "2026-10-22T14:10:00+00:00"
     },
