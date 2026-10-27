@@ -169,7 +169,7 @@ grep -rn "validate_cwme_ontology_chain\|validate_cwme_space_domain_extension_reg
 | 入口 | 状态 | 依据 |
 |---|---|---|
 | `scripts/gpcf_full_sweep.py` | ✅ **真入口**，本地可跑；`cwme_` 3 处命中 | `grep -c cwme_ scripts/gpcf_full_sweep.py` → 3；红路见 §4.3 |
-| `.github/workflows/governance.yml` | ✅ 已写 3 步；所在 job `gpcf-gates` 是 `runs-on: ubuntu-latest`（GitHub 托管，**不依赖本机 runner**） | `grep -n runs-on .github/workflows/governance.yml` → `:9`/`:42` 均 `ubuntu-latest`；`gh run list --workflow=governance.yml` 有运行记录（如 `40416780567`） |
+| `.github/workflows/governance.yml` | ✅ 已写 3 步；✅ **CI 在跑**（job=`gpcf-gates`，`runs-on: ubuntu-latest`，GitHub 托管）；❌ **但结论 failure**；⛔ **A6 三步至今未被执行过**（前置步骤先失败，后续全部 skip） | `grep -n runs-on …` → `:9`/`:42` 均 `ubuntu-latest`；`gh run list` → `40416780567`/`40415151472`/`40414681800`（10-26）均 completed；`gh run view 40416780567`：job `gpcf-gates` 失败在 `document_control.py --check`（`changed_count=31`，exit 1），其后各步 skip ⇒ **第 71-73 行那三步没跑过**；另一 job `repository-checks` 因 pytest `test_project_registry_matches_current_project_scope` 断言失败。**「在跑」≠「跑过了」≠「跑对了」** |
 | `.github/workflows/standards.yml` | ⚠️ `runs-on: [self-hosted, macOS]`；本机唯一 runner 自 2026-10-22 20:31 起被禁用 | `ls ~/Library/LaunchAgents \| grep actions.runner` → `actions.runner.Jiumilu-GCGPCF.mac-mini-gpcf.plist.disabled-20261022`；`launchctl list \| grep actions.runner` 无输出；最近一次 success（`40414681461`，10-26 22:44）由谁执行**未证** |
 
 **关键区分（防误判）**：A6 那三步在 `governance.yml`，用的是 ubuntu-latest，**不受本机 self-hosted runner 禁用影响**；依赖 self-hosted 的是 `standards.yml`，它的在线性未证实——两者不能混成一句「CI 跑不起来」。
