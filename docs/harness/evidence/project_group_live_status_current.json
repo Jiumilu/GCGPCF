@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-10-27T10:38:54.212005+08:00",
+  "generated_at": "2026-10-27T11:09:33.858288+08:00",
   "freshness_hours": 12,
   "freshness_ok": true,
   "project_count": 29,
@@ -119,7 +119,7 @@
   ],
   "pass_repo_count": 6,
   "bootstrap_window": false,
-  "previous_generated_at": "2026-10-27T10:08:06.762276+08:00",
+  "previous_generated_at": "2026-10-27T10:38:54.212005+08:00",
   "repo_heads": {
     "GlobalCloud AAAS": "29d16215b6445385002fb3682626fe17d1feb450",
     "GlobalCloud Brain": "d266e49a9535bce0ec0525d2831391437e115028",
@@ -135,7 +135,7 @@
     "GlobalCloud XiaoG": "e8c953ae0e12574c52024c060ddf9e68b00c08af",
     "GlobalCloud PVA": "647433c40e4da1f85e171d1dceeef1856d724019",
     "GlobalCloud SOP": "80aa900d1b8963157f410f8099511e988cdc3a1e",
-    "GlobalCloud PKC": "2a64a71656143ee21c3ef3d07d6f8144e5527a40",
+    "GlobalCloud PKC": "1f2025ed1cf9ea147453a1e5aecbd25f943697dd",
     "GlobalCloud XGD": "774141be8490fd695b5baf7602480bf284ce259a",
     "GlobalCloud ICP": "2c93394336486e778dbbaacfe463d326d2298721",
     "GlobalCloud PQC": "8de179fd6a7ae9bc97b37ee469598302895e8234",
@@ -143,7 +143,7 @@
     "GlobalCloud SpaceAI Studio": "0ca7c857e306598a8c6ec591ab54b8fe55bae8b0",
     "GlobalCloud World": "b2d639787aa4ca5194cec8269ad19c4180415001",
     "GlobalCloud Mem": "3a500d605acb1283bac16cae365e896f8b0695b3",
-    "GlobalCloud WAE": "c496c067b5b878920d38b3c7dcaadf0c403da1b1",
+    "GlobalCloud WAE": "8ad455b8ebd1782e2563b73c53971792156e2602",
     "GlobalCloud PMC": "8222fd5e340c7bea82825b7ddc7ccf454571662b",
     "GlobalCloud PDC": "490a4022d5c1667368d909e168befd41b23773cd",
     "GlobalCloud SLC": "0930800a529a64b3ee9e5abbfd6fb2aca6476d41",
@@ -499,7 +499,7 @@
     },
     "GlobalCloud GPCF": {
       "dirty_count": 375,
-      "ahead": 8,
+      "ahead": 9,
       "behind": 0,
       "paths": [
         "$CODEX_HOME/automations/globalcloud-17/README.md",
@@ -1310,7 +1310,7 @@
     },
     "GlobalCloud PKC": {
       "dirty_count": 0,
-      "ahead": 6,
+      "ahead": 8,
       "behind": 0,
       "paths": [],
       "sensitive_paths": []
@@ -1609,8 +1609,8 @@
       "sensitive_paths": []
     },
     "GlobalCloud WAE": {
-      "dirty_count": 359,
-      "ahead": 74,
+      "dirty_count": 358,
+      "ahead": 76,
       "behind": 71,
       "paths": [
         ".gitignore",
@@ -1696,7 +1696,6 @@
         "packages/host-kit/package.json",
         "packages/host-kit/src/host/app.ts",
         "packages/host-kit/src/host/idpRoutes.ts",
-        "packages/host-kit/src/host/menus.ts",
         "packages/host-kit/src/idp/audit.ts",
         "packages/host-kit/src/idp/service.ts",
         "packages/host-kit/src/idp/store.ts",
