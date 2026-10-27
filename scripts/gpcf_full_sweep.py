@@ -41,6 +41,10 @@ CHECKS: list[tuple[str, list[str], int]] = [
     ("cwme_gate_entrypoints", ["tools/kds-sync/validate_cwme_gate_entrypoints.py"], 60),
     ("codegraph_evidence_suspended", ["tools/kds-sync/report_codegraph_historical_evidence_suspended.py"], 60),
     ("was_xwail_ontology_mapping", ["tools/kds-sync/validate_was_xwail_ontology_mapping.py"], 120),
+    # 第8条（2026-10-27）：WAS 单源两条门禁互为校验（matrix 全集 9 / runtime gate 核心 6）。
+    # 修好路径但没入口 = 门禁形同不存在——今天已三次栽在「修好了没人跑」上。
+    ("was_scenario_profile_matrix", ["tools/kds-sync/validate_was_scenario_profile_matrix.py"], 180),
+    ("gfis_was_profile_runtime_gate_mapping", ["tools/kds-sync/validate_gfis_was_profile_runtime_gate_mapping.py"], 300),
     ("derive_status", ["tools/kds-sync/derive_status_views.py", "--check"], 180),
     ("p17_done_audit", ["scripts/gpcf_p17_done_audit.py"], 300),
     ("exceptions_expiry", ["tools/kds-sync/check_exceptions_expiry.py"], 120),
