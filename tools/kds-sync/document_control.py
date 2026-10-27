@@ -463,7 +463,10 @@ def write_text(path: Path, text: str) -> None:
         if previous.startswith("---\n"):
             end = previous.find("\n---\n", 4)
             if end != -1:
-                text = previous[: end + 5] + "\n\n" + text
+                # 2026-10-27 知识官修复 G-14 B 段：previous[:end+5] 已含结尾 "---\n"，
+                # 再拼 "\n\n" 会得到 "---\n\n\n"（frontmatter 与正文之间两个空行），
+                # 改为 "\n" 只留一个空行；配套判据见 outbox/20261027-G14-B段恢复清单.md。
+                text = previous[: end + 5] + "\n" + text
     path.parent.mkdir(parents=True, exist_ok=True)
     if not path.exists() or path.read_text(encoding="utf-8") != text:
         path.write_text(text, encoding="utf-8")
