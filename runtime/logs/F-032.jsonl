@@ -1,1 +1,0 @@
-{"timestamp": "2026-10-20T04:03:58+00:00", "feature_id": "F-032", "role": "Dispatcher", "status": "queued", "input": "创建 Feature Workspace。", "output": "已加入运行队列：features/active/F-032-pqc-external-service-via-pvaai。", "evidence": "features/active/F-032-pqc-external-service-via-pvaai/feature.yaml"}

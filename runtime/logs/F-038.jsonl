@@ -1,1 +1,0 @@
-{"timestamp": "2026-10-22T11:04:30+00:00", "feature_id": "F-038", "role": "Dispatcher", "status": "queued", "input": "创建 Feature Workspace。", "output": "已加入运行队列：features/active/F-038-panorama-operation-normalization。", "evidence": "features/active/F-038-panorama-operation-normalization/feature.yaml"}

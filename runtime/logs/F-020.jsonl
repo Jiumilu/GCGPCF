@@ -1,1 +1,0 @@
-{"timestamp": "2026-10-14T02:21:05+00:00", "feature_id": "F-020", "role": "Recorder", "status": "closed", "input": "Evidence Gate 已通过。", "output": "Feature 已移动到 features/done/F-020-aaas-service-console。", "evidence": "feature.yaml status=done；queue status=closed。"}

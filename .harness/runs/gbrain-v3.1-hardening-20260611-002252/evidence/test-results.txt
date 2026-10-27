@@ -1,2 +1,0 @@
-
-RESULT: 22/22 passed

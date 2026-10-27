@@ -22,3 +22,9 @@ build/
 .venv/
 coverage/
 *.log
+
+# === G-14 A 段：可再生成物解除跟踪（2026-10-27 运维官）===
+# .harness/runs/*  = harness 运行产物；runtime/logs/*.jsonl = 运行日志。
+# 两类都可重跑再生成：磁盘文件保留，仅解除版本跟踪。
+.harness/runs/
+runtime/logs/*.jsonl
