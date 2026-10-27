@@ -20,7 +20,7 @@ POLICY = ROOT / "02-governance/loop/LOOP_CODEGRAPH_LARGE_FILE_POLICY.md"
 WATCHLIST_PROJECTS = {
     "GlobalCloud Brain": Path("/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud Brain"),
     "GlobalCloud Studio": Path("/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud Studio"),
-    "GlobalCoud GPCF": Path("/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCoud GPCF"),
+    "GlobalCloud GPCF": Path("/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GPCF"),
 }
 POLICY_EXCEPTION_PROJECTS = {
     "GlobalCloud GFIS": Path("/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GFIS"),
