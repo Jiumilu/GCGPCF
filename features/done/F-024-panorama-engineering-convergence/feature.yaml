@@ -34,7 +34,11 @@ evidence:
   screenshots: waived
   api: pass
   summary: pass
+evidence_pending: true
 blockers:
+  - 判据 5「全量测试通过／typecheck／新增测试 188 项」只有 2026-10-16 归档记录（17 件证据在
+    harness/runs/20261016-panorama-convergence/），未复跑；复核命令：npx vitest run @
+    ../GlobalCloud SpaceAI Platform。跑过则摘 blocker，跑不过则重开本 Feature。
 verification:
   tests:
   - python3 -c "import subprocess,sys; r=subprocess.run(['npx','vitest','run','--reporter=dot'],cwd='../GlobalCloud
