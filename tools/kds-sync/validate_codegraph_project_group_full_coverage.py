@@ -27,7 +27,7 @@ REPOS = [
     ("xgd", "GlobalCloud XGD", Path("/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud XGD")),
     ("xiaog", "GlobalCloud XiaoG", Path("/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud XiaoG")),
     ("mmc", "GlobalCloud MMC", Path("/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud MMC")),
-    ("gpcf", "GlobalCoud GPCF", Path("/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCoud GPCF")),
+    ("gpcf", "GlobalCloud GPCF", Path("/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GPCF")),
     ("studio", "GlobalCloud Studio", Path("/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud Studio")),
     ("was", "WAS世界资产体系", Path("/Users/lujunxiang/Projects/GlobalCloud V0.0.1/WAS世界资产体系")),
     ("wae", "GlobalCloud WAE", Path("/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud WAE")),
