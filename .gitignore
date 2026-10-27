@@ -28,3 +28,10 @@ coverage/
 # 两类都可重跑再生成：磁盘文件保留，仅解除版本跟踪。
 .harness/runs/
 runtime/logs/*.jsonl
+
+# === G-14 D 段：.kds/development-space 为 KDS 派生同步镜像，非正本（2026-10-27 运维官）===
+# KDS 侧是正本；仓内这份是同步镜像，随同步重新生成，不作为知识资产入库。
+# 已跟踪的历史条目按 38 批解除跟踪（清单 outbox/g14-d-batches.tsv），磁盘文件全部保留。
+# 例外：确需把本目录某个文件纳入版本时，用 `git add -f <path>` 强制添加
+#       （ignore 对已跟踪文件无效；解除跟踪后用 -f 即可重新纳入）。
+.kds/development-space/
