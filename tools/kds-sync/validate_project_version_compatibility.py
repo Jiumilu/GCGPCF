@@ -27,7 +27,7 @@ PLAN_PATHS = [
     PROJECT_ROOT / "GlobalCloud XGD/GlobalCloud XGD 总体方案.md",
     PROJECT_ROOT / "GlobalCloud XiaoC/GlobalCloud XiaoC 总体方案.md",
     PROJECT_ROOT / "GlobalCloud XiaoG/GlobalCloud XiaoG 总体方案.md",
-    PROJECT_ROOT / "GlobalCoud GPCF/GlobalCloud GPCF 总体方案.md",
+    PROJECT_ROOT / "GlobalCloud GPCF/GlobalCloud GPCF 总体方案.md",
 ]
 
 REQUIRED_COMPATIBILITY_TERMS = [
