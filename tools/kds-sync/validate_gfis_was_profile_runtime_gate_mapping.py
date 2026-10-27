@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import json
 import subprocess
+import sys
 from pathlib import Path
 from typing import Any
 
@@ -114,14 +115,67 @@ def require_frontmatter(path: Path, text: str) -> None:
 
 
 # 证据件里记的是 2026-06 当时的绝对路径（历史，不改证据）；判据做仓名重定位后再校验存在性。
-REPO_RENAMES = {"WAS世界资产体系": "GlobalCloud WAS"}
+# 每条映射都必须带出处：没有出处的映射行等于永久豁免。
+REPO_RENAMES = {
+    "WAS世界资产体系": {
+        "new": "GlobalCloud WAS",
+        "renamed_at": "2026-10-13",
+        "provenance": "2026-10-13 KDS 结构化搬迁/仓名变更：旧目录名已不存在，映射仅用于解析历史证据里记的绝对路径",
+    },
+}
 
 
 def resolve_recorded(p: str) -> Path:
-    for old, new in REPO_RENAMES.items():
+    """把历史证据里记的旧绝对路径重定位到现行仓名；表内没有的旧名原样返回（随后 exists 判红）。"""
+    for old, meta in REPO_RENAMES.items():
         if f"/{old}/" in p:
-            return Path(p.replace(f"/{old}/", f"/{new}/"))
+            return Path(p.replace(f"/{old}/", f"/{meta['new']}/"))
     return Path(p)
+
+
+def assert_no_retired_name_in_new_evidence(evidence: dict[str, Any]) -> None:
+    """反向判据：映射表只许用于解析历史记录；证据日期不早于改名日却仍写旧名 ⇒ 红。"""
+    evidence_date = str(evidence.get("date", ""))
+    for source_name, source_path in (evidence.get("sources") or {}).items():
+        for old, meta in REPO_RENAMES.items():
+            if f"/{old}/" in str(source_path):
+                require(
+                    evidence_date < str(meta["renamed_at"]),
+                    f"new evidence ({evidence_date}) must not record retired path name '{old}': "
+                    f"{source_name} -> {source_path}; use '{meta['new']}' "
+                    f"(mapping is only for parsing historical evidence)",
+                )
+
+
+def self_test() -> int:
+    """三条护栏的落地测试 + 反向判据红绿两路。"""
+    old_name = "WAS世界资产体系"
+    new_name = str(REPO_RENAMES[old_name]["new"])
+    # 1. 旧路径（带仓名段）→ 解析到现行仓名，且真实存在
+    resolved = resolve_recorded(f"{BASE}/{old_name}/okf")
+    require(f"/{new_name}/" in resolved.as_posix(), "self-test 1: old path must resolve to current repo name")
+    require(resolved.exists(), "self-test 1: resolved path must exist")
+    # 2. 现行路径不被改写
+    current = str(BASE / new_name)
+    require(resolve_recorded(current).as_posix() == current, "self-test 2: current path must not be rewritten")
+    # 3. 表内没有的旧名不静默替换
+    unknown = str(BASE / "不存在的旧仓名")
+    require(resolve_recorded(unknown).as_posix() == unknown, "self-test 3: unknown old name must not be silently replaced")
+    # 4. 反向判据红路：日期不早于改名日 + 旧名 ⇒ 必须红
+    try:
+        assert_no_retired_name_in_new_evidence(
+            {"date": "2026-10-20", "sources": {"was_profile": f"{BASE}/{old_name}/okf/x.yaml"}}
+        )
+    except SystemExit:
+        pass
+    else:
+        raise SystemExit("FAIL self-test 4: new evidence recording retired name must fail")
+    # 5. 反向判据绿路：历史日期 + 旧名 ⇒ 通过（映射只解析历史）
+    assert_no_retired_name_in_new_evidence(
+        {"date": "2026-06-21", "sources": {"was_profile": f"{BASE}/{old_name}/okf/x.yaml"}}
+    )
+    print("runtime_gate_guardrails_self_test=pass cases=5 old_to_new=1 no_rewrite=1 unknown_passthrough=1 reverse_red=1 reverse_green=1")
+    return 0
 
 
 def main() -> int:
@@ -140,6 +194,8 @@ def main() -> int:
     require(evidence.get("evidence_id") == "GFIS-WAS-PROFILE-RUNTIME-GATE-MAPPING-20260621", "invalid evidence id")
     require(evidence.get("status") == "gfis_was_profile_runtime_gate_mapping_pass", "invalid evidence status")
     require(evidence.get("scope", {}).get("mapping_type") == "read_only_semantic_gate_mapping", "mapping type mismatch")
+    # 反向判据：映射表只用于解析历史证据；新证据写旧名即红（否则映射表会变成垃圾桶）。
+    assert_no_retired_name_in_new_evidence(evidence)
 
     require(profile.get("profileId") == "gfis-runtime-sop-e2e-was-profile", "WAS profile id mismatch")
     require(profile.get("stageCount") == 12, "WAS profile must have 12 stages")
@@ -212,4 +268,6 @@ def main() -> int:
 
 
 if __name__ == "__main__":
+    if "--self-test" in sys.argv[1:]:
+        raise SystemExit(self_test())
     raise SystemExit(main())
