@@ -164,6 +164,33 @@ grep -rn "validate_cwme_ontology_chain\|validate_cwme_space_domain_extension_reg
 
 判据使用纪律：以上五条均为可复跑计数，不接受「基本完成」「已收敛」这类口头表述；报数必须同屏给命令与输出。
 
+### 4.2 A6 入口现状（2026-10-27 实测，防「已纳入 CI」被读成「CI 在把关」）
+
+| 入口 | 状态 | 依据 |
+|---|---|---|
+| `scripts/gpcf_full_sweep.py` | ✅ **真入口**，本地可跑；`cwme_` 3 处命中 | `grep -c cwme_ scripts/gpcf_full_sweep.py` → 3；红路见 §4.3 |
+| `.github/workflows/governance.yml` | ✅ 已写 3 步；所在 job `gpcf-gates` 是 `runs-on: ubuntu-latest`（GitHub 托管，**不依赖本机 runner**） | `grep -n runs-on .github/workflows/governance.yml` → `:9`/`:42` 均 `ubuntu-latest`；`gh run list --workflow=governance.yml` 有运行记录（如 `40416780567`） |
+| `.github/workflows/standards.yml` | ⚠️ `runs-on: [self-hosted, macOS]`；本机唯一 runner 自 2026-10-22 20:31 起被禁用 | `ls ~/Library/LaunchAgents \| grep actions.runner` → `actions.runner.Jiumilu-GCGPCF.mac-mini-gpcf.plist.disabled-20261022`；`launchctl list \| grep actions.runner` 无输出；最近一次 success（`40414681461`，10-26 22:44）由谁执行**未证** |
+
+**关键区分（防误判）**：A6 那三步在 `governance.yml`，用的是 ubuntu-latest，**不受本机 self-hosted runner 禁用影响**；依赖 self-hosted 的是 `standards.yml`，它的在线性未证实——两者不能混成一句「CI 跑不起来」。
+
+### 4.3 A6 红路（验在 sweep 上，因为那是当前唯一本地真入口）
+
+```
+# ① 从 sweep 摘掉两条门禁（保留入口存在性判据）
+$ python3 tools/kds-sync/validate_cwme_gate_entrypoints.py
+FAIL: sweep does not run tools/kds-sync/validate_cwme_ontology_chain.py
+FAIL: sweep does not run tools/kds-sync/validate_cwme_space_domain_extension_registration_request.py
+cwme_gate_entrypoints=fail targets=3        exit=1
+
+# ② 摘回来
+$ python3 tools/kds-sync/validate_cwme_gate_entrypoints.py
+cwme_gate_entrypoints=pass targets=3 entries=2 sweep=wired ci=wired   exit=0
+$ git status --porcelain -- scripts/gpcf_full_sweep.py   → 0 行
+```
+
+路径常量红路（从入口 `scripts/gpcf_full_sweep.py` 跑）：`:18` 改回旧路径 → `cwme_ontology_chain 1`、`汇总 13/19`、`SWEEP_EXIT=1`；恢复 → `cwme_ontology_chain 0`、`汇总 14/19`（其余 5 项既有失败非本批）。
+
 ## 5. 待裁定（本页只列，不自行执行）
 
 | 编号 | 事项 | 现状 | 卡在哪 |
@@ -173,7 +200,7 @@ grep -rn "validate_cwme_ontology_chain\|validate_cwme_space_domain_extension_reg
 | A3 | 49 个无入口脚本是否批量标 `P2 仅审计` | 未动 | 批量改档需 Chief 书面；且需逐个确认无一被外部定时任务调用 |
 | A4 | F-004 关闭口径与 PMC #255 对齐 | **已裁定（Chief 2026-10-27）**：以仓内 `feature.yaml` 为准，PMC 是投影。首轮 done = 首轮收敛完成，当前为第二轮 | 已在 `feature.yaml` 增 `second_round` 段（`starts: 2026-10-27`、`pmc_ref: PMC #255`、判据 J1–J4、观测值、`explicit_non_actions`） |
 | A5 | PMC 同步器路径 typo（`GlobalCoud GPCF`，缺一个 `l`）导致 `pmc_sync_gpcf` 退出码 1 | 已实测 | 不在本仓写区，Chief 2026-10-27 回复已另转人修，不经本仓 |
-| A6 | 两条 CWME 门禁（`validate_cwme_ontology_chain`、`validate_cwme_space_domain_extension_registration_request`）修好路径后**仍无任何入口**：不在 CI、不在 `gpcf_full_sweep.py`、不被任何脚本调用 | 路径已修（`1448f6339`，两条 exit=0） | 是否纳入 `scripts/gpcf_full_sweep.py` 或 `.github/workflows/governance.yml` 属门禁变更，需 Chief 书面；不加则下一次搬迁仍可能静默 14 天 |
+| A6 | 两条 CWME 门禁（`validate_cwme_ontology_chain`、`validate_cwme_space_domain_extension_registration_request`）修好路径后**仍无任何入口**：不在 CI、不在 `gpcf_full_sweep.py`、不被任何脚本调用 | **已纳入**（`6cb7afebe`，依据 Chief 2026-10-27 裁定：sweep 与 CI 两处各加一步）；入口存在性判据 `validate_cwme_gate_entrypoints.py` 为**自加项**。入口现状见 §4.2 | 无（已闭环）；残余风险：`standards.yml` 用的 self-hosted runner 在线性未证实，见 §4.2 |
 
 ## 6. 四栏头
 
