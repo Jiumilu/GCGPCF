@@ -19,7 +19,7 @@ REPOS = {
     "GlobalCloud KDS": Path("/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud KDS"),
     "GlobalCloud GFIS": Path("/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GFIS"),
     "GlobalCloud Studio": Path("/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud Studio"),
-    "GlobalCoud GPCF": Path("/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCoud GPCF"),
+    "GlobalCloud GPCF": Path("/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GPCF"),
 }
 
 
@@ -105,7 +105,7 @@ def main() -> int:
         elif repo_name == "GlobalCloud Studio":
             require(total == 0, "Studio must remain steady")
             require(review[repo_name]["threshold_result"] == "steady", "Studio threshold result mismatch")
-        elif repo_name == "GlobalCoud GPCF":
+        elif repo_name == "GlobalCloud GPCF":
             require(total == 0, "GPCF must be zero after self-sync")
             require(review[repo_name]["threshold_result"] == "self_sync_required_after_evidence", "GPCF threshold result mismatch")
 
@@ -134,7 +134,7 @@ def main() -> int:
         f"kds_pending={live_pending['GlobalCloud KDS']} "
         f"gfis_pending={live_pending['GlobalCloud GFIS']} "
         f"studio_pending={live_pending['GlobalCloud Studio']} "
-        f"gpcf_pending={live_pending['GlobalCoud GPCF']} "
+        f"gpcf_pending={live_pending['GlobalCloud GPCF']} "
         "non_gpcf_sync_authorized=false "
         "next=GPCF-CODEGRAPH-WATCHLIST-MONITOR-006"
     )

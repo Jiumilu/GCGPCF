@@ -28,7 +28,7 @@ EXPECTED_PROJECTS = [
     "GlobalCloud XGD",
     "GlobalCloud XiaoC",
     "GlobalCloud XiaoG",
-    "GlobalCoud GPCF",
+    "GlobalCloud GPCF",
 ]
 
 
@@ -69,7 +69,7 @@ def main() -> int:
     require(evidence.get("status") == "codegraph_sync_drift_reduced_with_gfis_residual_notice", "invalid status")
     require(
         evidence.get("sync_executed")
-        == ["GlobalCloud Brain", "GlobalCloud GFIS", "GlobalCloud KDS", "GlobalCloud Studio", "GlobalCoud GPCF"],
+        == ["GlobalCloud Brain", "GlobalCloud GFIS", "GlobalCloud KDS", "GlobalCloud Studio", "GlobalCloud GPCF"],
         "sync execution set mismatch",
     )
 

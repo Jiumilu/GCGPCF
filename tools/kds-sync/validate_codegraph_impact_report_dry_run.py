@@ -40,7 +40,7 @@ def main() -> int:
     require(evidence["evidence_id"] == "CODEGRAPH-IMPACT-REPORT-DRY-RUN-20260621", "invalid evidence id")
     require(evidence["status"] == "impact_report_dry_run_pass", "invalid status")
     require(evidence["scope"] == "GPCF-CODEGRAPH-IMPACT-REPORT-DRY-RUN-005", "invalid scope")
-    require(evidence["target"]["repo"] == "GlobalCoud GPCF", "target repo mismatch")
+    require(evidence["target"]["repo"] == "GlobalCloud GPCF", "target repo mismatch")
     require(TARGET in evidence["target"]["changed_files"], "target validator must be a changed file")
 
     query = run(["codegraph", "query", "codegraph_project_group_steady_state_verify", "--json"])

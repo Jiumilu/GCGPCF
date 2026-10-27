@@ -18,7 +18,7 @@ REPOS = {
     "GlobalCloud Brain": Path("/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud Brain"),
     "GlobalCloud Studio": Path("/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud Studio"),
     "GlobalCloud GFIS": Path("/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GFIS"),
-    "GlobalCoud GPCF": Path("/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCoud GPCF"),
+    "GlobalCloud GPCF": Path("/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GPCF"),
 }
 
 
@@ -79,7 +79,7 @@ def main() -> int:
         elif repo_name == "GlobalCloud GFIS":
             require(total == 1, "GFIS policy exception pending must remain one")
             require(watch[repo_name]["classification"] == "policy_exception_watch", "GFIS classification mismatch")
-        elif repo_name == "GlobalCoud GPCF":
+        elif repo_name == "GlobalCloud GPCF":
             require(total <= 1, "GPCF governance pending must be at most one before final self-sync")
             require(watch[repo_name]["classification"] == "self_sync_clear", "GPCF classification mismatch")
 
