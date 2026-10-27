@@ -29,9 +29,9 @@ evidence:
   api: waived
   summary: pass
 blockers:
-  - WAS 侧治理复核（承接方式与六项声明）待进行；请求件见 evidence/was-review-request-20261024.md
+  - 第 1、2 条待办（承接方式 C + 六项声明 B）：WAS 侧复核尚未完成，本项 blocker 不解除；请求件见 evidence/was-review-request-20261024.md。第 4 条已由 WAS 落地，见 resolved_blockers。
 created_at: "2026-10-16T03:47:28+00:00"
-updated_at: "2026-10-16T03:47:28+00:00"
+updated_at: "2026-10-27T13:58:00+00:00"
 verification:
   tests:
     - "python3 tools/kds-sync/validate_gpcf_2_feature_workspace.py"
@@ -58,3 +58,11 @@ resolved_blockers:
   - decided_at: "2026-10-24"
     decision: "XWAIL flowType 影响评估已完成：ALLOWED_FLOWS 已含 ScenarioFlow 与 V1.2 九流，无需改动"
     evidence: "GlobalCloud XWAIL/scripts/xwail_common.py；evidence/xwail-impact-assessment-20261024.md"
+  - decided_at: "2026-10-27"
+    decision: >-
+      第 4 条：矩阵按 9 流强等，重复必红、不许静默去重（require_strict_cover()）；
+      这不是允许冗余，是不允许静默——谁想改回 set()，拿这句顶回去。
+    evidence: >-
+      WAS 6aa3e91（require_strict_cover 严格化 + gfis profile 去重 ControlFlow 10→9）、
+      6bcf380（make validate 追加两条 + was-contract-gate.yml 入口）；
+      依据件 shasum -a 256 aff6b7e18577215e88bd6951b665dc50a60b61b9e7e146d36f998b9236b06a13
