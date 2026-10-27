@@ -13,7 +13,7 @@ import yaml
 
 ROOT = Path(__file__).resolve().parents[2]
 BASE = ROOT.parent
-WAS_ROOT = BASE / "WAS世界资产体系"
+WAS_ROOT = BASE / "GlobalCloud WAS"
 GFIS_ROOT = BASE / "GlobalCloud GFIS"
 
 EVIDENCE_JSON = ROOT / "docs/harness/evidence/gfis-was-profile-runtime-gate-mapping-20260621.json"
@@ -35,15 +35,24 @@ DIMENSIONS = {
     "organization_asset",
     "spacetime_asset",
 }
-# 2026-10-16 迁移：stage 覆盖断言精准化——核心业务六流（Value/Credit/Scenario 为新增流，本 profile 无实例，不编造）
-CORE_FLOWS = {
-    "LogisticsFlow",
-    "InformationFlow",
-    "FinancialFlow",
-    "EnergyFlow",
-    "ServiceFlow",
-    "ControlFlow",
-}
+# 2026-10-27 收单源：核心流不再硬编码，读 WAS 单源 was-flows.yaml 的 core: true 投影。
+# 与 matrix 的全集 FLOWS（9 条）是两个概念，永不合并。
+WAS_FLOWS_YAML = WAS_ROOT / "okf/was/was-flows.yaml"
+
+
+def _load_core_flows() -> list[str]:
+    if not WAS_FLOWS_YAML.exists():
+        raise SystemExit(f"FAIL: missing WAS flow single source: {WAS_FLOWS_YAML}")
+    flows = (yaml.safe_load(WAS_FLOWS_YAML.read_text(encoding="utf-8")) or {}).get("flows")
+    if not isinstance(flows, dict) or not flows:
+        raise SystemExit("FAIL: was-flows.yaml must contain a non-empty flows map")
+    core = [k for k, v in flows.items() if isinstance(v, dict) and v.get("core") is True]
+    if not core:
+        raise SystemExit("FAIL: was-flows.yaml has no core:true entries (single source not yet marked)")
+    return core
+
+
+CORE_FLOWS = _load_core_flows()  # 保序（:129 用 set(CORE_FLOWS) 做子集断言）
 ZERO_COUNT_KEYS = [
     "real_source_records",
     "valid_source_records",
@@ -104,6 +113,17 @@ def require_frontmatter(path: Path, text: str) -> None:
         require(phrase in metadata, f"{path.relative_to(ROOT)} missing marker: {phrase}")
 
 
+# 证据件里记的是 2026-06 当时的绝对路径（历史，不改证据）；判据做仓名重定位后再校验存在性。
+REPO_RENAMES = {"WAS世界资产体系": "GlobalCloud WAS"}
+
+
+def resolve_recorded(p: str) -> Path:
+    for old, new in REPO_RENAMES.items():
+        if f"/{old}/" in p:
+            return Path(p.replace(f"/{old}/", f"/{new}/"))
+    return Path(p)
+
+
 def main() -> int:
     evidence = load_json(EVIDENCE_JSON)
     evidence_md = read(EVIDENCE_MD)
@@ -126,7 +146,7 @@ def main() -> int:
     stages = profile.get("stages")
     require(isinstance(stages, list) and len(stages) == 12, "WAS profile stages mismatch")
     require({stage["assetDimension"] for stage in stages} == DIMENSIONS, "WAS stage dimensions must cover 8 dimensions")
-    require(CORE_FLOWS <= {stage["flowType"] for stage in stages}, "WAS stage flows must cover core flows")
+    require(set(CORE_FLOWS) <= {stage["flowType"] for stage in stages}, "WAS stage flows must cover core flows")
 
     replay_sequence = gfis_replay.get("replay_sequence")
     require(isinstance(replay_sequence, list) and len(replay_sequence) == 12, "GFIS replay must have 12 stages")
@@ -159,7 +179,7 @@ def main() -> int:
         require(entry["flow_type"] == stage["flowType"], f"{stage['stageId']} flow type mismatch")
 
     for source_name, source_path in evidence.get("sources", {}).items():
-        require(Path(source_path).exists(), f"source missing for {source_name}: {source_path}")
+        require(resolve_recorded(source_path).exists(), f"source missing for {source_name}: {source_path}")
 
     require(gfis_12.get("test_stage_count") == 12, "GFIS 12 stage count mismatch")
     require(gfis_12.get("test_data_lane") == "pass", "GFIS test lane must pass")

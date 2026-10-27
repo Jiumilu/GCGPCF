@@ -5,6 +5,8 @@ from __future__ import annotations
 
 import json
 from pathlib import Path
+
+import yaml
 from typing import Any
 
 
@@ -16,7 +18,23 @@ FIXTURE_DIR = ROOT / "fixtures/was"
 
 PROJECT_GROUP = ["GFIS", "GPC", "PVAOS", "WAME", "KDS", "Brain", "PKC", "XiaoC", "XGD", "XiaoG", "MMC", "GPCF", "Studio", "WAS"]
 DIMENSIONS = ["physical_asset", "rule_asset", "intelligence_asset", "data_asset", "economic_asset", "energy_asset", "organization_asset", "spacetime_asset"]
-FLOWS = ["LogisticsFlow", "InformationFlow", "FinancialFlow", "EnergyFlow", "ServiceFlow", "ControlFlow", "ValueFlow", "CreditFlow", "ScenarioFlow"]
+WAS_FLOWS_YAML = ROOT.parent / "GlobalCloud WAS/okf/was/was-flows.yaml"
+
+
+def _load_was_flows() -> dict:
+    """WAS 单源（唯一权威处=was-flows.yaml，2026-10-27 收单源）。
+
+    顺序是硬约束：:117 用 list ==，内容相同顺序不同也会报 flow list mismatch。
+    """
+    if not WAS_FLOWS_YAML.exists():
+        raise SystemExit(f"FAIL: missing WAS flow single source: {WAS_FLOWS_YAML}")
+    flows = (yaml.safe_load(WAS_FLOWS_YAML.read_text(encoding="utf-8")) or {}).get("flows")
+    if not isinstance(flows, dict) or not flows:
+        raise SystemExit("FAIL: was-flows.yaml must contain a non-empty flows map")
+    return flows
+
+
+FLOWS = list(_load_was_flows().keys())
 CHAIN_LINKS = ["customer_order", "supplier_procurement", "production_work_order", "quality_inspection", "logistics_delivery", "energy_consumption", "carbon_footprint", "settlement_profit", "knowledge_reference", "recycling_circular"]
 PROFILE_REQUIRED_KEYS = ["profile_id", "projects", "business_chain_links", "required_asset_dimensions", "required_flows", "source_of_record", "wame_gate", "kds_backlink_policy", "rag_reference_policy", "writeback_policy", "pool_link_policy", "blockers", "closure_policy"]
 
