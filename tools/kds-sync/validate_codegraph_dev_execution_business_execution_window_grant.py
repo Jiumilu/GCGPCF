@@ -17,7 +17,7 @@ COVERAGE = ROOT / "docs/harness/evidence/codegraph-project-group-full-coverage-2
 WATCHLIST = ROOT / "docs/harness/evidence/codegraph-dev-execution-watchlist-authorization-pack-20260622.json"
 
 KEY_REPOS = {
-    "GPCF": Path("/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCoud GPCF"),
+    "GPCF": Path("/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GPCF"),
     "GFIS": Path("/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GFIS"),
     "Brain": Path("/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud Brain"),
     "KDS": Path("/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud KDS"),
