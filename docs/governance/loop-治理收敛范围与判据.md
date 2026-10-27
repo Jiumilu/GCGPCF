@@ -193,6 +193,18 @@ grep -rn "validate_cwme_ontology_chain\|validate_cwme_space_domain_extension_reg
 
 **处置**：runner 健康核**交运维官统一核**（属对外连接与凭据，红线，本仓不碰）；本页只登记状态，标「待运维官核」。
 
+**A6 的五行最终状态（2026-10-27 收口，第 5 行不许省）**
+
+| 行 | 状态 | 依据 |
+|---|---|---|
+| sweep 已纳入 | ✅ | `scripts/gpcf_full_sweep.py` 命中，本地可跑，当前唯一本地真入口 |
+| CI 已写 | ✅ | `governance.yml:71-73`，job=`gpcf-gates` |
+| CI 在跑 | ✅ | `gh run list` 有 run（`40416780567` 等，10-26），conclusion 见下一行 |
+| CI 结论 | ❌ failure | 失败在 `document_control.py --check`（`changed_count=31`）；**A6 三步被 skip，至今未执行** |
+| CI 未验我的提交 | ⚠️ **未推送** | `git status -sb` → `[ahead 90]`；`git branch -r --contains 6cb7afebe` 为空。**push 属红线⑧（会启动 CI 自动执行链），须老卢授权** |
+
+**口径**：在跑 ≠ 跑过了 ≠ 跑对了；有 run id ≠ 我的提交跑过。**不 push 就只能写「CI 未验」。**
+
 ### 4.3 A6 红路（验在 sweep 上，因为那是当前唯一本地真入口）
 
 ```
