@@ -9,6 +9,7 @@ repository path under a controlled project/domain folder.
 from __future__ import annotations
 
 import argparse
+import atexit
 import hashlib
 import json
 import os
@@ -454,11 +455,58 @@ def controlled_doc_id(source_path: str, existing_frontmatter: dict[str, str]) ->
     return doc_id(source_path)
 
 
+# 2026-10-27 知识官：写类路径守卫（Chief 裁决，根因修复）。
+# 写模式遇到「生成物」必须拒写并**可见打印**，否则下次 sync_vendor.py --apply 覆盖后会变成自我复原的假绿。
+GENERATED_DIR_GUARDS = (".standards/",)
+_WRITE_REFUSALS: list[str] = []
+
+
+def _rel_to_root(path: Path) -> str:
+    try:
+        return path.relative_to(ROOT).as_posix()
+    except ValueError:
+        return path.as_posix()
+
+
+def generated_reason(path: Path) -> str:
+    """返回拒写原因；空串表示可写。优先看文件里的 generated_by 标记，再按目录兜底。"""
+    rel = _rel_to_root(path)
+    if path.exists():
+        try:
+            head = path.read_text(encoding="utf-8", errors="replace")[:4000]
+        except OSError:
+            head = ""
+        m = re.match(r"^---\n(.*?)\n---", head, re.S)
+        if m and re.search(r"^generated_by:", m.group(1), re.M):
+            return "文件自带 generated_by 标记"
+    for d in GENERATED_DIR_GUARDS:
+        if rel.startswith(d):
+            return f"生成物目录 {d}"
+    return ""
+
+
+def _report_write_refusals() -> None:
+    if _WRITE_REFUSALS:
+        print(f"[KDS 写入守卫] 本次共拒写 {len(_WRITE_REFUSALS)} 个生成物：", file=sys.stderr)
+        for r in _WRITE_REFUSALS:
+            print(f"  - {r}", file=sys.stderr)
+
+
+atexit.register(_report_write_refusals)
+
+
 def read_text(path: Path) -> str:
     return path.read_text(encoding="utf-8")
 
 
 def write_text(path: Path, text: str) -> None:
+    reason = generated_reason(path)
+    if reason:
+        rel = _rel_to_root(path)
+        msg = f"[KDS 写入守卫] 拒写：{rel}（{reason}）"
+        print(msg, file=sys.stderr)
+        _WRITE_REFUSALS.append(f"{rel}（{reason}）")
+        return
     if path.suffix == ".md" and not text.startswith("---\n") and path.exists():
         previous = path.read_text(encoding="utf-8")
         if previous.startswith("---\n"):
