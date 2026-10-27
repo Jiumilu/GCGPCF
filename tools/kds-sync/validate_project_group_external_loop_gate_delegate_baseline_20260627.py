@@ -13,6 +13,7 @@ PROJECT_ROOT = ROOT.parent
 EVIDENCE = ROOT / "docs/harness/evidence/globalcloud-project-group-external-loop-gate-delegate-baseline-20260627.md"
 LOOP_ROUND = ROOT / "docs/harness/loops/loop-round-GPCF-PROJECT-GROUP-EXTERNAL-LOOP-GATE-DELEGATE-BASELINE-001.md"
 DELEGATE_VALIDATOR = ROOT / "tools/kds-sync/validate_project_group_external_loop_gate_delegates.py"
+DIRTY_BASELINE = ROOT / "docs/harness/evidence/external-loop-gate-delegate-dirty-baseline-20261022.json"
 
 REPOS = {
     "GlobalCloud AAAS": "AAAS-WAME-BINDING-PRECHECK-001",
@@ -78,7 +79,7 @@ def parse_kv_output(output: str) -> dict[str, str]:
     return parsed
 
 
-def validate_repo(repo_name: str, failures: list[str]) -> dict[str, object]:
+def validate_repo(repo_name: str, expected_lines: list[str], failures: list[str]) -> dict[str, object]:
     repo_root = PROJECT_ROOT / repo_name
     if not repo_root.exists():
         failures.append(f"missing repo: {repo_name}")
@@ -95,10 +96,13 @@ def validate_repo(repo_name: str, failures: list[str]) -> dict[str, object]:
         failures.append(f"{repo_name} branch not main: {branch}")
     if upstream != "origin/main":
         failures.append(f"{repo_name} upstream not origin/main: {upstream}")
-    if len(status_lines) != 1:
-        failures.append(f"{repo_name} dirty count not 1: {len(status_lines)}")
-    if untracked != ["?? tools/kds-sync/loop_document_gate.py"]:
-        failures.append(f"{repo_name} unexpected untracked set: {untracked}")
+    if sorted(status_lines) != sorted(expected_lines):
+        missing = [x for x in expected_lines if x not in status_lines]
+        extra = [x for x in status_lines if x not in expected_lines]
+        failures.append(
+            f"{repo_name} dirty baseline drift: expected {len(expected_lines)} got {len(status_lines)}; "
+            f"missing={missing[:5]} extra={extra[:5]}"
+        )
     if diff_check.returncode != 0:
         failures.append(f"{repo_name} diff-check failed: {diff_check.stderr or diff_check.stdout}")
 
@@ -145,11 +149,24 @@ def main() -> int:
     if delegate_values.get("gfis_status_ceiling") != "repair_required":
         failures.append(f"delegate validator gfis_status_ceiling mismatch: {delegate_values.get('gfis_status_ceiling')}")
 
-    repo_results = {repo_name: validate_repo(repo_name, failures) for repo_name in REPOS}
+    if not DIRTY_BASELINE.exists():
+        failures.append(f"missing dirty baseline: {DIRTY_BASELINE.relative_to(ROOT)}")
+        dirty_baseline = {"repos": {}}
+    else:
+        dirty_baseline = json.loads(DIRTY_BASELINE.read_text(encoding="utf-8"))
+    repo_results = {
+        repo_name: validate_repo(
+            repo_name,
+            dirty_baseline.get("repos", {}).get(repo_name, {}).get("expected_status_lines", []),
+            failures,
+        )
+        for repo_name in REPOS
+    }
     result = {
         "project_group_external_loop_gate_delegate_baseline_20260627": "pass" if not failures else "fail",
         "delegated_repo_count": len(REPOS),
         "delegate_validator": delegate_values,
+        "dirty_baseline": str(DIRTY_BASELINE.relative_to(ROOT)),
         "repos": repo_results,
         "review_allowed": False,
         "stage_allowed": False,

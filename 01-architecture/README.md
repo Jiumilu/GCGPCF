@@ -68,12 +68,15 @@ KDS 路径前缀：`开发/12-GPCF/01-architecture/`
 | GPCF-DOC-5BF9469733 | GlobalCloud 绿色供应链体系真实层次架构图 | 01-architecture/GlobalCloud绿色供应链体系真实层次架构图.md | GPCF | controlled |
 | GPCF-DOC-3DB47E5509 | GlobalCloud 绿色供应链平台业务流架构图 | 01-architecture/GlobalCloud绿色供应链平台业务流架构图.md | GPCF | controlled |
 | GPCF-DOC-AA2468EDC8 | GlobalCloud 绿色供应链平台主架构与宪法约束融合建议 | 01-architecture/GlobalCloud绿色供应链平台主架构与宪法约束融合建议.md | GPCF | controlled |
+| GPCF-DOC-GROUP-BUSINESS-ANALYSIS-20261025 | GlobalCloud 项目群业务层分析（客户 × 平台 × 业务流程） | 01-architecture/GlobalCloud项目群业务层分析_v1.0.md | GPCF | controlled |
 | GPCF-DOC-535BF5C0CA | GlobalCloud V0.0.1 项目群交叉分析报告 | 01-architecture/GlobalCloud项目群交叉分析报告.md | GPCF | controlled |
 | GPCF-DOC-GLOBALCLOUD-PROJECT-GROUP-IMPLEMENTATION-PLAN-20260624 | GlobalCloud 项目群实施方案 | 01-architecture/GlobalCloud项目群实施方案.md | GPCF | controlled |
 | GPCF-DOC-GROUP-ARCH-ITERATION-20261017 | GlobalCloud 项目群总体架构迭代分析（合理性与可行性 + 优化方案 + 系统逻辑架构） | 01-architecture/GlobalCloud项目群总体架构迭代分析_v1.0.md | GPCF | controlled |
+| GPCF-DOC-GROUP-ARCH-RECONSTRUCT-20261025 | GlobalCloud 项目群总体架构重构（四层体系冻结版融合） | 01-architecture/GlobalCloud项目群总体架构重构_v1.0.md | GPCF | controlled |
 | GPCF-DOC-7B5E3B05D7 | GlobalCloud 项目群最小闭环 L4 实施方案 | 01-architecture/GlobalCloud项目群最小闭环L4实施方案.md | GPCF | controlled |
 | GPCF-DOC-GROUP-ARCH-DEEPEN-20261017 | GlobalCloud 项目群架构深化分析（ADR 决策集 · 依赖网络 · 质量属性 · 场景走查 · 风险矩阵） | 01-architecture/GlobalCloud项目群架构深化分析_v1.0.md | GPCF | controlled |
 | GPCF-DOC-GROUP-SYSTEM-ARCHITECTURE-20261017 | GlobalCloud 项目群系统架构图 | 01-architecture/GlobalCloud项目群系统架构图.md | GPCF | controlled |
+| GPCF-DOC-GROUP-GAP-ADR-20261025 | GlobalCloud 项目群结构性缺口分析与 ADR 草案（SOP 补链 / ICP 城市层 / 场景包接口） | 01-architecture/GlobalCloud项目群结构性缺口分析与ADR草案_v1.0.md | GPCF | controlled |
 | GPCF-DOC-XAP-P1-ACCEPTANCE-CASES-DRAFT-20261011 | P1 最小受理闭环 · 验收用例草案 v0.1 | 01-architecture/P1最小受理闭环_验收用例草案_v0.1.md | GPCF | controlled |
 | GPCF-DOC-75A25DFFB1 | 架构方案 | 01-architecture/README.md | GPCF | controlled |
 | GPCF-DOC-WAME-UNIFIED-REQUEST-MECHANISM-20261011 | GlobalCloud 项目群 · WAME 统一审核请求机制 v0.1 | 01-architecture/WAME统一审核请求机制_v0.1.md | GPCF | controlled |
@@ -86,6 +89,3 @@ KDS 路径前缀：`开发/12-GPCF/01-architecture/`
 | GPCF-DOC-XWAIL-V12-VALIDATOR-RULES-20260623 | XWAIL-V1.2-Validator规则清单 | 01-architecture/XWAIL-V1.2-Validator规则清单.md | GPCF | controlled |
 | GPCF-DOC-XWAIL-V12-DRAFT-20260623 | XWAIL可扩展世界资产信息建模语言规范V1.2草案 | 01-architecture/XWAIL可扩展世界资产信息建模语言规范V1.2草案.md | GPCF | controlled |
 | GPCF-DOC-1D47877518 | 基于 GlobalCloud 项目群的 GlobalCloud 绿色供应链体系架构设计方案 | 01-architecture/基于GlobalCloud项目群的智慧工厂架构设计方案.md | GPCF | controlled |
-| GPCF-DOC-GROUP-BUSINESS-ANALYSIS-20261025 | GlobalCloud 项目群业务层分析（客户 × 平台 × 业务流程） | 01-architecture/GlobalCloud项目群业务层分析_v1.0.md | GPCF | controlled |
-| GPCF-DOC-GROUP-GAP-ADR-20261025 | GlobalCloud 项目群结构性缺口分析与 ADR 草案（SOP 补链 / ICP 城市层 / 场景包接口） | 01-architecture/GlobalCloud项目群结构性缺口分析与ADR草案_v1.0.md | GPCF | controlled |
-| GPCF-DOC-GROUP-ARCH-RECONSTRUCT-20261025 | GlobalCloud 项目群总体架构重构（四层体系冻结版融合） | 01-architecture/GlobalCloud项目群总体架构重构_v1.0.md | GPCF | controlled |

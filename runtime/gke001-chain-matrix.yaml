@@ -1,0 +1,245 @@
+schema_version: 1
+matrix_id: globalcloud.gke001_knowledge_chain_matrix
+generated_at: "2026-10-22T08:20:00+08:00"
+owner: GPCF
+engineering_domain: GKE-001
+canonical_feature: F-013
+scope: >-
+  GKE-001 知识工程链路盘点（inventory，只读）：canonical 契约 → KDS 存储 → Studio 接入 →
+  Brain candidate → MMC 授权 → 人工确认。只登记各环节 owner、产物、证据、状态、依赖与缺口；
+  不改 KDS / Studio / Brain / MMC 任一仓，不执行写入，不签署授权。
+source_of_truth: false
+chain_closed: false
+update_rule: >-
+  本矩阵是链路索引，不是闭环声明。任一环节产物或证据变化后必须重跑
+  python3 tools/kds-sync/validate_gke001_chain_matrix.py，并更新对应 stage 的 status / evidence / gaps。
+  状态必须来自真实证据；找不到依据写 unknown 并把 inferred 置为 true，不得按印象填 S2/S3。
+stage_scale:
+  S0: 无产物（环节尚未启动）
+  S1: 有规格、契约或申请包等设计产物，但没有本地可运行实现与可回放证据
+  S2: 有本地实现与可回放证据（含 run 记录 / validator / freeze 记录），未完成跨仓联调与独立评审
+  S3: 跨仓联调与独立评审证据齐备（仍不等于 accepted，不构成授权或状态提升）
+  pending: 等待上游环节或人工授权，当前无法推进
+declared_status:
+  engineering_status: active
+  cross_project_status: partial
+  completion_status: not_complete
+  real_kds_write_authorized: false
+  long_term_memory_write_authorized: false
+  business_state_change_authorized: false
+  status_promotion_authorized: false
+  basis: 03-data-ai-knowledge/GlobalCloud项目群知识工程规范.md §14「当前项目群状态」
+stages:
+  - stage_id: STAGE-01-CANONICAL-CONTRACT
+    stage_key: canonical_contract
+    name: canonical 契约（KnowledgeObject + KnowledgeAssetEnvelope + manifest + 词表）
+    owner: GPCF（F-013 canonical 契约与独立验收工作包）
+    status: S2
+    status_basis: manifest + JSON Schema + 词表 + 示例 + 确定性 validator + freeze 记录均存在；freeze 状态为 controlled_candidate_pending_independent_review、release_unblocked=false
+    artifacts:
+      - okf/knowledge-asset-contract-manifest.yaml
+      - okf/knowledge-asset-envelope.schema.json
+      - okf/knowledge-object.schema.json
+      - okf/knowledge-asset-vocabulary.yaml
+      - okf/knowledge-asset-envelope.example.json
+    evidence:
+      - features/active/F-013-knowledge-asset-model-system/artifacts/gke-001-canonical-v0.1-17c9-freeze-20261012.yaml
+      - features/active/F-013-knowledge-asset-model-system/artifacts/gke-001-canonical-v0.1-76ac-freeze-20260821.yaml
+      - tools/kds-sync/validate_knowledge_asset_model_system.py
+      - 03-data-ai-knowledge/GlobalCloud项目群知识工程规范.md
+    depends: []
+    gaps:
+      - freeze 结论为 controlled_candidate_pending_independent_review（release_unblocked=false），独立评审未出结论
+      - manifest updated_at 记 2026-08-21，落后当前 freeze 记录 2026-10-12，版本锚点与实际控制面不一致
+      - contract_version v0.1 下已发生两次哈希修订（76ac… → 17c9…），没有 patch 位说明同版本多哈希是否合法
+    inferred: false
+
+  - stage_id: STAGE-02-KDS-STORAGE
+    stage_key: kds_storage
+    name: KDS 存储（知识事实主存 + Release0 canonical read facade）
+    owner: KDS
+    status: S2
+    status_basis: KDS 侧已实现 Release0 canonical read facade 并有 run 记录，但 run status=partial、completion_status=not_complete；读契约状态为 contract_frozen_for_future_implementation_not_integrated
+    artifacts:
+      - ../GlobalCloud KDS/.harness/runs/20260811-193752-implement-release0-canonical-read-facade/run.yaml
+      - ../GlobalCloud KDS/.harness/runs/20260811-193752-implement-release0-canonical-read-facade/acceptance-matrix.md
+      - ../GlobalCloud KDS/.harness/runs/20260811-193752-implement-release0-canonical-read-facade/f013-handoff.md
+      - ../GlobalCloud KDS/.harness/runs/20260811-193752-implement-release0-canonical-read-facade/evidence-index.yaml
+    evidence:
+      - features/active/F-013-knowledge-asset-model-system/artifacts/gke-001-release0-canonical-read-contract-freeze-a10p3r2.yaml
+      - features/active/F-013-knowledge-asset-model-system/artifacts/gke-001-kds-local-schema-migration-controller-a10r34p17r4.py
+      - features/active/F-013-knowledge-asset-model-system/artifacts/gke-001-kds-mmc-read-admission-amendment-a9.yaml
+    depends: [STAGE-01-CANONICAL-CONTRACT]
+    gaps:
+      - Release0 canonical read 契约自述 frozen_for_future_implementation_not_integrated，契约与实现未绑定
+      - KDS run status=partial / completion_status=not_complete，尚无最终收口轮次
+      - 规范 §14 固定 real_kds_write_authorized=false，真实 KDS 写入与 API 同步均未授权
+      - KDS 侧 vendored 契约镜像与 GPCF manifest 哈希的只读准入复核尚未成为门禁
+    inferred: false
+
+  - stage_id: STAGE-03-STUDIO-INGEST
+    stage_key: studio_ingest
+    name: Studio 接入（canonical read BFF + 待复核内容展示与唯一主要操作）
+    owner: Studio
+    status: S2
+    status_basis: Studio 侧已集成 Release0 canonical read BFF 并有 run 记录，run status=completed_pending_targeted_independent_review、内层 partial_not_complete
+    artifacts:
+      - ../GlobalCloud Studio/.harness/runs/20260811-195500-integrate-release0-canonical-read-bff/run.yaml
+      - ../GlobalCloud Studio/.harness/runs/20260811-195500-integrate-release0-canonical-read-bff/acceptance-matrix.md
+      - ../GlobalCloud Studio/.harness/runs/20260811-195500-integrate-release0-canonical-read-bff/build-result.md
+      - ../GlobalCloud Studio/.harness/runs/20260811-195500-integrate-release0-canonical-read-bff/handoff.md
+    evidence:
+      - features/active/F-013-knowledge-asset-model-system/artifacts/gke-001-studio-canonical-bridge-push-replay-a10c2s2r1.yaml
+    depends: [STAGE-01-CANONICAL-CONTRACT, STAGE-02-KDS-STORAGE]
+    gaps:
+      - run status 为 completed_pending_targeted_independent_review，定向独立评审未完成
+      - 实施控制台账（09-status/globalcloud-project-implementation-control-register.md）记 Studio 边界为 local_release_review_boundary，提交前人工复核未做
+      - 尚无 Studio 人工复核动作产生的 review_required → approved 回放证据
+    inferred: false
+
+  - stage_id: STAGE-04-BRAIN-CANDIDATE
+    stage_key: brain_candidate
+    name: Brain candidate（候选生成 / Preview / 引用审计，不自动确认）
+    owner: Brain
+    status: S2
+    status_basis: Brain 侧已有 canonical consumer audit（report_only_static_and_test_replay）与 canonical preview 系列 run 记录，run status_claim=partial
+    artifacts:
+      - ../GlobalCloud Brain/.harness/runs/20260814-isolate-brain-release0-page-from-mmc-fallback-a10r4/run.yaml
+      - ../GlobalCloud Brain/.harness/runs/20260814-isolate-brain-release0-page-from-mmc-fallback-a10r4/change-boundary.yaml
+      - ../GlobalCloud Brain/.harness/runs/20260905-100845-canonical-search-preview-identity/run.yaml
+    evidence:
+      - features/active/F-013-knowledge-asset-model-system/artifacts/gke-001-brain-release0-canonical-consumer-audit-a10b1.yaml
+      - features/active/F-013-knowledge-asset-model-system/artifacts/gke-001-brain-canonical-consumer-push-review-closure-a10c5r2r1.yaml
+    depends: [STAGE-01-CANONICAL-CONTRACT, STAGE-02-KDS-STORAGE]
+    gaps:
+      - consumer audit 的模式是 report_only_static_and_test_replay，不是真实数据联调，只能证明消费侧静态与测试回放
+      - Brain run status_claim=partial；控制台账边界为 human_review_boundary，候选到 approved 必须人工裁决
+      - candidate 结果与 Studio 人工复核链路之间没有同一份 correlationId / evidenceRefs 关联证据
+    inferred: false
+
+  - stage_id: STAGE-05-MMC-AUTHORIZATION
+    stage_key: mmc_authorization
+    name: MMC 授权（可信身份 / 读取策略准入 / 跨服务授权）
+    owner: MMC
+    status: S1
+    status_basis: 已有 canonical read relay 实现与 policy admission 申请包，但授权申请模式为 human_authorization_request_only，未产生授权回执；控制台账保持 authorization_granted=0
+    artifacts:
+      - ../GlobalCloud MMC/.harness/runs/20260811-132225-implement-release0-canonical-read-relay-a10i2/acceptance-matrix.md
+      - ../GlobalCloud MMC/.harness/runs/20260813-admit-release0-canonical-read-policy-a10c7/run.yaml
+      - ../GlobalCloud MMC/.harness/runs/20260813-admit-release0-canonical-read-policy-a10c7/preflight.json
+      - ../GlobalCloud MMC/.harness/runs/20260813-admit-release0-canonical-read-policy-a10c7/f013-handoff.md
+    evidence:
+      - features/active/F-013-knowledge-asset-model-system/artifacts/gke-001-mmc-release0-source-policy-admission-authorization-a10c7r1.yaml
+      - features/active/F-013-knowledge-asset-model-system/artifacts/gke-001-kds-mmc-read-admission-amendment-a9.yaml
+      - 09-status/globalcloud-project-implementation-control-register.md
+    depends: [STAGE-02-KDS-STORAGE, STAGE-03-STUDIO-INGEST, STAGE-04-BRAIN-CANDIDATE]
+    gaps:
+      - 只有授权申请包（mode=human_authorization_request_only），没有 granted 回执与生效策略记录
+      - 控制台账保持 authorization_granted=0、action_executed=0，授权链未闭环
+      - MMC 策略 apply 属共享配置写入，需单独人工授权才能执行
+      - MMC run status=partial，review 步骤虽 completed，但未形成跨仓生效证据
+    inferred: false
+
+  - stage_id: STAGE-06-HUMAN-CONFIRMATION
+    stage_key: human_confirmation
+    name: 人工确认（review_required → approved / rejected 的唯一入口）
+    owner: 人工（业务对象 owner / 场景 owner；Agent 不得代行）
+    status: pending
+    status_basis: 全链路没有任何人工确认回执；规范 §7/§8 规定人工确认是 accepted 唯一入口，§14 固定 status_promotion_authorized=false
+    artifacts:
+      - 09-status/globalcloud-project-implementation-control-register.md
+      - features/active/F-013-knowledge-asset-model-system/feature.yaml
+    evidence:
+      - 03-data-ai-knowledge/GlobalCloud项目群知识工程规范.md
+      - features/active/F-013-knowledge-asset-model-system/artifacts/gke-001-mmc-release0-source-policy-admission-authorization-a10c7r1.yaml
+    depends: [STAGE-05-MMC-AUTHORIZATION]
+    gaps:
+      - 无任何人工确认回执（授权/放行/复核签字）落在可回放证据里
+      - F-013 仍带 blockers：kds_p1_apply_blocked_by_dirty_worktree、gpcf_a10r27 待独立复核等
+      - 规范 §7 权限与写入规范要求人工确认前置，链路未取得该前置
+      - Agent 不得代行人工确认；本环节无法由自动化补齐
+    inferred: false
+breakpoints:
+  - breakpoint_id: BP-01-HUMAN-CONFIRMATION-GAP
+    stage_id: STAGE-06-HUMAN-CONFIRMATION
+    title: 人工确认环节空洞，链路末端无回执
+    severity: P0
+    blocking: true
+    detail: 授权与复核均停留在请求状态（authorization_granted=0、action_executed=0），链路无法从 pending 走到任何 approved 态。
+    evidence:
+      - 03-data-ai-knowledge/GlobalCloud项目群知识工程规范.md
+      - 09-status/globalcloud-project-implementation-control-register.md
+    recommendation: 先只对「KDS Release0 只读访问」这一条权限做一次人工确认，产出单条回执，不涉及写入/记忆/状态提升。
+    inferred: false
+
+  - breakpoint_id: BP-02-MMC-AUTH-NOT-EFFECTIVE
+    stage_id: STAGE-05-MMC-AUTHORIZATION
+    title: MMC 授权只有申请包，未生效
+    severity: P0
+    blocking: true
+    detail: 策略准入停在 human_authorization_request_only，无 granted 回执；下游 Studio/Brain 读链路缺少授权锚点。
+    evidence:
+      - features/active/F-013-knowledge-asset-model-system/artifacts/gke-001-mmc-release0-source-policy-admission-authorization-a10c7r1.yaml
+      - ../GlobalCloud MMC/.harness/runs/20260813-admit-release0-canonical-read-policy-a10c7/run.yaml
+    recommendation: 把 MMC 授权申请包 → 人工确认 → 回执登记做成一条最小闭环，并让 Studio/Brain 的读请求引用同一授权号。
+    inferred: false
+
+  - breakpoint_id: BP-03-KDS-CONTRACT-NOT-INTEGRATED
+    stage_id: STAGE-02-KDS-STORAGE
+    title: KDS 读契约 frozen 但未 integrated，KDS run 仍 partial
+    severity: P1
+    blocking: true
+    detail: 契约状态自述 contract_frozen_for_future_implementation_not_integrated，KDS run status=partial/completion=not_complete，契约与实现未绑定。
+    evidence:
+      - features/active/F-013-knowledge-asset-model-system/artifacts/gke-001-release0-canonical-read-contract-freeze-a10p3r2.yaml
+      - ../GlobalCloud KDS/.harness/runs/20260811-193752-implement-release0-canonical-read-facade/run.yaml
+    recommendation: 用同一契约哈希做一次只读联调回放，把契约版本写进 KDS run 证据，收口 partial 为单一结论。
+    inferred: false
+
+  - breakpoint_id: BP-04-CANONICAL-FREEZE-PENDING
+    stage_id: STAGE-01-CANONICAL-CONTRACT
+    title: canonical freeze 待独立评审，版本锚点滞后
+    severity: P1
+    blocking: true
+    detail: freeze 为 controlled_candidate_pending_independent_review、release_unblocked=false；manifest updated_at 落后于 freeze；v0.1 下两次哈希修订无 patch 位。
+    evidence:
+      - features/active/F-013-knowledge-asset-model-system/artifacts/gke-001-canonical-v0.1-17c9-freeze-20261012.yaml
+      - okf/knowledge-asset-contract-manifest.yaml
+    recommendation: 先出独立评审结论并回写 manifest 的 updated_at 与 patch 位规则，再把哈希写进下游三个环节的证据。
+    inferred: false
+
+  - breakpoint_id: BP-05-PER-REPO-REVIEW-INCOMPLETE
+    stage_id: STAGE-03-STUDIO-INGEST
+    title: Studio / Brain 各仓独立评审未完成
+    severity: P1
+    blocking: true
+    detail: Studio run 为 completed_pending_targeted_independent_review（内层 partial_not_complete），Brain run status_claim=partial 且边界为 human_review_boundary。
+    evidence:
+      - ../GlobalCloud Studio/.harness/runs/20260811-195500-integrate-release0-canonical-read-bff/run.yaml
+      - ../GlobalCloud Brain/.harness/runs/20260814-isolate-brain-release0-page-from-mmc-fallback-a10r4/run.yaml
+    recommendation: 两仓各做一次定向独立评审（同一份 acceptance-matrix 口径），只收口各自环节结论，不动他人仓。
+    inferred: false
+
+  - breakpoint_id: BP-06-NO-CHAIN-EVIDENCE-INDEX
+    stage_id: STAGE-01-CANONICAL-CONTRACT
+    title: 跨仓证据无统一链路索引，回放依赖人工拼接
+    severity: P2
+    blocking: false
+    detail: 证据分散在 GPCF F-013 artifacts 与四个仓的 .harness/runs，没有一条链路级 evidence-index 把 6 环节串起来。
+    evidence:
+      - features/active/F-013-knowledge-asset-model-system/evidence/knowledge-asset-model-validation.md
+      - ../GlobalCloud KDS/.harness/runs/20260811-193752-implement-release0-canonical-read-facade/evidence-index.yaml
+    recommendation: 新增链路级 evidence-index（只登记路径与哈希），由本矩阵 stage_id 与各仓 run id 双向引用。
+    inferred: false
+
+  - breakpoint_id: BP-07-CONTRACT-DOMAIN-ALIGNMENT
+    stage_id: STAGE-05-MMC-AUTHORIZATION
+    title: 知识链路未与跨项目契约矩阵对齐
+    severity: P2
+    blocking: false
+    detail: 知识域错误语义、事件通知与 PG-12 契约矩阵（XAP / 事件 / canonical）尚无对应条目，授权失败时缺少统一错误码口径。
+    evidence:
+      - runtime/contract-matrix.yaml
+      - 01-architecture/XAP回执与执行报告规格草案_v0.1.md
+    recommendation: 在 PG-12 契约矩阵中补知识域条目，并把 MMC 授权失败映射到统一错误码后再联调。
+    inferred: false

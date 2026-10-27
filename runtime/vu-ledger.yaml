@@ -1176,7 +1176,7 @@ vu_units:
   source_of_record: 无
   acceptor: DRC owner
   stage: S0
-  stage_evidence: loop_document_gate=rework_required、project_group_gate_readiness=fail
+  stage_evidence: 2026-10-24 门禁 12/12 pass；但 DRC 最小数据流程与审计契约仍无记录
   data_class: none
   inferred: true
   notes: 门禁未过

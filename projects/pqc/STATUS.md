@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/91-治理与验收/projects/pqc/STATUS.md
 source_path: projects/pqc/STATUS.md
 sync_direction: bidirectional
-last_reviewed: 2026-10-10
+last_reviewed: 2026-10-18
 supersedes: []
 superseded_by: []
 ---
@@ -28,6 +28,10 @@ superseded_by: []
 - 生产/真实业务/跨系统验收：本轮未执行，不提升 integrated/production_ready。
 - 证据：`../GlobalCloud PQC/docs/harness/onboarding-2026-10-10.md`。
 - 下一步：依据本项目实际业务需求新建 Feature，完成真实业务与权限验收；历史门禁覆盖不代表新项目完成。
+
+## 项目群总体架构 v1.1 承接（2026-10-18）
+
+PQC 持包装成本快照、报价审批、采购和回款业务；与 PVAOS 主体、GPC 平台订单以引用关联，不修改 GFIS/WAME 主账。仓内唯一项目总体方案仍为 `missing`，传导状态 `pending_unique_plan`；本状态页与项目群主方案 §4.1 是受控输入，不能充当已确认的项目总体方案。
 
 ## OpenSpec 入口
 

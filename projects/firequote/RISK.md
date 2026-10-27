@@ -7,7 +7,13 @@ domain: governance
 status: draft
 version: v1.0
 owner: FireQuote
+kds_space: 开发
+kds_path: 开发/91-治理与验收/projects/firequote/RISK.md
+source_path: projects/firequote/RISK.md
+sync_direction: bidirectional
 last_reviewed: 2026-10-22
+supersedes: []
+superseded_by: []
 ---
 
 # FireQuote 风险

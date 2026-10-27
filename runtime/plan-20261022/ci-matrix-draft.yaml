@@ -1,0 +1,496 @@
+schema_version: 0.1-draft
+generated_at: '2026-10-22T22:22:00+08:00'
+status: draft — 未接入门禁；接入属治理变更需授权
+note: P16 跨项目 CI/验收矩阵草案：盘点 29 仓 workflow 实况与六类 job 覆盖
+jobs_required:
+- standard
+- test
+- build
+- e2e
+- browser
+- a11y
+repos:
+- repo: GlobalCloud AAAS
+  workflows:
+    standards.yml:
+    - standards
+  coverage:
+    standard: present
+    test: missing
+    build: missing
+    e2e: missing
+    browser: missing
+    a11y: missing
+- repo: GlobalCloud Brain
+  workflows:
+    brain-p2-static-review.yml:
+    - boundary-only-review
+    - static-review
+    standards.yml:
+    - standards
+  coverage:
+    standard: present
+    test: missing
+    build: missing
+    e2e: missing
+    browser: missing
+    a11y: missing
+- repo: GlobalCloud WAS
+  workflows:
+    standards.yml:
+    - standards
+  coverage:
+    standard: present
+    test: missing
+    build: missing
+    e2e: missing
+    browser: missing
+    a11y: missing
+- repo: GlobalCloud XiaoC
+  workflows:
+    docker.yml:
+    - build
+    release.yml:
+    - test
+    - validate-release-notes
+    - prepare-release
+    - build-windows
+    - build-macos
+    - build-linux
+    - build-extension
+    - publish-release
+    standards.yml:
+    - standards
+    test.yml:
+    - test-gate
+    - test-full
+  coverage:
+    standard: present
+    test: present
+    build: present
+    e2e: missing
+    browser: missing
+    a11y: missing
+- repo: GlobalCloud WAME
+  workflows:
+    quality.yml:
+    - quality
+    standards.yml:
+    - standards
+  coverage:
+    standard: present
+    test: missing
+    build: missing
+    e2e: missing
+    browser: missing
+    a11y: missing
+- repo: GlobalCloud GPC
+  workflows:
+    gcfis-quality.yml:
+    - quality
+    standards.yml:
+    - standards
+  coverage:
+    standard: present
+    test: missing
+    build: missing
+    e2e: missing
+    browser: missing
+    a11y: missing
+- repo: GlobalCloud Studio
+  workflows:
+    build.yml:
+    - build
+    desktop-mac-update-manifest.yml:
+    - repair
+    desktop-manual-build.yml:
+    - validate
+    - build
+    - mac-update-manifest
+    desktop-release.yml:
+    - desktop-release
+    desktop-runtime.yml:
+    - runtime
+    docker-publish.yml:
+    - publish
+    standards.yml:
+    - standards
+    webui-release.yml:
+    - upload
+  coverage:
+    standard: present
+    test: missing
+    build: present
+    e2e: missing
+    browser: missing
+    a11y: missing
+- repo: GlobalCloud GPCF
+  workflows:
+    governance.yml:
+    - repository-checks
+    - gpcf-gates
+    standards.yml:
+    - standards
+  coverage:
+    standard: present
+    test: missing
+    build: missing
+    e2e: missing
+    browser: missing
+    a11y: missing
+- repo: GlobalCloud XWAIL
+  workflows:
+    standards.yml:
+    - standards
+  coverage:
+    standard: present
+    test: missing
+    build: missing
+    e2e: missing
+    browser: missing
+    a11y: missing
+- repo: GlobalCloud GFIS
+  workflows:
+    gcfis-quality.yml:
+    - quality
+    standards.yml:
+    - standards
+  coverage:
+    standard: present
+    test: missing
+    build: missing
+    e2e: missing
+    browser: missing
+    a11y: missing
+- repo: GlobalCloud MMC
+  workflows:
+    mmc-ci.yml:
+    - test
+    standards.yml:
+    - standards
+  coverage:
+    standard: present
+    test: present
+    build: missing
+    e2e: missing
+    browser: missing
+    a11y: missing
+- repo: GlobalCloud KDS
+  workflows:
+    standards.yml:
+    - standards
+  coverage:
+    standard: present
+    test: missing
+    build: missing
+    e2e: missing
+    browser: missing
+    a11y: missing
+- repo: GlobalCloud XiaoG
+  workflows:
+    build.yml:
+    - build
+    coding-agent-platforms.yml:
+    - native-processes
+    desktop-mac-update-manifest.yml:
+    - repair
+    desktop-manual-build.yml:
+    - validate
+    - desktop
+    - mac-update-manifest
+    desktop-release.yml:
+    - desktop
+    - mac-update-manifest
+    - mark-latest
+    desktop-runtime.yml:
+    - runtime
+    desktop-update-test.yml:
+    - build
+    docker-publish.yml:
+    - build-and-push
+    - keep-release-out-of-latest
+    npm-lockfile-check.yml:
+    - check
+    npm-publish.yml:
+    - build
+    - publish
+    p2p-platforms.yml:
+    - sockets
+    playwright.yml:
+    - e2e-shard
+    - e2e
+    standards.yml:
+    - standards
+    tos-package-test.yml:
+    - tos
+    - platform
+    webui-release.yml:
+    - webui
+    - keep-release-out-of-latest
+  coverage:
+    standard: present
+    test: present
+    build: present
+    e2e: present
+    browser: missing
+    a11y: missing
+- repo: GlobalCloud PVA
+  workflows:
+    ci.yml:
+    - quality
+    standards.yml:
+    - standards
+    supabase-edge-functions.yml:
+    - deploy
+  coverage:
+    standard: present
+    test: missing
+    build: missing
+    e2e: missing
+    browser: missing
+    a11y: missing
+- repo: GlobalCloud SOP
+  workflows:
+    standards.yml:
+    - standards
+  coverage:
+    standard: present
+    test: missing
+    build: missing
+    e2e: missing
+    browser: missing
+    a11y: missing
+- repo: GlobalCloud PKC
+  workflows:
+    standards.yml:
+    - standards
+  coverage:
+    standard: present
+    test: missing
+    build: missing
+    e2e: missing
+    browser: missing
+    a11y: missing
+- repo: GlobalCloud XGD
+  workflows:
+    quality.yml:
+    - quality
+    standards.yml:
+    - standards
+  coverage:
+    standard: present
+    test: missing
+    build: missing
+    e2e: missing
+    browser: missing
+    a11y: missing
+- repo: GlobalCloud ICP
+  workflows:
+    standards.yml:
+    - standards
+  coverage:
+    standard: present
+    test: missing
+    build: missing
+    e2e: missing
+    browser: missing
+    a11y: missing
+- repo: GlobalCloud PQC
+  workflows:
+    standards.yml:
+    - standards
+  coverage:
+    standard: present
+    test: missing
+    build: missing
+    e2e: missing
+    browser: missing
+    a11y: missing
+- repo: GlobalCloud SpaceAI Platform
+  workflows:
+    l4-acceptance.yml:
+    - l4-unit
+    - l4-toolchain
+    - l4-acceptance
+    standards.yml:
+    - standards
+  coverage:
+    standard: present
+    test: missing
+    build: missing
+    e2e: missing
+    browser: missing
+    a11y: missing
+- repo: GlobalCloud SpaceAI Studio
+  workflows:
+    build.yml:
+    - test
+    - bundle
+    standards.yml:
+    - standards
+  coverage:
+    standard: present
+    test: present
+    build: missing
+    e2e: missing
+    browser: missing
+    a11y: missing
+- repo: GlobalCloud World
+  workflows:
+    ci.yml:
+    - verify
+    standards.yml:
+    - standards
+  coverage:
+    standard: present
+    test: missing
+    build: missing
+    e2e: missing
+    browser: missing
+    a11y: missing
+- repo: GlobalCloud Mem
+  workflows:
+    standards.yml:
+    - standards
+  coverage:
+    standard: present
+    test: missing
+    build: missing
+    e2e: missing
+    browser: missing
+    a11y: missing
+- repo: GlobalCloud WAE
+  workflows:
+    ci.yml:
+    - gate
+    feature-plaza.yml:
+    - feature-plaza
+    module-compliance.yml:
+    - compliance
+    standards.yml:
+    - standards
+  coverage:
+    standard: present
+    test: missing
+    build: missing
+    e2e: missing
+    browser: missing
+    a11y: missing
+- repo: GlobalCloud PMC
+  workflows:
+    build-branch.yml:
+    - branch_build_setup
+    - branch_build_push_admin
+    - branch_merge_admin
+    - branch_build_push_web
+    - branch_merge_web
+    - branch_build_push_space
+    - branch_merge_space
+    - branch_build_push_live
+    - branch_merge_live
+    - branch_build_push_api
+    - branch_merge_api
+    - branch_build_push_proxy
+    - branch_merge_proxy
+    - prepare_aio_assets
+    - branch_build_push_aio
+    - branch_merge_aio
+    - upload_build_assets
+    - publish_release
+    check-version.yml:
+    - check-version
+    codeql.yml:
+    - analyze
+    copyright-check.yml:
+    - license-check
+    feature-deployment.yml:
+    - branch_build_setup
+    - full_build_push
+    - feature-deploy
+    i18n-sync-check.yml:
+    - sync-check
+    migration-check.yml:
+    - migration-check
+    pmc-release-gate.yml:
+    - web-checks
+    - api-unit-tests
+    pull-request-build-lint-api.yml:
+    - lint-api
+    pull-request-build-lint-web-apps.yml:
+    - check-format
+    - build
+    - check-lint
+    - check-types
+    react-doctor.yml:
+    - react-doctor
+    standards.yml:
+    - standards
+  coverage:
+    standard: present
+    test: present
+    build: present
+    e2e: missing
+    browser: missing
+    a11y: missing
+- repo: GlobalCloud PDC
+  workflows:
+    standards.yml:
+    - standards
+    test.yml:
+    - test
+    - build
+  coverage:
+    standard: present
+    test: present
+    build: present
+    e2e: missing
+    browser: missing
+    a11y: missing
+- repo: GlobalCloud SLC
+  workflows:
+    ci.yml:
+    - verify
+    - e2e
+    - build-installers
+    standards.yml:
+    - standards
+  coverage:
+    standard: present
+    test: missing
+    build: present
+    e2e: present
+    browser: missing
+    a11y: missing
+- repo: GlobalCloud DRC
+  workflows:
+    standards.yml:
+    - standards
+  coverage:
+    standard: present
+    test: missing
+    build: missing
+    e2e: missing
+    browser: missing
+    a11y: missing
+- repo: GlobalCloud FireQuote
+  workflows:
+    standards.yml:
+    - standards
+  coverage:
+    standard: present
+    test: missing
+    build: missing
+    e2e: missing
+    browser: missing
+    a11y: missing
+gap_summary:
+  standard_missing: 0
+  test_missing: 23
+  build_missing: 23
+  e2e_missing: 27
+  browser_missing: 29
+  a11y_missing: 29
+recommended_phase:
+  phase_1_now: standards（29/29 已具备）
+  phase_2_owner: test/build（各仓属主补 workflow；GPCF 只出清单）
+  phase_3_ui: e2e/browser/a11y（仅 UI 仓：WAE/PKC/WAE-Role/PDC/Studio/GPC/PQC 等）

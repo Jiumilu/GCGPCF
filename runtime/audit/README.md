@@ -38,3 +38,4 @@ KDS 空间：`开发`
 | doc_id | title | source_path | project | status |
 | --- | --- | --- | --- | --- |
 | GPCF-DOC-ACD4E61A57 | 项目群决策台账与日巡检接入（PG-10 起步） | runtime/audit/README.md | GPCF | controlled |
+| GPCF-DOC-DAILY-STATUS-20261022 | 项目群日巡检 20261022 | runtime/audit/daily-status-20261022.md | GPCF | draft |

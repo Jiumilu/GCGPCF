@@ -4,10 +4,12 @@
 from __future__ import annotations
 
 from pathlib import Path
+import yaml
 
 
 ROOT = Path(__file__).resolve().parents[2]
 ICP_ROOT = ROOT.parent / "GlobalCloud ICP"
+PROJECT_REGISTRY = ROOT / "config/project-group-projects.yaml"
 
 
 def require(condition: bool, message: str) -> None:
@@ -40,7 +42,8 @@ def main() -> int:
     ]:
         read(path)
 
-    require("项目群当前纳入 24 个项目" in master, "master plan must declare current 24-project scope")
+    current_count = int(yaml.safe_load(PROJECT_REGISTRY.read_text(encoding="utf-8"))["current_project_count"])
+    require(f"项目群当前纳入 {current_count} 个项目" in master, f"master plan must declare current {current_count}-project scope")
     require("| ICP | 24字产业模型" in master, "master plan missing ICP responsibility")
     require("18. GlobalCloud ICP" in implementation, "implementation plan missing project 18")
     require("17项目" in implementation, "historical 17-project baseline must be preserved")
@@ -54,7 +57,7 @@ def main() -> int:
         require(forbidden not in combined, f"forbidden promotion found: {forbidden}")
 
     print("icp_project_registration=pass")
-    print("project_count=24 icp_status=candidate overall_status=partial confirmation_status=human_required")
+    print(f"project_count={current_count} icp_status=candidate overall_status=partial confirmation_status=human_required")
     print("historical_project_count=17 historical_evidence_rewrite=false")
     return 0
 
