@@ -14,6 +14,7 @@ import json
 import os
 import re
 import shutil
+import sys
 from datetime import date, datetime, timezone
 from pathlib import Path
 
@@ -1112,6 +1113,14 @@ def main() -> int:
         result = inspect_changes()
         print(json.dumps(result, ensure_ascii=False, indent=2))
         return 1 if args.check and result["changed_count"] else 0
+    # P0 冻结（2026-10-27 知识官，见 outbox/20261027-KDS-status整改-同步断开方案.md）：
+    # 存在 .kds/SYNC_FROZEN.md 时，非 --check/--dry-run 的写入一律拒绝，
+    # 避免在 status 整改期间用同步器改写镜像与状态台账。确需解冻：KDS_SYNC_UNFREEZE=1。
+    if (ROOT / ".kds/SYNC_FROZEN.md").exists() and not os.environ.get("KDS_SYNC_UNFREEZE"):
+        print("[KDS 同步] 已冻结：.kds/SYNC_FROZEN.md 存在，非 --check 模式被拒绝。\n"
+              "  原因：status 整改期间禁止同步写回。解冻需显式设置 KDS_SYNC_UNFREEZE=1 并说明理由。",
+              file=sys.stderr)
+        return 2
     scope_paths = parse_scope_paths()
     if scope_paths:
         paths = iter_markdown()
