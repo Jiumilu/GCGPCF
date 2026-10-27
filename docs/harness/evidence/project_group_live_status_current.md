@@ -18,14 +18,14 @@ superseded_by: []
 data_layer: derived
 authority_level: A2
 verification_status: source_verified
-generated_at: 2026-10-27 19:52:16 +0800
+generated_at: 2026-10-27 20:22:54 +0800
 ---
 
 # GlobalCloud 项目群当前 Live 状态快照
 
 ## Summary
 
-- generated_at: `2026-10-27T19:52:16.724016+08:00`
+- generated_at: `2026-10-27T20:22:54.164636+08:00`
 - freshness_ok: `true`
 - project_count: `29`
 - pass_repo_count: `6`
@@ -51,23 +51,23 @@ generated_at: 2026-10-27 19:52:16 +0800
 | `GlobalCloud XiaoC` | 209 | 7 | 0 | `.env.bak-20261020-hermes-key, .harness/evidence/xiaoc-feishu-20261022/10-credentials.md, .harness/evidence/xiaoc-feishu-20261022/74-verification-token-wired.md, .harness/evidence/xiaoc-mcp-skill-20261020/23-real-smoke-hermes-credential.md, .harness/evidence/xiaoc-mcp-skill-20261020/37-caller-token-audit.jsonl, .harness/evidence/xiaoc-mcp-skill-20261020/37-caller-token-auth.md, .harness/evidence/xiaoc-mcp-skill-20261020/37-caller-token-health.json, packages/feishu-bridge/.env.example` |
 | `GlobalCloud WAME` | 6 | 0 | 0 | `none` |
 | `GlobalCloud GPC` | 1 | 8 | 0 | `none` |
-| `GlobalCloud GPCF` | 154 | 70 | 0 | `none` |
+| `GlobalCloud GPCF` | 154 | 71 | 0 | `none` |
 | `GlobalCloud XWAIL` | 1 | 0 | 20 | `none` |
 | `GlobalCloud GFIS` | 52 | 0 | 0 | `none` |
 | `GlobalCloud MMC` | 137 | 7 | 9 | `console/.env.example` |
 | `GlobalCloud KDS` | 48 | 0 | 0 | `none` |
 | `GlobalCloud XiaoG` | 1 | 1082 | 16 | `none` |
-| `GlobalCloud PVA` | 126 | 0 | 0 | `design/prototype/shots/01-tokens-dark.png, design/prototype/shots/11-tokens-light.png` |
+| `GlobalCloud PVA` | 128 | 0 | 0 | `design/prototype/shots/01-tokens-dark.png, design/prototype/shots/11-tokens-light.png` |
 | `GlobalCloud SOP` | 0 | 1 | 0 | `none` |
-| `GlobalCloud PKC` | 0 | 16 | 0 | `none` |
+| `GlobalCloud PKC` | 0 | 17 | 0 | `none` |
 | `GlobalCloud XGD` | 0 | 0 | 0 | `none` |
 | `GlobalCloud ICP` | 0 | 0 | 0 | `none` |
-| `GlobalCloud PQC` | 45 | 24 | 0 | `none` |
+| `GlobalCloud PQC` | 45 | 28 | 0 | `none` |
 | `GlobalCloud SpaceAI Platform` | 35 | 31 | 0 | `none` |
 | `GlobalCloud SpaceAI Studio` | 0 | 0 | 0 | `none` |
 | `GlobalCloud World` | 155 | 0 | 0 | `.env.example, docs/architecture/auth-embed-token-handoff.md, docs/harness/evidence/screenshots/phase12/token-handoff-1440.png, packages/server/src/services/embed-token.ts, scripts/mint-embed-token.mjs, tests/server/auth-embed-token.test.ts` |
 | `GlobalCloud Mem` | 1 | 8 | 0 | `none` |
-| `GlobalCloud WAE` | 334 | 83 | 71 | `docs/evidence/R1/supply-chain/secret-scan.json, packages/embed-token/README.md, packages/embed-token/package.json, packages/embed-token/src/index.test.ts, packages/embed-token/src/index.ts, packages/embed-token/tsconfig.json, packages/host-kit/src/host/embedTokenRoute.test.ts, packages/modules/module-gctoken-console/manifest.yaml, packages/modules/module-gctoken-console/src/index.dom.test.tsx, packages/modules/module-gctoken-console/src/index.tsx` |
+| `GlobalCloud WAE` | 341 | 85 | 71 | `docs/evidence/R1/supply-chain/secret-scan.json, packages/embed-token/README.md, packages/embed-token/package.json, packages/embed-token/src/index.test.ts, packages/embed-token/src/index.ts, packages/embed-token/tsconfig.json, packages/host-kit/src/host/embedTokenRoute.test.ts, packages/modules/module-gctoken-console/manifest.yaml, packages/modules/module-gctoken-console/src/index.dom.test.tsx, packages/modules/module-gctoken-console/src/index.tsx` |
 | `GlobalCloud PMC` | 4 | 3 | 0 | `none` |
 | `GlobalCloud PDC` | 56 | 17 | 0 | `.env.example` |
 | `GlobalCloud SLC` | 0 | 0 | 0 | `none` |
