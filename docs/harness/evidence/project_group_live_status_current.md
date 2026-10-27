@@ -51,7 +51,7 @@ generated_at: 2026-10-27 11:09:33 +0800
 | `GlobalCloud XiaoC` | 209 | 7 | 0 | `.env.bak-20261020-hermes-key, .harness/evidence/xiaoc-feishu-20261022/10-credentials.md, .harness/evidence/xiaoc-feishu-20261022/74-verification-token-wired.md, .harness/evidence/xiaoc-mcp-skill-20261020/23-real-smoke-hermes-credential.md, .harness/evidence/xiaoc-mcp-skill-20261020/37-caller-token-audit.jsonl, .harness/evidence/xiaoc-mcp-skill-20261020/37-caller-token-auth.md, .harness/evidence/xiaoc-mcp-skill-20261020/37-caller-token-health.json, packages/feishu-bridge/.env.example` |
 | `GlobalCloud WAME` | 6 | 0 | 0 | `none` |
 | `GlobalCloud GPC` | 1 | 8 | 0 | `none` |
-| `GlobalCloud GPCF` | 375 | 13 | 0 | `".kds/development-space/\345\274\200\345\217\221/91-\346\262\273\347\220\206\344\270\216\351\252\214\346\224\266/projects/gctoken/RISK.md", ".kds/development-space/\345\274\200\345\217\221/91-\346\262\273\347\220\206\344\270\216\351\252\214\346\224\266/projects/gctoken/ROADMAP.md", ".kds/development-space/\345\274\200\345\217\221/91-\346\262\273\347\220\206\344\270\216\351\252\214\346\224\266/projects/gctoken/STATUS.md"` |
+| `GlobalCloud GPCF` | 375 | 14 | 0 | `".kds/development-space/\345\274\200\345\217\221/91-\346\262\273\347\220\206\344\270\216\351\252\214\346\224\266/projects/gctoken/RISK.md", ".kds/development-space/\345\274\200\345\217\221/91-\346\262\273\347\220\206\344\270\216\351\252\214\346\224\266/projects/gctoken/ROADMAP.md", ".kds/development-space/\345\274\200\345\217\221/91-\346\262\273\347\220\206\344\270\216\351\252\214\346\224\266/projects/gctoken/STATUS.md"` |
 | `GlobalCloud XWAIL` | 1 | 0 | 20 | `none` |
 | `GlobalCloud GFIS` | 52 | 0 | 0 | `none` |
 | `GlobalCloud MMC` | 137 | 7 | 9 | `console/.env.example` |
