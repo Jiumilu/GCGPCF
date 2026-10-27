@@ -9,6 +9,8 @@ from pathlib import Path
 
 import yaml
 
+from git_env import clean_git_env
+
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -445,7 +447,8 @@ def test_scan_ci_coverage_distinguishes_prepared_vs_active(tmp_path):
     wf.mkdir(parents=True)
     (wf / "test-build.yml").write_text(
         "name: t\njobs:\n  test:\n    steps:\n      - run: python3 -m pytest -q\n", encoding="utf-8")
-    subprocess.run(["git", "init", "-q"], cwd=repo, check=False)
+    # env=clean_git_env()：hook 下不剥 GIT_* 会把 init 打到真实仓（2026-10-27 P0）
+    subprocess.run(["git", "init", "-q"], cwd=repo, check=False, env=clean_git_env())
     prepared = module.classify(repo)
     assert prepared["test"] is True          # 工作区口径：可见
     assert prepared["active_test"] is False  # 未跟踪：不生效

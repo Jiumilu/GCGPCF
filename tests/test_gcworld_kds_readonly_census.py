@@ -10,6 +10,8 @@ import unittest
 from contextlib import redirect_stderr
 from pathlib import Path
 
+from git_env import clean_git_env
+
 ROOT = Path(__file__).resolve().parents[1]
 READER = ROOT / "tools/kds-sync/run_gcworld_kds_readonly_census.py"
 MODULE_SPEC = importlib.util.spec_from_file_location("gcworld_kds_readonly_census", READER)
@@ -180,11 +182,14 @@ class GCWorldKDSReadonlyCensusTest(unittest.TestCase):
             (source_root / "公开").mkdir(parents=True)
             source = source_root / "公开/组织.md"
             source.write_text("初始内容", encoding="utf-8")
-            subprocess.run(["git", "init", "-q"], cwd=source_root, check=True)
-            subprocess.run(["git", "config", "user.email", "fixture@example.invalid"], cwd=source_root, check=True)
-            subprocess.run(["git", "config", "user.name", "GCWORLD测试"], cwd=source_root, check=True)
-            subprocess.run(["git", "add", "公开/组织.md"], cwd=source_root, check=True)
-            subprocess.run(["git", "commit", "-qm", "基线"], cwd=source_root, check=True)
+            # env=clean_git_env()：hook 下 git 会导出 GIT_DIR/GIT_WORK_TREE，
+            # 不剥掉会让这些操作打到真实仓（2026-10-27 P0，见 tests/git_env.py）。
+            git_env = clean_git_env()
+            subprocess.run(["git", "init", "-q"], cwd=source_root, check=True, env=git_env)
+            subprocess.run(["git", "config", "user.email", "fixture@example.invalid"], cwd=source_root, check=True, env=git_env)
+            subprocess.run(["git", "config", "user.name", "GCWORLD测试"], cwd=source_root, check=True, env=git_env)
+            subprocess.run(["git", "add", "公开/组织.md"], cwd=source_root, check=True, env=git_env)
+            subprocess.run(["git", "commit", "-qm", "基线"], cwd=source_root, check=True, env=git_env)
             source.write_text("未处置变更", encoding="utf-8")
             self.make_authorization(source_root)
             stderr = io.StringIO()
