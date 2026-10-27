@@ -66,3 +66,7 @@ jobs:
       - run: python tools/kds-sync/validate_event_package_ref.py
       # Feature 关闭闸：queue/state 与 Feature 工作区一致性（待 Firebase/ROADMAP 存量修复后转阻断）
       - run: python tools/kds-sync/validate_gpcf_2_feature_workspace.py
+      # J3 观测：loop 治理「暂停新增」规则的月度净增（只观测不阻断；需要阻断时改用 --strict）
+      - name: J3 观测（loop 治理暂停新增）
+        run: python tools/kds-sync/report_loop_governance_growth.py --months 6
+        continue-on-error: true

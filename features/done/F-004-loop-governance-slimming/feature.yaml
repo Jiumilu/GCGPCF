@@ -53,5 +53,36 @@ ui_product_first_control:
     accessibility_status: waived
     evidence_overexposure_gate: pass
   status_ceiling: partial
+second_round:
+  starts: '2026-10-27'
+  pmc_ref: PMC #255
+  status: in_progress
+  relation_to_first_round: >-
+    首轮（本文件 status: done）完成的是「把历史 LOOP 治理结果降级为参考、新开发入口统一到
+    features/active」；第二轮不再扩张治理，而是对首轮留下的治理面做可观测收敛：
+    给每个 loop 产物定入口类别、给「暂停新增」立观测、给挂账口径定唯一状态源。
+    首轮判据（治理文件清单、active Feature 样本、文档门禁可回放）在第二轮继续保留，不重复验收。
+  scope_doc: docs/governance/loop-治理收敛范围与判据.md
+  confirmation_doc: docs/governance/loop-无入口文档引用方确认清单.md
+  criteria:
+    J1: 四分类覆盖率 100%——34 篇正文 + 55 个引用脚本全部落到 T1/T2/P2/归档建议，未分类数 = 0
+    J2: 误伤为零——「归档建议」集合与「T1/T2 实际读取」集合交集为空
+    J3: 暂停新增可观测——J3-a 文档连续 2 个完整自然月 added_files==0；J3-b 净增行数仅观测不作判据
+    J4: 挂账口径一致——本 feature.yaml 为唯一状态源，PMC 为投影
+  observation_20261027:
+    head: c7f8204e4
+    loop_docs: 34 篇正文（owner GPCF 2 / WAME 32）
+    referencing_scripts: 55 个（T1 CI 2 / T2 手动 4 / 无入口 49）
+    docs_read_by_gates: 18 篇
+    docs_without_entry: 16 篇（其中 3 篇零消费方）
+    j3a_new_docs_2026_08_09: 0
+    rule2_new_validators_2026_08: 18
+    rule2_new_validators_2026_09: 3
+    rule2_new_validators_2026_10_to_date: 34
+  explicit_non_actions:
+    - 不归档任何他仓（WAME）属主文档，须对方属主书面同意 + Chief 书面调拨
+    - 不改 L1–L7 架构分层与宪法条文
+    - 不删除受控文档，只走归档 + 替代关系
+    - 不做状态提升，不碰生产
 created_at: "2026-07-07T23:24:58+00:00"
-updated_at: "2026-10-23T01:47:11+00:00"
+updated_at: "2026-10-27T13:21:44+00:00"
