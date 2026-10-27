@@ -10,7 +10,10 @@ import unittest
 from contextlib import redirect_stderr
 from pathlib import Path
 
-from git_env import clean_git_env
+try:  # tests/ 若被改成包（加 __init__.py），走相对导入
+    from .git_env import clean_git_env
+except ImportError:  # 当前布局：pytest 把 tests/ 插入 sys.path
+    from git_env import clean_git_env
 
 ROOT = Path(__file__).resolve().parents[1]
 READER = ROOT / "tools/kds-sync/run_gcworld_kds_readonly_census.py"

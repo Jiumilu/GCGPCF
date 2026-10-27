@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-10-27T22:06:25.061616+08:00",
+  "generated_at": "2026-10-27T22:38:14.300657+08:00",
   "freshness_hours": 12,
   "freshness_ok": true,
   "project_count": 29,
@@ -33,7 +33,6 @@
     "GlobalCloud GPC",
     "GlobalCloud GPCF",
     "GlobalCloud MMC",
-    "GlobalCloud KDS",
     "GlobalCloud XiaoG",
     "GlobalCloud SOP",
     "GlobalCloud PKC",
@@ -73,7 +72,6 @@
     "GlobalCloud GPC",
     "GlobalCloud GPCF",
     "GlobalCloud ICP",
-    "GlobalCloud KDS",
     "GlobalCloud MMC",
     "GlobalCloud Mem",
     "GlobalCloud PDC",
@@ -124,7 +122,7 @@
   ],
   "pass_repo_count": 4,
   "bootstrap_window": false,
-  "previous_generated_at": "2026-10-27T21:51:19.311417+08:00",
+  "previous_generated_at": "2026-10-27T22:06:25.061616+08:00",
   "repo_heads": {
     "GlobalCloud AAAS": "29d16215b6445385002fb3682626fe17d1feb450",
     "GlobalCloud Brain": "d266e49a9535bce0ec0525d2831391437e115028",
@@ -136,9 +134,9 @@
     "GlobalCloud XWAIL": "29c6669020bbb3e6bf47e748b917cf818a5800c6",
     "GlobalCloud GFIS": "3a18efbec321851395c311ce215784186b27ad15",
     "GlobalCloud MMC": "1f3803995d8f0a1969c8aaabca3b3a0217e2362e",
-    "GlobalCloud KDS": "2bcbd0d286ff0308e26d80445d940ea853f7101e",
+    "GlobalCloud KDS": "1ec18cf8910593500309e2cf4572472499285529",
     "GlobalCloud XiaoG": "e8c953ae0e12574c52024c060ddf9e68b00c08af",
-    "GlobalCloud PVA": "f95e4133f8d870c2aed597464e3d0e9d0d901c3c",
+    "GlobalCloud PVA": "ddfc5179d1a8052b629984496446f80d852c94f7",
     "GlobalCloud SOP": "80aa900d1b8963157f410f8099511e988cdc3a1e",
     "GlobalCloud PKC": "8545dcacb9b9f1b3f253e2c5d9cd062f94c57a4e",
     "GlobalCloud XGD": "774141be8490fd695b5baf7602480bf284ce259a",
@@ -503,8 +501,8 @@
       "sensitive_paths": []
     },
     "GlobalCloud GPCF": {
-      "dirty_count": 156,
-      "ahead": 88,
+      "dirty_count": 158,
+      "ahead": 96,
       "behind": 0,
       "paths": [
         "$CODEX_HOME/automations/globalcloud-17/README.md",
@@ -660,9 +658,11 @@
         "runtime/audit/README.md",
         "runtime/plan-20261022/README.md",
         "templates/README.md",
+        "tests/conftest.py",
+        "tests/test_gcworld_kds_readonly_census.py",
+        "tests/test_gpcf_governance_remediation.py",
         "tools/README.md",
-        "tools/kds-sync/README.md",
-        "tools/kds-sync/validate_was_xwail_ontology_mapping.py"
+        "tools/kds-sync/README.md"
       ],
       "sensitive_paths": []
     },
@@ -884,7 +884,7 @@
     },
     "GlobalCloud KDS": {
       "dirty_count": 123,
-      "ahead": 1,
+      "ahead": 0,
       "behind": 0,
       "paths": [
         "99_Reports/.desktop_root_state.json",

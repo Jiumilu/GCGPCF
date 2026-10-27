@@ -25,7 +25,10 @@ from __future__ import annotations
 
 import os
 
-from git_env import clean_git_env  # noqa: F401  re-export：测试可直接 from conftest import clean_git_env
+try:  # 若将来 tests/ 被改成包（加 __init__.py），走相对导入
+    from .git_env import clean_git_env  # noqa: F401
+except ImportError:  # 当前布局：pytest 把 tests/ 插入 sys.path，按顶层模块导入
+    from git_env import clean_git_env  # noqa: F401  re-export：测试可直接 from conftest import clean_git_env
 
 # 会话级剥除：pytest 进程本身以及它后续派生的所有子进程都不再继承 hook 的 git 环境。
 for _key in [k for k in os.environ if k.startswith("GIT_")]:
