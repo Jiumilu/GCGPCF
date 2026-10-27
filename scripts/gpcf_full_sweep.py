@@ -40,6 +40,7 @@ CHECKS: list[tuple[str, list[str], int]] = [
     ("cwme_space_domain_registration", ["tools/kds-sync/validate_cwme_space_domain_extension_registration_request.py"], 180),
     ("cwme_gate_entrypoints", ["tools/kds-sync/validate_cwme_gate_entrypoints.py"], 60),
     ("codegraph_evidence_suspended", ["tools/kds-sync/report_codegraph_historical_evidence_suspended.py"], 60),
+    ("was_xwail_ontology_mapping", ["tools/kds-sync/validate_was_xwail_ontology_mapping.py"], 120),
     ("derive_status", ["tools/kds-sync/derive_status_views.py", "--check"], 180),
     ("p17_done_audit", ["scripts/gpcf_p17_done_audit.py"], 300),
     ("exceptions_expiry", ["tools/kds-sync/check_exceptions_expiry.py"], 120),

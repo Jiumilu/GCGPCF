@@ -15,9 +15,9 @@ REGISTER = ROOT / "09-status/globalcloud-core-chain-real-evidence-register.md"
 DEPENDENCY = ROOT / "docs/harness/evidence/globalcloud-project-group-dependency-execution-matrix-20260625.md"
 STATUS = ROOT / "docs/harness/evidence/globalcloud-project-group-status-advancement-matrix-20260625.md"
 
-WAS_ONTOLOGY = PROJECT_ROOT / "WAS世界资产体系/okf/ontology.yaml"
-WAS_DIMENSIONS = PROJECT_ROOT / "WAS世界资产体系/okf/was/was-dimensions.yaml"
-WAS_FLOWS = PROJECT_ROOT / "WAS世界资产体系/okf/was/was-flows.yaml"
+WAS_ONTOLOGY = PROJECT_ROOT / "GlobalCloud WAS/okf/ontology.yaml"
+WAS_DIMENSIONS = PROJECT_ROOT / "GlobalCloud WAS/okf/was/was-dimensions.yaml"
+WAS_FLOWS = PROJECT_ROOT / "GlobalCloud WAS/okf/was/was-flows.yaml"
 XWAIL_MODEL = PROJECT_ROOT / "GlobalCloud XWAIL/models/examples/warehouse-basic.xwail.json"
 XWAIL_SCHEMA = PROJECT_ROOT / "GlobalCloud XWAIL/schemas-json/xwail-core.schema.json"
 
