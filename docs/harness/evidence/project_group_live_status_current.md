@@ -18,14 +18,14 @@ superseded_by: []
 data_layer: derived
 authority_level: A2
 verification_status: source_verified
-generated_at: 2026-10-27 11:09:33 +0800
+generated_at: 2026-10-27 17:16:55 +0800
 ---
 
 # GlobalCloud 项目群当前 Live 状态快照
 
 ## Summary
 
-- generated_at: `2026-10-27T11:09:33.858288+08:00`
+- generated_at: `2026-10-27T17:16:55.837735+08:00`
 - freshness_ok: `true`
 - project_count: `29`
 - pass_repo_count: `6`
@@ -38,7 +38,7 @@ generated_at: 2026-10-27 11:09:33 +0800
 - stable_dirty: `GlobalCloud AAAS, GlobalCloud Brain, GlobalCloud FireQuote, GlobalCloud GFIS, GlobalCloud GPC, GlobalCloud GPCF, GlobalCloud KDS, GlobalCloud MMC, GlobalCloud Mem, GlobalCloud PDC, GlobalCloud PMC, GlobalCloud PQC, GlobalCloud PVA, GlobalCloud SpaceAI Platform, GlobalCloud WAE, GlobalCloud WAME, GlobalCloud World, GlobalCloud XWAIL, GlobalCloud XiaoC, GlobalCloud XiaoG`
 - stable_ahead: `GlobalCloud Brain, GlobalCloud GPC, GlobalCloud GPCF, GlobalCloud MMC, GlobalCloud Mem, GlobalCloud PDC, GlobalCloud PKC, GlobalCloud PMC, GlobalCloud PQC, GlobalCloud SOP, GlobalCloud SpaceAI Platform, GlobalCloud Token, GlobalCloud WAE, GlobalCloud XiaoC, GlobalCloud XiaoG`
 - volatile_dirty: `GlobalCloud GPCF`
-- sensitive_repos: `GlobalCloud AAAS, GlobalCloud XiaoC, GlobalCloud GPCF, GlobalCloud MMC, GlobalCloud PVA, GlobalCloud World, GlobalCloud WAE, GlobalCloud PDC`
+- sensitive_repos: `GlobalCloud AAAS, GlobalCloud XiaoC, GlobalCloud MMC, GlobalCloud PVA, GlobalCloud World, GlobalCloud WAE, GlobalCloud PDC`
 - review_boundary: `GlobalCloud AAAS, GlobalCloud Brain, GlobalCloud FireQuote, GlobalCloud GFIS, GlobalCloud GPC, GlobalCloud GPCF, GlobalCloud KDS, GlobalCloud MMC, GlobalCloud Mem, GlobalCloud PDC, GlobalCloud PMC, GlobalCloud PQC, GlobalCloud PVA, GlobalCloud SpaceAI Platform, GlobalCloud WAE, GlobalCloud WAME, GlobalCloud World, GlobalCloud XWAIL, GlobalCloud XiaoC, GlobalCloud XiaoG`
 
 ## Repo details
@@ -51,7 +51,7 @@ generated_at: 2026-10-27 11:09:33 +0800
 | `GlobalCloud XiaoC` | 209 | 7 | 0 | `.env.bak-20261020-hermes-key, .harness/evidence/xiaoc-feishu-20261022/10-credentials.md, .harness/evidence/xiaoc-feishu-20261022/74-verification-token-wired.md, .harness/evidence/xiaoc-mcp-skill-20261020/23-real-smoke-hermes-credential.md, .harness/evidence/xiaoc-mcp-skill-20261020/37-caller-token-audit.jsonl, .harness/evidence/xiaoc-mcp-skill-20261020/37-caller-token-auth.md, .harness/evidence/xiaoc-mcp-skill-20261020/37-caller-token-health.json, packages/feishu-bridge/.env.example` |
 | `GlobalCloud WAME` | 6 | 0 | 0 | `none` |
 | `GlobalCloud GPC` | 1 | 8 | 0 | `none` |
-| `GlobalCloud GPCF` | 375 | 20 | 0 | `".kds/development-space/\345\274\200\345\217\221/91-\346\262\273\347\220\206\344\270\216\351\252\214\346\224\266/projects/gctoken/RISK.md", ".kds/development-space/\345\274\200\345\217\221/91-\346\262\273\347\220\206\344\270\216\351\252\214\346\224\266/projects/gctoken/ROADMAP.md", ".kds/development-space/\345\274\200\345\217\221/91-\346\262\273\347\220\206\344\270\216\351\252\214\346\224\266/projects/gctoken/STATUS.md"` |
+| `GlobalCloud GPCF` | 135 | 48 | 0 | `none` |
 | `GlobalCloud XWAIL` | 1 | 0 | 20 | `none` |
 | `GlobalCloud GFIS` | 52 | 0 | 0 | `none` |
 | `GlobalCloud MMC` | 137 | 7 | 9 | `console/.env.example` |
@@ -67,7 +67,7 @@ generated_at: 2026-10-27 11:09:33 +0800
 | `GlobalCloud SpaceAI Studio` | 0 | 0 | 0 | `none` |
 | `GlobalCloud World` | 155 | 0 | 0 | `.env.example, docs/architecture/auth-embed-token-handoff.md, docs/harness/evidence/screenshots/phase12/token-handoff-1440.png, packages/server/src/services/embed-token.ts, scripts/mint-embed-token.mjs, tests/server/auth-embed-token.test.ts` |
 | `GlobalCloud Mem` | 1 | 8 | 0 | `none` |
-| `GlobalCloud WAE` | 358 | 76 | 71 | `docs/evidence/F-034/logs/11-check-tokens-parity.exit, docs/evidence/F-034/logs/11-check-tokens-parity.log, docs/evidence/F-034/logs/17-check-tokens-registry.exit, docs/evidence/F-034/logs/17-check-tokens-registry.log, docs/evidence/F-034/logs/rerun-1011/11-check-tokens-parity.exit, docs/evidence/F-034/logs/rerun-1011/17-check-tokens-registry.exit, docs/evidence/R1/supply-chain/secret-scan.json, docs/evidence/token-deviation-registry.json, packages/embed-token/README.md, packages/embed-token/package.json, packages/embed-token/src/index.test.ts, packages/embed-token/src/index.ts, packages/embed-token/tsconfig.json, packages/host-kit/src/host/embedTokenRoute.test.ts, packages/modules/module-gctoken-console/manifest.yaml, packages/modules/module-gctoken-console/src/index.dom.test.tsx, packages/modules/module-gctoken-console/src/index.tsx` |
+| `GlobalCloud WAE` | 358 | 77 | 71 | `docs/evidence/F-034/logs/11-check-tokens-parity.exit, docs/evidence/F-034/logs/11-check-tokens-parity.log, docs/evidence/F-034/logs/17-check-tokens-registry.exit, docs/evidence/F-034/logs/17-check-tokens-registry.log, docs/evidence/F-034/logs/rerun-1011/11-check-tokens-parity.exit, docs/evidence/F-034/logs/rerun-1011/17-check-tokens-registry.exit, docs/evidence/R1/supply-chain/secret-scan.json, docs/evidence/token-deviation-registry.json, packages/embed-token/README.md, packages/embed-token/package.json, packages/embed-token/src/index.test.ts, packages/embed-token/src/index.ts, packages/embed-token/tsconfig.json, packages/host-kit/src/host/embedTokenRoute.test.ts, packages/modules/module-gctoken-console/manifest.yaml, packages/modules/module-gctoken-console/src/index.dom.test.tsx, packages/modules/module-gctoken-console/src/index.tsx` |
 | `GlobalCloud PMC` | 4 | 3 | 0 | `none` |
 | `GlobalCloud PDC` | 59 | 16 | 0 | `.env.example` |
 | `GlobalCloud SLC` | 0 | 0 | 0 | `none` |
