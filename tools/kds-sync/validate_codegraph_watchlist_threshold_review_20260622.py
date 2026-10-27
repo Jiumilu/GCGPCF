@@ -13,6 +13,11 @@ ROOT = Path(__file__).resolve().parents[2]
 EVIDENCE_JSON = ROOT / "docs/harness/evidence/codegraph-watchlist-threshold-review-20260622.json"
 EVIDENCE_MD = ROOT / "docs/harness/evidence/codegraph-watchlist-threshold-review-20260622.md"
 LOOP_ROUND = ROOT / "docs/harness/loops/loop-round-GPCF-CODEGRAPH-WATCHLIST-THRESHOLD-REVIEW-005.md"
+import sys
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from codegraph_not_onboarded import SKIP_LABEL, announce, collect, should_skip  # noqa: E402
+
 
 REPOS = {
     "GlobalCloud Brain": Path("/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud Brain"),
@@ -62,6 +67,8 @@ def assert_codegraph_git_isolated(repo_name: str) -> int:
 
 def main() -> int:
     require(shutil.which("codegraph") is not None, "codegraph CLI must be installed")
+    skip_entries = collect(list(REPOS))
+    skipped = len(skip_entries)
     evidence = json.loads(read(EVIDENCE_JSON))
     evidence_md = read(EVIDENCE_MD)
     loop_round = read(LOOP_ROUND)
@@ -80,6 +87,9 @@ def main() -> int:
     live_pending: dict[str, int] = {}
     git_entries_total = 0
     for repo_name in REPOS:
+        if repo_name in skip_entries:
+            live_pending[repo_name] = "not-onboarded"
+            continue
         live = live_status(repo_name)
         pending = live.get("pendingChanges") or {}
         total = pending_total(pending)
@@ -133,7 +143,8 @@ def main() -> int:
         f"brain_pending={live_pending['GlobalCloud Brain']} "
         f"kds_pending={live_pending['GlobalCloud KDS']} "
         f"gfis_pending={live_pending['GlobalCloud GFIS']} "
-        f"studio_pending={live_pending['GlobalCloud Studio']} "
+        f"studio_pending={live_pending.get('GlobalCloud Studio', 'not-onboarded')} "
+        f"skipped_denominator={SKIP_LABEL} {skipped} "
         f"gpcf_pending={live_pending['GlobalCloud GPCF']} "
         "non_gpcf_sync_authorized=false "
         "next=GPCF-CODEGRAPH-WATCHLIST-MONITOR-006"

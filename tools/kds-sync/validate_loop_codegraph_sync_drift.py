@@ -14,6 +14,11 @@ ROOT = Path(__file__).resolve().parents[2]
 EVIDENCE_JSON = ROOT / "docs/harness/evidence/loop-codegraph-sync-drift-20260621.json"
 EVIDENCE_MD = ROOT / "docs/harness/evidence/loop-codegraph-sync-drift-20260621.md"
 LOOP_ROUND = ROOT / "docs/harness/loops/loop-round-GPCF-CODEGRAPH-SYNC-DRIFT-001.md"
+import sys
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from codegraph_not_onboarded import SKIP_LABEL, announce, collect, should_skip  # noqa: E402
+
 
 EXPECTED_PROJECTS = [
     "GlobalCloud Brain",
@@ -59,6 +64,9 @@ def parse_count(label: str, output: str) -> int:
 
 def main() -> int:
     require(shutil.which("codegraph") is not None, "codegraph CLI must be installed")
+    evidence = json.loads(read(EVIDENCE_JSON))
+    skip_entries = collect([repo.get("project") for repo in evidence.get("repositories", [])])
+    skipped = len(skip_entries)
     require(run(["codegraph", "--version"]).strip() == "1.0.1", "codegraph version must be 1.0.1")
 
     evidence = json.loads(read(EVIDENCE_JSON))
@@ -91,6 +99,8 @@ def main() -> int:
     for repo in repos:
         project = repo["project"]
         path = Path(repo["path"])
+        if project in skip_entries:
+            continue
         require(path.exists(), f"{project} path missing")
         require((path / ".git").exists(), f"{project} missing .git")
         require((path / ".codegraph").exists(), f"{project} missing .codegraph")
@@ -128,7 +138,8 @@ def main() -> int:
         "synced=Brain,GFIS,KDS,Studio,GPCF "
         "up_to_date_repo_count=12 residual_pending_notice=GFIS "
         "codegraph_git_status_entries_total=0 "
-        "project_internal_development=false"
+        "project_internal_development=false "
+        f"skipped_denominator={SKIP_LABEL} {skipped}"
     )
     return 0
 
