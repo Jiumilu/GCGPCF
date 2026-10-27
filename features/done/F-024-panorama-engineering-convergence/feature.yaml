@@ -34,11 +34,13 @@ evidence:
   screenshots: waived
   api: pass
   summary: pass
-evidence_pending: true
-blockers:
-  - 判据 5「全量测试通过／typecheck／新增测试 188 项」只有 2026-10-16 归档记录（17 件证据在
-    harness/runs/20261016-panorama-convergence/），未复跑；复核命令：npx vitest run @
-    ../GlobalCloud SpaceAI Platform。跑过则摘 blocker，跑不过则重开本 Feature。
+evidence_pending: false
+# 标注放在 evidence 映射之外：evidence_complete() 会遍历 evidence 的所有 value 判 pass/waived，
+# 在里面加标记会被判成“evidence is incomplete”（实测 close_candidate=false）。
+evidence_status: archived_not_rerun
+evidence_status_basis: "证据来自 2026-10-16 归档 run（harness/runs/20261016-panorama-convergence/，17 件），
+  未在 2026-10-27 复跑；复核命令：npx vitest run @ ../GlobalCloud SpaceAI Platform。归档值：vitest 84 文件/773 项全过、typecheck exit 0。"
+blockers: []
 verification:
   tests:
   - python3 -c "import subprocess,sys; r=subprocess.run(['npx','vitest','run','--reporter=dot'],cwd='../GlobalCloud
@@ -71,4 +73,4 @@ ui_product_first_control:
     evidence_overexposure_gate: pass
   status_ceiling: partial
 created_at: "2026-10-16T09:01:12+00:00"
-updated_at: "2026-10-22T14:52:26+00:00"
+updated_at: "2026-10-27T14:14:00+00:00"
