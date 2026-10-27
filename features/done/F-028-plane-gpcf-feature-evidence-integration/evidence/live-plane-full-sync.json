@@ -1,0 +1,12 @@
+{
+  "verified_at_utc": "2026-10-18T03:25:34.562244+00:00",
+  "environment": "isolated local Plane API at 127.0.0.1:18081",
+  "feature_count": 28,
+  "project_count": 12,
+  "created": 27,
+  "updated": 1,
+  "plane_projection_ids_match_gpcf": true,
+  "gpcf_source_unchanged": true,
+  "gpcf_source_file_count": 29,
+  "project_id": "efbc9f78-55ad-46c9-8bf2-c659c1305679"
+}

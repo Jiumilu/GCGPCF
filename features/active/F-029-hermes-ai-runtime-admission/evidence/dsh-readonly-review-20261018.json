@@ -1,0 +1,34 @@
+{
+  "feature_id": "F-029",
+  "observed_at_utc": "2026-10-18T06:49:21Z",
+  "authorization": "User authorized sending only the two relevant Hermes code changes and F-029 repair evidence to DSH for read-only review; no keys or other source files were sent",
+  "dsh_headless": {
+    "configuration": "User enabled saved-credential consumers in the headless profile; Codex corrected YAML bracket syntax without changing the three selected entries",
+    "smoke_test": "dsh --profile headless replied READY with exit code 0 in a no-project-file task",
+    "receipt": "F-029, input version 2026-10-18 local Hermes /v1/skills repair, limited packet-only review accepted",
+    "review_exit_code": 0,
+    "review_scope": "Relevant call-site and test-assertion changes plus F-029 repair evidence excerpt supplied in the prompt; DSH did not read repository files, rerun tests, or connect to Hermes",
+    "findings": [
+      "Removing include_editorial=True aligns the call with the reported _find_all_skills signature and is a minimal fix for the reported 500",
+      "Focused mocked skills test passed 1/1 and live authenticated /v1/skills returned 200 with 274 entries; 401 without authentication",
+      "The 98-pass, 16-fail whole-file result is not green; only one failure was sampled, so the other 15 remain unclassified",
+      "The expected catalog content and whether all editorial entries are present are not established by the supplied count alone"
+    ],
+    "limitations": "DSH findings are a review of the supplied packet, not independent code execution or a full source audit"
+  },
+  "coordination": {
+    "first_dispatch": "Auto-review rejected direct repository access because it would send private source and evidence to an external model without sufficiently specific authorization; no task was delivered",
+    "authorized_retry": "After explicit user authorization, Codex sent only a curated limited packet from /private/tmp and received the DSH response",
+    "next_responsible_party": "Codex/GPCF",
+    "status_ceiling": "partial"
+  },
+  "supplementary_review": {
+    "observed_at_utc": "2026-10-18T07:32:44Z",
+    "authorized_scope": "Curated summary of the same two Hermes changes and F-029 repair/test-isolation evidence only",
+    "review_exit_code": 0,
+    "receipt": "DSH responded to the F-029 supplemental packet",
+    "finding": "The 114/114 independent-clone API test file result supports the narrow /v1/skills repair validation; installed-checkout 16 failures are consistent with the home I/O guard",
+    "limitations": "DSH did not read the repository, run tests, review the complete Hermes suite, or verify project isolation",
+    "codex_adjudication": "_find_all_skills has skip_disabled as its only parameter; there is no include_editorial parameter/default on that function. Codex independently compared current local API and sorted local catalog name/description/category content and order: 274/274 identical; see hermes-skills-repair-20261018.json"
+  }
+}

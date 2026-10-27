@@ -7,7 +7,13 @@ domain: governance
 status: draft
 version: v1.0
 owner: GPCF
+kds_space: 开发
+kds_path: 开发/91-治理与验收/features/active/F-036-wae-pkc-intake-integration/evidence/embed-sandbox-diag-20261023/README.md
+source_path: features/active/F-036-wae-pkc-intake-integration/evidence/embed-sandbox-diag-20261023/README.md
+sync_direction: bidirectional
 last_reviewed: 2026-10-23
+supersedes: []
+superseded_by: []
 ---
 
 # F-036 嵌入白块诊断（2026-10-23）

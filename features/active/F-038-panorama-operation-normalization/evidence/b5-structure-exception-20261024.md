@@ -7,7 +7,13 @@ domain: governance
 status: controlled
 version: v1.0
 owner: GPCF
+kds_space: 开发
+kds_path: 开发/91-治理与验收/features/active/F-038-panorama-operation-normalization/evidence/b5-structure-exception-20261024.md
+source_path: features/active/F-038-panorama-operation-normalization/evidence/b5-structure-exception-20261024.md
+sync_direction: bidirectional
 last_reviewed: 2026-10-24
+supersedes: []
+superseded_by: []
 ---
 
 # B5 结构目标例外

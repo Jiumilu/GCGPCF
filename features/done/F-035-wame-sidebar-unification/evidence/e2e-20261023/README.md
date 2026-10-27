@@ -7,7 +7,13 @@ domain: governance
 status: draft
 version: v1.0
 owner: GPCF
+kds_space: 开发
+kds_path: 开发/91-治理与验收/features/done/F-035-wame-sidebar-unification/evidence/e2e-20261023/README.md
+source_path: features/done/F-035-wame-sidebar-unification/evidence/e2e-20261023/README.md
+sync_direction: bidirectional
 last_reviewed: 2026-10-23
+supersedes: []
+superseded_by: []
 ---
 
 # F-035 WAME 侧栏 E2E 冒烟

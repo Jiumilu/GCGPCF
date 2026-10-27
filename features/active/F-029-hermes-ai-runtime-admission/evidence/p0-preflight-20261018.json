@@ -1,0 +1,40 @@
+{
+  "feature_id": "F-029",
+  "checked_at_utc": "2026-10-18T03:06:37Z",
+  "status": "partial",
+  "governance": {
+    "project_registry_count": 25,
+    "skill_chain_count_after_fix": 25,
+    "skill_chain_command": "python3 tools/kds-sync/validate_project_group_skill_chain.py",
+    "skill_chain_result": "pass covered_projects=25; Project was added to the shared registry during this run after the initial 24-project validation",
+    "document_gate_command": "python3 tools/kds-sync/loop_document_gate.py",
+    "document_gate_result": "pass status_ceiling=partial"
+  },
+  "hermes_api": {
+    "listener": "127.0.0.1:8642 has a running Python gateway listener",
+    "unauthenticated_health": "HTTP 401, authentication required",
+    "last_authenticated_probe": "2026-10-18 earlier probe: /health/detailed and /v1/models HTTP 200; /v1/skills HTTP 500",
+    "skills_error_source": "/Users/lujunxiang/.hermes/hermes-agent/gateway/platforms/api_server.py:_handle_skills",
+    "skills_error": "_find_all_skills() got an unexpected keyword argument 'include_editorial'",
+    "callee_signature": "_find_all_skills(*, skip_disabled: bool = False)",
+    "repair_candidate": "Remove the unsupported include_editorial argument in the API handler, then run Hermes tests and authenticated runtime retest",
+    "repair_status": "applied and locally retested; see hermes-skills-repair-20261018.json"
+  },
+  "public_web_ui": {
+    "url": "https://hermes.csydsc.com/",
+    "observed_result": "HTTP 502 using the documented public IP with curl --resolve",
+    "documented_path": "public Caddy -> remote SSH port 19119 -> local Hermes Web UI port 8648",
+    "local_upstream": "127.0.0.1:8648 connection refused; no listener",
+    "cause_status": "local upstream unavailable is confirmed; tunnel and remote proxy state not yet verified",
+    "repair_status": "not_started"
+  },
+  "handoff": {
+    "codex": "GPCF F-029 owns evidence and cross-project decision",
+    "dsh": "CLI /usr/local/bin/dsh is installed; dsh headless returned MISSING_CREDENTIAL for deepseek-official; no task execution or credential transfer occurred",
+    "hermes_platform_owner": "pending named confirmation",
+    "primary_on_call": "lujunxiang (confirmed by user)",
+    "backup_on_call": "pending",
+    "alert_channel": "pending"
+  },
+  "authorization_boundary": "User later authorized the isolated local Hermes skills source fix and gateway restart. No credential transfer, tunnel change, public Web UI restoration, or deployment was performed."
+}
