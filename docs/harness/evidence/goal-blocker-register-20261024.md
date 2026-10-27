@@ -2,11 +2,18 @@
 doc_id: GPCF-DOC-GOAL-BLOCKERS-20261024
 title: 活跃 Feature 阻塞登记（2026-10-24）
 project: GPCF
+related_projects: [GPC, PVAOS, WAME, KDS, Brain, PKC, XGD, MMC, GPCF, Studio]
 domain: governance
 status: draft
 version: v1.0
 owner: GPCF
+kds_space: 开发
+kds_path: 开发/91-治理与验收/docs/harness/evidence/goal-blocker-register-20261024.md
+source_path: docs/harness/evidence/goal-blocker-register-20261024.md
+sync_direction: bidirectional
 last_reviewed: 2026-10-24
+supersedes: []
+superseded_by: []
 ---
 
 # 活跃 Feature 阻塞登记（2026-10-24）

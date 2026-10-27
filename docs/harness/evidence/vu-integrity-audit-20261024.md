@@ -2,11 +2,18 @@
 doc_id: GPCF-DOC-VU-INTEGRITY-20261024
 title: VU 台账完整性审计（2026-10-24）
 project: GPCF
+related_projects: [WAME, GPCF]
 domain: governance
 status: draft
 version: v1.0
 owner: GPCF
+kds_space: 开发
+kds_path: 开发/91-治理与验收/docs/harness/evidence/vu-integrity-audit-20261024.md
+source_path: docs/harness/evidence/vu-integrity-audit-20261024.md
+sync_direction: bidirectional
 last_reviewed: 2026-10-24
+supersedes: []
+superseded_by: []
 ---
 
 # VU 台账完整性审计

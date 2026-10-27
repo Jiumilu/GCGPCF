@@ -7,7 +7,13 @@ domain: governance
 status: draft
 version: v1.0
 owner: GPCF
+kds_space: 开发
+kds_path: 开发/91-治理与验收/docs/harness/evidence/loop-gate-gfis-hang-20261023.md
+source_path: docs/harness/evidence/loop-gate-gfis-hang-20261023.md
+sync_direction: bidirectional
 last_reviewed: 2026-10-23
+supersedes: []
+superseded_by: []
 ---
 
 # loop gate 因 GFIS 校验器挂起而阻塞

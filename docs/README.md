@@ -16,6 +16,7 @@ supersedes: []
 superseded_by: []
 ---
 
+
 # 工程说明
 
 目录：`docs`
@@ -455,6 +456,8 @@ KDS 路径前缀：`开发/12-GPCF/docs/`
 | GPCF-DOC-4795938811 | GFIS-RUNTIME-SOP-E2E-DEV-COMPLETION-001 Evidence | docs/harness/evidence/GFIS-RUNTIME-SOP-E2E-DEV-COMPLETION-001-evidence.md | GPCF | controlled |
 | GPCF-DOC-7C1A4D2E91 | LOOP Governance Summary GFIS Runtime SOP E2E Dev Completion 001 | docs/harness/evidence/LOOP_GOVERNANCE_SUMMARY_GFIS_RUNTIME_SOP_E2E_DEV_COMPLETION_001.md | GPCF | controlled |
 | GPCF-DOC-D190529EF4 | Harness 证据说明 | docs/harness/evidence/README.md | KDS | controlled |
+| GPCF-DOC-ACTIVE-FEATURE-BLOCKERS-20261024 | 活跃 Feature 阻塞清单（2026-10-24） | docs/harness/evidence/active-feature-blockers-20261024.md | GPCF | draft |
+| GPCF-DOC-ACTIVE-READINESS-20261024 | 活跃 Feature 就绪度盘点（2026-10-24） | docs/harness/evidence/active-feature-readiness-20261024.md | GPCF | draft |
 | GPCF-DOC-33DE44F307 | Agent-Reach Authoritative Source Verification 20260621 | docs/harness/evidence/agent-reach-authoritative-source-verification-20260621.md | KDS | controlled |
 | GPCF-DOC-AGENT-REACH-QUALITY-REGRESSION-20260622 | Agent-Reach Candidate Quality Regression Gate 2026-06-22 | docs/harness/evidence/agent-reach-candidate-quality-regression-gate-20260622.md | KDS | controlled |
 | GPCF-DOC-AGENT-REACH-QUALITY-TREND-20260622 | Agent-Reach Candidate Quality Trend Baseline 2026-06-22 | docs/harness/evidence/agent-reach-candidate-quality-trend-baseline-20260622.md | KDS | controlled |
@@ -552,7 +555,15 @@ KDS 路径前缀：`开发/12-GPCF/docs/`
 | GPCF-DOC-9C22552EEE | 基础知识人工确认模式 | docs/harness/evidence/base-knowledge-human-confirmation-schema-20260619.md | KDS | controlled |
 | GPCF-DOC-7797BB4F55 | 基础知识人工确认模板 | docs/harness/evidence/base-knowledge-human-confirmation-template-20260619.md | KDS | controlled |
 | GPCF-DOC-C13F879695 | 基础知识回写候选账本 | docs/harness/evidence/base-knowledge-writeback-candidate-ledger-20260618.md | KDS | controlled |
+| GPCF-DOC-BATCH2-ESCALATION-20261023 | 批次 2 外部输入升级稿（2026-10-23） | docs/harness/evidence/batch2-escalation-draft-20261023.md | GPCF | draft |
+| GPCF-DOC-BATCH2-EXTERNAL-REQUEST-PACK-20261022 | 批次 2 外部输入催办包（2026-10-22） | docs/harness/evidence/batch2-external-request-pack-20261022.md | GPCF | draft |
+| GPCF-DOC-BATCH2-FEASIBILITY-20261022 | 批次 2 可行性核查（2026-10-22） | docs/harness/evidence/batch2-feasibility-20261022.md | GPCF | draft |
+| GPCF-DOC-BATCH2-INTAKE-FORM-20261024 | 批次 2 外部输入登记表（2026-10-24） | docs/harness/evidence/batch2-input-intake-form-20261024.md | GPCF | draft |
+| GPCF-DOC-BATCH2-PREREQUISITES-20261022 | 批次 2 前置补齐核查（2026-10-22） | docs/harness/evidence/batch2-prerequisites-20261022.md | GPCF | draft |
+| GPCF-DOC-BATCH2-TRACKING-20261022 | 批次 2 外部输入跟踪（2026-10-22） | docs/harness/evidence/batch2-tracking-20261022.md | GPCF | draft |
 | GPCF-DOC-DOMAIN-SLICE-REGISTRY-GREENCHAIN-GRAPH-20261011 | 业务域切片登记（GreenChainGraphBusinessDomain）· 2026-10-11 | docs/harness/evidence/business-domain-slice-registry-greenchain-graph-20261011.md | KDS | controlled |
+| GPCF-DOC-CREAL-GAP-20261024 | C_real 与真实 source-of-record 差距（2026-10-24） | docs/harness/evidence/c-real-gap-20261024.md | GPCF | draft |
+| GPCF-DOC-CLEANUP-DELETE-BATCH-20261022 | KDS whitespace cleanup + WAS .DS_Store 删除执行记录（2026-10-22） | docs/harness/evidence/cleanup-delete-batch-20261022.md | GPCF | draft |
 | GPCF-DOC-4E29A86D95 | CodeGraph Brain/GFIS 授权边界复核 | docs/harness/evidence/codegraph-brain-gfis-authorization-boundary-20260623.md | KDS | controlled |
 | GPCF-DOC-A1E6C5C544 | CodeGraph 业务开发执行层准入证据 | docs/harness/evidence/codegraph-dev-execution-admission-20260621.md | GPCF | controlled |
 | GPCF-DOC-CODEGRAPH-DEV-EXECUTION-AUTHORIZATION-BLOCKED-HOLD-20260626 | CodeGraph 开发执行层授权阻塞保持 2026-06-26 | docs/harness/evidence/codegraph-dev-execution-authorization-blocked-hold-20260626.md | GPCF | controlled |
@@ -638,10 +649,14 @@ KDS 路径前缀：`开发/12-GPCF/docs/`
 | GPCF-DOC-7914B4FB3D | Cognee 真实外部执行回执责任分配 2026-06-26 | docs/harness/evidence/cognee-real-external-execution-receipt-responsibility-assignment-20260626.md | GPCF | controlled |
 | GPCF-DOC-8F9F2F5A0D | Cognee 真实外部执行回执提交请求包 2026-06-26 | docs/harness/evidence/cognee-real-external-execution-receipt-submission-request-20260626.md | GPCF | controlled |
 | GPCF-DOC-9EBCF7DB43 | Cognee 真实外部执行回执更新补丁计划 2026-06-26 | docs/harness/evidence/cognee-real-external-execution-receipt-update-patch-plan-20260626.md | GPCF | controlled |
+| GPCF-DOC-CONFLICT-02-ERROR-CODE-PACK-20261022 | CONFLICT-02 XAP 错误码裁决包（2026-10-22） | docs/harness/evidence/conflict-02-error-code-pack-20261022.md | GPCF | draft |
+| GPCF-DOC-CONTRACTS-REMAINING-PACK-20261022 | 剩余契约冲突裁决包（2026-10-22） | docs/harness/evidence/contracts-remaining-adjudication-pack-20261022.md | GPCF | draft |
+| GPCF-DOC-CONTRACTS-RESIDUAL-GAP-20261023 | 契约残留差距分析（2026-10-23） | docs/harness/evidence/contracts-residual-gap-20261023.md | GPCF | draft |
 | GPCF-DOC-7B2E61A9D4 | Current Session Mainline Declaration 20260622 | docs/harness/evidence/current-session-mainline-declaration-20260622.md | KDS | controlled |
 | GPCF-DOC-CWME-SPACE-DOMAIN-EXTENSION-REGISTRATION-REQUEST-20261011 | CWME 城市空间域扩展包登记请求 2026-10-11 | docs/harness/evidence/cwme-space-domain-extension-registration-request-20261011.md | KDS | controlled |
 | GPCF-DOC-DOMAIN-EXTENSION-PACK-REGISTRY-CWME-SPACE-20261012 | 域扩展包登记（CWME 城市空间域扩展包）· 2026-10-12 | docs/harness/evidence/domain-extension-pack-registry-cwme-space-20261012.md | KDS | controlled |
 | GPCF-DOC-5D0159ED7D | Evidence Index | docs/harness/evidence/evidence-index.md | GPCF | controlled |
+| GPCF-DOC-FEATURE-INTEGRITY-20261024 | Feature 目录/队列完整性审计（2026-10-24） | docs/harness/evidence/feature-integrity-audit-20261024.md | GPCF | draft |
 | GPCF-DOC-GCKFP0CLOSUREPACKETCANDIDATED12420260622 | GCKF P0 收口包候选证据 D124 | docs/harness/evidence/gckf-p0-closure-packet-candidate-d124-20260622.md | KDS | controlled |
 | GPCF-DOC-GCKFP0CLOSUREPACKETPRECHECKD12320260622 | GCKF P0 收口包预检查证据 D123 | docs/harness/evidence/gckf-p0-closure-packet-precheck-d123-20260622.md | KDS | controlled |
 | GPCF-DOC-GCKFP0FORMALEVIDENCEEXECUTIONACKNOWLEDGEMENTROUTINGPRECHECKPREVIEWCURRENTSTATED15820260622 | GCKF P0 正式 evidence 回执路由预检预览当前态证据 D158 | docs/harness/evidence/gckf-p0-formal-evidence-execution-acknowledgement-routing-precheck-preview-current-state-d158-20260622.md | GPCF | controlled |
@@ -788,7 +803,10 @@ KDS 路径前缀：`开发/12-GPCF/docs/`
 | GPCF-DOC-PROJECT-GROUP-WAVE1-EXECUTION-COMMAND-PACK-20260626 | GlobalCloud 项目群 Wave 1 真实执行命令包 2026-06-26 | docs/harness/evidence/globalcloud-project-group-wave1-execution-command-pack-20260626.md | GFIS | controlled |
 | GPCF-DOC-PROJECT-GROUP-WAVE1-PRE-EXECUTION-ENVIRONMENT-READINESS-20260626 | GlobalCloud 项目群 Wave 1 执行前环境就绪检查 2026-06-26 | docs/harness/evidence/globalcloud-project-group-wave1-pre-execution-environment-readiness-20260626.md | GFIS | controlled |
 | GPCF-DOC-PROJECT-GROUP-WAVE1-RECEIPT-PRE-EXECUTION-BRIDGE-AUDIT-20260627 | GlobalCloud 项目群 Wave1 回执与执行前桥接审计 2026-06-27 | docs/harness/evidence/globalcloud-project-group-wave1-receipt-pre-execution-bridge-audit-20260627.md | GFIS | controlled |
+| GPCF-DOC-GOAL-BLOCKERS-20261024 | 活跃 Feature 阻塞登记（2026-10-24） | docs/harness/evidence/goal-blocker-register-20261024.md | GPCF | draft |
+| GPCF-DOC-GOAL-ROUND300-FINAL-REVIEW-20261024 | 长期目标 300 轮终评（2026-10-24） | docs/harness/evidence/goal-round-300-final-review-20261024.md | GPCF | controlled |
 | GPCF-DOC-48474E7AEE | Governance OKF v0.1 Derived Bundle Report | docs/harness/evidence/governance-okf-v01-bundle-report-20260620.md | KDS | controlled |
+| GPCF-DOC-GPCF-COMMIT-BATCH-PLAN-20261023 | GPCF 未提交改动分批提交计划（2026-10-23） | docs/harness/evidence/gpcf-commit-batch-plan-20261023.md | GPCF | draft |
 | GPCF-DOC-03FE63E1D0 | Headroom Controlled Metric Pilot Evidence | docs/harness/evidence/headroom-controlled-metric-pilot-20260621.md | KDS | controlled |
 | GPCF-DOC-78C4270FD2 | Headroom Cost Measurement Output Evidence | docs/harness/evidence/headroom-cost-measurement-output-20260621.md | KDS | controlled |
 | GPCF-DOC-7EC36CDCAD | Headroom Cost Sensitivity Model | docs/harness/evidence/headroom-cost-sensitivity-model-20260621.md | GPCF | controlled |
@@ -869,6 +887,7 @@ KDS 路径前缀：`开发/12-GPCF/docs/`
 | GPCF-DOC-EB9209D502 | Headroom Runtime Adapter Dry-run Evidence | docs/harness/evidence/headroom-runtime-adapter-dry-run-20260621.md | KDS | controlled |
 | GPCF-DOC-A5BB39D841 | Headroom Runtime Probe Evidence | docs/harness/evidence/headroom-runtime-probe-20260621.md | KDS | controlled |
 | GPCF-DOC-9BB94B0126 | Headroom Runtime Scenario Matrix Evidence | docs/harness/evidence/headroom-runtime-scenario-matrix-20260621.md | KDS | controlled |
+| GPCF-DOC-HERMES-WEBUI-LOCAL-RECOVERY-20261022 | Hermes Web UI 本机恢复验证（2026-10-22） | docs/harness/evidence/hermes-webui-local-recovery-20261022.md | GPCF | draft |
 | GPCF-DOC-IGL-GRAPH-DOMAIN-REGISTRATION-REQUEST-20261011 | 工业绿链业务域（图谱只读投影）注册请求 2026-10-11 | docs/harness/evidence/industrial-green-chain-graph-domain-registration-request-20261011.md | KDS | controlled |
 | GPCF-DOC-0F583D13A7 | KDS Markdown 化 OKF 兼容层与 ODF 治理全量治理闭环报告 | docs/harness/evidence/kds-md-okf-odf-full-closure-report-20260619.md | KDS | controlled |
 | GPCF-DOC-931CDE09CE | KDS OKF v0.1 Agent 消费 smoke 测试证据 | docs/harness/evidence/kds-okf-v01-agent-consumption-smoke-20260620.md | KDS | controlled |
@@ -935,6 +954,7 @@ KDS 路径前缀：`开发/12-GPCF/docs/`
 | GPCF-DOC-FIVE-DIRECTION-RUN-EVID-001 | Loop 五方向 RUN-001 运行证据 | docs/harness/evidence/loop-five-direction-run-001-20260622.md | KDS | controlled |
 | GPCF-DOC-FIVE-DIRECTION-SELF-EVOLUTION-001 | LOOP 运行控制闭环自我进化证据 20260622 | docs/harness/evidence/loop-five-direction-self-evolution-20260622.md | GPCF | controlled |
 | GPCF-DOC-FIVE-DIRECTION-STANDING-SMOKE-EVIDENCE-001 | Loop Five Direction Standing Adoption Smoke Evidence 20260622 | docs/harness/evidence/loop-five-direction-standing-smoke-20260622.md | KDS | controlled |
+| GPCF-DOC-LOOP-GATE-GFIS-HANG-20261023 | loop gate 因 GFIS 校验器挂起而阻塞（2026-10-23） | docs/harness/evidence/loop-gate-gfis-hang-20261023.md | GPCF | draft |
 | GPCF-DOC-42588776FF | Loop 治理当前窗口处置证据 | docs/harness/evidence/loop-governance-current-window-disposition-20260619.md | GPCF | controlled |
 | GPCF-DOC-1DB6E9CF48 | Loop 治理当前窗口审查证据 | docs/harness/evidence/loop-governance-current-window-review-20260619.md | GPCF | controlled |
 | GPCF-DOC-21CF5F6F10 | Loop Governance Dashboard Evidence | docs/harness/evidence/loop-governance-dashboard-20260617.md | KDS | controlled |
@@ -950,6 +970,7 @@ KDS 路径前缀：`开发/12-GPCF/docs/`
 | GPCF-DOC-5F4B0C8D71 | Loop UI 治理基线证据 | docs/harness/evidence/loop-ui-governance-baseline-20260622.md | GPCF | controlled |
 | GPCF-DOC-LOOP-V11-DELIVERY-GOVERNANCE-SUMMARY-20260628 | LOOP v1.1 Delivery Governance Summary 2026-06-28 | docs/harness/evidence/loop-v11-delivery-governance-summary-20260628.md | KDS | controlled |
 | GPCF-DOC-LOOP-V11-DELIVERY-GOVERNANCE-SUMMARY-DEV005-DEV009-20260628 | LOOP v1.1 Delivery Governance Summary GFIS DEV-005 to DEV-009 2026-06-28 | docs/harness/evidence/loop-v11-delivery-governance-summary-dev005-dev009-20260628.md | KDS | controlled |
+| GPCF-DOC-MULTIREPO-DIRTY-INVENTORY-20261023 | 多仓未提交改动盘点（2026-10-23） | docs/harness/evidence/multirepo-dirty-inventory-20261023.md | GPCF | draft |
 | GPCF-DOC-6FD038491B | ODF Phase 2 扩大样本验证闭环报告 | docs/harness/evidence/odf-phase2-closure-report-20260617.md | KDS | controlled |
 | GPCF-DOC-86BB2ABBFD | ODF Phase 2 样本准入台账 | docs/harness/evidence/odf-phase2-sample-ledger-20260617.md | KDS | controlled |
 | GPCF-DOC-146EB71EF5 | ODF Phase 3 Schema Gate Evidence | docs/harness/evidence/odf-phase3-schema-gate-20260617.md | KDS | controlled |
@@ -988,11 +1009,23 @@ KDS 路径前缀：`开发/12-GPCF/docs/`
 | GPCF-DOC-8DC131D430 | Ontology/WAS 3 小时实施 P2 门禁执行与回放证据 | docs/harness/evidence/ontology-was-3h-p2-gate-replay-20260621.md | GPCF | controlled |
 | GPCF-DOC-20DAB7011D | Ontology/WAS 3 小时实施 P3 收口与下一步决策证据 | docs/harness/evidence/ontology-was-3h-p3-closure-20260621.md | GPCF | controlled |
 | GPCF-DOC-C21E66324C | Ontology/WAS 真实 Source Record Intake Package | docs/harness/evidence/ontology-was-real-source-record-intake-pack-20260621.md | KDS | controlled |
-| GPCF-DOC-PROJECTGROUPLIVESTATUSCURRENT20260701 | GlobalCloud 项目群当前 Live 状态快照 | docs/harness/evidence/project_group_live_status_current.md | KDS | controlled |
+| GPCF-DOC-OWNER-ACTION-INDEX-20261024 | 属主动作包索引（2026-10-24） | docs/harness/evidence/owner-action-index-20261024.md | GPCF | draft |
+| GPCF-DOC-OWNER-ACTION-TRACKER-20261024 | 属主待办跟踪（2026-10-24） | docs/harness/evidence/owner-action-tracker-20261024.md | GPCF | draft |
+| GPCF-DOC-PG12-CONTRACT-ADJUDICATION-PACK-20261022 | PG-12 契约冲突裁决包（2026-10-22） | docs/harness/evidence/pg12-contract-adjudication-pack-20261022.md | GPCF | draft |
+| GPCF-DOC-PG12-IMPLEMENTATION-PLAN-20261022 | PG-12 实施准备：digest 命名空间化与三义分列（2026-10-22） | docs/harness/evidence/pg12-implementation-plan-20261022.md | GPCF | draft |
+| GPCF-DOC-PG12-IMPLEMENTATION-REPORT-20261022 | PG-12 落仓实施报告：A1+A2+A2b（digest 命名空间化 + 三义分列，2026-10-22） | docs/harness/evidence/pg12-implementation-report-20261022.md | GPCF | draft |
+| GPCF-DOC-PJ03-WAS-FEATURE-REVIEW-20261022 | PJ-03 WAS F-022/F-023 状态复核与 P4 输入清单（2026-10-22） | docs/harness/evidence/pj03-was-feature-review-20261022.md | GPCF | draft |
+| GPCF-DOC-PJ12-F017-ATTRIBUTION-20261022 | PJ-12 KDS F-017 归属纠正与只读检查（2026-10-22） | docs/harness/evidence/pj12-f017-attribution-20261022.md | GPCF | draft |
+| GPCF-DOC-PJ15-SOP-F012-REVIEW-20261022 | PJ-15 SOP F-012 证据现状复核（2026-10-22） | docs/harness/evidence/pj15-sop-f012-review-20261022.md | GPCF | draft |
+| GPCF-DOC-PJ24-WAE-P0-PLAN-20261022 | PJ-24 WAE P0 实施计划（2026-10-22） | docs/harness/evidence/pj24-wae-p0-plan-20261022.md | GPCF | draft |
+| GPCF-DOC-PJ25-PMC-PLANE-VERIFICATION-20261022 | PJ-25 PMC Plane UI/幂等验证（只读优先）2026-10-22 | docs/harness/evidence/pj25-pmc-plane-verification-20261022.md | GPCF | draft |
+| GPCF-DOC-PRE-WAVE1-REVIEW-PACK-20261022 | Pre-Wave1 三项只读 review 包（2026-10-22） | docs/harness/evidence/pre-wave1-review-pack-20261022.md | GPCF | draft |
+| GPCF-DOC-PROJECTGROUPLIVESTATUSCURRENT20260701 | GlobalCloud 项目群当前 Live 状态快照 | docs/harness/evidence/project_group_live_status_current.md | GPCF | controlled |
 | GPCF-DOC-FACA370CCA | 会话主任务总结与声明控制边界 | docs/harness/evidence/session-main-task-summary-declaration-boundary-20260622.md | KDS | controlled |
 | GPCF-DOC-3A9B82D614 | Session Mainline Drift Watch 20260622 | docs/harness/evidence/session-mainline-drift-watch-20260622.md | KDS | controlled |
 | GPCF-DOC-SESSION-HANDOFF-REQUEST-GATE-20260622 | Session Mainline Handoff Request Gate 20260622 | docs/harness/evidence/session-mainline-handoff-request-gate-20260622.md | KDS | controlled |
 | GPCF-DOC-1F8C4D6B21 | Session Mainline Preflight Enforcement 20260622 | docs/harness/evidence/session-mainline-preflight-enforcement-20260622.md | KDS | controlled |
+| GPCF-DOC-SIGNATURE-ENFORCEMENT-PLAN-20261022 | 强制签名策略实施方案（CONFLICT-05 残留，2026-10-22） | docs/harness/evidence/signature-enforcement-plan-20261022.md | GPCF | draft |
 | GPCF-DOC-718A85136C | Studio Channels Chat 入口补齐验证证据 | docs/harness/evidence/studio-channels-chat-entry-verified-20260622.md | GPCF | controlled |
 | GPCF-DOC-7D6C9E5C21 | Studio Chat 工作台键盘与移动端复验证据 | docs/harness/evidence/studio-chat-workbench-keyboard-mobile-verified-20260622.md | GPCF | controlled |
 | GPCF-DOC-A13F6D7B4E | Studio 默认凭据整改链路可访问性复验证据 | docs/harness/evidence/studio-default-credential-a11y-verified-20260624.md | GPCF | controlled |
@@ -1014,8 +1047,12 @@ KDS 路径前缀：`开发/12-GPCF/docs/`
 | GPCF-DOC-5A9D73C1E4 | Studio Kanban 运行入口门禁证据 | docs/harness/evidence/studio-kanban-runtime-entry-gate-20260622.md | GPCF | controlled |
 | GPCF-DOC-2F6C9B14A8 | Studio Kanban 运行态验证证据 | docs/harness/evidence/studio-kanban-runtime-verified-20260622.md | GPCF | controlled |
 | GPCF-DOC-8C1E4A92D7 | Studio Kanban 操作工作台 UI Gate 证据 | docs/harness/evidence/studio-kanban-workbench-ui-gate-20260622.md | GPCF | controlled |
+| GPCF-DOC-STUDIO-RETIREMENT-ALTERNATIVE-20261022 | Studio 作废替代方案（2026-10-22） | docs/harness/evidence/studio-retirement-alternative-plan-20261022.md | GPCF | draft |
 | GPCF-EVIDENCE-STUDIO-WAME-WORKBENCH-THREE-OPTION-DESIGN-20260626 | Studio WAME Workbench Three Option Design Evidence | docs/harness/evidence/studio-wame-workbench-three-option-design-20260626.md | KDS | controlled |
 | GPCF-DOC-6D92B5F4E7 | Studio 工作台入口拓扑矩阵证据 | docs/harness/evidence/studio-workbench-entry-matrix-20260622.md | GPCF | controlled |
+| GPCF-DOC-VU-INTEGRITY-20261024 | VU 台账完整性审计（2026-10-24） | docs/harness/evidence/vu-integrity-audit-20261024.md | GPCF | draft |
+| GPCF-DOC-WAME-F035-HANDOFF-20261023 | WAME F-035 本地提交交接（2026-10-23） | docs/harness/evidence/wame-f035-handoff-20261023.md | GPCF | draft |
+| GPCF-DOC-WAME-SIDEBAR-CONSUMPTION-PLAN-20261023 | WAME 侧栏消费共享契约方案（2026-10-23） | docs/harness/evidence/wame-sidebar-consumption-plan-20261023.md | GPCF | draft |
 | GPCF-DOC-35411435D9 | WAS Completion Audit Evidence | docs/harness/evidence/was-completion-audit-20260621.md | KDS | controlled |
 | GPCF-DOC-E581D6E5F0 | WAS Loop Context Coverage Evidence | docs/harness/evidence/was-loop-context-coverage-20260621.md | GPCF | controlled |
 | GPCF-DOC-FE2C0C050F | WAS Loop Context Coverage Refresh Evidence | docs/harness/evidence/was-loop-context-coverage-refresh-20260621.md | KDS | controlled |
@@ -1142,6 +1179,8 @@ KDS 路径前缀：`开发/12-GPCF/docs/`
 | GPCF-DOC-2B1B5A8C55 | WAS Status Matrix Control Board Refresh Evidence | docs/harness/evidence/was-status-matrix-control-board-refresh-20260621.md | KDS | controlled |
 | GPCF-DOC-A1617A5806 | WAS-Ontology WAME/KDS/RAG/Writeback Gate Pack Evidence | docs/harness/evidence/was-wame-kds-rag-writeback-gate-pack-20260621.md | KDS | controlled |
 | GPCF-DOC-WAS-XWAIL-ONTOLOGY-MAPPING-20260625 | WAS-XWAIL-Ontology 映射证据 2026-06-25 | docs/harness/evidence/was-xwail-ontology-mapping-20260625.md | KDS | controlled |
+| GPCF-DOC-WAVE1-REVIEW-PACK-20261022 | Wave 1 首批 5 项授权执行与 review 包（2026-10-22） | docs/harness/evidence/wave1-review-pack-20261022.md | GPCF | draft |
+| GPCF-DOC-WORKSPACE-CONSISTENCY-20261023 | Feature 工作区一致性检查（2026-10-23） | docs/harness/evidence/workspace-consistency-20261023.md | GPCF | draft |
 | GPCF-DOC-ZCODE-COLLAB-20260709 | GlobalCloud 项目群 ZCode + Codex 协同工作方案 | docs/harness/globalcloud-zcode-codex-collaboration-scheme.md | KDS | controlled |
 | GPCF-DOC-E60D35F595 | 12 项目文档控制队列 | docs/harness/gpcf-12-project-document-control-queue-lr013.md | KDS | controlled |
 | GPCF-DOC-D7809CB67F | 12 项目 Loop 准备度基线重算 | docs/harness/gpcf-12-project-loop-readiness-baseline-lr017.md | KDS | controlled |
@@ -2458,5 +2497,69 @@ KDS 路径前缀：`开发/12-GPCF/docs/`
 | GPCF-DOC-4ED15E157A | GFIS-RUNTIME-SOP-E2E-DEV-COMPLETION-001 多智能体执行包 | docs/harness/tasks/GFIS-RUNTIME-SOP-E2E-DEV-COMPLETION-001.multi-agent.md | KDS | controlled |
 | GPCF-DOC-GFIS-RUNTIME-SOP-E2E-MIN-001 | GFIS-RUNTIME-SOP-E2E-MIN-001 | docs/harness/tasks/GFIS-RUNTIME-SOP-E2E-MIN-001.md | GPCF | controlled |
 | GPCF-DOC-5FE5ED4E8B | tasks | docs/harness/tasks/README.md | KDS | controlled |
+| GPCF-DOC-ADE9044229 | docs/reports 索引（2026-10-24） | docs/reports/INDEX.md | KDS | controlled |
+| GPCF-DOC-446E3B40D1 | reports | docs/reports/README.md | KDS | controlled |
+| GPCF-DOC-C4E8E450FB | 已准备 CI 工作流：激活前检查与激活步骤（2026-10-24） | docs/reports/ci-activation-checklist-20261024.md | KDS | controlled |
+| GPCF-DOC-41DC2DCB9E | 7 仓 CI 激活结果（2026-10-24 16:40） | docs/reports/ci-activation-result-20261024.md | KDS | controlled |
+| GPCF-DOC-80A0BC302D | Mem/PQC CI 排队根因：runner 离线（且不在本机）· 2026-10-24 17:20 | docs/reports/ci-queue-root-cause-20261024.md | GPCF | controlled |
+| GPCF-DOC-0F9C2C3BD9 | ICP / AAAS / Mem CI test-build 工作流留痕（跨仓，模型逐仓裁决） | docs/reports/ci-workflows-icp-aaas-mem-trace-20261024.md | GPCF | controlled |
+| GPCF-DOC-13707BF76C | SOP / KDS CI test-build 工作流留痕（跨仓，模型授权分批裁决） | docs/reports/ci-workflows-sop-kds-trace-20261024.md | KDS | controlled |
+| GPCF-DOC-23B91D83B6 | 协同补齐：7 仓本地门禁 + 8 仓方案继承声明（2026-10-24 18:25） | docs/reports/collab-completion-20261024.md | KDS | controlled |
+| GPCF-DOC-0A89D098E8 | Day-1 收口报告（2026-10-22 期间执行，23:45 定稿） | docs/reports/day1-closeout-20261022.md | KDS | controlled |
+| GPCF-DOC-B32788D46B | F-013 剩余阻塞项派单表（2026-10-24 19:05） | docs/reports/f013-blocker-dispatch-20261024.md | KDS | controlled |
+| GPCF-DOC-0CB7CDB808 | F-013 · KDS 脏工作树分类清单（只读盘点，交 KDS 属主收敛） | docs/reports/f013-kds-dirty-inventory-20261024.md | KDS | controlled |
+| GPCF-DOC-AE6A14367C | F-013 · KDS 脏工作树收敛请求（交 KDS 属主） | docs/reports/f013-kds-dirty-worktree-request-20261022.md | KDS | controlled |
+| GPCF-DOC-D2B0AFA74D | F-014 权威接收台账 owner、scope 重定与留存策略（老卢裁定记录） | docs/reports/f014-ledger-owner-and-retention-20261022.md | KDS | controlled |
+| GPCF-DOC-9CD0369F87 | F-014 · 真实会议数据试点授权申请包（待老卢签发） | docs/reports/f014-real-data-pilot-authorization-request-20261022.md | KDS | controlled |
+| GPCF-DOC-102B1BBB47 | F-021 · WAS Ontology 基线裁定请求（交 WAS 属主） | docs/reports/f021-was-ontology-ruling-request-20261022.md | GPCF | controlled |
+| GPCF-DOC-F4E22D8C24 | F-032 方向裁定（2026-10-24） | docs/reports/f032-direction-ruling-20261024.md | GPCF | controlled |
+| GPCF-DOC-7A1535F943 | F-032 / PQC 对外服务 · M0 设计评审裁定（2026-10-24） | docs/reports/f032-m0-review-ruling-20261024.md | GPCF | controlled |
+| GPCF-DOC-72F18A4F4A | 全量体检脚本（门禁之外的校验一次跑完，2026-10-24） | docs/reports/full-sweep-script-20261024.md | KDS | controlled |
+| GPCF-DOC-63A3055B85 | 门禁检查扩充：把曾人工发现的回归纳入自动拦截（2026-10-24） | docs/reports/gate-check-expansion-20261024.md | GPCF | controlled |
+| GPCF-DOC-7DBC7397B6 | 目标判据证据：「≥3 个项目解除门禁阻塞」已达成（可审计） | docs/reports/goal-criterion-evidence-unblocked-20261022.md | KDS | controlled |
+| GPCF-DOC-2F9FFC0B41 | 28/29 仓治理覆盖总矩阵（2026-10-24 17:40） | docs/reports/governance-coverage-matrix-20261024.md | KDS | controlled |
+| GPCF-DOC-39A3AA5F3D | 交接包：需要外部动作才能闭环的 5 项（2026-10-22 23:25） | docs/reports/handover-kit-20261022.md | KDS | controlled |
+| GPCF-DOC-9281B3C521 | 待外部动作清单（2026-10-24 19:10 刷新） | docs/reports/handover-kit-20261024.md | KDS | controlled |
+| GPCF-DOC-7C0B5F0FD1 | 门禁与证据体检（2026-10-22 23:35） | docs/reports/health-sweep-20261022.md | GPCF | controlled |
+| GPCF-DOC-4531130BE2 | 跨仓方案继承覆盖审计（29 仓全量，2026-10-24） | docs/reports/inheritance-coverage-audit-20261024.md | KDS | controlled |
+| GPCF-DOC-BC568CA7FF | KDS 工作树空白清理留痕（跨仓，老卢授权） | docs/reports/kds-whitespace-cleanup-trace-20261024.md | KDS | controlled |
+| GPCF-DOC-14437543B7 | LOOP 门禁委托覆盖审计（29 仓，2026-10-24） | docs/reports/loop-gate-delegation-audit-20261024.md | KDS | controlled |
+| GPCF-DOC-6A1EA019E6 | MMC 补 build job 留痕（跨仓，模型授权） | docs/reports/mmc-build-job-trace-20261024.md | GPCF | controlled |
+| GPCF-DOC-CDEC3636A1 | P02 快照重建口径：运维实证（2026-10-24 16:05） | docs/reports/p02-snapshot-convention-evidence-20261024.md | GPCF | controlled |
+| GPCF-DOC-D0D0365291 | P05 · 7 个 blocked Feature 分类与处理（2026-10-22） | docs/reports/p05-blocked-classification-20261022.md | KDS | controlled |
+| GPCF-DOC-86E433AAA5 | F-030（PDC 纳管）重采清单（交 PDC 属主执行） | docs/reports/p05-pdc-f030-resample-checklist-20261022.md | GPCF | controlled |
+| GPCF-DOC-5E62A3403A | 0–30 天尾巴清理包：剩余 4 个 blocked（交属主/上级裁定） | docs/reports/p05-tail-clearance-packet-20261022.md | KDS | controlled |
+| GPCF-DOC-F2B6092574 | P06 跨仓收尾清单：WAME / PVA 总体方案补继承声明（交属主执行） | docs/reports/p06-cross-repo-plan-inheritance-checklist-20261022.md | GPCF | controlled |
+| GPCF-DOC-05E2ED78B7 | P06 收尾留痕：WAME / PVA 总体方案继承声明补行（跨仓，老卢授权） | docs/reports/p06-inheritance-line-trace-20261024.md | GPCF | controlled |
+| GPCF-DOC-0D0FBC993C | P07 · 29 项目处置台账 · 完成证据（2026-10-22） | docs/reports/p07-disposition-ledger-evidence-20261022.md | GPCF | controlled |
+| GPCF-DOC-58DD3BDFFC | P08 / P09 属主执行包（31–60 天：统一壳 + 首条接入） | docs/reports/p08-p09-owner-execution-packets-20261022.md | GPCF | controlled |
+| GPCF-DOC-E31E79A62B | P10 / P11 · 界面分层与双角色权限一致性 · WAE 属主执行包 | docs/reports/p10-p11-wae-owner-packet-20261022.md | GPCF | controlled |
+| GPCF-DOC-A50103148C | P10 / P11 · 界面分层与双角色权限一致性 · WAE 属主执行包（2026-10-24 更正版） | docs/reports/p10-p11-wae-owner-packet-20261024.md | GPCF | controlled |
+| GPCF-DOC-E011AE8A70 | P12 · PQC 首条真实业务链试点 · 授权申请包（待老卢签发） | docs/reports/p12-pqc-real-pilot-authorization-request-20261022.md | GPCF | controlled |
+| GPCF-DOC-A1B1103B05 | P14 · PQC 首条真实业务链执行手册（A1–A4 范围内） | docs/reports/p14-pqc-pilot-execution-runbook-20261022.md | GPCF | controlled |
+| GPCF-DOC-04CECBF090 | P14 · VU 进入 S4 的机检工具（防合成数据抬 C_real） | docs/reports/p14-s4-promotion-tooling-20261022.md | GPCF | controlled |
+| GPCF-DOC-A718A6E63A | P16-2 · test/build CI 模板（供 25 仓属主复制） | docs/reports/p16-2-ci-workflow-template-20261024.md | KDS | controlled |
+| GPCF-DOC-8686649F2F | P16-2 剩余缺口逐仓判定（2026-10-24 15:50） | docs/reports/p16-2-remaining-disposition-20261024.md | KDS | controlled |
+| GPCF-DOC-CD4AF0C1EA | P16-3 · UI 仓 e2e / browser / a11y 验收草案 | docs/reports/p16-3-ui-acceptance-draft-20261022.md | GPCF | controlled |
+| GPCF-DOC-5D1F7E0305 | P16 · 跨项目 CI/验收矩阵 · 现状盘点与分阶段建议（2026-10-22） | docs/reports/p16-ci-matrix-gap-analysis-20261022.md | GPCF | controlled |
+| GPCF-DOC-748674198C | P16-2 · test/build 属主补齐清单（29 仓实测） | docs/reports/p16-test-build-owner-checklist-20261022.md | KDS | controlled |
+| GPCF-DOC-F0B444F390 | P17 done 不变量审计脚本（2026-10-24） | docs/reports/p17-done-audit-script-20261024.md | GPCF | controlled |
+| GPCF-DOC-8B424ACBF2 | P18 · 发布 / 回滚 / 监控 / 归档 Runbook 模板（草案，未执行） | docs/reports/p18-release-rollback-runbook-template-20261022.md | GPCF | controlled |
+| GPCF-DOC-BB6203E204 | P18 回滚演练记录（CI 资产，2026-10-24 17:25） | docs/reports/p18-rollback-rehearsal-20261024.md | GPCF | controlled |
+| GPCF-DOC-0A8D4A5642 | P19 · 29 项目组合决策模板（90 天末执行） | docs/reports/p19-combination-decision-template-20261022.md | GPCF | controlled |
+| GPCF-DOC-3CE1BDF7EA | P19 · 90 天组合决策试算表（2026-10-24 15:20 刷新） | docs/reports/p19-day90-candidate-table-20261024.md | KDS | controlled |
+| GPCF-DOC-22940E5C06 | 90 天计划执行台账（P01–P19）· 2026-10-22 23:10 快照 | docs/reports/plan-progress-ledger-20261022.md | GPCF | controlled |
+| GPCF-DOC-F63BAE8881 | PQC CI test/build 工作流留痕（跨仓，模型授权） | docs/reports/pqc-ci-workflow-trace-20261024.md | GPCF | controlled |
+| GPCF-DOC-A3D4097C4E | PQC 真实试点数据接入清单（客户确认后按此一次性执行） | docs/reports/pqc-pilot-intake-checklist-20261022.md | GPCF | controlled |
+| GPCF-DOC-F9B1DDF847 | PQC 真实试点最后一段：一键收口脚本（2026-10-24） | docs/reports/pqc-pilot-last-mile-20261024.md | GPCF | controlled |
+| GPCF-DOC-3176540E62 | SpaceAI Platform 脏树治理留痕（跨仓，模型授权） | docs/reports/spaceai-gitignore-trace-20261024.md | KDS | controlled |
+| GPCF-DOC-6784A73289 | 29 仓统一规范检查（standards）全量体检（2026-10-24） | docs/reports/standards-sweep-20261024.md | KDS | controlled |
+| GPCF-DOC-3A7F6FA260 | 唯一状态事实源（P03）落地发现与阻塞项 | docs/reports/status-source-of-truth-findings-20261022.md | GPCF | controlled |
+| GPCF-DOC-CC8241B09C | 状态步骤词表归一（P03 延伸，2026-10-24） | docs/reports/step-vocabulary-normalization-20261024.md | GPCF | controlled |
+| GPCF-DOC-0BFC37D7C2 | 0–30 天尾巴 4 项 · 催办单（2026-10-22 22:12） | docs/reports/tail-4-followup-20261022.md | KDS | controlled |
+| GPCF-DOC-3D2E0797B1 | 校验器笔误修复：external loop gate delegates（2026-10-24） | docs/reports/validator-typo-fix-20261024.md | GPCF | controlled |
+| GPCF-DOC-8A36559878 | World 仓 F-021 归属同步清单（交属主执行） | docs/reports/world-f021-attribution-sync-checklist-20261022.md | GPCF | controlled |
+| GPCF-DOC-07D122376C | runbooks | docs/runbooks/README.md | KDS | controlled |
+| GPCF-DOC-RUNTIME-HOST-RUNBOOK-20261022 | 项目群运行宿主 Runbook v1.0 | docs/runbooks/runtime-host-v1.0.md | GPCF | draft |
 | GPCF-DOC-AE29585A23 | standards | docs/standards/README.md | KDS | controlled |
 | GPCF-DOC-E6A5B97688 | Feature Workspace 标准 | docs/standards/feature-workspace.md | GPCF | controlled |

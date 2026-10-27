@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-10-22T05:44:34+08:00",
+  "source": "PG-04 classify_dirty_paths.py + PG-03 remediation",
+  "purpose": "Register the current live dirty baseline for the 3 delegated wrapper repos so the external loop gate compares against an explicit, exact baseline instead of a hardcoded count.",
+  "owner_confirmation": "pending",
+  "repos": {
+    "GlobalCloud AAAS": {
+      "expected_dirty_count": 16,
+      "expected_status_lines": [
+        " M .DS_Store",
+        " M PROJECT_HARNESS_MANIFEST.md",
+        " M \"docs/GlobalCloud AaaS DoDAF架构规划_v0.1.md\"",
+        " M \"docs/GlobalCloud AaaS 实施方案.md\"",
+        " M \"docs/GlobalCloud AaaS 总体方案.md\"",
+        " M scripts/aaas_common.py",
+        " M tools/export_aaas_state.py",
+        "?? \"docs/GlobalCloud AaaS FDE 业务专项方案_v1.0.md\"",
+        "?? \"docs/GlobalCloud AaaS 平台+运营+FDE 业务模式分析_v1.1.md\"",
+        "?? research/aaas-business-evidence.md",
+        "?? research/benchmark-fde-platform-ops.md",
+        "?? review/fde-plan-review.md",
+        "?? review/red-team-addendum.md",
+        "?? review/red-team-report.md",
+        "?? scripts/validate_aaas_binding.py",
+        "?? tests/test_local_gates.py"
+      ],
+      "owner_confirmation": "pending"
+    },
+    "GlobalCloud XWAIL": {
+      "expected_dirty_count": 1,
+      "expected_status_lines": [
+        " M \"GlobalCloud XWAIL 总体方案.md\""
+      ],
+      "owner_confirmation": "pending"
+    },
+    "GlobalCloud SOP": {
+      "expected_dirty_count": 15,
+      "expected_status_lines": [
+        " M \"GlobalCloud SOP 实施方案.md\"",
+        " M \"GlobalCloud SOP 总体方案.md\"",
+        " M README.md",
+        " M docs/operations/chain-factory-transport-sales-recovery-service-sop-20260712-candidate.md",
+        " M schemas/flow-registry.schema.json",
+        " M schemas/sop-change.schema.json",
+        " M scripts/build_sop_candidate.py",
+        " M scripts/promote_sop_rule.py",
+        " M scripts/rebuild_indexes.py",
+        " M scripts/run_smoke_test.py",
+        " M scripts/validate_sop_assets.py",
+        " M sop/flows/harness-engineering-flow.json",
+        " M sop/flows/loop-governance-flow.json",
+        " M sop/flows/openspec-change-flow.json",
+        " M templates/sop-change-proposal-template.md"
+      ],
+      "owner_confirmation": "pending"
+    }
+  },
+  "digest": "030ab5d7dafc965f"
+}

@@ -56,3 +56,10 @@ git reset --hard b233438^   # 丢弃两个本地提交（本地）
 ## 非声明
 
 - 不声明 F-035 已关闭；不声明 WAME 状态提升。
+
+## 2026-10-23 更新：已 push
+
+- 老卢授权 push（决策值 0.591）：`1402a41..ea8f321 -> origin/wame/architecture-contracts`。
+- 推送内容：b233438（依赖+import）、ea8f321（Sidebar 兼容别名）。
+- 验证仍为：install --ignore-scripts 0；tsc 0；侧栏测试 5/5。
+- 剩余：私有 registry/同 workspace 消费、视觉/E2E、FunctionPanel 产品决策。
