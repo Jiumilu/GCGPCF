@@ -58,7 +58,7 @@ def test_live_snapshot_ignores_worktree_churn_and_detects_head_drift():
     spec.loader.exec_module(module)
     previous = {key: [] for key in module.SEMANTIC_KEYS}
     previous["dirty_details"] = {
-        "GlobalCoud GPCF": {"dirty_count": 2},
+        "GlobalCloud GPCF": {"dirty_count": 2},
         "GlobalCloud WAE": {"dirty_count": 1},
     }
     previous["repo_heads"] = {"GlobalCloud GPCF": "", "GlobalCloud WAE": "aaa"}
@@ -67,7 +67,7 @@ def test_live_snapshot_ignores_worktree_churn_and_detects_head_drift():
     worktree_churn = {
         **previous,
         "dirty_details": {
-            "GlobalCoud GPCF": {"dirty_count": 3},
+            "GlobalCloud GPCF": {"dirty_count": 3},
             "GlobalCloud WAE": {"dirty_count": 2},
         },
     }
