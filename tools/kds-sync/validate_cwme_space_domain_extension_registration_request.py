@@ -13,9 +13,9 @@ EVIDENCE_MD = ROOT / "docs/harness/evidence/cwme-space-domain-extension-registra
 LOOP_ROUND = ROOT / "docs/harness/loops/loop-round-GPCF-CWME-SPACE-DOMAIN-EXTENSION-REGISTRATION-REQUEST-001.md"
 KDS_ROOT = ROOT.parent / "GlobalCloud KDS"
 ATTACHMENTS = [
-    KDS_ROOT / "世界资产/世界模型引擎/ontology/cwme-ext.ttl",
-    KDS_ROOT / "世界资产/世界模型引擎/ontology/cwme-mapping-v1.yaml",
-    KDS_ROOT / "世界资产/世界模型引擎/ontology/cwme-shapes-min.ttl",
+    KDS_ROOT / "世界资产/引擎/ontology/cwme-ext.ttl",
+    KDS_ROOT / "世界资产/引擎/ontology/cwme-mapping-v1.yaml",
+    KDS_ROOT / "世界资产/引擎/ontology/cwme-shapes-min.ttl",
 ]
 
 

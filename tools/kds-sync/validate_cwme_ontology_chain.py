@@ -15,7 +15,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 KDS = ROOT.parent / "GlobalCloud KDS"
-ONT = KDS / "世界资产/世界模型引擎/ontology"
+ONT = KDS / "世界资产/引擎/ontology"
 
 REQUIRED = [
     "cwme-ext.ttl", "cwme-shapes-min.ttl", "cwme-sample-ok.ttl", "cwme-sample-bad.ttl",
