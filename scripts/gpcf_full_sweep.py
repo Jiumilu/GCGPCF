@@ -34,6 +34,11 @@ CHECKS: list[tuple[str, list[str], int]] = [
     ("localization", ["tools/kds-sync/check_chinese_localization_gate.py"], 180),
     ("bytecode", ["tools/kds-sync/check_python_bytecode.py"], 120),
     ("loop_v11_recovery", ["tools/kds-sync/validate_loop_v11_slimming_delivery_recovery.py"], 180),
+    # A6（2026-10-27）：CWME 本体两条门禁 + 入口存在性判据。
+    # 根因不是路径写错，是「修好也没人跑」——所以路径修完必须挂入口，并断言入口本身没被摘掉。
+    ("cwme_ontology_chain", ["tools/kds-sync/validate_cwme_ontology_chain.py"], 300),
+    ("cwme_space_domain_registration", ["tools/kds-sync/validate_cwme_space_domain_extension_registration_request.py"], 180),
+    ("cwme_gate_entrypoints", ["tools/kds-sync/validate_cwme_gate_entrypoints.py"], 60),
     ("derive_status", ["tools/kds-sync/derive_status_views.py", "--check"], 180),
     ("p17_done_audit", ["scripts/gpcf_p17_done_audit.py"], 300),
     ("exceptions_expiry", ["tools/kds-sync/check_exceptions_expiry.py"], 120),
