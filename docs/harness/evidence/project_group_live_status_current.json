@@ -73,6 +73,7 @@
     "GlobalCloud GPC",
     "GlobalCloud GPCF",
     "GlobalCloud ICP",
+    "GlobalCloud KDS",
     "GlobalCloud MMC",
     "GlobalCloud Mem",
     "GlobalCloud PDC",
@@ -502,8 +503,8 @@
       "sensitive_paths": []
     },
     "GlobalCloud GPCF": {
-      "dirty_count": 155,
-      "ahead": 87,
+      "dirty_count": 156,
+      "ahead": 88,
       "behind": 0,
       "paths": [
         "$CODEX_HOME/automations/globalcloud-17/README.md",
@@ -660,7 +661,8 @@
         "runtime/plan-20261022/README.md",
         "templates/README.md",
         "tools/README.md",
-        "tools/kds-sync/README.md"
+        "tools/kds-sync/README.md",
+        "tools/kds-sync/validate_was_xwail_ontology_mapping.py"
       ],
       "sensitive_paths": []
     },
