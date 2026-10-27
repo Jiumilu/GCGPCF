@@ -257,7 +257,7 @@ ICP 当前状态固定为 `candidate/partial/human_required`，本地契约、AP
 | B2 | 记忆知识 | GCMEM + KDS |
 | B3 | 授权链 | WAME 授权 |
 | B4 | 证据链 | WAME 证据 |
-| B5 | 壳装配 | WAE（ui-tokens/ui-kit/app-registry/app-shell） |
+| B5 | 壳装配 | WAE。**发布集 6 包**：ui-tokens / ui-kit / ui-templates / app-registry / idp-kit / module-kit。**壳＝产品壳 `apps/wame`（唯一）**，装配＝app-registry + module-kit，身份＝idp-kit。**`app-shell` 已于 2026-10-22 移出发布集（A2 单一壳收敛，非恢复项），框架不再分发壳包** |
 | B6 | 计量分档 | AAAS + Token 计量 |
 | B7 | 任务工作单 | PMC（任务中枢） |
 | B8 | 流程规则 | SOP（流引擎中心） |
