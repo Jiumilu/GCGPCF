@@ -16,7 +16,6 @@ supersedes: []
 superseded_by: []
 ---
 
-
 # GlobalCloud 文档控制总台账
 
 日期：2026-10-27
@@ -40,7 +39,7 @@ superseded_by: []
 | XGD | 09-XGD | 10 | 7 | 已建空间 |
 | XiaoG | 10-XiaoG | 11 | 8 | 已建空间 |
 | MMC | 11-MMC | 13 | 10 | 已建空间 |
-| GPCF | 12-GPCF | 2129 | 1693 | 已建空间 |
+| GPCF | 12-GPCF | 2131 | 1693 | 已建空间 |
 | Studio | 13-Studio | 2 | 2 | 已建空间 |
 | ICP | 14-ICP | 0 | 0 | 已建空间，暂无直接镜像文档 |
 | SpaceAIStudio | 15-SpaceAIStudio | 0 | 0 | 已建空间，暂无直接镜像文档 |
@@ -52,7 +51,7 @@ superseded_by: []
 | --- | --- | --- |
 | 00-项目群总控 | 项目群总入口与根 README | 1 |
 | 90-跨项目架构 | 跨项目架构、主线、数据/知识跨域文档 | 59 |
-| 91-治理与验收 | 治理、验收、状态、台账与门禁文档 | 523 |
+| 91-治理与验收 | 治理、验收、状态、台账与门禁文档 | 525 |
 | 92-证据与会话归档 | Harness、证据样本、历史会话与归档文档 | 95 |
 | 99-过期文档 | deprecated / superseded 文档 | 0 |
 
@@ -1008,6 +1007,8 @@ superseded_by: []
 | GPCF-DOC-CC2C02D1FB | governance | docs/governance/README.md | KDS | GPC, WAME, KDS, GPCF | docs | controlled | 开发/05-KDS/docs/governance/README.md |
 | GPCF-DOC-94532311B5 | GPCF 2.0 治理文件收敛清单 | docs/governance/gpcf-2-governance-file-inventory.md | KDS | GPC, WAME, KDS, GPCF | docs | controlled | 开发/05-KDS/docs/governance/gpcf-2-governance-file-inventory.md |
 | GPCF-DOC-12C308D619 | GPCF 2.0 实施基线 | docs/governance/gpcf-2-implementation.md | KDS | GFIS, GPC, WAME, KDS, GPCF | docs | controlled | 开发/05-KDS/docs/governance/gpcf-2-implementation.md |
+| GPCF-DOC-LOOP-SLIMMING-CONFIRM-20261027 | loop 无入口文档引用方确认清单 | docs/governance/loop-无入口文档引用方确认清单.md | GPCF | GPCF, WAME, GFIS | governance | controlled | 开发/91-治理与验收/docs/governance/loop-无入口文档引用方确认清单.md |
+| GPCF-DOC-LOOP-SLIMMING-SCOPE-20261027 | loop 治理收敛范围与判据 | docs/governance/loop-治理收敛范围与判据.md | GPCF | GPCF, WAME, KDS, GFIS | governance | controlled | 开发/91-治理与验收/docs/governance/loop-治理收敛范围与判据.md |
 | GPCF-DOC-92A4C970C1 | AaaS | docs/harness/AaaS/README.md | KDS | GPC, WAME, KDS, GPCF | docs | controlled | 开发/05-KDS/docs/harness/AaaS/README.md |
 | GPCF-DOC-76A4B3F001 | evidence | docs/harness/AaaS/evidence/README.md | KDS | GPC, WAME, KDS, GPCF | docs | controlled | 开发/05-KDS/docs/harness/AaaS/evidence/README.md |
 | GPCF-DOC-AAAS-REAL-RUNTIME-BASELINE-20260624 | AaaS 真实运行基线证据 2026-06-24 | docs/harness/AaaS/evidence/aaas-real-runtime-baseline-20260624.md | GPCF | GPC, WAME, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/AaaS/evidence/aaas-real-runtime-baseline-20260624.md |
