@@ -16,7 +16,6 @@ supersedes: []
 superseded_by: []
 ---
 
-
 # integrate-gke001-openspec-codegraph
 
 目录：`openspec/changes/integrate-gke001-openspec-codegraph`

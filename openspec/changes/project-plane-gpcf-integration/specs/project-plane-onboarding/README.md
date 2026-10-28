@@ -16,7 +16,6 @@ supersedes: []
 superseded_by: []
 ---
 
-
 # project-plane-onboarding
 
 目录：`openspec/changes/project-plane-gpcf-integration/specs/project-plane-onboarding`

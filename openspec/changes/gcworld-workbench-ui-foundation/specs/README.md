@@ -16,7 +16,6 @@ supersedes: []
 superseded_by: []
 ---
 
-
 # specs
 
 目录：`openspec/changes/gcworld-workbench-ui-foundation/specs`

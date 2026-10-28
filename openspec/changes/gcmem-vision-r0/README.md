@@ -17,7 +17,6 @@ superseded_by: []
 master_control: GPCF:01-architecture/GlobalCloud 项目群总体方案.md
 ---
 
-
 # gcmem-vision-r0
 
 目录：`openspec/changes/gcmem-vision-r0`

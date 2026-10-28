@@ -16,7 +16,6 @@ supersedes: []
 superseded_by: []
 ---
 
-
 # gcworld-runtime-boundary
 
 目录：`openspec/changes/gcworld-evidence-twin-foundation/specs/gcworld-runtime-boundary`

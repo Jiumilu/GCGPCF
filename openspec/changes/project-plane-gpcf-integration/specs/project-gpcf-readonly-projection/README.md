@@ -16,7 +16,6 @@ supersedes: []
 superseded_by: []
 ---
 
-
 # project-gpcf-readonly-projection
 
 目录：`openspec/changes/project-plane-gpcf-integration/specs/project-gpcf-readonly-projection`

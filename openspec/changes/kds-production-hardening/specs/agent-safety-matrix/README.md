@@ -16,7 +16,6 @@ supersedes: []
 superseded_by: []
 ---
 
-
 # agent-safety-matrix
 
 目录：`openspec/changes/kds-production-hardening/specs/agent-safety-matrix`

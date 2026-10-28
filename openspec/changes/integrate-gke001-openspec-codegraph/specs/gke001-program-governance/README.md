@@ -16,7 +16,6 @@ supersedes: []
 superseded_by: []
 ---
 
-
 # gke001-program-governance
 
 目录：`openspec/changes/integrate-gke001-openspec-codegraph/specs/gke001-program-governance`

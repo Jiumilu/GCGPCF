@@ -16,7 +16,6 @@ supersedes: []
 superseded_by: []
 ---
 
-
 # gcworld-workbench-ui-foundation
 
 目录：`openspec/changes/gcworld-workbench-ui-foundation/specs/gcworld-workbench-ui-foundation`

@@ -16,7 +16,6 @@ supersedes: []
 superseded_by: []
 ---
 
-
 # KDS Sync Tools
 
 用途：维护 GlobalCloud GPCF 文档控制体系、目录 README、KDS `开发` 空间本地镜像和同步台账。

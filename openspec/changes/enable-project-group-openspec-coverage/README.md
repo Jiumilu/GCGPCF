@@ -16,7 +16,6 @@ supersedes: []
 superseded_by: []
 ---
 
-
 # enable-project-group-openspec-coverage
 
 目录：`openspec/changes/enable-project-group-openspec-coverage`

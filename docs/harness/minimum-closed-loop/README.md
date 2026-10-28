@@ -16,7 +16,6 @@ supersedes: []
 superseded_by: []
 ---
 
-
 # minimum-closed-loop
 
 目录：`docs/harness/minimum-closed-loop`

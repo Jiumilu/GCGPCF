@@ -16,7 +16,6 @@ supersedes: []
 superseded_by: []
 ---
 
-
 # project-plane-gpcf-integration
 
 目录：`openspec/changes/project-plane-gpcf-integration`

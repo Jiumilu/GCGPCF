@@ -16,7 +16,6 @@ supersedes: []
 superseded_by: []
 ---
 
-
 # gc-knowledge-fabric
 
 目录：`docs/gc-knowledge-fabric`

@@ -17,7 +17,6 @@ superseded_by: []
 master_control: GPCF:01-architecture/WAS世界资产体系总体方案.md
 ---
 
-
 # was-decision-platform-v02
 
 目录：`openspec/changes/was-decision-platform-v02/specs/was-decision-platform-v02`

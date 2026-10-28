@@ -16,7 +16,6 @@ supersedes: []
 superseded_by: []
 ---
 
-
 # gcworld-kds-authoritative-integration
 
 目录：`openspec/changes/gcworld-kds-authoritative-integration/specs/gcworld-kds-authoritative-integration`

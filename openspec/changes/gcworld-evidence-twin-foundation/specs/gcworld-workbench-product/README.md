@@ -16,7 +16,6 @@ supersedes: []
 superseded_by: []
 ---
 
-
 # gcworld-workbench-product
 
 目录：`openspec/changes/gcworld-evidence-twin-foundation/specs/gcworld-workbench-product`

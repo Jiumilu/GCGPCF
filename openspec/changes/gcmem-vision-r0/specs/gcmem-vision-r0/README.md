@@ -16,7 +16,6 @@ supersedes: []
 superseded_by: []
 ---
 
-
 # gcmem-vision-r0
 
 目录：`openspec/changes/gcmem-vision-r0/specs/gcmem-vision-r0`

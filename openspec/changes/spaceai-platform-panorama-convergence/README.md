@@ -16,7 +16,6 @@ supersedes: []
 superseded_by: []
 ---
 
-
 # spaceai-platform-panorama-convergence
 
 目录：`openspec/changes/spaceai-platform-panorama-convergence`

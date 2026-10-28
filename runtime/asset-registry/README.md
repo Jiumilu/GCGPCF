@@ -16,7 +16,6 @@ supersedes: []
 superseded_by: []
 ---
 
-
 # asset-registry
 
 目录：`runtime/asset-registry`

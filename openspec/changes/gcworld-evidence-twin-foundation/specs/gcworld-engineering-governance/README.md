@@ -16,7 +16,6 @@ supersedes: []
 superseded_by: []
 ---
 
-
 # gcworld-engineering-governance
 
 目录：`openspec/changes/gcworld-evidence-twin-foundation/specs/gcworld-engineering-governance`

@@ -16,7 +16,6 @@ supersedes: []
 superseded_by: []
 ---
 
-
 # gcworld-role-agent-governance
 
 目录：`openspec/changes/gcworld-evidence-twin-foundation/specs/gcworld-role-agent-governance`

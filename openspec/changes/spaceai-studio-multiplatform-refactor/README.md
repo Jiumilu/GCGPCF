@@ -16,7 +16,6 @@ supersedes: []
 superseded_by: []
 ---
 
-
 # spaceai-studio-multiplatform-refactor
 
 目录：`openspec/changes/spaceai-studio-multiplatform-refactor`

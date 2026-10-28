@@ -16,7 +16,6 @@ supersedes: []
 superseded_by: []
 ---
 
-
 # sop-bind-matrix-to-icp-foundation
 
 目录：`openspec/changes/sop-bind-matrix-to-icp-foundation`
