@@ -27,6 +27,38 @@ evidence:
   api: waived
   summary: pass
 blockers:
+status_note:
+  as_of: '2026-10-27'
+  measured_status: partial
+  basis: World 属主 2026-10-27 实测（会话 session-bf342187-a31d-4ff0-85b3-6d6c9d4c68b9），非复述 2026-10-16 证据
+  evidence_gate_note: >-
+    gpcf_check_evidence 的 close_candidate=true 是局部结论；须与跨仓登记门禁合并判读
+    （当前 openspec coverage 与 skill chain 均 fail）。不得仅凭 close_candidate=true 关闭本 Feature。
+    —— Chief 2026-10-27 裁定，本期不立项修补该门禁覆盖缺口。
+  reasons:
+    - >-
+      准入第 7 步③分支保护不可达成：gh api repos/Jiumilu/GCWorld/branches/main/protection
+      返回 403（免费账号私有仓不支持），已转「豁免 + 替代机制」，
+      见 outbox/2026-10-27-F021-分支保护豁免记录-v0.1.md
+    - >-
+      OpenSpec 覆盖门禁回归 fail：validate_project_group_openspec_coverage.py
+      现为 current=29/matrix=28，matrix missing projects: ['GCToken']；
+      受阻于 GCToken 未入矩阵，待其属主到位
+    - >-
+      技能链门禁 fail：validate_project_group_skill_chain.py，
+      project coverage slugs must match project registry（自 2026-10-16 起未整改）
+  acceptance_drift: >-
+    acceptance 第 2 条「22 项 OpenSpec 映射通过」的 22 已随项目群扩至 29 项失效，该项判据现 fail
+  directory_note: >-
+    目录名 features/done/ 沿用不改（重排目录属治理动作，牵动别处引用）；待治理批次统一纠正，改名留痕不改结构
+  correction:
+    target: >-
+      resolved_blockers[2026-10-24] 第 3 条（原写 World/okf/ontology.yaml version=0.2.0）
+    finding: >-
+      World 全历史从未有 okf/ 目录（git log --all --diff-filter=A -- 'okf/*' 为空）；
+      0.2.0 实际位于 GlobalCloud WAS/okf/ontology.yaml:4
+    nature: >-
+      把 WAS 仓的路径记成 World 仓的，属判据与对象不重合；历史条目保留不重写，更正以本注记为准
 verification:
   tests:
   - python3 tools/kds-sync/validate_gpcf_2_feature_workspace.py
@@ -63,4 +95,4 @@ resolved_blockers:
   decision: World Ontology 基线以 okf/ontology.yaml 0.2.0 为准；总体方案 0.2.x 一致；旧 0.1.0 为历史豁免
   evidence: GlobalCloud World/okf/ontology.yaml version=0.2.0；老卢问答 accept_close=0.513
 created_at: "2026-10-16T00:30:28+00:00"
-updated_at: "2026-10-23T09:29:44+00:00"
+updated_at: "2026-10-27T13:25:00+00:00"
